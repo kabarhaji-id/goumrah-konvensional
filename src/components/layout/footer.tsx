@@ -85,14 +85,14 @@ const Footer = () => {
 
           <p className="text-xs font-light leading-5">
             Selamat datang di Goumrah.id, mitra terpercaya Anda dalam perjalanan
-            umrah dan haji selama 20 tahun. Kami telah berkomitmen untuk
+            umrah dan haji lebih dari 18 tahun. Kami telah berkomitmen untuk
             memberikan pengalaman ibadah yang aman, nyaman, dan memenuhi harapan
-            spiritual jamaah kami di seluruh Indonesia. Dengan pengalaman dan
+            spiritual jamaah kami di seluruh Indonesia.<br /><br /> Dengan pengalaman dan
             dedikasi yang kuat, Goumrah.id telah menjadi pilihan utama bagi
             ribuan jamaah yang mencari layanan umrah dan haji yang profesional
-            dan terpercaya. Terima kasih telah memilih Goumrah.id sebagai
+            dan terpercaya.<br /><br />Terima kasih telah memilih Goumrah.id sebagai
             sahabat perjalanan ibadah Anda. Bersama kami, wujudkan perjalanan
-            ibadah yang berkesan dan penuh makna. Goumrah.id - Dari Hati Untuk
+            ibadah yang berkesan dan penuh makna. <br /><br />Goumrah.id - Dari Hati Untuk
             Jamaah.
           </p>
         </div>

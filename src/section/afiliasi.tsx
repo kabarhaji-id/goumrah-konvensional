@@ -10,15 +10,15 @@ import {
 
 const afiliasiData: LogoAfiliasiProps[] = [
   {
-    imageUrl: "/assets/image/afiliate-logo/himpuh-logo.png",
-    title: "himpuh",
-    width: 34,
+    imageUrl: "/assets/image/afiliate-logo/kemenag.png",
+    title: "kemenag",
+    width: 51,
     height: 40,
   },
   {
-    imageUrl: "/assets/image/afiliate-logo/iata.png",
-    title: "iata",
-    width: 59,
+    imageUrl: "/assets/image/afiliate-logo/siskopatuh.png",
+    title: "siskopatuh",
+    width: 90,
     height: 40,
   },
   {
@@ -34,21 +34,21 @@ const afiliasiData: LogoAfiliasiProps[] = [
     height: 40,
   },
   {
+    imageUrl: "/assets/image/afiliate-logo/himpuh-logo.png",
+    title: "himpuh",
+    width: 34,
+    height: 40,
+  },
+  {
+    imageUrl: "/assets/image/afiliate-logo/iata.png",
+    title: "iata",
+    width: 59,
+    height: 40,
+  },
+  {
     imageUrl: "/assets/image/afiliate-logo/asita.png",
     title: "asita",
     width: 56,
-    height: 40,
-  },
-  {
-    imageUrl: "/assets/image/afiliate-logo/siskopatuh.png",
-    title: "siskopatuh",
-    width: 90,
-    height: 40,
-  },
-  {
-    imageUrl: "/assets/image/afiliate-logo/kemenag.png",
-    title: "kemenag",
-    width: 51,
     height: 40,
   },
 ];

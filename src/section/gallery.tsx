@@ -1,0 +1,58 @@
+import {
+  Section,
+  SectionContent,
+  SectionHeader,
+  SectionSubTitle,
+  SectionTitle,
+} from "@/components/ui/section";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import Image from "next/image";
+import React from "react";
+
+const galleryData: CardProps[] = [
+  {
+    imageUrl: "/assets/image/gallery/image-1.png",
+    alt: "Image 1",
+  },
+  {
+    imageUrl: "/assets/image/gallery/image-2.png",
+    alt: "Image 2",
+  },
+  {
+    imageUrl: "/assets/image/gallery/image-3.png",
+    alt: "Image 3",
+  },
+];
+
+const GallerySection = () => {
+  return (
+    <Section>
+      <SectionHeader>
+        <SectionSubTitle>#EpicMoment</SectionSubTitle>
+        <SectionTitle className="text-primary">
+          Abadikan Moment Tak Terlupakan Bersama goumrah.id
+        </SectionTitle>
+      </SectionHeader>
+      <SectionContent className="flex max-w-full gap-x-4 overflow-x-auto px-6">
+        {galleryData.map((data) => (
+          <Card imageUrl={data.imageUrl} alt={data.alt} key={data.alt} />
+        ))}
+      </SectionContent>
+    </Section>
+  );
+};
+
+interface CardProps {
+  imageUrl: string | StaticImport;
+  alt: string;
+}
+
+const Card = ({ imageUrl, alt }: CardProps) => {
+  return (
+    <div className="relative aspect-[9/16] h-auto w-5/12 flex-none overflow-hidden rounded-lg">
+      <Image src={imageUrl} alt={alt} fill sizes="41vw" />
+    </div>
+  );
+};
+
+export default GallerySection;

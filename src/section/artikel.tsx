@@ -6,11 +6,44 @@ import {
   SectionSubTitle,
   SectionTitle,
 } from "@/components/ui/section";
+import Image from "next/image";
 import React from "react";
+
+interface Artikel {
+  imageUrl: string;
+  tag: string;
+  dateCreated: string;
+  title: string;
+  source: string;
+}
+
+const artikelData: Artikel[] = [
+  {
+    imageUrl: "/assets/image/artikel/artike-1.png",
+    tag: "Tips Umrah",
+    dateCreated: "15 Nov 2024",
+    title: "Ini 5 hal yang perlu disiapkan sebelum berangkat umrah",
+    source: "kabarumrah.id",
+  },
+  {
+    imageUrl: "/assets/image/artikel/artikel-2.png",
+    tag: "Wisata Religi",
+    dateCreated: "15 Nov 2024",
+    title: "Al Ula dinobatkan sebagai desa wisata terbaik 2022 versi UNESCO",
+    source: "kabarhaji.id",
+  },
+  {
+    imageUrl: "/assets/image/artikel/artikel-4.png",
+    tag: "islamipedia",
+    dateCreated: "15 Nov 2024",
+    title: "Pemahaman Ilmu Fikih Menentukan Keabsahan",
+    source: "kabarhaji.id",
+  },
+];
 
 const ArtikelSection = () => {
   return (
-    <Section>
+    <Section className="bg-accent">
       <SectionHeader>
         <SectionSubTitle>Artikel</SectionSubTitle>
         <SectionTitle>
@@ -19,9 +52,9 @@ const ArtikelSection = () => {
       </SectionHeader>
       <SectionContent className="space-y-8">
         <div className="space-y-4">
-          <Card />
-          <Card />
-          <Card />
+          {artikelData.map((data) => (
+            <Card key={data.title} artikel={data} />
+          ))}
         </div>
 
         <Button className="w-full" variant="outline">
@@ -32,23 +65,29 @@ const ArtikelSection = () => {
   );
 };
 
-const Card = () => {
+const Card = ({ artikel }: { artikel: Artikel }) => {
   return (
-    <article className="flex w-full">
-      <div className="aspect-square w-4/12 bg-black" />
-      <div className="flex flex-1 flex-col items-start justify-between p-3">
+    <article className="flex w-full overflow-hidden rounded-lg shadow-md">
+      <div className="relative aspect-square w-4/12">
+        <Image
+          src={artikel.imageUrl}
+          alt={artikel.title}
+          fill
+          sizes="33vw"
+          quality={100}
+        />
+      </div>
+      <div className="flex flex-1 flex-col items-start justify-between bg-white p-3">
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <p className="bg-primary px-1 py-0.5 text-xs text-white">
-              Wisata Religi
+            <p className="rounded bg-primary px-1 py-0.5 text-xs text-white">
+              {artikel.tag}
             </p>
-            <p className="text-xs">15 Nov 2024</p>
+            <p className="text-xs">{artikel.dateCreated}</p>
           </div>
-          <h3 className="line-clamp-2 text-sm">
-            Ini 5 hal yang perlu dipersiapkan sebelum menunaikan ibadah umrah
-          </h3>
+          <h3 className="line-clamp-2 text-sm">{artikel.title}</h3>
         </div>
-        <p className="text-xs">kabarhaji.id</p>
+        <p className="text-xs">{artikel.source}</p>
       </div>
     </article>
   );

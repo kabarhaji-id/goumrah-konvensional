@@ -1,12 +1,12 @@
+import Image from "next/image";
+import React from "react";
+
 import {
   Section,
   SectionContent,
   SectionHeader,
   SectionSubTitle,
 } from "@/components/ui/section";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import React from "react";
 
 const afiliasiData: LogoAfiliasiProps[] = [
   {
@@ -95,6 +95,7 @@ const LogoAfiliasi = ({
       height={width}
       width={height}
       className="h-auto min-h-10 w-fit flex-none"
+      quality={100}
     />
   );
 };

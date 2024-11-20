@@ -72,8 +72,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <h3 className="text-xl font-medium">Office</h3>
             <span className="text-sm">
-              RT.1/RW.9, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, Daerah
-              Khusus Ibukota Jakarta 12740
+              JALAN GM AINUL YAKIN 35 AB, KELURAHAN KALIBATA, KECAMATAN PANCORAN, KOTA ADM. JAKARTA SELATAN, DKI JAKARTA
             </span>
           </div>
 
@@ -108,12 +107,12 @@ const Footer = () => {
 
           <div className="flex flex-col gap-1 text-xs">
             <span>Nomor Izin PPIU</span>
-            <span className="text-base font-bold">0247 0101 4295 30001</span>
-            <span>No U.140 Tahun 2024</span>
+            <span className="text-base font-bold">2705 2200 3877 40007</span>
+            <span>Tahun 2024</span>
           </div>
 
           <span className="text-sm">
-            © 2024 goumrah.id - PT Kabar Haji Indonesia. All Rights Reserved
+            © 2024 goumrah.id - PT Kabar Haji Indonesia.<br />All Rights Reserved
           </span>
 
           <div className="flex gap-4">

@@ -32,7 +32,7 @@ const HeroSection = () => {
             Wujudkan perjalanan Umrah impian Anda dengan mudah dan terpercaya,
             dari mana saja, kapan saja.
           </p>
-          <p className="text-lg font-bold italic">#BikinTenang</p>
+          <p className="text-lg italic">#bikin<span className="font-bold">tenang</span></p>
         </div>
 
         <Button className="capitalize" size="lg">

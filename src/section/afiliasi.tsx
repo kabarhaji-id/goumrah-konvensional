@@ -60,7 +60,7 @@ const AfiliasiSection = () => {
       <SectionHeader>
         <SectionSubTitle>Afiliasi goumrah.id</SectionSubTitle>
       </SectionHeader>
-      <SectionContent className="flex w-full gap-x-16 overflow-auto">
+      <SectionContent className="inline-flex w-full gap-x-16 overflow-auto">
         {afiliasiData.map((data) => (
           <LogoAfiliasi
             key={data.title}
@@ -92,9 +92,9 @@ const LogoAfiliasi = ({
     <Image
       src={imageUrl}
       alt={title}
-      height={width}
-      width={height}
-      className="h-auto min-h-10 w-fit flex-none"
+      height={height}
+      width={width}
+      className={`h-[${height}px] w-[${width}px] flex-none`}
       quality={100}
     />
   );

@@ -4,10 +4,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <Section
-      id="about-us"
-      className="py-6"
-    >
+    <Section id="about-us" className="py-6">
       <SectionContent>
         <div className="mb-16 flex items-center gap-x-4">
           <Image
@@ -37,12 +34,12 @@ const AboutUs = () => {
           <div className="absolute left-1/2 top-0 -z-10 mx-auto aspect-square h-full max-h-[320px] w-full max-w-[320px] -translate-x-1/2 rounded-br-[160px] rounded-tl-[160px] bg-primary/50 blur-xl" />
         </div>
         <SectionTitle className="mb-6">
-          Mitra Perjalanan Umrah & Haji Terpercaya Selama 20 Tahun
+          Mitra Perjalanan Umrah & Haji Terpercaya Lebih Dari 18 Tahun
         </SectionTitle>
         <p className="mx-auto max-w-[330px] text-justify">
-          “Dengan pengalaman 18 tahun di bidang Umrah dan Haji, kami berkomitmen
-          untuk menghadirkan pengalaman yang nyaman, aman, dan penuh makna bagi
-          setiap jamaah.”
+          “Dengan pengalaman lebih dari 18 tahun di bidang Umrah dan Haji, kami
+          berkomitmen untuk menghadirkan pengalaman yang nyaman, aman, dan penuh
+          makna bagi setiap jamaah.”
         </p>
       </SectionContent>
     </Section>

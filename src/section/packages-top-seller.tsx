@@ -27,9 +27,9 @@ const PackagesTopSellerSection = () => {
       <div className="absolute top-0 -z-10 h-20 w-full bg-gradient-to-b from-white to-accent" />
       <div className="absolute bottom-0 -z-10 h-24 w-full bg-gradient-to-t from-white to-accent" />
       <SectionHeader>
-        <SectionSubTitle>Sambut Panggilan-Nya</SectionSubTitle>
+        <SectionSubTitle>Pilihan Terbaik Untuk Kamu</SectionSubTitle>
         <SectionTitle className="text-center">
-          Paket Umrah Ideal, Dikelola Oleh Tenaga Profesional
+          Nikmati Pengalaman Ibadah Terbaik Bersama Kami
         </SectionTitle>
       </SectionHeader>
 

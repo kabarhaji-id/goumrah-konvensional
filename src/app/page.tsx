@@ -6,7 +6,6 @@ import GallerySection from "@/section/gallery";
 import AfiliasiSection from "@/section/afiliasi";
 import ArtikelSection from "@/section/artikel";
 import AboutUs from "@/section/about-us";
-import Footer from "@/components/layout/footer";
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
       <AfiliasiSection />
       <ArtikelSection />
       <AboutUs />
-      <Footer />
     </>
   );
 }

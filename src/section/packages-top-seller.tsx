@@ -10,7 +10,7 @@ import {
   SectionTitle,
 } from "@/components/ui/section";
 
-import WhatsAppCIcon from "@assets/icons/whatsapp.svg";
+import WhatsAppCIcon from "@/assets/icons/whatsapp.svg";
 
 const PackagesData: CardProps[] = [
   {
@@ -61,7 +61,7 @@ const Card = ({ imageUrl }: CardProps) => {
         src={imageUrl}
         alt="Paket Umrah 1"
         fill
-        quality={75}
+        quality={100}
         sizes="50vw"
         className="object-cover"
       />

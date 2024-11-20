@@ -6,11 +6,11 @@ import {
   SectionTitle,
 } from "@/components/ui/section";
 
-import BiayaTransparanCIcon from "@assets/icons/biaya-transparan.svg";
-import PelayananTerbaikCIcon from "@assets/icons/pelayanan-terbaik.svg";
-import PemesananMudahCIcon from "@assets/icons/pemesanan-mudah.svg";
-import PembayaranAmanCIconfrom from "@assets/icons/pembayaran-aman.svg";
-import TerpercayaCIcon from "@assets/icons/terpercaya.svg";
+import BiayaTransparanCIcon from "@/assets/icons/biaya-transparan.svg";
+import PelayananTerbaikCIcon from "@/assets/icons/pelayanan-terbaik.svg";
+import PemesananMudahCIcon from "@/assets/icons/pemesanan-mudah.svg";
+import PembayaranAmanCIconfrom from "@/assets/icons/pembayaran-aman.svg";
+import TerpercayaCIcon from "@/assets/icons/terpercaya.svg";
 
 const CardData: CardProps[] = [
   { title: "Pelayanan Terbaik", Icon: PelayananTerbaikCIcon },

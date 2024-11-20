@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Section, SectionContent, SectionHeader, SectionSubTitle } from "../ui/section";
 
-import WhatsAppCIcon from "@assets/icons/whatsapp.svg";
-import InstagramIcon from "@assets/icons/instagram.svg";
-import LinkedInIcon from "@assets/icons/linkedin.svg";
+import WhatsAppCIcon from "@/assets/icons/whatsapp.svg";
+import InstagramIcon from "@/assets/icons/instagram.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
 
 const Footer = () => {
     return (

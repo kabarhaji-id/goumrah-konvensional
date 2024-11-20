@@ -50,7 +50,7 @@ interface CardProps {
 const Card = ({ imageUrl, alt }: CardProps) => {
   return (
     <div className="relative aspect-[9/16] h-auto w-5/12 flex-none overflow-hidden rounded-lg">
-      <Image src={imageUrl} alt={alt} fill sizes="41vw" />
+      <Image src={imageUrl} alt={alt} fill sizes="44vw" quality={100} />
     </div>
   );
 };

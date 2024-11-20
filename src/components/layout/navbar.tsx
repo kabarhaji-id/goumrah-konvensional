@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import MenuCIcon from "@assets/icons/lucide-menu.svg";
+import MenuCIcon from "@/assets/icons/lucide-menu.svg";
 import { Button } from "../ui/button";
 
 const Navbar = () => {

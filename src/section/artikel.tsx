@@ -10,7 +10,7 @@ import React from "react";
 
 const ArtikelSection = () => {
   return (
-    <Section>
+    <Section id="article">
       <SectionHeader>
         <SectionSubTitle>Artikel</SectionSubTitle>
         <SectionTitle>

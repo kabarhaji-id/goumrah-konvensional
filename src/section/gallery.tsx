@@ -26,7 +26,7 @@ const galleryData: CardProps[] = [
 
 const GallerySection = () => {
   return (
-    <Section>
+    <Section id="gallery">
       <SectionHeader>
         <SectionSubTitle>#EpicMoment</SectionSubTitle>
         <SectionTitle className="text-primary">

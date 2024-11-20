@@ -3,7 +3,10 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <Section className="py-6">
+    <Section
+      id="about-us"
+      className="py-6"
+    >
       <SectionContent>
         <div className="mb-16 flex items-center gap-x-4">
           <div className="h-[180px] w-[150px] flex-none bg-primary" />

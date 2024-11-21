@@ -72,8 +72,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <h3 className="text-xl font-medium">Office</h3>
             <span className="text-sm">
-              RT.1/RW.9, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, Daerah
-              Khusus Ibukota Jakarta 12740
+              JALAN GM AINUL YAKIN 35 AB, KELURAHAN KALIBATA, KECAMATAN PANCORAN, KOTA ADM. JAKARTA SELATAN, DKI JAKARTA
             </span>
           </div>
 
@@ -85,14 +84,14 @@ const Footer = () => {
 
           <p className="text-xs font-light leading-5">
             Selamat datang di Goumrah.id, mitra terpercaya Anda dalam perjalanan
-            umrah dan haji selama 20 tahun. Kami telah berkomitmen untuk
+            umrah dan haji lebih dari 18 tahun. Kami telah berkomitmen untuk
             memberikan pengalaman ibadah yang aman, nyaman, dan memenuhi harapan
-            spiritual jamaah kami di seluruh Indonesia. Dengan pengalaman dan
+            spiritual jamaah kami di seluruh Indonesia.<br /><br /> Dengan pengalaman dan
             dedikasi yang kuat, Goumrah.id telah menjadi pilihan utama bagi
             ribuan jamaah yang mencari layanan umrah dan haji yang profesional
-            dan terpercaya. Terima kasih telah memilih Goumrah.id sebagai
+            dan terpercaya.<br /><br />Terima kasih telah memilih Goumrah.id sebagai
             sahabat perjalanan ibadah Anda. Bersama kami, wujudkan perjalanan
-            ibadah yang berkesan dan penuh makna. Goumrah.id - Dari Hati Untuk
+            ibadah yang berkesan dan penuh makna. <br /><br />Goumrah.id - Dari Hati Untuk
             Jamaah.
           </p>
         </div>
@@ -108,12 +107,12 @@ const Footer = () => {
 
           <div className="flex flex-col gap-1 text-xs">
             <span>Nomor Izin PPIU</span>
-            <span className="text-base font-bold">0247 0101 4295 30001</span>
-            <span>No U.140 Tahun 2024</span>
+            <span className="text-base font-bold">2705 2200 3877 40007</span>
+            <span>Tahun 2024</span>
           </div>
 
           <span className="text-sm">
-            © 2024 goumrah.id - PT Kabar Haji Indonesia. All Rights Reserved
+            © 2024 goumrah.id - PT Kabar Haji Indonesia.<br />All Rights Reserved
           </span>
 
           <div className="flex gap-4">

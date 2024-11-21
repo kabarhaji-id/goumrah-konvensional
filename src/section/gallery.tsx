@@ -33,7 +33,7 @@ const GallerySection = () => {
           Abadikan Moment Tak Terlupakan Bersama goumrah.id
         </SectionTitle>
       </SectionHeader>
-      <SectionContent className="flex max-w-full gap-x-4 overflow-x-auto px-6">
+      <SectionContent className="scrollbar-hide flex max-w-full gap-x-4 overflow-x-auto px-6">
         {galleryData.map((data) => (
           <Card imageUrl={data.imageUrl} alt={data.alt} key={data.alt} />
         ))}

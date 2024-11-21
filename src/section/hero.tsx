@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -32,12 +33,16 @@ const HeroSection = () => {
             Wujudkan perjalanan Umrah impian Anda dengan mudah dan terpercaya,
             dari mana saja, kapan saja.
           </p>
-          <p className="text-lg italic">#bikin<span className="font-bold">tenang</span></p>
+          <p className="text-lg italic">
+            #bikin<span className="font-bold">tenang</span>
+          </p>
         </div>
 
-        <Button className="capitalize" size="lg">
-          Jelajahi berbagai paket umrah kami
-          <ChevronDown className="!size-5" />
+        <Button className="capitalize" size="lg" asChild>
+          <Link href={"#umrah-package"}>
+            Jelajahi berbagai paket umrah kami
+            <ChevronDown className="!size-5 animate-bounce duration-1000" />
+          </Link>
         </Button>
       </div>
     </section>

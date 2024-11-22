@@ -31,7 +31,7 @@ const WhyChooseUsSection = () => {
           Berangkat Umrah Bersama goumrah.id
         </SectionTitle>
       </SectionHeader>
-      <SectionContent className="flex max-w-full gap-x-4 overflow-x-auto px-6">
+      <SectionContent className="scrollbar-hide flex max-w-full gap-x-4 overflow-x-auto px-6">
         {CardData.map((data) => (
           <Card title={data.title} Icon={data.Icon} key={data.title} />
         ))}

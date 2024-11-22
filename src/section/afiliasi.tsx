@@ -7,6 +7,7 @@ import {
   SectionHeader,
   SectionSubTitle,
 } from "@/components/ui/section";
+import Marquee from "react-fast-marquee";
 
 const afiliasiData: LogoAfiliasiProps[] = [
   {
@@ -60,16 +61,18 @@ const AfiliasiSection = () => {
       <SectionHeader>
         <SectionSubTitle>Afiliasi goumrah.id</SectionSubTitle>
       </SectionHeader>
-      <SectionContent className="inline-flex w-full gap-x-16 overflow-auto">
-        {afiliasiData.map((data) => (
-          <LogoAfiliasi
-            key={data.title}
-            imageUrl={data.imageUrl}
-            title={data.title}
-            width={data.width}
-            height={data.height}
-          />
-        ))}
+      <SectionContent>
+        <Marquee pauseOnClick speed={25}>
+          {afiliasiData.map((data) => (
+            <LogoAfiliasi
+              key={data.title}
+              imageUrl={data.imageUrl}
+              title={data.title}
+              width={data.width}
+              height={data.height}
+            />
+          ))}
+        </Marquee>
       </SectionContent>
     </Section>
   );
@@ -94,7 +97,7 @@ const LogoAfiliasi = ({
       alt={title}
       height={height}
       width={width}
-      className={`h-[${height}px] w-[${width}px] flex-none`}
+      className={`mr-16 h-auto w-auto`}
       quality={100}
     />
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
@@ -10,7 +12,11 @@ import {
   SectionTitle,
 } from "@/components/ui/section";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import WhatsAppCIcon from "@/assets/icons/whatsapp.svg";
+import Link from "next/link";
 
 const PackagesData: CardProps[] = [
   {
@@ -34,15 +40,28 @@ const PackagesSection = () => {
       </SectionHeader>
 
       <SectionContent className="space-y-8 px-0">
-        <div className="flex gap-x-4 overflow-x-auto px-6">
+        <Swiper spaceBetween={16} slidesPerView={"auto"} className="!px-6">
           {PackagesData.map((data, i) => (
-            <Card key={i} imageUrl={data.imageUrl} />
+            <SwiperSlide
+              key={i}
+              className="aspect-[4/5] h-auto !w-10/12"
+              style={{ marginRight: 16 }}
+            >
+              <Card imageUrl={data.imageUrl} />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
 
         <div className="px-6">
-          <Button size="lg" className="w-full">
-            Hubungi Kami <WhatsAppCIcon className="!size-6" />
+          <Button size="lg" className="w-full" asChild>
+            <Link
+              href={
+                "https://wa.me/628111845788?text=Assalamu'alaikum%20Warahmatullahi%20Wabarakatuh.%20Saya%20tertarik%20dengan%20paket%20*Umrah%20Plus%20Thaif*%20yang%20saya%20lihat%20di%20website%20Anda.%20Boleh%20saya%20tahu%20lebih%20lanjut%20tentang%20jadwal%2C%20fasilitas%2C%20dan%20biayanya%3F%20Terima%20kasih!"
+              }
+              target="_blank"
+            >
+              Hubungi Kami <WhatsAppCIcon className="!size-6" />
+            </Link>
           </Button>
         </div>
       </SectionContent>
@@ -56,16 +75,23 @@ interface CardProps {
 
 const Card = ({ imageUrl }: CardProps) => {
   return (
-    <div className="relative aspect-[4/5] h-auto w-10/12 flex-none overflow-hidden rounded-lg">
-      <Image
-        src={imageUrl}
-        alt="Paket Umrah 1"
-        fill
-        quality={100}
-        sizes="50vw"
-        className="object-cover"
-      />
-    </div>
+    <Link
+      href={
+        "https://wa.me/628111845788?text=Assalamu'alaikum%20Warahmatullahi%20Wabarakatuh.%20Saya%20tertarik%20dengan%20paket%20*Umrah%20Plus%20Thaif*%20yang%20saya%20lihat%20di%20website%20Anda.%20Boleh%20saya%20tahu%20lebih%20lanjut%20tentang%20jadwal%2C%20fasilitas%2C%20dan%20biayanya%3F%20Terima%20kasih!"
+      }
+      target="_blank"
+    >
+      <div className="relative h-full w-full flex-none overflow-hidden rounded-lg">
+        <Image
+          src={imageUrl}
+          alt="Paket Umrah 1"
+          fill
+          quality={100}
+          sizes="50vw"
+          className="object-cover"
+        />
+      </div>
+    </Link>
   );
 };
 

@@ -32,7 +32,7 @@ const Footer = () => {
           <Button size="lg" className="z-50 w-full px-6" asChild>
             <Link
               href={
-                "https://wa.me/6285161390739?text=Assalamu'alaikum%20Warahmatullahi%20Wabarakatuh.%20Saya%20tertarik%20dengan%20paket%20*Umrah%20Plus%20Thaif*%20yang%20saya%20lihat%20di%20website%20Anda.%20Boleh%20saya%20tahu%20lebih%20lanjut%20tentang%20jadwal%2C%20fasilitas%2C%20dan%20biayanya%3F%20Terima%20kasih!"
+                "https://wa.me/628111845788?text=Assalamu'alaikum%20Warahmatullahi%20Wabarakatuh.%20Saya%20tertarik%20dengan%20paket%20*Umrah%20Plus%20Thaif*%20yang%20saya%20lihat%20di%20website%20Anda.%20Boleh%20saya%20tahu%20lebih%20lanjut%20tentang%20jadwal%2C%20fasilitas%2C%20dan%20biayanya%3F%20Terima%20kasih!"
               }
               target="_blank"
             >

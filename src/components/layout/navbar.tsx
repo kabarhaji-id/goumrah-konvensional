@@ -1,19 +1,21 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import React from "react";
 
 import HomeIcon from "@/assets/icons/home.svg";
+import CustomerServiceIcon from "@/assets/icons/customer-service.svg";
+import KaabaIcon from "@/assets/icons/kaaba.svg";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <nav className="sticky bottom-0 z-50 flex items-start justify-center gap-20 rounded-t-2xl bg-white px-12 py-4">
-      <Link
-        href="/"
+      <button
+        onClick={() => router.push("/")}
         data-active={pathname == "/"}
         className="group flex flex-col items-center gap-1 text-foreground/30 data-[active=true]:text-primary"
       >
@@ -21,7 +23,25 @@ const Navbar = () => {
         <p className="whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold">
           Beranda
         </p>
-      </Link>
+      </button>
+      <button
+        data-active={false}
+        className="group flex flex-col items-center gap-1 text-foreground/30 data-[active=true]:text-primary"
+      >
+        <CustomerServiceIcon className="size-7" />
+        <p className="whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold">
+          Tanya Isma
+        </p>
+      </button>
+      <button
+        data-active={false}
+        className="group flex flex-col items-center gap-1 text-foreground/30 data-[active=true]:text-primary"
+      >
+        <KaabaIcon className="size-7" />
+        <p className="whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold">
+          Paket Umrah
+        </p>
+      </button>
     </nav>
   );
 };

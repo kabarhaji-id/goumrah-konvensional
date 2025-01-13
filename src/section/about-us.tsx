@@ -36,7 +36,7 @@ const AboutUs = () => {
         <SectionTitle className="mb-6">
           Mitra Perjalanan Umrah & Haji Terpercaya Lebih Dari 18 Tahun
         </SectionTitle>
-        <p className="mx-auto max-w-[330px] text-justify">
+        <p className="mx-auto text-justify">
           “Dengan pengalaman lebih dari 18 tahun di bidang Umrah dan Haji, kami
           berkomitmen untuk menghadirkan pengalaman yang nyaman, aman, dan penuh
           makna bagi setiap jamaah.”

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "@/components/layout/navbar";
+import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "goumrah.id",
@@ -24,11 +25,13 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${plusJakartaSans.className} antialiased`}>
         <div className="mx-auto max-w-screen-sm">
-          <Navbar />
+          <Header />
 
           <main>{children}</main>
 
           <Footer />
+
+          <Navbar />
         </div>
       </body>
     </html>

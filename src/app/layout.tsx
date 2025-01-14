@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import ChatWidgets from "@/section/chat-widgets";
 
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
@@ -27,7 +28,7 @@ export default function RootLayout({
           <Navbar />
 
           <main>{children}</main>
-
+          <ChatWidgets />
           <Footer />
         </div>
       </body>

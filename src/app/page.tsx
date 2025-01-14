@@ -7,6 +7,7 @@ import AfiliasiSection from "@/section/afiliasi";
 import ArtikelSection from "@/section/artikel";
 import AboutUs from "@/section/about-us";
 
+
 export default function Home() {
   return (
     <>

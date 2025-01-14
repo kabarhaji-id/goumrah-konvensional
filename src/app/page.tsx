@@ -6,10 +6,10 @@ import GallerySection from "@/section/gallery";
 import AfiliasiSection from "@/section/afiliasi";
 import ArtikelSection from "@/section/artikel";
 import AboutUs from "@/section/about-us";
-
+import CometChatInitializer from "@/components/chat/comet-chat-init";
 
 export default function Home() {
-  return (
+    return (
     <>
       <HeroSection />
       <PackagesTopSellerSection />

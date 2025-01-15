@@ -17,7 +17,15 @@ export interface Flight {
 
 export interface FlightDetail {
   flight_number: string;
-  duration: string;
+  duration: number;
+  airport_name_departure: string;
+  airport_terminal_departure: string;
+  airport_code_departure: string;
+  airport_city_departure: string;
+  airport_name_arrival: string;
+  airport_terminal_arrival: string;
+  airport_code_arrival: string;
+  airport_city_arrival: string;
   departure_datetime: string;
   terminal: string;
   class: string;
@@ -30,6 +38,8 @@ export interface FlightDetail {
   airline_logo: string;
   skytrax: "Low Cost" | "Full Service";
   rating: string;
+  transit?: FlightDetail;
+  transit_datetime?: string;
 }
 
 export interface HotelDetail {

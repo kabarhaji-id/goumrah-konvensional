@@ -55,10 +55,10 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
         />
 
         {/* --- Pricing Section */}
-        <div className="border-subtle mx-4 space-y-1.5 rounded-[14px] border bg-white px-3 py-3 text-primary-foreground shadow-custom-sm transition-all">
+        <div className="border-subtle mx-4 space-y-2 rounded-[14px] border bg-white px-3 py-4 text-primary-foreground shadow-custom-sm transition-all">
           {pricingList.map((data, index) => {
             return (
-              <>
+              <div key={index} className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="flex items-center gap-2">
@@ -104,7 +104,7 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
                 </div>
 
                 {index !== pricingList.length - 1 && <Separator />}
-              </>
+              </div>
             );
           })}
         </div>

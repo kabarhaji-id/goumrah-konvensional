@@ -8,7 +8,7 @@ import HomeIcon from "@/assets/icons/home.svg";
 import CustomerServiceIcon from "@/assets/icons/customer-service.svg";
 import KaabaIcon from "@/assets/icons/kaaba.svg";
 
-const Navbar = () => {
+const BottomNavigation = () => {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -46,4 +46,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BottomNavigation;

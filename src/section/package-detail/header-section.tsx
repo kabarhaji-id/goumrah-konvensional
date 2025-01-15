@@ -95,7 +95,7 @@ const HeaderSection = ({
         {/* --- Button: Order This Package  */}
         <Separator />
 
-        <Button className="h-11 w-full py-1">
+        <Button className="h-11 w-full py-1 shadow-custom-md">
           <p className="text-base font-semibold leading-[150%] tracking-wide">
             Pesan Paket Umrah Ini
           </p>

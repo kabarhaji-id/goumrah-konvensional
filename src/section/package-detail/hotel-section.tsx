@@ -28,16 +28,16 @@ const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
   const arrTabLists: string[] = [];
 
   const arrDataHotel = [
-    // ...dataHotel.wisata.map((wisataItem, index) => {
-    //     const type = `Wisata-${index + 1}`;
-    //     if (!arrTabLists.includes(type)) {
-    //         arrTabLists.push(type);
-    //     }
-    //     return {
-    //         type,
-    //         data: wisataItem,
-    //     };
-    // }),
+    ...dataHotel.wisata.map((wisataItem, index) => {
+      const type = `Wisata-${index + 1}`;
+      if (!arrTabLists.includes(type)) {
+        arrTabLists.push(type);
+      }
+      return {
+        type,
+        data: wisataItem,
+      };
+    }),
     {
       type: "Makkah",
       data: dataHotel.makkah,

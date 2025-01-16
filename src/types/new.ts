@@ -170,5 +170,6 @@ export interface UmrahPackage {
   quadFinalPrice?: number;
   infantFinalPrice?: number;
   promos: PromoDetail[];
+  addons: Images[];
   itineraries: Itinerary[];
 }

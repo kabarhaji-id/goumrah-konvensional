@@ -104,7 +104,7 @@ const HotelCard = ({
 
       <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px] pb-2">
         <CustomSwiper
-          className="w-full rounded-[14px] !pb-0"
+          className="w-full overflow-hidden !rounded-[14px] !pb-0"
           padding={0}
           gap={0}
           bulletVariant="white-dot"
@@ -122,10 +122,10 @@ const HotelCard = ({
                   <div key={index} className="relative">
                     <Image
                       width={314}
-                      height={204}
+                      height={236}
                       src={imageHotel.src}
                       alt={`image-${dataHotel.hotel_name}-${index}`}
-                      className="h-[204px] object-cover"
+                      className="h-[236px] object-cover"
                     />
 
                     <div
@@ -141,7 +141,7 @@ const HotelCard = ({
             })}
         </CustomSwiper>
 
-        <div className="!mt-0 flex flex-col gap-3 px-4 pb-4 pt-3 text-primary-foreground">
+        <div className="!mt-0 flex flex-col gap-3 px-4 py-2 text-primary-foreground">
           <div className="flex flex-col gap-1.5">
             <Rating totalStars={dataHotel.star_rating} />
             <div className="flex flex-col gap-1">

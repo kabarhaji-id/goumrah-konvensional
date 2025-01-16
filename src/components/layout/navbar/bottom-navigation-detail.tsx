@@ -30,9 +30,9 @@ const BottomNavigationDetail = ({ orderUrl }: { orderUrl: string }) => {
       <Button
         size="lg"
         variant="primary"
-        className="flex h-11 w-full items-center justify-center"
+        className="flex h-11 w-full justify-center"
       >
-        <Link href={orderUrl} className="flex gap-2">
+        <Link href={orderUrl} className="flex items-center gap-2">
           <p className="whitespace-nowrap font-semibold leading-[150%] tracking-wide">
             Pesan Paket Umrah Ini
           </p>

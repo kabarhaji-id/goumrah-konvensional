@@ -13,11 +13,11 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
   if (dataPromos && dataPromos.length > 0) {
     return (
       <Section className={`pb-5 pt-0 ${dataPromos.length === 1 ? "px-4" : ""}`}>
-        <SectionTitle
+        {/* <SectionTitle
           className={`mb-2 flex items-center ${dataPromos.length > 1 ? "px-4" : ""}`}
         >
           Jangan Lewatkan Promo Lainnya
-        </SectionTitle>
+        </SectionTitle> */}
 
         <SectionContent>
           {dataPromos.length > 1 ? (

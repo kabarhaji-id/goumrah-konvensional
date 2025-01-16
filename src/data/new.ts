@@ -1,5 +1,7 @@
 import { UmrahPackage } from "@/types/new";
 
+const whatsappNumber = process.env.WHATSAPP_NUMBER_CS;
+
 export const dummyData: UmrahPackage[] = [
   {
     id: "umrah-hemat-fokus-ibadah-silver",
@@ -16,8 +18,7 @@ export const dummyData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Silver",
     down_payment: 5,
-    order_url:
-      "https://wa.me/<No_Whatsapp>?text=Assalamualaikum,%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Paket%20Gold%20Umrah%20Pilihan%209%20Hari.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%20Terima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.",
+    order_url: `https://wa.me/${whatsappNumber}?text=Assalamualaikum,%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Paket%20Gold%20Umrah%20Pilihan%209%20Hari.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%20Terima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
     departure_date: [
       {
         date: "2024-03-10T10:00:00+07:00",
@@ -207,6 +208,18 @@ export const dummyData: UmrahPackage[] = [
       {
         imageUrl: "/assets/image/packages-umrah/package-detail-1.png",
         link: "test",
+      },
+    ],
+    addons: [
+      {
+        id: "1",
+        src: "/assets/image/packages-umrah/package-detail-1.png",
+        category: "Standard",
+      },
+      {
+        id: "2",
+        src: "/assets/image/packages-umrah/package-detail-1.png",
+        category: "Standard",
       },
     ],
     itineraries: [

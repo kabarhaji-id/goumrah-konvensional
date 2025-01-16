@@ -1,13 +1,13 @@
 import DetailNavbar from "@/components/layout/navbar/detail-navbar";
-import dataPackageDetails from "@/data/package-details";
 import HeaderSection from "@/section/package-detail/header-section";
 import ImagePoster from "@/section/package-detail/image-poster";
 import PricingSection from "@/section/package-detail/pricing-section";
 import FlightSection from "@/section/package-detail/flight-section";
+import HotelSection from "@/section/package-detail/hotel-section";
+import TransportationSection from "@/section/package-detail/transportation-section";
 
 import { dataPackages } from "@/data/packages";
 import { dummyData } from "@/data/new";
-import HotelSection from "@/section/package-detail/hotel-section";
 
 export default async function DetailPage({
   params,
@@ -36,6 +36,8 @@ export default async function DetailPage({
           <FlightSection dataFlight={detail.flight_details} />
 
           <HotelSection dataHotel={detail.hotel_details} />
+
+          <TransportationSection dataTransportation={detail.bus_details} />
         </main>
       </>
     );

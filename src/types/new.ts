@@ -1,14 +1,4 @@
-// interfaces.ts
-
 import { PackageCategory, PackageType } from "./packages";
-
-// export interface DepartureDetail {
-//   id: string;
-//   city: string;
-//   room_type: string;
-//   normal_price: string;
-//   discount_price: string | null;
-// }
 
 export interface Flight {
   id: string;
@@ -81,6 +71,7 @@ export interface BusDetail {
   provider: string;
   bus_type: string;
   seat_amount: number;
+  images: Images[];
 }
 
 export interface DepartureDateDetail {
@@ -99,7 +90,6 @@ export interface UmrahPackage {
   package: string;
   down_payment: string;
   order_url: string;
-  // departure_details: DepartureDetail[];
   flight_details: Flight;
   hotel_details: Hotel;
   bus_details: BusDetail;

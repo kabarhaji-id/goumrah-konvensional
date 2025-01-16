@@ -181,6 +181,28 @@ export const dummyData: UmrahPackage[] = [
       },
     },
     bus_details: {
+      images: [
+        {
+          id: "1",
+          src: "/assets/image/packages-umrah/package-detail-1.png",
+          category: "Standard",
+        },
+        {
+          id: "2",
+          src: "/assets/image/packages-umrah/package-detail-1.png",
+          category: "Standard",
+        },
+        {
+          id: "3",
+          src: "/assets/image/packages-umrah/package-detail-1.png",
+          category: "Standard",
+        },
+        {
+          id: "4",
+          src: "/assets/image/packages-umrah/package-detail-1.png",
+          category: "Family Room",
+        },
+      ],
       id: "sapico-reguler",
       provider: "Sapico",
       bus_type: "Reguler",

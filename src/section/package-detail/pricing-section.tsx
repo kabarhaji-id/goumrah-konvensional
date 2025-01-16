@@ -56,57 +56,61 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
 
         {/* --- Pricing Section */}
         <div className="border-subtle mx-4 space-y-2 rounded-[14px] border bg-white px-3 py-4 text-primary-foreground shadow-custom-sm transition-all">
-          {pricingList.map((data, index) => {
-            return (
-              <div key={index} className="flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <p className="font-bold leading-6 tracking-[0.15px]">
-                        {capitalize(data.title)}
-                      </p>
+          {pricingList
+            .filter((p) => p.price)
+            .map((data, index) => {
+              return (
+                <div key={index} className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <p className="font-bold leading-6 tracking-[0.15px]">
+                          {capitalize(data.title)}
+                        </p>
 
-                      {data.priceFinal &&
-                        data.price !== Number(data.priceFinal) && (
-                          <Badge variant="destructive" size="medium">
-                            <span className="text-[11px]">
-                              {getAmountOfDiscount(
-                                data.price!,
-                                Number(data.priceFinal),
-                              )}
-                            </span>
-                          </Badge>
-                        )}
+                        {data.priceFinal &&
+                          data.price !== Number(data.priceFinal) && (
+                            <Badge variant="destructive" size="medium">
+                              <span className="text-[11px]">
+                                {getAmountOfDiscount(
+                                  data.price!,
+                                  Number(data.priceFinal),
+                                )}
+                              </span>
+                            </Badge>
+                          )}
+                      </div>
+                      <p className="text-xs leading-4 tracking-wide opacity-60">
+                        {data.description} <br />
+                        {data.note}
+                      </p>
                     </div>
-                    <p className="text-xs leading-4 tracking-wide opacity-60">
-                      {data.description} <br />
-                      {data.note}
-                    </p>
-                  </div>
-                  <div className="flex flex-shrink-0 flex-col">
-                    {data.priceFinal &&
-                    data.price !== Number(data.priceFinal) ? (
-                      <>
-                        <span className="text-end text-sm leading-5 tracking-wide line-through opacity-60">
+                    <div className="flex flex-shrink-0 flex-col">
+                      {data.priceFinal &&
+                      data.price !== Number(data.priceFinal) ? (
+                        <>
+                          <span className="text-end text-sm leading-5 tracking-wide line-through opacity-60">
+                            {priceToLocale(data.price!)}
+                          </span>
+
+                          <span className="text-base font-bold leading-6 tracking-wide">
+                            {priceToLocale(Number(data.priceFinal))}
+                          </span>
+                        </>
+                      ) : (
+                        <span className="text-base font-bold leading-6 tracking-wide">
                           {priceToLocale(data.price!)}
                         </span>
-
-                        <span className="text-base font-bold leading-6 tracking-wide">
-                          {priceToLocale(Number(data.priceFinal))}
-                        </span>
-                      </>
-                    ) : (
-                      <span className="text-base font-bold leading-6 tracking-wide">
-                        {priceToLocale(data.price!)}
-                      </span>
-                    )}
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                {index !== pricingList.length - 1 && <Separator />}
-              </div>
-            );
-          })}
+                  {index !== pricingList.filter((p) => p.price).length - 1 && (
+                    <Separator />
+                  )}
+                </div>
+              );
+            })}
         </div>
       </SectionContent>
     </Section>

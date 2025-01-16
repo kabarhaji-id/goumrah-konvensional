@@ -21,7 +21,7 @@ export const dummyData: UmrahPackage[] = [
     order_url: `https://wa.me/${whatsappNumber}?text=Assalamualaikum,%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Paket%20Gold%20Umrah%20Pilihan%209%20Hari.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%20Terima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
     departure_date: [
       {
-        date: "2024-03-10T10:00:00+07:00",
+        date: "2024-07-27T10:00:00+07:00",
         status: "active",
       },
       {
@@ -37,7 +37,7 @@ export const dummyData: UmrahPackage[] = [
     triplePrice: 25000000,
     quadPrice: 23000000,
     infantPrice: 20000000,
-    doubleFinalPrice: undefined,
+    doubleFinalPrice: 28000000,
     tripleFinalPrice: 24000000,
     quadFinalPrice: undefined,
     infantFinalPrice: undefined,

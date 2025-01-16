@@ -14,6 +14,7 @@ import PromoSection from "@/section/package-detail/promo-section";
 import { dataPackages } from "@/data/packages";
 import { dummyData } from "@/data/new";
 import { Button } from "@/components/ui/button";
+import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
 
 export default async function DetailPage({
   params,
@@ -48,6 +49,7 @@ export default async function DetailPage({
           {/* ItinerarySection Here */}
 
           {/* TourVoucherSection Here? (need confirmation) */}
+          <TourVoucherSection dataAddOns={detail.addons} />
 
           <ProductCoverageSection />
 

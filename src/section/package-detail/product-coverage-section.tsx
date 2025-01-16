@@ -1,13 +1,26 @@
 import GoUmrahTopAccent from "/public/assets/patterns/goumrah-primary-top-right.svg";
 import GoUmrahBottomAccent from "/public/assets/patterns/goumrah-primary-bottom-left.svg";
 
-import { CircleCheckBigIcon, InfoIcon, XIcon } from "lucide-react";
+import {
+  ChevronRightIcon,
+  CircleCheckBigIcon,
+  InfoIcon,
+  XIcon,
+} from "lucide-react";
 import {
   Section,
   SectionContent,
   SectionHeader,
   SectionTitle,
 } from "@/components/layout/section";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion/accordion";
+import { TermsConditionList } from "../syarat-ketentuan/list-of-content";
+import Link from "next/link";
 
 const ProductCoverageSection = () => {
   return (
@@ -71,6 +84,44 @@ const ProductCoverageSection = () => {
 
         <GoUmrahBottomAccent className="absolute bottom-0" />
       </SectionContent>
+
+      <Accordion
+        type="single"
+        collapsible
+        className="border-subtle mt-2 w-full items-center rounded-[14px] rounded-b-xl border bg-white shadow-custom-sm"
+      >
+        <AccordionItem value="item-1">
+          <AccordionTrigger
+            className="flex justify-between px-4 py-3 text-sm font-medium leading-[21px] text-primary-foreground"
+            variant="primary"
+          >
+            <span className="text-sm font-semibold leading-5">
+              Pahami sebelum kamu berangkat
+            </span>
+          </AccordionTrigger>
+
+          <AccordionContent className="px-4">
+            <div className="mt-2 flex flex-col gap-4">
+              {TermsConditionList.map((item, index) => {
+                return (
+                  <Link
+                    key={index}
+                    href={`/syarat-ketentuan${item.link}`}
+                    target="_blank"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs leading-4 tracking-wide">
+                        {item.title}
+                      </span>
+                      <ChevronRightIcon className="h-4 w-4 stroke-primary" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </Section>
   );
 };

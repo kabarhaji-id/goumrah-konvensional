@@ -31,6 +31,8 @@ const FilterSection = ({
   const [selectedDate, setSelectedDate] = useState(departureDates[0].date);
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
 
+  console.log(selectedDate, "<<<");
+
   const onFilterChange = (city?: string, date?: string) => {
     if (city) setSelectedCity(city);
     if (date) setSelectedDate(date);
@@ -65,10 +67,12 @@ const FilterSection = ({
                     <div key={index} className="flex w-full gap-2">
                       <div
                         onClick={() => onFilterChange(undefined, date.date)}
-                        className={`flex h-16 w-full cursor-pointer flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
+                        className={`relative flex h-16 w-full cursor-pointer flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
                           selectedDate === date.date && date.status === "active"
                             ? "border border-primary bg-primary-accent text-primary"
-                            : "pointer-events-none border border-neutral-200 text-neutral-foreground"
+                            : "border border-neutral-200 text-neutral-foreground"
+                        } ${
+                          date.status !== "active" ? "pointer-events-none" : ""
                         }`}
                       >
                         <span className="text-xs tracking-tight">
@@ -78,19 +82,22 @@ const FilterSection = ({
                           {moment(date.date).format("DD MMM")}
                         </span>
 
-                        <span
-                          className={`light-gold absolute bottom-2.5 rounded-[4px] px-1 text-[10px] font-medium tracking-wide ${
-                            selectedDate === date.date &&
-                            date.status === "active"
-                              ? "bg-primary text-white"
-                              : "bg-[#999999] text-gray-100"
-                          }`}
-                        >
-                          {selectedDate === date.date &&
-                          date.status === "active"
-                            ? "Dipilih"
-                            : "Belum Dibuka"}
-                        </span>
+                        {date.status !== "active" && (
+                          <span
+                            className={`absolute -bottom-2 rounded-[4px] bg-[#999999] px-1 text-[10px] font-medium tracking-wide text-gray-100`}
+                          >
+                            Belum Dibuka
+                          </span>
+                        )}
+
+                        {selectedDate === date.date &&
+                          date.status === "active" && (
+                            <span
+                              className={`absolute -bottom-2 rounded-[4px] bg-primary px-1 text-[10px] font-medium tracking-wide text-white`}
+                            >
+                              Dipilih
+                            </span>
+                          )}
                       </div>
                     </div>
                   );

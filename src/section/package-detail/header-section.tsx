@@ -6,15 +6,16 @@ import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
 import { StarIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
-import { PackageDetails } from "@/types/package-details";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { UmrahPackage } from "@/types/new";
+import Link from "next/link";
 
 const HeaderSection = ({
   packageData,
   durationDays,
 }: {
-  packageData: PackageDetails;
+  packageData: UmrahPackage;
   durationDays: string;
 }) => {
   return (
@@ -50,7 +51,7 @@ const HeaderSection = ({
           <div className="flex flex-col gap-2">
             {/* --- Title */}
             <h3 className="text-xl font-semibold leading-[130%] tracking-[0.5px]">
-              {packageData.name}
+              {packageData.tagline}
             </h3>
 
             {/* --- Days */}
@@ -61,32 +62,18 @@ const HeaderSection = ({
             {/* --- Rating and Reviews */}
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-xs text-neutral-foreground">
-                {packageData.reviews?.length > 0 && (
-                  <>
-                    <div className="flex items-center gap-1">
-                      <StarIcon
-                        className="h-5 w-5"
-                        fill="#f2ac30"
-                        stroke="none"
-                      />
-                      <span className="text-status-gold text-sm font-bold leading-[18px] tracking-tighter">
-                        {packageData.rating.toFixed(1)}
-                      </span>
-                    </div>
-                    <div className="h-1 w-1 rounded-full bg-neutral-foreground" />
-                  </>
-                )}
-                {packageData.reviews?.length > 0 ? (
-                  <a href="#reviews">
-                    <span className="text-sm font-semibold underline">
-                      {packageData.reviews.length} ulasan
-                    </span>
-                  </a>
-                ) : (
-                  <span className="text-sm font-semibold text-neutral-foreground/50">
-                    Belum ada ulasan
+                <div className="flex items-center gap-1">
+                  <StarIcon className="h-5 w-5" fill="#f2ac30" stroke="none" />
+                  <span className="text-status-gold text-sm font-bold leading-[18px] tracking-tighter">
+                    5
                   </span>
-                )}
+                </div>
+                <div className="h-1 w-1 rounded-full bg-neutral-foreground" />
+                <a href="#reviews">
+                  <span className="text-sm font-semibold underline">
+                    5 ulasan
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -96,9 +83,11 @@ const HeaderSection = ({
         <Separator />
 
         <Button className="h-11 w-full py-1 shadow-custom-md">
-          <p className="text-base font-semibold leading-[150%] tracking-wide">
-            Pesan Paket Umrah Ini
-          </p>
+          <Link href={packageData.order_url}>
+            <p className="text-base font-semibold leading-[150%] tracking-wide">
+              Pesan Paket Umrah Ini
+            </p>
+          </Link>
           <WhatsAppIcon />
         </Button>
       </SectionContent>

@@ -54,9 +54,9 @@ export default function RootLayout({
   //   </html>
   // );
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth bg-gray-50">
       <body className={`${plusJakartaSans.className} antialiased`}>
-        <div className="mx-auto max-w-screen-sm">
+        <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
           <main>{children}</main>
         </div>
 

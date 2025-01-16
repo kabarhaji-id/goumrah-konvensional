@@ -1,5 +1,7 @@
 // interfaces.ts
 
+import { PackageCategory, PackageType } from "./packages";
+
 // export interface DepartureDetail {
 //   id: string;
 //   city: string;
@@ -42,13 +44,19 @@ export interface FlightDetail {
   transit_datetime?: string;
 }
 
+export interface Hotel {
+  wisata: HotelDetail[];
+  makkah: HotelDetail;
+  madinah: HotelDetail;
+}
+
 export interface HotelDetail {
   id: string;
   city: string;
   hotel_name: string;
-  star_rating: string;
-  room_photos: Images[];
-  hotel_front_photo: string;
+  star_rating: number;
+  images: Images[];
+  google_maps_link_noembed: string;
   google_maps_link: string;
   google_review_link: string;
   description: string;
@@ -63,6 +71,7 @@ export interface HotelDetail {
 }
 
 export interface Images {
+  id: string;
   src: string;
   category?: string;
 }
@@ -81,15 +90,18 @@ export interface DepartureDateDetail {
 
 export interface UmrahPackage {
   id: string;
+  type: PackageType;
+  category: PackageCategory;
   tagline: string;
   season: string;
   city_departure: string[];
   duration: string;
   package: string;
   down_payment: string;
+  order_url: string;
   // departure_details: DepartureDetail[];
   flight_details: Flight;
-  hotel_details: HotelDetail[];
+  hotel_details: Hotel;
   bus_details: BusDetail;
   departure_date: DepartureDateDetail[];
   doublePrice: number;

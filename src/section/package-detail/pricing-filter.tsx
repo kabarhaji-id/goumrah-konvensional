@@ -13,11 +13,11 @@ import {
   CardDetailContent,
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
-import { DepartureDateDetail } from "@/types/new";
+import { DepartureCityDetail, DepartureDateDetail } from "@/types/new";
 
 interface FilterProps {
   departureDates: DepartureDateDetail[];
-  embarkation: string[];
+  embarkation: DepartureCityDetail[];
   variant: "departureDate" | "departureCity";
 }
 
@@ -29,7 +29,7 @@ const FilterSection = ({
   moment.locale("id");
 
   const [selectedDate, setSelectedDate] = useState(departureDates[0].date);
-  const [selectedCity, setSelectedCity] = useState(embarkation[0]);
+  const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
 
   const onFilterChange = (city?: string, date?: string) => {
     if (city) setSelectedCity(city);
@@ -96,25 +96,25 @@ const FilterSection = ({
                   );
                 })
               : embarkation &&
-                embarkation.map((city: string, index: number) => {
+                embarkation.map((city, index: number) => {
                   return (
                     <div
                       key={index}
-                      onClick={() => onFilterChange(city, undefined)}
+                      onClick={() => onFilterChange(city.city, undefined)}
                       className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${
-                        selectedCity! === city
+                        selectedCity! === city.city
                           ? "border border-primary bg-primary-accent text-primary"
                           : "border border-neutral-200"
                       }`}
                     >
                       <p className="text-sm font-semibold tracking-tight">
-                        {city}
+                        {city.city}
                       </p>
                       <p className="text-[10px] font-medium tracking-wide">
-                        CGK - JED
+                        {city.route}
                       </p>
 
-                      {selectedCity! === city && (
+                      {selectedCity! === city.city && (
                         <span className="absolute bottom-2.5 self-center rounded-[4px] bg-primary px-1 pb-px text-[10px] font-medium leading-[15px] tracking-wide text-white">
                           Dipilih
                         </span>

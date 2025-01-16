@@ -8,6 +8,7 @@ import TransportationSection from "@/section/package-detail/transportation-secti
 
 import { dataPackages } from "@/data/packages";
 import { dummyData } from "@/data/new";
+import ProductCoverageSection from "@/section/package-detail/product-coverage-section";
 
 export default async function DetailPage({
   params,
@@ -38,6 +39,12 @@ export default async function DetailPage({
           <HotelSection dataHotel={detail.hotel_details} />
 
           <TransportationSection dataTransportation={detail.bus_details} />
+
+          {/* ItinerarySection Here */}
+
+          {/* TourVoucherSection Here? (need confirmation) */}
+
+          <ProductCoverageSection />
         </main>
       </>
     );

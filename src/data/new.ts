@@ -7,10 +7,15 @@ export const dummyData: UmrahPackage[] = [
     type: "Plus",
     category: "Silver",
     season: "NON RAMADHAN",
-    city_departure: ["Jakarta"],
+    city_departure: [
+      {
+        city: "Jakarta",
+        route: "CGK-JED",
+      },
+    ],
     duration: "9 Hari",
     package: "Silver",
-    down_payment: "DP 5 Juta",
+    down_payment: 5,
     order_url:
       "https://wa.me/<No_Whatsapp>?text=Assalamualaikum,%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Paket%20Gold%20Umrah%20Pilihan%209%20Hari.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%20Terima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.",
     departure_date: [
@@ -191,16 +196,6 @@ export const dummyData: UmrahPackage[] = [
           id: "2",
           src: "/assets/image/packages-umrah/package-detail-1.png",
           category: "Standard",
-        },
-        {
-          id: "3",
-          src: "/assets/image/packages-umrah/package-detail-1.png",
-          category: "Standard",
-        },
-        {
-          id: "4",
-          src: "/assets/image/packages-umrah/package-detail-1.png",
-          category: "Family Room",
         },
       ],
       id: "sapico-reguler",

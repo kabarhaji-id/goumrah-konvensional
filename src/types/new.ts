@@ -79,16 +79,21 @@ export interface DepartureDateDetail {
   status: "active" | "coming-soon";
 }
 
+export interface DepartureCityDetail {
+  city: string;
+  route: string;
+}
+
 export interface UmrahPackage {
   id: string;
   type: PackageType;
   category: PackageCategory;
   tagline: string;
   season: string;
-  city_departure: string[];
+  city_departure: DepartureCityDetail[];
   duration: string;
   package: string;
-  down_payment: string;
+  down_payment: number;
   order_url: string;
   flight_details: Flight;
   hotel_details: Hotel;

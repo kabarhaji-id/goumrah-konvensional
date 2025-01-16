@@ -1,18 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import moment from "moment";
 import "moment/locale/id";
 
-import { ChevronDownIcon, ChevronUpIcon, CircleIcon } from "lucide-react";
-import {
-  formatDuration,
-  formatTransitDuration,
-  getArrivalDate,
-} from "@/lib/utils";
+import { CircleIcon } from "lucide-react";
+import { formatDuration, getArrivalDate } from "@/lib/utils";
 import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { FlightDetail } from "@/types/packages";
+import { FlightDetail } from "@/types/package-details";
 import {
   Accordion,
   AccordionContent,

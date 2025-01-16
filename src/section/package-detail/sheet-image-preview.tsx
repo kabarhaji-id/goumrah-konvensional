@@ -14,7 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { HotelDetail, Images } from "@/types/packages";
+import { HotelDetail, Images } from "@/types/package-details";
 
 interface SheetImagePreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   variant: "makkah" | "madinah" | "wisata" | string;

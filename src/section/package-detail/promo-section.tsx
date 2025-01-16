@@ -1,13 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Section,
-  SectionContent,
-  SectionTitle,
-} from "@/components/layout/section";
+import { Section, SectionContent } from "@/components/layout/section";
 import { CustomSwiper } from "@/components/layout/swiper";
-import { PromoDetail } from "@/types/packages";
+import { PromoDetail } from "@/types/package-details";
 
 const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
   if (dataPromos && dataPromos.length > 0) {

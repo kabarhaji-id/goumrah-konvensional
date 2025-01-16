@@ -13,7 +13,10 @@ import {
   CardDetailContent,
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
-import { DepartureCityDetail, DepartureDateDetail } from "@/types/packages";
+import {
+  DepartureCityDetail,
+  DepartureDateDetail,
+} from "@/types/package-details";
 
 interface FilterProps {
   departureDates: DepartureDateDetail[];

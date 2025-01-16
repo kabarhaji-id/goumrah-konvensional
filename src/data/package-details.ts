@@ -1,4 +1,4 @@
-import { UmrahPackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 
 const whatsappLink = process.env.WHATSAPP_LINK;
 

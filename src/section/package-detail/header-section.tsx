@@ -10,7 +10,7 @@ import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { UmrahPackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 
 const HeaderSection = ({
   packageData,
@@ -19,8 +19,6 @@ const HeaderSection = ({
   packageData: UmrahPackage;
   durationDays: string;
 }) => {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-
   return (
     <Section className="py-0">
       <SectionContent className="space-y-5 px-4 pb-5 pt-4 text-primary-foreground">

@@ -1,9 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-// import PatternSection from "@/public/assets/patterns/wave-1.svg";
-// import PatternLuxurySection from "@/public/assets/patterns/wave-luxury.svg";
-
 import { cn } from "@/lib/utils";
 import { ChevronRightIcon } from "lucide-react";
 
@@ -12,33 +9,16 @@ export interface SectionHomepageProps {
 }
 
 interface SectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  withWavePattern?: boolean;
-  withWaveLuxuryPattern?: boolean;
   withVerticalLogo?: boolean;
 }
 
 const Section = React.forwardRef<HTMLDivElement, SectionProps>(
-  (
-    {
-      className,
-      children,
-      withWavePattern = false,
-      withWaveLuxuryPattern = false,
-      ...props
-    },
-    ref,
-  ) => (
+  ({ className, children, ...props }, ref) => (
     <section
-      className={cn("relative overflow-hidden py-5", className)} // Posble error [done checking, ngaruh di homepage dan detail page]
+      className={cn("relative overflow-hidden py-5", className)}
       ref={ref}
       {...props}
     >
-      {/* {withWavePattern && (
-        <PatternSection className="absolute bottom-0 -z-0 w-screen" />
-      )}
-      {withWaveLuxuryPattern && (
-        <PatternLuxurySection className="absolute bottom-0 !z-0 w-screen" />
-      )} */}
       {children}
     </section>
   ),

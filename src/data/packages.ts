@@ -1,4 +1,4 @@
-import { PackageCategory, PackageType } from "@/types/packages";
+import { PackageCategory, PackageType } from "@/types/package-details";
 
 export const dataPackages = [
   {

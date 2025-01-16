@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 import moment from "moment";
 import "moment/locale/id";
@@ -18,7 +17,7 @@ import {
 } from "@/components/layout/section";
 import { getArrivalDate } from "@/lib/utils";
 import AccordionFlight from "./accordion-flight";
-import { Flight, FlightDetail } from "@/types/packages";
+import { Flight, FlightDetail } from "@/types/package-details";
 import {
   CardDetail,
   CardDetailContent,

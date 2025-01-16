@@ -23,7 +23,7 @@ import {
   SparklesIcon,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Itinerary } from "@/types/packages";
+import { Itinerary } from "@/types/package-details";
 import {
   Accordion,
   AccordionContent,

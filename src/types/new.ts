@@ -84,6 +84,68 @@ export interface DepartureCityDetail {
   route: string;
 }
 
+export interface PromoDetail {
+  imageUrl: string;
+  link: string;
+}
+
+export interface Itinerary {
+  id: string;
+  nth: number;
+  city: string;
+  days: ItineraryDays[];
+  images: Images[];
+}
+
+export interface ItineraryDays {
+  id: string;
+  nth: number;
+  title: string;
+  widgets: (
+    | ItineraryActivityWidgets
+    | ItineraryHotelWidgets
+    | ItineraryInformationWidgets
+    | ItineraryTransportWidgets
+    | ItineraryRecommendedWidgets
+  )[];
+  description: string;
+}
+
+interface ItineraryActivityWidgets {
+  id: string;
+  type: "Activity";
+  title: string;
+  description: string;
+  images: string[];
+}
+
+interface ItineraryHotelWidgets {
+  id: string;
+  type: "Hotel";
+  hotel: Hotel;
+}
+
+interface ItineraryInformationWidgets {
+  id: string;
+  type: "Information";
+  description: string;
+}
+
+interface ItineraryTransportWidgets {
+  id: string;
+  type: "Transport";
+  transportWith: string;
+  from: string;
+  to: string;
+}
+
+interface ItineraryRecommendedWidgets {
+  id: string;
+  type: "Recommended";
+  description: string;
+  images: string[];
+}
+
 export interface UmrahPackage {
   id: string;
   type: PackageType;
@@ -107,4 +169,6 @@ export interface UmrahPackage {
   tripleFinalPrice?: number;
   quadFinalPrice?: number;
   infantFinalPrice?: number;
+  promos: PromoDetail[];
+  itineraries: Itinerary[];
 }

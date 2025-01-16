@@ -1,15 +1,15 @@
+import Link from "next/link";
 import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
 import CustomVacationIcon from "/src/assets/icons/custom-vacation.svg";
 import CustomKaabaIcon from "/src/assets/icons/la_kaaba.svg";
 import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
+import ReceiptIcon from "/src/assets/icons/fluent_receipt-money-16-regular.svg";
 
-import { StarIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { UmrahPackage } from "@/types/new";
-import Link from "next/link";
 
 const HeaderSection = ({
   packageData,
@@ -59,22 +59,13 @@ const HeaderSection = ({
               <span>3 hari Madinah</span>·<span>4 hari Madinah</span>
             </p>
 
-            {/* --- Rating and Reviews */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-xs text-neutral-foreground">
-                <div className="flex items-center gap-1">
-                  <StarIcon className="h-5 w-5" fill="#f2ac30" stroke="none" />
-                  <span className="text-status-gold text-sm font-bold leading-[18px] tracking-tighter">
-                    5
-                  </span>
-                </div>
-                <div className="h-1 w-1 rounded-full bg-neutral-foreground" />
-                <a href="#reviews">
-                  <span className="text-sm font-semibold underline">
-                    5 ulasan
-                  </span>
-                </a>
-              </div>
+            {/* --- Early Payment (DP) */}
+            <div className="flex items-center gap-1">
+              <ReceiptIcon className="h-4 w-4" fill="#EF4444" />
+              <p className="text-xs leading-4 text-destructive">
+                Pembayaran Awal (DP):
+                <span className="font-semibold">Rp 5 Juta</span>
+              </p>
             </div>
           </div>
         </div>

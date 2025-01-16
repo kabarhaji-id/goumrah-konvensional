@@ -68,7 +68,7 @@ const FilterSection = ({
                         className={`flex h-16 w-full cursor-pointer flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
                           selectedDate === date.date && date.status === "active"
                             ? "border border-primary bg-primary-accent text-primary"
-                            : "pointer-events-none border border-neutral-200 bg-gray-50 text-gray-500"
+                            : "pointer-events-none border border-neutral-200 text-neutral-foreground"
                         }`}
                       >
                         <span className="text-xs tracking-tight">
@@ -83,13 +83,13 @@ const FilterSection = ({
                             selectedDate === date.date &&
                             date.status === "active"
                               ? "bg-primary text-white"
-                              : "bg-gray-200 text-gray-500"
+                              : "bg-[#999999] text-gray-100"
                           }`}
                         >
                           {selectedDate === date.date &&
                           date.status === "active"
                             ? "Dipilih"
-                            : `Akan Datang`}
+                            : "Belum Dibuka"}
                         </span>
                       </div>
                     </div>

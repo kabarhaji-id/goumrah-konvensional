@@ -203,5 +203,53 @@ export const dummyData: UmrahPackage[] = [
       bus_type: "Reguler",
       seat_amount: 45,
     },
+    promos: [
+      {
+        imageUrl: "/assets/image/packages-umrah/package-detail-1.png",
+        link: "test",
+      },
+    ],
+    itineraries: [
+      {
+        id: "1",
+        nth: 1,
+        city: "Dubai",
+        days: [
+          {
+            id: "9dd71ec3-7b66-416f-85cc-5b43f03d8cdd",
+            nth: 1,
+            title: "Kedatangan Di Dubai",
+            widgets: [
+              {
+                id: "9dd71ec3-985e-408a-a542-5bce9f7c047a",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Bandara Dubai International Airport",
+                to: "Park Hyatt Hotel",
+              },
+              {
+                id: "9dd71ec3-a1ca-4783-9843-59acf4804a40",
+                type: "Information",
+                description: "Lorem ipsum dolor sit amet",
+              },
+            ],
+            description:
+              "Selamat datang di Dubai. Setelah kedatangan Anda, Anda akan dipindahkan ke hotel untuk proses check-in. Anda dapat menikmati hari Anda dengan santai atau menjelajahi kota sesuai dengan keinginan Anda, mengunjungi beberapa tempat menarik seperti Burj Khalifa, Palm Jumeirah, dan lainnya. Setelah hari yang luar biasa, kembali ke hotel untuk istirahat semalam.",
+          },
+        ],
+        images: [
+          {
+            id: "1",
+            src: "/assets/image/packages-umrah/package-detail-1.png",
+            category: undefined,
+          },
+          {
+            id: "2",
+            src: "/assets/image/packages-umrah/package-detail-1.png",
+            category: undefined,
+          },
+        ],
+      },
+    ],
   },
 ];

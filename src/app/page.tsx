@@ -22,7 +22,7 @@ export default function Home() {
       <AfiliasiSection />
       <ArtikelSection />
       <AboutUs />
-      <Footer />
+      <Footer withCSbanner />
       <BottomNavigation />
     </>
   );

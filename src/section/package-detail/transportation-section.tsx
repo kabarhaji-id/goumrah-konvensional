@@ -11,7 +11,7 @@ import {
   SectionHeader,
   SectionTitle,
 } from "@/components/layout/section";
-import { BusDetail } from "@/types/new";
+import { BusDetail, PackageCategory } from "@/types/packages";
 import {
   CardDetail,
   CardDetailContent,
@@ -20,8 +20,10 @@ import {
 
 const TransportationSection = ({
   dataTransportation,
+  category,
 }: {
   dataTransportation: BusDetail;
+  category: PackageCategory;
 }) => {
   return (
     <Section className="pb-5 pt-0">
@@ -35,13 +37,19 @@ const TransportationSection = ({
       </SectionHeader>
 
       <SectionContent className="mx-0 space-y-2 px-4">
-        <TransportationCard data={dataTransportation} />
+        <TransportationCard data={dataTransportation} category={category} />
       </SectionContent>
     </Section>
   );
 };
 
-const TransportationCard = ({ data }: { data: BusDetail }) => {
+const TransportationCard = ({
+  data,
+  category,
+}: {
+  data: BusDetail;
+  category: PackageCategory;
+}) => {
   return (
     <CardDetail
       style={{
@@ -89,7 +97,11 @@ const TransportationCard = ({ data }: { data: BusDetail }) => {
         <div className="!mt-0 flex flex-col gap-2 text-primary-foreground">
           <div className="flex items-center justify-between">
             <span className="text-sm font-semibold">{data.provider}</span>
-            <span className="text-xs">{data.bus_type}</span>
+            <span className="text-xs">
+              {category === "Silver" || category === "Gold"
+                ? "Economy-Class"
+                : "VVIP-Class"}
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <CustomSeatReclineIcon />

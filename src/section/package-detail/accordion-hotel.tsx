@@ -13,7 +13,7 @@ import {
   ExternalLinkIcon,
 } from "lucide-react";
 import { useAccordionHotelStore } from "@/store/useInterfaceStore";
-import { HotelDetail } from "@/types/new";
+import { HotelDetail } from "@/types/packages";
 import {
   Accordion,
   AccordionContent,

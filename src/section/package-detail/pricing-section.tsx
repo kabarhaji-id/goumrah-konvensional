@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { UmrahPackage } from "@/types/new";
+import { UmrahPackage } from "@/types/packages";
 import { FilterSection } from "./pricing-filter";
 import { Section, SectionContent } from "@/components/layout/section";
 import { capitalize, getAmountOfDiscount, priceToLocale } from "@/lib/utils";

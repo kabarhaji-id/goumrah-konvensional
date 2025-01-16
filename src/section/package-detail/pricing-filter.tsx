@@ -13,7 +13,7 @@ import {
   CardDetailContent,
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
-import { DepartureCityDetail, DepartureDateDetail } from "@/types/new";
+import { DepartureCityDetail, DepartureDateDetail } from "@/types/packages";
 
 interface FilterProps {
   departureDates: DepartureDateDetail[];
@@ -30,8 +30,6 @@ const FilterSection = ({
 
   const [selectedDate, setSelectedDate] = useState(departureDates[0].date);
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
-
-  console.log(selectedDate, "<<<");
 
   const onFilterChange = (city?: string, date?: string) => {
     if (city) setSelectedCity(city);

@@ -12,7 +12,7 @@ import {
   SectionHeader,
   SectionTitle,
 } from "@/components/layout/section";
-import { Hotel, HotelDetail, Images } from "@/types/new";
+import { Hotel, HotelDetail, Images } from "@/types/packages";
 import {
   CardDetail,
   CardDetailContent,

@@ -12,7 +12,7 @@ import {
 } from "@/lib/utils";
 import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
-import { FlightDetail } from "@/types/new";
+import { FlightDetail } from "@/types/packages";
 import {
   Accordion,
   AccordionContent,
@@ -65,8 +65,8 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
-                  <div className="align- flex flex-col gap-1">
+                {/* <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground"> */}
+                {/* <div className="align- flex flex-col gap-1">
                     <span className="font-bold leading-5 tracking-wide">
                       {moment(dataFlight.directFlightDate).format("HH:mm")}
                     </span>
@@ -80,8 +80,8 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                         {formatDuration(dataFlight.directFlight.duration)}
                       </span>
                     </span>
-                  </div>
-                  <div className="align- flex flex-col gap-1">
+                  </div> */}
+                {/* <div className="align- flex flex-col gap-1">
                     <span className="font-bold leading-5 tracking-wide">
                       {moment(
                         getArrivalDate(
@@ -98,10 +98,10 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                         ),
                       ).format("DD MMM")}
                     </span>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div> */}
 
-                <div className="flex flex-col items-center py-1.5">
+                <div className="flex flex-col items-center py-1.5 pl-4">
                   <CircleIcon className="h-2 w-2 stroke-primary-foreground" />
                   <Separator
                     orientation="vertical"

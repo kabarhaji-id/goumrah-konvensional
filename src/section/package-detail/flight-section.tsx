@@ -18,7 +18,7 @@ import {
 } from "@/components/layout/section";
 import { getArrivalDate } from "@/lib/utils";
 import AccordionFlight from "./accordion-flight";
-import { Flight, FlightDetail } from "@/types/new";
+import { Flight, FlightDetail } from "@/types/packages";
 import {
   CardDetail,
   CardDetailContent,
@@ -29,24 +29,24 @@ import { getSkytrax } from "@/components/ui/helper/getSkytrax";
 const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   moment.locale("id");
 
-  // const arrTabLists: string[] = [];
+  const arrTabLists: string[] = [];
 
   const arrDataFlight = [
-    // ...dataFlight.wisataFlights.map((wisataItem, index) => {
-    //   const type = `Wisata-${index + 1}`;
-    //   if (!arrTabLists.includes(type)) {
-    //     arrTabLists.push(type);
-    //   }
-    //   return {
-    //     type,
-    //     data: {
-    //       directFlight: wisataItem.flight,
-    //       directFlightDate: wisataItem.flightDate,
-    //       transitFlight: wisataItem.secondFlight,
-    //       transitFlightDate: wisataItem.secondFlightDate,
-    //     },
-    //   };
-    // }),
+    ...dataFlight.wisata_flight.map((wisataItem, index) => {
+      const type = `Wisata-${index + 1}`;
+      if (!arrTabLists.includes(type)) {
+        arrTabLists.push(type);
+      }
+      return {
+        type,
+        data: {
+          directFlight: wisataItem,
+          directFlightDate: wisataItem.departure_datetime,
+          transitFlight: wisataItem.transit,
+          transitFlightDate: wisataItem.transit_datetime,
+        },
+      };
+    }),
     {
       type: "Keberangkatan",
       data: {
@@ -67,11 +67,11 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
     },
   ];
 
-  // ["Keberangkatan", "Kepulangan"].forEach((type) => {
-  //   if (!arrTabLists.includes(type)) {
-  //     arrTabLists.push(type);
-  //   }
-  // });
+  ["Keberangkatan", "Kepulangan"].forEach((type) => {
+    if (!arrTabLists.includes(type)) {
+      arrTabLists.push(type);
+    }
+  });
 
   return (
     <Section className="space-y-4 px-4 pb-3 pt-5">

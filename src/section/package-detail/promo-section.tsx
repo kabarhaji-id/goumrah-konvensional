@@ -7,7 +7,7 @@ import {
   SectionTitle,
 } from "@/components/layout/section";
 import { CustomSwiper } from "@/components/layout/swiper";
-import { PromoDetail } from "@/types/new";
+import { PromoDetail } from "@/types/packages";
 
 const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
   if (dataPromos && dataPromos.length > 0) {

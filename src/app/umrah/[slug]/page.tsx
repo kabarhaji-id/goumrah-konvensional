@@ -10,11 +10,13 @@ import ProductCoverageSection from "@/section/package-detail/product-coverage-se
 import AdditionalServices from "@/section/package-detail/additional-services";
 import BottomNavigationDetail from "@/components/layout/navbar/bottom-navigation-detail";
 import PromoSection from "@/section/package-detail/promo-section";
+import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
+import ItinerarySection from "@/section/package-detail/itinerary-section";
+import Footer from "@/components/layout/footer";
 
 import { dataPackages } from "@/data/packages";
-import { dummyData } from "@/data/new";
+import { dummyData } from "@/data/package-details";
 import { Button } from "@/components/ui/button";
-import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
 
 export default async function DetailPage({
   params,
@@ -44,11 +46,13 @@ export default async function DetailPage({
 
           <HotelSection dataHotel={detail.hotel_details} />
 
-          <TransportationSection dataTransportation={detail.bus_details} />
+          <TransportationSection
+            dataTransportation={detail.bus_details}
+            category={detail.category}
+          />
 
-          {/* ItinerarySection Here */}
+          <ItinerarySection dataItineraries={detail.itineraries} />
 
-          {/* TourVoucherSection Here? (need confirmation) */}
           <TourVoucherSection dataAddOns={detail.addons} />
 
           <ProductCoverageSection />
@@ -59,7 +63,7 @@ export default async function DetailPage({
 
           {/* OtherPackages Here */}
 
-          {/* Footer Here */}
+          <Footer />
 
           <BottomNavigationDetail orderUrl={detail.order_url} />
         </main>

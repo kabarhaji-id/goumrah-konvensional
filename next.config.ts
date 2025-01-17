@@ -1,16 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/coming-soon',
-  //       permanent: false
-  //     }
-  //   ]
-  // },
 
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -38,6 +28,15 @@ const nextConfig: NextConfig = {
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i;
+
+    // Add support for MP3 files
+    config.module.rules.push({
+      test: /\.(mp3|wav|ogg)$/i,
+      type: "asset/resource",
+      generator: {
+        filename: "static/media/[name].[hash][ext]",
+      },
+    });
 
     return config;
   },

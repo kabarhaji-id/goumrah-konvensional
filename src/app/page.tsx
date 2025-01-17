@@ -8,6 +8,7 @@ import BottomNavigation from "@/components/layout/navbar/bottom-navigation";
 import IdealPackagesSection from "@/section/ideal-packages";
 import TestimonySection from "@/section/testimony";
 import AffiliatesSection from "@/section/affiliate";
+import  { ChatWidgets } from "@/section/chat/chat-widgets";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,13 @@ export default function HomePage() {
       <IdealPackagesSection />
       <WhyChooseUsSection />
       <GallerySection />
+      <AfiliasiSection />
+      <ArtikelSection />
+      <AboutUs />
+      <ChatWidgets
+        phoneNumber="+62811157188"
+        accountName="Rahman"
+      />
       <AffiliatesSection />
       <TestimonySection />
       <AboutUsSection />

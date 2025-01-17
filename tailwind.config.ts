@@ -10,6 +10,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "custom-gold-gradient":
+          "linear-gradient(to bottom, #CA9822 0%, #E6CA69 15%, #E9D49F 54%, #CA9822)",
+      },
       dropShadow: {
         "custom-lg": "0px 4px 12px 0px rgba(0, 0, 0, 0.25)",
       },

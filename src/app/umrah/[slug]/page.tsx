@@ -35,7 +35,6 @@ export const generateMetadata = async ({
     keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
     openGraph: {
       title: data?.tagline,
-      // Note: change the url later
       url: `https://goumrah.id/umrah/${(await params).slug}`,
       siteName: "goumrah.id",
       images: [

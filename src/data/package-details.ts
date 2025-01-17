@@ -35,6 +35,10 @@ export const dummyData: UmrahPackage[] = [
         status: "active",
       },
       {
+        date: "2025-04-15T10:00:00+07:00",
+        status: "closing-umrah",
+      },
+      {
         date: "2025-05-01T10:00:00+07:00",
         status: "musim-haji",
       },

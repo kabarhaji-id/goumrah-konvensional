@@ -78,7 +78,7 @@ export interface BusDetail {
 
 export interface DepartureDateDetail {
   date: string;
-  status: "active" | "coming-soon" | "musim-haji" | "expired";
+  status: "active" | "coming-soon" | "musim-haji" | "expired" | "closing-umrah";
 }
 
 export interface DepartureCityDetail {

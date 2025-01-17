@@ -83,12 +83,14 @@ const FilterSection = ({
                           selectedDate !== date.date
                             ? "bg-subtle-background pointer-events-none"
                             : ""
-                        } ${date.status === "musim-haji" && "bg-accent-light-gold gold-border pointer-events-none"}`}
+                        } ${date.status === "musim-haji" && "bg-custom-gold-gradient gold-border pointer-events-none"} ${date.status === "closing-umrah" && "pointer-events-none bg-[#8E8E93] text-white"} `}
                       >
                         <span className="text-xs tracking-tight">
-                          {date.status !== "musim-haji"
-                            ? moment(date.date).format("dddd")
-                            : "Musim haji 2025"}
+                          {date.status !== "musim-haji" &&
+                            date.status !== "closing-umrah" &&
+                            moment(date.date).format("dddd")}
+                          {date.status === "musim-haji" && "Musim Haji 2025"}
+                          {date.status === "closing-umrah" && "Penutupan Musim"}
                         </span>
                         <span className="text-sm font-semibold tracking-wide">
                           {date.status !== "musim-haji"
@@ -106,9 +108,9 @@ const FilterSection = ({
 
                         {date.status === "musim-haji" && (
                           <span
-                            className={`bg-accent-gold absolute -bottom-2 !z-[999] rounded-[4px] px-1 text-[10px] font-light tracking-wide text-white`}
+                            className={`bg-accent-light-gold absolute -bottom-2 !z-[999] rounded-[4px] px-1 text-[10px] font-medium tracking-wide text-neutral-foreground`}
                           >
-                            Musim Haji
+                            Pelaksanaan Haji
                           </span>
                         )}
 
@@ -117,9 +119,17 @@ const FilterSection = ({
                             <span
                               className={`absolute -bottom-2 rounded-[4px] bg-primary px-1 text-[10px] font-medium tracking-wide text-white`}
                             >
-                              Dipilih
+                              Kuota Tersedia
                             </span>
                           )}
+
+                        {date.status === "closing-umrah" && (
+                          <span
+                            className={`absolute -bottom-2 w-fit flex-shrink-0 whitespace-nowrap rounded-[4px] bg-[#999999] px-1 text-[10px] font-medium tracking-wide text-white`}
+                          >
+                            Penutupan Umrah 2025
+                          </span>
+                        )}
 
                         {date.status === "expired" && (
                           <span

@@ -18,6 +18,7 @@ import NotFound from "@/app/not-found";
 import { dataPackages } from "@/data/packages";
 import { dummyData } from "@/data/package-details";
 import { Metadata } from "next";
+import OtherPackagesSection from "@/section/package-detail/other-packages-section";
 
 // --- Metadata for SEO Optimization
 export const generateMetadata = async ({
@@ -93,7 +94,7 @@ export default async function DetailPage({
 
           <PromoSection dataPromos={detail.promos} />
 
-          {/* OtherPackages Here */}
+          <OtherPackagesSection packageId={detail.id} />
 
           <Footer />
 

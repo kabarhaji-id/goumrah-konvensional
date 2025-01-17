@@ -1,17 +1,14 @@
-import Link from "next/link";
 import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
 import CustomVacationIcon from "/src/assets/icons/custom-vacation.svg";
 import CustomFastTrainIcon from "/src/assets/icons/material-symbols_train-rounded.svg";
 import CustomKaabaIcon from "/src/assets/icons/la_kaaba.svg";
-import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
 import ReceiptIcon from "/src/assets/icons/fluent_receipt-money-16-regular.svg";
+import ButtonWhatsApp from "./button-whatsapp";
 
 import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 import { UmrahPackage } from "@/types/package-details";
-import ButtonWhatsApp from "./button-whatsapp";
 
 const HeaderSection = ({
   packageData,
@@ -31,7 +28,7 @@ const HeaderSection = ({
                 <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
               </div>
               <span className="py-1 pl-1 pr-1.5 text-xs font-semibold leading-4 tracking-wide text-primary">
-                {durationDays} Hari
+                {durationDays}
               </span>
             </Chip>
 
@@ -77,7 +74,7 @@ const HeaderSection = ({
 
             {/* --- Days */}
             <p className="flex gap-1 text-xs text-neutral-foreground">
-              <span>3 hari Madinah</span>·<span>4 hari Madinah</span>
+              <span>3 hari Madinah</span>·<span>4 hari Makkah</span>
             </p>
 
             {/* --- Early Payment (DP) */}

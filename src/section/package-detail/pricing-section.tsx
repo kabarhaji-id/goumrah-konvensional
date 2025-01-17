@@ -39,7 +39,7 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
 
   return (
     <Section className="py-0">
-      <SectionContent className="space-y-3 pb-2">
+      <SectionContent className="space-y-3 pb-5">
         {/* --- Filter for Departure Date */}
         <FilterSection
           variant="departureDate"

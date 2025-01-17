@@ -1,9 +1,10 @@
 import { PackageCategory, PackageType } from "@/types/package-details";
 
+// NOTE: Hanya Dummy
 export const dataPackages = [
   {
     id: "1",
-    slug: "umrah-hemat-fokus-ibadah",
+    slug: "umrah-hemat-fokus-ibadah-silver",
     thumbnail: "/assets/image/packages-umrah/package-detail-1.png",
     category: "Silver" as PackageCategory,
     type: "Reguler" as PackageType,
@@ -14,6 +15,36 @@ export const dataPackages = [
     hotelRating: "3",
     price: 26000000,
     finalPrice: 23000000,
+    otherDepartureCount: 0,
+  },
+  {
+    id: "2",
+    slug: "umrah-tenang-fokus-ibadah",
+    thumbnail: "/assets/image/packages-umrah/package-detail-1.png",
+    category: "Platinum" as PackageCategory,
+    type: "Reguler" as PackageType,
+    duration: "9",
+    name: "Umrah Tenang, Fokus Ibadah",
+    departureDates: "",
+    airlineName: "Lion Air",
+    hotelRating: "3",
+    price: 38900000,
+    finalPrice: 35900000,
+    otherDepartureCount: 0,
+  },
+  {
+    id: "3",
+    slug: "umrah-cerdas-plus-wisata-thaif",
+    thumbnail: "/assets/image/packages-umrah/package-detail-1.png",
+    category: "Gold" as PackageCategory,
+    type: "Reguler" as PackageType,
+    duration: "9",
+    name: "Umrah Cerdas Plus Wisata Thaif",
+    departureDates: "",
+    airlineName: "Lion Air",
+    hotelRating: "3",
+    price: 35500000,
+    finalPrice: 32500000,
     otherDepartureCount: 0,
   },
 ];

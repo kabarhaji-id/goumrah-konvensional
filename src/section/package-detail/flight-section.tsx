@@ -73,24 +73,30 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   });
 
   return (
-    <Section className="space-y-4 px-4 pb-3 pt-5">
-      <SectionHeader className="mb-2 px-0">
-        <div className="flex items-center gap-2">
-          <PlaneIcon className="h-5 w-5 stroke-primary" />
-          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
-            Penerbangan
-          </SectionTitle>
-        </div>
-      </SectionHeader>
-      <SectionContent className="mx-0 space-y-4 px-0">
-        {arrDataFlight.length > 0 &&
-          arrDataFlight.map((data, index) => (
-            <FlightCard key={index} type={data.type} dataFlight={data}>
-              <AccordionFlight dataFlight={data.data} id={index.toString()} />
-            </FlightCard>
-          ))}
-      </SectionContent>
-    </Section>
+    <>
+      <div className="px-4">
+        <Separator />
+      </div>
+
+      <Section className="space-y-4 px-4 pb-3 pt-5">
+        <SectionHeader className="mb-2 px-0">
+          <div className="flex items-center gap-2">
+            <PlaneIcon className="h-5 w-5 stroke-primary" />
+            <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
+              Penerbangan
+            </SectionTitle>
+          </div>
+        </SectionHeader>
+        <SectionContent className="mx-0 space-y-4 px-0">
+          {arrDataFlight.length > 0 &&
+            arrDataFlight.map((data, index) => (
+              <FlightCard key={index} type={data.type} dataFlight={data}>
+                <AccordionFlight dataFlight={data.data} id={index.toString()} />
+              </FlightCard>
+            ))}
+        </SectionContent>
+      </Section>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import { UmrahPackage } from "@/types/package-details";
 
 const whatsappLink = process.env.WHATSAPP_LINK;
 
+// NOTE: Hanya Dummy
 export const dummyData: UmrahPackage[] = [
   {
     id: "umrah-hemat-fokus-ibadah-silver",

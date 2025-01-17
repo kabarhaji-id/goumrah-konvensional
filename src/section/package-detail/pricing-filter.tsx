@@ -78,12 +78,18 @@ const FilterSection = ({
                             ? "border border-primary bg-primary-background text-primary"
                             : "bg-gray border text-neutral-foreground"
                         } ${
-                          date.status !== "active" &&
-                          date.status !== "musim-haji" &&
-                          selectedDate !== date.date
-                            ? "bg-subtle-background pointer-events-none"
-                            : ""
-                        } ${date.status === "musim-haji" && "bg-custom-gold-gradient gold-border pointer-events-none"} ${date.status === "closing-umrah" && "pointer-events-none bg-[#8E8E93] text-white"} `}
+                          date.status === "expired" &&
+                          "bg-subtle-background pointer-events-none"
+                        } ${
+                          date.status === "musim-haji" &&
+                          "bg-custom-gold-gradient gold-border pointer-events-none"
+                        } ${
+                          date.status === "closing-umrah" &&
+                          "pointer-events-none bg-[#8E8E93] text-white"
+                        } ${
+                          date.status === "coming-soon" &&
+                          "bg-subtle-background pointer-events-none"
+                        }`}
                       >
                         <span className="text-xs tracking-tight">
                           {date.status !== "musim-haji" &&

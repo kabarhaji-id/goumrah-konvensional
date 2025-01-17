@@ -18,6 +18,7 @@ import { Badge } from "./badge";
 import { Button } from "./button";
 import { CalendarDaysIcon, HotelIcon, PlaneIcon, StarIcon } from "lucide-react";
 import {
+  cn,
   discountPercentPrice,
   getAmountOfDiscount,
   priceToLocale,
@@ -31,12 +32,14 @@ interface PackageCardProps {
   data: UmrahPackage;
   size?: "default" | "sm" | "xs";
   source?: string;
+  className?: string;
 }
 
 const PackageCard = ({
   data,
   size = "default",
   source = "homepage",
+  className,
 }: PackageCardProps) => {
   moment.locale("id");
 
@@ -54,7 +57,12 @@ const PackageCard = ({
   return (
     <Link href={`/umrah/${data.id}`}>
       {size === "xs" && (
-        <div className="flex w-[314px] overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm">
+        <div
+          className={cn(
+            "flex w-[314px] overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm",
+            className,
+          )}
+        >
           <div className="relative aspect-square w-full overflow-hidden rounded-[10px]">
             <Image
               src={data.thumbnail}
@@ -118,7 +126,12 @@ const PackageCard = ({
       )}
 
       {size === "sm" && (
-        <div className="overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm">
+        <div
+          className={cn(
+            "overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm",
+            className,
+          )}
+        >
           <div className="relative aspect-square w-full overflow-hidden rounded-[10px]">
             <Image
               src={data.thumbnail}
@@ -197,7 +210,7 @@ const PackageCard = ({
                     <span className="font-medium">
                       {Number(data.hotel_details.makkah.star_rating)}
                     </span>
-                    <StarIcon className="fill-status-gold ml-0.5 h-4 w-4 stroke-none" />
+                    <StarIcon className="ml-0.5 h-4 w-4 fill-status-gold stroke-none" />
                   </div>
                 </div>
               </div>
@@ -240,7 +253,12 @@ const PackageCard = ({
       )}
 
       {size === "default" && (
-        <div className="flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm">
+        <div
+          className={cn(
+            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm",
+            className,
+          )}
+        >
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[10px]">
             <Image
               src={data.thumbnail}
@@ -322,7 +340,7 @@ const PackageCard = ({
                       <span className="font-medium">
                         {Number(data.hotel_details.makkah.star_rating)}
                       </span>
-                      <StarIcon className="fill-status-gold ml-0.5 h-4 w-4 stroke-none" />
+                      <StarIcon className="ml-0.5 h-4 w-4 fill-status-gold stroke-none" />
                     </div>
                   </div>
                 </div>

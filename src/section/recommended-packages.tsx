@@ -40,7 +40,7 @@ const RecommendedPackagesSection = () => {
       </Swiper>
 
       <Button className="mb-4 h-11 w-[317px] px-5 py-1" asChild>
-        <Link href="#umrah-package">
+        <Link href="/umrah/rekomendasi">
           <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
             Lihat Semua Paket
           </p>

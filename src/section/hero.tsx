@@ -6,7 +6,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="bg-hero relative flex h-[732px] flex-col bg-cover bg-bottom sm:h-[960px]">
+    <section className="relative flex h-[732px] flex-col bg-hero bg-cover bg-bottom sm:h-[960px]">
       <header className="absolute top-0 z-10 flex h-14 w-full items-center justify-center px-4 py-3">
         <Image
           alt="goumrah.id logo"
@@ -36,7 +36,7 @@ const HeroSection = () => {
       </div>
 
       <Button
-        className="absolute left-1/2 top-[624px] z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
+        className="absolute bottom-10 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
         asChild
       >
         <Link href="#umrah-package">

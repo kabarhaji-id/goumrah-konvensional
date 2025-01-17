@@ -1,7 +1,5 @@
 import type {Metadata} from "next";
 import {Plus_Jakarta_Sans} from "next/font/google";
-import Script from "next/script"; // Use Script instead of Head for scripts
-import CometChatInitializer from "@/components/chat/comet-chat-init";
 
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
@@ -31,7 +29,7 @@ export default function RootLayout({
             <Footer/>
         </div>
 
-        {/* Qontak Webchat Script */}
+        {/* Qontak Webchat Script 
         <script
             dangerouslySetInnerHTML={{
                 __html: `
@@ -43,13 +41,14 @@ export default function RootLayout({
               document.head.prepend(qchatWidget);
               qchatInit.onload = function() {
                 qchatInitialize({
-                  id: "2ad28a51-62d5-47ad-a133-21fdf29f1001", 
-                  code: "FOrxizC1qgkQwG7ht7SZnA"
+                  id: "ef1ce316-d184-4861-b495-10ba1b5acf52", 
+				  code: "FOrxizC1qgkQwG7ht7SZnA"  
                 });
               };
             `,
             }}
         />
+        */}
         </body>
         </html>
     );

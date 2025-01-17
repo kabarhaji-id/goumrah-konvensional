@@ -6,8 +6,7 @@ import GallerySection from "@/section/gallery";
 import AfiliasiSection from "@/section/afiliasi";
 import ArtikelSection from "@/section/artikel";
 import AboutUs from "@/section/about-us";
-import CometChatInitializer from "@/components/chat/comet-chat-init";
-
+import  { ChatWidgets } from "@/section/chat/chat-widgets";
 export default function Home() {
     return (
     <>
@@ -19,6 +18,10 @@ export default function Home() {
       <AfiliasiSection />
       <ArtikelSection />
       <AboutUs />
+      <ChatWidgets
+        phoneNumber="+62811157188"
+        accountName="Rahman"
+      />
     </>
   );
 }

@@ -24,8 +24,8 @@ export default function HomePage() {
       <Footer withCSbanner />
       <BottomNavigation />
       <ChatWidgets
-        phoneNumber="+62811157188"
-        accountName="Isma Goumrah"
+        phoneNumber="+62811157188" //must BE added on .env
+        accountName="Tanya Isma - goumrah.id"
       />
     </>
   );

@@ -1,9 +1,6 @@
 import React from "react";
 import Link from "next/link";
 
-// import PatternSection from "@/public/assets/patterns/wave-1.svg";
-// import PatternLuxurySection from "@/public/assets/patterns/wave-luxury.svg";
-
 import { cn } from "@/lib/utils";
 import { ChevronRightIcon } from "lucide-react";
 
@@ -22,8 +19,8 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
     {
       className,
       children,
-      withWavePattern = false,
-      withWaveLuxuryPattern = false,
+      // withWavePattern = false,
+      // withWaveLuxuryPattern = false,
       ...props
     },
     ref,

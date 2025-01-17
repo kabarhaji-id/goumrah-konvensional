@@ -5,11 +5,11 @@ import Link from "next/link";
 import { ShareDialog } from "@/components/ui/share-dialog";
 import { useEffect, useState } from "react";
 import { ChevronLeftIcon, Share2Icon } from "lucide-react";
-import { Packages } from "@/types/packages";
+import { SimplePackage } from "@/types/packages";
 
 interface DetailNavbarProps {
   withTitle?: boolean;
-  dataPackage: Packages;
+  dataPackage: SimplePackage;
 }
 
 const DetailNavbar = ({ withTitle = true, dataPackage }: DetailNavbarProps) => {

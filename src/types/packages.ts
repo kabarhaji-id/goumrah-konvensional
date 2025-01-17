@@ -177,3 +177,19 @@ export interface UmrahPackage {
   addons: Images[];
   itineraries: Itinerary[];
 }
+
+export interface SimplePackage {
+  id: string;
+  slug: string;
+  thumbnail: string;
+  category: PackageCategory;
+  type: PackageType;
+  duration: string;
+  name: string;
+  departureDates: string;
+  airlineName: string;
+  hotelRating: string;
+  price: number;
+  finalPrice: number;
+  otherDepartureCount: number;
+}

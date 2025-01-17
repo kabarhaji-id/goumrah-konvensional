@@ -1,6 +1,6 @@
-import { PackageCategory, PackageType } from "@/types/packages";
+import { PackageCategory, PackageType, SimplePackage } from "@/types/packages";
 
-export const dataPackages = [
+export const dataPackages: SimplePackage[] = [
   {
     id: "1",
     slug: "umrah-hemat-fokus-ibadah",

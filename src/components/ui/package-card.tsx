@@ -25,7 +25,6 @@ import {
 } from "@/lib/utils";
 import Image from "next/image";
 import { UmrahPackage } from "@/types/packages";
-import { useSearchParams } from "next/navigation";
 import { useMemo } from "react";
 
 interface PackageCardProps {
@@ -38,13 +37,13 @@ interface PackageCardProps {
 const PackageCard = ({
   data,
   size = "default",
-  source = "homepage",
+  // source = "homepage",
   className,
 }: PackageCardProps) => {
   moment.locale("id");
 
-  const searchParams = useSearchParams();
-  const embarkation = searchParams.get("embarkation");
+  // const searchParams = useSearchParams();
+  // const embarkation = searchParams.get("embarkation");
 
   const departureDate = useMemo(() => {
     return (
@@ -52,7 +51,7 @@ const PackageCard = ({
         (departureDate) => departureDate.status === "active",
       ) ?? data.departure_date[0]
     );
-  }, []);
+  }, [data.departure_date]);
 
   return (
     <Link href={`/umrah/${data.id}`}>

@@ -9,7 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-.pmpm-lock.yml
+.pnpm-lock.yml
 /ssl/
 /ssl.zip
 # testing

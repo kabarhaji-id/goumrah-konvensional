@@ -19,14 +19,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { Packages } from "@/types/packages";
+import { SimplePackage } from "@/types/packages";
 
 export function ShareDialog({
   children,
   dataPackage,
 }: {
   children: React.ReactNode;
-  dataPackage?: Packages;
+  dataPackage?: SimplePackage;
 }) {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -69,7 +69,7 @@ export function ShareDialog({
 
         {/* --- Package Preview */}
         {dataPackage && (
-          <div className="bg-neutral-foreground/5 flex items-center gap-4 rounded-sm p-2">
+          <div className="flex items-center gap-4 rounded-sm bg-neutral-foreground/5 p-2">
             <div className="flex-shrink-0">
               <Image
                 width={500}
@@ -80,10 +80,10 @@ export function ShareDialog({
               />
             </div>
             <div className="flex flex-col gap-1">
-              <h6 className="text-neutral-foreground line-clamp-1 text-sm font-bold">
+              <h6 className="line-clamp-1 text-sm font-bold text-neutral-foreground">
                 {dataPackage.name}
               </h6>
-              <span className="text-neutral-foreground/50 text-xs">
+              <span className="text-xs text-neutral-foreground/50">
                 goumrah.id
               </span>
             </div>
@@ -92,7 +92,7 @@ export function ShareDialog({
         <div className="flex w-full items-center space-x-2">
           <div className="relative flex w-full items-center rounded-sm border border-border bg-white p-px tracking-wide">
             <div className="absolute left-3 top-1/2 flex h-8 -translate-y-1/2 items-center border-r pr-2">
-              <Link2Icon className="stroke-neutral-foreground/50 h-4 w-4" />
+              <Link2Icon className="h-4 w-4 stroke-neutral-foreground/50" />
             </div>
             <Input
               id="link"
@@ -105,7 +105,7 @@ export function ShareDialog({
               onClick={handleClickShare}
               type="submit"
               size="sm"
-              className={`shadow-custom-sm m-1 h-8 rounded-[8px] px-2 focus-visible:ring-0 ${isCopied ? "bg-primary" : "bg-neutral-foreground"}`}
+              className={`m-1 h-8 rounded-[8px] px-2 shadow-custom-sm focus-visible:ring-0 ${isCopied ? "bg-primary" : "bg-neutral-foreground"}`}
             >
               <Copy className="h-4 w-4" />
               <span>{isCopied ? "Disalin!" : "Salin"}</span>
@@ -114,7 +114,7 @@ export function ShareDialog({
         </div>
 
         <div className="flex flex-col items-center justify-center gap-3">
-          <span className="text-neutral-foreground/60 text-sm font-medium">
+          <span className="text-sm font-medium text-neutral-foreground/60">
             atau bagikan lewat
           </span>
           <div className="flex justify-center gap-3">

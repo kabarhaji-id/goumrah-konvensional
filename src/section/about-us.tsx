@@ -1,4 +1,3 @@
-import { Section, SectionContent, SectionTitle } from "@/components/ui/section";
 import Image from "next/image";
 import React from "react";
 

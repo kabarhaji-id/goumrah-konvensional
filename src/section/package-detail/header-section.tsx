@@ -19,7 +19,7 @@ const HeaderSection = ({
   packageData: UmrahPackage;
   durationDays: string;
 }) => {
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  // const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
   return (
     <Section className="py-0">

@@ -11,6 +11,7 @@ import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { UmrahPackage } from "@/types/package-details";
+import ButtonWhatsApp from "./button-whatsapp";
 
 const HeaderSection = ({
   packageData,
@@ -93,14 +94,7 @@ const HeaderSection = ({
         {/* --- Button: Order This Package  */}
         <Separator />
 
-        <Button className="h-11 w-full py-1 shadow-custom-md">
-          <Link href={packageData.order_url}>
-            <p className="text-base font-semibold leading-[150%] tracking-wide">
-              Pesan Paket Umrah Ini
-            </p>
-          </Link>
-          <WhatsAppIcon />
-        </Button>
+        <ButtonWhatsApp orderUrl={packageData.order_url} />
       </SectionContent>
     </Section>
   );

@@ -67,7 +67,7 @@ const CityCard = ({
             <h3 className="text-[11px] font-normal">Wisata Kota</h3>
             <h2 className="text-lg font-bold">{cityName}</h2>
           </div>
-          <span className="text-[22px] font-bold leading-[26px]">
+          <span className="flex-shrink-0 text-[22px] font-bold leading-[26px]">
             {priceToLocale(price)}
           </span>
         </div>

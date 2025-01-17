@@ -44,37 +44,39 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
       <AccordionItem value={id}>
         <AccordionContent className="space-y-4">
           {/* --- Check-in and Check-out --- */}
-          <div className="flex gap-4 bg-primary-background px-4 py-2">
-            <div className="flex flex-shrink-0 flex-col gap-1 text-neutral-foreground">
-              <span className="text-xs font-medium leading-4 text-primary">
-                Check-in
-              </span>
-              <span className="text-sm font-bold leading-5">
-                {moment(dataHotel.check_in_time).format("DD MMM YYYY")}
-              </span>
-              <span className="text-xs leading-4">
-                {moment(dataHotel.check_in_time).format("HH:mm")}
-              </span>
-            </div>
+          {dataHotel.check_in_time && dataHotel.check_out_time && (
+            <div className="flex gap-4 bg-primary-background px-4 py-2">
+              <div className="flex flex-shrink-0 flex-col gap-1 text-neutral-foreground">
+                <span className="text-xs font-medium leading-4 text-primary">
+                  Check-in
+                </span>
+                <span className="text-sm font-bold leading-5">
+                  {moment(dataHotel.check_in_time).format("DD MMM YYYY")}
+                </span>
+                <span className="text-xs leading-4">
+                  {moment(dataHotel.check_in_time).format("HH:mm")}
+                </span>
+              </div>
 
-            <div className="flex w-full items-center py-1.5">
-              <CircleIcon className="h-2 w-2 stroke-primary" />
-              <Separator className="bg-primary" />
-              <CircleIcon className="h-2 w-2 stroke-primary" />
-            </div>
+              <div className="flex w-full items-center py-1.5">
+                <CircleIcon className="h-2 w-2 stroke-primary" />
+                <Separator className="bg-primary" />
+                <CircleIcon className="h-2 w-2 stroke-primary" />
+              </div>
 
-            <div className="flex flex-shrink-0 flex-col gap-1 text-right text-neutral-foreground">
-              <span className="text-xs font-medium leading-4 text-primary">
-                Check-out
-              </span>
-              <span className="text-sm font-bold leading-5">
-                {moment(dataHotel.check_out_time).format("DD MMM YYYY")}
-              </span>
-              <span className="text-xs leading-4">
-                {moment(dataHotel.check_out_time).format("HH:mm")}
-              </span>
+              <div className="flex flex-shrink-0 flex-col gap-1 text-right text-neutral-foreground">
+                <span className="text-xs font-medium leading-4 text-primary">
+                  Check-out
+                </span>
+                <span className="text-sm font-bold leading-5">
+                  {moment(dataHotel.check_out_time).format("DD MMM YYYY")}
+                </span>
+                <span className="text-xs leading-4">
+                  {moment(dataHotel.check_out_time).format("HH:mm")}
+                </span>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* --- Hotel Facilities --- */}
           <div className="flex flex-col gap-2 px-4">

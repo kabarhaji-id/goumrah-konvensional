@@ -104,7 +104,7 @@ interface FlightCardProps {
   type: string;
   data: {
     directFlight: FlightDetail;
-    directFlightDate: string;
+    directFlightDate?: string;
     transitFlight?: FlightDetail;
     transitFlightDate?: string;
   };
@@ -117,7 +117,7 @@ const FlightCard = ({
 }: {
   type: "Wisata" | "Keberangkatan" | "Kepulangan" | string;
   dataFlight?: FlightCardProps;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) => {
   moment.locale("id");
 
@@ -201,15 +201,19 @@ const FlightCard = ({
                 <span>
                   {dataFlight.data.directFlight.airport_city_departure}
                 </span>
-                <div className="flex gap-1 opacity-40">
-                  <span>
-                    {moment(dataFlight.data.directFlightDate).format("DD MMM")}
-                  </span>
-                  <span>∙</span>
-                  <span>
-                    {moment(dataFlight.data.directFlightDate).format("HH:mm")}
-                  </span>
-                </div>
+                {dataFlight.data.directFlightDate && (
+                  <div className="flex gap-1 opacity-40">
+                    <span>
+                      {moment(dataFlight.data.directFlightDate).format(
+                        "DD MMM",
+                      )}
+                    </span>
+                    <span>∙</span>
+                    <span>
+                      {moment(dataFlight.data.directFlightDate).format("HH:mm")}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
                 <span>
@@ -240,25 +244,29 @@ const FlightCard = ({
                       </span>
                     </>
                   ) : (
-                    <>
-                      <span>
-                        {moment(
-                          getArrivalDate(
-                            dataFlight.data.directFlightDate,
-                            dataFlight.data.directFlight.duration,
-                          ),
-                        ).format("DD MMM")}
-                      </span>
-                      <span>∙</span>
-                      <span>
-                        {moment(
-                          getArrivalDate(
-                            dataFlight.data.directFlightDate,
-                            dataFlight.data.directFlight.duration,
-                          ),
-                        ).format("HH:mm")}
-                      </span>
-                    </>
+                    dataFlight.data.directFlightDate && (
+                      <>
+                        <span>
+                          {dataFlight.data.directFlightDate &&
+                            moment(
+                              getArrivalDate(
+                                dataFlight.data.directFlightDate,
+                                dataFlight.data.directFlight.duration,
+                              ),
+                            ).format("DD MMM")}
+                        </span>
+                        <span>∙</span>
+                        <span>
+                          {dataFlight.data.directFlightDate &&
+                            moment(
+                              getArrivalDate(
+                                dataFlight.data.directFlightDate,
+                                dataFlight.data.directFlight.duration,
+                              ),
+                            ).format("HH:mm")}
+                        </span>
+                      </>
+                    )
                   )}
                 </div>
               </div>

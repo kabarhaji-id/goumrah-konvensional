@@ -141,26 +141,13 @@ export const formatDuration = (duration: number | undefined) => {
 
 // --- Perhitungan Durasi Transit ---
 export const formatTransitDuration = (
-  departureDate: string,
   departureArrivalTime: string,
-  transitDate: string,
   transitDepartureTime: string,
 ) => {
-  const arrivalDateTime = moment(
-    `${moment(departureDate).format("YYYY-MM-DD")}T${departureArrivalTime}`,
-    "YYYY-MM-DDTHH:mm:ss",
-  );
+  const arrivalTime = moment(departureArrivalTime);
+  const departureTime = moment(transitDepartureTime);
 
-  const departureDateTimeTransit = moment(
-    `${moment(transitDate).format("YYYY-MM-DD")}T${transitDepartureTime}`,
-    "YYYY-MM-DDTHH:mm:ss",
-  );
-
-  // Hitung selisih waktu dalam menit
-  const transitWaitTimeInMinutes = departureDateTimeTransit.diff(
-    arrivalDateTime,
-    "minutes",
-  );
+  const transitWaitTimeInMinutes = departureTime.diff(arrivalTime, "minutes");
 
   return formatDuration(transitWaitTimeInMinutes);
 };

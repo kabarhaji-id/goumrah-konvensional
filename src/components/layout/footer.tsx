@@ -12,6 +12,8 @@ import {
 import WhatsAppCIcon from "@/assets/icons/whatsapp.svg";
 import InstagramIcon from "@/assets/icons/instagram.svg";
 import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import TikTokIcon from "@/assets/icons/tiktok.svg";
+import FacebookIcon from "@/assets/icons/facebook.svg";
 
 interface FooterProps {
   withCSbanner?: boolean;
@@ -88,6 +90,8 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
 
           <div className="flex gap-4">
             <InstagramIcon className="!size-6" />
+            <FacebookIcon className="!size-6" />
+            <TikTokIcon className="!size-6" />
             <LinkedInIcon className="!size-6" />
           </div>
         </div>

@@ -104,7 +104,8 @@ const HotelCard = ({
 
       <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px] pb-2">
         <CustomSwiper
-          className="w-full overflow-hidden !rounded-[14px] !pb-0"
+          className="w-full rounded-b-[14px]"
+          slidesClass="h-[236px]"
           padding={0}
           gap={0}
           bulletVariant="white-dot"
@@ -148,13 +149,22 @@ const HotelCard = ({
               <span className="text-sm font-semibold">
                 {dataHotel.hotel_name}
               </span>
-              <span className="text-xs">
-                {moment(dataHotel.check_in_time).format("DD MMMM YYYY")} ∙{" "}
-                {calculateDaysAndNights(
-                  dataHotel.check_in_time,
-                  dataHotel.check_out_time,
+              <div className="flex gap-0.5">
+                {dataHotel.check_in_time && dataHotel.check_out_time && (
+                  <span className="text-xs">
+                    {moment(dataHotel.check_in_time).format("DD MMMM YYYY")} ∙
+                  </span>
                 )}
-              </span>
+                <span className="text-xs">
+                  {" "}
+                  {dataHotel.check_in_time && dataHotel.check_out_time
+                    ? calculateDaysAndNights(
+                        dataHotel.check_in_time,
+                        dataHotel.check_out_time,
+                      )
+                    : `${dataHotel.duration} hari ${dataHotel.duration - 1} malam`}
+                </span>
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-2">

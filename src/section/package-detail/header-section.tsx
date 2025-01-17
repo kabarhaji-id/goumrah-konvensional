@@ -9,6 +9,7 @@ import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
 import { UmrahPackage } from "@/types/package-details";
+import { priceToLocale } from "@/lib/utils";
 
 const HeaderSection = ({
   packageData,
@@ -82,7 +83,9 @@ const HeaderSection = ({
               <ReceiptIcon className="h-4 w-4" fill="#EF4444" />
               <p className="text-xs leading-4 text-destructive">
                 Pembayaran Awal (DP) :
-                <span className="pl-0.5 font-extrabold">Rp 5 Juta</span>
+                <span className="pl-0.5 font-extrabold">
+                  Rp {packageData.down_payment} Juta
+                </span>
               </p>
             </div>
           </div>

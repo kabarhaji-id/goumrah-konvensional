@@ -2,15 +2,13 @@ export type PackageCategory = "Silver" | "Gold" | "Platinum" | "Luxury";
 export type PackageType = "Plus" | "Reguler";
 
 export interface Flight {
-  id: string;
-  departure: string;
   wisata_flight: FlightDetail[];
   departure_flight: FlightDetail;
   return_flight: FlightDetail;
 }
 
 export interface FlightDetail {
-  flight_number: string;
+  flight_number?: string;
   duration: number;
   airport_name_departure: string;
   airport_terminal_departure: string;
@@ -20,7 +18,7 @@ export interface FlightDetail {
   airport_terminal_arrival: string;
   airport_code_arrival: string;
   airport_city_arrival: string;
-  departure_datetime: string;
+  departure_datetime?: string;
   terminal: string;
   class: string;
   flight_type: "Direct" | "Transit";
@@ -47,14 +45,15 @@ export interface HotelDetail {
   city: string;
   hotel_name: string;
   star_rating: number;
+  duration: number;
   images: Images[];
   google_maps_link_noembed: string;
   google_maps_link: string;
   google_review_link: string;
   description: string;
   facilities: string[];
-  check_in_time: string;
-  check_out_time: string;
+  check_in_time?: string;
+  check_out_time?: string;
   address: string;
   distance_to_masjid: number;
   food_type: string;

@@ -69,8 +69,6 @@ export const dummyData: UmrahPackage[] = [
     quadFinalPrice: undefined,
     infantFinalPrice: undefined,
     flight_details: {
-      id: "lion-air-direct",
-      departure: "Keberangkatan 1",
       wisata_flight: [
         {
           flight_number: "GA-822",
@@ -151,7 +149,7 @@ export const dummyData: UmrahPackage[] = [
         transit_datetime: "2024-03-10T23:00:00+07:00",
       },
       return_flight: {
-        flight_number: "GA-823",
+        flight_number: undefined,
         duration: 510,
         airport_name_departure: "King Abdulaziz International Airport",
         airport_terminal_departure: "2",
@@ -161,7 +159,7 @@ export const dummyData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2024-03-19T15:30:00+03:00",
+        departure_datetime: undefined,
         terminal: "2",
         class: "Economy",
         flight_type: "Direct",
@@ -184,6 +182,7 @@ export const dummyData: UmrahPackage[] = [
           city: "Dubai",
           hotel_name: "Park Hyatt",
           star_rating: 5,
+          duration: 4,
           images: [
             {
               id: "1",
@@ -213,6 +212,7 @@ export const dummyData: UmrahPackage[] = [
         city: "Mekkah",
         hotel_name: "Le Meridien Tower",
         star_rating: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -243,8 +243,8 @@ export const dummyData: UmrahPackage[] = [
         description:
           "Hotel bintang 5 dengan fasilitas lengkap dan pemandangan indah.",
         facilities: ["AC", "WiFi", "Kolam Renang", "Gym", "Spa"],
-        check_in_time: "2024-03-10T13:00:00+07:00",
-        check_out_time: "2024-03-16T11:00:00+07:00",
+        check_in_time: undefined,
+        check_out_time: undefined,
         address: "Jl. Le Meridien, Mekkah",
         distance_to_masjid: 200,
         food_type: "Prasmanan",
@@ -256,6 +256,7 @@ export const dummyData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Hayah Golden",
         star_rating: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -315,8 +316,8 @@ export const dummyData: UmrahPackage[] = [
     },
     promos: [
       {
-        imageUrl: "/assets/image/packages-umrah/package-detail-1.png",
-        link: "test",
+        imageUrl: "/assets/promo/promo-1.png",
+        link: "promo-3-juta",
       },
     ],
     addons: [

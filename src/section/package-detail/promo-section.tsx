@@ -34,10 +34,10 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
             <Link href={dataPromos[0].link}>
               <Image
                 width={361}
-                height={138}
+                height={300}
                 src={dataPromos[0].imageUrl}
                 alt="image-promo"
-                className="h-[132px] w-full rounded-[14px] object-cover"
+                className="aspect-[24/9] w-full rounded-[14px] object-cover"
               />
             </Link>
           )}

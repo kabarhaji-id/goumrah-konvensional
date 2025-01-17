@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import type {Metadata} from "next";
+import {Plus_Jakarta_Sans} from "next/font/google";
 
 import "./globals.css";
 
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  display: "swap",
+    subsets: ["latin"],
+    display: "swap",
 });
 
 export default function RootLayout({
@@ -18,67 +18,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // return (
-  //   <html lang="en" className="scroll-smooth">
-  //     <body className={`${plusJakartaSans.className} antialiased`}>
-  //       <div className="mx-auto max-w-screen-sm">
-  //         <Header />
-
-  //         <Navbar />
-
-  //         <main>{children}</main>
-
-  //         <Footer />
-  //       </div>
-
-  //       {/* Qontak Webchat Script */}
-  //       <script
-  //         dangerouslySetInnerHTML={{
-  //           __html: `
-  //             const qchatInit = document.createElement('script');
-  //             qchatInit.src = "https://webchat.qontak.com/qchatInitialize.js";
-  //             const qchatWidget = document.createElement('script');
-  //             qchatWidget.src = "https://webchat.qontak.com/js/app.js";
-  //             document.head.prepend(qchatInit);
-  //             document.head.prepend(qchatWidget);
-  //             qchatInit.onload = function() {
-  //               qchatInitialize({
-  //                 id: "ef1ce316-d184-4861-b495-10ba1b5acf52",
-  //                 code: "FOrxizC1qgkQwG7ht7SZnA"
-  //               });
-  //             };
-  //           `,
-  //         }}
-  //       />
-  //     </body>
-  //   </html>
-  // );
   return (
-    <html lang="en" className="scroll-smooth bg-gray-50">
+    <html lang="en" className="scroll-smooth">
       <body className={`${plusJakartaSans.className} antialiased`}>
-        <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
-          <main>{children}</main>
-        </div>
-
-        {/* Qontak Webchat Script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-             const qchatInit = document.createElement('script');
-             qchatInit.src = "https://webchat.qontak.com/qchatInitialize.js";
-             const qchatWidget = document.createElement('script');
-             qchatWidget.src = "https://webchat.qontak.com/js/app.js";
-             document.head.prepend(qchatInit);
-             document.head.prepend(qchatWidget);
-             qchatInit.onload = function() {
-               qchatInitialize({
-                 id: "ef1ce316-d184-4861-b495-10ba1b5acf52",
-                 code: "FOrxizC1qgkQwG7ht7SZnA"
-               });
-             };
-           `,
-          }}
-        />
+      <div className="mx-auto max-w-screen-sm">
+        <main>{children}</main>
+      </div>
       </body>
     </html>
   );

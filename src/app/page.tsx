@@ -8,6 +8,7 @@ import BottomNavigation from "@/components/layout/navbar/bottom-navigation";
 import IdealPackagesSection from "@/section/ideal-packages";
 import TestimonySection from "@/section/testimony";
 import AffiliatesSection from "@/section/affiliate";
+import { ChatWidgets } from "@/section/chat/chat-widgets";
 
 export default function HomePage() {
   return (
@@ -22,6 +23,10 @@ export default function HomePage() {
       <AboutUsSection />
       <Footer withCSbanner />
       <BottomNavigation />
+      <ChatWidgets
+        phoneNumber="+62811157188" //must BE added on .env
+        accountName="Tanya Isma - goumrah.id"
+      />
     </>
   );
 }

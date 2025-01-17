@@ -78,7 +78,7 @@ export interface BusDetail {
 
 export interface DepartureDateDetail {
   date: string;
-  status: "active" | "coming-soon";
+  status: "active" | "coming-soon" | "musim-haji" | "expired";
 }
 
 export interface DepartureCityDetail {
@@ -89,6 +89,14 @@ export interface DepartureCityDetail {
 export interface PromoDetail {
   imageUrl: string;
   link: string;
+}
+
+export interface AddOnsDetail {
+  cityName: string;
+  category: string;
+  price: number;
+  places: string[];
+  imageUrl: string;
 }
 
 export interface Itinerary {
@@ -174,6 +182,6 @@ export interface UmrahPackage {
   quadFinalPrice?: number;
   infantFinalPrice?: number;
   promos: PromoDetail[];
-  addons: Images[];
+  addons: AddOnsDetail[];
   itineraries: Itinerary[];
 }

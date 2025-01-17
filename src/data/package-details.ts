@@ -23,15 +23,35 @@ export const dummyData: UmrahPackage[] = [
     order_url: `${whatsappLink}Assalamualaikum,%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Paket%20Gold%20Umrah%20Pilihan%209%20Hari.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%20Terima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
     departure_date: [
       {
-        date: "2024-07-27T10:00:00+07:00",
+        date: "2025-02-18T10:00:00+07:00",
+        status: "expired",
+      },
+      {
+        date: "2025-03-29T10:00:00+07:00",
+        status: "expired",
+      },
+      {
+        date: "2025-04-24T10:00:00+07:00",
         status: "active",
       },
       {
-        date: "2024-04-12T10:00:00+07:00",
+        date: "2025-05-01T10:00:00+07:00",
+        status: "musim-haji",
+      },
+      {
+        date: "2025-06-01T10:00:00+07:00",
+        status: "musim-haji",
+      },
+      {
+        date: "2025-07-30T10:00:00+07:00",
         status: "coming-soon",
       },
       {
-        date: "2024-05-14T10:00:00+07:00",
+        date: "2025-08-17T10:00:00+07:00",
+        status: "coming-soon",
+      },
+      {
+        date: "2025-09-21T10:00:00+07:00",
         status: "coming-soon",
       },
     ],
@@ -296,14 +316,25 @@ export const dummyData: UmrahPackage[] = [
     ],
     addons: [
       {
-        id: "1",
-        src: "/assets/image/packages-umrah/package-detail-1.png",
-        category: "Standard",
+        cityName: "Kota Thaif",
+        category: "Wisata Kota",
+        price: 500000,
+        places: ["Kebun Buah", "Gunung Al-Hada", "Al-Ruddaf"],
+        imageUrl: "/assets/image/packages-umrah/package-detail-1.png",
       },
       {
-        id: "2",
-        src: "/assets/image/packages-umrah/package-detail-1.png",
-        category: "Standard",
+        cityName: "Kota Al-Ula",
+        category: "Wisata Kota",
+        price: 500000,
+        places: ["Jabal Ikmah", "Museum Al-Ula", "Makam Nabi Hud"],
+        imageUrl: "/assets/image/packages-umrah/package-detail-1.png",
+      },
+      {
+        cityName: "Jeddah Speed Boat",
+        category: "Wisata Kota",
+        price: 500000,
+        places: ["Laut Merah", "Speed Boat"],
+        imageUrl: "/assets/image/packages-umrah/package-detail-1.png",
       },
     ],
     itineraries: [

@@ -2,6 +2,7 @@
 
 import moment from "moment";
 import "moment/locale/id";
+import "../../app/globals.css";
 
 import CustomAirplaneMarkerIcon from "/src/assets/icons/mdi_airplane-marker.svg";
 
@@ -17,6 +18,7 @@ import {
   DepartureCityDetail,
   DepartureDateDetail,
 } from "@/types/package-details";
+import { CustomSwiper } from "@/components/layout/swiper";
 
 interface FilterProps {
   departureDates: DepartureDateDetail[];
@@ -31,7 +33,9 @@ const FilterSection = ({
 }: FilterProps) => {
   moment.locale("id");
 
-  const [selectedDate, setSelectedDate] = useState(departureDates[0].date);
+  const filteredDates = departureDates.filter((d) => d.status === "active");
+
+  const [selectedDate, setSelectedDate] = useState(filteredDates[0].date);
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
 
   const onFilterChange = (city?: string, date?: string) => {
@@ -61,33 +65,50 @@ const FilterSection = ({
             )}
           </CardDetailHeader>
 
-          <CardDetailContent className="flex items-center gap-2 rounded-[10px] px-2 pb-4 pt-3">
-            {variant === "departureDate" && departureDates
-              ? departureDates.map((date, index) => {
+          <CardDetailContent className="flex items-center gap-2 overflow-hidden rounded-[10px] px-2 pb-4 pt-3">
+            {variant === "departureDate" && departureDates ? (
+              <CustomSwiper gap={8} padding={1} className="overflow-visible">
+                {departureDates.map((date, index) => {
                   return (
-                    <div key={index} className="flex w-full gap-2">
+                    <div key={index} className="flex w-[118px] gap-2">
                       <div
                         onClick={() => onFilterChange(undefined, date.date)}
                         className={`relative flex h-16 w-full cursor-pointer flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
                           selectedDate === date.date && date.status === "active"
-                            ? "border border-primary bg-primary-accent text-primary"
-                            : "border border-neutral-200 text-neutral-foreground"
+                            ? "border border-primary bg-primary-background text-primary"
+                            : "bg-gray border text-neutral-foreground"
                         } ${
-                          date.status !== "active" ? "pointer-events-none" : ""
-                        }`}
+                          date.status !== "active" &&
+                          date.status !== "musim-haji" &&
+                          selectedDate !== date.date
+                            ? "bg-subtle-background pointer-events-none"
+                            : ""
+                        } ${date.status === "musim-haji" && "bg-accent-light-gold gold-border pointer-events-none"}`}
                       >
                         <span className="text-xs tracking-tight">
-                          {moment(date.date).format("dddd")}
+                          {date.status !== "musim-haji"
+                            ? moment(date.date).format("dddd")
+                            : "Musim haji 2025"}
                         </span>
                         <span className="text-sm font-semibold tracking-wide">
-                          {moment(date.date).format("DD MMM")}
+                          {date.status !== "musim-haji"
+                            ? moment(date.date).format("DD MMM")
+                            : moment(date.date).format("MMMM")}
                         </span>
 
-                        {date.status !== "active" && (
+                        {date.status === "coming-soon" && (
                           <span
-                            className={`absolute -bottom-2 rounded-[4px] bg-[#999999] px-1 text-[10px] font-medium tracking-wide text-gray-100`}
+                            className={`absolute -bottom-2 !z-[999] rounded-[4px] bg-[#999999] px-1 text-[10px] font-medium tracking-wide text-gray-100`}
                           >
                             Belum Dibuka
+                          </span>
+                        )}
+
+                        {date.status === "musim-haji" && (
+                          <span
+                            className={`bg-accent-gold absolute -bottom-2 !z-[999] rounded-[4px] px-1 text-[10px] font-light tracking-wide text-white`}
+                          >
+                            Musim Haji
                           </span>
                         )}
 
@@ -99,37 +120,48 @@ const FilterSection = ({
                               Dipilih
                             </span>
                           )}
+
+                        {date.status === "expired" && (
+                          <span
+                            className={`absolute -bottom-2 !z-[999] rounded-[4px] bg-[#999999] px-1 text-[10px] font-medium tracking-wide text-gray-100`}
+                          >
+                            Sudah Berangkat
+                          </span>
+                        )}
                       </div>
                     </div>
                   );
-                })
-              : embarkation &&
-                embarkation.map((city, index: number) => {
-                  return (
-                    <div
-                      key={index}
-                      onClick={() => onFilterChange(city.city, undefined)}
-                      className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${
-                        selectedCity! === city.city
-                          ? "border border-primary bg-primary-accent text-primary"
-                          : "border border-neutral-200"
-                      }`}
-                    >
-                      <p className="text-sm font-semibold tracking-tight">
-                        {city.city}
-                      </p>
-                      <p className="text-[10px] font-medium tracking-wide">
-                        {city.route}
-                      </p>
-
-                      {selectedCity! === city.city && (
-                        <span className="absolute bottom-2.5 self-center rounded-[4px] bg-primary px-1 pb-px text-[10px] font-medium leading-[15px] tracking-wide text-white">
-                          Dipilih
-                        </span>
-                      )}
-                    </div>
-                  );
                 })}
+              </CustomSwiper>
+            ) : (
+              embarkation &&
+              embarkation.map((city, index: number) => {
+                return (
+                  <div
+                    key={index}
+                    onClick={() => onFilterChange(city.city, undefined)}
+                    className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${
+                      selectedCity! === city.city
+                        ? "border border-primary bg-primary-background text-primary"
+                        : "border border-neutral-200"
+                    }`}
+                  >
+                    <p className="text-sm font-semibold tracking-tight">
+                      {city.city}
+                    </p>
+                    <p className="text-[10px] font-medium tracking-wide">
+                      {city.route}
+                    </p>
+
+                    {selectedCity! === city.city && (
+                      <span className="absolute bottom-2.5 self-center rounded-[4px] bg-primary px-1 pb-px text-[10px] font-medium leading-[15px] tracking-wide text-white">
+                        Dipilih
+                      </span>
+                    )}
+                  </div>
+                );
+              })
+            )}
           </CardDetailContent>
         </CardDetail>
       </SectionContent>

@@ -6,17 +6,13 @@ import {
   SectionTitle,
 } from "@/components/layout/section";
 import { CustomSwiper } from "@/components/layout/swiper";
+import { Button } from "@/components/ui/button";
 import { priceToLocale } from "@/lib/utils";
+import { AddOnsDetail } from "@/types/package-details";
 
-interface Images {
-  id: string;
-  src: string;
-  category?: string;
-}
-
-const TourVoucherSection = ({ dataAddOns }: { dataAddOns: Images[] }) => {
+const TourVoucherSection = ({ dataAddOns }: { dataAddOns: AddOnsDetail[] }) => {
   return (
-    <Section className="pb-5">
+    <Section className="pb-5 pt-0">
       <SectionHeader className="mb-3 px-4">
         <SectionTitle className="flex items-center">
           Voucher Wisata
@@ -34,23 +30,12 @@ const TourVoucherSection = ({ dataAddOns }: { dataAddOns: Images[] }) => {
           {dataAddOns.map((item, index) => (
             <CityCard
               key={index}
-              cityName="Kota Thaif"
-              price={500000}
-              places={["Kebun Buah", "Gunung Al-Hada", "Al-Ruddaf"]}
-              imageUrl={item.src}
+              cityName={item.cityName}
+              price={item.price}
+              places={item.places}
+              imageUrl={item.imageUrl}
             />
           ))}
-
-          {/* {dataAddOns.map((item, index) => (
-            <Image
-              key={index}
-              width={314}
-              height={177}
-              src={item.src}
-              alt={`image-${index}`}
-              className="aspect-video h-44 w-full rounded-[14px] object-cover"
-            />
-          ))} */}
         </CustomSwiper>
       </SectionContent>
     </Section>
@@ -69,7 +54,7 @@ const CityCard = ({
   imageUrl: string;
 }) => {
   return (
-    <div className="relative aspect-video w-full max-w-[314px] overflow-hidden rounded-md shadow-md">
+    <div className="relative h-[177px] w-[314px] overflow-hidden rounded-md shadow-md">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${imageUrl})` }}
@@ -89,12 +74,13 @@ const CityCard = ({
 
         <div className="flex space-x-2">
           {places.map((place, index) => (
-            <button
+            <Button
+              variant="outline"
               key={index}
-              className="rounded-full border border-white px-1.5 py-0.5 text-[11px] font-medium"
+              className="h-fit rounded-full border border-white bg-transparent px-1 py-0.5 text-[11px] font-medium"
             >
               {place}
-            </button>
+            </Button>
           ))}
         </div>
       </div>

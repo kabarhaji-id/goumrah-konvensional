@@ -13,10 +13,10 @@ import PromoSection from "@/section/package-detail/promo-section";
 import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
 import ItinerarySection from "@/section/package-detail/itinerary-section";
 import Footer from "@/components/layout/footer";
+import NotFound from "@/app/not-found";
 
 import { dataPackages } from "@/data/packages";
 import { dummyData } from "@/data/package-details";
-import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 
 // --- Metadata for SEO Optimization
@@ -104,16 +104,5 @@ export default async function DetailPage({
     );
   }
 
-  return (
-    <main className="flex h-full min-h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-8">
-        <h5 className="text-lg font-semibold">
-          Maaf, paket yang kamu cari tidak ada
-        </h5>
-        <Button className="w-fit rounded-[6px]">
-          <Link href="/">Kembali ke Beranda</Link>
-        </Button>
-      </div>
-    </main>
-  );
+  return <NotFound />;
 }

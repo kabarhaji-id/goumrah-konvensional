@@ -15,14 +15,6 @@ const ImagePoster = async ({
   return (
     <>
       <div className="relative w-full">
-        <div
-          className="absolute top-0 z-10 h-20 w-full"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 40%)",
-          }}
-        />
-
         <div>
           <Image
             src={packageImage}
@@ -30,14 +22,6 @@ const ImagePoster = async ({
             width={448}
             height={336}
             className="h-full max-h-[380px] w-full object-cover"
-          />
-
-          <div
-            className="absolute bottom-0 z-10 h-14 w-full"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-            }}
           />
         </div>
 

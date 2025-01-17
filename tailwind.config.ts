@@ -10,6 +10,19 @@ export default {
   ],
   theme: {
     extend: {
+      dropShadow: {
+        "custom-lg": "0px 4px 12px 0px rgba(0, 0, 0, 0.25)",
+      },
+      boxShadow: {
+        "custom-sm":
+          "0px 4px 8px 0px rgba(0, 0, 0, 0.06), 0px 0px 4px 0px rgba(0, 0, 0, 0.04)",
+        "custom-md":
+          "0px 6px 6px 0px rgba(138, 138, 138, 0.04), 0px 1px 3px 0px rgba(138, 138, 138, 0.05), 0px 13px 8px 0px rgba(138, 138, 138, 0.03), 0px 23px 9px 0px rgba(138, 138, 138, 0.01), 0px 36px 10px 0px rgba(138, 138, 138, 0)",
+        "custom-lg":
+          "0px 8px 32px 0px rgba(17, 17, 26, 0.05), 0px 4px 16px 0px rgba(17, 17, 26, 0.05)",
+        "custom-xl":
+          "0px -6px 6px 0px rgba(138, 138, 138, 0.04), 0px -1px 3px 0px rgba(138, 138, 138, 0.05), 0px -13px 8px 0px rgba(138, 138, 138, 0.03), 0px -23px 9px 0px rgba(138, 138, 138, 0.01), 0px -36px 10px 0px rgba(138, 138, 138, 0)",
+      },
       colors: {
         background: "#F1FAFA",
         foreground: "#002626",
@@ -23,7 +36,12 @@ export default {
         },
         primary: {
           DEFAULT: "#1B8386",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "#002626",
+          accent: "#DCF1F1",
+          background: "#F1FAFA",
+        },
+        neutral: {
+          foreground: "#232323",
         },
         secondary: {
           DEFAULT: "#90CFD0",
@@ -41,7 +59,7 @@ export default {
           DEFAULT: "#EF4444",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        border: "#E2E8F0",
+        border: "#DDDDDD",
         input: "hsl(var(--input))",
         ring: "#1B8386",
         chart: {
@@ -51,11 +69,39 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        status: {
+          gold: "#F2AC30",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
+      backgroundImage: {
+        hero: "url('/assets/image/hero-bg.png')",
       },
     },
   },

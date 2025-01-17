@@ -6,45 +6,56 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative aspect-[9/16] h-auto w-full overflow-hidden">
-      <div className="absolute bottom-0 h-14 w-full bg-gradient-to-t from-white to-transparent" />
+    <section className="relative flex h-[732px] flex-col bg-hero bg-cover bg-bottom sm:h-[960px]">
+      <header className="absolute top-0 z-10 flex h-14 w-full items-center justify-center px-4 py-3">
+        <Image
+          alt="goumrah.id logo"
+          src="/assets/image/logo-main.svg"
+          width={150}
+          height={32}
+          blurDataURL="/assets/image/logo-main.svg"
+        />
+      </header>
+
+      <div className="absolute left-1/2 top-28 z-10 flex w-[343px] -translate-x-1/2 flex-col items-center gap-2 text-primary-foreground">
+        <h2 className="text-center text-3xl font-bold leading-[130%] tracking-normal">
+          Rumah ke Makkah
+          <br />
+          Hanya Satu Langkah
+        </h2>
+        <p className="text-center text-lg font-medium leading-[140%] tracking-wide text-primary-foreground/75">
+          Wujudkan perjalanan Umrah impian
+          <br />
+          Anda dengan mudah dan terpercaya,
+          <br />
+          dari mana saja, kapan saja.
+        </p>
+        <p className="italic">
+          #bikin<b>tenang</b>
+        </p>
+      </div>
+
+      <Button
+        className="absolute bottom-10 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
+        asChild
+      >
+        <Link href="#umrah-package">
+          <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
+            Jelajahi Berbagai Paket Umrah Kami
+          </p>
+          <ChevronDown className="!size-5 animate-bounce duration-1000" />
+        </Link>
+      </Button>
+
       <Image
         src="/assets/image/hero-img.png"
-        alt="bg-hero"
-        fill
-        className="bottom-0 -z-10 h-auto w-full"
-        sizes="100vw"
+        alt="Hero's Image"
+        className="absolute bottom-0 z-0 w-full"
+        width={412}
+        height={732}
       />
-      <div className="absolute left-1/2 top-0 -z-10 h-[661px] w-[528px] -translate-x-1/2">
-        <Image
-          src="/assets/image/hero-bg.png"
-          alt="goumrah-hero-bg"
-          fill
-          className="object-cover"
-        />
-      </div>
 
-      <div className="relative flex h-full flex-col justify-between px-6 pb-16 pt-20">
-        <div className="space-y-2 text-center">
-          <h1>
-            Rumah ke Makkah <br /> Hanya Satu Langkah
-          </h1>
-          <p className="text-lg leading-normal">
-            Wujudkan perjalanan Umrah impian Anda dengan mudah dan terpercaya,
-            dari mana saja, kapan saja.
-          </p>
-          <p className="text-lg italic">
-            #bikin<span className="font-bold">tenang</span>
-          </p>
-        </div>
-
-        <Button className="capitalize" size="lg" asChild>
-          <Link href={"#umrah-package"}>
-            Jelajahi berbagai paket umrah kami
-            <ChevronDown className="!size-5 animate-bounce duration-1000" />
-          </Link>
-        </Button>
-      </div>
+      <span className="absolute bottom-0 z-0 h-44 w-full bg-gradient-to-b from-white/0 to-accent" />
     </section>
   );
 };

@@ -5,6 +5,7 @@ const whatsappLink = process.env.WHATSAPP_LINK;
 export const dummyData: UmrahPackage[] = [
   {
     id: "umrah-hemat-fokus-ibadah-silver",
+    thumbnail: "/assets/image/packages-umrah/package-detail-1.png",
     tagline: "Umrah Hemat, Fokus Ibadah",
     type: "Plus",
     category: "Silver",

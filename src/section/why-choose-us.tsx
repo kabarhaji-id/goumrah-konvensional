@@ -25,7 +25,7 @@ const WhyChooseUsSection = () => {
     <Section className="bg-gradient-to-br from-foreground to-primary pb-12">
       <SectionHeader>
         <SectionSubTitle className="text-accent">
-          Penuh Kasih Disetiap Langkah
+          Dapatkan Kelebihannya
         </SectionSubTitle>
         <SectionTitle className="text-background">
           Berangkat Umrah Bersama goumrah.id

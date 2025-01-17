@@ -30,7 +30,8 @@ const GallerySection = () => {
       <SectionHeader>
         <SectionSubTitle>#EpicMoment</SectionSubTitle>
         <SectionTitle className="text-primary">
-          Abadikan Moment Tak Terlupakan Bersama goumrah.id
+          Abadikan Moment Tak Terlupakan Bersama{" "}
+          <span className="font-normal">go</span>umrah.id
         </SectionTitle>
       </SectionHeader>
       <SectionContent className="scrollbar-hide flex max-w-full gap-x-4 overflow-x-auto px-6">

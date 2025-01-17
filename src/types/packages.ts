@@ -150,6 +150,7 @@ interface ItineraryRecommendedWidgets {
 
 export interface UmrahPackage {
   id: string;
+  thumbnail: string;
   type: PackageType;
   category: PackageCategory;
   tagline: string;

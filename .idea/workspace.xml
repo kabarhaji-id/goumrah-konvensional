@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup." />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,8 +50,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "feat/bottom-navbar",
     "kotlin-language-version-configured": "true",
@@ -111,6 +115,7 @@
       <workItem from="1736815777977" duration="1822000" />
       <workItem from="1736825390025" duration="11061000" />
       <workItem from="1736870538344" duration="9742000" />
+      <workItem from="1737116390607" duration="387000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -120,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736817585691</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations.">
+      <option name="closed" value="true" />
+      <created>1737116619372</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737116619372</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,17 +144,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/section/packages.tsx</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations." />
   </component>
 </project>

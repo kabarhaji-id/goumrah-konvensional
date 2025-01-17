@@ -6,6 +6,7 @@ export const dummyData: UmrahPackage[] = [
   {
     id: "umrah-hemat-fokus-ibadah-silver",
     tagline: "Umrah Hemat, Fokus Ibadah",
+    thumbnail: "/assets/image/packages-umrah/package-detail-1.png",
     type: "Plus",
     category: "Silver",
     season: "NON RAMADHAN",

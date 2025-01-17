@@ -17,6 +17,39 @@ import Footer from "@/components/layout/footer";
 import { dataPackages } from "@/data/packages";
 import { dummyData } from "@/data/package-details";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+
+// --- Metadata for SEO Optimization
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> => {
+  const resolvedParams = await params;
+  const data = dummyData.find((det) => det.id === resolvedParams.slug);
+
+  return {
+    generator: "Next.js",
+    title: data?.tagline,
+    // description: data?.description,
+    keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
+    openGraph: {
+      title: data?.tagline,
+      // Note: change the url later
+      url: `https://goumrah.id/umrah/${(await params).slug}`,
+      siteName: "goumrah.id",
+      images: [
+        {
+          url: `${data?.thumbnail}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: "id_ID",
+      type: "website",
+    },
+  };
+};
 
 export default async function DetailPage({
   params,

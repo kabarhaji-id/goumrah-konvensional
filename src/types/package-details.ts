@@ -153,6 +153,7 @@ export interface UmrahPackage {
   type: PackageType;
   category: PackageCategory;
   tagline: string;
+  thumbnail: string;
   season: string;
   isFastTrain: boolean;
   city_departure: DepartureCityDetail[];

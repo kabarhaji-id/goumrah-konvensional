@@ -1,14 +1,15 @@
-import HeroSection from "@/section/hero";
-import RecommendedPackagesSection from "@/section/recommended-packages";
-import WhyChooseUsSection from "@/section/why-choose-us";
-import GallerySection from "@/section/gallery";
-import AboutUsSection from "@/section/about-us";
+import HeroSection from "@/section/home/hero";
+import RecommendedPackagesSection from "@/section/home/recommended-packages";
+import WhyChooseUsSection from "@/section/home/why-choose-us";
+import GallerySection from "@/section/home/gallery";
+import AboutUsSection from "@/section/home/about-us";
 import Footer from "@/components/layout/footer";
 import BottomNavigation from "@/components/layout/navbar/bottom-navigation";
-import IdealPackagesSection from "@/section/ideal-packages";
-import TestimonySection from "@/section/testimony";
-import AffiliatesSection from "@/section/affiliate";
-import { ChatWidgets } from "@/section/chat/chat-widgets";
+import IdealPackagesSection from "@/section/home/ideal-packages";
+import TestimonySection from "@/section/home/testimony";
+import AffiliatesSection from "@/section/home/affiliate";
+import React from "react";
+import TanyaIsma from "@/section/tanya-isma";
 
 export default function HomePage() {
   return (
@@ -23,10 +24,6 @@ export default function HomePage() {
       <AboutUsSection />
       <Footer withCSbanner />
       <BottomNavigation />
-      <ChatWidgets
-        phoneNumber="+62811157188" //must BE added on .env
-        accountName="Tanya Isma - goumrah.id"
-      />
     </>
   );
 }

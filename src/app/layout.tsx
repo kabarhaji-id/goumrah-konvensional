@@ -1,5 +1,5 @@
-import type {Metadata} from "next";
-import {Plus_Jakarta_Sans} from "next/font/google";
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
 
@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 };
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-    subsets: ["latin"],
-    display: "swap",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -21,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${plusJakartaSans.className} antialiased`}>
-      <div className="mx-auto max-w-screen-sm">
-        <main>{children}</main>
-      </div>
+        <div className="mx-auto max-w-screen-sm">
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );

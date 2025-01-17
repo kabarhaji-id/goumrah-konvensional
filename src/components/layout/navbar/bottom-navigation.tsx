@@ -7,6 +7,7 @@ import React from "react";
 import HomeIcon from "@/assets/icons/home.svg";
 import CustomerServiceIcon from "@/assets/icons/customer-service.svg";
 import KaabaIcon from "@/assets/icons/kaaba.svg";
+import TanyaIsma from "@/section/tanya-isma";
 
 const BottomNavigation = () => {
   const pathname = usePathname();
@@ -42,6 +43,8 @@ const BottomNavigation = () => {
           Paket Umrah
         </p>
       </button>
+
+      <TanyaIsma />
     </nav>
   );
 };

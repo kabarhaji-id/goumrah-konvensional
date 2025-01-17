@@ -21,13 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${plusJakartaSans.className} antialiased`}>
-        <div className="mx-auto max-w-screen-sm">
-          <Navbar />
-
-          <main>{children}</main>
-
-          <Footer />
-        </div>
+      <div className="mx-auto max-w-screen-sm">
+        <main>{children}</main>
+      </div>
       </body>
     </html>
   );

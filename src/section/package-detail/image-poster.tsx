@@ -1,29 +1,39 @@
+"use client";
+
 import Image from "next/image";
 
 import GoldAccent from "/public/assets/patterns/gold-accent.svg";
 import SilverAccent from "/public/assets/patterns/silver-accent.svg";
 import PlatinumAccent from "/public/assets/patterns/platinum-accent.svg";
 import LuxuryAccent from "/public/assets/patterns/luxury-accent.svg";
+import { useState } from "react";
 
-const ImagePoster = async ({
+const ImagePoster = ({
   packageImage,
   packageCategory,
 }: {
   packageImage: string;
   packageCategory: string;
 }) => {
+  const [isImageError, setIsImageError] = useState(false);
+
   return (
     <>
       <div className="relative w-full">
-        <div>
+        {!isImageError && packageImage ? (
           <Image
             src={packageImage}
             alt={`image-${packageImage}`}
             width={640}
             height={380}
             className="h-full max-h-[380px] w-full object-cover"
+            onError={() => setIsImageError(true)}
           />
-        </div>
+        ) : (
+          <div className="flex h-[380px] w-full items-center justify-center bg-gray-100">
+            <span className="text-sm text-gray-500">Foto tidak tersedia</span>
+          </div>
+        )}
 
         <div className="absolute -bottom-0 z-20 h-fit">
           {packageCategory === "Silver" && <SilverAccent className="w-full" />}

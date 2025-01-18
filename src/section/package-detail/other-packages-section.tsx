@@ -7,10 +7,10 @@ import {
 import { CustomSwiper } from "@/components/layout/swiper";
 import { PackageCardCompact } from "@/components/ui/card/package-card-compact";
 import { Separator } from "@/components/ui/separator";
-import { dataPackages } from "@/data/packages";
+import { packageDetailData } from "@/data/package-details";
 
 const OtherPackagesSection = async ({ packageId }: { packageId: string }) => {
-  const filteredPackages = dataPackages.filter((p) => p.slug !== packageId);
+  const filteredPackages = packageDetailData.filter((p) => p.id !== packageId);
 
   if (filteredPackages.length > 0) {
     return (

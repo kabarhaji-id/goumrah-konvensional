@@ -45,7 +45,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
         <AccordionContent className="space-y-4">
           {/* --- Check-in and Check-out --- */}
           {dataHotel.check_in_time && dataHotel.check_out_time && (
-            <div className="flex gap-4 bg-primary-background px-4 py-2">
+            <div className="flex gap-4 bg-primary-background px-4 pt-2">
               <div className="flex flex-shrink-0 flex-col gap-1 text-neutral-foreground">
                 <span className="text-xs font-medium leading-4 text-primary">
                   Check-in
@@ -79,7 +79,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
           )}
 
           {/* --- Hotel Facilities --- */}
-          <div className="flex flex-col gap-2 px-4">
+          <div className="flex flex-col gap-2 px-4 pt-2">
             <h4 className="text-sm font-bold text-primary-foreground">
               Fasilitas Hotel
             </h4>
@@ -119,14 +119,16 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
                 </span>
               </div>
 
-              <div
-                className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
-              >
-                <span className="text-xs leading-4 opacity-60">Banyak</span>
-                <span className="text-xs font-semibold leading-4">
-                  {dataHotel.food_amount}x /hari
-                </span>
-              </div>
+              {dataHotel.food_amount && (
+                <div
+                  className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+                >
+                  <span className="text-xs leading-4 opacity-60">Banyak</span>
+                  <span className="text-xs font-semibold leading-4">
+                    {dataHotel.food_amount}x /hari
+                  </span>
+                </div>
+              )}
 
               {dataHotel.food_menu && (
                 <div className="flex flex-col gap-1 text-neutral-foreground">

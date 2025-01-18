@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/card/package-detail-card";
 import { getSkytrax } from "@/components/ui/helper/getSkytrax";
 import Image from "next/image";
+import { useAccordionFlightStore } from "@/store/useInterfaceStore";
 
 const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   moment.locale("id");
@@ -91,7 +92,12 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
         <SectionContent className="mx-0 space-y-4 px-0">
           {arrDataFlight.length > 0 &&
             arrDataFlight.map((data, index) => (
-              <FlightCard key={index} type={data.type} dataFlight={data}>
+              <FlightCard
+                key={index}
+                type={data.type}
+                dataFlight={data}
+                id={index.toString()}
+              >
                 <AccordionFlight dataFlight={data.data} id={index.toString()} />
               </FlightCard>
             ))}
@@ -112,15 +118,20 @@ interface FlightCardProps {
 }
 
 const FlightCard = ({
+  id,
   type,
   dataFlight,
   children,
 }: {
+  id: string;
   type: "Wisata" | "Keberangkatan" | "Kepulangan" | string;
   dataFlight?: FlightCardProps;
   children?: React.ReactNode;
 }) => {
   moment.locale("id");
+
+  const { isOpen } = useAccordionFlightStore();
+  const open = isOpen[id] || false;
 
   if (dataFlight) {
     return (
@@ -149,13 +160,15 @@ const FlightCard = ({
             </Badge>
 
             <div className="flex items-center gap-2">
-              <Image
-                width={70}
-                height={60}
-                src={dataFlight.data.directFlight.airline_logo}
-                alt={`logo-${dataFlight.data.directFlight.airline}`}
-                className="h-[52px] w-auto"
-              />
+              {!open && (
+                <Image
+                  width={70}
+                  height={60}
+                  src={dataFlight.data.directFlight.airline_logo}
+                  alt={`logo-${dataFlight.data.directFlight.airline}`}
+                  className="h-[52px] w-auto"
+                />
+              )}
               <span className="text-sm font-semibold leading-5">
                 {dataFlight.data.directFlight.airline}
               </span>
@@ -212,10 +225,11 @@ const FlightCard = ({
                         "DD MMM",
                       )}
                     </span>
-                    <span>∙</span>
+                    {/* note: this can be activate when there's a fixed flight time data */}
+                    {/* <span>∙</span>
                     <span>
                       {moment(dataFlight.data.directFlightDate).format("HH:mm")}
-                    </span>
+                    </span> */}
                   </div>
                 )}
               </div>
@@ -259,7 +273,8 @@ const FlightCard = ({
                               ),
                             ).format("DD MMM")}
                         </span>
-                        <span>∙</span>
+                        {/* note: this can be activate when there's a fixed flight time data */}
+                        {/* <span>∙</span>
                         <span>
                           {dataFlight.data.directFlightDate &&
                             moment(
@@ -268,7 +283,7 @@ const FlightCard = ({
                                 dataFlight.data.directFlight.duration,
                               ),
                             ).format("HH:mm")}
-                        </span>
+                        </span> */}
                       </>
                     )
                   )}

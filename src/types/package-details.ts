@@ -44,7 +44,7 @@ export interface HotelDetail {
   city: string;
   hotel_name: string;
   star_rating: number;
-  duration: number;
+  duration?: number;
   images: Images[];
   google_maps_link_noembed: string;
   google_maps_link: string;
@@ -56,7 +56,7 @@ export interface HotelDetail {
   address: string;
   distance_to_masjid: number;
   food_type: string;
-  food_amount: number;
+  food_amount?: number;
   food_menu?: string;
 }
 

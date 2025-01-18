@@ -10,33 +10,38 @@ import SilverAccent from "/public/assets/patterns/silver-accent.svg";
 import PlatinumAccent from "/public/assets/patterns/platinum-accent.svg";
 import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
 
-import {
-  discountPercentPrice,
-  getAmountOfDiscount,
-  priceToLocale,
-} from "@/lib/utils";
-import { Packages } from "@/types/packages";
-import { Chip } from "../chip";
+import { getAmountOfDiscount, priceToLocale } from "@/lib/utils";
 import { Badge } from "../badge";
+import { useState } from "react";
+import { UmrahPackage } from "@/types/package-details";
 
 interface PackageCardProps {
-  dataPackage: Packages;
+  dataPackage: UmrahPackage;
 }
 
 const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
   moment.locale("id");
 
+  const [isImageError, setIsImageError] = useState(false);
+
   return (
     <Link href={`/umrah/${dataPackage.id}`}>
       <div className="flex w-[314px] overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm">
         <div className="relative aspect-square w-full overflow-hidden rounded-[10px]">
-          <Image
-            src={dataPackage.thumbnail}
-            alt="package-cover"
-            width={942}
-            height={708}
-            className="aspect-[4/3] h-full rounded-[14px] object-cover"
-          />
+          {!isImageError && dataPackage.thumbnail ? (
+            <Image
+              src={dataPackage.thumbnail}
+              alt="package-cover"
+              width={942}
+              height={708}
+              className="aspect-[4/3] h-full rounded-[14px] object-cover"
+              onError={() => setIsImageError(true)}
+            />
+          ) : (
+            <div className="flex h-full w-full items-center justify-center bg-gray-100">
+              <span className="text-sm text-gray-500">Foto tidak tersedia</span>
+            </div>
+          )}
 
           <div className="absolute -bottom-px h-fit">
             {dataPackage.category === "Silver" && (
@@ -61,7 +66,7 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
                 </span>
               </div>
 
-              {dataPackage.finalPrice ? (
+              {dataPackage.quadFinalPrice ? (
                 <Badge
                   variant="destructive"
                   size="small"
@@ -69,8 +74,8 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
                 >
                   <span>
                     {getAmountOfDiscount(
-                      dataPackage.price,
-                      dataPackage.finalPrice,
+                      dataPackage.quadPrice,
+                      dataPackage.quadFinalPrice,
                     )}{" "}
                   </span>
                 </Badge>
@@ -80,17 +85,19 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             </div>
 
             <span className="line-clamp-2 text-sm font-bold leading-5 text-primary-foreground">
-              {dataPackage.name}
+              {dataPackage.tagline}
             </span>
 
             <span className="text-xs font-medium opacity-80">
-              {moment(dataPackage.departureDates[0]).format("DD MMMM YYYY")}
+              {moment(
+                dataPackage.flight_details.departure_flight.departure_datetime,
+              ).format("DD MMMM YYYY")}
             </span>
             <h5 className="font-extrabold">
-              {dataPackage.finalPrice &&
-              dataPackage.price !== dataPackage.finalPrice
-                ? priceToLocale(dataPackage.finalPrice)
-                : priceToLocale(dataPackage.price)}
+              {dataPackage.quadFinalPrice &&
+              dataPackage.quadPrice !== dataPackage.quadFinalPrice
+                ? priceToLocale(dataPackage.quadFinalPrice)
+                : priceToLocale(dataPackage.quadPrice)}
             </h5>
           </div>
         </div>

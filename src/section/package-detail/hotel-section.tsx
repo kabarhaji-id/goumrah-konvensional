@@ -155,15 +155,17 @@ const HotelCard = ({
                     {moment(dataHotel.check_in_time).format("DD MMMM YYYY")} ∙
                   </span>
                 )}
-                <span className="text-xs">
-                  {" "}
-                  {dataHotel.check_in_time && dataHotel.check_out_time
-                    ? calculateDaysAndNights(
-                        dataHotel.check_in_time,
-                        dataHotel.check_out_time,
-                      )
-                    : `${dataHotel.duration} hari ${dataHotel.duration - 1} malam`}
-                </span>
+                {dataHotel.duration && (
+                  <span className="text-xs">
+                    {" "}
+                    {dataHotel.check_in_time && dataHotel.check_out_time
+                      ? calculateDaysAndNights(
+                          dataHotel.check_in_time,
+                          dataHotel.check_out_time,
+                        )
+                      : `${dataHotel.duration} hari ${dataHotel.duration - 1} malam`}
+                  </span>
+                )}
               </div>
             </div>
           </div>

@@ -19,6 +19,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion/accordion";
 import Image from "next/image";
+import { useAccordionFlightStore } from "@/store/useInterfaceStore";
 
 interface DataFlightProps {
   directFlight: FlightDetail;
@@ -35,7 +36,7 @@ interface AccordionFlightProps {
 moment.locale("id");
 
 const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, toggleAccordion } = useAccordionFlightStore();
 
   return (
     <Accordion type="single" collapsible className="items-center bg-white">
@@ -70,11 +71,13 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
             <div className="space-y-4">
               <div className="flex gap-4">
                 {dataFlight.directFlightDate && (
-                  <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
+                  <div className="flex w-10 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
+                    {/* <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground"> */}
                     <div className="align- flex flex-col gap-1">
-                      <span className="font-bold leading-5 tracking-wide">
+                      {/* note: this can be activate when there's a fixed flight time data */}
+                      {/* <span className="font-bold leading-5 tracking-wide">
                         {moment(dataFlight.directFlightDate).format("HH:mm")}
-                      </span>
+                      </span> */}
                       <span className="text-[11px] opacity-80">
                         {moment(dataFlight.directFlightDate).format("DD MMM")}
                       </span>
@@ -87,14 +90,15 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                       </span>
                     </div>
                     <div className="align- flex flex-col gap-1">
-                      <span className="font-bold leading-5 tracking-wide">
+                      {/* note: this can be activate when there's a fixed flight time data */}
+                      {/* <span className="font-bold leading-5 tracking-wide">
                         {moment(
                           getArrivalDate(
                             dataFlight.directFlightDate,
                             dataFlight.directFlight.duration,
                           ),
                         ).format("HH:mm")}
-                      </span>
+                      </span> */}
                       <span className="text-[11px] opacity-80">
                         {moment(
                           getArrivalDate(
@@ -237,13 +241,15 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                 <div className="space-y-4">
                   <div className="flex gap-4">
                     {dataFlight.transitFlightDate && (
-                      <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
+                      <div className="flex w-10 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
+                        {/* <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground"> */}
                         <div className="align- flex flex-col gap-1">
-                          <span className="font-bold leading-5 tracking-wide">
+                          {/* note: this can be activate when there's a fixed flight time data */}
+                          {/* <span className="font-bold leading-5 tracking-wide">
                             {moment(dataFlight.transitFlightDate).format(
                               "HH:mm",
                             )}
-                          </span>
+                          </span> */}
                           <span className="text-[11px] opacity-80">
                             {moment(dataFlight.transitFlightDate).format(
                               "DD MMM",
@@ -256,14 +262,15 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                           </span>
                         </div>
                         <div className="align- flex flex-col gap-1">
-                          <span className="font-bold leading-5 tracking-wide">
+                          {/* note: this can be activate when there's a fixed flight time data */}
+                          {/* <span className="font-bold leading-5 tracking-wide">
                             {moment(
                               getArrivalDate(
                                 dataFlight.transitFlightDate,
                                 dataFlight.transitFlight.duration,
                               ),
                             ).format("HH:mm")}
-                          </span>
+                          </span> */}
                           <span className="text-[11px] opacity-80">
                             {moment(
                               getArrivalDate(
@@ -362,7 +369,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
         <AccordionTrigger
           // variant="ghost"
           className="flex h-fit w-full justify-center gap-1 py-1 shadow-none"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => toggleAccordion(id)}
         >
           <div className="flex cursor-pointer gap-1">
             <span className="text-xs font-semibold leading-4 tracking-wide text-primary">

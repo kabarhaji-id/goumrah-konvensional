@@ -75,7 +75,33 @@ const HeaderSection = ({
 
             {/* --- Days */}
             <p className="flex gap-1 text-xs text-neutral-foreground">
-              <span>3 hari Madinah</span>·<span>4 hari Makkah</span>
+              {packageData.itineraries.length > 2 && (
+                <>
+                  <span>
+                    {(packageData.itineraries.find(
+                      (i) => i.city !== "Madinah" && i.city !== "Madinah",
+                    )?.days?.length ?? 0) - 1}{" "}
+                    hari{" "}
+                    {
+                      packageData.itineraries.find(
+                        (i) => i.city !== "Madinah" && i.city !== "Madinah",
+                      )?.city
+                    }
+                  </span>
+                  ·
+                </>
+              )}
+              <span>
+                {(packageData.itineraries.find((i) => i.city === "Madinah")
+                  ?.days?.length ?? 0) - 1}{" "}
+                hari Madinah
+              </span>
+              ·
+              <span>
+                {(packageData.itineraries.find((i) => i.city === "Makkah")?.days
+                  ?.length ?? 0) - 1}{" "}
+                hari Makkah
+              </span>
             </p>
 
             {/* --- Early Payment (DP) */}

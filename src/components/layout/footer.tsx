@@ -89,10 +89,21 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
           </span>
 
           <div className="flex gap-4">
-            <InstagramIcon className="!size-6" />
-            <FacebookIcon className="!size-6" />
-            <TikTokIcon className="!size-6" />
-            <LinkedInIcon className="!size-6" />
+            <Link href="https://www.instagram.com/goumrah.id/">
+              <InstagramIcon className="!size-6" />
+            </Link>
+
+            <Link href="">
+              <FacebookIcon className="!size-6" />
+            </Link>
+
+            <Link href="https://www.tiktok.com/@goumrah.id">
+              <TikTokIcon className="!size-6" />
+            </Link>
+
+            <Link href="https://www.linkedin.com/company/pt-kabar-haji-indonesia">
+              <LinkedInIcon className="!size-6" />
+            </Link>
           </div>
         </div>
       </footer>

@@ -14,11 +14,11 @@ import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
 import ItinerarySection from "@/section/package-detail/itinerary-section";
 import Footer from "@/components/layout/footer";
 import NotFound from "@/app/not-found";
-
-import { dataPackages } from "@/data/packages";
-import { dummyData } from "@/data/package-details";
-import { Metadata } from "next";
 import OtherPackagesSection from "@/section/package-detail/other-packages-section";
+
+import { Metadata } from "next";
+import { UmrahPackage } from "@/types/package-details";
+import { packageDetailData } from "@/data/package-details";
 
 // --- Metadata for SEO Optimization
 export const generateMetadata = async ({
@@ -27,24 +27,26 @@ export const generateMetadata = async ({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> => {
   const resolvedParams = await params;
-  const data = dummyData.find((det) => det.id === resolvedParams.slug);
+  const data = packageDetailData.find(
+    (det: UmrahPackage) => det.id === resolvedParams.slug,
+  );
 
   return {
     generator: "Next.js",
     title: data?.tagline,
-    // description: data?.description,
     keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
     openGraph: {
       title: data?.tagline,
       url: `https://goumrah.id/umrah/${(await params).slug}`,
       siteName: "goumrah.id",
-      images: [
-        {
-          url: `${data?.thumbnail}`,
-          width: 1200,
-          height: 630,
-        },
-      ],
+      // note: can be activated when the image source is not on local
+      // images: [
+      //   {
+      //     url: `${data?.thumbnail}`,
+      //     width: 1200,
+      //     height: 630,
+      //   },
+      // ],
       locale: "id_ID",
       type: "website",
     },
@@ -56,9 +58,11 @@ export default async function DetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // const selectedPackage = dummyData.find((pkg) => pkgslug === Number(id));
+  // const selectedPackage = packageDetailData.find((pkg) => pkgslug === Number(id));
   const resolvedParams = await params;
-  const detail = dummyData.find((det) => det.id === resolvedParams.slug);
+  const detail = packageDetailData.find(
+    (det: UmrahPackage) => det.id === resolvedParams.slug,
+  );
 
   if (detail) {
     return (

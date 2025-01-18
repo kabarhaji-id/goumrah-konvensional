@@ -24,6 +24,7 @@ import {
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
 import { getSkytrax } from "@/components/ui/helper/getSkytrax";
+import Image from "next/image";
 
 const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   moment.locale("id");
@@ -148,25 +149,28 @@ const FlightCard = ({
             </Badge>
 
             <div className="flex items-center gap-2">
-              {/* <Image
+              <Image
                 width={70}
                 height={60}
-                src={`${process.env.NEXT_PUBLIC_API_IMAGES_URL}/${dataFlight.data.directFlight.airline_logo}`}
+                src={dataFlight.data.directFlight.airline_logo}
                 alt={`logo-${dataFlight.data.directFlight.airline}`}
                 className="h-[52px] w-auto"
-              /> */}
+              />
               <span className="text-sm font-semibold leading-5">
                 {dataFlight.data.directFlight.airline}
               </span>
             </div>
           </div>
 
-          <div>
-            {getSkytrax(
-              dataFlight.data.directFlight.skytrax,
-              dataFlight.data.directFlight.rating,
+          {dataFlight.data.directFlight.skytrax &&
+            dataFlight.data.directFlight.rating && (
+              <div>
+                {getSkytrax(
+                  dataFlight.data.directFlight.skytrax,
+                  dataFlight.data.directFlight.rating,
+                )}
+              </div>
             )}
-          </div>
 
           <div className="space-y-1">
             <div className="relative flex items-center gap-1 text-sm font-bold text-primary-foreground">

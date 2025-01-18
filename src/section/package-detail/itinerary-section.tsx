@@ -104,7 +104,7 @@ const ItinerarySection = ({
                 key={index}
                 type="single"
                 collapsible
-                className="border-subtle w-full items-center rounded-[14px] rounded-b-xl border bg-white shadow-custom-sm"
+                className="w-full items-center rounded-[14px] rounded-b-xl border border-subtle bg-white shadow-custom-sm"
               >
                 <AccordionItem value="item-1">
                   <AccordionTrigger
@@ -207,7 +207,7 @@ const ItinerarySection = ({
                                       </span>
                                     </div>
                                     <span className="text-sm font-medium leading-4 tracking-wide">
-                                      {widget.hotel.hotel_name}
+                                      {widget.hotel_name}
                                     </span>
                                   </div>
 

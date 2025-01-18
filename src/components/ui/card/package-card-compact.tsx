@@ -10,7 +10,11 @@ import SilverAccent from "/public/assets/patterns/silver-accent.svg";
 import PlatinumAccent from "/public/assets/patterns/platinum-accent.svg";
 import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
 
-import { discountPercentPrice, priceToLocale } from "@/lib/utils";
+import {
+  discountPercentPrice,
+  getAmountOfDiscount,
+  priceToLocale,
+} from "@/lib/utils";
 import { Packages } from "@/types/packages";
 import { Chip } from "../chip";
 import { Badge } from "../badge";
@@ -49,24 +53,25 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
 
         <div className="flex w-full flex-col gap-3 bg-white p-3">
           <div className="space-y-2">
-            <div className="flex gap-2">
-              <Chip variant="default" className="overflow-hidden">
-                <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
-                  <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
-                </div>
-                <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-primary">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
+                <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
+                <span className="text-xs font-semibold leading-[18px] text-primary">
                   {dataPackage.duration} Hari
                 </span>
-              </Chip>
+              </div>
 
-              {!dataPackage.finalPrice ? (
-                <Badge variant="destructive" size="small">
+              {dataPackage.finalPrice ? (
+                <Badge
+                  variant="destructive"
+                  size="small"
+                  className="h-fit rounded-[6px] px-1.5 py-0.5 text-[7px]"
+                >
                   <span>
-                    {discountPercentPrice(
+                    {getAmountOfDiscount(
                       dataPackage.price,
                       dataPackage.finalPrice,
                     )}{" "}
-                    off
                   </span>
                 </Badge>
               ) : (

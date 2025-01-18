@@ -9,27 +9,26 @@ export interface Flight {
 
 export interface FlightDetail {
   flight_number?: string;
-  duration: number;
+  duration?: number;
   airport_name_departure: string;
-  airport_terminal_departure: string;
+  airport_terminal_departure?: string;
   airport_code_departure: string;
   airport_city_departure: string;
   airport_name_arrival: string;
-  airport_terminal_arrival: string;
+  airport_terminal_arrival?: string;
   airport_code_arrival: string;
   airport_city_arrival: string;
   departure_datetime?: string;
-  terminal: string;
   class: string;
   flight_type: "Direct" | "Transit";
   airline: string;
-  aircraft_type: string;
-  seat_layout: string;
+  aircraft_type?: string;
+  seat_layout?: string;
   baggage_allowance: number;
   cabin_baggage: number;
   airline_logo: string;
-  skytrax: "Low Cost" | "Full Service";
-  rating: string;
+  skytrax?: "Low Cost" | "Full Service";
+  rating?: string;
   transit?: FlightDetail;
   transit_datetime?: string;
 }
@@ -58,7 +57,7 @@ export interface HotelDetail {
   distance_to_masjid: number;
   food_type: string;
   food_amount: number;
-  food_menu: string;
+  food_menu?: string;
 }
 
 export interface Images {
@@ -91,7 +90,7 @@ export interface PromoDetail {
 }
 
 export interface AddOnsDetail {
-  cityName: string;
+  title: string;
   category: string;
   price: number;
   places: string[];
@@ -131,7 +130,7 @@ interface ItineraryActivityWidgets {
 interface ItineraryHotelWidgets {
   id: string;
   type: "Hotel";
-  hotel: HotelDetail;
+  hotel_name: string;
 }
 
 interface ItineraryInformationWidgets {

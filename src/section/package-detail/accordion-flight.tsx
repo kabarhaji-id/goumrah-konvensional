@@ -18,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion/accordion";
+import Image from "next/image";
 
 interface DataFlightProps {
   directFlight: FlightDetail;
@@ -42,13 +43,13 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
         <AccordionContent className="space-y-4">
           <div className="space-y-2">
             <div className="flex items-center gap-4">
-              {/* <Image
+              <Image
                 width={70}
                 height={60}
-                src={`${process.env.NEXT_PUBLIC_API_IMAGES_URL}/${dataFlight.directFlight.airline.logo.id}`}
-                alt={dataFlight.directFlight.airline.logo.id}
+                src={dataFlight.directFlight.airline_logo}
+                alt={`logo-${dataFlight.directFlight.airline}`}
                 className="h-16 w-auto"
-              /> */}
+              />
 
               <div className="w-full">
                 <h6 className="font-bold leading-6 tracking-wide">
@@ -133,10 +134,22 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                   </div>
 
                   <div className="space-y-2 rounded-[10px] bg-primary-background p-3 text-xs">
-                    <p>
-                      Jenis Pesawat:
-                      <span>{dataFlight.directFlight.aircraft_type}</span>
-                    </p>
+                    {dataFlight.directFlight.aircraft_type && (
+                      <p>
+                        Jenis Pesawat:
+                        <span className="ml-1">
+                          {dataFlight.directFlight.aircraft_type}
+                        </span>
+                      </p>
+                    )}
+                    {dataFlight.directFlight.seat_layout && (
+                      <p>
+                        Tata Letak Kursi:
+                        <span className="ml-1">
+                          {dataFlight.directFlight.seat_layout}
+                        </span>
+                      </p>
+                    )}
                     <p>
                       Bagasi Kabin:
                       <span>
@@ -171,37 +184,39 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
             </div>
           </div>
 
-          {dataFlight.transitFlight && dataFlight.transitFlightDate && (
+          {dataFlight.transitFlight && (
             <>
               <div className="rounded-[14px] border border-primary bg-primary-background p-4">
                 <p className="text-sm font-bold leading-5 tracking-wide text-primary">
                   Berhenti untuk pergantian pesawat di
                   <span className="mx-1">
-                    {dataFlight.transitFlight.airport_name_arrival}
+                    {dataFlight.directFlight.airport_name_arrival}
                   </span>
-                  {`(${
-                    dataFlight.directFlightDate &&
-                    dataFlight.transitFlightDate &&
-                    formatTransitDuration(
-                      getArrivalDate(
-                        dataFlight.directFlightDate,
-                        dataFlight.directFlight.duration,
-                      ),
-                      dataFlight.transitFlightDate,
-                    )
-                  })`}
+                  {dataFlight.directFlightDate && dataFlight.transitFlightDate
+                    ? `(${
+                        dataFlight.directFlightDate &&
+                        dataFlight.transitFlightDate &&
+                        formatTransitDuration(
+                          getArrivalDate(
+                            dataFlight.directFlightDate,
+                            dataFlight.directFlight.duration,
+                          ),
+                          dataFlight.transitFlightDate,
+                        )
+                      })`
+                    : ""}
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center gap-4">
-                  {/* <Image
+                  <Image
                     width={70}
                     height={60}
-                    src={`${process.env.NEXT_PUBLIC_API_IMAGES_URL}/${dataFlight.transitFlight.airline.logo.id}`}
-                    alt={dataFlight.transitFlight.airline.logo.alt}
+                    src={dataFlight.transitFlight.airline_logo}
+                    alt={`logo-${dataFlight.transitFlight.airline}`}
                     className="h-16 w-auto"
-                  /> */}
+                  />
 
                   <div className="w-full">
                     <h6 className="font-bold leading-6 tracking-wide">
@@ -214,50 +229,56 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                           <div className="h-1 w-1 rounded-full bg-neutral-foreground opacity-80" />
                         </>
                       )}
-                      <span>{dataFlight.transitFlight.airline}</span>
+                      <span>{dataFlight.transitFlight.class}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex gap-4">
-                    <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
-                      <div className="align- flex flex-col gap-1">
-                        <span className="font-bold leading-5 tracking-wide">
-                          {moment(dataFlight.transitFlightDate).format("HH:mm")}
-                        </span>
-                        <span className="text-[11px] opacity-80">
-                          {moment(dataFlight.transitFlightDate).format(
-                            "DD MMM",
-                          )}
-                        </span>
+                    {dataFlight.transitFlightDate && (
+                      <div className="flex w-16 flex-shrink-0 flex-col justify-between text-right text-neutral-foreground">
+                        <div className="align- flex flex-col gap-1">
+                          <span className="font-bold leading-5 tracking-wide">
+                            {moment(dataFlight.transitFlightDate).format(
+                              "HH:mm",
+                            )}
+                          </span>
+                          <span className="text-[11px] opacity-80">
+                            {moment(dataFlight.transitFlightDate).format(
+                              "DD MMM",
+                            )}
+                          </span>
+                        </div>
+                        <div>
+                          <span className="text-[11px] opacity-80">
+                            {formatDuration(dataFlight.transitFlight.duration)}
+                          </span>
+                        </div>
+                        <div className="align- flex flex-col gap-1">
+                          <span className="font-bold leading-5 tracking-wide">
+                            {moment(
+                              getArrivalDate(
+                                dataFlight.transitFlightDate,
+                                dataFlight.transitFlight.duration,
+                              ),
+                            ).format("HH:mm")}
+                          </span>
+                          <span className="text-[11px] opacity-80">
+                            {moment(
+                              getArrivalDate(
+                                dataFlight.transitFlightDate,
+                                dataFlight.transitFlight.duration,
+                              ),
+                            ).format("DD MMM")}
+                          </span>
+                        </div>
                       </div>
-                      <div>
-                        <span className="text-[11px] opacity-80">
-                          {formatDuration(dataFlight.transitFlight.duration)}
-                        </span>
-                      </div>
-                      <div className="align- flex flex-col gap-1">
-                        <span className="font-bold leading-5 tracking-wide">
-                          {moment(
-                            getArrivalDate(
-                              dataFlight.transitFlightDate,
-                              dataFlight.transitFlight.duration,
-                            ),
-                          ).format("HH:mm")}
-                        </span>
-                        <span className="text-[11px] opacity-80">
-                          {moment(
-                            getArrivalDate(
-                              dataFlight.transitFlightDate,
-                              dataFlight.transitFlight.duration,
-                            ),
-                          ).format("DD MMM")}
-                        </span>
-                      </div>
-                    </div>
+                    )}
 
-                    <div className="flex flex-col items-center py-1.5">
+                    <div
+                      className={`flex flex-col items-center py-1.5 ${!dataFlight.transitFlightDate && "pl-4"}`}
+                    >
                       <CircleIcon className="h-2 w-2 stroke-primary-foreground" />
                       <Separator
                         orientation="vertical"
@@ -285,12 +306,22 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                       </div>
 
                       <div className="space-y-2 rounded-[10px] bg-primary-background p-3 text-xs">
-                        <p>
-                          Jenis Pesawat:
-                          <span className="ml-1">
-                            {dataFlight.transitFlight.aircraft_type}
-                          </span>
-                        </p>
+                        {dataFlight.transitFlight.aircraft_type && (
+                          <p>
+                            Jenis Pesawat:
+                            <span className="ml-1">
+                              {dataFlight.transitFlight.aircraft_type}
+                            </span>
+                          </p>
+                        )}
+                        {dataFlight.transitFlight.seat_layout && (
+                          <p>
+                            Tata Letak Kursi:
+                            <span className="ml-1">
+                              {dataFlight.transitFlight.seat_layout}
+                            </span>
+                          </p>
+                        )}
                         <p>
                           Bagasi Kabin:
                           <span className="ml-1">

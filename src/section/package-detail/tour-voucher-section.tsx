@@ -30,7 +30,8 @@ const TourVoucherSection = ({ dataAddOns }: { dataAddOns: AddOnsDetail[] }) => {
           {dataAddOns.map((item, index) => (
             <CityCard
               key={index}
-              cityName={item.cityName}
+              title={item.title}
+              category={item.category}
               price={item.price}
               places={item.places}
               imageUrl={item.imageUrl}
@@ -43,12 +44,14 @@ const TourVoucherSection = ({ dataAddOns }: { dataAddOns: AddOnsDetail[] }) => {
 };
 
 const CityCard = ({
-  cityName,
+  title,
+  category,
   price,
   places,
   imageUrl,
 }: {
-  cityName: string;
+  title: string;
+  category: string;
   price: number;
   places: string[];
   imageUrl: string;
@@ -62,12 +65,12 @@ const CityCard = ({
         <div className="absolute inset-0 bg-black opacity-40"></div>{" "}
       </div>
       <div className="relative z-10 flex h-full flex-col justify-between p-4 text-white">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between gap-4">
           <div>
-            <h3 className="text-[11px] font-normal">Wisata Kota</h3>
-            <h2 className="text-lg font-bold">{cityName}</h2>
+            <h3 className="text-[11px] font-normal">{category}</h3>
+            <h2 className="text-base font-bold leading-6">{title}</h2>
           </div>
-          <span className="flex-shrink-0 text-[22px] font-bold leading-[26px]">
+          <span className="flex-shrink-0 text-xl font-bold leading-[26px]">
             {priceToLocale(price)}
           </span>
         </div>

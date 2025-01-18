@@ -63,12 +63,12 @@ export default async function DetailPage({
   if (detail) {
     return (
       <>
-        <DetailNavbar dataPackage={dataPackages[0]} />
+        <DetailNavbar dataPackage={detail} />
 
         <main>
           <ImagePoster
-            packageImage={dataPackages[0].thumbnail}
-            packageCategory={dataPackages[0].category}
+            packageImage={detail.thumbnail}
+            packageCategory={detail.category}
           />
 
           <HeaderSection packageData={detail} durationDays={detail.duration} />

@@ -19,8 +19,8 @@ const ImagePoster = async ({
           <Image
             src={packageImage}
             alt={`image-${packageImage}`}
-            width={448}
-            height={336}
+            width={640}
+            height={380}
             className="h-full max-h-[380px] w-full object-cover"
           />
         </div>

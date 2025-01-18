@@ -21,7 +21,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion/accordion";
 import { Separator } from "@/components/ui/separator";
-import { DescriptinCollapsible } from "@/components/ui/accordion/accordion-description";
+import { DescriptionCollapsible } from "@/components/ui/accordion/accordion-description";
 import { Button } from "@/components/ui/button";
 import { getIconFacility } from "@/components/ui/helper/getIcon";
 
@@ -110,26 +110,32 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
             </h4>
 
             <div className="flex justify-between">
-              <div className="flex flex-col gap-1 text-neutral-foreground">
+              <div
+                className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+              >
                 <span className="text-xs leading-4 opacity-60">Jenis</span>
                 <span className="text-xs font-semibold leading-4">
                   {dataHotel.food_type}
                 </span>
               </div>
 
-              <div className="flex flex-col gap-1 text-neutral-foreground">
+              <div
+                className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+              >
                 <span className="text-xs leading-4 opacity-60">Banyak</span>
                 <span className="text-xs font-semibold leading-4">
                   {dataHotel.food_amount}x /hari
                 </span>
               </div>
 
-              <div className="flex flex-col gap-1 text-neutral-foreground">
-                <span className="text-xs leading-4 opacity-60">Menu</span>
-                <span className="text-xs font-semibold leading-4">
-                  {dataHotel.food_menu}
-                </span>
-              </div>
+              {dataHotel.food_menu && (
+                <div className="flex flex-col gap-1 text-neutral-foreground">
+                  <span className="text-xs leading-4 opacity-60">Menu</span>
+                  <span className="text-xs font-semibold leading-4">
+                    {dataHotel.food_menu}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -179,7 +185,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
               Deskripsi Hotel
             </h4>
 
-            <DescriptinCollapsible dataDescription={dataHotel.description} />
+            <DescriptionCollapsible dataDescription={dataHotel.description} />
           </div>
         </AccordionContent>
 

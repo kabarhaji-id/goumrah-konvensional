@@ -39,16 +39,16 @@ const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
       };
     }),
     {
-      type: "Makkah",
-      data: dataHotel.makkah,
-    },
-    {
       type: "Madinah",
       data: dataHotel.madinah,
     },
+    {
+      type: "Makkah",
+      data: dataHotel.makkah,
+    },
   ];
 
-  ["Makkah", "Madinah"].forEach((type) => {
+  ["Madinah", "Makkah"].forEach((type) => {
     if (!arrTabLists.includes(type)) {
       arrTabLists.push(type);
     }

@@ -54,11 +54,13 @@ const TanyaIsma = () => {
         </motion.button>
 
         <AnimatePresence>
-          {isOpen && <ChatBox id={id} onClose={() => setIsOpen(false)} />}
+          {isOpen && (
+            <ChatBox id={id} onClose={() => setIsOpen(false)} isOpen={isOpen} />
+          )}
         </AnimatePresence>
       </MotionConfig>
 
-      <Notification ping={() => setNotificationCount((prev) => prev + 1)} />
+
     </>
   );
 };

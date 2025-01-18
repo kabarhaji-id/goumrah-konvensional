@@ -1,7 +1,6 @@
 import {
   AccessibilityIcon,
   AirVentIcon,
-  ArrowUpDownIcon,
   BedDoubleIcon,
   CircleParkingIcon,
   DumbbellIcon,

@@ -9,7 +9,6 @@ import {
   formatTransitDuration,
   getArrivalDate,
 } from "@/lib/utils";
-import { useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import { FlightDetail } from "@/types/package-details";
 import {

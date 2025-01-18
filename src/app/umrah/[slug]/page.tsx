@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DetailNavbar from "@/components/layout/navbar/detail-navbar";
 import HeaderSection from "@/section/package-detail/header-section";
 import ImagePoster from "@/section/package-detail/image-poster";

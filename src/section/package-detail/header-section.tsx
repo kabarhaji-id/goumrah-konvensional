@@ -9,7 +9,6 @@ import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
 import { UmrahPackage } from "@/types/package-details";
-import { priceToLocale } from "@/lib/utils";
 
 const HeaderSection = ({
   packageData,

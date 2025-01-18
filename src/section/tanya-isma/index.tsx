@@ -5,12 +5,10 @@ import Image from "next/image";
 import { useId, useState } from "react";
 
 import ChatBox from "./chat-box";
-import Notification from "./notification";
 
 const TanyaIsma = () => {
   const id = useId();
   const [isOpen, setIsOpen] = useState(false);
-  const [notificationCount, setNotificationCount] = useState(0);
 
   return (
     <>
@@ -35,16 +33,6 @@ const TanyaIsma = () => {
           aria-haspopup="dialog"
           aria-expanded={false}
         >
-          {notificationCount > 0 && (
-            <>
-              <span className="absolute left-2/3 flex size-5 animate-ping rounded-full bg-red-600" />
-              <div className="absolute left-2/3 flex size-5 items-center justify-center rounded-full bg-red-600">
-                <p className="text-xs font-bold leading-none tracking-normal text-white">
-                  {notificationCount}
-                </p>
-              </div>
-            </>
-          )}
           <Image
             src="/assets/image/tanya-isma/button.png"
             alt="Isma"

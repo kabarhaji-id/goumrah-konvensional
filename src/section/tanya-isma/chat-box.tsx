@@ -4,10 +4,8 @@ import { motion } from "motion/react";
 import { MessageSquare, Send, X } from "lucide-react";
 import Image from "next/image";
 import {
-  MouseEventHandler,
   useCallback,
   useEffect,
-  useMemo,
   useRef,
   useState,
 } from "react";

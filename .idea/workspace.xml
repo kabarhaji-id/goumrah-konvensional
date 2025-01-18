@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/package-details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/package-details.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/umrah/ideal/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/umrah/ideal/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +37,22 @@
     &quot;assignee&quot;: &quot;cybertank378&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/kabarhaji-id/goumrah-konvensional.git&quot;,
-    &quot;accountId&quot;: &quot;62a9ea97-9ab9-4c0a-99e4-85019e11b46e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kabarhaji-id/goumrah-konvensional.git",
+    "accountId": "62a9ea97-9ab9-4c0a-99e4-85019e11b46e"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "kabarhaji-id",
+    "repository": "goumrah-konvensional"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -66,6 +76,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
@@ -97,6 +108,21 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -180,6 +206,7 @@
     <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations." />
     <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced the multi-command dev script with a single Next.js dev command to improve maintainability. Adjusted .gitignore to exclude SSL-related files, zip archives, and IDE-specific configurations for cleaner version control." />
     <MESSAGE value="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup." />
+    <MESSAGE value="Update WhatsApp link handling to use public env variable&#10;&#10;Replaced hard-coded WhatsApp number references with the `NEXT_PUBLIC_WHATSAPP_NUMBER` environment variable for better configurability. Updated links in `package-details.ts`, `chat-box.tsx`, and `footer.tsx` to align with this change. This enhances maintainability and simplifies future updates to the WhatsApp contact number." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update WhatsApp link handling to use public env variable&#10;&#10;Replaced hard-coded WhatsApp number references with the `NEXT_PUBLIC_WHATSAPP_NUMBER` environment variable for better configurability. Updated links in `package-details.ts`, `chat-box.tsx`, and `footer.tsx` to align with this change. This enhances maintainability and simplifies future updates to the WhatsApp contact number." />
   </component>
 </project>

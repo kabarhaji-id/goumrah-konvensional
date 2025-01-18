@@ -5,94 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup.">
-      <change afterPath="$PROJECT_DIR$/public/assets/airlines/emirates.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/airlines/saudia-airlines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/airlines/scoot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/hayah-golden/exterior-hayah-golden.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/taiba-madinah/bedroom-taiba-madinah-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/taiba-madinah/bedroom-taiba-madinah-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/taiba-madinah/bedroom-taiba-madinah-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/taiba-madinah/bedroom-taiba-madinah-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/taiba-madinah/exterior-taiba-madinah.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/madinah/taiba-madinah/restaurant-taiba-madinah-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/anjum/bedroom-anjum-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/anjum/bedroom-anjum-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/anjum/bedroom-anjum-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/anjum/exterior-anjum-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/centro-residence/bedroom-centro-residence-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/centro-residence/bedroom-centro-residence-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/centro-residence/bedroom-centro-residence-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/centro-residence/exterior-centro-residence-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/centro-residence/lobby-centro-residence-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/packages-umrah/cover-umrah-hemat-fokus-ibadah-silver.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/transportation/bus/saptco-economy-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/transportation/bus/saptco-economy-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/transportation/bus/saptco-economy-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/transportation/fast-train/fast-train-3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/voucher/al-romansiah-restaurant-2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/voucher/al-ula-4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/image/voucher/asia-restaurant-jeddah-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/isma/isma-not-found.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/promo/promo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/promo/promo-diskon-3-Juta.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/umrah/[slug]/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/facebook.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/tiktok.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/card/package-card-compact.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/loading-spinner.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/package-detail/button-whatsapp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/package-detail/other-packages-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/package-details.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/image/packages-umrah/package-detail-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/umrah/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/umrah/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/umrah/rekomendasi/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/umrah/rekomendasi/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation-detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation-detail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/detail-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/detail-navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/accordion/accordion-description.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/accordion/accordion-description.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/helper/getIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/helper/getIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/package-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/package-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/share-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/share-dialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/package-details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/package-details.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/packages.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/packages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/home/ideal-packages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/home/ideal-packages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/home/recommended-packages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/home/recommended-packages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/accordion-flight.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/accordion-flight.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/accordion-hotel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/accordion-hotel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/additional-services.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/additional-services.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/flight-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/flight-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/header-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/header-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/hotel-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/hotel-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/image-poster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/image-poster.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/itinerary-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/itinerary-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/pricing-filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/pricing-filter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/pricing-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/pricing-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/promo-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/promo-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/sheet-hotel-images.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/sheet-hotel-images.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/sheet-image-preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/sheet-image-preview.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/tour-voucher-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/tour-voucher-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/transportation-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/transportation-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/packages/cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/packages/cards.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/useInterfaceStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/useInterfaceStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="chat-widgets" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,7 +58,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Merging merge-home-navbar-detail",
+    "git-widget-placeholder": "main-prepare",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app",
     "node.js.detected.package.eslint": "true",
@@ -205,6 +121,7 @@
       <workItem from="1737116390607" duration="387000" />
       <workItem from="1737116785942" duration="1986000" />
       <workItem from="1737213698756" duration="1914000" />
+      <workItem from="1737216342062" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -246,6 +163,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup." />

@@ -4,14 +4,7 @@ import { motion } from "motion/react";
 
 import { Send, X } from "lucide-react";
 import Image from "next/image";
-import {
-  MouseEventHandler,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const ChatBox = ({ id, onClose }: { id: string; onClose: () => void }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -47,7 +40,7 @@ const ChatBox = ({ id, onClose }: { id: string; onClose: () => void }) => {
 
       clearTimeout(delayTimeout);
     };
-  }, []);
+  }, [onClose]);
 
   const send = useCallback(() => {
     if (!input) {
@@ -59,7 +52,7 @@ const ChatBox = ({ id, onClose }: { id: string; onClose: () => void }) => {
     );
 
     setInput("");
-  }, []);
+  }, [input]);
 
   return (
     <motion.div

@@ -9,7 +9,6 @@ import IdealPackagesSection from "@/section/home/ideal-packages";
 import TestimonySection from "@/section/home/testimony";
 import AffiliatesSection from "@/section/home/affiliate";
 import React from "react";
-import TanyaIsma from "@/section/tanya-isma";
 
 export default function HomePage() {
   return (

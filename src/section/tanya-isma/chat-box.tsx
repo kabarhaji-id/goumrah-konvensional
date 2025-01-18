@@ -138,7 +138,7 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
       <header className="flex items-center justify-between bg-sky-500 p-4">
         <div className="flex items-center">
           <div className="relative w-8 h-8 mr-2">
-            <Image src="/assets/image/tanya-isma/avatar.jpeg" alt="Icon Isma" fill />
+            <Image src="/assets/image/tanya-isma/avatar.jpeg" alt="Icon Isma" fill style={{ borderRadius: "50%" }} />
           </div>
           <span className="text-white font-bold text-lg">Customer Support</span>
         </div>
@@ -154,7 +154,9 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
               <MessageSquare className="w-5 h-5 text-gray-600" />
             </div>
             <div className="bg-teal-100 p-3 rounded-lg">
-              <p className="text-gray-700">Hi there! 👋 How can I help you?</p>
+              <p className="text-gray-700">Halo, Perkenalkan namaku Isma dari GoUmrah.id.
+                Ada yang bisa Isma bantu?
+              </p>
               <span className="text-gray-500 text-sm">{timeNow}</span>
             </div>
           </div>

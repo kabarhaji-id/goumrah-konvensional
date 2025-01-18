@@ -1,6 +1,6 @@
 import { UmrahPackage } from "@/types/package-details";
 
-const whatsappLink = process.env.WHATSAPP_LINK;
+const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
 export const packageDetailData: UmrahPackage[] = [
   {

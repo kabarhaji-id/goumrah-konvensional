@@ -75,7 +75,7 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
   const send = useCallback(() => {
     if (input) {
       window.open(
-        `https://api.whatsapp.com/send/?phone=${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}&text=${encodeURIComponent(
+        `${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}${encodeURIComponent(
           `Nama: ${formData.fullName}\nEmail: ${formData.email}\nNo. Telp: ${formData.phoneNumber}\nPesan: ${userMessage.message ? userMessage.message : input}`
         )}`
       );

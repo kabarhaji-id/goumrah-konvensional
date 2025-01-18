@@ -5,11 +5,11 @@ import Link from "next/link";
 import { ShareDialog } from "@/components/ui/share-dialog";
 import { useEffect, useState } from "react";
 import { ChevronLeftIcon, Share2Icon } from "lucide-react";
-import { SimplePackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 
 interface DetailNavbarProps {
   withTitle?: boolean;
-  dataPackage: SimplePackage;
+  dataPackage: UmrahPackage;
 }
 
 const DetailNavbar = ({ withTitle = true, dataPackage }: DetailNavbarProps) => {
@@ -44,7 +44,7 @@ const DetailNavbar = ({ withTitle = true, dataPackage }: DetailNavbarProps) => {
 
           {withTitle && (
             <span className="line-clamp-1 font-semibold">
-              {dataPackage.name}
+              {dataPackage.tagline}
             </span>
           )}
         </div>

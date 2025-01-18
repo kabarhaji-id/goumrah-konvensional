@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import ButtonWhatsApp from "@/section/package-detail/button-whatsapp";
 
-import WhatsAppIcon from "@/assets/icons/ic_baseline-whatsapp.svg";
 import CustomChevronUpIcon from "@/assets/icons/mingcute_up-fill.svg";
 
 import { Button } from "@/components/ui/button";
@@ -27,18 +26,7 @@ const BottomNavigationDetail = ({ orderUrl }: { orderUrl: string }) => {
       </Button>
 
       {/* Order Package Button */}
-      <Button
-        size="lg"
-        variant="primary"
-        className="flex h-11 w-full justify-center"
-      >
-        <Link href={orderUrl} className="flex items-center gap-2">
-          <p className="whitespace-nowrap font-semibold leading-[150%] tracking-wide">
-            Pesan Paket Umrah Ini
-          </p>
-          <WhatsAppIcon className="size-6" fill="#FFFFFF" />
-        </Link>
-      </Button>
+      <ButtonWhatsApp orderUrl={orderUrl} />
     </nav>
   );
 };

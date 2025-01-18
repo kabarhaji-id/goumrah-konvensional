@@ -3,7 +3,7 @@
 import "swiper/css";
 
 import { PackageCard } from "@/components/ui/package-card";
-import { dummyData } from "@/data/package-details";
+import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const RecommendedPackagesSection = () => {
   const packages = useMemo(() => {
-    return dummyData.filter((pkg) => pkg.type === "Reguler");
+    return packageDetailData.filter((pkg) => pkg.type === "Reguler");
   }, []);
 
   return (

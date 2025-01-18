@@ -15,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { HotelDetail, Images } from "@/types/packages";
+import { HotelDetail, Images } from "@/types/package-details";
 import { SheetImagePreview } from "./sheet-image-preview";
 import { ScrollArea } from "@/components/ui/scroll-area";
 // import { SwiperHotelImages } from "../../swipers/package-detail/swiper-hotel-images";

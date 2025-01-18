@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DetailNavbar from "@/components/layout/navbar/detail-navbar";
 import HeaderSection from "@/section/package-detail/header-section";
 import ImagePoster from "@/section/package-detail/image-poster";
@@ -13,29 +12,66 @@ import PromoSection from "@/section/package-detail/promo-section";
 import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
 import ItinerarySection from "@/section/package-detail/itinerary-section";
 import Footer from "@/components/layout/footer";
+import NotFound from "@/app/not-found";
+import OtherPackagesSection from "@/section/package-detail/other-packages-section";
 
-import { dataPackages } from "@/data/packages";
-import { dummyData } from "@/data/package-details";
-import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+import { UmrahPackage } from "@/types/package-details";
+import { packageDetailData } from "@/data/package-details";
+
+// --- Metadata for SEO Optimization
+export const generateMetadata = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> => {
+  const resolvedParams = await params;
+  const data = packageDetailData.find(
+    (det: UmrahPackage) => det.id === resolvedParams.slug,
+  );
+
+  return {
+    generator: "Next.js",
+    title: data?.tagline,
+    keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
+    openGraph: {
+      title: data?.tagline,
+      url: `https://goumrah.id/umrah/${(await params).slug}`,
+      siteName: "goumrah.id",
+      // note: can be activated when the image source is not on local
+      // images: [
+      //   {
+      //     url: `${data?.thumbnail}`,
+      //     width: 1200,
+      //     height: 630,
+      //   },
+      // ],
+      locale: "id_ID",
+      type: "website",
+    },
+  };
+};
 
 export default async function DetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // const selectedPackage = dummyData.find((pkg) => pkgslug === Number(id));
+  // const selectedPackage = packageDetailData.find((pkg) => pkgslug === Number(id));
   const resolvedParams = await params;
-  const detail = dummyData.find((det) => det.id === resolvedParams.slug);
+  const detail = packageDetailData.find(
+    (det: UmrahPackage) => det.id === resolvedParams.slug,
+  );
 
   if (detail) {
     return (
       <>
-        <DetailNavbar dataPackage={dataPackages[0]} />
+        <DetailNavbar dataPackage={detail} />
 
         <main>
           <ImagePoster
-            packageImage={dataPackages[0].thumbnail}
-            packageCategory={dataPackages[0].category}
+            packageImage={detail.thumbnail}
+            packageCategory={detail.category}
           />
 
           <HeaderSection packageData={detail} durationDays={detail.duration} />
@@ -61,7 +97,7 @@ export default async function DetailPage({
 
           <PromoSection dataPromos={detail.promos} />
 
-          {/* OtherPackages Here */}
+          <OtherPackagesSection packageId={detail.id} />
 
           <Footer />
 
@@ -71,16 +107,5 @@ export default async function DetailPage({
     );
   }
 
-  return (
-    <main className="flex h-full min-h-screen items-center justify-center">
-      <div className="flex flex-col items-center gap-8">
-        <h5 className="text-lg font-semibold">
-          Maaf, paket yang kamu cari tidak ada
-        </h5>
-        <Button className="w-fit rounded-[6px]">
-          <Link href="/">Kembali ke Beranda</Link>
-        </Button>
-      </div>
-    </main>
-  );
+  return <NotFound />;
 }

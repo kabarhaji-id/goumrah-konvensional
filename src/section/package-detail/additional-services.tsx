@@ -35,7 +35,7 @@ const AdditionalServices = () => {
                   <h6 className="font-bold leading-[22px]">Paspor</h6>
                 </div>
 
-                <span className="text-xs leading-4">+ Rp 500.000</span>
+                <span className="text-xs leading-4">+ Rp 850.000</span>
               </div>
 
               <Image
@@ -70,7 +70,7 @@ const AdditionalServices = () => {
                   </h6>
                 </div>
 
-                <span className="text-xs leading-4">+ Rp 500.000</span>
+                <span className="text-xs leading-4">+ Rp 400.000</span>
               </div>
 
               <Image

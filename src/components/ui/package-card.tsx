@@ -24,7 +24,7 @@ import {
   priceToLocale,
 } from "@/lib/utils";
 import Image from "next/image";
-import { UmrahPackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 import { useMemo } from "react";
 
 interface PackageCardProps {

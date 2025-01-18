@@ -23,13 +23,14 @@ import {
   SparklesIcon,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Itinerary } from "@/types/packages";
+import { Itinerary } from "@/types/package-details";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion/accordion";
+import { useState } from "react";
 
 const ItinerarySection = ({
   dataItineraries,
@@ -44,6 +45,8 @@ const ItinerarySection = ({
 
     router.push(`${window.location.pathname}?${params.toString()}`);
   };
+
+  const [isImageError, setIsImageError] = useState(false);
 
   return (
     <Section className="pb-5 pt-0">
@@ -70,20 +73,31 @@ const ItinerarySection = ({
                 {itinerary.images.map((imageItineraries, index) => {
                   return (
                     <div key={index} className="relative h-[109px]">
-                      <Image
-                        width={70}
-                        height={60}
-                        src={imageItineraries.src}
-                        alt={`itinerary-${index}`}
-                        className="h-full w-[606px] object-cover"
-                      />
-                      <div
-                        className="absolute bottom-0 z-10 h-14 w-full"
-                        style={{
-                          background:
-                            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-                        }}
-                      ></div>
+                      {!isImageError && imageItineraries.src ? (
+                        <>
+                          <Image
+                            width={70}
+                            height={60}
+                            src={imageItineraries.src}
+                            alt={imageItineraries.id}
+                            className="h-full w-[608px] object-cover"
+                            onError={() => setIsImageError(true)}
+                          />
+                          <div
+                            className="absolute bottom-0 z-10 h-14 w-full"
+                            style={{
+                              background:
+                                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
+                            }}
+                          />
+                        </>
+                      ) : (
+                        <div className="flex h-full w-[608px] items-center justify-center bg-gray-100">
+                          <span className="text-sm text-gray-500">
+                            Foto tidak tersedia
+                          </span>
+                        </div>
+                      )}
                     </div>
                   );
                 })}
@@ -94,7 +108,7 @@ const ItinerarySection = ({
                   {itinerary.city}
                 </span>
                 <span className="text-xs font-medium leading-4">
-                  ({itinerary.days.length} Hari)
+                  ({itinerary.days.length - 1} Hari)
                 </span>
               </div>
             </div>
@@ -104,16 +118,16 @@ const ItinerarySection = ({
                 key={index}
                 type="single"
                 collapsible
-                className="border-subtle w-full items-center rounded-[14px] rounded-b-xl border bg-white shadow-custom-sm"
+                className="w-full items-center rounded-[14px] rounded-b-xl border border-subtle bg-white shadow-custom-sm"
               >
                 <AccordionItem value="item-1">
                   <AccordionTrigger
                     className="flex justify-between py-2 pl-2 pr-4 text-sm font-medium leading-[21px] text-primary-foreground"
                     variant="darkPrimary"
                   >
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3 text-start">
                       <Badge
-                        className="h-fit rounded-[10px] border-none px-2 py-[3px] text-xs leading-[18px] tracking-wide"
+                        className="h-fit flex-shrink-0 rounded-[10px] border-none px-2 py-[3px] text-xs leading-[18px] tracking-wide"
                         variant="secondary"
                       >
                         Hari {item.nth}
@@ -207,7 +221,7 @@ const ItinerarySection = ({
                                       </span>
                                     </div>
                                     <span className="text-sm font-medium leading-4 tracking-wide">
-                                      {widget.hotel.hotel_name}
+                                      {widget.hotel_name}
                                     </span>
                                   </div>
 

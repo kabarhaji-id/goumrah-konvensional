@@ -261,7 +261,7 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
                     {!isDelay && (
                       <>
                         <p className="text-gray-700">
-                          Baik!, Isma akan menyambungkan {userMessage.fullName} dengan agen kami melalui
+                          Baik!, Isma akan menyambungkan Kak {userMessage.fullName} dengan agen kami melalui
                           WhatsApp dan akan membalas pesan Anda secepat mungkin, biasanya dalam beberapa menit.<br />Ditunggu
                           yaah...
                         </p>

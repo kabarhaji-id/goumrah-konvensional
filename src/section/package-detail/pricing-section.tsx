@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { UmrahPackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 import { FilterSection } from "./pricing-filter";
 import { Section, SectionContent } from "@/components/layout/section";
 import { capitalize, getAmountOfDiscount, priceToLocale } from "@/lib/utils";
@@ -39,7 +39,7 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
 
   return (
     <Section className="py-0">
-      <SectionContent className="space-y-3 pb-2">
+      <SectionContent className="space-y-3 pb-5">
         {/* --- Filter for Departure Date */}
         <FilterSection
           variant="departureDate"

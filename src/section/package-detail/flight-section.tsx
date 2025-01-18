@@ -17,13 +17,15 @@ import {
 } from "@/components/layout/section";
 import { getArrivalDate } from "@/lib/utils";
 import AccordionFlight from "./accordion-flight";
-import { Flight, FlightDetail } from "@/types/packages";
+import { Flight, FlightDetail } from "@/types/package-details";
 import {
   CardDetail,
   CardDetailContent,
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
 import { getSkytrax } from "@/components/ui/helper/getSkytrax";
+import Image from "next/image";
+import { useAccordionFlightStore } from "@/store/useInterfaceStore";
 
 const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   moment.locale("id");
@@ -73,24 +75,35 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   });
 
   return (
-    <Section className="space-y-4 px-4 pb-3 pt-5">
-      <SectionHeader className="mb-2 px-0">
-        <div className="flex items-center gap-2">
-          <PlaneIcon className="h-5 w-5 stroke-primary" />
-          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
-            Penerbangan
-          </SectionTitle>
-        </div>
-      </SectionHeader>
-      <SectionContent className="mx-0 space-y-4 px-0">
-        {arrDataFlight.length > 0 &&
-          arrDataFlight.map((data, index) => (
-            <FlightCard key={index} type={data.type} dataFlight={data}>
-              <AccordionFlight dataFlight={data.data} id={index.toString()} />
-            </FlightCard>
-          ))}
-      </SectionContent>
-    </Section>
+    <>
+      <div className="px-4">
+        <Separator />
+      </div>
+
+      <Section className="space-y-4 px-4 pb-3 pt-5">
+        <SectionHeader className="mb-2 px-0">
+          <div className="flex items-center gap-2">
+            <PlaneIcon className="h-5 w-5 stroke-primary" />
+            <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
+              Penerbangan
+            </SectionTitle>
+          </div>
+        </SectionHeader>
+        <SectionContent className="mx-0 space-y-4 px-0">
+          {arrDataFlight.length > 0 &&
+            arrDataFlight.map((data, index) => (
+              <FlightCard
+                key={index}
+                type={data.type}
+                dataFlight={data}
+                id={index.toString()}
+              >
+                <AccordionFlight dataFlight={data.data} id={index.toString()} />
+              </FlightCard>
+            ))}
+        </SectionContent>
+      </Section>
+    </>
   );
 };
 
@@ -98,22 +111,27 @@ interface FlightCardProps {
   type: string;
   data: {
     directFlight: FlightDetail;
-    directFlightDate: string;
+    directFlightDate?: string;
     transitFlight?: FlightDetail;
     transitFlightDate?: string;
   };
 }
 
 const FlightCard = ({
+  id,
   type,
   dataFlight,
   children,
 }: {
+  id: string;
   type: "Wisata" | "Keberangkatan" | "Kepulangan" | string;
   dataFlight?: FlightCardProps;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }) => {
   moment.locale("id");
+
+  const { isOpen } = useAccordionFlightStore();
+  const open = isOpen[id] || false;
 
   if (dataFlight) {
     return (
@@ -142,25 +160,30 @@ const FlightCard = ({
             </Badge>
 
             <div className="flex items-center gap-2">
-              {/* <Image
-                width={70}
-                height={60}
-                src={`${process.env.NEXT_PUBLIC_API_IMAGES_URL}/${dataFlight.data.directFlight.airline_logo}`}
-                alt={`logo-${dataFlight.data.directFlight.airline}`}
-                className="h-[52px] w-auto"
-              /> */}
+              {!open && (
+                <Image
+                  width={70}
+                  height={60}
+                  src={dataFlight.data.directFlight.airline_logo}
+                  alt={`logo-${dataFlight.data.directFlight.airline}`}
+                  className="h-[52px] w-auto"
+                />
+              )}
               <span className="text-sm font-semibold leading-5">
                 {dataFlight.data.directFlight.airline}
               </span>
             </div>
           </div>
 
-          <div>
-            {getSkytrax(
-              dataFlight.data.directFlight.skytrax,
-              dataFlight.data.directFlight.rating,
+          {dataFlight.data.directFlight.skytrax &&
+            dataFlight.data.directFlight.rating && (
+              <div>
+                {getSkytrax(
+                  dataFlight.data.directFlight.skytrax,
+                  dataFlight.data.directFlight.rating,
+                )}
+              </div>
             )}
-          </div>
 
           <div className="space-y-1">
             <div className="relative flex items-center gap-1 text-sm font-bold text-primary-foreground">
@@ -195,15 +218,20 @@ const FlightCard = ({
                 <span>
                   {dataFlight.data.directFlight.airport_city_departure}
                 </span>
-                <div className="flex gap-1 opacity-40">
-                  <span>
-                    {moment(dataFlight.data.directFlightDate).format("DD MMM")}
-                  </span>
-                  <span>∙</span>
-                  <span>
-                    {moment(dataFlight.data.directFlightDate).format("HH:mm")}
-                  </span>
-                </div>
+                {dataFlight.data.directFlightDate && (
+                  <div className="flex gap-1 opacity-40">
+                    <span>
+                      {moment(dataFlight.data.directFlightDate).format(
+                        "DD MMM",
+                      )}
+                    </span>
+                    {/* note: this can be activate when there's a fixed flight time data */}
+                    {/* <span>∙</span>
+                    <span>
+                      {moment(dataFlight.data.directFlightDate).format("HH:mm")}
+                    </span> */}
+                  </div>
+                )}
               </div>
               <div className="space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
                 <span>
@@ -234,25 +262,30 @@ const FlightCard = ({
                       </span>
                     </>
                   ) : (
-                    <>
-                      <span>
-                        {moment(
-                          getArrivalDate(
-                            dataFlight.data.directFlightDate,
-                            dataFlight.data.directFlight.duration,
-                          ),
-                        ).format("DD MMM")}
-                      </span>
-                      <span>∙</span>
-                      <span>
-                        {moment(
-                          getArrivalDate(
-                            dataFlight.data.directFlightDate,
-                            dataFlight.data.directFlight.duration,
-                          ),
-                        ).format("HH:mm")}
-                      </span>
-                    </>
+                    dataFlight.data.directFlightDate && (
+                      <>
+                        <span>
+                          {dataFlight.data.directFlightDate &&
+                            moment(
+                              getArrivalDate(
+                                dataFlight.data.directFlightDate,
+                                dataFlight.data.directFlight.duration,
+                              ),
+                            ).format("DD MMM")}
+                        </span>
+                        {/* note: this can be activate when there's a fixed flight time data */}
+                        {/* <span>∙</span>
+                        <span>
+                          {dataFlight.data.directFlightDate &&
+                            moment(
+                              getArrivalDate(
+                                dataFlight.data.directFlightDate,
+                                dataFlight.data.directFlight.duration,
+                              ),
+                            ).format("HH:mm")}
+                        </span> */}
+                      </>
+                    )
                   )}
                 </div>
               </div>

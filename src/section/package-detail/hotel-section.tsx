@@ -12,7 +12,7 @@ import {
   SectionHeader,
   SectionTitle,
 } from "@/components/layout/section";
-import { Hotel, HotelDetail, Images } from "@/types/packages";
+import { Hotel, HotelDetail, Images } from "@/types/package-details";
 import {
   CardDetail,
   CardDetailContent,
@@ -28,27 +28,27 @@ const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
   const arrTabLists: string[] = [];
 
   const arrDataHotel = [
-    // ...dataHotel.wisata.map((wisataItem, index) => {
-    //     const type = `Wisata-${index + 1}`;
-    //     if (!arrTabLists.includes(type)) {
-    //         arrTabLists.push(type);
-    //     }
-    //     return {
-    //         type,
-    //         data: wisataItem,
-    //     };
-    // }),
-    {
-      type: "Makkah",
-      data: dataHotel.makkah,
-    },
+    ...dataHotel.wisata.map((wisataItem, index) => {
+      const type = `Wisata-${index + 1}`;
+      if (!arrTabLists.includes(type)) {
+        arrTabLists.push(type);
+      }
+      return {
+        type,
+        data: wisataItem,
+      };
+    }),
     {
       type: "Madinah",
       data: dataHotel.madinah,
     },
+    {
+      type: "Makkah",
+      data: dataHotel.makkah,
+    },
   ];
 
-  ["Makkah", "Madinah"].forEach((type) => {
+  ["Madinah", "Makkah"].forEach((type) => {
     if (!arrTabLists.includes(type)) {
       arrTabLists.push(type);
     }
@@ -104,7 +104,8 @@ const HotelCard = ({
 
       <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px] pb-2">
         <CustomSwiper
-          className="w-full overflow-hidden !rounded-[14px] !pb-0"
+          className="w-full rounded-b-[14px]"
+          slidesClass="h-[236px]"
           padding={0}
           gap={0}
           bulletVariant="white-dot"
@@ -148,13 +149,24 @@ const HotelCard = ({
               <span className="text-sm font-semibold">
                 {dataHotel.hotel_name}
               </span>
-              <span className="text-xs">
-                {moment(dataHotel.check_in_time).format("DD MMMM YYYY")} ∙{" "}
-                {calculateDaysAndNights(
-                  dataHotel.check_in_time,
-                  dataHotel.check_out_time,
+              <div className="flex gap-0.5">
+                {dataHotel.check_in_time && dataHotel.check_out_time && (
+                  <span className="text-xs">
+                    {moment(dataHotel.check_in_time).format("DD MMMM YYYY")} ∙
+                  </span>
                 )}
-              </span>
+                {dataHotel.duration && (
+                  <span className="text-xs">
+                    {" "}
+                    {dataHotel.check_in_time && dataHotel.check_out_time
+                      ? calculateDaysAndNights(
+                          dataHotel.check_in_time,
+                          dataHotel.check_out_time,
+                        )
+                      : `${dataHotel.duration} hari ${dataHotel.duration - 1} malam`}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
           <div className="flex items-center gap-2">

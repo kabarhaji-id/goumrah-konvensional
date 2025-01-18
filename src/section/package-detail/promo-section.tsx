@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { Section, SectionContent } from "@/components/layout/section";
 import { CustomSwiper } from "@/components/layout/swiper";
-import { PromoDetail } from "@/types/packages";
+import { PromoDetail } from "@/types/package-details";
 
 const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
   if (dataPromos && dataPromos.length > 0) {
@@ -33,11 +33,11 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
           ) : (
             <Link href={dataPromos[0].link}>
               <Image
-                width={361}
-                height={138}
+                width={608}
+                height={228}
                 src={dataPromos[0].imageUrl}
                 alt="image-promo"
-                className="h-[132px] w-full rounded-[14px] object-cover"
+                className="aspect-[24/9] w-full rounded-[14px] object-cover"
               />
             </Link>
           )}

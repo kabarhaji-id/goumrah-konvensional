@@ -11,7 +11,7 @@ import {
   SectionHeader,
   SectionTitle,
 } from "@/components/layout/section";
-import { BusDetail, PackageCategory } from "@/types/packages";
+import { BusDetail, PackageCategory } from "@/types/package-details";
 import {
   CardDetail,
   CardDetailContent,

@@ -14,7 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { HotelDetail, Images } from "@/types/packages";
+import { HotelDetail, Images } from "@/types/package-details";
 
 interface SheetImagePreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   variant: "makkah" | "madinah" | "wisata" | string;
@@ -99,8 +99,8 @@ export const SheetImagePreview = ({
               .map((image, index) => (
                 <SwiperSlide key={index} className="flex">
                   <Image
-                    width={448}
-                    height={252}
+                    width={640}
+                    height={360}
                     src={image.src}
                     alt={`image-${dataHotel.hotel_name}-${index}`}
                     className="aspect-video w-full object-cover"
@@ -131,6 +131,10 @@ export const SheetImagePreview = ({
                 330: { slidesPerView: 3 },
                 375: { slidesPerView: 3.5 },
                 430: { slidesPerView: 4 },
+                500: { slidesPerView: 4.5 },
+                580: { slidesPerView: 5 },
+                605: { slidesPerView: 5.5 },
+                630: { slidesPerView: 6 },
               }}
               onSwiper={(instance) => {
                 thumbnailSwiperRef.current = instance;

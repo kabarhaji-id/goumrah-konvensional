@@ -19,14 +19,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { SimplePackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 
 export function ShareDialog({
   children,
   dataPackage,
 }: {
   children: React.ReactNode;
-  dataPackage?: SimplePackage;
+  dataPackage?: UmrahPackage;
 }) {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -75,13 +75,13 @@ export function ShareDialog({
                 width={500}
                 height={500}
                 src={dataPackage.thumbnail}
-                alt={`image-${dataPackage.slug}`}
+                alt={`image-${dataPackage.tagline}`}
                 className="aspect-square w-14 rounded object-cover"
               />
             </div>
             <div className="flex flex-col gap-1">
               <h6 className="line-clamp-1 text-sm font-bold text-neutral-foreground">
-                {dataPackage.name}
+                {dataPackage.tagline}
               </h6>
               <span className="text-xs text-neutral-foreground/50">
                 goumrah.id

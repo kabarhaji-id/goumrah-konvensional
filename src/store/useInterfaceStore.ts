@@ -1,6 +1,23 @@
 import { create } from "zustand";
 
 //  --- Flight and Hotel Accordion
+interface AccordionFlightStore {
+  isOpen: { [key: string]: boolean };
+  toggleAccordion: (id: string) => void;
+}
+
+const useAccordionFlightStore = create<AccordionFlightStore>((set) => ({
+  isOpen: {},
+  toggleAccordion: (id) => {
+    set((state) => ({
+      isOpen: {
+        ...state.isOpen,
+        [id]: !state.isOpen[id],
+      },
+    }));
+  },
+}));
+
 interface AccordionHotelStore {
   isAllOpen: boolean;
   toggleAllAccordion: () => void;
@@ -15,7 +32,7 @@ const useAccordionHotelStore = create<AccordionHotelStore>((set) => ({
   },
 }));
 
-export { useAccordionHotelStore };
+export { useAccordionHotelStore, useAccordionFlightStore };
 
 // --- Image Preview
 interface ImageStore {

@@ -13,7 +13,7 @@ interface DescriptionCollapsibleProps
   dataDescription?: string;
 }
 
-const DescriptinCollapsible = ({
+const DescriptionCollapsible = ({
   dataDescription,
 }: DescriptionCollapsibleProps) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,32 +22,41 @@ const DescriptinCollapsible = ({
   const ref = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      setShowReadMoreButton(
-        ref.current.scrollHeight !== ref.current.clientHeight,
-      );
-    }
-  }, []);
+    const checkHeight = () => {
+      if (ref.current) {
+        setShowReadMoreButton(
+          ref.current.scrollHeight !== ref.current.clientHeight,
+        );
+      }
+    };
+
+    checkHeight();
+    window.addEventListener("resize", checkHeight);
+
+    return () => window.removeEventListener("resize", checkHeight);
+  }, [dataDescription]);
 
   return (
     <Accordion type="single" collapsible className="items-center bg-white">
       <AccordionItem value="item-1">
+        {/* Tampilkan teks dengan line-clamp ketika belum dibuka */}
         <p
           ref={ref}
           className={`text-xs leading-5 text-neutral-foreground opacity-80 ${
-            !isOpen ? "line-clamp-3" : "hidden"
+            !isOpen && "line-clamp-3"
           }`}
         >
-          {dataDescription}
+          {!isOpen && dataDescription}
         </p>
-        <AccordionContent className="pb-1">
-          <p
-            ref={ref}
-            className="text-xs leading-5 text-neutral-foreground opacity-80"
-          >
-            {dataDescription}
-          </p>
-        </AccordionContent>
+
+        {isOpen && (
+          <AccordionContent className="pb-1">
+            <p className="text-xs leading-5 text-neutral-foreground opacity-80">
+              {dataDescription}
+            </p>
+          </AccordionContent>
+        )}
+
         {showReadMoreButton && (
           <AccordionTrigger
             variant="primary"
@@ -68,4 +77,4 @@ const DescriptinCollapsible = ({
   );
 };
 
-export { DescriptinCollapsible };
+export { DescriptionCollapsible };

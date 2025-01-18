@@ -13,7 +13,7 @@ import {
   ExternalLinkIcon,
 } from "lucide-react";
 import { useAccordionHotelStore } from "@/store/useInterfaceStore";
-import { HotelDetail } from "@/types/packages";
+import { HotelDetail } from "@/types/package-details";
 import {
   Accordion,
   AccordionContent,
@@ -21,7 +21,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion/accordion";
 import { Separator } from "@/components/ui/separator";
-import { DescriptinCollapsible } from "@/components/ui/accordion/accordion-description";
+import { DescriptionCollapsible } from "@/components/ui/accordion/accordion-description";
 import { Button } from "@/components/ui/button";
 import { getIconFacility } from "@/components/ui/helper/getIcon";
 
@@ -44,40 +44,42 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
       <AccordionItem value={id}>
         <AccordionContent className="space-y-4">
           {/* --- Check-in and Check-out --- */}
-          <div className="flex gap-4 bg-primary-background px-4 py-2">
-            <div className="flex flex-shrink-0 flex-col gap-1 text-neutral-foreground">
-              <span className="text-xs font-medium leading-4 text-primary">
-                Check-in
-              </span>
-              <span className="text-sm font-bold leading-5">
-                {moment(dataHotel.check_in_time).format("DD MMM YYYY")}
-              </span>
-              <span className="text-xs leading-4">
-                {moment(dataHotel.check_in_time).format("HH:mm")}
-              </span>
-            </div>
+          {dataHotel.check_in_time && dataHotel.check_out_time && (
+            <div className="flex gap-4 bg-primary-background px-4 pt-2">
+              <div className="flex flex-shrink-0 flex-col gap-1 text-neutral-foreground">
+                <span className="text-xs font-medium leading-4 text-primary">
+                  Check-in
+                </span>
+                <span className="text-sm font-bold leading-5">
+                  {moment(dataHotel.check_in_time).format("DD MMM YYYY")}
+                </span>
+                <span className="text-xs leading-4">
+                  {moment(dataHotel.check_in_time).format("HH:mm")}
+                </span>
+              </div>
 
-            <div className="flex w-full items-center py-1.5">
-              <CircleIcon className="h-2 w-2 stroke-primary" />
-              <Separator className="bg-primary" />
-              <CircleIcon className="h-2 w-2 stroke-primary" />
-            </div>
+              <div className="flex w-full items-center py-1.5">
+                <CircleIcon className="h-2 w-2 stroke-primary" />
+                <Separator className="bg-primary" />
+                <CircleIcon className="h-2 w-2 stroke-primary" />
+              </div>
 
-            <div className="flex flex-shrink-0 flex-col gap-1 text-right text-neutral-foreground">
-              <span className="text-xs font-medium leading-4 text-primary">
-                Check-out
-              </span>
-              <span className="text-sm font-bold leading-5">
-                {moment(dataHotel.check_out_time).format("DD MMM YYYY")}
-              </span>
-              <span className="text-xs leading-4">
-                {moment(dataHotel.check_out_time).format("HH:mm")}
-              </span>
+              <div className="flex flex-shrink-0 flex-col gap-1 text-right text-neutral-foreground">
+                <span className="text-xs font-medium leading-4 text-primary">
+                  Check-out
+                </span>
+                <span className="text-sm font-bold leading-5">
+                  {moment(dataHotel.check_out_time).format("DD MMM YYYY")}
+                </span>
+                <span className="text-xs leading-4">
+                  {moment(dataHotel.check_out_time).format("HH:mm")}
+                </span>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* --- Hotel Facilities --- */}
-          <div className="flex flex-col gap-2 px-4">
+          <div className="flex flex-col gap-2 px-4 pt-2">
             <h4 className="text-sm font-bold text-primary-foreground">
               Fasilitas Hotel
             </h4>
@@ -108,26 +110,34 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
             </h4>
 
             <div className="flex justify-between">
-              <div className="flex flex-col gap-1 text-neutral-foreground">
+              <div
+                className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+              >
                 <span className="text-xs leading-4 opacity-60">Jenis</span>
                 <span className="text-xs font-semibold leading-4">
                   {dataHotel.food_type}
                 </span>
               </div>
 
-              <div className="flex flex-col gap-1 text-neutral-foreground">
-                <span className="text-xs leading-4 opacity-60">Banyak</span>
-                <span className="text-xs font-semibold leading-4">
-                  {dataHotel.food_amount}x /hari
-                </span>
-              </div>
+              {dataHotel.food_amount && (
+                <div
+                  className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+                >
+                  <span className="text-xs leading-4 opacity-60">Banyak</span>
+                  <span className="text-xs font-semibold leading-4">
+                    {dataHotel.food_amount}x /hari
+                  </span>
+                </div>
+              )}
 
-              <div className="flex flex-col gap-1 text-neutral-foreground">
-                <span className="text-xs leading-4 opacity-60">Menu</span>
-                <span className="text-xs font-semibold leading-4">
-                  {dataHotel.food_menu}
-                </span>
-              </div>
+              {dataHotel.food_menu && (
+                <div className="flex flex-col gap-1 text-neutral-foreground">
+                  <span className="text-xs leading-4 opacity-60">Menu</span>
+                  <span className="text-xs font-semibold leading-4">
+                    {dataHotel.food_menu}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
 
@@ -177,7 +187,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
               Deskripsi Hotel
             </h4>
 
-            <DescriptinCollapsible dataDescription={dataHotel.description} />
+            <DescriptionCollapsible dataDescription={dataHotel.description} />
           </div>
         </AccordionContent>
 

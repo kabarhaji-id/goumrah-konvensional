@@ -1,16 +1,14 @@
-import Link from "next/link";
 import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
 import CustomVacationIcon from "/src/assets/icons/custom-vacation.svg";
 import CustomFastTrainIcon from "/src/assets/icons/material-symbols_train-rounded.svg";
 import CustomKaabaIcon from "/src/assets/icons/la_kaaba.svg";
-import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
 import ReceiptIcon from "/src/assets/icons/fluent_receipt-money-16-regular.svg";
+import ButtonWhatsApp from "./button-whatsapp";
 
 import { Section, SectionContent } from "@/components/layout/section";
 import { Chip } from "@/components/ui/chip";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { UmrahPackage } from "@/types/packages";
+import { UmrahPackage } from "@/types/package-details";
 
 const HeaderSection = ({
   packageData,
@@ -19,8 +17,6 @@ const HeaderSection = ({
   packageData: UmrahPackage;
   durationDays: string;
 }) => {
-  // const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
-
   return (
     <Section className="py-0">
       <SectionContent className="space-y-5 px-4 pb-5 pt-4 text-primary-foreground">
@@ -32,7 +28,7 @@ const HeaderSection = ({
                 <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
               </div>
               <span className="py-1 pl-1 pr-1.5 text-xs font-semibold leading-4 tracking-wide text-primary">
-                {durationDays} Hari
+                {durationDays}
               </span>
             </Chip>
 
@@ -78,7 +74,33 @@ const HeaderSection = ({
 
             {/* --- Days */}
             <p className="flex gap-1 text-xs text-neutral-foreground">
-              <span>3 hari Madinah</span>·<span>4 hari Madinah</span>
+              {packageData.itineraries.length > 2 && (
+                <>
+                  <span>
+                    {(packageData.itineraries.find(
+                      (i) => i.city !== "Madinah" && i.city !== "Madinah",
+                    )?.days?.length ?? 0) - 1}{" "}
+                    hari{" "}
+                    {
+                      packageData.itineraries.find(
+                        (i) => i.city !== "Madinah" && i.city !== "Madinah",
+                      )?.city
+                    }
+                  </span>
+                  ·
+                </>
+              )}
+              <span>
+                {(packageData.itineraries.find((i) => i.city === "Madinah")
+                  ?.days?.length ?? 0) - 1}{" "}
+                hari Madinah
+              </span>
+              ·
+              <span>
+                {(packageData.itineraries.find((i) => i.city === "Makkah")?.days
+                  ?.length ?? 0) - 1}{" "}
+                hari Makkah
+              </span>
             </p>
 
             {/* --- Early Payment (DP) */}
@@ -86,7 +108,9 @@ const HeaderSection = ({
               <ReceiptIcon className="h-4 w-4" fill="#EF4444" />
               <p className="text-xs leading-4 text-destructive">
                 Pembayaran Awal (DP) :
-                <span className="pl-0.5 font-extrabold">Rp 5 Juta</span>
+                <span className="pl-0.5 font-extrabold">
+                  Rp {packageData.down_payment} Juta
+                </span>
               </p>
             </div>
           </div>
@@ -95,14 +119,7 @@ const HeaderSection = ({
         {/* --- Button: Order This Package  */}
         <Separator />
 
-        <Button className="h-11 w-full py-1 shadow-custom-md">
-          <Link href={packageData.order_url}>
-            <p className="text-base font-semibold leading-[150%] tracking-wide">
-              Pesan Paket Umrah Ini
-            </p>
-          </Link>
-          <WhatsAppIcon />
-        </Button>
+        <ButtonWhatsApp orderUrl={packageData.order_url} />
       </SectionContent>
     </Section>
   );

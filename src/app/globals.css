@@ -73,3 +73,100 @@ body {
     display: none; /* Safari and Chrome */
   }
 }
+
+/* --- Swiper Pagination */
+.swiper-pagination {
+  display: flex;
+  margin-bottom: 0px !important;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-right-side {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  bottom: 8px !important;
+  padding-right: 16px !important;
+  gap: 8px;
+  z-index: 40;
+}
+
+.swiper-pagination-bullet-primary {
+  background-color: #cbd1d1 !important;
+  width: 6px !important;
+  height: 6px !important;
+  margin: 0 !important;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active-primary {
+  background-color: #1b8386 !important;
+  width: 30px !important;
+  height: 6px !important;
+  border-radius: 99px !important;
+}
+
+.swiper-pagination-bullet-white {
+  background-color: #f1fafa !important;
+  opacity: 30%;
+  width: 6px !important;
+  height: 6px !important;
+  margin-bottom: 8px !important;
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active-white {
+  background-color: #ffffff !important;
+  opacity: 100%;
+  width: 30px !important;
+  height: 6px !important;
+  border-radius: 99px !important;
+}
+
+.swiper-pagination-bullet-active-white-dot {
+  background-color: #ffffff !important;
+  opacity: 100%;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 99px !important;
+}
+
+/* --- Border: Gold */
+.gold-border {
+  position: relative;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.gold-border:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 10px;
+  padding: 1px;
+  background: linear-gradient(
+    to right,
+    #fff5a8,
+    #bd8100,
+    #ca9822,
+    #e6ca69,
+    #f8e996,
+    #fff5a8,
+    #fbc01b
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}

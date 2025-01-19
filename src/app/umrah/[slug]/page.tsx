@@ -6,7 +6,7 @@ import FlightSection from "@/section/package-detail/flight-section";
 import HotelSection from "@/section/package-detail/hotel-section";
 import TransportationSection from "@/section/package-detail/transportation-section";
 import ProductCoverageSection from "@/section/package-detail/product-coverage-section";
-import AdditionalServices from "@/section/package-detail/additional-services";
+import AdditionalServices from "@/section/package-detail/additional-services-section";
 import BottomNavigationDetail from "@/components/layout/navbar/bottom-navigation-detail";
 import PromoSection from "@/section/package-detail/promo-section";
 import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
@@ -31,21 +31,13 @@ export const generateMetadata = async ({
   );
 
   return {
-    generator: "Next.js",
+    generator: "goumrah.id",
     title: data?.tagline,
     keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
     openGraph: {
       title: data?.tagline,
       url: `https://goumrah.id/umrah/${(await params).slug}`,
       siteName: "goumrah.id",
-      // note: can be activated when the image source is not on local
-      // images: [
-      //   {
-      //     url: `${data?.thumbnail}`,
-      //     width: 1200,
-      //     height: 630,
-      //   },
-      // ],
       locale: "id_ID",
       type: "website",
     },
@@ -91,7 +83,7 @@ export default async function DetailPage({
 
           <TourVoucherSection dataAddOns={detail.addons} />
 
-          <ProductCoverageSection />
+          <ProductCoverageSection dataImportantNotes={detail.importantNotes} />
 
           <AdditionalServices />
 

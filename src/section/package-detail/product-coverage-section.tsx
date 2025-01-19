@@ -1,28 +1,20 @@
 import GoUmrahTopAccent from "/public/assets/patterns/goumrah-primary-top-right.svg";
 import GoUmrahBottomAccent from "/public/assets/patterns/goumrah-primary-bottom-left.svg";
 
-import {
-  ChevronRightIcon,
-  CircleCheckBigIcon,
-  InfoIcon,
-  XIcon,
-} from "lucide-react";
+import { CircleCheckBigIcon, InfoIcon, XIcon } from "lucide-react";
 import {
   Section,
   SectionContent,
   SectionHeader,
   SectionTitle,
 } from "@/components/layout/section";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion/accordion";
-import { TermsConditionList } from "../syarat-ketentuan/list-of-content";
-import Link from "next/link";
+import AccordionTermsCondition from "./section-component/accordion-terms-condition";
 
-const ProductCoverageSection = () => {
+const ProductCoverageSection = ({
+  dataImportantNotes,
+}: {
+  dataImportantNotes?: string[];
+}) => {
   return (
     <Section className="px-4 pb-5 pt-0">
       <SectionHeader className="mb-3 px-0">
@@ -31,7 +23,7 @@ const ProductCoverageSection = () => {
         </SectionTitle>
       </SectionHeader>
 
-      <SectionContent className="border-subtle relative rounded-[14px] border bg-primary-background bg-[url('/assets/patterns/wave-line-white.svg')]">
+      <SectionContent className="relative rounded-[14px] border border-subtle bg-primary-background bg-[url('/assets/patterns/wave-line-white.svg')]">
         <GoUmrahTopAccent className="absolute right-0" />
 
         <div className="flex flex-col gap-2 p-4">
@@ -85,44 +77,32 @@ const ProductCoverageSection = () => {
         <GoUmrahBottomAccent className="absolute bottom-0" />
       </SectionContent>
 
-      <Accordion
-        type="single"
-        collapsible
-        className="border-subtle mt-2 w-full items-center rounded-[14px] rounded-b-xl border bg-white shadow-custom-sm"
-      >
-        <AccordionItem value="item-1">
-          <AccordionTrigger
-            className="flex justify-between px-4 py-3 text-sm font-medium leading-[21px] text-primary-foreground"
-            variant="primary"
-          >
-            <span className="text-sm font-semibold leading-5">
-              Pahami sebelum kamu berangkat
-            </span>
-          </AccordionTrigger>
+      {dataImportantNotes && dataImportantNotes?.length > 0 && (
+        <ImportantNotes dataImportantNotes={dataImportantNotes} />
+      )}
 
-          <AccordionContent className="px-4">
-            <div className="mt-2 flex flex-col gap-4">
-              {TermsConditionList.map((item, index) => {
-                return (
-                  <Link
-                    key={index}
-                    href={`/syarat-ketentuan${item.link}`}
-                    target="_blank"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs leading-4 tracking-wide">
-                        {item.title}
-                      </span>
-                      <ChevronRightIcon className="h-4 w-4 stroke-primary" />
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
+      <AccordionTermsCondition />
     </Section>
+  );
+};
+
+const ImportantNotes = ({
+  dataImportantNotes,
+}: {
+  dataImportantNotes: string[];
+}) => {
+  return (
+    <div className="mt-2 rounded-[14px] border border-primary p-4">
+      <h5 className="text-sm font-semibold">Hal yang perlu kamu ketahui</h5>
+
+      <div className="ml-4 mt-2">
+        <ul className="flex list-decimal flex-col gap-1 text-xs leading-[18px] tracking-wide text-primary-foreground">
+          {dataImportantNotes.map((data, index) => {
+            return <li key={index}>{data}</li>;
+          })}
+        </ul>
+      </div>
+    </div>
   );
 };
 

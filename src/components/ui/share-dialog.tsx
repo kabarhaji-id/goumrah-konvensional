@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import WhatsAppIcon from "@/assets/icons/ic_baseline-whatsapp.svg";
-import FacebookLogo from "@/assets/icons/facebook-logo.svg";
+import WhatsAppIcon from "@/public/icons/ic_baseline-whatsapp.svg";
+import FacebookLogo from "@/public/icons/facebook-logo.svg";
 
 import { Copy, Link2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,8 +18,9 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UmrahPackage } from "@/types/package-details";
+import { Skeleton } from "./skeleton-loader";
 
 export function ShareDialog({
   children,
@@ -29,6 +30,7 @@ export function ShareDialog({
   dataPackage?: UmrahPackage;
 }) {
   const [isCopied, setIsCopied] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -55,6 +57,10 @@ export function ShareDialog({
     }
   };
 
+  useEffect(() => {
+    setIsImageLoaded(false);
+  }, [dataPackage?.thumbnail]);
+
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
@@ -71,12 +77,15 @@ export function ShareDialog({
         {dataPackage && (
           <div className="flex items-center gap-4 rounded-sm bg-neutral-foreground/5 p-2">
             <div className="flex-shrink-0">
+              {!isImageLoaded && <Skeleton className="h-14 w-14 bg-gray-300" />}
+
               <Image
                 width={500}
                 height={500}
                 src={dataPackage.thumbnail}
                 alt={`image-${dataPackage.tagline}`}
-                className="aspect-square w-14 rounded object-cover"
+                className={`aspect-square rounded object-cover ${!isImageLoaded ? "w-0" : "w-14"}`}
+                onLoad={() => setIsImageLoaded(true)}
               />
             </div>
             <div className="flex flex-col gap-1">

@@ -2,9 +2,11 @@ import { UmrahPackage } from "@/types/package-details";
 
 const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
-const promoLink = `${whatsappLink}${encodeURIComponent("Assalamualaikum, " +
-  "Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. " +
-  "Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`
+const promoLink = `${whatsappLink}${encodeURIComponent(
+  "Assalamualaikum, " +
+    "Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. " +
+    "Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+)}`;
 
 export const packageDetailData: UmrahPackage[] = [
   {
@@ -25,8 +27,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Silver",
     down_payment: 7,
-    order_url:
-      `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat, Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat, Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-24T10:00:00+07:00",
@@ -378,15 +379,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
@@ -896,15 +897,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
@@ -1505,15 +1506,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
@@ -2080,7 +2081,7 @@ export const packageDetailData: UmrahPackage[] = [
     promos: [
       {
         imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${promoLink}`
+        link: `${promoLink}`,
       },
     ],
     addons: [
@@ -2092,15 +2093,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",

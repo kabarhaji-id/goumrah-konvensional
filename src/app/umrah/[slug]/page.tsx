@@ -38,14 +38,6 @@ export const generateMetadata = async ({
       title: data?.tagline,
       url: `https://goumrah.id/umrah/${(await params).slug}`,
       siteName: "goumrah.id",
-      // note: can be activated when the image source is not on local
-      // images: [
-      //   {
-      //     url: `${data?.thumbnail}`,
-      //     width: 1200,
-      //     height: 630,
-      //   },
-      // ],
       locale: "id_ID",
       type: "website",
     },

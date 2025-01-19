@@ -2,6 +2,10 @@ import { UmrahPackage } from "@/types/package-details";
 
 const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
+const promoLink = `${whatsappLink}${encodeURIComponent("Assalamualaikum, " +
+  "Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. " +
+  "Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`
+
 export const packageDetailData: UmrahPackage[] = [
   {
     id: "umrah-hemat-fokus-ibadah-silver",
@@ -21,7 +25,8 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Silver",
     down_payment: 7,
-    order_url: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Silver%20Umrah%20Hemat%2C%20Fokus%20Ibadah.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
+    order_url:
+      `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat, Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-24T10:00:00+07:00",
@@ -354,7 +359,7 @@ export const packageDetailData: UmrahPackage[] = [
     promos: [
       {
         imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Umrah%20melalui%20Goumrah.id.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20Umrah%20yang%20tersedia.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
+        link: `${promoLink}`,
       },
     ],
     addons: [
@@ -872,7 +877,7 @@ export const packageDetailData: UmrahPackage[] = [
     promos: [
       {
         imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Umrah%20melalui%20Goumrah.id.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20Umrah%20yang%20tersedia.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
+        link: `${promoLink}`,
       },
     ],
     addons: [
@@ -1481,7 +1486,7 @@ export const packageDetailData: UmrahPackage[] = [
     promos: [
       {
         imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Umrah%20melalui%20Goumrah.id.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20Umrah%20yang%20tersedia.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
+        link: `${promoLink}`,
       },
     ],
     addons: [
@@ -2075,7 +2080,7 @@ export const packageDetailData: UmrahPackage[] = [
     promos: [
       {
         imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Umrah%20melalui%20Goumrah.id.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20Umrah%20yang%20tersedia.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
+        link: `${promoLink}`
       },
     ],
     addons: [

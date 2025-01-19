@@ -22,7 +22,7 @@ const Notification = ({
     }, interval);
 
     return () => clearInterval(notificationInterval);
-  }, [ping, audioRef]);
+  }, [ping, interval]); // Added 'interval' as a dependency
 
   return <audio ref={audioRef} hidden src="/audio/whatsapp-notification.mp3" />;
 };

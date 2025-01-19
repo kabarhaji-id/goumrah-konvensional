@@ -4,9 +4,9 @@ import { usePathname, useRouter } from "next/navigation";
 
 import React from "react";
 
-import HomeIcon from "@/assets/icons/home.svg";
-import CustomerServiceIcon from "@/assets/icons/customer-service.svg";
-import KaabaIcon from "@/assets/icons/kaaba.svg";
+import HomeIcon from "@/public/icons/home.svg";
+import CustomerServiceIcon from "@/public/icons/customer-service.svg";
+import KaabaIcon from "@/public/icons/kaaba.svg";
 import TanyaIsma from "@/section/tanya-isma";
 
 const BottomNavigation = () => {

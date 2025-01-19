@@ -21,6 +21,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/assets/*": ["./src/assets/*"],
+      "@/public/*": ["./public/assets/*"],
       "@lib/*": ["/src/lib/*"]
     }
   },

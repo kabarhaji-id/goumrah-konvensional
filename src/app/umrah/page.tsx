@@ -5,14 +5,12 @@ import { dummyData } from "@/data/package-details";
 import CardsSection from "@/section/packages/cards";
 import TaglineSection from "@/section/packages/tagline";
 
-export default async function RekomendasiPage() {
-  const packages = dummyData.filter((pkg) => pkg.type === "Reguler");
-
+export default async function UmrahPage() {
   return (
     <>
-      <PackagesNavbar title="Paket Rekomendasi" />
+      <PackagesNavbar title="Paket Umrah" />
       <TaglineSection />
-      <CardsSection packages={packages} />
+      <CardsSection packages={dummyData} />
       <Footer />
       <BottomNavigation />
     </>

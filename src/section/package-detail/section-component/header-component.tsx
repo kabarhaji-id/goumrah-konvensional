@@ -10,12 +10,7 @@ import { Chip } from "@/components/ui/chip";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
-
-interface NavigatorConnection extends Navigator {
-  connection?: {
-    effectiveType: string;
-  };
-}
+import { NavigatorConnection } from "@/types/navigator-connection";
 
 const HeaderComponent = ({
   packageData,

@@ -6,7 +6,7 @@ import "../../../app/globals.css";
 
 import CustomAirplaneMarkerIcon from "/src/assets/icons/mdi_airplane-marker.svg";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CalendarDaysIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
 import {
@@ -19,6 +19,8 @@ import {
   DepartureDateDetail,
 } from "@/types/package-details";
 import { CustomSwiper } from "@/components/layout/swiper";
+import { Skeleton } from "@/components/ui/skeleton-loader";
+import { NavigatorConnection } from "@/types/navigator-connection";
 
 interface FilterProps {
   departureDates: DepartureDateDetail[];
@@ -37,11 +39,36 @@ const FilterSection = ({
 
   const [selectedDate, setSelectedDate] = useState(filteredDates[0].date);
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
+  const [isLoading, setIsLoading] = useState(true);
+  const [networkSpeed, setNetworkSpeed] = useState("good");
 
   const onFilterChange = (city?: string, date?: string) => {
     if (city) setSelectedCity(city);
     if (date) setSelectedDate(date);
   };
+
+  useEffect(() => {
+    if ("connection" in navigator) {
+      const connection = (navigator as NavigatorConnection).connection;
+      if (connection) {
+        const speed = connection.effectiveType;
+        setNetworkSpeed(speed);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    if (networkSpeed === "4g" || networkSpeed === "wifi") {
+      clearTimeout(loadingTimeout);
+      setIsLoading(false);
+    }
+
+    return () => clearTimeout(loadingTimeout);
+  }, [networkSpeed]);
 
   return (
     <Section className="px-4 py-0">
@@ -69,7 +96,9 @@ const FilterSection = ({
             {variant === "departureDate" && departureDates ? (
               <CustomSwiper gap={8} padding={1} className="overflow-visible">
                 {departureDates.map((date, index) => {
-                  return (
+                  return isLoading ? (
+                    <Skeleton key={index} className="h-16 w-[118px]" />
+                  ) : (
                     <div key={index} className="flex w-[118px] gap-2">
                       <div
                         onClick={() => onFilterChange(undefined, date.date)}
@@ -152,7 +181,9 @@ const FilterSection = ({
             ) : (
               embarkation &&
               embarkation.map((city, index: number) => {
-                return (
+                return isLoading ? (
+                  <Skeleton key={index} className="h-[58px] w-full" />
+                ) : (
                   <div
                     key={index}
                     onClick={() => onFilterChange(city.city, undefined)}

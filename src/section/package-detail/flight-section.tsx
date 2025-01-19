@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 import "moment/locale/id";
 
@@ -26,6 +26,8 @@ import {
 import { getSkytrax } from "@/components/ui/helper/getSkytrax";
 import Image from "next/image";
 import { useAccordionFlightStore } from "@/store/useInterfaceStore";
+import { NavigatorConnection } from "@/types/navigator-connection";
+import { Skeleton } from "@/components/ui/skeleton-loader";
 
 const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   moment.locale("id");
@@ -133,6 +135,32 @@ const FlightCard = ({
   const { isOpen } = useAccordionFlightStore();
   const open = isOpen[id] || false;
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [networkSpeed, setNetworkSpeed] = useState("good");
+
+  useEffect(() => {
+    if ("connection" in navigator) {
+      const connection = (navigator as NavigatorConnection).connection;
+      if (connection) {
+        const speed = connection.effectiveType;
+        setNetworkSpeed(speed);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    if (networkSpeed === "4g" || networkSpeed === "wifi") {
+      clearTimeout(loadingTimeout);
+      setIsLoading(false);
+    }
+
+    return () => clearTimeout(loadingTimeout);
+  }, [networkSpeed]);
+
   if (dataFlight) {
     return (
       <CardDetail>
@@ -146,113 +174,118 @@ const FlightCard = ({
           </span>
         </CardDetailHeader>
 
-        <CardDetailContent className="w-full space-y-4 rounded-[10px] px-4 pb-2 pt-4">
-          <div className="space-y-3">
-            <Badge
-              className="mr-auto w-fit rounded px-2 py-0.5"
-              variant="primaryDarker"
-            >
-              <span className="font-normal leading-[18px] tracking-wide">
-                {dataFlight.data.transitFlight
-                  ? "Penerbangan transit"
-                  : "Penerbangan langsung"}
-              </span>
-            </Badge>
+        {isLoading ? (
+          <Skeleton className="h-[232px] w-full" />
+        ) : (
+          <CardDetailContent className="w-full space-y-4 rounded-[10px] px-4 pb-2 pt-4">
+            <div className="space-y-3">
+              <Badge
+                className="mr-auto w-fit rounded px-2 py-0.5"
+                variant="primaryDarker"
+              >
+                <span className="font-normal leading-[18px] tracking-wide">
+                  {dataFlight.data.transitFlight
+                    ? "Penerbangan transit"
+                    : "Penerbangan langsung"}
+                </span>
+              </Badge>
 
-            <div className="flex items-center gap-2">
-              {!open && (
-                <Image
-                  width={70}
-                  height={60}
-                  src={dataFlight.data.directFlight.airline_logo}
-                  alt={`logo-${dataFlight.data.directFlight.airline}`}
-                  className="h-[52px] w-auto"
-                />
-              )}
-              <span className="text-sm font-semibold leading-5">
-                {dataFlight.data.directFlight.airline}
-              </span>
-            </div>
-          </div>
-
-          {dataFlight.data.directFlight.skytrax &&
-            dataFlight.data.directFlight.rating && (
-              <div>
-                {getSkytrax(
-                  dataFlight.data.directFlight.skytrax,
-                  dataFlight.data.directFlight.rating,
+              <div className="flex items-center gap-2">
+                {!open && (
+                  <Image
+                    width={70}
+                    height={60}
+                    src={dataFlight.data.directFlight.airline_logo}
+                    alt={`logo-${dataFlight.data.directFlight.airline}`}
+                    className="h-[52px] w-auto"
+                  />
                 )}
+                <span className="text-sm font-semibold leading-5">
+                  {dataFlight.data.directFlight.airline}
+                </span>
               </div>
-            )}
+            </div>
 
-          <div className="space-y-1">
-            <div className="relative flex items-center gap-1 text-sm font-bold text-primary-foreground">
-              <span>{dataFlight.data.directFlight.airport_code_departure}</span>
-
-              <div className="relative flex w-full items-center">
-                <CircleIcon className="h-2 w-2 flex-shrink-0 opacity-60" />
-                <Separator variant="dashed" className="w-full bg-white" />
-
-                <div className="absolute left-1/2 flex flex-shrink-0 -translate-x-1/2 flex-col items-center bg-white">
-                  <CustomAirplaneIcon className="h-4 w-4 flex-shrink-0" />
-                  {dataFlight.data.transitFlight && (
-                    <span className="flex w-full flex-shrink-0 px-1 text-[10px] font-normal leading-[14px]">
-                      1 Transit
-                    </span>
+            {dataFlight.data.directFlight.skytrax &&
+              dataFlight.data.directFlight.rating && (
+                <div>
+                  {getSkytrax(
+                    dataFlight.data.directFlight.skytrax,
+                    dataFlight.data.directFlight.rating,
                   )}
                 </div>
+              )}
 
-                <Separator variant="dashed" className="w-full bg-white" />
-                <CircleIcon className="h-2 w-2 flex-shrink-0 opacity-60" />
-              </div>
-
-              <span>
-                {dataFlight.data.transitFlight
-                  ? dataFlight.data.transitFlight.airport_code_arrival
-                  : dataFlight.data.directFlight.airport_code_arrival}
-              </span>
-            </div>
-
-            <div className="flex justify-between">
-              <div className="space-y-0.5 text-xs leading-[18px] text-primary-foreground">
+            <div className="space-y-1">
+              <div className="relative flex items-center gap-1 text-sm font-bold text-primary-foreground">
                 <span>
-                  {dataFlight.data.directFlight.airport_city_departure}
+                  {dataFlight.data.directFlight.airport_code_departure}
                 </span>
-                {dataFlight.data.directFlightDate && (
-                  <div className="flex gap-1 opacity-40">
-                    <span>
-                      {moment(dataFlight.data.directFlightDate).format(
-                        "DD MMM",
-                      )}
-                    </span>
-                    {/* note: this can be activate when there's a fixed flight time data */}
-                    {/* <span>∙</span>
-                    <span>
-                      {moment(dataFlight.data.directFlightDate).format("HH:mm")}
-                    </span> */}
+
+                <div className="relative flex w-full items-center">
+                  <CircleIcon className="h-2 w-2 flex-shrink-0 opacity-60" />
+                  <Separator variant="dashed" className="w-full bg-white" />
+
+                  <div className="absolute left-1/2 flex flex-shrink-0 -translate-x-1/2 flex-col items-center bg-white">
+                    <CustomAirplaneIcon className="h-4 w-4 flex-shrink-0" />
+                    {dataFlight.data.transitFlight && (
+                      <span className="flex w-full flex-shrink-0 px-1 text-[10px] font-normal leading-[14px]">
+                        1 Transit
+                      </span>
+                    )}
                   </div>
-                )}
-              </div>
-              <div className="space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
+
+                  <Separator variant="dashed" className="w-full bg-white" />
+                  <CircleIcon className="h-2 w-2 flex-shrink-0 opacity-60" />
+                </div>
+
                 <span>
                   {dataFlight.data.transitFlight
-                    ? dataFlight.data.transitFlight.airport_city_arrival
-                    : dataFlight.data.directFlight.airport_city_arrival}
+                    ? dataFlight.data.transitFlight.airport_code_arrival
+                    : dataFlight.data.directFlight.airport_code_arrival}
                 </span>
-                <div className="flex gap-1 opacity-40">
-                  {dataFlight.data.transitFlight &&
-                  dataFlight.data.transitFlightDate ? (
-                    <>
+              </div>
+
+              <div className="flex justify-between">
+                <div className="space-y-0.5 text-xs leading-[18px] text-primary-foreground">
+                  <span>
+                    {dataFlight.data.directFlight.airport_city_departure}
+                  </span>
+                  {dataFlight.data.directFlightDate && (
+                    <div className="flex gap-1 opacity-40">
                       <span>
-                        {moment(
-                          getArrivalDate(
-                            dataFlight.data.transitFlightDate,
-                            dataFlight.data.transitFlight.duration,
-                          ),
-                        ).format("DD MMM")}
+                        {moment(dataFlight.data.directFlightDate).format(
+                          "DD MMM",
+                        )}
                       </span>
                       {/* note: this can be activate when there's a fixed flight time data */}
                       {/* <span>∙</span>
+                    <span>
+                      {moment(dataFlight.data.directFlightDate).format("HH:mm")}
+                    </span> */}
+                    </div>
+                  )}
+                </div>
+                <div className="space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
+                  <span>
+                    {dataFlight.data.transitFlight
+                      ? dataFlight.data.transitFlight.airport_city_arrival
+                      : dataFlight.data.directFlight.airport_city_arrival}
+                  </span>
+                  <div className="flex gap-1 opacity-40">
+                    {dataFlight.data.transitFlight &&
+                    dataFlight.data.transitFlightDate ? (
+                      <>
+                        <span>
+                          {moment(
+                            getArrivalDate(
+                              dataFlight.data.transitFlightDate,
+                              dataFlight.data.transitFlight.duration,
+                            ),
+                          ).format("DD MMM")}
+                        </span>
+                        {/* note: this can be activate when there's a fixed flight time data */}
+                        {/* <span>∙</span>
                       <span>
                         {moment(
                           getArrivalDate(
@@ -261,21 +294,21 @@ const FlightCard = ({
                           ),
                         ).format("HH:mm")}
                       </span> */}
-                    </>
-                  ) : (
-                    dataFlight.data.directFlightDate && (
-                      <>
-                        <span>
-                          {dataFlight.data.directFlightDate &&
-                            moment(
-                              getArrivalDate(
-                                dataFlight.data.directFlightDate,
-                                dataFlight.data.directFlight.duration,
-                              ),
-                            ).format("DD MMM")}
-                        </span>
-                        {/* note: this can be activate when there's a fixed flight time data */}
-                        {/* <span>∙</span>
+                      </>
+                    ) : (
+                      dataFlight.data.directFlightDate && (
+                        <>
+                          <span>
+                            {dataFlight.data.directFlightDate &&
+                              moment(
+                                getArrivalDate(
+                                  dataFlight.data.directFlightDate,
+                                  dataFlight.data.directFlight.duration,
+                                ),
+                              ).format("DD MMM")}
+                          </span>
+                          {/* note: this can be activate when there's a fixed flight time data */}
+                          {/* <span>∙</span>
                         <span>
                           {dataFlight.data.directFlightDate &&
                             moment(
@@ -285,16 +318,17 @@ const FlightCard = ({
                               ),
                             ).format("HH:mm")}
                         </span> */}
-                      </>
-                    )
-                  )}
+                        </>
+                      )
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {children}
-        </CardDetailContent>
+            {children}
+          </CardDetailContent>
+        )}
       </CardDetail>
     );
   }

@@ -55,15 +55,13 @@ const ImagePoster = ({
           alt={`image-${packageImage}`}
           width={640}
           height={380}
-          className={`h-full max-h-[380px] w-full object-cover transition-opacity duration-500 ${
-            !isImageLoaded && "h-0"
+          className={`w-full object-cover transition-opacity duration-500 ${
+            !isImageLoaded ? "h-0" : "h-full max-h-[380px]"
           }`}
           onLoad={() => {
-            console.log("Image loaded successfully");
             setIsImageLoaded(true);
           }}
           onError={() => {
-            console.error("Image failed to load:", packageImage);
             setIsImageError(true);
           }}
         />

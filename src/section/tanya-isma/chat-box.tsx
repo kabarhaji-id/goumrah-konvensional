@@ -138,7 +138,7 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
           <div className="relative w-8 h-8 mr-2">
             <Image src="/assets/image/tanya-isma/avatar.jpeg" alt="Icon Isma" fill style={{ borderRadius: "50%" }} />
           </div>
-          <span className="text-white font-bold text-lg">Customer Support</span>
+          <span className="text-white font-bold text-lg">Tanya Isma-goumrah.id</span>
         </div>
         <button className="cursor-pointer" onClick={onClose}>
           <X className="size-5 text-white" />
@@ -152,7 +152,7 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
               <MessageSquare className="w-5 h-5 text-gray-600" />
             </div>
             <div className="bg-teal-100 p-3 rounded-lg">
-              <p className="text-gray-700">Halo, Perkenalkan namaku Isma dari GoUmrah.id.
+              <p className="text-gray-700">Halo, Perkenalkan namaku Isma dari goumrah.id.
                 Ada yang bisa Isma bantu?
               </p>
               <span className="text-gray-500 text-sm">{timeNow}</span>

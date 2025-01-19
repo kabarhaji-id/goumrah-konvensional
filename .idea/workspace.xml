@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/umrah/ideal/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/umrah/ideal/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/home/packages-top-seller.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/home/packages-top-seller.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="main-prepare" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,22 +35,22 @@
     &quot;assignee&quot;: &quot;cybertank378&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kabarhaji-id/goumrah-konvensional.git",
-    "accountId": "62a9ea97-9ab9-4c0a-99e4-85019e11b46e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kabarhaji-id/goumrah-konvensional.git&quot;,
+    &quot;accountId&quot;: &quot;62a9ea97-9ab9-4c0a-99e4-85019e11b46e&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "kabarhaji-id",
-    "repository": "goumrah-konvensional"
+    &quot;owner&quot;: &quot;kabarhaji-id&quot;,
+    &quot;repository&quot;: &quot;goumrah-konvensional&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -68,7 +66,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main-prepare",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app",
     "node.js.detected.package.eslint": "true",
@@ -181,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737118325909</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Remove unused code and update data references&#10;&#10;Removed the notification feature and redundant states from `TanyaIsma`. Replaced `dummyData` with `packageDetailData` for consistency in data usage on the Umrah Ideal Page. Cleaned up unused imports and polished IDE configuration for improved clarity and maintainability.">
+      <option name="closed" value="true" />
+      <created>1737218077708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737218077708</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

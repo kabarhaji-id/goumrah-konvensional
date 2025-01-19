@@ -4,13 +4,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import {
-  Section,
-  SectionContent,
-  SectionHeader,
-  SectionSubTitle,
-  SectionTitle,
-} from "@/components/ui/section";
+import { Section, SectionContent, SectionHeader, SectionSubTitle, SectionTitle } from "@/components/ui/section";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -20,11 +14,11 @@ import Link from "next/link";
 
 const PackagesData: CardProps[] = [
   {
-    imageUrl: "/assets/image/packages-umrah/package-1.png",
+    imageUrl: "/assets/image/packages-umrah/package-1.png"
   },
   {
-    imageUrl: "/assets/image/packages-umrah/package-2.png",
-  },
+    imageUrl: "/assets/image/packages-umrah/package-2.png"
+  }
 ];
 
 const PackagesTopSellerSection = () => {
@@ -56,7 +50,7 @@ const PackagesTopSellerSection = () => {
           <Button size="lg" className="w-full" asChild>
             <Link
               href={
-                "https://wa.me/628111845788?text=Assalamu'alaikum%20Warahmatullahi%20Wabarakatuh.%20Saya%20tertarik%20dengan%20paket%20*Umrah%20Plus%20Thaif*%20yang%20saya%20lihat%20di%20website%20Anda.%20Boleh%20saya%20tahu%20lebih%20lanjut%20tentang%20jadwal%2C%20fasilitas%2C%20dan%20biayanya%3F%20Terima%20kasih!"
+                `${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}${encodeURIComponent("Assalamu'alaikum Warahmatullahi Wabarakatuh. Saya tertarik dengan paket *Umrah Plus Thaif* yang saya lihat di website Anda. Boleh saya tahu lebih lanjut tentang jadwal, fasilitas, dan biayanya? Terima kasih!")}`
               }
               target="_blank"
             >
@@ -77,7 +71,7 @@ const Card = ({ imageUrl }: CardProps) => {
   return (
     <Link
       href={
-        "https://wa.me/628111845788?text=Assalamu'alaikum%20Warahmatullahi%20Wabarakatuh.%20Saya%20tertarik%20dengan%20paket%20*Umrah%20Plus%20Thaif*%20yang%20saya%20lihat%20di%20website%20Anda.%20Boleh%20saya%20tahu%20lebih%20lanjut%20tentang%20jadwal%2C%20fasilitas%2C%20dan%20biayanya%3F%20Terima%20kasih!"
+        `${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}${encodeURIComponent("Assalamu'alaikum Warahmatullahi Wabarakatuh. Saya tertarik dengan paket *Umrah Plus Thaif* yang saya lihat di website Anda. Boleh saya tahu lebih lanjut tentang jadwal, fasilitas, dan biayanya? Terima kasih!")}`
       }
       target="_blank"
     >

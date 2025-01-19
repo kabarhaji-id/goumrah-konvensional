@@ -77,18 +77,16 @@ export function ShareDialog({
         {dataPackage && (
           <div className="flex items-center gap-4 rounded-sm bg-neutral-foreground/5 p-2">
             <div className="flex-shrink-0">
-              {!isImageLoaded ? (
-                <Skeleton className="aspect-square w-14 bg-gray-300" />
-              ) : (
-                <Image
-                  width={500}
-                  height={500}
-                  src={dataPackage.thumbnail}
-                  alt={`image-${dataPackage.tagline}`}
-                  className="aspect-square w-14 rounded object-cover"
-                  onLoad={() => setIsImageLoaded(true)}
-                />
-              )}
+              {!isImageLoaded && <Skeleton className="h-14 w-14 bg-gray-300" />}
+
+              <Image
+                width={500}
+                height={500}
+                src={dataPackage.thumbnail}
+                alt={`image-${dataPackage.tagline}`}
+                className={`aspect-square rounded object-cover ${!isImageLoaded ? "w-0" : "w-14"}`}
+                onLoad={() => setIsImageLoaded(true)}
+              />
             </div>
             <div className="flex flex-col gap-1">
               <h6 className="line-clamp-1 text-sm font-bold text-neutral-foreground">

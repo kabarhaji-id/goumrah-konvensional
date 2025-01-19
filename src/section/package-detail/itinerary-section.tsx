@@ -48,7 +48,6 @@ const ItinerarySection = ({
     router.push(`${window.location.pathname}?${params.toString()}`);
   };
 
-  const [isImageError, setIsImageError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
@@ -102,31 +101,20 @@ const ItinerarySection = ({
                     <Skeleton key={index} className="h-[109px] w-[608px]" />
                   ) : (
                     <div key={index} className="relative h-[109px]">
-                      {!isImageError && imageItineraries.src ? (
-                        <>
-                          <Image
-                            width={70}
-                            height={60}
-                            src={imageItineraries.src}
-                            alt={imageItineraries.id}
-                            className="h-full w-[608px] object-cover"
-                            onError={() => setIsImageError(true)}
-                          />
-                          <div
-                            className="absolute bottom-0 z-10 h-14 w-full"
-                            style={{
-                              background:
-                                "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-                            }}
-                          />
-                        </>
-                      ) : (
-                        <div className="flex h-full w-[608px] items-center justify-center bg-gray-100">
-                          <span className="text-sm text-gray-500">
-                            Foto tidak tersedia
-                          </span>
-                        </div>
-                      )}
+                      <Image
+                        width={680}
+                        height={109}
+                        src={imageItineraries.src}
+                        alt={imageItineraries.id}
+                        className="h-full w-[608px] object-cover"
+                      />
+                      <div
+                        className="absolute bottom-0 z-10 h-14 w-full"
+                        style={{
+                          background:
+                            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
+                        }}
+                      />
                     </div>
                   );
                 })}

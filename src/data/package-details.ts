@@ -412,7 +412,22 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/madinah-1.png",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-7.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-8.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-9.jpg",
             category: undefined,
           },
         ],
@@ -492,12 +507,28 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/makkah-1.png",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "2",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-3.jpg",
+            category: undefined,
+          },
+          {
+            id: "3",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-4.jpg",
+            category: undefined,
+          },
+          {
+            id: "4",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-1.jpg",
             category: undefined,
           },
         ],
       },
     ],
+    importantNotes: [],
   },
   {
     id: "umrah-berkah-fokus-ibadah-gold",
@@ -859,7 +890,22 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/madinah-1.png",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-7.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-8.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-9.jpg",
             category: undefined,
           },
         ],
@@ -939,18 +985,34 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/makkah-1.png",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "2",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-3.jpg",
+            category: undefined,
+          },
+          {
+            id: "3",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-4.jpg",
+            category: undefined,
+          },
+          {
+            id: "4",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-1.jpg",
             category: undefined,
           },
         ],
       },
     ],
+    importantNotes: [],
   },
   {
-    id: "umrah-berkah-plus-wisata-turki-gold",
-    tagline: "Umrah Berkah, Plus Wisata Turki",
+    id: "umrah-cerdas-plus-wisata-turki-gold",
+    tagline: "Umrah Cerdas, Plus Wisata Turki",
     thumbnail:
-      "/assets/image/packages-umrah/cover-umrah-berkah-plus-wisata-turki-gold.jpg",
+      "/assets/image/packages-umrah/cover-umrah-cerdas-plus-wisata-turki-gold.jpg",
     type: "Plus",
     category: "Gold",
     season: "NON RAMADHAN",
@@ -964,7 +1026,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "16 Hari",
     package: "Gold",
     down_payment: 15,
-    order_url: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Gold%20Umrah%20Berkah%2C%20Plus%20Wisata%20Turki.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
+    order_url: `${whatsappLink}Assalamualaikum%2C%20Saya%20tertarik%20untuk%20melakukan%20pemesanan%20paket%20Gold%20Umrah%20Cerdas%2C%20Plus%20Wisata%20Turki.%20Saya%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20paket%20tersebut.%0A%0ATerima%20kasih%20atas%20bantuannya.%20Saya%20tunggu%20informasi%20lebih%20lanjut.`,
     departure_date: [
       {
         date: "2025-03-08T10:00:00+07:00",
@@ -1445,7 +1507,27 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/istanbul-1.png",
+            src: "/assets/image/itinerary/turki/itinerary-cover-turki-4.jpg",
+            category: undefined,
+          },
+          {
+            id: "2",
+            src: "/assets/image/itinerary/turki/itinerary-cover-turki-11.jpg",
+            category: undefined,
+          },
+          {
+            id: "3",
+            src: "/assets/image/itinerary/turki/itinerary-cover-turki-14.jpg",
+            category: undefined,
+          },
+          {
+            id: "4",
+            src: "/assets/image/itinerary/turki/itinerary-cover-turki-20.jpg",
+            category: undefined,
+          },
+          {
+            id: "4",
+            src: "/assets/image/itinerary/turki/itinerary-cover-turki-2.jpg",
             category: undefined,
           },
         ],
@@ -1510,7 +1592,22 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/madinah-1.png",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-7.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-8.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-9.jpg",
             category: undefined,
           },
         ],
@@ -1590,11 +1687,32 @@ export const packageDetailData: UmrahPackage[] = [
         images: [
           {
             id: "1",
-            src: "/assets/image/itinerary/makkah-1.png",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "2",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-3.jpg",
+            category: undefined,
+          },
+          {
+            id: "3",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-4.jpg",
+            category: undefined,
+          },
+          {
+            id: "4",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-1.jpg",
             category: undefined,
           },
         ],
       },
+    ],
+    importantNotes: [
+      "Untuk perjalanan ke Turki, kamu harus memiliki paspor dengan masa berlaku minimal 6 bulan dari tanggal kedatangan.",
+      "Dilarang membawa barang-barang yang dilarang seperti rokok, cerutu atau pun alkohol.",
+      "Selama di Turki, dilarang untuk memfoto instalasi militer, gedung pemerintahan atau individu lokal tanpa izin.",
+      "Setiap Jamaah wajib megunjungi: Turkish Delight Shop, Turkish Leather Outlet, Turkish Carpet Factory, Textille Shop, Pottery Shop, Jewelry Shop",
     ],
   },
 ];

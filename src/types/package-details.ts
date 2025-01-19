@@ -182,4 +182,5 @@ export interface UmrahPackage {
   promos: PromoDetail[];
   addons: AddOnsDetail[];
   itineraries: Itinerary[];
+  importantNotes?: string[];
 }

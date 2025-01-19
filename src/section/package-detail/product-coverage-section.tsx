@@ -10,7 +10,11 @@ import {
 } from "@/components/layout/section";
 import AccordionTermsCondition from "./section-component/accordion-terms-condition";
 
-const ProductCoverageSection = () => {
+const ProductCoverageSection = ({
+  dataImportantNotes,
+}: {
+  dataImportantNotes?: string[];
+}) => {
   return (
     <Section className="px-4 pb-5 pt-0">
       <SectionHeader className="mb-3 px-0">
@@ -73,8 +77,32 @@ const ProductCoverageSection = () => {
         <GoUmrahBottomAccent className="absolute bottom-0" />
       </SectionContent>
 
+      {dataImportantNotes && dataImportantNotes?.length > 0 && (
+        <ImportantNotes dataImportantNotes={dataImportantNotes} />
+      )}
+
       <AccordionTermsCondition />
     </Section>
+  );
+};
+
+const ImportantNotes = ({
+  dataImportantNotes,
+}: {
+  dataImportantNotes: string[];
+}) => {
+  return (
+    <div className="mt-2 rounded-[14px] border border-primary p-4">
+      <h5 className="text-sm font-semibold">Hal yang perlu kamu ketahui</h5>
+
+      <div className="ml-4 mt-2">
+        <ul className="flex list-decimal flex-col gap-1 text-xs leading-[18px] tracking-wide text-primary-foreground">
+          {dataImportantNotes.map((data, index) => {
+            return <li key={index}>{data}</li>;
+          })}
+        </ul>
+      </div>
+    </div>
   );
 };
 

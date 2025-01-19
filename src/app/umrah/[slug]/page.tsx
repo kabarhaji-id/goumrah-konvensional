@@ -91,7 +91,7 @@ export default async function DetailPage({
 
           <TourVoucherSection dataAddOns={detail.addons} />
 
-          <ProductCoverageSection />
+          <ProductCoverageSection dataImportantNotes={detail.importantNotes} />
 
           <AdditionalServices />
 

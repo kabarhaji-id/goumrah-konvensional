@@ -124,9 +124,11 @@ const HeaderComponent = ({
             {packageData.itineraries.length > 2 && (
               <>
                 <span>
-                  {(packageData.itineraries.find(
-                    (i) => i.city !== "Madinah" && i.city !== "Madinah",
-                  )?.days?.length ?? 0) - 1}{" "}
+                  {
+                    packageData.itineraries.find(
+                      (i) => i.city !== "Madinah" && i.city !== "Madinah",
+                    )?.duration
+                  }{" "}
                   hari{" "}
                   {
                     packageData.itineraries.find(
@@ -138,14 +140,18 @@ const HeaderComponent = ({
               </>
             )}
             <span>
-              {(packageData.itineraries.find((i) => i.city === "Madinah")?.days
-                ?.length ?? 0) - 1}{" "}
+              {
+                packageData.itineraries.find((i) => i.city === "Madinah")
+                  ?.duration
+              }{" "}
               hari Madinah
             </span>
             ·
             <span>
-              {(packageData.itineraries.find((i) => i.city === "Makkah")?.days
-                ?.length ?? 0) - 1}{" "}
+              {
+                packageData.itineraries.find((i) => i.city === "Makkah")
+                  ?.duration
+              }{" "}
               hari Makkah
             </span>
           </p>

@@ -194,7 +194,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
         <Button
           variant="ghost"
           onClick={toggleAllAccordion}
-          className="flex h-fit w-full justify-center gap-1 py-1"
+          className="flex h-fit w-full justify-center gap-1 pb-3 pt-1"
         >
           {isAllOpen ? (
             <div className="flex cursor-pointer gap-1">

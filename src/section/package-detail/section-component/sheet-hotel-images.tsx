@@ -6,7 +6,6 @@ import Image from "next/image";
 import { capitalize } from "@/lib/utils";
 import { ArrowLeftIcon } from "lucide-react";
 import { useImageStore } from "@/store/useInterfaceStore";
-// import { SheetImagePreview } from "./sheet-image-preview";
 import {
   Sheet,
   SheetClose,
@@ -16,9 +15,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { HotelDetail, Images } from "@/types/package-details";
-import { SheetImagePreview } from "./sheet-image-preview";
 import { ScrollArea } from "@/components/ui/scroll-area";
-// import { SwiperHotelImages } from "../../swipers/package-detail/swiper-hotel-images";
+import { SheetImagePreview } from "./sheet-image-preview";
 
 interface SheetHotelImagesProps extends React.HTMLAttributes<HTMLDivElement> {
   variant: "makkah" | "madinah" | "wisata" | string;

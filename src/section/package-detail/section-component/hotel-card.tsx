@@ -18,16 +18,17 @@ import { MapPinIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";
+import AccordionHotel from "./accordion-hotel";
 
 const HotelCard = ({
+  id,
   images,
   dataHotel,
-  children,
   type,
 }: {
+  id: string;
   images: Images[];
   dataHotel: HotelDetail;
-  children: React.ReactNode;
   type: "Makkah" | "Wisata" | string;
 }) => {
   moment.locale("id");
@@ -66,49 +67,54 @@ const HotelCard = ({
         </span>
       </CardDetailHeader>
 
-      {isLoading ? (
-        <Skeleton className="z-0 h-[366px] w-[314px]" />
-      ) : (
-        <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px] pb-2">
-          <CustomSwiper
-            className="w-full rounded-b-[14px]"
-            slidesClass="h-[236px]"
-            padding={0}
-            gap={0}
-            bulletVariant="white-dot"
-            pagination
-          >
-            {images &&
-              images.length > 0 &&
-              images.map((imageHotel, index: number) => {
-                return (
-                  <SheetHotelImages
-                    key={index}
-                    variant={type}
-                    dataHotel={dataHotel}
-                  >
-                    <div key={index} className="relative">
-                      <Image
-                        width={314}
-                        height={236}
-                        src={imageHotel.src}
-                        alt={`image-${dataHotel.hotel_name}-${index}`}
-                        className="h-[236px] object-cover"
-                      />
+      <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px]">
+        <CustomSwiper
+          className="w-full rounded-b-[14px]"
+          slidesClass="h-[236px]"
+          padding={0}
+          gap={0}
+          bulletVariant="white-dot"
+          pagination
+        >
+          {images &&
+            images.length > 0 &&
+            images.map((imageHotel, index: number) => {
+              return isLoading ? (
+                <Skeleton
+                  key={index}
+                  className="z-[999] h-[236px] w-[314px] bg-gray-200"
+                />
+              ) : (
+                <SheetHotelImages
+                  key={index}
+                  variant={type}
+                  dataHotel={dataHotel}
+                >
+                  <div key={index} className="relative">
+                    <Image
+                      width={314}
+                      height={236}
+                      src={imageHotel.src}
+                      alt={`image-${dataHotel.hotel_name}-${index}`}
+                      className="h-[236px] object-cover"
+                    />
 
-                      <div
-                        className="absolute bottom-0 h-14 w-full"
-                        style={{
-                          background:
-                            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-                        }}
-                      />
-                    </div>
-                  </SheetHotelImages>
-                );
-              })}
-          </CustomSwiper>
+                    <div
+                      className="absolute bottom-0 h-14 w-full"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
+                      }}
+                    />
+                  </div>
+                </SheetHotelImages>
+              );
+            })}
+        </CustomSwiper>
 
+        {isLoading ? (
+          <Skeleton className="-mt-4 h-[106px] w-[314px] rounded-none" />
+        ) : (
           <div className="!mt-0 flex flex-col gap-3 px-4 py-2 text-primary-foreground">
             <div className="flex flex-col gap-1.5">
               <Rating totalStars={dataHotel.star_rating} />
@@ -143,10 +149,14 @@ const HotelCard = ({
               </span>
             </div>
           </div>
+        )}
 
-          {children}
-        </CardDetailContent>
-      )}
+        {isLoading ? (
+          <Skeleton className="h-8 w-full" />
+        ) : (
+          <AccordionHotel dataHotel={dataHotel} id={id} />
+        )}
+      </CardDetailContent>
     </CardDetail>
   );
 };

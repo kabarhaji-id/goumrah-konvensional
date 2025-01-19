@@ -6,7 +6,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex h-[732px] flex-col bg-hero bg-cover bg-bottom sm:h-[960px]">
+    <section className="bg-hero relative flex h-[732px] flex-col bg-cover bg-bottom sm:h-[960px]">
       <header className="absolute top-0 z-10 flex h-14 w-full items-center justify-center px-4 py-3">
         <Image
           alt="goumrah.id logo"

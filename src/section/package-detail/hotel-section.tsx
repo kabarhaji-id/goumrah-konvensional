@@ -61,13 +61,12 @@ const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
           {arrDataHotel.length > 0 &&
             arrDataHotel.map((hotel, index) => (
               <HotelCard
+                id={index.toString()}
                 type={hotel.type}
                 key={index}
                 dataHotel={hotel.data}
                 images={hotel.data.images}
-              >
-                <AccordionHotel dataHotel={hotel.data} id={index.toString()} />
-              </HotelCard>
+              />
             ))}
         </CustomSwiper>
       </SectionContent>

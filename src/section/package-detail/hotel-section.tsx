@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import AccordionHotel from "./section-component/accordion-hotel";
 import moment from "moment";
 import "moment/locale/id";
 
@@ -19,8 +20,7 @@ import {
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
 import { Rating } from "@/components/ui/helper/getRating";
-import { SheetHotelImages } from "./sheet-hotel-images";
-import AccordionHotel from "./accordion-hotel";
+import { SheetHotelImages } from "./section-component/sheet-hotel-images";
 
 const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
   moment.locale("id");

@@ -16,7 +16,7 @@ import {
   SectionTitle,
 } from "@/components/layout/section";
 import { getArrivalDate } from "@/lib/utils";
-import AccordionFlight from "./accordion-flight";
+import AccordionFlight from "./section-component/accordion-flight";
 import { Flight, FlightDetail } from "@/types/package-details";
 import {
   CardDetail,
@@ -251,7 +251,8 @@ const FlightCard = ({
                           ),
                         ).format("DD MMM")}
                       </span>
-                      <span>∙</span>
+                      {/* note: this can be activate when there's a fixed flight time data */}
+                      {/* <span>∙</span>
                       <span>
                         {moment(
                           getArrivalDate(
@@ -259,7 +260,7 @@ const FlightCard = ({
                             dataFlight.data.transitFlight.duration,
                           ),
                         ).format("HH:mm")}
-                      </span>
+                      </span> */}
                     </>
                   ) : (
                     dataFlight.data.directFlightDate && (

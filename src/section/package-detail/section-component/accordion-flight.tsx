@@ -195,7 +195,8 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                   <span className="mx-1">
                     {dataFlight.directFlight.airport_name_arrival}
                   </span>
-                  {dataFlight.directFlightDate && dataFlight.transitFlightDate
+                  {/* note: this can be activate when there's a fixed flight time data */}
+                  {/* {dataFlight.directFlightDate && dataFlight.transitFlightDate
                     ? `(${
                         dataFlight.directFlightDate &&
                         dataFlight.transitFlightDate &&
@@ -207,7 +208,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                           dataFlight.transitFlightDate,
                         )
                       })`
-                    : ""}
+                    : ""} */}
                 </p>
               </div>
 
@@ -366,18 +367,13 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
         </AccordionContent>
 
         <AccordionTrigger
-          // variant="ghost"
           className="flex h-fit w-full justify-center gap-1 py-1 shadow-none"
           onClick={() => toggleAccordion(id)}
         >
           <div className="flex cursor-pointer gap-1">
             <span className="text-xs font-semibold leading-4 tracking-wide text-primary">
-              {isOpen ? "Lihat lebih sedikit" : "Lihat Detail"}
+              {isOpen[id] ? "Lihat lebih sedikit" : "Lihat Detail"}
             </span>
-            {/* <ChevronUpIcon
-                className="h-4 w-4 stroke-primary transition-transform"
-                stroke="none"
-              /> */}
           </div>
         </AccordionTrigger>
       </AccordionItem>

@@ -62,7 +62,7 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
               <div className="flex items-center gap-1">
                 <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                 <span className="text-xs font-semibold leading-[18px] text-primary">
-                  {dataPackage.duration} Hari
+                  {dataPackage.duration}
                 </span>
               </div>
 

@@ -19,9 +19,9 @@ export default function DetailLayout({
     return () => clearTimeout(timeout);
   }, []);
 
-  if (isLoading) {
-    return <FullPageLoader />;
-  }
+  // if (isLoading) {
+  //   return <FullPageLoader />;
+  // }
 
   return <>{children}</>;
 }

@@ -2,7 +2,7 @@
 
 import moment from "moment";
 import "moment/locale/id";
-import "../../app/globals.css";
+import "../../../app/globals.css";
 
 import CustomAirplaneMarkerIcon from "/src/assets/icons/mdi_airplane-marker.svg";
 
@@ -79,16 +79,16 @@ const FilterSection = ({
                             : "bg-gray border text-neutral-foreground"
                         } ${
                           date.status === "expired" &&
-                          "bg-subtle-background pointer-events-none"
+                          "pointer-events-none bg-subtle-background"
                         } ${
                           date.status === "musim-haji" &&
-                          "bg-custom-gold-gradient gold-border pointer-events-none"
+                          "gold-border pointer-events-none bg-custom-gold-gradient"
                         } ${
                           date.status === "closing-umrah" &&
                           "pointer-events-none bg-[#8E8E93] text-white"
                         } ${
                           date.status === "coming-soon" &&
-                          "bg-subtle-background pointer-events-none"
+                          "pointer-events-none bg-subtle-background"
                         }`}
                       >
                         <span className="text-xs tracking-tight">
@@ -114,7 +114,7 @@ const FilterSection = ({
 
                         {date.status === "musim-haji" && (
                           <span
-                            className={`bg-accent-light-gold absolute -bottom-2 !z-[999] rounded-[4px] px-1 text-[10px] font-medium tracking-wide text-neutral-foreground`}
+                            className={`absolute -bottom-2 !z-[999] rounded-[4px] bg-accent-light-gold px-1 text-[10px] font-medium tracking-wide text-neutral-foreground`}
                           >
                             Pelaksanaan Haji
                           </span>

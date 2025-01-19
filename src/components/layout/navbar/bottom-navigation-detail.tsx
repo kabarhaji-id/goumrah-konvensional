@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ButtonWhatsApp from "@/section/package-detail/button-whatsapp";
+import ButtonWhatsApp from "@/section/package-detail/section-component/button-whatsapp";
 
 import CustomChevronUpIcon from "@/assets/icons/mingcute_up-fill.svg";
 

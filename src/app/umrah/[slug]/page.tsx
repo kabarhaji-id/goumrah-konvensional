@@ -6,7 +6,7 @@ import FlightSection from "@/section/package-detail/flight-section";
 import HotelSection from "@/section/package-detail/hotel-section";
 import TransportationSection from "@/section/package-detail/transportation-section";
 import ProductCoverageSection from "@/section/package-detail/product-coverage-section";
-import AdditionalServices from "@/section/package-detail/additional-services";
+import AdditionalServices from "@/section/package-detail/additional-services-section";
 import BottomNavigationDetail from "@/components/layout/navbar/bottom-navigation-detail";
 import PromoSection from "@/section/package-detail/promo-section";
 import TourVoucherSection from "@/section/package-detail/tour-voucher-section";

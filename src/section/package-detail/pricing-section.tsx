@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { UmrahPackage } from "@/types/package-details";
-import { FilterSection } from "./pricing-filter";
+import { FilterSection } from "./section-component/pricing-filter";
 import { Section, SectionContent } from "@/components/layout/section";
 import { capitalize, getAmountOfDiscount, priceToLocale } from "@/lib/utils";
 
@@ -55,7 +55,7 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
         />
 
         {/* --- Pricing Section */}
-        <div className="border-subtle mx-4 space-y-2 rounded-[14px] border bg-white px-3 py-4 text-primary-foreground shadow-custom-sm transition-all">
+        <div className="mx-4 space-y-2 rounded-[14px] border border-subtle bg-white px-3 py-4 text-primary-foreground shadow-custom-sm transition-all">
           {pricingList
             .filter((p) => p.price)
             .map((data, index) => {

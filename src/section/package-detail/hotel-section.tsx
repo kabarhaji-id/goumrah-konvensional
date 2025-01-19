@@ -1,5 +1,4 @@
 import React from "react";
-import AccordionHotel from "./section-component/accordion-hotel";
 import moment from "moment";
 import "moment/locale/id";
 

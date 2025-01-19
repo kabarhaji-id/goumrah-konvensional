@@ -4,11 +4,7 @@ import moment from "moment";
 import "moment/locale/id";
 
 import { CircleIcon } from "lucide-react";
-import {
-  formatDuration,
-  formatTransitDuration,
-  getArrivalDate,
-} from "@/lib/utils";
+import { formatDuration, getArrivalDate } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 import { FlightDetail } from "@/types/package-details";
 import {

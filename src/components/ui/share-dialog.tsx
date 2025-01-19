@@ -20,7 +20,6 @@ import { Input } from "@/components/ui/input";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { UmrahPackage } from "@/types/package-details";
-import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "./skeleton-loader";
 
 export function ShareDialog({

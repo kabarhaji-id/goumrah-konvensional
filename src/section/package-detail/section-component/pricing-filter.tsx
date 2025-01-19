@@ -92,9 +92,9 @@ const FilterSection = ({
             )}
           </CardDetailHeader>
 
-          <CardDetailContent className="flex items-center gap-2 overflow-hidden rounded-[10px] px-2 pb-4 pt-3">
+          <CardDetailContent className="flex items-center gap-2 rounded-[10px] px-2 pb-4 pt-3">
             {variant === "departureDate" && departureDates ? (
-              <CustomSwiper gap={8} padding={1} className="overflow-visible">
+              <CustomSwiper gap={8} padding={1} slidesClass="pb-2">
                 {departureDates.map((date, index) => {
                   return isLoading ? (
                     <Skeleton key={index} className="h-16 w-[118px]" />

@@ -39,7 +39,7 @@ const HeroSection = () => {
         className="absolute bottom-10 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
         asChild
       >
-        <Link href="#umrah-package">
+        <Link href="#recommendedPackages">
           <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
             Jelajahi Berbagai Paket Umrah Kami
           </p>

@@ -16,7 +16,10 @@ const RecommendedPackagesSection = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center gap-6 bg-primary-accent px-6 pb-10 pt-16">
+    <section
+      id="recommendedPackages"
+      className="relative flex flex-col items-center justify-center gap-6 bg-primary-accent px-6 pb-10 pt-16"
+    >
       <div className="mt-4 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya

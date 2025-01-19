@@ -2,7 +2,13 @@
 
 import { useEffect, useRef } from "react";
 
-const Notification = ({ ping }: { ping?: () => void }) => {
+const Notification = ({
+  interval,
+  ping,
+}: {
+  interval: number;
+  ping?: () => void;
+}) => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -10,11 +16,10 @@ const Notification = ({ ping }: { ping?: () => void }) => {
       if (ping) ping();
 
       if (audioRef.current) {
-        console.log("Hello World");
         audioRef.current.currentTime = 0;
         audioRef.current.play();
       }
-    }, 60_000);
+    }, interval);
 
     return () => clearInterval(notificationInterval);
   }, [ping, audioRef]);

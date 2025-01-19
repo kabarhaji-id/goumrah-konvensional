@@ -5,10 +5,10 @@ import Image from "next/image";
 import moment from "moment";
 import "moment/locale/id";
 
-import GoldAccent from "/public/assets/patterns/gold-accent.svg";
-import SilverAccent from "/public/assets/patterns/silver-accent.svg";
-import PlatinumAccent from "/public/assets/patterns/platinum-accent.svg";
-import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
+import GoldAccent from "@/public/patterns/gold-accent.svg";
+import SilverAccent from "@/public/patterns/silver-accent.svg";
+import PlatinumAccent from "@/public/patterns/platinum-accent.svg";
+import CustomSunMoonIcon from "@/public/icons/tabler_sun-moon.svg";
 
 import { Badge } from "../badge";
 import { UmrahPackage } from "@/types/package-details";

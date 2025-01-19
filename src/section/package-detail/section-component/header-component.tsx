@@ -1,10 +1,10 @@
 "use client";
 
-import CustomSunMoonIcon from "/src/assets/icons/tabler_sun-moon.svg";
-import CustomVacationIcon from "/src/assets/icons/custom-vacation.svg";
-import CustomFastTrainIcon from "/src/assets/icons/material-symbols_train-rounded.svg";
-import CustomKaabaIcon from "/src/assets/icons/la_kaaba.svg";
-import ReceiptIcon from "/src/assets/icons/fluent_receipt-money-16-regular.svg";
+import CustomSunMoonIcon from "@/public/icons/tabler_sun-moon.svg";
+import CustomVacationIcon from "@/public/icons/custom-vacation.svg";
+import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.svg";
+import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
+import ReceiptIcon from "@/public/icons/fluent_receipt-money-16-regular.svg";
 
 import { Chip } from "@/components/ui/chip";
 import { UmrahPackage } from "@/types/package-details";

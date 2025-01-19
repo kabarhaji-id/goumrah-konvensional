@@ -4,7 +4,7 @@ import moment from "moment";
 import "moment/locale/id";
 import "../../../app/globals.css";
 
-import CustomAirplaneMarkerIcon from "/src/assets/icons/mdi_airplane-marker.svg";
+import CustomAirplaneMarkerIcon from "@/public/icons/mdi_airplane-marker.svg";
 
 import { useEffect, useState } from "react";
 import { CalendarDaysIcon } from "lucide-react";
@@ -37,7 +37,9 @@ const FilterSection = ({
 
   const filteredDates = departureDates.filter((d) => d.status === "active");
 
-  const [selectedDate, setSelectedDate] = useState(filteredDates[0].date);
+  const resultDates = filteredDates.length > 0 ? filteredDates : departureDates;
+
+  const [selectedDate, setSelectedDate] = useState(resultDates[0].date);
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");

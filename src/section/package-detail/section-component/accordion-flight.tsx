@@ -267,14 +267,22 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                               ),
                             ).format("HH:mm")}
                           </span> */}
-                          <span className="text-[11px] opacity-80">
-                            {moment(
-                              getArrivalDate(
-                                dataFlight.transitFlightDate,
-                                dataFlight.transitFlight.duration,
-                              ),
-                            ).format("DD MMM")}
-                          </span>
+                          {dataFlight.transitFlight.departure_arrivaltime ? (
+                            <span className="text-[11px] opacity-80">
+                              {moment(
+                                dataFlight.transitFlight.departure_arrivaltime,
+                              ).format("DD MMM")}
+                            </span>
+                          ) : (
+                            <span className="text-[11px] opacity-80">
+                              {moment(
+                                getArrivalDate(
+                                  dataFlight.transitFlightDate,
+                                  dataFlight.transitFlight.duration,
+                                ),
+                              ).format("DD MMM")}
+                            </span>
+                          )}
                         </div>
                       </div>
                     )}

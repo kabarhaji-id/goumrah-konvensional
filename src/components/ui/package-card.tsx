@@ -4,14 +4,14 @@ import Link from "next/link";
 import moment from "moment";
 import "moment/locale/id";
 
-import GoldAccent from "@/assets/patterns/gold-accent.svg";
-import SilverAccent from "@/assets/patterns/silver-accent.svg";
-import PlatinumAccent from "@/assets/patterns/platinum-accent.svg";
+import GoldAccent from "@/public/patterns/gold-accent.svg";
+import SilverAccent from "@/public/patterns/silver-accent.svg";
+import PlatinumAccent from "@/public/patterns/platinum-accent.svg";
 
-import CustomSunMoonIcon from "@/assets/icons/tabler_sun-moon.svg";
-import CustomVacationIcon from "@/assets/icons/custom-vacation.svg";
-import CustomSackPercentIcon from "@/assets/icons/mdi_sack-percent.svg";
-import CustomKaabaIcon from "@/assets/icons/la_kaaba.svg";
+import CustomSunMoonIcon from "@/public/icons/tabler_sun-moon.svg";
+import CustomVacationIcon from "@/public/icons/custom-vacation.svg";
+import CustomSackPercentIcon from "@/public/icons/mdi_sack-percent.svg";
+import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
 
 import { Chip } from "./chip";
 import { Badge } from "./badge";

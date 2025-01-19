@@ -19,6 +19,7 @@ export interface FlightDetail {
   airport_code_arrival: string;
   airport_city_arrival: string;
   departure_datetime?: string;
+  departure_arrivaltime?: string;
   class: string;
   flight_type: "Direct" | "Transit";
   airline: string;
@@ -101,6 +102,7 @@ export interface Itinerary {
   id: string;
   nth: number;
   city: string;
+  duration: number;
   days: ItineraryDays[];
   images: Images[];
 }

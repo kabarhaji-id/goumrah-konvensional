@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import CustomSeatReclineIcon from "/src/assets/icons/material-symbols_airline-seat-recline-extra-rounded.svg";
+import CustomSeatReclineIcon from "@/public/icons/material-symbols_airline-seat-recline-extra-rounded.svg";
 
 import { CustomSwiper } from "@/components/layout/swiper";
 import { useEffect, useState } from "react";

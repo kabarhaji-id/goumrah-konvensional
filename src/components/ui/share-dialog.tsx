@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import WhatsAppIcon from "@/assets/icons/ic_baseline-whatsapp.svg";
-import FacebookLogo from "@/assets/icons/facebook-logo.svg";
+import WhatsAppIcon from "@/public/icons/ic_baseline-whatsapp.svg";
+import FacebookLogo from "@/public/icons/facebook-logo.svg";
 
 import { Copy, Link2Icon } from "lucide-react";
 import { Button } from "@/components/ui/button";

@@ -9,11 +9,11 @@ import {
   SectionSubTitle,
 } from "../ui/section";
 
-import WhatsAppCIcon from "@/assets/icons/whatsapp.svg";
-import InstagramIcon from "@/assets/icons/instagram.svg";
-import LinkedInIcon from "@/assets/icons/linkedin.svg";
-import TikTokIcon from "@/assets/icons/tiktok.svg";
-import FacebookIcon from "@/assets/icons/facebook.svg";
+import WhatsAppCIcon from "@/public/icons/whatsapp.svg";
+import InstagramIcon from "@/public/icons/instagram.svg";
+import LinkedInIcon from "@/public/icons/linkedin.svg";
+import TikTokIcon from "@/public/icons/tiktok.svg";
+import FacebookIcon from "@/public/icons/facebook.svg";
 
 interface FooterProps {
   withCSbanner?: boolean;

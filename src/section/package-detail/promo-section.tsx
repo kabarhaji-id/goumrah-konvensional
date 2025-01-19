@@ -14,6 +14,8 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
+  console.log(dataPromos[0].imageUrl, "<<<");
+
   useEffect(() => {
     if ("connection" in navigator) {
       const connection = (navigator as NavigatorConnection).connection;

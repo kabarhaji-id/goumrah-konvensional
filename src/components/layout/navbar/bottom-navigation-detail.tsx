@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ButtonWhatsApp from "@/section/package-detail/section-component/button-whatsapp";
 
-import CustomChevronUpIcon from "@/assets/icons/mingcute_up-fill.svg";
+import CustomChevronUpIcon from "@/public/icons/mingcute_up-fill.svg";
 
 import { Button } from "@/components/ui/button";
 import { NavigatorConnection } from "@/types/navigator-connection";

@@ -2,26 +2,21 @@
 
 import Link from "next/link";
 
-import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
+import WhatsAppIcon from "@/public/icons/whatsapp.svg";
 
 import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
+// import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
-
-interface NavigatorConnection extends Navigator {
-  connection?: {
-    effectiveType: string;
-  };
-}
+import { NavigatorConnection } from "@/types/navigator-connection";
 
 const ButtonWhatsApp = ({ orderUrl }: { orderUrl: string }) => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const [isPageLoading, setIsPageLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
   const handleClick = () => {
-    setIsLoading(true);
+    // setIsLoading(true);
     window.location.href = orderUrl;
   };
 
@@ -58,16 +53,16 @@ const ButtonWhatsApp = ({ orderUrl }: { orderUrl: string }) => {
           onClick={handleClick}
         >
           <Link href={orderUrl}>
-            {isLoading ? (
+            {/* {isLoading ? (
               <LoadingSpinner />
-            ) : (
-              <div className="flex items-center gap-2">
-                <p className="text-base font-medium leading-[150%] tracking-wide">
-                  Pesan Paket Umrah Ini
-                </p>
-                <WhatsAppIcon />
-              </div>
-            )}
+            ) : ( */}
+            <div className="flex items-center gap-2">
+              <p className="text-base font-medium leading-[150%] tracking-wide">
+                Pesan Paket Umrah Ini
+              </p>
+              <WhatsAppIcon />
+            </div>
+            {/* )} */}
           </Link>
         </Button>
       )}

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import CustomNIghtStaysIcon from "/src/assets/icons/material-symbols_nights-stay-outline-rounded.svg";
+import CustomNIghtStaysIcon from "@/public/icons/material-symbols_nights-stay-outline-rounded.svg";
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -125,7 +125,7 @@ const ItinerarySection = ({
                   {itinerary.city}
                 </span>
                 <span className="text-xs font-medium leading-4">
-                  ({itinerary.days.length - 1} Hari)
+                  ({itinerary.duration} Hari)
                 </span>
               </div>
             </div>

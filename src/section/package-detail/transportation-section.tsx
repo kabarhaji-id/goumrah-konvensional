@@ -1,6 +1,6 @@
 import React from "react";
 
-import CustomBusIcon from "/src/assets/icons/bx_bus.svg";
+import CustomBusIcon from "@/public/icons/bx_bus.svg";
 
 import {
   Section,

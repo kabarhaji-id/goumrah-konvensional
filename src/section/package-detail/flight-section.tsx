@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import moment from "moment";
 import "moment/locale/id";
 
-import CustomAirplaneIcon from "/src/assets/icons/ri_plane-line.svg";
+import CustomAirplaneIcon from "@/public/icons/ri_plane-line.svg";
 
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -266,24 +266,33 @@ const FlightCard = ({
                     </div>
                   )}
                 </div>
-                <div className="space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
+                <div className="flex flex-col items-end space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
                   <span>
                     {dataFlight.data.transitFlight
                       ? dataFlight.data.transitFlight.airport_city_arrival
                       : dataFlight.data.directFlight.airport_city_arrival}
                   </span>
-                  <div className="flex gap-1 opacity-40">
+                  <div className="flex w-fit gap-1 opacity-40">
                     {dataFlight.data.transitFlight &&
                     dataFlight.data.transitFlightDate ? (
                       <>
-                        <span>
-                          {moment(
-                            getArrivalDate(
-                              dataFlight.data.transitFlightDate,
-                              dataFlight.data.transitFlight.duration,
-                            ),
-                          ).format("DD MMM")}
-                        </span>
+                        {dataFlight.data.transitFlight.departure_arrivaltime ? (
+                          <span>
+                            {moment(
+                              dataFlight.data.transitFlight
+                                .departure_arrivaltime,
+                            ).format("DD MMM")}
+                          </span>
+                        ) : (
+                          <span>
+                            {moment(
+                              getArrivalDate(
+                                dataFlight.data.transitFlightDate,
+                                dataFlight.data.transitFlight.duration,
+                              ),
+                            ).format("DD MMM")}
+                          </span>
+                        )}
                         {/* note: this can be activate when there's a fixed flight time data */}
                         {/* <span>∙</span>
                       <span>

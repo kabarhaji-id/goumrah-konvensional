@@ -11,7 +11,7 @@ import {
   UtensilsCrossedIcon,
   WifiIcon,
 } from "lucide-react";
-import { FaSwimmer, FaSpa } from "react-icons/fa";
+import { FaSwimmer, FaSpa, FaConciergeBell } from "react-icons/fa";
 import { MdOutlineElevator } from "react-icons/md";
 
 export const getIconFacility = (facility: string) => {
@@ -44,6 +44,8 @@ export const getIconFacility = (facility: string) => {
       return <MartiniIcon className="h-8 w-8 stroke-primary" />;
     case "Ramah Disabilitas":
       return <AccessibilityIcon className="h-8 w-8 stroke-primary" />;
+    case "Resepsionis 24/7":
+      return <FaConciergeBell className="h-8 w-8" fill="#1B8386" />;
     default:
       return null;
   }

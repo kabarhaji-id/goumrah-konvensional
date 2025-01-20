@@ -1095,8 +1095,8 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-cerdas-plus-wisata-turkiye-gold",
-    title: "Umrah Cerdas, Plus Wisata Turkiye",
+    id: "umrah-cerdas-plus-wisata-turkey-gold",
+    title: "Umrah Cerdas, Plus Wisata Turkey",
     tagline: undefined,
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-cerdas-plus-wisata-turki-gold.jpg",

@@ -1,7 +1,6 @@
 import ButtonWhatsApp from "./section-component/button-whatsapp";
 
 import { Section, SectionContent } from "@/components/layout/section";
-import { Separator } from "@/components/ui/separator";
 import { UmrahPackage } from "@/types/package-details";
 import { HeaderComponent } from "./section-component/header-component";
 

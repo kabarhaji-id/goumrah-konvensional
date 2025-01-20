@@ -329,7 +329,7 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "FJ93+PV9, Al Manakhah, Madinah 42311, Arab Saudi",
-        distance_to_masjid: 500,
+        distance_to_masjid: 220,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: undefined,
@@ -848,7 +848,7 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "Jl. Omer Bin Khattab (Al-anbariyah), Madinah 41422 Arab Saudi",
-        distance_to_masjid: 500,
+        distance_to_masjid: 250,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: undefined,
@@ -1095,8 +1095,8 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-cerdas-plus-wisata-turkiye-gold",
-    title: "Umrah Cerdas, Plus Wisata Turkiye",
+    id: "umrah-cerdas-plus-wisata-turkey-gold",
+    title: "Umrah Cerdas, Plus Wisata Turkey",
     tagline: undefined,
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-cerdas-plus-wisata-turki-gold.jpg",
@@ -1458,7 +1458,7 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "Jl. Omer Bin Khattab (Al-anbariyah), Madinah 41422 Arab Saudi",
-        distance_to_masjid: 500,
+        distance_to_masjid: 250,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: undefined,
@@ -2053,7 +2053,7 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "Jl. Musab Bin Omair Wilayah Tengah Utara, Madinah 41442 Arab Saudi",
-        distance_to_masjid: 500,
+        distance_to_masjid: 150,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: undefined,

@@ -16,9 +16,9 @@ const ProductCoverageSection = ({
   dataImportantNotes?: string[];
 }) => {
   return (
-    <Section className="px-4 pb-5 pt-0">
+    <Section className="px-4 pb-4 pt-0">
       <SectionHeader className="mb-3 px-0">
-        <SectionTitle className="leading-6 tracking-wide">
+        <SectionTitle className="leading-6 tracking-wide text-primary">
           Perjalanan Nyaman, Semua Transparan
         </SectionTitle>
       </SectionHeader>
@@ -26,7 +26,7 @@ const ProductCoverageSection = ({
       <SectionContent className="relative rounded-[14px] border border-subtle bg-primary-background bg-[url('/assets/patterns/wave-line-white.svg')]">
         <GoUmrahTopAccent className="absolute right-0" />
 
-        <div className="flex flex-col gap-2 p-4">
+        <div className="flex flex-col gap-2 px-4 pb-3 pt-4">
           <div className="flex gap-2 pl-1">
             <CircleCheckBigIcon className="h-5 w-5 stroke-primary" />
             <span className="text-sm font-semibold text-primary">
@@ -57,7 +57,7 @@ const ProductCoverageSection = ({
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 p-4">
+        <div className="flex flex-col gap-2 px-4 pb-4 pt-3">
           <div className="flex gap-2 pl-1">
             <XIcon className="h-5 w-5 stroke-primary" />
             <span className="text-sm font-semibold text-primary">

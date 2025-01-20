@@ -46,11 +46,11 @@ const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
   });
 
   return (
-    <Section className="pb-3 pt-5" id="hotel-section">
+    <Section className="pb-3 pt-2" id="hotel-section">
       <SectionHeader className="mb-2">
         <div className="flex items-center gap-2">
           <HotelIcon className="h-5 w-5 stroke-primary" />
-          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
+          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide text-primary">
             Hotel
           </SectionTitle>
         </div>

@@ -19,11 +19,11 @@ const TransportationSection = ({
   category: PackageCategory;
 }) => {
   return (
-    <Section className="pb-5 pt-0">
+    <Section className="pb-3 pt-1">
       <SectionHeader className="mb-2">
         <div className="flex items-center gap-2">
           <CustomBusIcon />
-          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
+          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide text-primary">
             Transportasi
           </SectionTitle>
         </div>

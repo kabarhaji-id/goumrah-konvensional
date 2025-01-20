@@ -4,7 +4,7 @@ import "swiper/css";
 
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@/components/ui/button";
@@ -16,6 +16,26 @@ const RecommendedPackagesSection = () => {
   const packages = useMemo(() => {
     return packageDetailData.filter((pkg) => pkg.type === "Reguler");
   }, []);
+
+  // use state untuk resize image
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setSlidesPerView(Math.min(3, packages.length)); // Show up to 3 slides on larger screens
+      } else if (window.innerWidth >= 640) {
+        setSlidesPerView(Math.min(2, packages.length)); // Show up to 2 slides on medium screens
+      } else {
+        setSlidesPerView(1); // Show 1 slide on small screens
+      }
+    };
+
+    handleResize(); // Initial call
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [packages.length]);
 
   return (
     <section
@@ -32,28 +52,19 @@ const RecommendedPackagesSection = () => {
           Paket Rekomendasi
         </h2>
       </div>
-      {/* 
-      <Swiper
-        navigation={true}
-        modules={[Navigation]}
-        centeredSlides={true}
-        className={`w-full ${packages.length > 1 && "!px-6"}`}
-      >
-        {packages.map((pkg) => (
-          <SwiperSlide key={pkg.id}>
-            <PackageCard data={pkg} />
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
 
       <Swiper
+        slidesPerView={"auto"}
         spaceBetween={16}
-        slidesPerView={1}
         centeredSlides={false}
-        className={`w-full ${packages.length > 1 && "!px-6"}`}
+        className={`w-full !px-4`}
       >
         {packages.map((pkg) => (
-          <SwiperSlide key={pkg.id} className="">
+          <SwiperSlide
+            key={pkg.id}
+            className={`h-fit w-full max-w-[90%] md:max-w-[80%]`}
+            style={{ marginRight: "16px" }}
+          >
             <PackageCard data={pkg} />
           </SwiperSlide>
         ))}

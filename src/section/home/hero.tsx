@@ -47,7 +47,7 @@ const HeroSection = () => {
       <Image
         src="/assets/image/hero-img.png"
         alt="Hero's Image"
-        className="absolute bottom-14 z-30 w-full"
+        className="absolute bottom-10 z-30 w-full"
         width={412}
         height={732}
       />

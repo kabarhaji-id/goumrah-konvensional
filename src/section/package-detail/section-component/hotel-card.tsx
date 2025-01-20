@@ -62,7 +62,7 @@ const HotelCard = ({
   return (
     <CardDetail>
       <CardDetailHeader>
-        <span className="text-xs font-semibold text-primary">
+        <span className="text-sm font-semibold text-primary">
           {dataHotel.city}
         </span>
       </CardDetailHeader>
@@ -121,7 +121,7 @@ const HotelCard = ({
             <div className="flex flex-col gap-1.5">
               <Rating totalStars={dataHotel.star_rating} />
               <div className="flex flex-col gap-1">
-                <span className="text-sm font-semibold">
+                <span className="text-base font-semibold">
                   {dataHotel.hotel_name}
                 </span>
                 <div className="flex gap-0.5">

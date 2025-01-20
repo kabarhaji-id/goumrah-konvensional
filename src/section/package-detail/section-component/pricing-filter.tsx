@@ -76,18 +76,18 @@ const FilterSection = ({
     <Section className="px-4 py-0">
       <SectionContent>
         <CardDetail>
-          <CardDetailHeader>
+          <CardDetailHeader className="flex items-center">
             {variant === "departureDate" ? (
               <>
                 <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
-                <span className="text-xs font-semibold text-primary">
+                <span className="text-sm font-semibold text-primary">
                   Tanggal Keberangkatan
                 </span>
               </>
             ) : (
               <>
                 <CustomAirplaneMarkerIcon className="h-4 w-4" fill="#1B8386" />
-                <span className="text-xs font-semibold text-primary">
+                <span className="text-sm font-semibold text-primary">
                   Kota Keberangkatan
                 </span>
               </>

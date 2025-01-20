@@ -75,9 +75,9 @@ const ItinerarySection = ({
   }, [networkSpeed]);
 
   return (
-    <Section className="pb-5 pt-0">
+    <Section className="pb-4 pt-0">
       <SectionHeader className="mb-3">
-        <SectionTitle className="items-center leading-6 tracking-wide">
+        <SectionTitle className="items-center leading-6 tracking-wide text-primary">
           <CalendarCheckIcon className="h-5 w-5 stroke-primary" />
           Jadwal Perjalanan Ibadah Kamu
         </SectionTitle>

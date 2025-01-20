@@ -1,4 +1,5 @@
 import TourVoucherCard from "./section-component/tour-voucher-card";
+import CustomVoucherIcon from "@/public/icons/mingcute_ticket-line.svg";
 
 import {
   Section,
@@ -12,11 +13,14 @@ import { AddOnsDetail } from "@/types/package-details";
 
 const TourVoucherSection = ({ dataAddOns }: { dataAddOns: AddOnsDetail[] }) => {
   return (
-    <Section className="pb-5 pt-0">
+    <Section className="pb-4 pt-0">
       <SectionHeader className="mb-3 px-4">
-        <SectionTitle className="flex items-center">
-          Voucher Wisata
-        </SectionTitle>
+        <div className="flex items-center gap-2.5">
+          <CustomVoucherIcon />
+          <SectionTitle className="flex items-center text-primary">
+            Voucher Wisata
+          </SectionTitle>
+        </div>
 
         <SectionDescription className="text-sm font-normal leading-5 tracking-wide">
           Bikin perjalanan kamu makin seru dengan berbagai wisata yang bisa kamu

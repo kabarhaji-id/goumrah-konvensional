@@ -14,15 +14,13 @@ const HeaderSection = ({
 }) => {
   return (
     <Section className="py-0">
-      <SectionContent className="space-y-5 px-4 pb-5 pt-4 text-primary-foreground">
+      <SectionContent className="space-y-4 px-4 py-4 text-primary-foreground">
         <HeaderComponent
           packageData={packageData}
           durationDays={durationDays}
         />
 
         {/* --- Button: Order This Package  */}
-        <Separator />
-
         <ButtonWhatsApp orderUrl={packageData.order_url} />
       </SectionContent>
     </Section>

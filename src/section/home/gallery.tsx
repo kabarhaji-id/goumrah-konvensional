@@ -55,7 +55,7 @@ interface CardProps {
 
 const Card = ({ imageUrl, alt }: CardProps) => {
   return (
-    <div className="relative aspect-[9/16] h-full w-[200px] flex-none overflow-hidden rounded-lg">
+    <div className="relative aspect-[9/16] h-[226px] w-full flex-none overflow-hidden rounded-lg">
       <Image src={imageUrl} alt={alt} fill sizes="44vw" quality={100} />
     </div>
   );

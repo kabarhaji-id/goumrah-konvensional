@@ -226,7 +226,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "le-meridien-tower-makkah",
         city: "Makkah",
         hotel_name: "Le Meridien Tower",
-        star_rating: 3,
+        star_rating: 5,
         duration: 4,
         images: [
           {
@@ -276,7 +276,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "hayah-golden-madinah",
         city: "Madinah",
         hotel_name: "Hayah Golden",
-        star_rating: 3,
+        star_rating: 4,
         duration: 3,
         images: [
           {
@@ -742,7 +742,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "anjum-makkah",
         city: "Makkah",
         hotel_name: "Anjum",
-        star_rating: 4,
+        star_rating: 5,
         duration: 4,
         images: [
           {
@@ -794,7 +794,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "taiba-madinah",
         city: "Madinah",
         hotel_name: "Taiba Madinah",
-        star_rating: 4,
+        star_rating: 5,
         duration: 3,
         images: [
           {
@@ -1095,8 +1095,8 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-cerdas-plus-wisata-turki-gold",
-    title: "Umrah Cerdas, Plus Wisata Turki",
+    id: "umrah-cerdas-plus-wisata-turkiye-gold",
+    title: "Umrah Cerdas, Plus Wisata Turkiye",
     tagline: undefined,
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-cerdas-plus-wisata-turki-gold.jpg",
@@ -1352,7 +1352,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "anjum-makkah",
         city: "Makkah",
         hotel_name: "Anjum",
-        star_rating: 4,
+        star_rating: 5,
         duration: 4,
         images: [
           {
@@ -1404,7 +1404,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "taiba-madinah",
         city: "Madinah",
         hotel_name: "Taiba Madinah",
-        star_rating: 4,
+        star_rating: 5,
         duration: 3,
         images: [
           {

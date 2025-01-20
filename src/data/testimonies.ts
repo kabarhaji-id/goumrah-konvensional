@@ -43,7 +43,7 @@ export const testimonies: Testimony[] = [
     age: 60,
     address: "Makassar, Indonesia",
     rating: 5,
-    review: "Layanan yang sangat baik! Mulai dari pengurusan visa hingga akomodasi, semuanya ditangani dengan sangat profesional. Hotelnya sangat dekat dengan Haram, yang menjadi nilai tambah besar.",
+    review: "Layanan yang sangat baik! Mulai dari pengurusan visa hingga akomodasi, semuanya ditangani dengan sangat profesional.",
     date: "2024-11-30T10:00:00+07:00",
   },
   {

@@ -1,21 +1,22 @@
-import { Section, SectionContent, SectionHeader } from "@/components/layout/section"
+import {
+  Section,
+  SectionContent,
+  SectionHeader,
+} from "@/components/layout/section";
 
 const ResponsibilitySection = () => {
-    return (
-        <Section
-            id="tanggung-jawab"
-            className="pt-10 pb-5 px-4"
-        >
-            <SectionHeader className="px-0">
-                <span className="text-neutral-foreground text-lg font-bold tracking-wide leading-6">
-                    TANGGUNG JAWAB
-                </span>
-            </SectionHeader>
+  return (
+    <Section id="tanggung-jawab" className="px-4 pb-5 pt-10">
+      <SectionHeader className="px-0">
+        <span className="text-lg font-bold leading-6 tracking-wide text-neutral-foreground">
+          TANGGUNG JAWAB
+        </span>
+      </SectionHeader>
 
             <SectionContent>
                 <div className="mt-4 space-y-2 text-neutral-foreground text-sm leading-6">
                     <p>
-                        PT. GoUmrah tidak bertanggung jawab atas kejadian-kejadian berikut:
+                        PT. Kabar Haji Indonesia tidak bertanggung jawab atas kejadian-kejadian berikut:
                     </p>
                     <ul className="pl-10 space-y-1 list-disc text-neutral-foreground text-sm leading-6">
                         <li>

@@ -443,7 +443,7 @@ const PackageCard = ({
                       data.quadPrice !== data.quadFinalPrice && (
                         <div className="flex items-center gap-2">
                           <span className="text-[12.5px] line-through opacity-60">
-                            {priceToLocale(data.quadPrice)}
+                            {priceToLocale(data.quadFinalPrice)}
                           </span>
                         </div>
                       )}

@@ -1,3 +1,4 @@
+import { CustomSwiper } from "@/components/layout/swiper";
 import {
   Section,
   SectionContent,
@@ -26,18 +27,22 @@ const galleryData: CardProps[] = [
 
 const GallerySection = () => {
   return (
-    <Section id="gallery">
+    <Section id="gallery" className="pt-5">
       <SectionHeader>
-        <SectionSubTitle>#EpicMoment</SectionSubTitle>
-        <SectionTitle className="text-primary">
+        <SectionSubTitle className="z-20 text-white">
+          #EpicMoment
+        </SectionSubTitle>
+        <SectionTitle className="z-20 text-white">
           Abadikan Moment Tak Terlupakan Bersama{" "}
           <span className="font-normal">go</span>umrah.id
         </SectionTitle>
       </SectionHeader>
-      <SectionContent className="scrollbar-hide flex max-w-full gap-x-4 overflow-x-auto px-6">
-        {galleryData.map((data) => (
-          <Card imageUrl={data.imageUrl} alt={data.alt} key={data.alt} />
-        ))}
+      <SectionContent className="flex max-w-full px-0">
+        <CustomSwiper padding={6} gap={10}>
+          {galleryData.map((data) => (
+            <Card imageUrl={data.imageUrl} alt={data.alt} key={data.alt} />
+          ))}
+        </CustomSwiper>
       </SectionContent>
     </Section>
   );
@@ -50,7 +55,7 @@ interface CardProps {
 
 const Card = ({ imageUrl, alt }: CardProps) => {
   return (
-    <div className="relative aspect-[9/16] h-auto w-5/12 flex-none overflow-hidden rounded-lg">
+    <div className="relative aspect-[9/16] h-full w-[200px] flex-none overflow-hidden rounded-lg">
       <Image src={imageUrl} alt={alt} fill sizes="44vw" quality={100} />
     </div>
   );

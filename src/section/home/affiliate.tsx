@@ -53,7 +53,7 @@ const affiliates: Affiliate[] = [
 
 const AffiliatesSection = () => {
   return (
-    <section className="relative flex flex-col gap-8 bg-opacity-30 py-10">
+    <section className="relative flex flex-col gap-8 overflow-hidden bg-opacity-30 py-6">
       <h2 className="w-full px-6 text-center text-base font-normal leading-[140%] tracking-wider text-primary">
         Afiliasi goumrah.id
       </h2>
@@ -74,7 +74,7 @@ const AffiliatesSection = () => {
         alt="Affiliate's Background"
         width={412}
         height={192}
-        className="absolute bottom-0 z-0 opacity-10"
+        className="absolute -bottom-10 z-0 w-full max-w-screen-sm opacity-10"
       />
     </section>
   );

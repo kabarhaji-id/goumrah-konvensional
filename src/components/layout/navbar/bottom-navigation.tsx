@@ -37,7 +37,7 @@ const BottomNavigation = () => {
       <button
         onClick={() => router.push("/umrah")}
         data-active={pathname == "/umrah"}
-        className="group flex flex-col items-center gap-1 text-foreground/30 data-[active=true]:text-primary"
+        className="group flex flex-col items-center gap-1 text-primary/50 data-[active=true]:text-primary"
       >
         <KaabaIcon className="size-7" />
         <p className="whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold">

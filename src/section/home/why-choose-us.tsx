@@ -11,6 +11,7 @@ import PelayananTerbaikCIcon from "@/public/icons/pelayanan-terbaik.svg";
 import PemesananMudahCIcon from "@/public/icons/pemesanan-mudah.svg";
 import PembayaranAmanCIconfrom from "@/public/icons/pembayaran-aman.svg";
 import TerpercayaCIcon from "@/public/icons/terpercaya.svg";
+import { CustomSwiper } from "@/components/layout/swiper";
 
 const CardData: CardProps[] = [
   { title: "Pelayanan Terbaik", Icon: PelayananTerbaikCIcon },
@@ -22,8 +23,16 @@ const CardData: CardProps[] = [
 
 const WhyChooseUsSection = () => {
   return (
-    <Section className="bg-gradient-to-br from-foreground to-primary pb-12">
-      <SectionHeader>
+    <Section className="relative bg-gradient-to-b from-foreground to-primary py-8">
+      <span
+        className="absolute -top-[399px] z-0 h-[400px] w-full bg-primary-foreground"
+        style={{
+          background:
+            "linear-gradient(0deg, rgba(0,38,38,1) 11%, rgba(11,71,71,1) 36%, rgba(89,130,130,1) 66%, rgba(162,185,185,1) 86%, rgba(226,232,240,1) 100%)",
+        }}
+      />
+
+      <SectionHeader className="!-mt-6">
         <SectionSubTitle className="text-accent">
           Dapatkan Kelebihannya
         </SectionSubTitle>
@@ -31,11 +40,21 @@ const WhyChooseUsSection = () => {
           Berangkat Umrah Bersama goumrah.id
         </SectionTitle>
       </SectionHeader>
-      <SectionContent className="scrollbar-hide flex max-w-full gap-x-4 overflow-x-auto px-6">
-        {CardData.map((data) => (
-          <Card title={data.title} Icon={data.Icon} key={data.title} />
-        ))}
+      <SectionContent className="flex max-w-full px-0">
+        <CustomSwiper padding={6}>
+          {CardData.map((data) => (
+            <Card title={data.title} Icon={data.Icon} key={data.title} />
+          ))}
+        </CustomSwiper>
       </SectionContent>
+
+      <span
+        className="absolute -bottom-[499px] z-0 h-[500px] w-full bg-primary"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(27,131,134,1) 0%, rgba(83,162,164,1) 34%, rgba(139,192,193,1) 59%, rgba(255,255,255,1) 100%)",
+        }}
+      />
     </Section>
   );
 };
@@ -48,7 +67,7 @@ interface CardProps {
 
 const Card = ({ title, Icon }: CardProps) => {
   return (
-    <div className="relative flex flex-none basis-5/12 flex-col items-center space-y-3 overflow-hidden rounded-lg border border-background/30 p-3 pt-6 backdrop-blur-lg">
+    <div className="relative flex h-[175px] w-[127px] flex-col items-center space-y-3 overflow-hidden rounded-lg border border-background/30 p-3 pt-6 backdrop-blur-lg">
       <div className="glassmorphism absolute inset-0 -z-10 opacity-20" />
       <Icon />
       <p className="text-center text-base font-bold leading-normal tracking-wide text-background">

@@ -117,7 +117,7 @@ const PackageCard = ({
                   <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
                     <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                   </div>
-                  <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-primary">
+                  <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-primary">
                     {data.duration}
                   </span>
                 </Chip>
@@ -139,7 +139,7 @@ const PackageCard = ({
                 {data.tagline}
               </span>
 
-              <span className="text-xs font-medium opacity-80">
+              <span className="text-[12.5px] font-medium opacity-80">
                 {moment(departureDate.date).format("DD MMMM YYYY")}
               </span>
               <h5 className="font-extrabold">
@@ -199,7 +199,7 @@ const PackageCard = ({
                       <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
                     )}
                   </div>
-                  <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-primary">
+                  <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-primary">
                     {data.type === "Plus" ? "Plus Wisata" : data.type}
                   </span>
                 </Chip>
@@ -209,7 +209,7 @@ const PackageCard = ({
                 {data.tagline}
               </span>
 
-              <div className="space-y-2 text-xs leading-[18px] tracking-tight text-primary-foreground opacity-80">
+              <div className="space-y-2 text-[12.5px] leading-[18px] tracking-tight text-primary-foreground opacity-80">
                 {/* --- Departure Date */}
                 <div className="flex items-center gap-1.5">
                   <CalendarDaysIcon className="h-4 w-4 stroke-primary-foreground" />
@@ -224,14 +224,14 @@ const PackageCard = ({
                 </div>
 
                 {/* --- Flight */}
-                <div className="flex gap-1.5 text-xs">
+                <div className="flex gap-1.5 text-[12.5px]">
                   <PlaneIcon className="h-4 w-4 stroke-primary-foreground" />
                   <span className="font-medium">
                     {data.flight_details.departure_flight.airline}
                   </span>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs">
+                <div className="flex items-center gap-1.5 text-[12.5px]">
                   <HotelIcon className="h-4 w-4 stroke-primary-foreground" />
                   <div className="flex items-center">
                     <span className="font-medium">
@@ -320,7 +320,7 @@ const PackageCard = ({
                     <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
                       <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-primary">
+                    <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-primary">
                       {data.duration}
                     </span>
                   </Chip>
@@ -340,7 +340,7 @@ const PackageCard = ({
                         <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
                       )}
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-primary">
+                    <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-primary">
                       {data.type === "Plus" ? "Plus Wisata" : data.type}
                     </span>
                   </Chip>
@@ -350,12 +350,15 @@ const PackageCard = ({
               {isLoading ? (
                 <Skeleton className="h-5 w-56" />
               ) : (
-                <span className="line-clamp-2 text-sm font-bold leading-5 text-primary-foreground">
-                  {data.tagline}
-                </span>
+                <div className="line-clamp-2 text-[17.5px] leading-5 text-primary-foreground">
+                  <span className="font-bold">{data.title}</span>
+                  {data.tagline && (
+                    <span className="pl-1 font-normal">{data.tagline}</span>
+                  )}
+                </div>
               )}
 
-              <div className="space-y-1.5 text-xs leading-[18px] tracking-tight text-primary-foreground opacity-80">
+              <div className="space-y-1.5 text-[12.5px] leading-[18px] tracking-tight text-primary-foreground opacity-80">
                 {/* --- Departure Date */}
                 {isLoading ? (
                   <Skeleton className="h-[18px] w-40" />
@@ -380,7 +383,7 @@ const PackageCard = ({
                   {isLoading ? (
                     <Skeleton className="h-4 w-14 rounded" />
                   ) : (
-                    <div className="flex gap-1.5 text-xs">
+                    <div className="flex gap-1.5 text-[12.5px]">
                       <PlaneIcon className="h-4 w-4 stroke-primary-foreground" />
                       <span className="font-medium">
                         {data.flight_details.departure_flight.airline}
@@ -391,7 +394,7 @@ const PackageCard = ({
                   {isLoading ? (
                     <Skeleton className="h-4 w-9 rounded-sm" />
                   ) : (
-                    <div className="flex items-center gap-1.5 text-xs">
+                    <div className="flex items-center gap-1.5 text-[12.5px]">
                       <HotelIcon className="h-4 w-4 stroke-primary-foreground" />
                       <div className="flex items-center">
                         <span className="font-medium">
@@ -409,7 +412,7 @@ const PackageCard = ({
               {isLoading ? (
                 <Skeleton className="h-6 w-36" />
               ) : (
-                <div className="flex flex-1 flex-col gap-1 text-primary-foreground">
+                <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground">
                   {/* --- Discount Badge */}
                   {data.quadFinalPrice &&
                     data.quadPrice !== Number(data.quadFinalPrice) && (
@@ -418,7 +421,7 @@ const PackageCard = ({
                           className="h-4 w-4"
                           fill="#ef4444"
                         />
-                        <span className="text-xs font-semibold text-destructive">
+                        <span className="text-[12.5px] font-semibold text-destructive">
                           {getAmountOfDiscount(
                             data.quadPrice,
                             Number(data.quadFinalPrice),
@@ -429,7 +432,7 @@ const PackageCard = ({
 
                   <div className="flex items-center gap-3">
                     {/* --- Normal Price */}
-                    <h5 className="font-extrabold">
+                    <h5 className="text-[17.5px] font-extrabold">
                       {priceToLocale(data.quadPrice)}
                     </h5>
 
@@ -437,7 +440,7 @@ const PackageCard = ({
                     {data.quadFinalPrice &&
                       data.quadPrice !== data.quadFinalPrice && (
                         <div className="flex items-center gap-2">
-                          <span className="text-sm line-through opacity-60">
+                          <span className="text-[12.5px] line-through opacity-60">
                             {priceToLocale(data.quadPrice)}
                           </span>
                         </div>

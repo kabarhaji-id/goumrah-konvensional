@@ -122,9 +122,14 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             {isLoading ? (
               <Skeleton className="h-10 w-36" />
             ) : (
-              <span className="line-clamp-2 text-sm font-bold leading-5 text-primary-foreground">
-                {dataPackage.tagline}
-              </span>
+              <div className="line-clamp-2 flex flex-col pb-0.5 text-sm leading-5 text-primary-foreground">
+                <p className="font-bold">{dataPackage.title}</p>
+                {dataPackage.tagline && (
+                  <span className="pl-1 font-normal">
+                    {dataPackage.tagline}
+                  </span>
+                )}
+              </div>
             )}
 
             {isLoading ? (

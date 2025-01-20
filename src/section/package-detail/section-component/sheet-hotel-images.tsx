@@ -63,7 +63,7 @@ export const SheetHotelImages = ({
     const handlePopState = () => {
       if (isSheetOpen) {
         setIsSheetOpen(false);
-        window.history.pushState(null, "", window.location.href);
+        window.history.replaceState(null, "", window.location.href);
       }
     };
 
@@ -73,7 +73,9 @@ export const SheetHotelImages = ({
     }
 
     return () => {
-      window.removeEventListener("popstate", handlePopState);
+      if (isSheetOpen) {
+        window.removeEventListener("popstate", handlePopState);
+      }
     };
   }, [isSheetOpen]);
 

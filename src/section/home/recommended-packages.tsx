@@ -18,13 +18,13 @@ const RecommendedPackagesSection = () => {
   return (
     <section
       id="recommendedPackages"
-      className="relative flex flex-col items-center justify-center gap-6 bg-primary-accent px-6 pb-10 pt-16"
+      className="relative -mt-0 flex flex-col items-center justify-center gap-6 bg-primary-accent py-0"
     >
       <div className="mt-4 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
-        <h2 className="text-2xl font-bold leading-[130%] tracking-normal text-primary-foreground">
+        <h2 className="text-2xl font-bold leading-[130%] tracking-normal text-primary">
           Paket Rekomendasi
         </h2>
       </div>
@@ -33,7 +33,7 @@ const RecommendedPackagesSection = () => {
         spaceBetween={20}
         slidesPerView={1}
         centeredSlides={true}
-        className="w-full"
+        className={`w-full ${packages.length > 1 && "!px-6"}`}
       >
         {packages.map((pkg) => (
           <SwiperSlide key={pkg.id}>
@@ -42,7 +42,7 @@ const RecommendedPackagesSection = () => {
         ))}
       </Swiper>
 
-      <Button className="mb-4 h-11 w-[317px] px-5 py-1" asChild>
+      <Button className="z-20 mb-4 h-11 w-[317px] px-5 py-1" asChild>
         <Link href="/umrah/rekomendasi">
           <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
             Lihat Semua Paket

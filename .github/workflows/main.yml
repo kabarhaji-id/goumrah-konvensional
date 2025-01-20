@@ -22,15 +22,18 @@ jobs:
 
       # Step 3: Install pnpm globally for the GitHub Actions runner
       - name: Install pnpm globally
-        run: npm install -g pnpm
+        run: |
+          npm install -g pnpm
 
       # Step 4: Install dependencies for the Next.js app
       - name: Install dependencies
         run: pnpm install
 
-      # Step 5: Install pnpm for the www-data user on the VPS
-      - name: Install pnpm for www-data user
-        run: sudo -u www-data npm install -g pnpm
+      # Step 5: Fix permissions for npm cache and pnpm install for www-data user
+      - name: Fix permissions for www-data user
+        run: |
+          sudo chown -R 33:33 /var/www/.npm  # Fix the ownership of the npm cache directory
+          sudo -u www-data npm install -g pnpm # Install pnpm for the www-data user
 
       # Step 6: Install dependencies for the www-data user (on VPS)
       - name: Install dependencies for www-data user

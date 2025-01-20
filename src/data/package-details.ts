@@ -794,7 +794,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "taiba-madinah",
         city: "Madinah",
         hotel_name: "Taiba Madinah",
-        star_rating: 4,
+        star_rating: 5,
         duration: 3,
         images: [
           {
@@ -1404,7 +1404,7 @@ export const packageDetailData: UmrahPackage[] = [
         id: "taiba-madinah",
         city: "Madinah",
         hotel_name: "Taiba Madinah",
-        star_rating: 4,
+        star_rating: 5,
         duration: 3,
         images: [
           {

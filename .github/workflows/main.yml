@@ -14,46 +14,46 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
-      - name: Setup Node.js
+      # Step 2: Set up Node.js v22.x (or fallback to v18.x if compatibility issues arise)
+      - name: Setup Node.js (v22.x)
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '22'  # Using v22 to match the version on your VPS
 
-      # Step 3: Install pnpm
-      - name: Install pnpm
+      # Step 3: Install pnpm globally for the GitHub Actions runner
+      - name: Install pnpm globally
         run: npm install -g pnpm
 
-      # Step 4: Install dependencies
+      # Step 4: Install dependencies for the Next.js app
       - name: Install dependencies
         run: pnpm install
 
-      # Step 5: Build the Next.js application
+      # Step 5: Test the application with pnpm and Node.js v22.x
+      - name: Run build and test with Node.js v22.x
+        run: |
+          pnpm run build  # Ensure the build process works
+          pnpm run dev    # Optionally test running the app in dev mode
+
+      # Optional: Add a fallback step to Node.js v18.x for compatibility if needed
+      - name: Fallback to Node.js v18.x for compatibility testing (if needed)
+        if: failure()  # Only run if previous step fails
+        run: |
+          echo "Switching to Node.js v18.x for testing due to compatibility issues with v22.x"
+          nvm install 18
+          nvm use 18
+          pnpm run build
+          pnpm run dev
+
+      # Step 6: Install pnpm globally for the 'www-data' user on the VPS (if not already installed)
+      - name: Install pnpm for www-data user
+        run: sudo -u www-data npm install -g pnpm
+
+      # Step 7: Build the Next.js application on the GitHub Actions runner
       - name: Build GoUmrah app
         run: sudo -u www-data pnpm run build
 
-      # Step 6: Transfer files and PM2 config to VPS
+      # Step 8: Deploy files and PM2 config to the VPS
       - name: Deploy to VPS
         uses: appleboy/scp-action@v0.1.6
         with:
-          host: ${{ secrets.VPS_HOST }}             # Set this in GitHub Secrets
-          username: ${{ secrets.VPS_USER }}         # Set this in GitHub Secrets
-          key: ${{ secrets.SSH_PRIVATE_KEY }}       # Set this in GitHub Secrets
-          port: ${{ secrets.VPS_PORT }}      # Change if your VPS uses a different SSH port
-          source: |
-            .next/**                                # Path to build output
-            ecosystem.config.js                     # PM2 config
-          target: "/home/www/goumrah-konvensional"  # Target directory on VPS
-
-      # Step 7: Restart the application using PM2
-      - name: Restart application with PM2
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.VPS_PORT }}
-          script: |
-            cd /home/www/goumrah-konvensional
-            sudo -u www-data pnpm install --prod                  # Ensure production dependencies are installed
-            sudo -u www-data pm2 startOrRestart ecosystem.config.js
+          host: ${{ secrets.VPS_HOST }}            

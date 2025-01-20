@@ -22,7 +22,7 @@ const TanyaIsma = () => {
         <motion.button
           key="button"
           layoutId={`tanya-isma-${id}-trigger`}
-          className="absolute bottom-1.5 size-[110px] origin-top-left mr-5"
+          className="absolute bottom-1.5 size-[110px] origin-top-left"
           onClick={() => setIsOpen((prev) => !prev)}
           whileHover={{
             scale: 1.1,

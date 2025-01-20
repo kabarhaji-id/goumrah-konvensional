@@ -29,8 +29,8 @@ const BottomNavigation = () => {
         data-active={false}
         className="group flex flex-col items-center gap-1 ttext-primary/50 data-[active=true]:text-primary"
       >
-        <CustomerServiceIcon className="size-7" />
-        <p className="whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold">
+        <CustomerServiceIcon className="size-7 invisible" />
+        <p className="whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold invisible">
           Tanya Isma
         </p>
       </button>

@@ -28,40 +28,32 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Step 5: Test the application with pnpm and Node.js v22.x
-      - name: Run build and test with Node.js v22.x
-        run: |
-          sudo -u www-data pnpm run build --verbose  # Ensure the build process works with verbose output
-           sudo -u www-data pnpm run dev              # Optionally test running the app in dev mode
-
-
-      # Step 6: Install pnpm globally for the 'www-data' user on the VPS (if not already installed)
+      # Step 5: Install pnpm for the www-data user on the VPS
       - name: Install pnpm for www-data user
         run: sudo -u www-data npm install -g pnpm
 
-      # Step 7: Install dependencies for the 'www-data' user before building the app
+      # Step 6: Install dependencies for the www-data user (on VPS)
       - name: Install dependencies for www-data user
         run: sudo -u www-data pnpm install
 
-      # Step 8: Build the Next.js application on the GitHub Actions runner (using www-data)
+      # Step 7: Build the Next.js application using www-data
       - name: Build GoUmrah app
-        run: sudo -u www-data pnpm run build --verbose  # Run the build step with verbose logging
+        run: sudo -u www-data pnpm run build --verbose
 
-      # Step 9: Deploy files and PM2 config to the VPS
+      # Step 8: Deploy files and PM2 config to the VPS
       - name: Deploy to VPS
         uses: appleboy/scp-action@v0.1.6
         with:
-          host: ${{ secrets.VPS_HOST }}             # Set this in GitHub Secrets
-          username: ${{ secrets.VPS_USER }}         # Set this in GitHub Secrets
-          key: ${{ secrets.SSH_PRIVATE_KEY }}       # Set this in GitHub Secrets
-          port: ${{ secrets.VPS_PORT }}             # Change if your VPS uses a different SSH port
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
           source: |
-            .next/**                                # Path to build output
-            ecosystem.config.js                     # PM2 config
-          target: "/home/www/goumrah-konvensional"  # Target directory on VPS
-          timeout: 1800  # Timeout after 30 minutes (adjust as needed)
+            .next/**  # Path to build output
+            ecosystem.config.js  # PM2 config
+          target: "/home/www/goumrah-konvensional"
 
-      # Step 10: Restart application using PM2 on the VPS
+      # Step 9: Restart application using PM2
       - name: Restart application with PM2
         uses: appleboy/ssh-action@v0.1.7
         with:
@@ -71,10 +63,5 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             cd /home/www/goumrah-konvensional
-            sudo -u www-data pnpm install --prod                  # Ensure production dependencies are installed
+            sudo -u www-data pnpm install --prod
             sudo -u www-data pm2 startOrRestart ecosystem.config.js
-          timeout: 1800  # Timeout after 30 minutes (adjust as needed)
-
-      # Step 11: Check Node.js version on the VPS (debugging step)
-      - name: Check Node.js version
-        run: node -v

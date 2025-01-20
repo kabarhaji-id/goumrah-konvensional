@@ -678,8 +678,8 @@ export const packageDetailData: UmrahPackage[] = [
     quadPrice: 33900000,
     infantPrice: undefined,
     doubleFinalPrice: 34500000,
-    tripleFinalPrice: 31500000,
-    quadFinalPrice: 28500000,
+    tripleFinalPrice: 31900000,
+    quadFinalPrice: 28900000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],
@@ -1153,8 +1153,8 @@ export const packageDetailData: UmrahPackage[] = [
     quadPrice: 36900000,
     infantPrice: undefined,
     doubleFinalPrice: 40500000,
-    tripleFinalPrice: 37500000,
-    quadFinalPrice: 34500000,
+    tripleFinalPrice: 37900000,
+    quadFinalPrice: 34900000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [
@@ -1862,9 +1862,9 @@ export const packageDetailData: UmrahPackage[] = [
     triplePrice: 45900000,
     quadPrice: 41900000,
     infantPrice: undefined,
-    doubleFinalPrice: 46500000,
-    tripleFinalPrice: 42500000,
-    quadFinalPrice: 38500000,
+    doubleFinalPrice: 46900000,
+    tripleFinalPrice: 42900000,
+    quadFinalPrice: 38900000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],

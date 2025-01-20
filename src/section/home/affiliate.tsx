@@ -49,6 +49,24 @@ const affiliates: Affiliate[] = [
     width: 56,
     height: 40,
   },
+  {
+    name: "Badan Nasional Sertifikasi Profesi",
+    logo: "/assets/image/afiliate-logo/bnsp.png",
+    width: 110,
+    height: 40,
+  },
+  {
+    name: "Garuda Indonesia",
+    logo: "/assets/image/afiliate-logo/garuda-indonesia.webp",
+    width: 90,
+    height: 40,
+  },
+  {
+    name: "Lion Air",
+    logo: "/assets/image/afiliate-logo/lion-air.webp",
+    width: 64,
+    height: 40,
+  },
 ];
 
 const AffiliatesSection = () => {
@@ -65,17 +83,17 @@ const AffiliatesSection = () => {
             alt={`Logo ${affiliate.name}`}
             width={affiliate.width}
             height={affiliate.height}
-            className="mr-16 grayscale"
+            className="mr-16"
           />
         ))}
       </Marquee>
-      <Image
+      {/* <Image
         src="/assets/image/affiliate-bg.png"
         alt="Affiliate's Background"
         width={412}
         height={192}
         className="absolute -bottom-10 z-0 w-full max-w-screen-sm opacity-10"
-      />
+      /> */}
     </section>
   );
 };

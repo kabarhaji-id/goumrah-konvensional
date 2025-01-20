@@ -10,13 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-import React, { useRef, useState } from "react";
-
-// Import Swiper styles
-import "swiper/css/navigation";
-
-// import required modules
-import { Navigation } from "swiper/modules";
+import React from "react";
 
 const RecommendedPackagesSection = () => {
   const packages = useMemo(() => {

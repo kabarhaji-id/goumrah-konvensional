@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 
+const sortedTestimonies = [...testimonies].sort((a, b) => b.rating - a.rating);
 const TestimonyCard = ({ testimony }: { testimony: Testimony }) => {
   return (
     <div className="relative h-[182px] w-[299px] space-y-3 overflow-hidden rounded-[14px] border border-subtle bg-white p-4 shadow-custom-sm">
@@ -51,7 +52,7 @@ const TestimonySection = () => {
       </div>
 
       <Swiper spaceBetween={16} slidesPerView="auto" className="w-full">
-        {testimonies.map((testimony) => (
+        {sortedTestimonies.map((testimony) => (
           <SwiperSlide key={testimony.id} className="!w-[299px]">
             <TestimonyCard testimony={testimony} />
           </SwiperSlide>

@@ -68,49 +68,51 @@ const HotelCard = ({
       </CardDetailHeader>
 
       <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px]">
-        <CustomSwiper
-          className="w-full rounded-b-[14px]"
-          slidesClass="h-[236px]"
-          padding={0}
-          gap={0}
-          bulletVariant="white-dot"
-          pagination
-        >
-          {images &&
-            images.length > 0 &&
-            images.map((imageHotel, index: number) => {
-              return isLoading ? (
-                <Skeleton
-                  key={index}
-                  className="z-[999] h-[236px] w-[314px] bg-gray-200"
-                />
-              ) : (
-                <SheetHotelImages
-                  key={index}
-                  variant={type}
-                  dataHotel={dataHotel}
-                >
-                  <div key={index} className="relative">
-                    <Image
-                      width={314}
-                      height={236}
-                      src={imageHotel.src}
-                      alt={`image-${dataHotel.hotel_name}-${index}`}
-                      className="h-[236px] object-cover"
-                    />
+        <div className="overflow-hidden">
+          <CustomSwiper
+            className="h-[236px] w-full rounded-[14px]"
+            slidesClass="h-full"
+            padding={0}
+            gap={0}
+            bulletVariant="white-dot"
+            pagination
+          >
+            {images &&
+              images.length > 0 &&
+              images.map((imageHotel, index: number) => {
+                return isLoading ? (
+                  <Skeleton
+                    key={index}
+                    className="z-[999] h-[236px] w-[314px] bg-gray-200"
+                  />
+                ) : (
+                  <SheetHotelImages
+                    key={index}
+                    variant={type}
+                    dataHotel={dataHotel}
+                  >
+                    <div key={index} className="relative">
+                      <Image
+                        width={314}
+                        height={236}
+                        src={imageHotel.src}
+                        alt={`image-${dataHotel.hotel_name}-${index}`}
+                        className="h-[236px] object-cover"
+                      />
 
-                    <div
-                      className="absolute bottom-0 h-14 w-full"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-                      }}
-                    />
-                  </div>
-                </SheetHotelImages>
-              );
-            })}
-        </CustomSwiper>
+                      <div
+                        className="absolute bottom-0 h-14 w-full"
+                        style={{
+                          background:
+                            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
+                        }}
+                      />
+                    </div>
+                  </SheetHotelImages>
+                );
+              })}
+          </CustomSwiper>
+        </div>
 
         {isLoading ? (
           <Skeleton className="-mt-4 h-[106px] w-[314px] rounded-none" />

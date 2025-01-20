@@ -75,9 +75,12 @@ const DetailNavbar = ({ withTitle = true, dataPackage }: DetailNavbarProps) => {
           </Link>
 
           {withTitle && (
-            <span className="line-clamp-1 font-semibold">
-              {dataPackage.tagline}
-            </span>
+            <div className="line-clamp-1">
+              <span className="font-semibold">{dataPackage.title}</span>
+              {dataPackage.tagline && (
+                <span className="pl-1 font-normal">{dataPackage.tagline}</span>
+              )}
+            </div>
           )}
         </div>
 

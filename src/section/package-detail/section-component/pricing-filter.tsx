@@ -174,7 +174,7 @@ const FilterSection = ({
                           <span
                             className={`absolute -bottom-2 !z-[999] rounded-[4px] bg-[#999999] px-1 text-[10px] font-medium tracking-wide text-gray-100`}
                           >
-                            Sudah Berangkat
+                            Kuota Penuh
                           </span>
                         )}
                       </div>

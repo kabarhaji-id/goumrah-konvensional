@@ -48,12 +48,12 @@ const ProductCoverageSection = ({
           <div className="flex gap-1">
             <InfoIcon className="h-5 w-5 stroke-primary" />
             <span className="text-sm font-semibold leading-5 text-primary">
-              Biaya Perlengkapan
+              Biaya Atribut
             </span>
           </div>
 
           <p className="text-xs leading-4 tracking-wide text-neutral-foreground">
-            Biaya perlengkapan sebesar Rp 1.000.000 untuk setiap jamaah
+            Biaya atribut sebesar Rp 1.000.000 untuk setiap jamaah
           </p>
         </div>
 

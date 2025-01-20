@@ -10,7 +10,7 @@ import "swiper/css";
 
 const TestimonyCard = ({ testimony }: { testimony: Testimony }) => {
   return (
-    <div className="border-subtle relative h-[182px] w-[299px] space-y-3 overflow-hidden rounded-[14px] border bg-white p-4 shadow-custom-sm">
+    <div className="relative h-[182px] w-[299px] space-y-3 overflow-hidden rounded-[14px] border border-subtle bg-white p-4 shadow-custom-sm">
       <div className="space-y-1">
         <p className="line-clamp-4 text-xs leading-[18px] tracking-wide text-neutral-foreground">
           {testimony.review}
@@ -23,7 +23,7 @@ const TestimonyCard = ({ testimony }: { testimony: Testimony }) => {
         </span>
         <div className="flex items-center gap-0.5">
           <StarIcon className="h-3 w-3" fill="#D19E45" stroke="none" />
-          <span className="text-accent-gold text-sm font-bold">
+          <span className="text-sm font-bold text-accent-gold">
             {testimony.rating}
           </span>
         </div>

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import SwiperCore from "swiper";
+import "swiper/css/zoom";
 
 import { ArrowLeftIcon } from "lucide-react";
 import { useImageStore } from "@/store/useInterfaceStore";
@@ -48,11 +49,34 @@ export const SheetImagePreview = ({
     const thumbnailSwiper = thumbnailSwiperRef.current;
     if (thumbnailSwiper && activeImageIndex !== null) {
       thumbnailSwiper.slideTo(activeImageIndex, 0, false);
+      thumbnailSwiper.update();
     }
   }, [activeImageIndex]);
 
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isSheetOpen) {
+        setIsSheetOpen(false);
+        window.history.replaceState(null, "", window.location.href);
+      }
+    };
+
+    if (isSheetOpen) {
+      window.history.pushState(null, "", window.location.href);
+      window.addEventListener("popstate", handlePopState);
+    }
+
+    return () => {
+      if (isSheetOpen) {
+        window.removeEventListener("popstate", handlePopState);
+      }
+    };
+  }, [isSheetOpen]);
+
   return (
-    <Sheet>
+    <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
       <SheetTrigger>{children}</SheetTrigger>
       <SheetContent side="right" className="border-none bg-neutral-foreground">
         <DialogTitle />
@@ -93,6 +117,10 @@ export const SheetImagePreview = ({
             onSwiper={(instance) => (mainSwiperRef.current = instance)}
             initialSlide={activeImageIndex}
             updateOnWindowResize
+            zoom={{
+              maxRatio: 3,
+              minRatio: 3,
+            }}
           >
             {dataImages
               .flatMap((group) => group.images)

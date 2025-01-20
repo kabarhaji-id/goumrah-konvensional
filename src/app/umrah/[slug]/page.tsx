@@ -32,7 +32,7 @@ export const generateMetadata = async ({
 
   return {
     generator: "goumrah.id",
-    title: data?.tagline,
+    title: `${data?.title} ${data?.tagline && data?.tagline}`,
     keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
     openGraph: {
       title: data?.tagline,

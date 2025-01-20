@@ -4,7 +4,7 @@ import "swiper/css";
 
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
-import { useEffect, useMemo, useState } from "react";
+import {  useMemo, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@/components/ui/button";
@@ -20,7 +20,7 @@ const RecommendedPackagesSection = () => {
   // use state untuk resize image
   const [slidesPerView, setSlidesPerView] = useState(1);
 
-  useEffect(() => {
+/*  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setSlidesPerView(Math.min(3, packages.length)); // Show up to 3 slides on larger screens
@@ -35,7 +35,7 @@ const RecommendedPackagesSection = () => {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [packages.length]);
+  }, [packages.length]);*/
 
   return (
     <section

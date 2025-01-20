@@ -15,7 +15,7 @@ const ResponsibilitySection = () => {
             <SectionContent>
                 <div className="mt-4 space-y-2 text-neutral-foreground text-sm leading-6">
                     <p>
-                        PT. GoUmrah tidak bertanggung jawab atas kejadian-kejadian berikut:
+                        PT. Kabar Haji Indonesia tidak bertanggung jawab atas kejadian-kejadian berikut:
                     </p>
                     <ul className="pl-10 space-y-1 list-disc text-neutral-foreground text-sm leading-6">
                         <li>

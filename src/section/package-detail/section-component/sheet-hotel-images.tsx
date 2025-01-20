@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { capitalize } from "@/lib/utils";
@@ -57,8 +57,28 @@ export const SheetHotelImages = ({
 
   const { setActiveImageIndex, setActiveCategory } = useImageStore();
 
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (isSheetOpen) {
+        setIsSheetOpen(false);
+        window.history.pushState(null, "", window.location.href);
+      }
+    };
+
+    if (isSheetOpen) {
+      window.history.pushState(null, "", window.location.href);
+      window.addEventListener("popstate", handlePopState);
+    }
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [isSheetOpen]);
+
   return (
-    <Sheet>
+    <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
       <SheetTrigger>{children}</SheetTrigger>
       <SheetContent side="right" className="border-none bg-white">
         <SheetDescription />

@@ -24,11 +24,11 @@ const IntroductionSection = () => {
                     <p>
                         Kami sangat menghargai setiap kritik, saran, dan masukan dari Anda. Silakan sampaikan kepada Kami melalui email di
                         <span className="mx-1 font-semibold">
-                            cs@GoUmrah.com
+                            admin@goumrah.id
                         </span>
                         atau telepon di
                         <span className="mx-1 font-semibold">
-                            0804 1500 878
+                            0881 1157 188
                         </span>
                     </p>
 

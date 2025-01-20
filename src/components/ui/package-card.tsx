@@ -351,10 +351,12 @@ const PackageCard = ({
                 <Skeleton className="h-5 w-56" />
               ) : (
                 <div className="line-clamp-2 text-[17.5px] leading-5 text-primary-foreground">
-                  <span className="font-bold">{data.title}</span>
-                  {data.tagline && (
-                    <span className="pl-1 font-normal">{data.tagline}</span>
-                  )}
+                  <span>
+                    <span className="font-bold">{data.title}</span>
+                    {data.tagline && (
+                      <span className="font-normal"> {data.tagline}</span>
+                    )}
+                  </span>
                 </div>
               )}
 

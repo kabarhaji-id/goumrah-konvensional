@@ -28,10 +28,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # Step 5: Ensure permissions for www-data user and install pnpm globally for them (if needed)
+      # Step 5: Install pnpm for www-data user (and ensure the directory exists)
       - name: Install pnpm for www-data user
         run: |
-          sudo chown -R $USER:$USER /home/ubuntu/.npm
+          # Ensure the .npm directory exists for www-data and set permissions
+          sudo mkdir -p /home/www-data/.npm
+          sudo chown -R www-data:www-data /home/www-data/.npm
           sudo -u www-data npm install -g pnpm # Install pnpm for www-data user
 
       # Step 6: Install dependencies for the www-data user (on VPS)

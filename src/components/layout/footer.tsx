@@ -64,8 +64,9 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
           <div className="flex flex-col gap-2.5">
             <h3 className="text-xl font-medium leading-6">Office</h3>
             <span className="w-full max-w-[269px] text-sm">
-              RT.1/RW.9, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, Daerah
-              Khusus Ibukota Jakarta 12740
+		JL. GM Ainul Yakin ADAH 35A Kalibata
+		Kec. Pancoran, Kota Jakarta Selatan,
+		Daerah Khusus Ibukota Jakarta 12740
             </span>
           </div>
 
@@ -84,7 +85,7 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
           </div>
 
           <span className="text-sm">
-            © 2024 goumrah.id - PT Kabar Haji Indonesia. All Rights Reserved
+            &copy; 2024 goumrah.id - PT Kabar Haji Indonesia. All Rights Reserved
           </span>
 
           <div className="flex gap-4">

@@ -36,7 +36,7 @@ const HeroSection = () => {
       </div>
 
       <Button
-        className="absolute bottom-10 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
+        className="absolute bottom-40 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
         asChild
       >
         <Link href="#recommendedPackages">

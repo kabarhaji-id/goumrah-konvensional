@@ -16,14 +16,14 @@ const IdealPackagesSection = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-6 pb-10 pt-16">
-      <span className="absolute top-0 z-0 h-20 w-full bg-gradient-to-b from-primary-accent to-[#E2E8F0]" />
+    <section className="relative flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-6 pb-10 pt-0">
+      <span className="absolute -top-6 z-0 h-16 w-full bg-gradient-to-b from-primary-accent to-[#E2E8F0]" />
 
-      <div className="mt-4 flex flex-col items-center gap-2">
+      <div className="z-20 mt-10 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
-        <h2 className="text-center text-2xl font-bold leading-[130%] tracking-normal text-primary-foreground">
+        <h2 className="text-center text-2xl font-bold leading-[130%] tracking-normal text-primary">
           Paket Umrah Ideal, dengan Perjalanan yang Tak Terlupakan
         </h2>
       </div>
@@ -32,7 +32,7 @@ const IdealPackagesSection = () => {
         spaceBetween={20}
         slidesPerView={1}
         centeredSlides={true}
-        className="w-full"
+        className={`w-full ${packages.length > 1 && "!px-6"}`}
       >
         {packages.map((pkg) => (
           <SwiperSlide key={pkg.id}>
@@ -41,7 +41,7 @@ const IdealPackagesSection = () => {
         ))}
       </Swiper>
 
-      <Button className="mb-4 h-11 w-[317px] px-5 py-1" asChild>
+      <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
         <Link href="/umrah/ideal">
           <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
             Lihat Semua Paket

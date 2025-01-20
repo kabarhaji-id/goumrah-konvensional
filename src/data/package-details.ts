@@ -2,14 +2,17 @@ import { UmrahPackage } from "@/types/package-details";
 
 const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
-const promoLink = `${whatsappLink}${encodeURIComponent("Assalamualaikum, " +
-  "Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. " +
-  "Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`
+const promoLink = `${whatsappLink}${encodeURIComponent(
+  "Assalamualaikum, " +
+    "Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. " +
+    "Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+)}`;
 
 export const packageDetailData: UmrahPackage[] = [
   {
     id: "umrah-hemat-fokus-ibadah-silver",
-    tagline: "Umrah Hemat, Fokus Ibadah",
+    title: "Umrah Hemat",
+    tagline: "#FokusIbadah",
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-hemat-fokus-ibadah-silver.jpg",
     type: "Reguler",
@@ -25,8 +28,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Silver",
     down_payment: 7,
-    order_url:
-      `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat, Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat, Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-24T10:00:00+07:00",
@@ -105,13 +107,13 @@ export const packageDetailData: UmrahPackage[] = [
         status: "coming-soon",
       },
     ],
-    doublePrice: 26100000,
-    triplePrice: 24600000,
-    quadPrice: 23100000,
+    doublePrice: 29900000,
+    triplePrice: 27900000,
+    quadPrice: 25900000,
     infantPrice: undefined,
-    doubleFinalPrice: undefined,
-    tripleFinalPrice: undefined,
-    quadFinalPrice: undefined,
+    doubleFinalPrice: 26900000,
+    tripleFinalPrice: 24900000,
+    quadFinalPrice: 22900000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],
@@ -378,15 +380,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
@@ -575,7 +577,8 @@ export const packageDetailData: UmrahPackage[] = [
   },
   {
     id: "umrah-berkah-fokus-ibadah-gold",
-    tagline: "Umrah Berkah, Fokus Ibadah",
+    title: "Umrah Berkah",
+    tagline: "#FokusIbadah",
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-berkah-fokus-ibadah-gold.jpg",
     type: "Reguler",
@@ -670,13 +673,13 @@ export const packageDetailData: UmrahPackage[] = [
         status: "coming-soon",
       },
     ],
-    doublePrice: 33500000,
-    triplePrice: 31000000,
-    quadPrice: 28500000,
+    doublePrice: 39900000,
+    triplePrice: 36900000,
+    quadPrice: 33900000,
     infantPrice: undefined,
-    doubleFinalPrice: undefined,
-    tripleFinalPrice: undefined,
-    quadFinalPrice: undefined,
+    doubleFinalPrice: 34500000,
+    tripleFinalPrice: 31500000,
+    quadFinalPrice: 28500000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],
@@ -714,7 +717,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_code_departure: "JED",
         airport_city_departure: "Jeddah",
         airport_name_arrival: "Soekarno Hatta International Airport",
-        airport_terminal_arrival: undefined,
+        airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
         departure_datetime: "2025-04-17T10:00:00+07:00",
@@ -896,15 +899,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
@@ -1093,7 +1096,8 @@ export const packageDetailData: UmrahPackage[] = [
   },
   {
     id: "umrah-cerdas-plus-wisata-turki-gold",
-    tagline: "Umrah Cerdas, Plus Wisata Turki",
+    title: "Umrah Cerdas, Plus Wisata Turki",
+    tagline: undefined,
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-cerdas-plus-wisata-turki-gold.jpg",
     type: "Plus",
@@ -1144,13 +1148,13 @@ export const packageDetailData: UmrahPackage[] = [
         status: "coming-soon",
       },
     ],
-    doublePrice: 39500000,
-    triplePrice: 37000000,
-    quadPrice: 34500000,
+    doublePrice: 42900000,
+    triplePrice: 39900000,
+    quadPrice: 36900000,
     infantPrice: undefined,
-    doubleFinalPrice: undefined,
-    tripleFinalPrice: undefined,
-    quadFinalPrice: undefined,
+    doubleFinalPrice: 40500000,
+    tripleFinalPrice: 37500000,
+    quadFinalPrice: 34500000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [
@@ -1215,7 +1219,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_code_departure: "JED",
         airport_city_departure: "Jeddah",
         airport_name_arrival: "Soekarno Hatta International Airport",
-        airport_terminal_arrival: undefined,
+        airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
         departure_datetime: "2025-04-20T10:00:00+07:00",
@@ -1505,15 +1509,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
@@ -1806,7 +1810,8 @@ export const packageDetailData: UmrahPackage[] = [
   },
   {
     id: "umrah-eksklusif-fokus-ibadah-platinum",
-    tagline: "Umrah Eksklusif, Fokus Ibadah",
+    title: "Umrah Eksklusif",
+    tagline: "#FokusIbadah",
     thumbnail:
       "/assets/image/packages-umrah/cover-umrah-eksklusif-fokus-ibadah-platinum.jpg",
     type: "Reguler",
@@ -1853,13 +1858,13 @@ export const packageDetailData: UmrahPackage[] = [
         status: "coming-soon",
       },
     ],
-    doublePrice: 46500000,
-    triplePrice: 42500000,
-    quadPrice: 38500000,
+    doublePrice: 49900000,
+    triplePrice: 45900000,
+    quadPrice: 41900000,
     infantPrice: undefined,
-    doubleFinalPrice: undefined,
-    tripleFinalPrice: undefined,
-    quadFinalPrice: undefined,
+    doubleFinalPrice: 46500000,
+    tripleFinalPrice: 42500000,
+    quadFinalPrice: 38500000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],
@@ -1897,7 +1902,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_code_departure: "JED",
         airport_city_departure: "Jeddah",
         airport_name_arrival: "Soekarno Hatta International Airport",
-        airport_terminal_arrival: undefined,
+        airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
         departure_datetime: "2025-07-13T10:00:00+07:00",
@@ -2080,7 +2085,7 @@ export const packageDetailData: UmrahPackage[] = [
     promos: [
       {
         imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${promoLink}`
+        link: `${promoLink}`,
       },
     ],
     addons: [
@@ -2092,15 +2097,15 @@ export const packageDetailData: UmrahPackage[] = [
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
       },
       {
-        title: "Makan Romansiah + Cable Car Thaif",
-        category: "Wisata Kota",
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
         price: 1000000,
         places: ["Restoran Al Romansiah", "Cable Car"],
         imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
       },
       {
-        title: "Restoran Asia + Speed Boat Jeddah",
-        category: "Wisata Kota",
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
         price: 1500000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",

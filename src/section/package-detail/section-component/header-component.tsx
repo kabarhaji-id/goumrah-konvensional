@@ -101,9 +101,12 @@ const HeaderComponent = ({
         {isLoading ? (
           <Skeleton className="h-[26px] w-[200px]" />
         ) : (
-          <h3 className="text-xl font-semibold leading-[130%] tracking-[0.5px]">
-            {packageData.tagline}
-          </h3>
+          <div className="flex text-xl leading-[130%] tracking-[0.5px]">
+            <h3 className="font-semibold">{packageData.title}</h3>
+            {packageData.tagline && (
+              <h3 className="pl-1 font-normal">{packageData.tagline}</h3>
+            )}
+          </div>
         )}
 
         {/* --- Fast Train? */}
@@ -124,9 +127,11 @@ const HeaderComponent = ({
             {packageData.itineraries.length > 2 && (
               <>
                 <span>
-                  {(packageData.itineraries.find(
-                    (i) => i.city !== "Madinah" && i.city !== "Madinah",
-                  )?.days?.length ?? 0) - 1}{" "}
+                  {
+                    packageData.itineraries.find(
+                      (i) => i.city !== "Madinah" && i.city !== "Madinah",
+                    )?.duration
+                  }{" "}
                   hari{" "}
                   {
                     packageData.itineraries.find(
@@ -138,14 +143,18 @@ const HeaderComponent = ({
               </>
             )}
             <span>
-              {(packageData.itineraries.find((i) => i.city === "Madinah")?.days
-                ?.length ?? 0) - 1}{" "}
+              {
+                packageData.itineraries.find((i) => i.city === "Madinah")
+                  ?.duration
+              }{" "}
               hari Madinah
             </span>
             ·
             <span>
-              {(packageData.itineraries.find((i) => i.city === "Makkah")?.days
-                ?.length ?? 0) - 1}{" "}
+              {
+                packageData.itineraries.find((i) => i.city === "Makkah")
+                  ?.duration
+              }{" "}
               hari Makkah
             </span>
           </p>

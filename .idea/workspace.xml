@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Remove unused code and update data references&#10;&#10;Removed the notification feature and redundant states from `TanyaIsma`. Replaced `dummyData` with `packageDetailData` for consistency in data usage on the Umrah Ideal Page. Cleaned up unused imports and polished IDE configuration for improved clarity and maintainability.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/umrah/[slug]/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/umrah/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/umrah/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/package-details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/package-details.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/package-detail/additional-services-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/additional-services-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +66,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main-feat-others",
+    "git-widget-placeholder": "feat/tanya-isma-size",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app",
     "node.js.detected.package.eslint": "true",
@@ -150,6 +147,7 @@
       <workItem from="1737213698756" duration="1914000" />
       <workItem from="1737216342062" duration="896000" />
       <workItem from="1737296777060" duration="2799000" />
+      <workItem from="1737345963926" duration="4738000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -191,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737218077708</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes.">
+      <option name="closed" value="true" />
+      <created>1737346523250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737346523250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +223,20 @@
     <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced the multi-command dev script with a single Next.js dev command to improve maintainability. Adjusted .gitignore to exclude SSL-related files, zip archives, and IDE-specific configurations for cleaner version control." />
     <MESSAGE value="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup." />
     <MESSAGE value="Update WhatsApp link handling to use public env variable&#10;&#10;Replaced hard-coded WhatsApp number references with the `NEXT_PUBLIC_WHATSAPP_NUMBER` environment variable for better configurability. Updated links in `package-details.ts`, `chat-box.tsx`, and `footer.tsx` to align with this change. This enhances maintainability and simplifies future updates to the WhatsApp contact number." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update WhatsApp link handling to use public env variable&#10;&#10;Replaced hard-coded WhatsApp number references with the `NEXT_PUBLIC_WHATSAPP_NUMBER` environment variable for better configurability. Updated links in `package-details.ts`, `chat-box.tsx`, and `footer.tsx` to align with this change. This enhances maintainability and simplifies future updates to the WhatsApp contact number." />
+    <MESSAGE value="Remove unused code and update data references&#10;&#10;Removed the notification feature and redundant states from `TanyaIsma`. Replaced `dummyData` with `packageDetailData` for consistency in data usage on the Umrah Ideal Page. Cleaned up unused imports and polished IDE configuration for improved clarity and maintainability." />
+    <MESSAGE value="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

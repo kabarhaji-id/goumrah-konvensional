@@ -170,3 +170,11 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+
+.swiper-zoom-container img {
+  cursor: zoom-in;
+}
+
+.swiper-zoom-container img:active {
+  cursor: zoom-out;
+}

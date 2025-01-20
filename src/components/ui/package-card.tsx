@@ -282,7 +282,7 @@ const PackageCard = ({
       {size === "default" && (
         <div
           className={cn(
-            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm",
+            "flex h-full w-full max-w-[550px] flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm",
             className,
           )}
         >

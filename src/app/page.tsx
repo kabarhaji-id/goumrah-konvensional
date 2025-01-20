@@ -14,8 +14,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <RecommendedPackagesSection />
       <IdealPackagesSection />
+      <RecommendedPackagesSection />
       <WhyChooseUsSection />
       <GallerySection />
       <AffiliatesSection />

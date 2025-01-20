@@ -16,8 +16,14 @@ const IdealPackagesSection = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-6 pb-10 pt-0">
-      <span className="absolute -top-6 z-0 h-16 w-full bg-gradient-to-b from-primary-accent to-[#E2E8F0]" />
+    <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-6 pb-10">
+      <span
+        className="absolute -top-40 z-0 h-40 w-full bg-gradient-to-t from-primary-accent to-[#E2E8F0]"
+        style={{
+          background:
+            "linear-gradient(0deg, rgba(226,232,240,1) 11%, rgba(255,255,255,1) 100%)",
+        }}
+      />
 
       <div className="z-20 mt-10 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">

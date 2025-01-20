@@ -102,10 +102,12 @@ const HeaderComponent = ({
           <Skeleton className="h-[26px] w-[200px]" />
         ) : (
           <div className="flex text-xl leading-[130%] tracking-[0.5px]">
-            <h3 className="font-semibold">{packageData.title}</h3>
-            {packageData.tagline && (
-              <h3 className="pl-1 font-normal">{packageData.tagline}</h3>
-            )}
+            <h3>
+              <span className="font-semibold">{packageData.title}</span>
+              {packageData.tagline && (
+                <span className="font-normal"> {packageData.tagline}</span>
+              )}
+            </h3>
           </div>
         )}
 

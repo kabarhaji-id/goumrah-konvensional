@@ -83,15 +83,20 @@ export function ShareDialog({
                 width={500}
                 height={500}
                 src={dataPackage.thumbnail}
-                alt={`image-${dataPackage.tagline}`}
+                alt={`image-${dataPackage.title}`}
                 className={`aspect-square rounded object-cover ${!isImageLoaded ? "w-0" : "w-14"}`}
                 onLoad={() => setIsImageLoaded(true)}
               />
             </div>
             <div className="flex flex-col gap-1">
-              <h6 className="line-clamp-1 text-sm font-bold text-neutral-foreground">
-                {dataPackage.tagline}
-              </h6>
+              <div className="line-clamp-1 text-sm font-bold text-neutral-foreground">
+                <p>
+                  <span className="font-bold">{dataPackage.title}</span>
+                  {dataPackage.tagline && (
+                    <span className="font-normal"> {dataPackage.tagline}</span>
+                  )}
+                </p>
+              </div>
               <span className="text-xs text-neutral-foreground/50">
                 goumrah.id
               </span>

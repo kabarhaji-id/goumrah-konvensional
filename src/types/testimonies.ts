@@ -1,6 +1,9 @@
 export interface Testimony {
   id: number;
-  review: string;
-  rating: number;
   reviewer: string;
+  age: number;
+  address: string;
+  rating: number;
+  review: string;
+  date: string;
 }

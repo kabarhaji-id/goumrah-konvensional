@@ -7,7 +7,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section className="relative flex h-[732px] flex-col bg-hero bg-cover bg-bottom sm:h-[960px]">
-      <header className="absolute top-0 z-10 flex h-14 w-full items-center justify-center px-4 py-3">
+      <header className="absolute top-4 z-10 flex h-14 w-full items-center justify-center px-4 py-10">
         <Image
           alt="goumrah.id logo"
           src="/assets/image/logo-main.svg"
@@ -35,7 +35,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <Button
+      {/* <Button
         className="absolute bottom-40 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
         asChild
       >
@@ -45,17 +45,17 @@ const HeroSection = () => {
           </p>
           <ChevronDown className="!size-5 animate-bounce duration-1000" />
         </Link>
-      </Button>
+      </Button> */}
 
       <Image
         src="/assets/image/hero-img.png"
         alt="Hero's Image"
-        className="absolute bottom-0 z-0 w-full"
+        className="absolute bottom-14 z-30 w-full"
         width={412}
         height={732}
       />
 
-      <span className="absolute bottom-0 z-0 h-44 w-full bg-gradient-to-b from-white/0 to-accent" />
+      <span className="w-fullbg-gradient-to-t absolute bottom-10 z-10 h-44 from-white/0 to-accent" />
     </section>
   );
 };

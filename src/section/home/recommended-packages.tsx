@@ -4,7 +4,7 @@ import "swiper/css";
 
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
-import {  useMemo, useState } from "react";
+import {  useMemo } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@/components/ui/button";

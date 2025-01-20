@@ -435,7 +435,7 @@ const PackageCard = ({
                   <div className="flex items-center gap-3">
                     {/* --- Normal Price */}
                     <h5 className="text-[17.5px] font-extrabold">
-                      {priceToLocale(data.quadPrice)}
+                      {data.quadFinalPrice ? priceToLocale(data.quadFinalPrice) : priceToLocale(data.quadPrice)}
                     </h5>
 
                     {/* --- Discount Price */}
@@ -443,7 +443,7 @@ const PackageCard = ({
                       data.quadPrice !== data.quadFinalPrice && (
                         <div className="flex items-center gap-2">
                           <span className="text-[12.5px] line-through opacity-60">
-                            {priceToLocale(data.quadFinalPrice)}
+                            {priceToLocale(data.quadPrice)}
                           </span>
                         </div>
                       )}

@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "@/components/layout/navbar";
-import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "goumrah.id",
@@ -21,14 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth bg-gray-50">
       <body className={`${plusJakartaSans.className} antialiased`}>
-        <div className="mx-auto max-w-screen-sm">
-          <Navbar />
-
+        <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
           <main>{children}</main>
-
-          <Footer />
         </div>
       </body>
     </html>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cybertank378&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kabarhaji-id/goumrah-konvensional.git&quot;,
+    &quot;accountId&quot;: &quot;62a9ea97-9ab9-4c0a-99e4-85019e11b46e&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;kabarhaji-id&quot;,
+    &quot;repository&quot;: &quot;goumrah-konvensional&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2rZ9IXyfae6GTBE7zZi2vdHgFKZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "feat/tanya-isma-size",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Website\goumrah-konvensional\src\app" />
+      <recent name="D:\Project\Website\goumrah-konvensional\src\components" />
+      <recent name="D:\Project\Website\goumrah-konvensional\src\assets\icons" />
+      <recent name="D:\Project\Website\goumrah-konvensional\public\assets\image" />
+      <recent name="D:\Project\Website\goumrah-konvensional\public\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\Website\goumrah-konvensional\src\components\chat" />
+      <recent name="D:\Project\Website\goumrah-konvensional\src\assets\icons" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="goumrah-konvensional" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="goumrah-konvensional" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="" />
+      <created>1736755650761</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736755650761</updated>
+      <workItem from="1736755656716" duration="10486000" />
+      <workItem from="1736815777977" duration="1822000" />
+      <workItem from="1736825390025" duration="11061000" />
+      <workItem from="1736870538344" duration="9742000" />
+      <workItem from="1737116390607" duration="387000" />
+      <workItem from="1737116785942" duration="1986000" />
+      <workItem from="1737213698756" duration="1914000" />
+      <workItem from="1737216342062" duration="896000" />
+      <workItem from="1737296777060" duration="2799000" />
+      <workItem from="1737345963926" duration="4738000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
+      <option name="closed" value="true" />
+      <created>1736817585691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736817585691</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations.">
+      <option name="closed" value="true" />
+      <created>1737116619372</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737116619372</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced the multi-command dev script with a single Next.js dev command to improve maintainability. Adjusted .gitignore to exclude SSL-related files, zip archives, and IDE-specific configurations for cleaner version control.">
+      <option name="closed" value="true" />
+      <created>1737116938370</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737116938370</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup.">
+      <option name="closed" value="true" />
+      <created>1737118325909</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737118325909</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Remove unused code and update data references&#10;&#10;Removed the notification feature and redundant states from `TanyaIsma`. Replaced `dummyData` with `packageDetailData` for consistency in data usage on the Umrah Ideal Page. Cleaned up unused imports and polished IDE configuration for improved clarity and maintainability.">
+      <option name="closed" value="true" />
+      <created>1737218077708</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737218077708</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes.">
+      <option name="closed" value="true" />
+      <created>1737346523250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737346523250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup." />
+    <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations." />
+    <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced the multi-command dev script with a single Next.js dev command to improve maintainability. Adjusted .gitignore to exclude SSL-related files, zip archives, and IDE-specific configurations for cleaner version control." />
+    <MESSAGE value="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup." />
+    <MESSAGE value="Update WhatsApp link handling to use public env variable&#10;&#10;Replaced hard-coded WhatsApp number references with the `NEXT_PUBLIC_WHATSAPP_NUMBER` environment variable for better configurability. Updated links in `package-details.ts`, `chat-box.tsx`, and `footer.tsx` to align with this change. This enhances maintainability and simplifies future updates to the WhatsApp contact number." />
+    <MESSAGE value="Remove unused code and update data references&#10;&#10;Removed the notification feature and redundant states from `TanyaIsma`. Replaced `dummyData` with `packageDetailData` for consistency in data usage on the Umrah Ideal Page. Cleaned up unused imports and polished IDE configuration for improved clarity and maintainability." />
+    <MESSAGE value="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

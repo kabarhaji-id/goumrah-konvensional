@@ -20,7 +20,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/assets/*": ["./src/assets/*"]
+      "@/assets/*": ["./src/assets/*"],
+      "@/public/*": ["./public/assets/*"],
+      "@lib/*": ["/src/lib/*"]
     }
   },
   "include": [

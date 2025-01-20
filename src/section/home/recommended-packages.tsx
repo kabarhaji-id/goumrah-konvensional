@@ -16,26 +16,26 @@ const RecommendedPackagesSection = () => {
   const packages = useMemo(() => {
     return packageDetailData.filter((pkg) => pkg.type === "Reguler");
   }, []);
+  /*
+    // use state untuk resize image
+    const [slidesPerView, setSlidesPerView] = useState(1);
 
-  // use state untuk resize image
-  const [slidesPerView, setSlidesPerView] = useState(1);
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth >= 1024) {
+          setSlidesPerView(Math.min(3, packages.length)); // Show up to 3 slides on larger screens
+        } else if (window.innerWidth >= 640) {
+          setSlidesPerView(Math.min(2, packages.length)); // Show up to 2 slides on medium screens
+        } else {
+          setSlidesPerView(1); // Show 1 slide on small screens
+        }
+      };
 
-/*  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setSlidesPerView(Math.min(3, packages.length)); // Show up to 3 slides on larger screens
-      } else if (window.innerWidth >= 640) {
-        setSlidesPerView(Math.min(2, packages.length)); // Show up to 2 slides on medium screens
-      } else {
-        setSlidesPerView(1); // Show 1 slide on small screens
-      }
-    };
+      handleResize(); // Initial call
+      window.addEventListener("resize", handleResize);
 
-    handleResize(); // Initial call
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, [packages.length]);*/
+      return () => window.removeEventListener("resize", handleResize);
+    }, [packages.length]);*/
 
   return (
     <section

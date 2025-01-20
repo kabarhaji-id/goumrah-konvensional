@@ -64,9 +64,9 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
           <div className="flex flex-col gap-2.5">
             <h3 className="text-xl font-medium leading-6">Office</h3>
             <span className="w-full max-w-[269px] text-sm">
-		JL. GM Ainul Yakin ADAH 35A Kalibata
-		Kec. Pancoran, Kota Jakarta Selatan,
-		Daerah Khusus Ibukota Jakarta 12740
+              JL. GM Ainul Yakin ADAH 35A Kalibata
+              Kec. Pancoran, Kota Jakarta Selatan,
+              Daerah Khusus Ibukota Jakarta 12740
             </span>
           </div>
 
@@ -80,8 +80,8 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
         <div className="flex flex-col gap-5 border-t border-white py-5 font-light text-white">
           <div className="flex flex-col gap-1 text-xs">
             <span>Nomor Izin PPIU</span>
-            <span className="text-base font-bold">0247 0101 4295 30001</span>
-            <span>No U.140 Tahun 2024</span>
+            <span className="text-base font-bold">27052 2003 8774 0007</span>
+            <span>Tahun 2024</span>
           </div>
 
           <span className="text-sm">

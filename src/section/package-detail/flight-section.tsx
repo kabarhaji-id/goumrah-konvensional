@@ -77,35 +77,29 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   });
 
   return (
-    <>
-      <div className="px-4">
-        <Separator />
-      </div>
-
-      <Section className="space-y-4 px-4 pb-3 pt-5">
-        <SectionHeader className="mb-2 px-0">
-          <div className="flex items-center gap-2">
-            <PlaneIcon className="h-5 w-5 stroke-primary" />
-            <SectionTitle className="text-sm font-semibold leading-6 tracking-wide">
-              Penerbangan
-            </SectionTitle>
-          </div>
-        </SectionHeader>
-        <SectionContent className="mx-0 space-y-4 px-0">
-          {arrDataFlight.length > 0 &&
-            arrDataFlight.map((data, index) => (
-              <FlightCard
-                key={index}
-                type={data.type}
-                dataFlight={data}
-                id={index.toString()}
-              >
-                <AccordionFlight dataFlight={data.data} id={index.toString()} />
-              </FlightCard>
-            ))}
-        </SectionContent>
-      </Section>
-    </>
+    <Section className="space-y-4 px-4 py-2">
+      <SectionHeader className="mb-2 px-0">
+        <div className="flex items-center gap-2">
+          <PlaneIcon className="h-5 w-5 stroke-primary" />
+          <SectionTitle className="text-sm font-semibold leading-6 tracking-wide text-primary">
+            Penerbangan
+          </SectionTitle>
+        </div>
+      </SectionHeader>
+      <SectionContent className="mx-0 space-y-4 px-0">
+        {arrDataFlight.length > 0 &&
+          arrDataFlight.map((data, index) => (
+            <FlightCard
+              key={index}
+              type={data.type}
+              dataFlight={data}
+              id={index.toString()}
+            >
+              <AccordionFlight dataFlight={data.data} id={index.toString()} />
+            </FlightCard>
+          ))}
+      </SectionContent>
+    </Section>
   );
 };
 
@@ -165,7 +159,7 @@ const FlightCard = ({
     return (
       <CardDetail>
         <CardDetailHeader>
-          <span className="text-xs font-semibold text-primary">
+          <span className="text-sm font-semibold text-primary">
             {type === "Keberangkatan"
               ? "Keberangkatan Ibadah"
               : type === "Kepulangan"
@@ -200,7 +194,7 @@ const FlightCard = ({
                     className="h-[52px] w-auto"
                   />
                 )}
-                <span className="text-sm font-semibold leading-5">
+                <span className="text-lg font-semibold leading-5">
                   {dataFlight.data.directFlight.airline}
                 </span>
               </div>

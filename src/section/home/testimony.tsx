@@ -43,7 +43,7 @@ const TestimonyCard = ({ testimony }: { testimony: Testimony }) => {
 
 const TestimonySection = () => {
   return (
-    <section id="testimony" className="flex flex-col gap-3 px-4 py-5">
+    <section id="testimony" className="flex flex-col gap-3 px-4 py-0">
       <div className="flex items-center gap-1 text-primary">
         <StarIcon className="size-5 fill-current" />
         <h2 className="text-base font-semibold leading-[150%] tracking-wide">

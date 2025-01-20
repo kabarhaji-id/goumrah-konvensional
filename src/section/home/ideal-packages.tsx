@@ -16,7 +16,7 @@ const IdealPackagesSection = () => {
   }, []);
 
   return (
-    <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-6 pb-10">
+    <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-4 pb-10">
       <span
         className="absolute -top-40 z-0 h-40 w-full bg-gradient-to-t from-primary-accent to-[#E2E8F0]"
         style={{
@@ -34,7 +34,30 @@ const IdealPackagesSection = () => {
         </h2>
       </div>
 
-      <Swiper
+      {packages.length > 1 ? (
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={16}
+          centeredSlides={false}
+          className={`w-full !px-4`}
+        >
+          {packages.map((pkg) => (
+            <SwiperSlide
+              key={pkg.id}
+              className={`h-fit w-full max-w-[90%] md:max-w-[80%]`}
+              style={{ marginRight: "16px" }}
+            >
+              <PackageCard data={pkg} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <div className="w-full">
+          <PackageCard data={packages[0]} />
+        </div>
+      )}
+
+      {/* <Swiper
         spaceBetween={20}
         slidesPerView={1}
         centeredSlides={true}
@@ -45,7 +68,7 @@ const IdealPackagesSection = () => {
             <PackageCard data={pkg} />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}
 
       <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
         <Link href="/umrah/ideal">

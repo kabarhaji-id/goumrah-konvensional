@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 
 import { CustomSwiper } from "@/components/layout/swiper";
@@ -41,9 +41,9 @@ const AdditionalServices = () => {
   }, [networkSpeed]);
 
   return (
-    <Section className="pb-2 pt-0">
+    <Section className="pb-1 pt-0">
       <SectionHeader className="mb-3 px-4">
-        <SectionTitle className="flex items-center">
+        <SectionTitle className="flex items-center text-primary">
           Layanan Tambahan
         </SectionTitle>
 

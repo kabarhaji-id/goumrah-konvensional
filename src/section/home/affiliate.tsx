@@ -58,13 +58,13 @@ const affiliates: Affiliate[] = [
   {
     name: "Garuda Indonesia",
     logo: "/assets/image/afiliate-logo/garuda-indonesia.png",
-    width: 90,
+    width: 80,
     height: 40,
   },
   {
     name: "Lion Air",
     logo: "/assets/image/afiliate-logo/lion-air.png",
-    width: 64,
+    width: 72,
     height: 40,
   },
 ];

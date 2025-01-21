@@ -49,7 +49,7 @@ const AdditionalServices = () => {
 
         <SectionDescription className="text-sm font-normal leading-5 tracking-wide">
           Goumrah sediakan layanan administrasi untuk mempermudah proses ibadah
-          kamu. Kamu bisa tambahkan layanan ini di halaman pemesanan nanti.
+          kamu. Kamu bisa tambahkan layanan ini saat pemesanan nanti.
         </SectionDescription>
       </SectionHeader>
 

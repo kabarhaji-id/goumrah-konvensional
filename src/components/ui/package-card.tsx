@@ -204,13 +204,13 @@ const PackageCard = ({
                 </div>
 
                 {/* --- Airline's Logo */}
-                <div className="absolute -top-2 right-0">
+                <div className="absolute -top-0 right-2">
                   <Image
                     width={64}
                     height={24}
                     src={data.flight_details.departure_flight.airline_logo}
                     alt={`logo-${data.flight_details.departure_flight.airline}`}
-                    className="h-[42px] w-fit"
+                    className="h-[56px] w-fit"
                   />
                 </div>
               </div>

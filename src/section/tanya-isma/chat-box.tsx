@@ -164,7 +164,7 @@ const ChatBox = ({ id, onClose, isOpen }: { id: string; onClose: () => void; isO
           <>
 
             <div className="mb-4 p-4 rounded-lg border border-gray-200">
-              <p className="text-gray-500 text-center mb-2 text-sm">Data pribadi yang Anda sampaikan akan digunakan semata-mata untuk keperluan dukungan.</p>
+              <p className="text-gray-500 text-center mb-2 text-sm">Informasi & data yang di berikan hanya untuk mempermudah pemesanan, konsultasi, dan layanan umrah</p>
               <form onSubmit={handleSubmitTochat} className="space-y-2">
                 {/* Input Fields */}
                 <div>

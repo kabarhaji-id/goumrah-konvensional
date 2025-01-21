@@ -52,7 +52,7 @@ const HeroSection = () => {
         height={732}
       />
 
-      <span className="w-fullbg-gradient-to-t absolute bottom-10 z-10 h-44 from-white/0 to-accent" />
+      <span className="absolute bottom-10 z-40 h-60 w-full bg-gradient-to-t from-white to-white/0" />
     </section>
   );
 };

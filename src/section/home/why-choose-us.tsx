@@ -23,7 +23,7 @@ const CardData: CardProps[] = [
 
 const WhyChooseUsSection = () => {
   return (
-    <Section className="relative bg-gradient-to-b from-foreground to-primary py-8">
+    <Section className="relative bg-gradient-to-b from-foreground to-primary py-0">
       <span
         className="absolute -top-[399px] z-0 h-[400px] w-full bg-primary-foreground"
         style={{
@@ -32,7 +32,7 @@ const WhyChooseUsSection = () => {
         }}
       />
 
-      <SectionHeader className="!-mt-6">
+      <SectionHeader className="!mt-0">
         <SectionSubTitle className="text-accent">
           Dapatkan Kelebihannya
         </SectionSubTitle>
@@ -40,8 +40,8 @@ const WhyChooseUsSection = () => {
           Berangkat Umrah Bersama goumrah.id
         </SectionTitle>
       </SectionHeader>
-      <SectionContent className="flex max-w-full px-0">
-        <CustomSwiper padding={6}>
+      <SectionContent className="!mt-6 flex max-w-full p-0">
+        <CustomSwiper padding={4}>
           {CardData.map((data) => (
             <Card title={data.title} Icon={data.Icon} key={data.title} />
           ))}
@@ -67,7 +67,7 @@ interface CardProps {
 
 const Card = ({ title, Icon }: CardProps) => {
   return (
-    <div className="relative flex h-[175px] w-[127px] flex-col items-center space-y-3 overflow-hidden rounded-lg border border-background/30 p-3 pt-6 backdrop-blur-lg">
+    <div className="h-hug relative flex min-h-[152px] w-[127px] flex-col items-center gap-3 overflow-hidden rounded-lg border border-background/30 px-3 pb-3 pt-4 backdrop-blur-lg">
       <div className="glassmorphism absolute inset-0 -z-10 opacity-20" />
       <Icon />
       <p className="text-center text-base font-bold leading-normal tracking-wide text-background">

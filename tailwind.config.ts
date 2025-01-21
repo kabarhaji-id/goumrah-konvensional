@@ -57,6 +57,9 @@ export default {
           DEFAULT: "#90CFD0",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        status: {
+          gold: "F2AC30",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",

@@ -1,29 +1,40 @@
 "use client";
 
+import Link from "next/link";
 import "swiper/css";
 
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const IdealPackagesSection = () => {
-  const packages = useMemo(() => {
-    return packageDetailData.filter((pkg) => pkg.type === "Plus");
+  // const packages = useMemo(() => {
+  //   return packageDetailData.filter((pkg) => pkg.type === "Plus");
+  // }, []);
+
+  const packageSilver = useMemo(() => {
+    return packageDetailData.filter((pkg) => pkg.category === "Silver");
+  }, []);
+
+  const packageGold = useMemo(() => {
+    return packageDetailData.filter((pkg) => pkg.category === "Gold");
+  }, []);
+
+  const packagePlatinum = useMemo(() => {
+    return packageDetailData.filter((pkg) => pkg.category === "Platinum");
   }, []);
 
   return (
-    <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-4 pb-10">
-      <span
-        className="absolute -top-40 z-0 h-40 w-full bg-gradient-to-t from-primary-accent to-[#E2E8F0]"
+    // <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-4 pb-10">
+    <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-white px-4 pb-10">
+      {/* <span
+        className="absolute -top-40 z-0 h-40 w-full bg-gradient-to-t from-primary-accent to-white"
         style={{
           background:
             "linear-gradient(0deg, rgba(226,232,240,1) 11%, rgba(255,255,255,1) 100%)",
         }}
-      />
+      /> */}
 
       <div className="z-20 mt-10 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
@@ -34,7 +45,7 @@ const IdealPackagesSection = () => {
         </h2>
       </div>
 
-      {packages.length > 1 ? (
+      {/* {packages.length > 1 ? (
         <Swiper
           slidesPerView={"auto"}
           spaceBetween={16}
@@ -55,7 +66,19 @@ const IdealPackagesSection = () => {
         <div className="w-full">
           <PackageCard data={packages[0]} />
         </div>
-      )}
+      )} */}
+
+      <div className="w-full">
+        <PackageCard data={packageSilver[0]} />
+      </div>
+
+      <div className="w-full">
+        <PackageCard data={packageGold[0]} />
+      </div>
+
+      <div className="w-full">
+        <PackageCard data={packagePlatinum[0]} />
+      </div>
 
       {/* <Swiper
         spaceBetween={20}

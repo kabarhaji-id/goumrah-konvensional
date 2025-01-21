@@ -27,7 +27,7 @@ const galleryData: CardProps[] = [
 
 const GallerySection = () => {
   return (
-    <Section id="gallery" className="pt-5">
+    <Section id="gallery" className="pt-6">
       <SectionHeader>
         <SectionSubTitle className="z-20 text-white">
           #EpicMoment
@@ -38,7 +38,7 @@ const GallerySection = () => {
         </SectionTitle>
       </SectionHeader>
       <SectionContent className="flex max-w-full px-0">
-        <CustomSwiper padding={6} gap={10}>
+        <CustomSwiper padding={4} gap={10}>
           {galleryData.map((data) => (
             <Card imageUrl={data.imageUrl} alt={data.alt} key={data.alt} />
           ))}
@@ -55,7 +55,7 @@ interface CardProps {
 
 const Card = ({ imageUrl, alt }: CardProps) => {
   return (
-    <div className="relative aspect-[9/16] h-[226px] w-full flex-none overflow-hidden rounded-lg">
+    <div className="relative aspect-[9/16] h-[270px] w-full flex-none overflow-hidden rounded-lg md:h-[370px]">
       <Image src={imageUrl} alt={alt} fill sizes="44vw" quality={100} />
     </div>
   );

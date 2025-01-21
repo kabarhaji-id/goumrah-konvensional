@@ -51,7 +51,7 @@ const PricingCard = ({ pricingList }: { pricingList: PricingList[] }) => {
             <div key={index} className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex w-full max-w-[150px] items-center justify-between gap-2">
                     <p className="font-bold leading-6 tracking-[0.15px]">
                       {capitalize(data.title)}
                     </p>

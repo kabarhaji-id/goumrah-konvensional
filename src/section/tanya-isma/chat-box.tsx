@@ -174,7 +174,7 @@ const ChatBox = ({
           <>
             <div className="mb-4 rounded-lg border border-gray-200 p-4">
               <p className="mb-2 text-center text-xs text-gray-500">
-                Informasi & data yang di berikan hanya untuk mempermudah
+                Informasi & data yang diberikan hanya untuk mempermudah
                 pemesanan, konsultasi, dan layanan umrah
               </p>
               <form onSubmit={handleSubmitTochat} className="space-y-2">

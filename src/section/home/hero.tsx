@@ -3,8 +3,19 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex h-[732px] flex-col bg-hero bg-cover bg-bottom sm:h-[960px]">
-      <header className="absolute top-4 z-10 flex h-14 w-full items-center justify-center px-4 py-10">
+    <section className="flex h-fit w-full flex-col gap-4 pb-3">
+      {/* <section className="flex h-fit w-full max-w-screen-sm flex-col bg-hero bg-cover bg-bottom"> */}
+      <div className="relative">
+        <Image
+          alt="goumrah.id logo"
+          src="/assets/image/hero-bg.png"
+          width={150}
+          height={32}
+          className="absolute top-0 z-0 w-full object-cover"
+        />
+      </div>
+
+      <header className="mt-7 flex h-fit w-full items-center justify-center py-3">
         <Image
           alt="goumrah.id logo"
           src="/assets/image/logo-main.svg"
@@ -14,8 +25,8 @@ const HeroSection = () => {
         />
       </header>
 
-      <div className="absolute left-1/2 top-28 z-10 flex w-[343px] -translate-x-1/2 flex-col items-center gap-2 text-primary-foreground">
-        <h2 className="text-center text-3xl font-bold leading-[130%] tracking-normal">
+      <div className="z-10 flex flex-col items-center gap-2 text-primary-foreground">
+        <h2 className="text-center text-[32px] font-bold leading-[140%] tracking-[0.5px]">
           Rumah ke Makkah
           <br />
           Hanya Satu Langkah
@@ -44,15 +55,15 @@ const HeroSection = () => {
         </Link>
       </Button> */}
 
-      <Image
+      {/* <Image
         src="/assets/image/hero-img.png"
         alt="Hero's Image"
         className="absolute bottom-10 z-30 w-full"
         width={412}
         height={732}
-      />
+      /> */}
 
-      <span className="absolute bottom-10 z-40 h-60 w-full bg-gradient-to-t from-white to-white/0" />
+      {/* <span className="absolute bottom-10 z-40 h-60 w-full bg-gradient-to-t from-white to-white/0" /> */}
     </section>
   );
 };

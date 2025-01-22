@@ -101,14 +101,9 @@ const HeaderComponent = ({
         {isLoading ? (
           <Skeleton className="h-[26px] w-[200px]" />
         ) : (
-          <div className="flex text-xl leading-[130%] tracking-[0.5px]">
-            <h3>
-              <span className="font-semibold">{packageData.title}</span>
-              {packageData.tagline && (
-                <span className="font-normal"> {packageData.tagline}</span>
-              )}
-            </h3>
-          </div>
+          <h3 className="flex text-xl font-semibold leading-[130%] tracking-[0.5px]">
+            {packageData.title}
+          </h3>
         )}
 
         {/* --- Fast Train? */}

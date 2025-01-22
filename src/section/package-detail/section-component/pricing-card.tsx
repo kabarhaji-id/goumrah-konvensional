@@ -51,7 +51,7 @@ const PricingCard = ({ pricingList }: { pricingList: PricingList[] }) => {
             <div key={index} className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="flex w-full max-w-[150px] items-center justify-between gap-2">
+                  <div className="xs:min-w-[150px] flex w-full min-w-[100px] items-center justify-between gap-2">
                     <p className="font-bold leading-6 tracking-[0.15px]">
                       {capitalize(data.title)}
                     </p>
@@ -59,7 +59,7 @@ const PricingCard = ({ pricingList }: { pricingList: PricingList[] }) => {
                     {data.priceFinal &&
                       data.price !== Number(data.priceFinal) && (
                         <Badge variant="destructive" size="medium">
-                          <span className="text-[11px]">
+                          <span className="xs:text-[11px] text-[9px]">
                             {getAmountOfDiscount(
                               data.price!,
                               Number(data.priceFinal),
@@ -78,20 +78,20 @@ const PricingCard = ({ pricingList }: { pricingList: PricingList[] }) => {
                 {isLoading ? (
                   <Skeleton className="h-8 w-32" />
                 ) : (
-                  <div className="flex flex-shrink-0 flex-col">
+                  <div className="xs:flex-shrink-0 flex flex-col">
                     {data.priceFinal &&
                     data.price !== Number(data.priceFinal) ? (
                       <>
-                        <span className="text-end text-sm leading-5 tracking-wide line-through opacity-60">
+                        <span className="xs:text-sm text-end text-[11px] leading-5 tracking-wide line-through opacity-60">
                           {priceToLocale(data.price!)}
                         </span>
 
-                        <span className="text-base font-bold leading-6 tracking-wide">
+                        <span className="xs:text-base text-sm font-bold leading-6 tracking-wide">
                           {priceToLocale(Number(data.priceFinal))}
                         </span>
                       </>
                     ) : (
-                      <span className="text-base font-bold leading-6 tracking-wide">
+                      <span className="text-sm font-bold leading-6 tracking-wide">
                         {priceToLocale(data.price!)}
                       </span>
                     )}

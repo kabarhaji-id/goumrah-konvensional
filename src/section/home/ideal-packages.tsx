@@ -1,12 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import "swiper/css";
 
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
-import { Button } from "@/components/ui/button";
 
 const IdealPackagesSection = () => {
   // const packages = useMemo(() => {
@@ -26,17 +24,8 @@ const IdealPackagesSection = () => {
   }, []);
 
   return (
-    // <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-[#E2E8F0] px-4 pb-10">
-    <section className="relative -mt-20 flex flex-col items-center justify-center gap-6 bg-white px-4 pb-10">
-      {/* <span
-        className="absolute -top-40 z-0 h-40 w-full bg-gradient-to-t from-primary-accent to-white"
-        style={{
-          background:
-            "linear-gradient(0deg, rgba(226,232,240,1) 11%, rgba(255,255,255,1) 100%)",
-        }}
-      /> */}
-
-      <div className="z-20 mt-10 flex flex-col items-center gap-2">
+    <section className="relative flex flex-col items-center justify-center gap-6 px-6 pb-10">
+      <div className="z-20 mt-6 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
@@ -44,29 +33,6 @@ const IdealPackagesSection = () => {
           Paket Umrah Ideal, dengan Perjalanan yang Tak Terlupakan
         </h2>
       </div>
-
-      {/* {packages.length > 1 ? (
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={16}
-          centeredSlides={false}
-          className={`w-full !px-4`}
-        >
-          {packages.map((pkg) => (
-            <SwiperSlide
-              key={pkg.id}
-              className={`h-fit w-full max-w-[90%] md:max-w-[80%]`}
-              style={{ marginRight: "16px" }}
-            >
-              <PackageCard data={pkg} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      ) : (
-        <div className="w-full">
-          <PackageCard data={packages[0]} />
-        </div>
-      )} */}
 
       <div className="w-full">
         <PackageCard data={packageSilver[0]} />
@@ -80,26 +46,13 @@ const IdealPackagesSection = () => {
         <PackageCard data={packagePlatinum[0]} />
       </div>
 
-      {/* <Swiper
-        spaceBetween={20}
-        slidesPerView={1}
-        centeredSlides={true}
-        className={`w-full ${packages.length > 1 && "!px-6"}`}
-      >
-        {packages.map((pkg) => (
-          <SwiperSlide key={pkg.id}>
-            <PackageCard data={pkg} />
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
-
-      <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
+      {/* <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
         <Link href="/umrah/ideal">
           <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
             Lihat Semua Paket
           </p>
         </Link>
-      </Button>
+      </Button> */}
     </section>
   );
 };

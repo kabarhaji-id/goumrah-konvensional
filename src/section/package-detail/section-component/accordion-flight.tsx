@@ -143,7 +143,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                     )}
                     {dataFlight.directFlight.seat_layout && (
                       <p>
-                        Tata Letak Kursi:
+                        Tata Kursi:
                         <span className="ml-1">
                           {dataFlight.directFlight.seat_layout}
                         </span>

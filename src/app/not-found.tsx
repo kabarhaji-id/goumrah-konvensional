@@ -1,7 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Metadata } from "next";
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  return {
+    title: "Halaman Tidak Ditemukan",
+    description: "Halaman yang Anda cari tidak ditemukan.",
+    keywords: `Umroh 2025, Paket Umroh, Travel Umroh, Biaya Umroh 2025, Umroh murah, Umroh Ramadhan 2025, Travel umroh terpercaya, Tips perjalanan umroh, Umroh mandiri, Paket Umroh VIP`,
+    openGraph: {
+      title: `Halaman Tidak Ditemukan`,
+      url: `https://goumrah.id`,
+      siteName: "goumrah.id",
+      locale: "id_ID",
+      type: "website",
+    },
+  };
+};
 
 export default async function NotFound() {
   return (

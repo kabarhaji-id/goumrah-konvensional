@@ -104,7 +104,7 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
                   <Badge
                     variant="destructive"
                     size="small"
-                    className="h-fit rounded-[6px] px-1.5 py-0.5 text-[7px]"
+                    className="h-fit rounded-[6px] px-1.5 py-0.5 text-[8px]"
                   >
                     <span>
                       {getAmountOfDiscount(

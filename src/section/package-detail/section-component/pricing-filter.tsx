@@ -193,7 +193,7 @@ const FilterSection = ({
                     onClick={() => onFilterChange(city.city, undefined)}
                     className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${
                       selectedCity! === city.city
-                        ? "border border-primary bg-primary-background text-primary"
+                        ? "border border-primary bg-primary-background text-neutral-foreground"
                         : "border border-neutral-200"
                     }`}
                   >

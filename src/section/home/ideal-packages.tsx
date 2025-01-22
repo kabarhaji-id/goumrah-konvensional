@@ -7,10 +7,6 @@ import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
 
 const IdealPackagesSection = () => {
-  // const packages = useMemo(() => {
-  //   return packageDetailData.filter((pkg) => pkg.type === "Plus");
-  // }, []);
-
   const packageSilver = useMemo(() => {
     return packageDetailData.filter((pkg) => pkg.category === "Silver");
   }, []);

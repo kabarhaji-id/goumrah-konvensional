@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import "swiper/css";
 
+import CustomArrowIcon from "@/public/icons/mingcute_down-fill.svg";
+
 import { Button } from "@/components/ui/button";
 import { useMemo } from "react";
 import { PackageCard } from "@/components/ui/package-card";
@@ -110,13 +112,14 @@ const RecommendedPackagesSection = () => {
       </div>
 
       <Button
-        className="z-[999] flex h-11 w-[317px] self-center px-5 py-1"
+        className="z-[999] flex h-11 w-[317px] items-center self-center px-5 py-1"
         asChild
       >
-        <Link href="/umrah/rekomendasi">
+        <Link href="/umrah">
           <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
             Lihat Semua Paket
           </p>
+          <CustomArrowIcon className="h-6 w-6" fill="#FFFFFF" />
         </Link>
       </Button>
     </div>

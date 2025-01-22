@@ -14,16 +14,19 @@ import CustomVacationIcon from "@/public/icons/custom-vacation.svg";
 import CustomPercentWavyIcon from "@/public/icons/percent-wavy.svg";
 import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
 import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
+import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.svg";
+import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
 import { Chip } from "./chip";
 import { Button } from "./button";
-import { CalendarDaysIcon, HotelIcon, PlaneIcon, StarIcon } from "lucide-react";
+import { CalendarDaysIcon } from "lucide-react";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useMemo, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "./skeleton-loader";
-import { Rating, Rating2 } from "./helper/getRating";
+import { Rating2 } from "./helper/getRating";
+import { CustomSwiper } from "../layout/swiper";
 
 interface PackageCardProps {
   data: UmrahPackage;
@@ -107,8 +110,8 @@ const PackageCard = ({
           </div>
 
           <div className="flex !h-full w-full flex-col gap-2 bg-white p-3">
-            <div className="space-y-2">
-              <div className="flex gap-2">
+            <div className="space-y-0">
+              <CustomSwiper padding={0} gap={8}>
                 {isLoading ? (
                   <Skeleton className="h-[22px] w-16" />
                 ) : (
@@ -166,147 +169,105 @@ const PackageCard = ({
                     </span>
                   </Chip>
                 )}
-              </div>
 
-              {isLoading ? (
-                <Skeleton className="h-5 w-56" />
-              ) : (
-                <div className="line-clamp-2 text-[17px] leading-5 text-primary-foreground">
-                  <span className="font-bold">{data.title}</span>
-                </div>
-                // <div className="line-clamp-2 text-[17px] leading-5 text-primary-foreground">
-                //   <p className="h-fit">
-                //     <span className="font-bold">{data.title}</span>
-                //     {data.tagline && (
-                //       <span className="font-normal"> {data.tagline}</span>
-                //     )}
-                //   </p>
-                // </div>
-              )}
-
-              <div className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
-                {/* --- Departure Date */}
-                {isLoading ? (
-                  <Skeleton className="h-[18px] w-40" />
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <CalendarDaysIcon className="h-4 w-4 stroke-neutral-foreground" />
-                    <span className="font-medium tracking-wide">
-                      {moment(departureDate.date).format("DD MMMM YYYY")}
-                    </span>
-                    {data.departure_date.length > 1 ? (
-                      <span className="text-xs leading-[18px] tracking-wide opacity-60">
-                        +{data.departure_date.length - 6} tanggal lainnya
+                {/* --- Fast Train? */}
+                {data.isFastTrain &&
+                  (isLoading ? (
+                    <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+                  ) : (
+                    <Chip variant="default" className="overflow-hidden">
+                      <div className="w-full bg-primary-accent p-1">
+                        <CustomFastTrainIcon
+                          className="h-4 w-4"
+                          fill="#1B8386"
+                        />
+                      </div>
+                      <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+                        Kereta Cepat
                       </span>
-                    ) : (
-                      <></>
-                    )}
+                    </Chip>
+                  ))}
+              </CustomSwiper>
+
+              <div className="space-y-2">
+                {isLoading ? (
+                  <Skeleton className="h-5 w-56" />
+                ) : (
+                  <div className="line-clamp-2 text-[17px] leading-6 tracking-[0.15px] text-primary-foreground">
+                    <span className="font-bold">{data.title}</span>
                   </div>
                 )}
 
-                {/* --- Flight */}
-                {isLoading ? (
-                  <Skeleton className="h-4 w-14 rounded" />
-                ) : (
-                  <div className="flex gap-2 text-[13px] leading-[18px] tracking-wide">
-                    <div className="flex gap-2">
-                      <PlaneIcon className="h-4 w-4 stroke-primary-foreground" />
-                      <p>Maskapai :</p>
+                <div className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
+                  {/* --- Departure Date */}
+                  {isLoading ? (
+                    <Skeleton className="h-[18px] w-40" />
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <CalendarDaysIcon className="h-4 w-4 stroke-neutral-foreground" />
+                      <span className="font-medium tracking-wide">
+                        {moment(departureDate.date).format("DD MMMM YYYY")}
+                      </span>
+                      {data.departure_date.length > 1 ? (
+                        <span className="text-xs leading-[18px] tracking-wide opacity-60">
+                          +{data.departure_date.length - 6} tanggal lainnya
+                        </span>
+                      ) : (
+                        <></>
+                      )}
                     </div>
-                    <span className="font-bold leading-[18px] tracking-wide">
-                      {data.flight_details.departure_flight.airline}
-                    </span>
-                  </div>
-                )}
+                  )}
 
-                {/* --- Madinah Hotel's Rating */}
-                {isLoading ? (
-                  <Skeleton className="h-4 w-9 rounded-sm" />
-                ) : (
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-start justify-between gap-1.5 text-[13px] leading-[18px] tracking-wide">
-                      <div className="flex items-center gap-2">
-                        <div className="flex flex-shrink-0 items-center gap-2">
-                          <HotelIcon className="h-4 w-4 stroke-primary-foreground" />
-                          <p>Madinah :</p>
-                        </div>
-                        <div>
-                          <span className="font-bold leading-[18px] tracking-wide">
-                            {data.hotel_details.madinah.hotel_name}
-                          </span>
-                        </div>
-                        <Rating2 starsRating={3} />
+                  {/* --- Flight */}
+                  {isLoading ? (
+                    <Skeleton className="h-4 w-14 rounded" />
+                  ) : (
+                    <div className="flex items-center gap-2 text-[13px] leading-[18px] tracking-wide">
+                      <div className="flex items-center gap-2 font-medium">
+                        <CustomMaskapaiIcon />
+                        {/* <PlaneIcon className="h-4 w-4 stroke-primary-foreground" /> */}
+                        <p className="w-[60px]">Maskapai</p>
                       </div>
+                      <span className="font-bold leading-[18px] tracking-wide">
+                        : {data.flight_details.departure_flight.airline}
+                      </span>
                     </div>
-                  </div>
+                  )}
 
-                  // <div className="flex flex-col gap-1">
-                  //   <div className="flex items-start justify-between gap-1.5 text-[13px] leading-[18px] tracking-wide">
-                  //     <div className="flex items-center gap-2">
-                  //       <div className="flex flex-shrink-0 items-center gap-2">
-                  //         <HotelIcon className="h-4 w-4 stroke-primary-foreground" />
-                  //         <div className="flex flex-col">
-                  //           <p>Madinah :</p>
-                  //           <Rating
-                  //             totalStars={
-                  //               data.hotel_details.madinah.star_rating
-                  //             }
-                  //             className="mt-0.5"
-                  //           />
-                  //         </div>
-                  //       </div>
-                  //       <div>
-                  //         <span className="font-bold leading-[18px] tracking-wide">
-                  //           {data.hotel_details.madinah.hotel_name}
-                  //         </span>
-                  //       </div>
-                  //     </div>
-                  //   </div>
-                  // </div>
-
-                  // <div className="flex items-start justify-between gap-1.5 text-[13px] leading-[18px] tracking-wide">
-                  //   <div className="flex gap-2">
-                  //     <div className="flex flex-shrink-0 gap-2">
-                  //       <HotelIcon className="h-4 w-4 stroke-primary-foreground" />
-                  //       <p>Madinah :</p>
-                  //     </div>
-                  //     <span className="font-bold leading-[18px] tracking-wide">
-                  //       {data.hotel_details.madinah.hotel_name}
-                  //     </span>
-                  //   </div>
-                  //   <Rating
-                  //     totalStars={data.hotel_details.madinah.star_rating}
-                  //     className="mt-0.5"
-                  //   />
-                  // </div>
-                )}
-
-                {/* --- Makkah Hotel's Rating */}
-                {isLoading ? (
-                  <Skeleton className="h-4 w-9 rounded-sm" />
-                ) : (
-                  <div className="flex flex-col gap-1">
-                    <div className="flex items-start justify-between gap-1.5 text-[13px] leading-[18px] tracking-wide">
-                      <div className="flex items-center gap-2">
-                        <div className="flex flex-shrink-0 items-center gap-2">
-                          <HotelIcon className="h-4 w-4 stroke-primary-foreground" />
-                          <div className="flex flex-col">
-                            <p>Makkah :</p>
-                            <Rating
-                              totalStars={data.hotel_details.makkah.star_rating}
-                              className="mt-0.5"
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <span className="font-bold leading-[18px] tracking-wide">
-                            {data.hotel_details.makkah.hotel_name}
-                          </span>
-                        </div>
+                  {/* --- Madinah Hotel's Rating */}
+                  {isLoading ? (
+                    <Skeleton className="h-4 w-9 rounded-sm" />
+                  ) : (
+                    <div className="flex items-center gap-2 text-[13px] leading-[18px] tracking-wide">
+                      <div className="flex flex-shrink-0 items-center gap-2 font-medium">
+                        <Rating2
+                          starsRating={data.hotel_details.madinah.star_rating}
+                        />
+                        <p className="w-[60px]">Madinah</p>
                       </div>
+                      <span className="font-bold leading-[18px] tracking-wide">
+                        : {data.hotel_details.madinah.hotel_name}
+                      </span>
                     </div>
-                  </div>
-                )}
+                  )}
+
+                  {/* --- Makkah Hotel's Rating */}
+                  {isLoading ? (
+                    <Skeleton className="h-4 w-9 rounded-sm" />
+                  ) : (
+                    <div className="flex items-center gap-2 text-[13px] leading-[18px] tracking-wide">
+                      <div className="flex flex-shrink-0 items-center gap-2 font-medium">
+                        <Rating2
+                          starsRating={data.hotel_details.makkah.star_rating}
+                        />
+                        <p className="w-[60px]">Makkah</p>
+                      </div>
+                      <span className="font-bold leading-[18px] tracking-wide">
+                        : {data.hotel_details.makkah.hotel_name}
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -315,24 +276,7 @@ const PackageCard = ({
                 <Skeleton className="h-6 w-36" />
               ) : (
                 <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground">
-                  {/* --- Discount Badge */}
-                  {/* {data.quadFinalPrice &&
-                    data.quadPrice !== Number(data.quadFinalPrice) && (
-                      <div className="flex gap-1">
-                        <CustomSackPercentIcon
-                          className="h-4 w-4"
-                          fill="#ef4444"
-                        />
-                        <span className="text-[12.5px] font-semibold text-destructive">
-                          {getAmountOfDiscount(
-                            data.quadPrice,
-                            Number(data.quadFinalPrice),
-                          )}
-                        </span>
-                      </div>
-                    )} */}
-
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2">
                     {/* --- Normal Price */}
                     <h5 className="flex-shrink-0 text-[17.5px] font-extrabold">
                       {data.quadFinalPrice
@@ -348,7 +292,7 @@ const PackageCard = ({
                             className="h-4 w-4"
                             stroke="#EF4444"
                           />
-                          <span className="text-sm leading-5 text-destructive line-through opacity-80">
+                          <span className="xs:text-sm text-xs leading-5 text-destructive line-through opacity-80">
                             {priceToLocale(data.quadPrice)}
                           </span>
                         </div>

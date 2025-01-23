@@ -35,18 +35,19 @@ const FilterSection = ({
 }: FilterProps) => {
   moment.locale("id");
 
-  const filteredDates = departureDates.filter((d) => d.status === "active");
+  // const filteredDates = departureDates.filter((d) => d.status === "active");
 
-  const resultDates = filteredDates.length > 0 ? filteredDates : departureDates;
+  // const resultDates = filteredDates.length > 0 ? filteredDates : departureDates;
 
-  const [selectedDate, setSelectedDate] = useState(resultDates[0].date);
+  // const [selectedDate, setSelectedDate] = useState(resultDates[0].date);
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
-  const onFilterChange = (city?: string, date?: string) => {
+  // const onFilterChange = (city?: string, date?: string) => {
+  const onFilterChange = (city?: string) => {
     if (city) setSelectedCity(city);
-    if (date) setSelectedDate(date);
+    // if (date) setSelectedDate(date);
   };
 
   useEffect(() => {
@@ -105,9 +106,10 @@ const FilterSection = ({
                   ) : (
                     <div key={index} className="flex w-[118px] gap-2">
                       <div
-                        onClick={() => onFilterChange(undefined, date.date)}
-                        className={`relative flex h-16 w-full cursor-pointer flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
-                          selectedDate === date.date && date.status === "active"
+                        // onClick={() => onFilterChange(undefined, date.date)}
+                        className={`relative flex h-16 w-full flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
+                          // selectedDate === date.date && date.status === "active"
+                          date.status === "active"
                             ? "border border-primary bg-primary-background text-primary"
                             : "bg-gray border text-neutral-foreground"
                         } ${
@@ -153,14 +155,14 @@ const FilterSection = ({
                           </span>
                         )}
 
-                        {selectedDate === date.date &&
-                          date.status === "active" && (
-                            <span
-                              className={`absolute -bottom-2 rounded-[4px] bg-primary px-1 text-[10px] font-medium tracking-wide text-white`}
-                            >
-                              Kuota Tersedia
-                            </span>
-                          )}
+                        {/* {selectedDate === date.date && */}
+                        {date.status === "active" && (
+                          <span
+                            className={`absolute -bottom-2 rounded-[4px] bg-primary px-1 text-[10px] font-medium tracking-wide text-white`}
+                          >
+                            Kuota Tersedia
+                          </span>
+                        )}
 
                         {date.status === "closing-umrah" && (
                           <span
@@ -190,7 +192,7 @@ const FilterSection = ({
                 ) : (
                   <div
                     key={index}
-                    onClick={() => onFilterChange(city.city, undefined)}
+                    onClick={() => onFilterChange(city.city)}
                     className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${
                       selectedCity! === city.city
                         ? "border border-primary bg-primary-background text-neutral-foreground"

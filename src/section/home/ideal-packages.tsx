@@ -5,27 +5,38 @@ import "swiper/css";
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
-import { UmrahPackage } from "@/types/package-details";
 
-const getRandomIndexByDate = (length: number) => {
-  const today = new Date();
-  const seed = today.getDate() + today.getMonth() + today.getFullYear();
-  return seed % length;
-};
+// const getRandomIndexByDate = (length: number) => {
+//   const today = new Date();
+//   const seed = today.getDate() + today.getMonth() + today.getFullYear();
+//   return seed % length;
+// };
 
-const getRandomPackageByCategory = (data: UmrahPackage[], category: string) => {
-  const filtered = data.filter((pkg) => pkg.category === category);
-  const randomIndex = getRandomIndexByDate(filtered.length);
-  return filtered[randomIndex];
-};
+// const getRandomPackageByCategory = (data: UmrahPackage[], category: string) => {
+//   const filtered = data.filter((pkg) => pkg.category === category);
+//   const randomIndex = getRandomIndexByDate(filtered.length);
+//   return filtered[randomIndex];
+// };
 
 const IdealPackagesSection = () => {
-  const randomPackages = useMemo(() => {
-    return {
-      silver: getRandomPackageByCategory(packageDetailData, "Silver"),
-      gold: getRandomPackageByCategory(packageDetailData, "Gold"),
-      platinum: getRandomPackageByCategory(packageDetailData, "Platinum"),
-    };
+  // const randomPackages = useMemo(() => {
+  //   return {
+  //     silver: getRandomPackageByCategory(packageDetailData, "Silver"),
+  //     gold: getRandomPackageByCategory(packageDetailData, "Gold"),
+  //     platinum: getRandomPackageByCategory(packageDetailData, "Platinum"),
+  //   };
+  // }, []);
+
+  const packageSilver = useMemo(() => {
+    return packageDetailData.filter((pkg) => pkg.category === "Silver");
+  }, []);
+
+  const packageGold = useMemo(() => {
+    return packageDetailData.filter((pkg) => pkg.category === "Gold");
+  }, []);
+
+  const packagePlatinum = useMemo(() => {
+    return packageDetailData.filter((pkg) => pkg.category === "Platinum");
   }, []);
 
   return (
@@ -34,12 +45,24 @@ const IdealPackagesSection = () => {
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
-        <h2 className="text-center text-2xl font-bold leading-[130%] tracking-normal text-primary">
-          Paket Umrah Ideal, dengan Perjalanan yang Tak Terlupakan
+        <h2 className="text-center text-[21px] font-bold leading-[130%] tracking-normal text-primary">
+          Umrah Ideal dengan Momen Tak Terlupakan mulai dari 22 jt
         </h2>
       </div>
 
       <div className="w-full">
+        <PackageCard data={packageSilver[0]} />
+      </div>
+
+      <div className="w-full">
+        <PackageCard data={packageGold[0]} />
+      </div>
+
+      <div className="w-full">
+        <PackageCard data={packagePlatinum[0]} />
+      </div>
+
+      {/* <div className="w-full">
         <PackageCard data={randomPackages.silver} />
       </div>
 
@@ -49,7 +72,7 @@ const IdealPackagesSection = () => {
 
       <div className="w-full">
         <PackageCard data={randomPackages.platinum} />
-      </div>
+      </div> */}
 
       {/* <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
         <Link href="/umrah/ideal">

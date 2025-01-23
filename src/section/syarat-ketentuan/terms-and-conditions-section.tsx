@@ -45,7 +45,10 @@ const TermsAndConditionSection = () => {
               Fotokopi Akta Lahir bagi yang membawa anak atau belum memiliki
               KTP.
             </li>
-            <li>Sertifikat Vaksin Meningitis</li>
+            <li>
+              Sertifikat Vaksin Meningitis maksimal 30 hari sebelum
+              keberangkatan
+            </li>
           </ul>
         </div>
 
@@ -70,14 +73,10 @@ const TermsAndConditionSection = () => {
             </li>
             <li>
               44 - 30 hari sebelum keberangkatan: Pembatalan dikenakan potongan
-              70% dari total biaya paket (*).
-            </li>
-            <li>
-              30 - 21 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               80% dari total biaya paket (*).
             </li>
             <li>
-              21 - 14 hari sebelum keberangkatan: Pembatalan dikenakan potongan
+              29 - 0 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               100% dari total biaya paket (*).
             </li>
           </ol>

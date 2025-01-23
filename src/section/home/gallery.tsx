@@ -12,16 +12,32 @@ import React from "react";
 
 const galleryData: CardProps[] = [
   {
-    imageUrl: "/assets/image/gallery/image-1.png",
-    alt: "Image 1",
+    imageUrl: "/assets/image/gallery/epic-moment-1.jpeg",
+    alt: "EpicMoment1",
   },
   {
-    imageUrl: "/assets/image/gallery/image-2.png",
-    alt: "Image 2",
+    imageUrl: "/assets/image/gallery/epic-moment-2.jpeg",
+    alt: "EpicMoment2",
   },
   {
-    imageUrl: "/assets/image/gallery/image-3.png",
-    alt: "Image 3",
+    imageUrl: "/assets/image/gallery/epic-moment-3.jpeg",
+    alt: "EpicMoment2",
+  },
+  {
+    imageUrl: "/assets/image/gallery/epic-moment-4.jpeg",
+    alt: "EpicMoment2",
+  },
+  {
+    imageUrl: "/assets/image/gallery/epic-moment-5.jpeg",
+    alt: "EpicMoment2",
+  },
+  {
+    imageUrl: "/assets/image/gallery/epic-moment-6.jpeg",
+    alt: "EpicMoment2",
+  },
+  {
+    imageUrl: "/assets/image/gallery/epic-moment-7.jpeg",
+    alt: "EpicMoment2",
   },
 ];
 
@@ -55,8 +71,15 @@ interface CardProps {
 
 const Card = ({ imageUrl, alt }: CardProps) => {
   return (
-    <div className="xsm:h-[300px] relative aspect-[9/16] h-[200px] w-full flex-none overflow-hidden rounded-lg">
-      <Image src={imageUrl} alt={alt} fill sizes="44vw" quality={100} />
+    <div className="relative aspect-[9/16] h-[200px] w-full flex-none overflow-hidden rounded-lg xsm:h-[300px]">
+      <Image
+        src={imageUrl}
+        alt={alt}
+        fill
+        sizes="44vw"
+        quality={100}
+        className="object-cover"
+      />
     </div>
   );
 };

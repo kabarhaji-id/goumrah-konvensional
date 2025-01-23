@@ -193,7 +193,7 @@ const PackageCard = ({
                 {isLoading ? (
                   <Skeleton className="h-6 w-64" />
                 ) : (
-                  <div className="line-clamp-2 text-base leading-6 tracking-normal text-primary-foreground xs:text-[17px]">
+                  <div className="line-clamp-2 text-sm leading-6 tracking-[-0.30px] text-primary-foreground xs:text-[17px]">
                     <span className="font-bold">{data.title}</span>
                   </div>
                 )}

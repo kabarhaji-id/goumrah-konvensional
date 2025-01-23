@@ -99,12 +99,12 @@ const FilterSection = ({
             className={`flex items-center gap-2 overflow-visible rounded-[10px] pb-4 pt-3 ${variant === "departureCity" && "px-2"}`}
           >
             {variant === "departureDate" && departureDates ? (
-              <CustomSwiper gap={8} padding={2} slidesClass="pb-2">
+              <CustomSwiper gap={8} padding={2} slidesClass="pb-2 w-[110px]">
                 {departureDates.map((date, index) => {
                   return isLoading ? (
-                    <Skeleton key={index} className="h-16 w-[118px]" />
+                    <Skeleton key={index} className="h-16 w-[110px]" />
                   ) : (
-                    <div key={index} className="flex w-[118px] gap-2">
+                    <div key={index} className="flex w-[110px] gap-2">
                       <div
                         // onClick={() => onFilterChange(undefined, date.date)}
                         className={`relative flex h-16 w-full flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${

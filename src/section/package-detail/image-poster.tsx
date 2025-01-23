@@ -27,7 +27,7 @@ const ImagePoster = ({
   if (!packageImage || isImageError) {
     return (
       <div className="relative w-full">
-        <div className="flex h-[380px] w-full items-center justify-center bg-gray-100">
+        <div className="flex aspect-[4/3] max-h-[380px] w-full items-center justify-center bg-gray-100">
           <span className="text-sm text-gray-500">Foto tidak tersedia</span>
         </div>
 
@@ -47,7 +47,7 @@ const ImagePoster = ({
     <>
       <div className="relative w-full">
         {!isImageLoaded && (
-          <Skeleton className="h-[380px] w-full rounded-none" />
+          <Skeleton className="aspect-[4/3] max-h-[380px] w-full rounded-none" />
         )}
 
         <Image

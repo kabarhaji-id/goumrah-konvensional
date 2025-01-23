@@ -9,6 +9,12 @@ export default {
     "./src/section/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xxs: "340px",
+      xs: "360px",
+      xsm: "440px",
+      sm: "640px",
+    },
     extend: {
       backgroundImage: {
         "custom-gold-gradient":

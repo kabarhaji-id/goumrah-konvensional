@@ -89,14 +89,9 @@ export function ShareDialog({
               />
             </div>
             <div className="flex flex-col gap-1">
-              <div className="line-clamp-1 text-sm font-bold text-neutral-foreground">
-                <p>
-                  <span className="font-bold">{dataPackage.title}</span>
-                  {dataPackage.tagline && (
-                    <span className="font-normal"> {dataPackage.tagline}</span>
-                  )}
-                </p>
-              </div>
+              <span className="line-clamp-1 text-sm font-bold text-neutral-foreground">
+                {dataPackage.title}
+              </span>
               <span className="text-xs text-neutral-foreground/50">
                 goumrah.id
               </span>

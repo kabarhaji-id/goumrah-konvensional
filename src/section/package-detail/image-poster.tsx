@@ -31,7 +31,7 @@ const ImagePoster = ({
           <span className="text-sm text-gray-500">Foto tidak tersedia</span>
         </div>
 
-        <div className="absolute -bottom-0 z-20 h-fit">
+        <div className="absolute -bottom-px z-20 h-fit">
           {packageCategory === "Silver" && <SilverAccent className="w-full" />}
           {packageCategory === "Gold" && <GoldAccent className="w-full" />}
           {packageCategory === "Platinum" && (
@@ -66,7 +66,7 @@ const ImagePoster = ({
           }}
         />
 
-        <div className="absolute -bottom-0 z-20 h-fit">
+        <div className="absolute -bottom-px z-20 h-fit">
           {packageCategory === "Silver" && <SilverAccent className="w-full" />}
           {packageCategory === "Gold" && <GoldAccent className="w-full" />}
           {packageCategory === "Platinum" && (

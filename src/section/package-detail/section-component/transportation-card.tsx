@@ -56,7 +56,9 @@ const TransportationCard = ({
       }}
     >
       <CardDetailHeader>
-        <span className="text-xs font-semibold text-primary">Bus</span>
+        <span className="text-xs font-semibold text-neutral-foreground">
+          Bus
+        </span>
       </CardDetailHeader>
       <div className="px-3">
         {isLoading ? (

@@ -337,8 +337,8 @@ const ItinerarySection = ({
                               <div className="bg-shark-50 flex flex-col gap-3 rounded-[10px] pb-3">
                                 <div className="flex flex-col gap-1 px-3 pt-3">
                                   <div className="flex items-center gap-1">
-                                    <LightbulbIcon className="stroke-status-gold h-4 w-4 flex-shrink-0" />
-                                    <span className="text-status-gold text-[10px] font-bold leading-4 tracking-[1.5px]">
+                                    <LightbulbIcon className="h-4 w-4 flex-shrink-0 stroke-status-gold" />
+                                    <span className="text-[10px] font-bold leading-4 tracking-[1.5px] text-status-gold">
                                       REKOMENDASI
                                     </span>
                                     <Separator className="bg-status-gold" />

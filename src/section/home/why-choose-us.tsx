@@ -28,7 +28,7 @@ const WhyChooseUsSection = () => {
         className="absolute -top-[399px] z-0 h-[400px] w-full bg-primary-foreground"
         style={{
           background:
-            "linear-gradient(0deg, rgba(0,38,38,1) 11%, rgba(11,71,71,1) 36%, rgba(89,130,130,1) 66%, rgba(162,185,185,1) 86%, rgba(226,232,240,1) 100%)",
+            "linear-gradient(0deg, rgba(0,38,38,1) 11%, rgba(11,71,71,1) 36%, rgba(89,130,130,1) 66%, rgba(162,185,185,1) 86%, rgba(255,255,255,1) 100%)",
         }}
       />
 

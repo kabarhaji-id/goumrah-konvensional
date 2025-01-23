@@ -62,7 +62,7 @@ const HotelCard = ({
   return (
     <CardDetail>
       <CardDetailHeader>
-        <span className="text-sm font-semibold text-primary">
+        <span className="text-sm font-semibold text-neutral-foreground">
           {dataHotel.city}
         </span>
       </CardDetailHeader>

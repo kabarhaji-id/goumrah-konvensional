@@ -5,18 +5,27 @@ import "swiper/css";
 import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
+import { UmrahPackage } from "@/types/package-details";
+
+const getRandomIndexByDate = (length: number) => {
+  const today = new Date();
+  const seed = today.getDate() + today.getMonth() + today.getFullYear();
+  return seed % length;
+};
+
+const getRandomPackageByCategory = (data: UmrahPackage[], category: string) => {
+  const filtered = data.filter((pkg) => pkg.category === category);
+  const randomIndex = getRandomIndexByDate(filtered.length);
+  return filtered[randomIndex];
+};
 
 const IdealPackagesSection = () => {
-  const packageSilver = useMemo(() => {
-    return packageDetailData.filter((pkg) => pkg.category === "Silver");
-  }, []);
-
-  const packageGold = useMemo(() => {
-    return packageDetailData.filter((pkg) => pkg.category === "Gold");
-  }, []);
-
-  const packagePlatinum = useMemo(() => {
-    return packageDetailData.filter((pkg) => pkg.category === "Platinum");
+  const randomPackages = useMemo(() => {
+    return {
+      silver: getRandomPackageByCategory(packageDetailData, "Silver"),
+      gold: getRandomPackageByCategory(packageDetailData, "Gold"),
+      platinum: getRandomPackageByCategory(packageDetailData, "Platinum"),
+    };
   }, []);
 
   return (
@@ -31,15 +40,15 @@ const IdealPackagesSection = () => {
       </div>
 
       <div className="w-full">
-        <PackageCard data={packageSilver[0]} />
+        <PackageCard data={randomPackages.silver} />
       </div>
 
       <div className="w-full">
-        <PackageCard data={packageGold[0]} />
+        <PackageCard data={randomPackages.gold} />
       </div>
 
       <div className="w-full">
-        <PackageCard data={packagePlatinum[0]} />
+        <PackageCard data={randomPackages.platinum} />
       </div>
 
       {/* <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>

@@ -98,7 +98,7 @@ const PackageCard = ({
               />
             )}
 
-            <div className="absolute bottom-0 h-fit">
+            <div className="absolute -bottom-px h-fit">
               {data.category === "Silver" && (
                 <SilverAccent className="w-[100%]" />
               )}
@@ -113,7 +113,7 @@ const PackageCard = ({
             <div className="space-y-0">
               <CustomSwiper padding={0} gap={8}>
                 {isLoading ? (
-                  <Skeleton className="h-[22px] w-16" />
+                  <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden">
                     <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
@@ -126,7 +126,7 @@ const PackageCard = ({
                 )}
 
                 {isLoading ? (
-                  <Skeleton className="h-[22px] w-20" />
+                  <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden">
                     <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
@@ -146,7 +146,7 @@ const PackageCard = ({
                 )}
 
                 {isLoading ? (
-                  <Skeleton className="h-[22px] w-20" />
+                  <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden">
                     <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
@@ -173,16 +173,16 @@ const PackageCard = ({
                 {/* --- Fast Train? */}
                 {data.isFastTrain &&
                   (isLoading ? (
-                    <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+                    <Skeleton className="mb-2 h-[22px] w-[110px] rounded-[8px]" />
                   ) : (
                     <Chip variant="default" className="overflow-hidden">
-                      <div className="w-full bg-primary-accent p-1">
+                      <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
                         <CustomFastTrainIcon
                           className="h-4 w-4"
                           fill="#1B8386"
                         />
                       </div>
-                      <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+                      <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
                         Kereta Cepat
                       </span>
                     </Chip>
@@ -191,9 +191,9 @@ const PackageCard = ({
 
               <div className="space-y-2">
                 {isLoading ? (
-                  <Skeleton className="h-5 w-56" />
+                  <Skeleton className="h-6 w-64" />
                 ) : (
-                  <div className="line-clamp-2 text-[17px] leading-6 tracking-[0.15px] text-primary-foreground">
+                  <div className="line-clamp-2 text-base leading-6 tracking-[0.15px] text-primary-foreground xs:text-[17px]">
                     <span className="font-bold">{data.title}</span>
                   </div>
                 )}
@@ -201,7 +201,7 @@ const PackageCard = ({
                 <div className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
                   {/* --- Departure Date */}
                   {isLoading ? (
-                    <Skeleton className="h-[18px] w-40" />
+                    <Skeleton className="h-[18px] w-56" />
                   ) : (
                     <div className="flex items-center gap-2">
                       <CalendarDaysIcon className="h-4 w-4 stroke-neutral-foreground" />
@@ -220,50 +220,58 @@ const PackageCard = ({
 
                   {/* --- Flight */}
                   {isLoading ? (
-                    <Skeleton className="h-4 w-14 rounded" />
+                    <Skeleton className="h-6 w-52" />
                   ) : (
-                    <div className="flex items-center gap-2 text-[13px] leading-[18px] tracking-wide">
+                    <div className="flex items-center gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex items-center gap-2 font-medium">
-                        <CustomMaskapaiIcon />
-                        {/* <PlaneIcon className="h-4 w-4 stroke-primary-foreground" /> */}
-                        <p className="w-[60px]">Maskapai</p>
+                        <CustomMaskapaiIcon className="flex flex-shrink-0" />
+                        <div className="flex w-[70px] justify-between">
+                          <p>Maskapai</p>
+                          <span>:</span>
+                        </div>
                       </div>
                       <span className="font-bold leading-[18px] tracking-wide">
-                        : {data.flight_details.departure_flight.airline}
+                        {data.flight_details.departure_flight.airline}
                       </span>
                     </div>
                   )}
 
                   {/* --- Madinah Hotel's Rating */}
                   {isLoading ? (
-                    <Skeleton className="h-4 w-9 rounded-sm" />
+                    <Skeleton className="h-6 w-56" />
                   ) : (
-                    <div className="flex items-center gap-2 text-[13px] leading-[18px] tracking-wide">
+                    <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex flex-shrink-0 items-center gap-2 font-medium">
                         <Rating2
                           starsRating={data.hotel_details.madinah.star_rating}
                         />
-                        <p className="w-[60px]">Madinah</p>
+                        <div className="flex w-[68px] justify-between">
+                          <p>Madinah</p>
+                          <span>:</span>
+                        </div>
                       </div>
-                      <span className="font-bold leading-[18px] tracking-wide">
-                        : {data.hotel_details.madinah.hotel_name}
+                      <span className="mt-1 font-bold leading-[18px] tracking-wide">
+                        {data.hotel_details.madinah.hotel_name}
                       </span>
                     </div>
                   )}
 
                   {/* --- Makkah Hotel's Rating */}
                   {isLoading ? (
-                    <Skeleton className="h-4 w-9 rounded-sm" />
+                    <Skeleton className="h-6 w-60" />
                   ) : (
-                    <div className="flex items-center gap-2 text-[13px] leading-[18px] tracking-wide">
+                    <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex flex-shrink-0 items-center gap-2 font-medium">
                         <Rating2
                           starsRating={data.hotel_details.makkah.star_rating}
                         />
-                        <p className="w-[60px]">Makkah</p>
+                        <div className="flex w-[68px] justify-between">
+                          <p className="w-[60px]">Makkah</p>
+                          <span>:</span>
+                        </div>
                       </div>
-                      <span className="font-bold leading-[18px] tracking-wide">
-                        : {data.hotel_details.makkah.hotel_name}
+                      <span className="mt-1 font-bold leading-[18px] tracking-wide">
+                        {data.hotel_details.makkah.hotel_name}
                       </span>
                     </div>
                   )}
@@ -276,9 +284,9 @@ const PackageCard = ({
                 <Skeleton className="h-6 w-36" />
               ) : (
                 <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground">
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1 xs:gap-2">
                     {/* --- Normal Price */}
-                    <h5 className="flex-shrink-0 text-[17.5px] font-extrabold">
+                    <h5 className="flex-shrink-0 text-base font-extrabold xs:text-[17.5px]">
                       {data.quadFinalPrice
                         ? priceToLocale(data.quadFinalPrice)
                         : priceToLocale(data.quadPrice)}
@@ -289,10 +297,10 @@ const PackageCard = ({
                       data.quadPrice !== data.quadFinalPrice && (
                         <div className="flex flex-shrink-0 items-center gap-1">
                           <CustomPercentWavyIcon
-                            className="h-4 w-4"
+                            className="h-3 w-3 xs:h-4 xs:w-4"
                             stroke="#EF4444"
                           />
-                          <span className="xs:text-sm text-xs leading-5 text-destructive line-through opacity-80">
+                          <span className="text-[11px] leading-5 text-destructive line-through opacity-80 xs:text-sm">
                             {priceToLocale(data.quadPrice)}
                           </span>
                         </div>

@@ -87,7 +87,7 @@ const HeaderComponent = ({
           <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
         ) : (
           <Chip variant="default" className="overflow-hidden">
-            <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
+            <div className="bg-primary-accent py-1 pl-1 pr-0.5">
               {packageData.flight_details.departure_flight.transit ? (
                 <CustomAirplaneIcon
                   className="h-4 w-4 rotate-90"
@@ -97,7 +97,7 @@ const HeaderComponent = ({
                 <CustomAirplaneIcon className="h-4 w-4" fill="#1B8386" />
               )}
             </div>
-            <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {packageData.flight_details.departure_flight.transit
                 ? "Transit"
                 : "Langsung"}
@@ -111,10 +111,10 @@ const HeaderComponent = ({
             <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
           ) : (
             <Chip variant="default" className="overflow-hidden">
-              <div className="w-full bg-primary-accent p-1">
+              <div className="bg-primary-accent pb-[3px] pl-1 pr-0.5 pt-1">
                 <CustomFastTrainIcon className="h-4 w-4" fill="#1B8386" />
               </div>
-              <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+              <span className="py-[3px] pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                 Kereta Cepat
               </span>
             </Chip>

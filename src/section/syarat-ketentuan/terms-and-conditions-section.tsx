@@ -56,28 +56,28 @@ const TermsAndConditionSection = () => {
           </p>
           <ol className="list-decimal space-y-1 pl-4 text-sm leading-6 text-neutral-foreground">
             <li>
-              Lebih dari 45 hari sebelum keberangkatan: Pembatalan dikenakan
+              Lebih dari 60 hari sebelum keberangkatan: Pembatalan dikenakan
               potongan biaya lebih dari 10% dari total biaya paket dan biaya
               perlengkapan (*).
             </li>
             <li>
-              Tepat 45 hari sebelum keberangkatan: Pembatalan dikenakan potongan
+              Tepat 60 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               sebesar harga tiket pesawat (*).
             </li>
             <li>
-              44 - 30 hari sebelum keberangkatan: Pembatalan dikenakan potongan
+              60 - 45 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               50% dari total biaya paket (*).
             </li>
             <li>
-              29 - 8 hari sebelum keberangkatan: Pembatalan dikenakan potongan
+              44 - 30 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               70% dari total biaya paket (*).
             </li>
             <li>
-              7 - 4 hari sebelum keberangkatan: Pembatalan dikenakan potongan
+              30 - 21 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               80% dari total biaya paket (*).
             </li>
             <li>
-              3 - 0 hari sebelum keberangkatan: Pembatalan dikenakan potongan
+              21 - 14 hari sebelum keberangkatan: Pembatalan dikenakan potongan
               100% dari total biaya paket (*).
             </li>
           </ol>

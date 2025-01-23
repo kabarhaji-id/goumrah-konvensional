@@ -74,15 +74,15 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             </div>
           )}
 
-          <div className="absolute -bottom-px h-fit">
+          <div className="absolute -bottom-1 -left-2 h-fit">
             {dataPackage.category === "Silver" && (
-              <SilverAccent className="w-[150%]" />
+              <SilverAccent className="w-[100%]" />
             )}
             {dataPackage.category === "Gold" && (
-              <GoldAccent className="w-[150%]" />
+              <GoldAccent className="w-[100%]" />
             )}
             {dataPackage.category === "Platinum" && (
-              <PlatinumAccent className="w-[150%]" />
+              <PlatinumAccent className="w-[100%]" />
             )}
           </div>
         </div>
@@ -122,14 +122,9 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             {isLoading ? (
               <Skeleton className="h-10 w-36" />
             ) : (
-              <div className="line-clamp-2 pb-0.5 text-sm leading-5 text-primary-foreground">
-                <p>
-                  <span className="font-bold">{dataPackage.title}</span>
-                  {dataPackage.tagline && (
-                    <span className="font-normal"> {dataPackage.tagline}</span>
-                  )}
-                </p>
-              </div>
+              <span className="line-clamp-2 pb-0.5 text-sm font-bold leading-5 text-primary-foreground">
+                {dataPackage.title}
+              </span>
             )}
 
             {isLoading ? (

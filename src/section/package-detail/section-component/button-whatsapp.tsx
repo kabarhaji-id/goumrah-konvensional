@@ -57,7 +57,7 @@ const ButtonWhatsApp = ({ orderUrl }: { orderUrl: string }) => {
               <LoadingSpinner />
             ) : ( */}
             <div className="flex items-center gap-2">
-              <p className="text-base font-medium leading-[150%] tracking-wide">
+              <p className="flex-shrink-0 text-sm font-medium leading-[150%] tracking-wide xs:text-base">
                 Pesan Paket Umrah Ini
               </p>
               <WhatsAppIcon />

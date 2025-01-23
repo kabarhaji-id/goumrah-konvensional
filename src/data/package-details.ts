@@ -11,10 +11,10 @@ const promoLink = `${whatsappLink}${encodeURIComponent(
 export const packageDetailData: UmrahPackage[] = [
   // --- SILVER
   {
-    id: "umrah-paling-hemat-fokus-ibadah-silver",
-    title: "Umrah Paling Hemat - Fokus Ibadah",
+    id: "umrah-hemat-ibadah-fokus-silver",
+    title: "Umrah Hemat - Ibadah Fokus",
     thumbnail:
-      "/assets/image/packages-umrah/silver/cover-umrah-paling-hemat-fokus-ibadah.jpg",
+      "/assets/image/packages-umrah/silver/cover-umrah-hemat-ibadah-fokus.jpg",
     type: "Reguler",
     category: "Silver",
     season: "NON RAMADHAN",
@@ -28,7 +28,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Silver",
     down_payment: 7,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Paling Hemat - Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-03T10:00:00+07:00",
@@ -56,23 +56,23 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-07-21T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-08-04T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-08-18T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-01T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-15T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-06T10:00:00+07:00",
@@ -518,493 +518,10 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-hemat-ibadah-lebih-tenang-silver",
-    title: "Umrah Hemat - Ibadah Lebih Tenang",
+    id: "umrah-hemat-ibadah-dekat-silver",
+    title: "Umrah Hemat - Ibadah Dekat",
     thumbnail:
-      "/assets/image/packages-umrah/silver/cover-umrah-hemat-ibadah-lebih-tenang.jpg",
-    type: "Reguler",
-    category: "Silver",
-    season: "NON RAMADHAN",
-    isFastTrain: false,
-    city_departure: [
-      {
-        city: "Jakarta",
-        route: "CGK-JED",
-      },
-    ],
-    duration: "12 Hari",
-    package: "Silver",
-    down_payment: 7,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Lebih Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
-    departure_date: [
-      {
-        date: "2025-02-12T10:00:00+07:00",
-        status: "expired",
-      },
-      {
-        date: "2025-03-12T10:00:00+07:00",
-        status: "expired",
-      },
-      {
-        date: "2025-04-15T10:00:00+07:00",
-        status: "closing-umrah",
-      },
-      {
-        date: "2025-05-01T10:00:00+07:00",
-        status: "musim-haji",
-      },
-      {
-        date: "2025-06-01T10:00:00+07:00",
-        status: "musim-haji",
-      },
-      {
-        date: "2025-07-09T10:00:00+07:00",
-        status: "active",
-      },
-      {
-        date: "2025-08-13T10:00:00+07:00",
-        status: "coming-soon",
-      },
-      {
-        date: "2025-09-10T10:00:00+07:00",
-        status: "coming-soon",
-      },
-      {
-        date: "2025-10-08T10:00:00+07:00",
-        status: "coming-soon",
-      },
-      {
-        date: "2025-11-12T10:00:00+07:00",
-        status: "coming-soon",
-      },
-      {
-        date: "2025-12-10T10:00:00+07:00",
-        status: "coming-soon",
-      },
-    ],
-    quadPrice: 28900000,
-    triplePrice: 30900000,
-    doublePrice: 32900000,
-    infantPrice: undefined,
-    quadFinalPrice: 25900000,
-    tripleFinalPrice: 27900000,
-    doubleFinalPrice: 29900000,
-    infantFinalPrice: undefined,
-    flight_details: {
-      wisata_flight: [],
-      departure_flight: {
-        flight_number: undefined,
-        duration: undefined,
-        airport_name_departure: "Soekarno-Hatta International Airport",
-        airport_terminal_departure: "Terminal 3 Internasional",
-        airport_code_departure: "CGK",
-        airport_city_departure: "Jakarta",
-        airport_name_arrival: "King Abdulaziz International Airport",
-        airport_terminal_arrival: undefined,
-        airport_code_arrival: "JED",
-        airport_city_arrival: "Jeddah",
-        departure_datetime: "2025-07-09T10:00:00+07:00",
-        departure_arrivaltime: undefined,
-        class: "Ekonomi",
-        flight_type: "Direct",
-        airline: "Lion Air",
-        aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
-        baggage_allowance: 20,
-        cabin_baggage: 7,
-        airline_logo: "/assets/airlines/lion-air.webp",
-        skytrax: "Low Cost",
-        rating: "3",
-        transit: undefined,
-        transit_datetime: undefined,
-      },
-      return_flight: {
-        flight_number: undefined,
-        duration: undefined,
-        airport_name_departure: "King Abdulaziz International Airport",
-        airport_terminal_departure: undefined,
-        airport_code_departure: "JED",
-        airport_city_departure: "Jeddah",
-        airport_name_arrival: "Soekarno-Hatta International Airport",
-        airport_terminal_arrival: "Terminal 3 Internasional",
-        airport_code_arrival: "CGK",
-        airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-17T10:00:00+07:00",
-        departure_arrivaltime: undefined,
-        class: "Ekonomi",
-        flight_type: "Direct",
-        airline: "Lion Air",
-        aircraft_type: undefined,
-        seat_layout: undefined,
-        baggage_allowance: 20,
-        cabin_baggage: 7,
-        airline_logo: "/assets/airlines/lion-air.webp",
-        skytrax: "Low Cost",
-        rating: "3",
-        transit: undefined,
-        transit_datetime: undefined,
-      },
-    },
-    hotel_details: {
-      wisata: [],
-      makkah: {
-        id: "le-meridien-tower-makkah",
-        city: "Makkah",
-        hotel_name: "Le Meridien Tower",
-        star_rating: 5,
-        duration: 6,
-        images: [
-          {
-            id: "1",
-            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-1.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "2",
-            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-2.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "3",
-            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-3.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "4",
-            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-4.jpg",
-            category: "Lobby",
-          },
-        ],
-        google_maps_link_noembed: "https://maps.app.goo.gl/qZY9Dp2uZMRRrFLg9",
-        google_maps_link:
-          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.6725209251936!2d39.82396827526694!3d21.402795380341743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc3bae24752d%3A0xca38e13e3889c0e7!2sLe%20M%C3%A9ridien%20Towers%20Makkah!5e0!3m2!1sid!2sid!4v1736987502086!5m2!1sid!2sid",
-        google_review_link:
-          "https://www.google.com/travel/search?q=le%20meridien%20tower%20makkah&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyFENnc0k1NEdueE9PbnVKektBUkFCOAJCCQnnwIk4PuE4ykIJCefAiTg-4TjK&ap=KigKEgmh9DwiN2Y1QBHQoVawlOlDQBISCVDhtJ0GaDVAEdChVhQD6kNAugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiw9eeM6e-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzNjYzNiYWUyNDc1MmQ6MHhjYTM4ZTEzZTM4ODljMGU3EhoSFAoHCOgPEAwYBxIHCOgPEAwYCBgBMgIQAA%3D%3D",
-        description:
-          "Le Méridien Towers Makkah adalah hotel bintang 5 yang terletak strategis di Makkah, Arab Saudi, hanya 3 menit dari Masjidil Haram dengan layanan antar-jemput gratis 24 jam. Hotel ini menawarkan 647 kamar yang luas dan elegan, termasuk suite diplomatik, suite kerajaan, dan suite kerajaan, yang dilengkapi dengan dapur kecil, TV layar datar, minibar, dan akses Wi-Fi gratis. Tamu dapat menikmati berbagai fasilitas, termasuk tiga restoran yang menyajikan masakan internasional, layanan kamar 24 jam, layanan kebersihan harian, dan layanan concierge. Terletak di area Kudai, hotel ini memudahkan akses ke Masjidil Haram dan tempat-tempat suci lainnya di Makkah, menjadikannya pilihan ideal untuk para tamu yang menginginkan kenyamanan dan kemudahan selama kunjungan mereka.",
-        facilities: [
-          "AC",
-          "WiFi",
-          "Restoran",
-          "Layanan Kamar",
-          "Kamar Mandi Dalam",
-        ],
-        check_in_time: undefined,
-        check_out_time: undefined,
-        address: "Jl. Kudai, Misfalah, Makkah 21955, Arab Saudi",
-        distance_to_masjid: 200,
-        food_type: "Prasmanan",
-        food_amount: 3,
-        food_menu: "Far East",
-      },
-      madinah: {
-        id: "hayah-golden-madinah",
-        city: "Madinah",
-        hotel_name: "Hayah Golden",
-        star_rating: 4,
-        duration: 4,
-        images: [
-          {
-            id: "1",
-            src: "/assets/image/hotel/madinah/hayah-golden/exterior-hayah-golden.jpg",
-            category: "Eksterior",
-          },
-          {
-            id: "2",
-            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-1.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "3",
-            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-2.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "4",
-            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-3.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "5",
-            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-4.jpg",
-            category: "Kamar",
-          },
-          {
-            id: "6",
-            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-5.jpg",
-            category: "Kamar",
-          },
-        ],
-        google_maps_link_noembed: "https://maps.app.goo.gl/TzTKZr3YgSpK3J2t5",
-        google_maps_link:
-          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.466232858313!2d39.60216347521062!3d24.4692975781867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf046d507ae3%3A0x327fc68978ea7c68!2sHAYAH%20GOLDEN!5e0!3m2!1sid!2sid!4v1736987628731!5m2!1sid!2sid",
-        google_review_link:
-          "https://www.google.com/travel/search?q=hayah%20golden&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&ts=CAEaRwopEicyJTB4MTViZGJmMDQ2ZDUwN2FlMzoweDMyN2ZjNjg5NzhlYTdjNjgSGhIUCgcI6A8QCxgeEgcI6A8QDBgBGAEyAhAA&qs=CAEyE0Nnb0k2UGlweDVmUjhiOHlFQUU4AkIJCWh86niJxn8yQgkJaHzqeInGfzI&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiAkfu35u-JAxUAAAAAHQAAAAAQFA",
-        description:
-          "Hotel Hayah Golden adalah hotel bintang 4 yang terletak di Madinah, Arab Saudi, hanya sekitar 5 menit berjalan kaki dari Masjid Nabawi. Hotel ini menawarkan 222 kamar modern yang dilengkapi dengan fasilitas seperti TV layar datar, saluran satelit, minibar, dan Wi-Fi gratis di area umum. Tersedia layanan resepsionis 24 jam dan layanan kamar, serta fasilitas parkir gratis yang bergantung pada ketersediaan. Hotel ini berjarak sekitar 800 meter dari Al-Baqi' dan hanya 10 menit berjalan kaki dari Masjid Nabawi. Dengan berbagai pilihan kamar mulai dari double, triple, hingga quadruple, hotel ini cocok untuk berbagai kebutuhan akomodasi, baik untuk perjalanan ibadah maupun keluarga. Hotel Hayah Golden dapat dicapai dalam waktu sekitar 20 menit berkendara dari Bandara Internasional Prince Mohammad Bin Abdulaziz.",
-        facilities: [
-          "AC",
-          "WiFi",
-          "TV",
-          "Restoran",
-          "Lift",
-          "Layanan Kamar",
-          "Kamar Mandi Dalam",
-        ],
-        check_in_time: undefined,
-        check_out_time: undefined,
-        address: "FJ93+PV9, Al Manakhah, Madinah 42311, Arab Saudi",
-        distance_to_masjid: 220,
-        food_type: "Prasmanan",
-        food_amount: 3,
-        food_menu: "Far East",
-      },
-    },
-    bus_details: {
-      images: [
-        {
-          id: "1",
-          src: "/assets/image/transportation/bus/saptco-economy-1.jpg",
-          category: undefined,
-        },
-        {
-          id: "2",
-          src: "/assets/image/transportation/bus/saptco-economy-2.jpg",
-          category: undefined,
-        },
-        {
-          id: "3",
-          src: "/assets/image/transportation/bus/saptco-economy-3.jpg",
-          category: undefined,
-        },
-      ],
-      id: "saptco-reguler",
-      provider: "Saptco",
-      bus_type: "Economy-Class",
-      seat_amount: 45,
-    },
-    promos: [
-      {
-        imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
-        link: `${promoLink}`,
-      },
-    ],
-    addons: [
-      {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
-        price: 2000000,
-        places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
-        imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
-      },
-      {
-        title: "Kereta Cepat",
-        category: "Transportasi",
-        price: 900000,
-        places: ["Kereta Cepat"],
-        imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
-      },
-      {
-        title: "Makan di Romansiah + Cable Car",
-        category: "Wisata Kota Thaif",
-        price: 1000000,
-        places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
-      },
-      {
-        title: "Restoran Asia + Speed Boat",
-        category: "Wisata Kota Jeddah",
-        price: 1500000,
-        places: ["Restoran Asia Jeddah", "Speed Boat"],
-        imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
-      },
-    ],
-    itineraries: [
-      {
-        id: "1",
-        nth: 1,
-        duration: 4,
-        city: "Madinah",
-        days: [
-          {
-            id: "1",
-            nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Bandara King Abdul Aziz Jeddah",
-                to: "Hotel Hayah Golden Madinah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Hayah Golden Madinah",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat",
-              },
-            ],
-            description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
-          },
-          {
-            id: "3",
-            nth: 3,
-            title: "City Tour Madinah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
-          },
-          {
-            id: "4",
-            nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
-            description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
-          },
-        ],
-        images: [
-          {
-            id: "1",
-            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-7.jpg",
-            category: undefined,
-          },
-          {
-            id: "1",
-            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-2.jpg",
-            category: undefined,
-          },
-          {
-            id: "1",
-            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-8.jpg",
-            category: undefined,
-          },
-          {
-            id: "1",
-            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-9.jpg",
-            category: undefined,
-          },
-        ],
-      },
-      {
-        id: "2",
-        nth: 2,
-        duration: 6,
-        city: "Makkah",
-        days: [
-          {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Hayah Golden Madinah",
-                to: "Hotel Le Meridien Tower Makkah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Le Meridien Tower Makkah",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
-            id: "1",
-            nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
-            widgets: [],
-            description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
-          },
-          {
-            id: "2",
-            nth: 7,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "3",
-            nth: 8,
-            title: "Ziarah di Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
-          },
-          {
-            id: "4",
-            nth: 9,
-            title: "Kepulangan menuju Jakarta",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Le Meridien Tower Makkah",
-                to: "Bandara King Abdul Aziz Jeddah",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
-          },
-        ],
-        images: [
-          {
-            id: "1",
-            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-2.jpg",
-            category: undefined,
-          },
-          {
-            id: "2",
-            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-3.jpg",
-            category: undefined,
-          },
-          {
-            id: "3",
-            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-4.jpg",
-            category: undefined,
-          },
-          {
-            id: "4",
-            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-1.jpg",
-            category: undefined,
-          },
-        ],
-      },
-    ],
-    importantNotes: [],
-  },
-  {
-    id: "umrah-hemat-ibadah-lebih-dekat-silver",
-    title: "Umrah Hemat - Ibadah Lebih Dekat",
-    thumbnail:
-      "/assets/image/packages-umrah/silver/cover-umrah-hemat-ibadah-lebih-dekat.jpg",
+      "/assets/image/packages-umrah/silver/cover-umrah-hemat-ibadah-dekat.jpg",
     type: "Reguler",
     category: "Silver",
     season: "NON RAMADHAN",
@@ -1018,7 +535,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Silver",
     down_payment: 7,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Lebih Dekat. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Dekat. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -1046,11 +563,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-08-24T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-28T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-26T10:00:00+07:00",
@@ -1534,12 +1051,495 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     importantNotes: [],
   },
+  {
+    id: "umrah-hemat-ibadah-tenang-silver",
+    title: "Umrah Hemat - Ibadah Tenang",
+    thumbnail:
+      "/assets/image/packages-umrah/silver/cover-umrah-hemat-ibadah-tenang.jpg",
+    type: "Reguler",
+    category: "Silver",
+    season: "NON RAMADHAN",
+    isFastTrain: false,
+    city_departure: [
+      {
+        city: "Jakarta",
+        route: "CGK-JED",
+      },
+    ],
+    duration: "12 Hari",
+    package: "Silver",
+    down_payment: 7,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    departure_date: [
+      {
+        date: "2025-02-12T10:00:00+07:00",
+        status: "expired",
+      },
+      {
+        date: "2025-03-12T10:00:00+07:00",
+        status: "expired",
+      },
+      {
+        date: "2025-04-15T10:00:00+07:00",
+        status: "closing-umrah",
+      },
+      {
+        date: "2025-05-01T10:00:00+07:00",
+        status: "musim-haji",
+      },
+      {
+        date: "2025-06-01T10:00:00+07:00",
+        status: "musim-haji",
+      },
+      {
+        date: "2025-07-16T10:00:00+07:00",
+        status: "active",
+      },
+      {
+        date: "2025-08-13T10:00:00+07:00",
+        status: "active",
+      },
+      {
+        date: "2025-09-10T10:00:00+07:00",
+        status: "active",
+      },
+      {
+        date: "2025-10-08T10:00:00+07:00",
+        status: "coming-soon",
+      },
+      {
+        date: "2025-11-12T10:00:00+07:00",
+        status: "coming-soon",
+      },
+      {
+        date: "2025-12-10T10:00:00+07:00",
+        status: "coming-soon",
+      },
+    ],
+    quadPrice: 28900000,
+    triplePrice: 30900000,
+    doublePrice: 32900000,
+    infantPrice: undefined,
+    quadFinalPrice: 25900000,
+    tripleFinalPrice: 27900000,
+    doubleFinalPrice: 29900000,
+    infantFinalPrice: undefined,
+    flight_details: {
+      wisata_flight: [],
+      departure_flight: {
+        flight_number: undefined,
+        duration: undefined,
+        airport_name_departure: "Soekarno-Hatta International Airport",
+        airport_terminal_departure: "Terminal 3 Internasional",
+        airport_code_departure: "CGK",
+        airport_city_departure: "Jakarta",
+        airport_name_arrival: "King Abdulaziz International Airport",
+        airport_terminal_arrival: undefined,
+        airport_code_arrival: "JED",
+        airport_city_arrival: "Jeddah",
+        departure_datetime: "2025-07-16T10:00:00+07:00",
+        departure_arrivaltime: undefined,
+        class: "Ekonomi",
+        flight_type: "Direct",
+        airline: "Lion Air",
+        aircraft_type: "Airbus",
+        seat_layout: "2-4-2",
+        baggage_allowance: 20,
+        cabin_baggage: 7,
+        airline_logo: "/assets/airlines/lion-air.webp",
+        skytrax: "Low Cost",
+        rating: "3",
+        transit: undefined,
+        transit_datetime: undefined,
+      },
+      return_flight: {
+        flight_number: undefined,
+        duration: undefined,
+        airport_name_departure: "King Abdulaziz International Airport",
+        airport_terminal_departure: undefined,
+        airport_code_departure: "JED",
+        airport_city_departure: "Jeddah",
+        airport_name_arrival: "Soekarno-Hatta International Airport",
+        airport_terminal_arrival: "Terminal 3 Internasional",
+        airport_code_arrival: "CGK",
+        airport_city_arrival: "Jakarta",
+        departure_datetime: "2025-07-27T10:00:00+07:00",
+        departure_arrivaltime: undefined,
+        class: "Ekonomi",
+        flight_type: "Direct",
+        airline: "Lion Air",
+        aircraft_type: undefined,
+        seat_layout: undefined,
+        baggage_allowance: 20,
+        cabin_baggage: 7,
+        airline_logo: "/assets/airlines/lion-air.webp",
+        skytrax: "Low Cost",
+        rating: "3",
+        transit: undefined,
+        transit_datetime: undefined,
+      },
+    },
+    hotel_details: {
+      wisata: [],
+      makkah: {
+        id: "le-meridien-tower-makkah",
+        city: "Makkah",
+        hotel_name: "Le Meridien Tower",
+        star_rating: 5,
+        duration: 6,
+        images: [
+          {
+            id: "1",
+            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-1.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "2",
+            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-2.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "3",
+            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-3.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "4",
+            src: "/assets/image/hotel/makkah/le-meridien-tower/bedroom-le-meridien-tower-4.jpg",
+            category: "Lobby",
+          },
+        ],
+        google_maps_link_noembed: "https://maps.app.goo.gl/qZY9Dp2uZMRRrFLg9",
+        google_maps_link:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.6725209251936!2d39.82396827526694!3d21.402795380341743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc3bae24752d%3A0xca38e13e3889c0e7!2sLe%20M%C3%A9ridien%20Towers%20Makkah!5e0!3m2!1sid!2sid!4v1736987502086!5m2!1sid!2sid",
+        google_review_link:
+          "https://www.google.com/travel/search?q=le%20meridien%20tower%20makkah&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyFENnc0k1NEdueE9PbnVKektBUkFCOAJCCQnnwIk4PuE4ykIJCefAiTg-4TjK&ap=KigKEgmh9DwiN2Y1QBHQoVawlOlDQBISCVDhtJ0GaDVAEdChVhQD6kNAugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiw9eeM6e-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzNjYzNiYWUyNDc1MmQ6MHhjYTM4ZTEzZTM4ODljMGU3EhoSFAoHCOgPEAwYBxIHCOgPEAwYCBgBMgIQAA%3D%3D",
+        description:
+          "Le Méridien Towers Makkah adalah hotel bintang 5 yang terletak strategis di Makkah, Arab Saudi, hanya 3 menit dari Masjidil Haram dengan layanan antar-jemput gratis 24 jam. Hotel ini menawarkan 647 kamar yang luas dan elegan, termasuk suite diplomatik, suite kerajaan, dan suite kerajaan, yang dilengkapi dengan dapur kecil, TV layar datar, minibar, dan akses Wi-Fi gratis. Tamu dapat menikmati berbagai fasilitas, termasuk tiga restoran yang menyajikan masakan internasional, layanan kamar 24 jam, layanan kebersihan harian, dan layanan concierge. Terletak di area Kudai, hotel ini memudahkan akses ke Masjidil Haram dan tempat-tempat suci lainnya di Makkah, menjadikannya pilihan ideal untuk para tamu yang menginginkan kenyamanan dan kemudahan selama kunjungan mereka.",
+        facilities: [
+          "AC",
+          "WiFi",
+          "Restoran",
+          "Layanan Kamar",
+          "Kamar Mandi Dalam",
+        ],
+        check_in_time: undefined,
+        check_out_time: undefined,
+        address: "Jl. Kudai, Misfalah, Makkah 21955, Arab Saudi",
+        distance_to_masjid: 200,
+        food_type: "Prasmanan",
+        food_amount: 3,
+        food_menu: "Far East",
+      },
+      madinah: {
+        id: "hayah-golden-madinah",
+        city: "Madinah",
+        hotel_name: "Hayah Golden",
+        star_rating: 4,
+        duration: 4,
+        images: [
+          {
+            id: "1",
+            src: "/assets/image/hotel/madinah/hayah-golden/exterior-hayah-golden.jpg",
+            category: "Eksterior",
+          },
+          {
+            id: "2",
+            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-1.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "3",
+            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-2.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "4",
+            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-3.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "5",
+            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-4.jpg",
+            category: "Kamar",
+          },
+          {
+            id: "6",
+            src: "/assets/image/hotel/madinah/hayah-golden/bedroom-hayah-golden-5.jpg",
+            category: "Kamar",
+          },
+        ],
+        google_maps_link_noembed: "https://maps.app.goo.gl/TzTKZr3YgSpK3J2t5",
+        google_maps_link:
+          "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.466232858313!2d39.60216347521062!3d24.4692975781867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf046d507ae3%3A0x327fc68978ea7c68!2sHAYAH%20GOLDEN!5e0!3m2!1sid!2sid!4v1736987628731!5m2!1sid!2sid",
+        google_review_link:
+          "https://www.google.com/travel/search?q=hayah%20golden&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&ts=CAEaRwopEicyJTB4MTViZGJmMDQ2ZDUwN2FlMzoweDMyN2ZjNjg5NzhlYTdjNjgSGhIUCgcI6A8QCxgeEgcI6A8QDBgBGAEyAhAA&qs=CAEyE0Nnb0k2UGlweDVmUjhiOHlFQUU4AkIJCWh86niJxn8yQgkJaHzqeInGfzI&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiAkfu35u-JAxUAAAAAHQAAAAAQFA",
+        description:
+          "Hotel Hayah Golden adalah hotel bintang 4 yang terletak di Madinah, Arab Saudi, hanya sekitar 5 menit berjalan kaki dari Masjid Nabawi. Hotel ini menawarkan 222 kamar modern yang dilengkapi dengan fasilitas seperti TV layar datar, saluran satelit, minibar, dan Wi-Fi gratis di area umum. Tersedia layanan resepsionis 24 jam dan layanan kamar, serta fasilitas parkir gratis yang bergantung pada ketersediaan. Hotel ini berjarak sekitar 800 meter dari Al-Baqi' dan hanya 10 menit berjalan kaki dari Masjid Nabawi. Dengan berbagai pilihan kamar mulai dari double, triple, hingga quadruple, hotel ini cocok untuk berbagai kebutuhan akomodasi, baik untuk perjalanan ibadah maupun keluarga. Hotel Hayah Golden dapat dicapai dalam waktu sekitar 20 menit berkendara dari Bandara Internasional Prince Mohammad Bin Abdulaziz.",
+        facilities: [
+          "AC",
+          "WiFi",
+          "TV",
+          "Restoran",
+          "Lift",
+          "Layanan Kamar",
+          "Kamar Mandi Dalam",
+        ],
+        check_in_time: undefined,
+        check_out_time: undefined,
+        address: "FJ93+PV9, Al Manakhah, Madinah 42311, Arab Saudi",
+        distance_to_masjid: 220,
+        food_type: "Prasmanan",
+        food_amount: 3,
+        food_menu: "Far East",
+      },
+    },
+    bus_details: {
+      images: [
+        {
+          id: "1",
+          src: "/assets/image/transportation/bus/saptco-economy-1.jpg",
+          category: undefined,
+        },
+        {
+          id: "2",
+          src: "/assets/image/transportation/bus/saptco-economy-2.jpg",
+          category: undefined,
+        },
+        {
+          id: "3",
+          src: "/assets/image/transportation/bus/saptco-economy-3.jpg",
+          category: undefined,
+        },
+      ],
+      id: "saptco-reguler",
+      provider: "Saptco",
+      bus_type: "Economy-Class",
+      seat_amount: 45,
+    },
+    promos: [
+      {
+        imageUrl: "/assets/promo/promo-diskon-3-juta.jpg",
+        link: `${promoLink}`,
+      },
+    ],
+    addons: [
+      {
+        title: "Kota Al-Ula",
+        category: "Wisata Kota",
+        price: 2000000,
+        places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
+        imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
+      },
+      {
+        title: "Kereta Cepat",
+        category: "Transportasi",
+        price: 900000,
+        places: ["Kereta Cepat"],
+        imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
+      },
+      {
+        title: "Makan di Romansiah + Cable Car",
+        category: "Wisata Kota Thaif",
+        price: 1000000,
+        places: ["Restoran Al Romansiah", "Cable Car"],
+        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+      },
+      {
+        title: "Restoran Asia + Speed Boat",
+        category: "Wisata Kota Jeddah",
+        price: 1500000,
+        places: ["Restoran Asia Jeddah", "Speed Boat"],
+        imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
+      },
+    ],
+    itineraries: [
+      {
+        id: "1",
+        nth: 1,
+        duration: 4,
+        city: "Madinah",
+        days: [
+          {
+            id: "1",
+            nth: 1,
+            title: "Keberangkatan dari Jakarta",
+            widgets: [],
+            description:
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Mendarat di Jeddah lalu ke Madinah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Bandara King Abdul Aziz Jeddah",
+                to: "Hotel Hayah Golden Madinah",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Hayah Golden Madinah",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat",
+              },
+            ],
+            description:
+              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+          },
+          {
+            id: "3",
+            nth: 3,
+            title: "City Tour Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
+          },
+          {
+            id: "4",
+            nth: 4,
+            title: "Ziarah di Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+          },
+        ],
+        images: [
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-7.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-8.jpg",
+            category: undefined,
+          },
+          {
+            id: "1",
+            src: "/assets/image/itinerary/madinah/itinerary-cover-madinah-9.jpg",
+            category: undefined,
+          },
+        ],
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 6,
+        city: "Makkah",
+        days: [
+          {
+            id: "5",
+            nth: 5,
+            title: "Perjalanan Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Hayah Golden Madinah",
+                to: "Hotel Le Meridien Tower Makkah",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Le Meridien Tower Makkah",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
+            description:
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
+          },
+          {
+            id: "1",
+            nth: 6,
+            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            widgets: [],
+            description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
+          },
+          {
+            id: "2",
+            nth: 7,
+            title: "City Tour Makkah",
+            widgets: [],
+            description:
+              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
+          },
+          {
+            id: "3",
+            nth: 8,
+            title: "Ziarah di Makkah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
+          },
+          {
+            id: "4",
+            nth: 9,
+            title: "Kepulangan menuju Jakarta",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Le Meridien Tower Makkah",
+                to: "Bandara King Abdul Aziz Jeddah",
+              },
+            ],
+            description:
+              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+          },
+        ],
+        images: [
+          {
+            id: "1",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-2.jpg",
+            category: undefined,
+          },
+          {
+            id: "2",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-3.jpg",
+            category: undefined,
+          },
+          {
+            id: "3",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-4.jpg",
+            category: undefined,
+          },
+          {
+            id: "4",
+            src: "/assets/image/itinerary/makkah/itinerary-cover-makkah-1.jpg",
+            category: undefined,
+          },
+        ],
+      },
+    ],
+    importantNotes: [],
+  },
   // --- GOLD
   {
-    id: "umrah-cerdas-fokus-ibadah-gold",
-    title: "Umrah Cerdas - Fokus Ibadah",
+    id: "umrah-cerdas-ibadah-fokus-gold",
+    title: "Umrah Cerdas - Ibadah Fokus",
     thumbnail:
-      "/assets/image/packages-umrah/gold/cover-umrah-cerdas-fokus-ibadah.jpg",
+      "/assets/image/packages-umrah/gold/cover-umrah-cerdas-ibadah-fokus.jpg",
     type: "Reguler",
     category: "Gold",
     season: "NON RAMADHAN",
@@ -1553,7 +1553,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Gold",
     down_payment: 7,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Fokus Ibadah. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -1581,11 +1581,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-08-24T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-28T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-26T10:00:00+07:00",
@@ -2067,10 +2067,10 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-cerdas-ibadah-lebih-tenang-gold",
-    title: "Umrah Cerdas - Ibadah Lebih Tenang",
+    id: "umrah-cerdas-ibadah-tenang-gold",
+    title: "Umrah Cerdas - Ibadah Tenang",
     thumbnail:
-      "/assets/image/packages-umrah/gold/cover-umrah-cerdas-ibadah-lebih-tenang.jpg",
+      "/assets/image/packages-umrah/gold/cover-umrah-cerdas-ibadah-tenang.jpg",
     type: "Reguler",
     category: "Gold",
     season: "NON RAMADHAN",
@@ -2084,7 +2084,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "12 Hari",
     package: "Gold",
     down_payment: 7,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Lebih Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-12T10:00:00+07:00",
@@ -2107,16 +2107,16 @@ export const packageDetailData: UmrahPackage[] = [
         status: "musim-haji",
       },
       {
-        date: "2025-07-09T10:00:00+07:00",
+        date: "2025-07-16T10:00:00+07:00",
         status: "active",
       },
       {
         date: "2025-08-13T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-10T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-08T10:00:00+07:00",
@@ -2152,7 +2152,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "JED",
         airport_city_arrival: "Jeddah",
-        departure_datetime: "2025-07-09T10:00:00+07:00",
+        departure_datetime: "2025-07-16T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -2178,7 +2178,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-17T10:00:00+07:00",
+        departure_datetime: "2025-07-27T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -2638,11 +2638,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-08-16T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-20T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-18T10:00:00+07:00",
@@ -2881,7 +2881,7 @@ export const packageDetailData: UmrahPackage[] = [
           distance_to_masjid: 200,
           food_type: "Prasmanan",
           food_amount: undefined,
-          food_menu: "Far East",
+          food_menu: undefined,
         },
         {
           id: "double-tree-by-hilton",
@@ -2929,7 +2929,7 @@ export const packageDetailData: UmrahPackage[] = [
           distance_to_masjid: 200,
           food_type: "Prasmanan",
           food_amount: undefined,
-          food_menu: "Far East",
+          food_menu: undefined,
         },
       ],
       makkah: {
@@ -3433,11 +3433,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-08-15T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-19T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-17T10:00:00+07:00",
@@ -4029,10 +4029,10 @@ export const packageDetailData: UmrahPackage[] = [
   },
   // --- PLATINUM
   {
-    id: "umrah-eksklusif-ibadah-lebih-nyaman-platinum",
-    title: "Umrah Eksklusif - Ibadah Lebih Nyaman",
+    id: "umrah-ekslusif-ibadah-terbaik-platinum",
+    title: "Umrah Ekslusif - Ibadah Terbaik",
     thumbnail:
-      "/assets/image/packages-umrah/platinum/cover-umrah-eksklusif-ibadah-lebih-nyaman.jpg",
+      "/assets/image/packages-umrah/platinum/cover-umrah-ekslusif-ibadah-terbaik.jpg",
     type: "Reguler",
     category: "Platinum",
     season: "NON RAMADHAN",
@@ -4046,7 +4046,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Platinum",
     down_payment: 10,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Lebih Nyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Ekslusif - Ibadah Terbaik. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -4074,11 +4074,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-08-24T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-28T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-26T10:00:00+07:00",
@@ -4559,10 +4559,10 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-eksklusif-ibadah-dengan-kenyamanan-terbaik-platinum",
-    title: "Umrah Eksklusif - Ibadah Dengan Kenyamanan Terbaik",
+    id: "umrah-ekslusif-ibadah-ternyaman-platinum",
+    title: "Umrah Ekslusif - Ibadah Ternyaman",
     thumbnail:
-      "/assets/image/packages-umrah/platinum/cover-umrah-eksklusif-ibadah-dengan-kenyamanan-terbaik.jpg",
+      "/assets/image/packages-umrah/platinum/cover-umrah-ekslusif-ibadah-ternyaman.jpg",
     type: "Reguler",
     category: "Platinum",
     season: "NON RAMADHAN",
@@ -4576,7 +4576,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Platinum",
     down_payment: 10,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Dengan Kenyamanan Terbaik. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Ekslusif - Ibadah Ternyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-01T10:00:00+07:00",
@@ -4604,11 +4604,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-08-09T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-09-06T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-04T10:00:00+07:00",
@@ -4691,7 +4691,7 @@ export const packageDetailData: UmrahPackage[] = [
       makkah: {
         id: "al-marwa-rayhan-by-rotana",
         city: "Makkah",
-        hotel_name: "Al-Marwa Rayhan by Rotana",
+        hotel_name: "Marwa Rayhan by Rotana",
         star_rating: 5,
         duration: 4,
         images: [
@@ -4749,7 +4749,7 @@ export const packageDetailData: UmrahPackage[] = [
       madinah: {
         id: "maden",
         city: "Madinah",
-        hotel_name: "Maden",
+        hotel_name: "Maden Taibah",
         star_rating: 5,
         duration: 3,
         images: [
@@ -4912,7 +4912,7 @@ export const packageDetailData: UmrahPackage[] = [
               {
                 id: "2",
                 type: "Hotel",
-                hotel_name: "Maden",
+                hotel_name: "Maden Taibah",
               },
               {
                 id: "3",

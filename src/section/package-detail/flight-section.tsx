@@ -159,7 +159,7 @@ const FlightCard = ({
     return (
       <CardDetail>
         <CardDetailHeader>
-          <span className="text-sm font-semibold text-primary">
+          <span className="text-sm font-semibold text-neutral-foreground">
             {type === "Keberangkatan"
               ? "Keberangkatan Ibadah"
               : type === "Kepulangan"

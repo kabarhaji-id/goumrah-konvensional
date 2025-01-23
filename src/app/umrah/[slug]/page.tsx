@@ -32,10 +32,10 @@ export const generateMetadata = async ({
 
   return {
     generator: "goumrah.id",
-    title: `${data?.title} ${data?.tagline && data?.tagline}`,
-    keywords: `Umrah ${data?.category}, paket umrah terbaik, hotel dekat Masjidil Haram, promo wisata religi`,
+    title: `${data?.title ? data.title : "Paket Tidak Ditemukan"}`,
+    keywords: `Umroh 2025, Paket Umroh, Travel Umroh, Biaya Umroh 2025, Umroh murah, Umroh Ramadhan 2025, Travel umroh terpercaya, Tips perjalanan umroh, Umroh mandiri, Paket Umroh VIP`,
     openGraph: {
-      title: data?.tagline,
+      title: `${data?.title ? data.title : "Paket Tidak Ditemukan"}`,
       url: `https://goumrah.id/umrah/${(await params).slug}`,
       siteName: "goumrah.id",
       locale: "id_ID",

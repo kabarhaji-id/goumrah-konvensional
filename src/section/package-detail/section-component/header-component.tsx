@@ -5,12 +5,14 @@ import CustomVacationIcon from "@/public/icons/custom-vacation.svg";
 import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.svg";
 import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
 import ReceiptIcon from "@/public/icons/fluent_receipt-money-16-regular.svg";
+import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
 
 import { Chip } from "@/components/ui/chip";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
+import { CustomSwiper } from "@/components/layout/swiper";
 
 const HeaderComponent = ({
   packageData,
@@ -47,7 +49,7 @@ const HeaderComponent = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-2">
+      <CustomSwiper padding={4} gap={8}>
         {/* --- Duration Days */}
         {isLoading ? (
           <Skeleton className="h-[25px] w-[70px] rounded-[8px]" />
@@ -56,7 +58,7 @@ const HeaderComponent = ({
             <div className="w-full bg-primary-accent p-1">
               <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-xs font-semibold leading-4 tracking-wide text-primary">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {durationDays}
             </span>
           </Chip>
@@ -74,8 +76,31 @@ const HeaderComponent = ({
                 <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
               )}
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-xs font-semibold leading-4 tracking-wide text-primary">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {packageData.type === "Plus" ? "Plus Wisata" : "Reguler"}
+            </span>
+          </Chip>
+        )}
+
+        {/* --- Flight Type */}
+        {isLoading ? (
+          <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+        ) : (
+          <Chip variant="default" className="overflow-hidden">
+            <div className="bg-primary-accent py-1 pl-1 pr-0.5">
+              {packageData.flight_details.departure_flight.transit ? (
+                <CustomAirplaneIcon
+                  className="h-4 w-4 rotate-90"
+                  fill="#1B8386"
+                />
+              ) : (
+                <CustomAirplaneIcon className="h-4 w-4" fill="#1B8386" />
+              )}
+            </div>
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+              {packageData.flight_details.departure_flight.transit
+                ? "Transit"
+                : "Langsung"}
             </span>
           </Chip>
         )}
@@ -86,29 +111,24 @@ const HeaderComponent = ({
             <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
           ) : (
             <Chip variant="default" className="overflow-hidden">
-              <div className="w-full bg-primary-accent p-1">
+              <div className="bg-primary-accent pb-[3px] pl-1 pr-0.5 pt-1">
                 <CustomFastTrainIcon className="h-4 w-4" fill="#1B8386" />
               </div>
-              <span className="py-1 pl-1 pr-1.5 text-xs font-semibold leading-4 tracking-wide text-primary">
+              <span className="py-[3px] pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                 Kereta Cepat
               </span>
             </Chip>
           ))}
-      </div>
+      </CustomSwiper>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 px-4">
         {/* --- Title */}
         {isLoading ? (
           <Skeleton className="h-[26px] w-[200px]" />
         ) : (
-          <div className="flex text-xl leading-[130%] tracking-[0.5px]">
-            <h3>
-              <span className="font-semibold">{packageData.title}</span>
-              {packageData.tagline && (
-                <span className="font-normal"> {packageData.tagline}</span>
-              )}
-            </h3>
-          </div>
+          <h3 className="flex text-xl font-semibold leading-[130%] tracking-[0.5px]">
+            {packageData.title}
+          </h3>
         )}
 
         {/* --- Fast Train? */}

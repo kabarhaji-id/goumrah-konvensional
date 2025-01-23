@@ -14,10 +14,9 @@ const AboutUsSection = () => {
           quality={100}
         />
         <p className="grow text-lg font-bold leading-[130%] tracking-normal text-primary-foreground">
-          Terpercaya <span className="text-primary">100%</span> jaminan{" "}
-          <span className="text-primary">pesawat </span>
-          dan <span className="text-primary">hotel</span> sama seperti yang{" "}
-          <span className="text-primary">dipesan</span>
+          Jaminan <span className="text-primary">100% Hotel</span> &{" "}
+          <span className="text-primary">Maskapai </span>
+          Sesuai Pesanan
         </p>
       </section>
       <section

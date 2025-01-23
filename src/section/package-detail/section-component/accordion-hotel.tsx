@@ -109,7 +109,9 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
               Makanan yang disediakan
             </h4>
 
-            <div className="flex justify-between">
+            <div
+              className={`flex ${dataHotel.food_menu && !dataHotel.food_amount ? "gap-12" : "justify-between"}`}
+            >
               <div
                 className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
               >

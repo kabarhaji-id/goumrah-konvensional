@@ -161,7 +161,6 @@ export interface UmrahPackage {
   type: PackageType;
   category: PackageCategory;
   title: string;
-  tagline?: string;
   thumbnail: string;
   season: string;
   isFastTrain: boolean;

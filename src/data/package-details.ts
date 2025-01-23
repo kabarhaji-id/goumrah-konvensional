@@ -1411,6 +1411,33 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
+          {
+            id: "5",
+            nth: 5,
+            title: "Perjalanan Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Hayah Golden Madinah",
+                to: "Hotel Le Meridien Tower Makkah",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Le Meridien Tower Makkah",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
+            description:
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
+          },
         ],
         images: [
           {
@@ -1442,33 +1469,6 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Hayah Golden Madinah",
-                to: "Hotel Le Meridien Tower Makkah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Le Meridien Tower Makkah",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
             nth: 6,
             title: "Pelaksanaan Ibadah Umrah di Makkah",
@@ -1484,7 +1484,7 @@ export const packageDetailData: UmrahPackage[] = [
               "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
           },
           {
-            id: "3",
+            id: "8",
             nth: 8,
             title: "Ziarah di Makkah",
             widgets: [],
@@ -1492,8 +1492,53 @@ export const packageDetailData: UmrahPackage[] = [
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
-            id: "4",
+            id: "9",
             nth: 9,
+            title: "Full Day Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+          },
+          {
+            id: "10",
+            nth: 10,
+            title: "Full Day Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+          },
+          {
+            id: "11",
+            nth: 11,
+            title: "Full Day Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+          },
+          {
+            id: "12",
+            nth: 12,
             title: "Kepulangan menuju Jakarta",
             widgets: [
               {

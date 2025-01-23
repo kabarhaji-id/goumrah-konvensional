@@ -4029,10 +4029,10 @@ export const packageDetailData: UmrahPackage[] = [
   },
   // --- PLATINUM
   {
-    id: "umrah-ekslusif-ibadah-terbaik-platinum",
-    title: "Umrah Ekslusif - Ibadah Terbaik",
+    id: "umrah-eksklusif-ibadah-terbaik-platinum",
+    title: "Umrah Eksklusif - Ibadah Terbaik",
     thumbnail:
-      "/assets/image/packages-umrah/platinum/cover-umrah-ekslusif-ibadah-terbaik.jpg",
+      "/assets/image/packages-umrah/platinum/cover-umrah-eksklusif-ibadah-terbaik.jpg",
     type: "Reguler",
     category: "Platinum",
     season: "NON RAMADHAN",
@@ -4046,7 +4046,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Platinum",
     down_payment: 10,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Ekslusif - Ibadah Terbaik. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Terbaik. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -4559,10 +4559,10 @@ export const packageDetailData: UmrahPackage[] = [
     importantNotes: [],
   },
   {
-    id: "umrah-ekslusif-ibadah-ternyaman-platinum",
-    title: "Umrah Ekslusif - Ibadah Ternyaman",
+    id: "umrah-eksklusif-ibadah-ternyaman-platinum",
+    title: "Umrah Eksklusif - Ibadah Ternyaman",
     thumbnail:
-      "/assets/image/packages-umrah/platinum/cover-umrah-ekslusif-ibadah-ternyaman.jpg",
+      "/assets/image/packages-umrah/platinum/cover-umrah-eksklusif-ibadah-ternyaman.jpg",
     type: "Reguler",
     category: "Platinum",
     season: "NON RAMADHAN",
@@ -4576,7 +4576,7 @@ export const packageDetailData: UmrahPackage[] = [
     duration: "9 Hari",
     package: "Platinum",
     down_payment: 10,
-    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Ekslusif - Ibadah Ternyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Ternyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-01T10:00:00+07:00",

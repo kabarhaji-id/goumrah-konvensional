@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "goumrah.id",
-  description: "Platform Umrah No.1 Seindonesia",
+  description: "Rumah ke Makkah Hanya Satu Langkah",
 };
 
 const plusJakartaSans = Plus_Jakarta_Sans({

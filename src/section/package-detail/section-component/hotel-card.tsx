@@ -1,8 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import AccordionHotel from "./accordion-hotel";
 import moment from "moment";
 import "moment/locale/id";
+
+import CustomMapPinnedIcon from "@/public/icons/lucide_map-pinned.svg";
 
 import { CustomSwiper } from "@/components/layout/swiper";
 import {
@@ -13,12 +16,10 @@ import {
 import { HotelDetail, Images } from "@/types/package-details";
 import { SheetHotelImages } from "./sheet-hotel-images";
 import { Rating } from "@/components/ui/helper/getRating";
-import { calculateDaysAndNights } from "@/lib/utils";
-import { MapPinIcon } from "lucide-react";
+import { calculateDaysAndNights, convertDistance } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";
-import AccordionHotel from "./accordion-hotel";
 
 const HotelCard = ({
   id,
@@ -138,17 +139,35 @@ const HotelCard = ({
                             dataHotel.check_in_time,
                             dataHotel.check_out_time,
                           )
-                        : `${dataHotel.duration} hari ${dataHotel.duration - 1} malam`}
+                        : `${dataHotel.duration} hari ${dataHotel.duration} malam`}
                     </span>
                   )}
                 </div>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <MapPinIcon className="h-4 w-4 flex-shrink-0 stroke-neutral-foreground/80" />
-              <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
-                {dataHotel.address}
-              </span>
+              <CustomMapPinnedIcon className="h-4 w-4" />
+              {dataHotel.city === "Makkah" && (
+                <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
+                  {dataHotel.distance_to_landmark > 1000
+                    ? "Shuttle Bus 24jam ke Masjidil Haram"
+                    : `${convertDistance(dataHotel.distance_to_landmark)} ke ${dataHotel.landmark}`}
+                </span>
+              )}
+
+              {dataHotel.city === "Madinah" && (
+                <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
+                  {dataHotel.distance_to_landmark > 1000
+                    ? "Shuttle Bus 24jam ke Masjidil Haram"
+                    : `${convertDistance(dataHotel.distance_to_landmark)} ke ${dataHotel.landmark}`}
+                </span>
+              )}
+
+              {dataHotel.city !== "Madinah" && dataHotel.city !== "Makkah" && (
+                <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
+                  {dataHotel.address}
+                </span>
+              )}
             </div>
           </div>
         )}

@@ -25,7 +25,7 @@ const TourVoucherSection = ({ dataAddOns }: { dataAddOns: AddOnsDetail[] }) => {
         <SectionDescription className="text-sm font-normal leading-5 tracking-wide">
           Bikin perjalanan kamu makin seru dengan berbagai wisata yang bisa kamu
           tambahkan ke paketmu. Kamu bisa tambahkan layanan ini di halaman
-          pemesanan nanti. Mulai dari Rp 500 rb-an aja!
+          pemesanan nanti. Mulai dari Rp 1.000.000 aja!
         </SectionDescription>
       </SectionHeader>
 

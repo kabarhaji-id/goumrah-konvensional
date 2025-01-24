@@ -56,7 +56,7 @@ export interface HotelDetail {
   check_in_time: string;
   check_out_time: string;
   address: string;
-  distance_to_masjid: number;
+  distance_to_landmark: number;
   food_type: string;
   food_amount: number;
   food_menu: string;

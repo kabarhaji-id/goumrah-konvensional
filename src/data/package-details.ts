@@ -126,7 +126,7 @@ export const packageDetailData: UmrahPackage[] = [
         flight_type: "Direct",
         airline: "Lion Air",
         aircraft_type: "Airbus",
-        seat_layout: undefined,
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/lion-air.webp",
@@ -152,7 +152,7 @@ export const packageDetailData: UmrahPackage[] = [
         flight_type: "Direct",
         airline: "Lion Air",
         aircraft_type: "Airbus",
-        seat_layout: undefined,
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/lion-air.webp",
@@ -209,7 +209,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Kudai, Misfalah, Makkah 21955, Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 4000,
+        landmark: "Masjidil Haram",
+        isShuttleBus: true,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -271,7 +273,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "FJ93+PV9, Al Manakhah, Madinah 42311, Arab Saudi",
-        distance_to_masjid: 220,
+        distance_to_landmark: 220,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -308,8 +312,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -317,21 +321,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -346,15 +350,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -376,7 +372,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -389,10 +393,29 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "4",
             nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
+            title: "Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Hayah Golden Madinah",
+                to: "Hotel Le Meridien Tower Makkah",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Le Meridien Tower Makkah",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
             description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
           },
         ],
         images: [
@@ -425,59 +448,39 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Hayah Golden Madinah",
-                to: "Hotel Le Meridien Tower Makkah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Le Meridien Tower Makkah",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
-            nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            nth: 5,
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
-            nth: 7,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "3",
-            nth: 8,
-            title: "Ziarah di Makkah",
+            nth: 6,
+            title: "Ziarah Makkah",
             widgets: [],
             description:
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
+            id: "3",
+            nth: 7,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
+          },
+          {
             id: "4",
-            nth: 9,
-            title: "Kepulangan menuju Jakarta",
+            nth: 8,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -488,7 +491,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "5",
+            nth: 9,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -609,7 +620,7 @@ export const packageDetailData: UmrahPackage[] = [
         flight_type: "Transit",
         airline: "Qatar Airways",
         aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -632,7 +643,7 @@ export const packageDetailData: UmrahPackage[] = [
           flight_type: "Direct",
           airline: "Qatar Airways",
           aircraft_type: "Airbus",
-          seat_layout: "2-4-2",
+          seat_layout: "3-3-3",
           baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -660,7 +671,7 @@ export const packageDetailData: UmrahPackage[] = [
         flight_type: "Transit",
         airline: "Qatar Airways",
         aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -683,7 +694,7 @@ export const packageDetailData: UmrahPackage[] = [
           flight_type: "Direct",
           airline: "Qatar Airways",
           aircraft_type: "Airbus",
-          seat_layout: "2-4-2",
+          seat_layout: "3-3-3",
           baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -749,7 +760,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. 4601 Ajyad, Ajyad, Makkah 24231, Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 400,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -805,7 +818,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Bada'ah, Madinah 42311, Arab Saudi",
-        distance_to_masjid: 220,
+        distance_to_landmark: 300,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -842,8 +857,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -851,21 +866,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -880,15 +895,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -910,7 +917,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -923,10 +938,29 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "4",
             nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
+            title: "Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Al Ansar Golden Tulip",
+                to: "Hotel Maysan Al Maqam",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Maysan Al Maqam",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
             description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
           },
         ],
         images: [
@@ -959,59 +993,39 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Al Ansar Golden Tulip",
-                to: "Hotel Maysan Al Maqam",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Maysan Al Maqam",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
-            nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            nth: 5,
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
-            nth: 7,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "3",
-            nth: 8,
-            title: "Ziarah di Makkah",
+            nth: 6,
+            title: "Ziarah Makkah",
             widgets: [],
             description:
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
+            id: "3",
+            nth: 7,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
+          },
+          {
             id: "4",
-            nth: 9,
-            title: "Kepulangan menuju Jakarta",
+            nth: 8,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -1022,7 +1036,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "5",
+            nth: 9,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -1092,7 +1114,7 @@ export const packageDetailData: UmrahPackage[] = [
         status: "musim-haji",
       },
       {
-        date: "2025-07-16T10:00:00+07:00",
+        date: "2025-07-09T10:00:00+07:00",
         status: "active",
       },
       {
@@ -1137,13 +1159,13 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "JED",
         airport_city_arrival: "Jeddah",
-        departure_datetime: "2025-07-16T10:00:00+07:00",
+        departure_datetime: "2025-07-09T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Lion Air",
         aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/lion-air.webp",
@@ -1163,13 +1185,13 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-27T10:00:00+07:00",
+        departure_datetime: "2025-07-20T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Lion Air",
-        aircraft_type: undefined,
-        seat_layout: undefined,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/lion-air.webp",
@@ -1226,7 +1248,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Kudai, Misfalah, Makkah 21955, Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 4000,
+        landmark: "Masjidil Haram",
+        isShuttleBus: true,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -1236,7 +1260,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Hayah Golden",
         star_rating: 4,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -1288,7 +1312,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "FJ93+PV9, Al Manakhah, Madinah 42311, Arab Saudi",
-        distance_to_masjid: 220,
+        distance_to_landmark: 220,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -1363,15 +1389,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -1393,7 +1411,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -1406,15 +1432,22 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "4",
             nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
+            title: "Madinah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
             description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Memperbanyak ibadah di Masjid Nabawi atau aktivitas pribadi di sekitar Madinah.",
           },
           {
             id: "5",
             nth: 5,
-            title: "Perjalanan Madinah - Makkah",
+            title: "Madinah - Makkah",
             widgets: [
               {
                 id: "1",
@@ -1471,30 +1504,30 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
             nth: 7,
+            title: "Ziarah Makkah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
+          },
+          {
+            id: "3",
+            nth: 8,
             title: "City Tour Makkah",
             widgets: [],
             description:
               "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
           },
           {
-            id: "8",
-            nth: 8,
-            title: "Ziarah di Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
-          },
-          {
-            id: "9",
+            id: "4",
             nth: 9,
-            title: "Full Day Makkah",
+            title: "Makkah",
             widgets: [
               {
                 id: "1",
@@ -1504,12 +1537,12 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
           },
           {
-            id: "10",
+            id: "5",
             nth: 10,
-            title: "Full Day Makkah",
+            title: "Makkah",
             widgets: [
               {
                 id: "1",
@@ -1519,27 +1552,12 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
           },
           {
-            id: "11",
+            id: "6",
             nth: 11,
-            title: "Full Day Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
-              },
-            ],
-            description:
-              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
-          },
-          {
-            id: "12",
-            nth: 12,
-            title: "Kepulangan menuju Jakarta",
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -1549,6 +1567,14 @@ export const packageDetailData: UmrahPackage[] = [
                 to: "Bandara King Abdul Aziz Jeddah",
               },
             ],
+            description:
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "7",
+            nth: 12,
+            title: "Jakarta",
+            widgets: [],
             description:
               "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
@@ -1671,8 +1697,8 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Transit",
         airline: "Qatar Airways",
-        aircraft_type: undefined,
-        seat_layout: undefined,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -1694,8 +1720,8 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Direct",
           airline: "Qatar Airways",
-          aircraft_type: undefined,
-          seat_layout: undefined,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
           baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -1722,8 +1748,8 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Transit",
         airline: "Qatar Airways",
-        aircraft_type: undefined,
-        seat_layout: undefined,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -1745,8 +1771,8 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Direct",
           airline: "Qatar Airways",
-          aircraft_type: undefined,
-          seat_layout: undefined,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
           baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -1807,7 +1833,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Umm Al Qura Jabal Al Kaaba, Makkah 21955 Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 500,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -1865,7 +1893,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "PO Box 4517, Central area , Babul Majeed , 20012 Madinah, Arab Saudi",
-        distance_to_masjid: 250,
+        distance_to_landmark: 150,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -1902,8 +1932,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -1911,21 +1941,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -1940,15 +1970,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -1970,7 +1992,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -1983,8 +2013,27 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "4",
             nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
+            title: "Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Al Ritz Madinah",
+                to: "Hotel Anjum Makkah",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Anjum",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
             description:
               "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
@@ -2019,59 +2068,38 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Al Ritz Madinah",
-                to: "Hotel Anjum Makkah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Anjum",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
-            nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            nth: 5,
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
-            nth: 7,
-            title: "City Tour Makkah",
+            nth: 6,
+            title: "Ziarah Makkah",
             widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
+            description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "3",
-            nth: 8,
-            title: "Ziarah di Makkah",
-            widgets: [],
+            nth: 7,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
             description:
-              "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
           },
           {
             id: "4",
-            nth: 9,
-            title: "Kepulangan menuju Jakarta",
+            nth: 8,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -2082,7 +2110,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "5",
+            nth: 9,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -2152,7 +2188,7 @@ export const packageDetailData: UmrahPackage[] = [
         status: "musim-haji",
       },
       {
-        date: "2025-07-16T10:00:00+07:00",
+        date: "2025-07-09T10:00:00+07:00",
         status: "active",
       },
       {
@@ -2197,13 +2233,13 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "JED",
         airport_city_arrival: "Jeddah",
-        departure_datetime: "2025-07-16T10:00:00+07:00",
+        departure_datetime: "2025-07-09T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Lion Air",
         aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/lion-air.webp",
@@ -2223,13 +2259,13 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-27T10:00:00+07:00",
+        departure_datetime: "2025-07-20T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Lion Air",
-        aircraft_type: undefined,
-        seat_layout: undefined,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/lion-air.webp",
@@ -2288,7 +2324,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Umm Al Qura Jabal Al Kaaba, Makkah 21955 Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 500,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -2346,7 +2384,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "PO Box 4517, Central area , Babul Majeed , 20012 Madinah, Arab Saudi",
-        distance_to_masjid: 250,
+        distance_to_landmark: 150,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -2383,8 +2423,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -2392,21 +2432,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -2421,7 +2461,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -2443,7 +2483,7 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta, melakukan penerbangan ke Jeddah, dilanjutkan dengan perjalanan darat menuju Madinah, check-in hotel, dan beribadah di Masjid Nabawi.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
           {
             id: "2",
@@ -2451,7 +2491,7 @@ export const packageDetailData: UmrahPackage[] = [
             title: "Ziarah Kota Madinah",
             widgets: [],
             description:
-              "Mengunjungi Makam Rasulullah SAW, Abu Bakar, Umar, Makam Baqi, dan memperbanyak ibadah di Masjid Nabawi.",
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -2459,20 +2499,27 @@ export const packageDetailData: UmrahPackage[] = [
             title: "City Tour Madinah",
             widgets: [],
             description:
-              "Mengunjungi Masjid Quba, Jabal Uhud, Masjid Qiblatain, dan Kebun Kurma, dilanjutkan dengan memperbanyak ibadah di Masjid Nabawi.",
+              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
           },
           {
             id: "4",
             nth: 4,
-            title: "Full Day Ibadah di Madinah",
-            widgets: [],
+            title: "Madinah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
             description:
               "Memperbanyak ibadah di Masjid Nabawi atau aktivitas pribadi di sekitar Madinah.",
           },
           {
             id: "5",
             nth: 5,
-            title: "Perjalanan Madinah - Makkah",
+            title: "Madinah - Makkah",
             widgets: [
               {
                 id: "1",
@@ -2527,22 +2574,14 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "6",
+            id: "1",
             nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
-            id: "7",
-            nth: 7,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "8",
+            id: "2",
             nth: 8,
             title: "Ziarah di Makkah",
             widgets: [],
@@ -2550,9 +2589,17 @@ export const packageDetailData: UmrahPackage[] = [
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
-            id: "9",
+            id: "3",
+            nth: 7,
+            title: "City Tour Makkah",
+            widgets: [],
+            description:
+              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
+          },
+          {
+            id: "4",
             nth: 9,
-            title: "Full Day Makkah",
+            title: "Makkah",
             widgets: [
               {
                 id: "1",
@@ -2562,12 +2609,12 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
           },
           {
-            id: "10",
+            id: "5",
             nth: 10,
-            title: "Full Day Makkah",
+            title: "Makkah",
             widgets: [
               {
                 id: "1",
@@ -2577,27 +2624,12 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
           },
           {
-            id: "11",
+            id: "6",
             nth: 11,
-            title: "Full Day Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
-              },
-            ],
-            description:
-              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Mekkah.",
-          },
-          {
-            id: "12",
-            nth: 12,
-            title: "Kepulangan menuju Jakarta",
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -2608,7 +2640,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "7",
+            nth: 12,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -2728,9 +2768,9 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Transit",
           airline: "Emirates",
-          aircraft_type: undefined,
-          seat_layout: undefined,
-          baggage_allowance: 23,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
+          baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/emirates.webp",
           skytrax: "Full Service",
@@ -2751,9 +2791,9 @@ export const packageDetailData: UmrahPackage[] = [
             class: "Ekonomi",
             flight_type: "Transit",
             airline: "Emirates",
-            aircraft_type: undefined,
-            seat_layout: undefined,
-            baggage_allowance: 23,
+            aircraft_type: "Airbus",
+            seat_layout: "3-3-3",
+            baggage_allowance: 20,
             cabin_baggage: 7,
             airline_logo: "/assets/airlines/emirates.webp",
             skytrax: "Full Service",
@@ -2780,9 +2820,9 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Transit",
         airline: "Emirates",
-        aircraft_type: undefined,
-        seat_layout: undefined,
-        baggage_allowance: 23,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
+        baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/emirates.webp",
         skytrax: "Full Service",
@@ -2803,9 +2843,9 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Transit",
           airline: "Emirates",
-          aircraft_type: undefined,
-          seat_layout: undefined,
-          baggage_allowance: 23,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
+          baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/emirates.webp",
           skytrax: "Full Service",
@@ -2831,9 +2871,9 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Emirates",
-        aircraft_type: undefined,
-        seat_layout: undefined,
-        baggage_allowance: 23,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
+        baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/emirates.webp",
         skytrax: "Full Service",
@@ -2854,9 +2894,9 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Transit",
           airline: "Emirates",
-          aircraft_type: undefined,
-          seat_layout: undefined,
-          baggage_allowance: 23,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
+          baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/emirates.webp",
           skytrax: "Full Service",
@@ -2923,7 +2963,9 @@ export const packageDetailData: UmrahPackage[] = [
           check_out_time: undefined,
           address:
             "Tasocagi Yolu Caddesi No. 39/A Mahmutbey Mah., Istanbul 34218 Turki",
-          distance_to_masjid: 200,
+          distance_to_landmark: 34600,
+          landmark: "Bandara Internasional Istanbul",
+          isShuttleBus: false,
           food_type: "Prasmanan",
           food_amount: undefined,
           food_menu: undefined,
@@ -2971,11 +3013,163 @@ export const packageDetailData: UmrahPackage[] = [
           check_out_time: undefined,
           address:
             "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
-          distance_to_masjid: 200,
+          distance_to_landmark: 39300,
+          landmark: "Bandara Internasional Istanbul",
+          isShuttleBus: false,
           food_type: "Prasmanan",
           food_amount: undefined,
           food_menu: undefined,
         },
+        // {
+        //   id: "double-tree-by-hilton",
+        //   city: "Cappadocia",
+        //   hotel_name: "DoubleTree by Hilton / 5*",
+        //   star_rating: 5,
+        //   duration: undefined,
+        //   images: [
+        //     {
+        //       id: "1",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+        //       category: "Eksterior",
+        //     },
+        //     {
+        //       id: "2",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+        //       category: "Kamar",
+        //     },
+        //     {
+        //       id: "3",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+        //       category: "Kamar",
+        //     },
+        //   ],
+        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        //   google_maps_link:
+        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        //   google_review_link:
+        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        //   description:
+        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        //   facilities: [
+        //     "AC",
+        //     "WiFi",
+        //     "Kolam Renang",
+        //     "TV",
+        //     "Restoran",
+        //     "Layanan Kamar",
+        //     "Kamar Mandi Dalam",
+        //   ],
+        //   check_in_time: undefined,
+        //   check_out_time: undefined,
+        //   address:
+        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        //   distance_to_landmark: 39300,
+        //   landmark: "Bandara Internasional Istanbul",
+        //   isShuttleBus: false,
+        //   food_type: "Prasmanan",
+        //   food_amount: undefined,
+        //   food_menu: undefined,
+        // },
+        // {
+        //   id: "double-tree-by-hilton",
+        //   city: "Cappadocia",
+        //   hotel_name: "DoubleTree by Hilton / 5*",
+        //   star_rating: 5,
+        //   duration: undefined,
+        //   images: [
+        //     {
+        //       id: "1",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+        //       category: "Eksterior",
+        //     },
+        //     {
+        //       id: "2",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+        //       category: "Kamar",
+        //     },
+        //     {
+        //       id: "3",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+        //       category: "Kamar",
+        //     },
+        //   ],
+        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        //   google_maps_link:
+        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        //   google_review_link:
+        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        //   description:
+        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        //   facilities: [
+        //     "AC",
+        //     "WiFi",
+        //     "Kolam Renang",
+        //     "TV",
+        //     "Restoran",
+        //     "Layanan Kamar",
+        //     "Kamar Mandi Dalam",
+        //   ],
+        //   check_in_time: undefined,
+        //   check_out_time: undefined,
+        //   address:
+        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        //   distance_to_landmark: 39300,
+        //   landmark: "Bandara Internasional Istanbul",
+        //   isShuttleBus: false,
+        //   food_type: "Prasmanan",
+        //   food_amount: undefined,
+        //   food_menu: undefined,
+        // },
+        // {
+        //   id: "double-tree-by-hilton",
+        //   city: "Cappadocia",
+        //   hotel_name: "DoubleTree by Hilton / 5*",
+        //   star_rating: 5,
+        //   duration: undefined,
+        //   images: [
+        //     {
+        //       id: "1",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+        //       category: "Eksterior",
+        //     },
+        //     {
+        //       id: "2",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+        //       category: "Kamar",
+        //     },
+        //     {
+        //       id: "3",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+        //       category: "Kamar",
+        //     },
+        //   ],
+        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        //   google_maps_link:
+        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        //   google_review_link:
+        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        //   description:
+        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        //   facilities: [
+        //     "AC",
+        //     "WiFi",
+        //     "Kolam Renang",
+        //     "TV",
+        //     "Restoran",
+        //     "Layanan Kamar",
+        //     "Kamar Mandi Dalam",
+        //   ],
+        //   check_in_time: undefined,
+        //   check_out_time: undefined,
+        //   address:
+        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        //   distance_to_landmark: 39300,
+        //   landmark: "Bandara Internasional Istanbul",
+        //   isShuttleBus: false,
+        //   food_type: "Prasmanan",
+        //   food_amount: undefined,
+        //   food_menu: undefined,
+        // },
       ],
       makkah: {
         id: "anjum-makkah",
@@ -3024,7 +3218,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Umm Al Qura Jabal Al Kaaba, Makkah 21955 Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 500,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -3082,7 +3278,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "PO Box 4517, Central area , Babul Majeed , 20012 Madinah, Arab Saudi",
-        distance_to_masjid: 250,
+        distance_to_landmark: 150,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -3119,8 +3317,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -3128,21 +3326,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -3224,7 +3422,7 @@ export const packageDetailData: UmrahPackage[] = [
             title: "City Tour Istanbul dan Keberangkatan ke Jeddah",
             widgets: [],
             description:
-              "Jamaah akan berkeliling kota Istanbul. Mengunjungi beberapa destinasi wisata terkenal seperti Grand Bazaar dan Ortaköy Village. Setelah selesai melakukan rangkaian perjalanan di Istanbul jamaah akan melakukan keberangkatan ke Jeddah melalui Bandara Internasional Istanbul.",
+              "Jamaah akan berkeliling kota Istanbul. Mengunjungi beberapa destinasi wisata terkenal seperti Grand Bazaar dan Ortaköy Village. Setelah selesai melakukan rangkaian perjalanan di Istanbul, jamaah berkumpul di Bandara Internasional Istanbul untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
         ],
         images: [
@@ -3262,21 +3460,37 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         days: [
           {
-            id: "9",
+            id: "1",
             nth: 9,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+          },
+          {
+            id: "2",
+            nth: 10,
+            title: "City Tour Madinah ",
+            widgets: [],
+            description:
+              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
+          },
+          {
+            id: "3",
+            nth: 11,
+            title: "Madinah - Makkah",
             widgets: [
               {
                 id: "1",
                 type: "Transport",
                 transportWith: "Bus",
-                from: "Bandara King Abdul Aziz Jeddah",
-                to: "Hotel Al Ritz Madinah",
+                from: "Hotel Al Ritz Madinah",
+                to: "Hotel Anjum Makkah",
               },
               {
                 id: "2",
                 type: "Hotel",
-                hotel_name: "Al Ritz Madinah",
+                hotel_name: "Anjum Makkah",
               },
               {
                 id: "3",
@@ -3286,23 +3500,7 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
-          },
-          {
-            id: "10",
-            nth: 10,
-            title: "City Tour Madinah ",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
-          },
-          {
-            id: "11",
-            nth: 11,
-            title: "Ziarah di Madinah",
-            widgets: [],
-            description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
           },
         ],
         images: [
@@ -3335,59 +3533,39 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "12",
-            nth: 12,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Al Ritz Madinah",
-                to: "Hotel Anjum Makkah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Anjum Makkah",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
-            nth: 13,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            nth: 12,
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
-            nth: 14,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "3",
-            nth: 15,
-            title: "Ziarah di Makkah",
+            nth: 13,
+            title: "Ziarah Makkah",
             widgets: [],
             description:
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
+            id: "3",
+            nth: 14,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
+          },
+          {
             id: "4",
-            nth: 16,
-            title: "Kepulangan menuju Jakarta",
+            nth: 15,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -3398,7 +3576,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat. Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "4",
+            nth: 16,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -3523,9 +3709,9 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Direct",
           airline: "Emirates",
-          aircraft_type: undefined,
-          seat_layout: undefined,
-          baggage_allowance: 23,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
+          baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/emirates.webp",
           skytrax: "Full Service",
@@ -3550,9 +3736,9 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Emirates",
-        aircraft_type: undefined,
-        seat_layout: undefined,
-        baggage_allowance: 23,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
+        baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/emirates.webp",
         skytrax: "Full Service",
@@ -3576,9 +3762,9 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Emirates",
-        aircraft_type: undefined,
-        seat_layout: undefined,
-        baggage_allowance: 23,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
+        baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/emirates.webp",
         skytrax: "Full Service",
@@ -3599,9 +3785,9 @@ export const packageDetailData: UmrahPackage[] = [
           class: "Ekonomi",
           flight_type: "Transit",
           airline: "Emirates",
-          aircraft_type: undefined,
-          seat_layout: undefined,
-          baggage_allowance: 23,
+          aircraft_type: "Airbus",
+          seat_layout: "3-3-3",
+          baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/emirates.webp",
           skytrax: "Full Service",
@@ -3619,7 +3805,7 @@ export const packageDetailData: UmrahPackage[] = [
           city: "Dubai",
           hotel_name: "Landmark Hotel / 4*",
           star_rating: 4,
-          duration: 2,
+          duration: 3,
           images: [
             {
               id: "1",
@@ -3663,7 +3849,9 @@ export const packageDetailData: UmrahPackage[] = [
           check_out_time: undefined,
           address:
             "Al Riqqa Street, Opposite Al Ghurair Shopping mall, Dubai, United Arab Emirates",
-          distance_to_masjid: 200,
+          distance_to_landmark: 6000,
+          landmark: "Bandara Internasional Dubai",
+          isShuttleBus: false,
           food_type: "Prasmanan",
           food_amount: undefined,
           food_menu: "Far East",
@@ -3674,7 +3862,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Anjum",
         star_rating: 5,
-        duration: 4,
+        duration: 5,
         images: [
           {
             id: "1",
@@ -3716,7 +3904,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Umm Al Qura Jabal Al Kaaba, Makkah 21955 Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 500,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -3726,7 +3916,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Al Ritz Madinah",
         star_rating: 4,
-        duration: 3,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -3774,7 +3964,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "PO Box 4517, Central area , Babul Majeed , 20012 Madinah, Arab Saudi",
-        distance_to_masjid: 250,
+        distance_to_landmark: 150,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -3811,8 +4003,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -3820,21 +4012,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -3849,7 +4041,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta menuju Dubai",
+            title: "Jakarta - Dubai",
             widgets: [],
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Setelah semuanya selesai jamaah akan melakukan penerbangan menuju Dubai.",
@@ -3865,10 +4057,29 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "3",
             nth: 3,
-            title: "Keberangkatan dari Dubai ke Jeddah",
-            widgets: [],
+            title: "Dubai - Jeddah - Madinah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Bandara King Abdul Aziz Jeddah",
+                to: "Hotel Al Ritz Madinah",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Al Ritz Madinah",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat",
+              },
+            ],
             description:
-              "Jamaah beristirahat di hotel lalu bersiap untuk keberangkatan ke Jeddah. Setelah selesai proses check out hotel jamaah akan melakukan keberangkatan ke Jeddah melalui Bandara Internasional Dubai.",
+              "Jamaah beristirahat di hotel lalu bersiap untuk keberangkatan ke Jeddah. Setelah selesai proses check out hotel jamaah akan melakukan keberangkatan ke Jeddah melalui Bandara Internasional Dubai. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
         ],
         images: [
@@ -3901,21 +4112,37 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         days: [
           {
-            id: "4",
+            id: "1",
             nth: 4,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "City Tour Madinah ",
+            widgets: [],
+            description:
+              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
+          },
+          {
+            id: "2",
+            nth: 5,
+            title: "Ziarah di Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+          },
+          {
+            id: "3",
+            nth: 6,
+            title: "Madinah - Makkah",
             widgets: [
               {
                 id: "1",
                 type: "Transport",
                 transportWith: "Bus",
-                from: "Bandara King Abdul Aziz Jeddah",
-                to: "Hotel Al Ritz Madinah",
+                from: "Hotel Al Ritz Madinah",
+                to: "Hotel Anjum Makkah",
               },
               {
                 id: "2",
                 type: "Hotel",
-                hotel_name: "Al Ritz Madinah",
+                hotel_name: "Anjum Makkah",
               },
               {
                 id: "3",
@@ -3925,23 +4152,7 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
-          },
-          {
-            id: "5",
-            nth: 5,
-            title: "City Tour Madinah ",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma.",
-          },
-          {
-            id: "6",
-            nth: 6,
-            title: "Ziarah di Madinah",
-            widgets: [],
-            description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
           },
         ],
         images: [
@@ -3974,59 +4185,39 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "7",
+            id: "1",
             nth: 7,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Al Ritz Madinah",
-                to: "Hotel Anjum Makkah",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Anjum Makkah",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
-            id: "8",
-            nth: 8,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
-            id: "9",
-            nth: 9,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "10",
-            nth: 10,
-            title: "Ziarah di Makkah",
+            id: "2",
+            nth: 8,
+            title: "Ziarah Makkah",
             widgets: [],
             description:
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
-            id: "11",
-            nth: 11,
-            title: "Kepulangan menuju Jakarta",
+            id: "3",
+            nth: 9,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
+          },
+          {
+            id: "4",
+            nth: 10,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -4037,7 +4228,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat. Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "5",
+            nth: 11,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -4165,7 +4364,7 @@ export const packageDetailData: UmrahPackage[] = [
         flight_type: "Transit",
         airline: "Qatar Airways",
         aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -4188,7 +4387,7 @@ export const packageDetailData: UmrahPackage[] = [
           flight_type: "Direct",
           airline: "Qatar Airways",
           aircraft_type: "Airbus",
-          seat_layout: "2-4-2",
+          seat_layout: "3-3-3",
           baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -4216,7 +4415,7 @@ export const packageDetailData: UmrahPackage[] = [
         flight_type: "Transit",
         airline: "Qatar Airways",
         aircraft_type: "Airbus",
-        seat_layout: "2-4-2",
+        seat_layout: "3-3-3",
         baggage_allowance: 20,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -4239,7 +4438,7 @@ export const packageDetailData: UmrahPackage[] = [
           flight_type: "Direct",
           airline: "Qatar Airways",
           aircraft_type: "Airbus",
-          seat_layout: "2-4-2",
+          seat_layout: "3-3-3",
           baggage_allowance: 20,
           cabin_baggage: 7,
           airline_logo: "/assets/airlines/qatar-airways.webp",
@@ -4258,7 +4457,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Pullman Zamzam",
         star_rating: 5,
-        duration: 4,
+        duration: 5,
         images: [
           {
             id: "1",
@@ -4307,7 +4506,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_out_time: undefined,
         address:
           "Jl. King Abdul Aziz Abraj Albait Complex, Makkah 21955 Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 300,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -4317,7 +4518,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Dar Al-Eiman Al-Haram",
         star_rating: 5,
-        duration: 3,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -4364,7 +4565,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Al Saha, Bada'ah, Madinah 42311, Arab Saudi",
-        distance_to_masjid: 150,
+        distance_to_landmark: 300,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -4401,23 +4604,23 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -4432,15 +4635,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -4462,7 +4657,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -4475,10 +4678,29 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "4",
             nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
+            title: "Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Dar Al-Eiman Al-Haram",
+                to: "Hotel Pullman Zamzam",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Pullman Zamzam",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
             description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
           },
         ],
         images: [
@@ -4511,59 +4733,39 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Dar Al-Eiman Al-Haram",
-                to: "Hotel Pullman Zamzam",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Pullman Zamzam",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
-            nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            nth: 5,
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
-            nth: 7,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "3",
-            nth: 8,
-            title: "Ziarah di Makkah",
+            nth: 6,
+            title: "Ziarah Makkah",
             widgets: [],
             description:
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
+            id: "3",
+            nth: 7,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
+          },
+          {
             id: "4",
-            nth: 9,
-            title: "Kepulangan menuju Jakarta",
+            nth: 8,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -4574,7 +4776,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "5",
+            nth: 9,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [
@@ -4694,8 +4904,8 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Garuda Indonesia",
-        aircraft_type: undefined,
-        seat_layout: undefined,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
         baggage_allowance: 30,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/garuda-indonesia.webp",
@@ -4720,8 +4930,8 @@ export const packageDetailData: UmrahPackage[] = [
         class: "Ekonomi",
         flight_type: "Direct",
         airline: "Garuda Indonesia",
-        aircraft_type: undefined,
-        seat_layout: undefined,
+        aircraft_type: "Airbus",
+        seat_layout: "3-3-3",
         baggage_allowance: 30,
         cabin_baggage: 7,
         airline_logo: "/assets/airlines/garuda-indonesia.webp",
@@ -4738,7 +4948,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Marwa Rayhan by Rotana",
         star_rating: 5,
-        duration: 4,
+        duration: 5,
         images: [
           {
             id: "1",
@@ -4786,7 +4996,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. Ajyad Abraj Al Bait, Makkah 24231, Arab Saudi",
-        distance_to_masjid: 200,
+        distance_to_landmark: 320,
+        landmark: "Masjidil Haram",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -4796,7 +5008,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Maden Taibah",
         star_rating: 5,
-        duration: 3,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -4869,7 +5081,9 @@ export const packageDetailData: UmrahPackage[] = [
         check_in_time: undefined,
         check_out_time: undefined,
         address: "Jl. King Fahd, Bada'ah, Madinah 41441, Arab Saudi",
-        distance_to_masjid: 150,
+        distance_to_landmark: 100,
+        landmark: "Masjid Nabawi",
+        isShuttleBus: false,
         food_type: "Prasmanan",
         food_amount: 3,
         food_menu: "Far East",
@@ -4906,23 +5120,23 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -4937,15 +5151,7 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "1",
             nth: 1,
-            title: "Keberangkatan dari Jakarta",
-            widgets: [],
-            description:
-              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama.",
-          },
-          {
-            id: "2",
-            nth: 2,
-            title: "Mendarat di Jeddah lalu ke Madinah",
+            title: "Jakarta - Jeddah - Madinah",
             widgets: [
               {
                 id: "1",
@@ -4967,7 +5173,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah mendarat di Bandara King Abdul Aziz di Jeddah lalu melanjutkan perjalanan dengan transportasi darat. Sesampainya di Madinah, Jamaah akan melakukan proses check in hotel lalu beristirahat untuk kegiatan esok hari.",
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+          {
+            id: "2",
+            nth: 2,
+            title: "Ziarah Madinah",
+            widgets: [],
+            description:
+              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
           },
           {
             id: "3",
@@ -4980,10 +5194,29 @@ export const packageDetailData: UmrahPackage[] = [
           {
             id: "4",
             nth: 4,
-            title: "Ziarah di Madinah",
-            widgets: [],
+            title: "Madinah - Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Hotel Maden",
+                to: "Hotel Al-Marwa Rayhan by Rotana",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Al-Marwa Rayhan by Rotana",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
+              },
+            ],
             description:
-              "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi).",
+              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
           },
         ],
         images: [
@@ -5016,59 +5249,39 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         days: [
           {
-            id: "5",
-            nth: 5,
-            title: "Perjalanan Madinah - Makkah",
-            widgets: [
-              {
-                id: "1",
-                type: "Transport",
-                transportWith: "Bus",
-                from: "Hotel Maden",
-                to: "Hotel Al-Marwa Rayhan by Rotana",
-              },
-              {
-                id: "2",
-                type: "Hotel",
-                hotel_name: "Al-Marwa Rayhan by Rotana",
-              },
-              {
-                id: "3",
-                type: "Information",
-                description:
-                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat.",
-              },
-            ],
-            description:
-              "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari.",
-          },
-          {
             id: "1",
-            nth: 6,
-            title: "Pelaksanaan Ibadah Umrah di Makkah",
+            nth: 5,
+            title: "Makkah",
             widgets: [],
             description: "Jamaah melaksanakan ibadah Umrah di Masjidil Haram.",
           },
           {
             id: "2",
-            nth: 7,
-            title: "City Tour Makkah",
-            widgets: [],
-            description:
-              "Jamaah melakukan perjalanan mengelilingi kota Makkah dan mengunjungi beberapa destinasi wisata.",
-          },
-          {
-            id: "3",
-            nth: 8,
+            nth: 6,
             title: "Ziarah di Makkah",
             widgets: [],
             description:
               "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah.",
           },
           {
+            id: "3",
+            nth: 7,
+            title: "Makkah",
+            widgets: [
+              {
+                id: "1",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi.",
+              },
+            ],
+            description:
+              "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah.",
+          },
+          {
             id: "4",
-            nth: 9,
-            title: "Kepulangan menuju Jakarta",
+            nth: 8,
+            title: "Makkah - Jeddah",
             widgets: [
               {
                 id: "1",
@@ -5079,7 +5292,15 @@ export const packageDetailData: UmrahPackage[] = [
               },
             ],
             description:
-              "Jamaah melakukan proses check out Hotel di Makkah, lalu melanjutkan perjalanan ke Jeddah dengan transportasi darat.Setelah itu Jamaah Bersiap untuk penerbangan pulang ke Bandara Soekarno-Hatta Jakarta. #BikinTenang",
+              "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)",
+          },
+          {
+            id: "5",
+            nth: 9,
+            title: "Jakarta",
+            widgets: [],
+            description:
+              "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang",
           },
         ],
         images: [

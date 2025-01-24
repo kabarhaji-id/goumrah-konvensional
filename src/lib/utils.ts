@@ -151,3 +151,19 @@ export const formatTransitDuration = (
 
   return formatDuration(transitWaitTimeInMinutes);
 };
+
+// --- Perhitungan Jarak ---
+export const convertDistance = (meters: number): string => {
+  if (meters < 0) {
+    throw new Error("Jarak tidak boleh kurang dari 0");
+  }
+
+  // const kilometers = meters / 1000;
+
+  if (meters >= 1000) {
+    // return `${kilometers.toFixed()}km`;
+    return `1km+`;
+  } else {
+    return `${meters}m`;
+  }
+};

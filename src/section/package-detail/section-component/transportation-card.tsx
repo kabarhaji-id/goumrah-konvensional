@@ -112,7 +112,7 @@ const TransportationCard = ({
               <span className="text-xs">
                 {category === "Silver" || category === "Gold"
                   ? "Economy-Class"
-                  : "VVIP-Class"}
+                  : "VIP-Class"}
               </span>
             )}
           </div>

@@ -63,7 +63,7 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
 
         <div className="flex flex-col gap-5 py-[26px] font-light text-white">
           <div className="flex flex-col gap-2.5">
-            <h3 className="text-xl font-medium leading-6">Office</h3>
+            <h3 className="text-xl font-medium leading-6">Head Office</h3>
             <span className="w-full max-w-[269px] text-sm">
               JL. GM Ainul Yakin ADAH 35A Kalibata Kec. Pancoran, Kota Jakarta
               Selatan, Daerah Khusus Ibukota Jakarta 12740

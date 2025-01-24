@@ -169,7 +169,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Le Meridien Tower",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -221,7 +221,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Hayah Golden",
         star_rating: 4,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -312,8 +312,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -321,21 +321,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -713,7 +713,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Maysan Al Maqam",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -772,7 +772,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Al Ansar Golden Tulip",
         star_rating: 4,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -857,8 +857,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -866,21 +866,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -1208,7 +1208,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Le Meridien Tower",
         star_rating: 5,
-        duration: 7,
+        duration: 6,
         images: [
           {
             id: "1",
@@ -1260,7 +1260,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Hayah Golden",
         star_rating: 4,
-        duration: 5,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -1791,7 +1791,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Anjum",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -1845,7 +1845,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Al Ritz Madinah",
         star_rating: 4,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -1932,8 +1932,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -1941,21 +1941,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -2282,7 +2282,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Anjum",
         star_rating: 5,
-        duration: 7,
+        duration: 6,
         images: [
           {
             id: "1",
@@ -2336,7 +2336,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Al Ritz Madinah",
         star_rating: 4,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -2423,8 +2423,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -2432,21 +2432,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -3020,13 +3020,163 @@ export const packageDetailData: UmrahPackage[] = [
           food_amount: undefined,
           food_menu: undefined,
         },
+        // {
+        //   id: "double-tree-by-hilton",
+        //   city: "Cappadocia",
+        //   hotel_name: "DoubleTree by Hilton / 5*",
+        //   star_rating: 5,
+        //   duration: undefined,
+        //   images: [
+        //     {
+        //       id: "1",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+        //       category: "Eksterior",
+        //     },
+        //     {
+        //       id: "2",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+        //       category: "Kamar",
+        //     },
+        //     {
+        //       id: "3",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+        //       category: "Kamar",
+        //     },
+        //   ],
+        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        //   google_maps_link:
+        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        //   google_review_link:
+        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        //   description:
+        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        //   facilities: [
+        //     "AC",
+        //     "WiFi",
+        //     "Kolam Renang",
+        //     "TV",
+        //     "Restoran",
+        //     "Layanan Kamar",
+        //     "Kamar Mandi Dalam",
+        //   ],
+        //   check_in_time: undefined,
+        //   check_out_time: undefined,
+        //   address:
+        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        //   distance_to_landmark: 39300,
+        //   landmark: "Bandara Internasional Istanbul",
+        //   isShuttleBus: false,
+        //   food_type: "Prasmanan",
+        //   food_amount: undefined,
+        //   food_menu: undefined,
+        // },
+        // {
+        //   id: "double-tree-by-hilton",
+        //   city: "Cappadocia",
+        //   hotel_name: "DoubleTree by Hilton / 5*",
+        //   star_rating: 5,
+        //   duration: undefined,
+        //   images: [
+        //     {
+        //       id: "1",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+        //       category: "Eksterior",
+        //     },
+        //     {
+        //       id: "2",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+        //       category: "Kamar",
+        //     },
+        //     {
+        //       id: "3",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+        //       category: "Kamar",
+        //     },
+        //   ],
+        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        //   google_maps_link:
+        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        //   google_review_link:
+        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        //   description:
+        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        //   facilities: [
+        //     "AC",
+        //     "WiFi",
+        //     "Kolam Renang",
+        //     "TV",
+        //     "Restoran",
+        //     "Layanan Kamar",
+        //     "Kamar Mandi Dalam",
+        //   ],
+        //   check_in_time: undefined,
+        //   check_out_time: undefined,
+        //   address:
+        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        //   distance_to_landmark: 39300,
+        //   landmark: "Bandara Internasional Istanbul",
+        //   isShuttleBus: false,
+        //   food_type: "Prasmanan",
+        //   food_amount: undefined,
+        //   food_menu: undefined,
+        // },
+        // {
+        //   id: "double-tree-by-hilton",
+        //   city: "Cappadocia",
+        //   hotel_name: "DoubleTree by Hilton / 5*",
+        //   star_rating: 5,
+        //   duration: undefined,
+        //   images: [
+        //     {
+        //       id: "1",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+        //       category: "Eksterior",
+        //     },
+        //     {
+        //       id: "2",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+        //       category: "Kamar",
+        //     },
+        //     {
+        //       id: "3",
+        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+        //       category: "Kamar",
+        //     },
+        //   ],
+        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        //   google_maps_link:
+        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        //   google_review_link:
+        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        //   description:
+        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        //   facilities: [
+        //     "AC",
+        //     "WiFi",
+        //     "Kolam Renang",
+        //     "TV",
+        //     "Restoran",
+        //     "Layanan Kamar",
+        //     "Kamar Mandi Dalam",
+        //   ],
+        //   check_in_time: undefined,
+        //   check_out_time: undefined,
+        //   address:
+        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        //   distance_to_landmark: 39300,
+        //   landmark: "Bandara Internasional Istanbul",
+        //   isShuttleBus: false,
+        //   food_type: "Prasmanan",
+        //   food_amount: undefined,
+        //   food_menu: undefined,
+        // },
       ],
       makkah: {
         id: "anjum-makkah",
         city: "Makkah",
         hotel_name: "Anjum",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -3080,7 +3230,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Al Ritz Madinah",
         star_rating: 4,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -3167,8 +3317,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -3176,21 +3326,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -3853,8 +4003,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -3862,21 +4012,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -4454,23 +4604,23 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -4970,23 +5120,23 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
-        category: "Wisata Kota",
+        title: "Wisata Kota Al-Ula",
+        category: "Wisata Kota Al-Ula",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },

@@ -162,7 +162,7 @@ export const convertDistance = (meters: number): string => {
 
   if (meters >= 1000) {
     // return `${kilometers.toFixed()}km`;
-    return `1km+`;
+    return `Shuttle Bus 24jam ke Masjidil Haram`;
   } else {
     return `${meters}m`;
   }

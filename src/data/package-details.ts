@@ -4532,7 +4532,7 @@ export const packageDetailData: UmrahPackage[] = [
           },
           {
             id: "3",
-            src: "/assets/image/hotel/madinah/al-eiman/bedroom-al-eiman-2-new.jpeg",
+            src: "/assets/image/hotel/madinah/al-eiman/bedroom-al-eiman-2.jpeg",
             category: "Kamar",
           },
           {

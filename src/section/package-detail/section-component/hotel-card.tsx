@@ -146,7 +146,7 @@ const HotelCard = ({
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <CustomMapPinnedIcon className="h-4 w-4" />
+              <CustomMapPinnedIcon className="h-4 w-4 flex-shrink-0" />
               {dataHotel.city === "Makkah" && (
                 <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
                   {dataHotel.distance_to_landmark > 1000

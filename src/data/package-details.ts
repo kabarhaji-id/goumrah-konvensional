@@ -146,7 +146,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-15T10:00:00+07:00",
+        departure_datetime: "2025-07-14T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -312,8 +312,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -665,7 +665,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "DOH",
         airport_city_arrival: "Doha",
-        departure_datetime: "2025-08-04T10:00:00+07:00",
+        departure_datetime: "2025-08-03T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Transit",
@@ -688,7 +688,7 @@ export const packageDetailData: UmrahPackage[] = [
           airport_terminal_arrival: "Terminal 3 Internasional",
           airport_code_arrival: "CGK",
           airport_city_arrival: "Jakarta",
-          departure_datetime: "2025-08-04T10:00:00+07:00",
+          departure_datetime: "2025-08-03T10:00:00+07:00",
           departure_arrivaltime: undefined,
           class: "Ekonomi",
           flight_type: "Direct",
@@ -703,7 +703,7 @@ export const packageDetailData: UmrahPackage[] = [
           transit: undefined,
           transit_datetime: undefined,
         },
-        transit_datetime: "2025-08-04T10:00:00+07:00",
+        transit_datetime: "2025-08-03T10:00:00+07:00",
       },
     },
     hotel_details: {
@@ -857,8 +857,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -1185,7 +1185,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-20T10:00:00+07:00",
+        departure_datetime: "2025-07-19T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -1260,7 +1260,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Hayah Golden",
         star_rating: 4,
-        duration: 3,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -1351,7 +1351,7 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Kota Al-Ula",
+        title: "Al-Ula",
         category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
@@ -1360,21 +1360,21 @@ export const packageDetailData: UmrahPackage[] = [
       {
         title: "Kereta Cepat",
         category: "Transportasi",
-        price: 900000,
+        price: 1000000,
         places: ["Kereta Cepat"],
         imageUrl: "/assets/image/transportation/fast-train/fast-train-3.webp",
       },
       {
-        title: "Makan di Romansiah + Cable Car",
+        title: "Makan di Romansiah + Cable Car di Thaif",
         category: "Wisata Kota Thaif",
-        price: 1000000,
+        price: 1500000,
         places: ["Restoran Al Romansiah", "Cable Car"],
-        imageUrl: "/assets/image/voucher/al-romansiah-restaurant-2.jpeg",
+        imageUrl: "/assets/image/voucher/makan-romansiah-cable-car.jpg",
       },
       {
-        title: "Restoran Asia + Speed Boat",
+        title: "Restoran Asia + Speed Boat di Jeddah",
         category: "Wisata Kota Jeddah",
-        price: 1500000,
+        price: 1800000,
         places: ["Restoran Asia Jeddah", "Speed Boat"],
         imageUrl: "/assets/image/voucher/asia-restaurant-jeddah-1.jpg",
       },
@@ -1743,7 +1743,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "DOH",
         airport_city_arrival: "Doha",
-        departure_datetime: "2025-08-04T10:00:00+07:00",
+        departure_datetime: "2025-08-03T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Transit",
@@ -1766,7 +1766,7 @@ export const packageDetailData: UmrahPackage[] = [
           airport_terminal_arrival: "Terminal 3 Internasional",
           airport_code_arrival: "CGK",
           airport_city_arrival: "Jakarta",
-          departure_datetime: "2025-08-04T10:00:00+07:00",
+          departure_datetime: "2025-08-03T10:00:00+07:00",
           departure_arrivaltime: undefined,
           class: "Ekonomi",
           flight_type: "Direct",
@@ -1932,8 +1932,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -2259,7 +2259,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-20T10:00:00+07:00",
+        departure_datetime: "2025-07-19T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -2423,8 +2423,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -2815,7 +2815,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "DXB",
         airport_city_arrival: "Dubai",
-        departure_datetime: "2025-07-25T10:00:00+07:00",
+        departure_datetime: "2025-07-27T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Transit",
@@ -2838,7 +2838,7 @@ export const packageDetailData: UmrahPackage[] = [
           airport_terminal_arrival: undefined,
           airport_code_arrival: "JED",
           airport_city_arrival: "Jeddah",
-          departure_datetime: "2025-07-25T10:00:00+07:00",
+          departure_datetime: "2025-07-27T10:00:00+07:00",
           departure_arrivaltime: undefined,
           class: "Ekonomi",
           flight_type: "Transit",
@@ -2853,7 +2853,7 @@ export const packageDetailData: UmrahPackage[] = [
           transit: undefined,
           transit_datetime: undefined,
         },
-        transit_datetime: "2025-07-25T10:00:00+07:00",
+        transit_datetime: "2025-07-27T10:00:00+07:00",
       },
       return_flight: {
         flight_number: undefined,
@@ -3317,8 +3317,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -3349,8 +3349,8 @@ export const packageDetailData: UmrahPackage[] = [
       {
         id: "1",
         nth: 1,
-        duration: 7,
-        city: "Istanbul",
+        duration: 8,
+        city: "Turkey",
         days: [
           {
             id: "1",
@@ -3757,7 +3757,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3",
         airport_code_arrival: "DXB",
         airport_city_arrival: "Dubai",
-        departure_datetime: "2025-07-28T10:00:00+07:00",
+        departure_datetime: "2025-07-27T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -3780,7 +3780,7 @@ export const packageDetailData: UmrahPackage[] = [
           airport_terminal_arrival: undefined,
           airport_code_arrival: "CGK",
           airport_city_arrival: "Jakarta",
-          departure_datetime: "2025-07-28T10:00:00+07:00",
+          departure_datetime: "2025-07-27T10:00:00+07:00",
           departure_arrivaltime: undefined,
           class: "Ekonomi",
           flight_type: "Transit",
@@ -3805,7 +3805,7 @@ export const packageDetailData: UmrahPackage[] = [
           city: "Dubai",
           hotel_name: "Landmark Hotel / 4*",
           star_rating: 4,
-          duration: 3,
+          duration: 2,
           images: [
             {
               id: "1",
@@ -3862,7 +3862,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Anjum",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -3916,7 +3916,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Al Ritz Madinah",
         star_rating: 4,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -4003,8 +4003,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -4409,7 +4409,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: undefined,
         airport_code_arrival: "DOH",
         airport_city_arrival: "Doha",
-        departure_datetime: "2025-08-04T10:00:00+07:00",
+        departure_datetime: "2025-08-03T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Transit",
@@ -4432,7 +4432,7 @@ export const packageDetailData: UmrahPackage[] = [
           airport_terminal_arrival: "Terminal 3 Internasional",
           airport_code_arrival: "CGK",
           airport_city_arrival: "Jakarta",
-          departure_datetime: "2025-08-04T10:00:00+07:00",
+          departure_datetime: "2025-08-03T10:00:00+07:00",
           departure_arrivaltime: undefined,
           class: "Ekonomi",
           flight_type: "Direct",
@@ -4457,7 +4457,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Pullman Zamzam",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -4518,7 +4518,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Dar Al-Eiman Al-Haram",
         star_rating: 5,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -4604,8 +4604,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",
@@ -4925,7 +4925,7 @@ export const packageDetailData: UmrahPackage[] = [
         airport_terminal_arrival: "Terminal 3 Internasional",
         airport_code_arrival: "CGK",
         airport_city_arrival: "Jakarta",
-        departure_datetime: "2025-07-13T10:00:00+07:00",
+        departure_datetime: "2025-07-12T10:00:00+07:00",
         departure_arrivaltime: undefined,
         class: "Ekonomi",
         flight_type: "Direct",
@@ -4948,7 +4948,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Makkah",
         hotel_name: "Marwa Rayhan by Rotana",
         star_rating: 5,
-        duration: 5,
+        duration: 4,
         images: [
           {
             id: "1",
@@ -5008,7 +5008,7 @@ export const packageDetailData: UmrahPackage[] = [
         city: "Madinah",
         hotel_name: "Maden Taibah",
         star_rating: 5,
-        duration: 4,
+        duration: 3,
         images: [
           {
             id: "1",
@@ -5120,8 +5120,8 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     addons: [
       {
-        title: "Wisata Kota Al-Ula",
-        category: "Wisata Kota Al-Ula",
+        title: "Al-Ula",
+        category: "Wisata Kota",
         price: 2000000,
         places: ["Jabal Ikmah", "Elephant Rock", "Maraya"],
         imageUrl: "/assets/image/voucher/al-ula-4.jpeg",

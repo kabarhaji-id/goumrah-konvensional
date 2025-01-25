@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
     // Use remotePatterns for image domains
     remotePatterns: [
       {
-        protocol: "https",         // Protocol (http or https)
-        hostname: "goumrah.id",   // Your image domain
+        protocol: "https", // Protocol (http or https)
+        hostname: "goumrah.id", // Your image domain
         pathname: "/assets/image/**", // Optional path to restrict image source
       },
     ],
@@ -40,7 +40,7 @@ const nextConfig: NextConfig = {
           not: [...fileLoaderRule.resourceQuery.not, /url/],
         }, // exclude *.svg?url
         use: ["@svgr/webpack"],
-      }
+      },
     );
 
     // Modify the file loader rule to ignore *.svg

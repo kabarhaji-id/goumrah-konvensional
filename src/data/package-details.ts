@@ -1781,7 +1781,7 @@ export const packageDetailData: UmrahPackage[] = [
           transit: undefined,
           transit_datetime: undefined,
         },
-        transit_datetime: "2025-08-04T10:00:00+07:00",
+        transit_datetime: "2025-08-03T10:00:00+07:00",
       },
     },
     hotel_details: {
@@ -3795,7 +3795,7 @@ export const packageDetailData: UmrahPackage[] = [
           transit: undefined,
           transit_datetime: undefined,
         },
-        transit_datetime: "2025-07-28T10:00:00+07:00",
+        transit_datetime: "2025-07-27T10:00:00+07:00",
       },
     },
     hotel_details: {
@@ -4447,7 +4447,7 @@ export const packageDetailData: UmrahPackage[] = [
           transit: undefined,
           transit_datetime: undefined,
         },
-        transit_datetime: "2025-08-04T10:00:00+07:00",
+        transit_datetime: "2025-08-03T10:00:00+07:00",
       },
     },
     hotel_details: {
@@ -4532,7 +4532,7 @@ export const packageDetailData: UmrahPackage[] = [
           },
           {
             id: "3",
-            src: "/assets/image/hotel/madinah/al-eiman/bedroom-al-eiman-2.jpeg",
+            src: "/assets/image/hotel/madinah/al-eiman/bedroom-al-eiman-2-new.jpeg",
             category: "Kamar",
           },
           {

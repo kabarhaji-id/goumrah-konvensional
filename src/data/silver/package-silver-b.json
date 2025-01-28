@@ -1,0 +1,527 @@
+{
+  "id": "umrah-hemat-ibadah-dekat-silver",
+  "title": "Umrah Hemat - Ibadah Dekat",
+  "thumbnail": "/assets/image/packages-umrah/silver/cover-umrah-hemat-ibadah-dekat.jpg",
+  "type": "Reguler",
+  "category": "Silver",
+  "season": "NON RAMADHAN",
+  "isFastTrain": false,
+  "city_departure": [
+    {
+      "city": "Jakarta",
+      "route": "CGK-JED"
+    }
+  ],
+  "duration": "9 Hari",
+  "package": "Silver",
+  "down_payment": 7,
+  "order_url": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Dekat. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+  "departure_date": [
+    {
+      "date": "2025-02-23T10:00:00+07:00",
+      "status": "expired"
+    },
+    {
+      "date": "2025-03-23T10:00:00+07:00",
+      "status": "expired"
+    },
+    {
+      "date": "2025-04-15T10:00:00+07:00",
+      "status": "closing-umrah"
+    },
+    {
+      "date": "2025-05-01T10:00:00+07:00",
+      "status": "musim-haji"
+    },
+    {
+      "date": "2025-06-01T10:00:00+07:00",
+      "status": "musim-haji"
+    },
+    {
+      "date": "2025-07-27T10:00:00+07:00",
+      "status": "active"
+    },
+    {
+      "date": "2025-08-24T10:00:00+07:00",
+      "status": "active"
+    },
+    {
+      "date": "2025-09-28T10:00:00+07:00",
+      "status": "active"
+    },
+    {
+      "date": "2025-10-26T10:00:00+07:00",
+      "status": "coming-soon"
+    },
+    {
+      "date": "2025-11-23T10:00:00+07:00",
+      "status": "coming-soon"
+    },
+    {
+      "date": "2025-12-28T10:00:00+07:00",
+      "status": "coming-soon"
+    }
+  ],
+  "quadPrice": 28900000,
+  "triplePrice": 30900000,
+  "doublePrice": 32900000,
+  "infantPrice": null,
+  "quadFinalPrice": 25900000,
+  "tripleFinalPrice": 27900000,
+  "doubleFinalPrice": 29900000,
+  "infantFinalPrice": null,
+  "flight_details": {
+    "wisata_flight": [],
+    "departure_flight": {
+      "flight_number": null,
+      "duration": null,
+      "airport_name_departure": "Soekarno-Hatta International Airport",
+      "airport_terminal_departure": "Terminal 3 Internasional",
+      "airport_code_departure": "CGK",
+      "airport_city_departure": "Jakarta",
+      "airport_name_arrival": "Hamad International Airport",
+      "airport_terminal_arrival": null,
+      "airport_code_arrival": "DOH",
+      "airport_city_arrival": "Doha",
+      "departure_datetime": "2025-07-27T10:00:00+07:00",
+      "departure_arrivaltime": null,
+      "class": "Ekonomi",
+      "flight_type": "Transit",
+      "airline": "Qatar Airways",
+      "aircraft_type": "Airbus",
+      "seat_layout": "3-3-3",
+      "baggage_allowance": 20,
+      "cabin_baggage": 7,
+      "airline_logo": "/assets/airlines/qatar-airways.webp",
+      "skytrax": "Full Service",
+      "rating": "5",
+      "transit": {
+        "flight_number": null,
+        "duration": null,
+        "airport_name_departure": "Hamad International Airport",
+        "airport_terminal_departure": null,
+        "airport_code_departure": "DOH",
+        "airport_city_departure": "Doha",
+        "airport_name_arrival": "King Abdulaziz International Airport",
+        "airport_terminal_arrival": null,
+        "airport_code_arrival": "JED",
+        "airport_city_arrival": "Jeddah",
+        "departure_datetime": "2025-07-27T10:00:00+07:00",
+        "departure_arrivaltime": null,
+        "class": "Ekonomi",
+        "flight_type": "Direct",
+        "airline": "Qatar Airways",
+        "aircraft_type": "Airbus",
+        "seat_layout": "3-3-3",
+        "baggage_allowance": 20,
+        "cabin_baggage": 7,
+        "airline_logo": "/assets/airlines/qatar-airways.webp",
+        "skytrax": "Full Service",
+        "rating": "5",
+        "transit": null,
+        "transit_datetime": null
+      },
+      "transit_datetime": "2025-07-27T10:00:00+07:00"
+    },
+    "return_flight": {
+      "flight_number": null,
+      "duration": null,
+      "airport_name_departure": "King Abdulaziz International Airport",
+      "airport_terminal_departure": null,
+      "airport_code_departure": "JED",
+      "airport_city_departure": "Jeddah",
+      "airport_name_arrival": "Hamad International Airport",
+      "airport_terminal_arrival": null,
+      "airport_code_arrival": "DOH",
+      "airport_city_arrival": "Doha",
+      "departure_datetime": "2025-08-03T10:00:00+07:00",
+      "departure_arrivaltime": null,
+      "class": "Ekonomi",
+      "flight_type": "Transit",
+      "airline": "Qatar Airways",
+      "aircraft_type": "Airbus",
+      "seat_layout": "3-3-3",
+      "baggage_allowance": 20,
+      "cabin_baggage": 7,
+      "airline_logo": "/assets/airlines/qatar-airways.webp",
+      "skytrax": "Full Service",
+      "rating": "5",
+      "transit": {
+        "flight_number": null,
+        "duration": null,
+        "airport_name_departure": "Hamad International Airport",
+        "airport_terminal_departure": null,
+        "airport_code_departure": "DOH",
+        "airport_city_departure": "Doha",
+        "airport_name_arrival": "Soekarno-Hatta International Airport",
+        "airport_terminal_arrival": "Terminal 3 Internasional",
+        "airport_code_arrival": "CGK",
+        "airport_city_arrival": "Jakarta",
+        "departure_datetime": "2025-08-03T10:00:00+07:00",
+        "departure_arrivaltime": null,
+        "class": "Ekonomi",
+        "flight_type": "Direct",
+        "airline": "Qatar Airways",
+        "aircraft_type": "Airbus",
+        "seat_layout": "3-3-3",
+        "baggage_allowance": 20,
+        "cabin_baggage": 7,
+        "airline_logo": "/assets/airlines/qatar-airways.webp",
+        "skytrax": "Full Service",
+        "rating": "5",
+        "transit": null,
+        "transit_datetime": null
+      },
+      "transit_datetime": "2025-08-03T10:00:00+07:00"
+    }
+  },
+  "hotel_details": {
+    "wisata": [],
+    "makkah": {
+      "id": "maysan-al-maqam",
+      "city": "Makkah",
+      "hotel_name": "Maysan Al Maqam",
+      "star_rating": 5,
+      "duration": 4,
+      "images": [
+        {
+          "id": "1",
+          "src": "/assets/image/hotel/makkah/maysan-al-maqam/exterior-maysan-1.jpg",
+          "category": "Eksterior"
+        },
+        {
+          "id": "1",
+          "src": "/assets/image/hotel/makkah/maysan-al-maqam/lobby-maysan-1.jpg",
+          "category": "Lobby"
+        },
+        {
+          "id": "2",
+          "src": "/assets/image/hotel/makkah/maysan-al-maqam/bedroom-maysan-1.jpg",
+          "category": "Kamar"
+        },
+        {
+          "id": "3",
+          "src": "/assets/image/hotel/makkah/maysan-al-maqam/bedroom-maysan-2.jpg",
+          "category": "Kamar"
+        },
+        {
+          "id": "4",
+          "src": "/assets/image/hotel/makkah/maysan-al-maqam/restaurant-maysan-1.jpg",
+          "category": "Restoran"
+        }
+      ],
+      "google_maps_link_noembed": "https://maps.app.goo.gl/GFS1wZ2rJ3WcXaRx7",
+      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.324637866089!2d39.826552575267335!3d21.416481180331605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c2050015fa2da1%3A0x49e699303d125a98!2sHotel%20Maysan%20Al%20Maqam!5e0!3m2!1sid!2sid!4v1737474070175!5m2!1sid!2sid",
+      "google_review_link": "https://www.google.com/maps/place/Hotel+Maysan+Al+Maqam/@21.4164812,39.8265526,17z/data=!4m11!3m10!1s0x15c2050015fa2da1:0x49e699303d125a98!5m2!4m1!1i2!8m2!3d21.4164812!4d39.8291275!9m1!1b1!16s%2Fg%2F11wb01s72k?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+      "description": "Hotel Maysan Al Maqam adalah akomodasi nyaman yang terletak di lokasi strategis di Makkah, menyediakan kemudahan bagi para tamu yang ingin beribadah di Masjidil Haram. Dengan suasana yang bersih dan fasilitas yang memadai, hotel ini dirancang untuk memberikan kenyamanan dan ketenangan selama menginap. Setiap kamar dilengkapi dengan fasilitas modern seperti AC, TV layar datar, dan akses Wi-Fi, sehingga cocok untuk tamu individu maupun keluarga. Layanan ramah dan efisien dari staf hotel semakin melengkapi pengalaman menginap yang menyenangkan. Dengan akses mudah ke tempat-tempat suci, Hotel Maysan Al Maqam menjadi pilihan yang ideal untuk perjalanan spiritual Anda di Makkah.",
+      "facilities": [
+        "AC",
+        "WiFi",
+        "Restoran",
+        "TV",
+        "Lift",
+        "Layanan Kamar",
+        "Kamar Mandi Dalam"
+      ],
+      "check_in_time": null,
+      "check_out_time": null,
+      "address": "Jl. 4601 Ajyad, Ajyad, Makkah 24231, Arab Saudi",
+      "distance_to_landmark": 400,
+      "landmark": "Masjidil Haram",
+      "isShuttleBus": false,
+      "food_type": "Prasmanan",
+      "food_amount": 3,
+      "food_menu": "Far East"
+    },
+    "madinah": {
+      "id": "al-ansar-golden-tulip",
+      "city": "Madinah",
+      "hotel_name": "Al Ansar Golden Tulip",
+      "star_rating": 4,
+      "duration": 3,
+      "images": [
+        {
+          "id": "1",
+          "src": "/assets/image/hotel/madinah/al-ansar-golden-tulip/exterior-al-ansar-1.jpg",
+          "category": "Eksterior"
+        },
+        {
+          "id": "2",
+          "src": "/assets/image/hotel/madinah/al-ansar-golden-tulip/bedroom-al-ansar-1.jpg",
+          "category": "Kamar"
+        },
+        {
+          "id": "3",
+          "src": "/assets/image/hotel/madinah/al-ansar-golden-tulip/bedroom-al-ansar-2.jpg",
+          "category": "Kamar"
+        },
+        {
+          "id": "4",
+          "src": "/assets/image/hotel/madinah/al-ansar-golden-tulip/bedroom-al-ansar-3.jpg",
+          "category": "Kamar"
+        },
+        {
+          "id": "5",
+          "src": "/assets/image/hotel/madinah/al-ansar-golden-tulip/restaurant-al-ansar-1.jpg",
+          "category": "Restoran"
+        }
+      ],
+      "google_maps_link_noembed": "https://maps.app.goo.gl/dWV8GAMT1wN1EwBL8",
+      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.805494971954!2d39.60689472487294!3d24.47232162829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf07773c2905%3A0x641a53444293ffad!2sAl%20Ansar%20Golden%20Tulip!5e0!3m2!1sid!2sid!4v1737474788894!5m2!1sid!2sid",
+      "google_review_link": "https://www.google.com/maps/place/Al+Ansar+Golden+Tulip/@24.4723216,39.6068947,17.53z/data=!4m11!3m10!1s0x15bdbf07773c2905:0x641a53444293ffad!5m2!4m1!1i2!8m2!3d24.4726973!4d39.6085047!9m1!1b1!16s%2Fg%2F11cm42dg62?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+      "description": "Al Ansar Golden Tulip adalah hotel bintang 4 yang elegan, terletak hanya dua menit berjalan kaki dari Masjid Nabawi di Madinah. Hotel ini menawarkan 296 kamar dan suite yang dilengkapi dengan fasilitas modern seperti AC, TV layar datar, minibar, dan akses Wi-Fi gratis. Para tamu dapat menikmati layanan concierge, pusat kebugaran, dan restoran di lokasi. Dengan lokasinya yang strategis, hotel ini juga dekat dengan Old Bazaar, hanya 800 meter jauhnya, serta memiliki akses mudah ke berbagai tempat bersejarah di Madinah. Al Ansar Golden Tulip menyediakan akomodasi yang nyaman dan mewah bagi para peziarah dan wisatawan yang mengunjungi kota suci ini.",
+      "facilities": [
+        "AC",
+        "WiFi",
+        "TV",
+        "Restoran",
+        "Layanan Kamar",
+        "Kamar Mandi Dalam"
+      ],
+      "check_in_time": null,
+      "check_out_time": null,
+      "address": "Bada'ah, Madinah 42311, Arab Saudi",
+      "distance_to_landmark": 300,
+      "landmark": "Masjid Nabawi",
+      "isShuttleBus": false,
+      "food_type": "Prasmanan",
+      "food_amount": 3,
+      "food_menu": "Far East"
+    }
+  },
+  "bus_details": {
+    "images": [
+      {
+        "id": "1",
+        "src": "/assets/image/transportation/bus/saptco-economy-1.jpg",
+        "category": null
+      },
+      {
+        "id": "2",
+        "src": "/assets/image/transportation/bus/saptco-economy-2.jpg",
+        "category": null
+      },
+      {
+        "id": "3",
+        "src": "/assets/image/transportation/bus/saptco-economy-3.jpg",
+        "category": null
+      }
+    ],
+    "id": "saptco-reguler",
+    "provider": "Saptco",
+    "bus_type": "Economy-Class",
+    "seat_amount": 45
+  },
+  "promos": [
+    {
+      "imageUrl": "/assets/promo/promo-diskon-3-juta.jpg",
+      "link": "Assalamualaikum, saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut."
+    }
+  ],
+  "addons": [
+    {
+      "title": "Al-Ula",
+      "category": "Wisata Kota",
+      "price": 2000000,
+      "places": ["Jabal Ikmah", "Elephant Rock", "Maraya"],
+      "imageUrl": "/assets/image/voucher/al-ula-4.jpeg"
+    },
+    {
+      "title": "Kereta Cepat",
+      "category": "Transportasi",
+      "price": 1000000,
+      "places": ["Kereta Cepat"],
+      "imageUrl": "/assets/image/transportation/fast-train/fast-train-3.webp"
+    },
+    {
+      "title": "Makan di Romansiah + Cable Car di Thaif",
+      "category": "Wisata Kota Thaif",
+      "price": 1500000,
+      "places": ["Restoran Al Romansiah", "Cable Car"],
+      "imageUrl": "/assets/image/voucher/makan-romansiah-cable-car.jpg"
+    },
+    {
+      "title": "Restoran Asia + Speed Boat di Jeddah",
+      "category": "Wisata Kota Jeddah",
+      "price": 1800000,
+      "places": ["Restoran Asia Jeddah", "Speed Boat"],
+      "imageUrl": "/assets/image/voucher/asia-restaurant-jeddah-1.jpg"
+    }
+  ],
+  "itineraries": [
+    {
+      "id": "1",
+      "nth": 1,
+      "duration": 3,
+      "city": "Madinah",
+      "days": [
+        {
+          "id": "1",
+          "nth": 1,
+          "title": "Jakarta - Jeddah - Madinah",
+          "widgets": [
+            {
+              "id": "1",
+              "type": "Transport",
+              "transportWith": "Bus",
+              "from": "Bandara King Abdul Aziz Jeddah",
+              "to": "Hotel Al Ansar Golden Tulip"
+            },
+            {
+              "id": "2",
+              "type": "Hotel",
+              "hotel_name": "Al Ansar Golden Tulip"
+            },
+            {
+              "id": "3",
+              "type": "Information",
+              "description": "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat"
+            }
+          ],
+          "description": "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in."
+        },
+        {
+          "id": "2",
+          "nth": 2,
+          "title": "Ziarah Madinah",
+          "widgets": [],
+          "description": "Jamaah melakukan ziarah di Raudah, Masjid Nabawi dan sekitaran Masjid Nabawi (Saqifah Bani Sa’idah, Masjid Ghamamah, Makam Rasulullah SAW, dan Makam Baqi)."
+        },
+        {
+          "id": "3",
+          "nth": 3,
+          "title": "City Tour Madinah",
+          "widgets": [],
+          "description": "Jamaah melakukan perjalanan mengelilingi kota Madinah dan mengunjungi beberapa destinasi wisata. Seperti: Masjid Quba, Jabal Uhud dan Kebun Kurma."
+        },
+        {
+          "id": "4",
+          "nth": 4,
+          "title": "Madinah - Makkah",
+          "widgets": [
+            {
+              "id": "1",
+              "type": "Transport",
+              "transportWith": "Bus",
+              "from": "Hotel Al Ansar Golden Tulip",
+              "to": "Hotel Maysan Al Maqam"
+            },
+            {
+              "id": "2",
+              "type": "Hotel",
+              "hotel_name": "Maysan Al Maqam"
+            },
+            {
+              "id": "3",
+              "type": "Information",
+              "description": "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan beristirahat."
+            }
+          ],
+          "description": "Jamaah melakukan proses check out Hotel di Madinah, lalu melanjutkan perjalanan ke Makkah dengan transportasi darat.Sesampainya di Makkah, Jamaah langsung melakukan proses check in Hotel di Makkah lalu makan malam dan beristirahat untuk ibadah Umrah besok hari."
+        }
+      ],
+      "images": [
+        {
+          "id": "1",
+          "src": "/assets/image/itinerary/madinah/itinerary-cover-madinah-7.jpg",
+          "category": null
+        },
+        {
+          "id": "1",
+          "src": "/assets/image/itinerary/madinah/itinerary-cover-madinah-2.jpg",
+          "category": null
+        },
+        {
+          "id": "1",
+          "src": "/assets/image/itinerary/madinah/itinerary-cover-madinah-8.jpg",
+          "category": null
+        },
+        {
+          "id": "1",
+          "src": "/assets/image/itinerary/madinah/itinerary-cover-madinah-9.jpg",
+          "category": null
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "nth": 2,
+      "duration": 4,
+      "city": "Makkah",
+      "days": [
+        {
+          "id": "1",
+          "nth": 5,
+          "title": "Makkah",
+          "widgets": [],
+          "description": "Jamaah melaksanakan ibadah Umrah di Masjidil Haram."
+        },
+        {
+          "id": "2",
+          "nth": 6,
+          "title": "Ziarah Makkah",
+          "widgets": [],
+          "description": "Jamaah melakukan ziarah di Jabal Tsur, Jabal Nur, Jabal Rahmah, Padang Arafah dan Muzdalifah."
+        },
+        {
+          "id": "3",
+          "nth": 7,
+          "title": "Makkah",
+          "widgets": [
+            {
+              "id": "1",
+              "type": "Information",
+              "description": "Tidak ada aktivitas hari ini. Silahkan nikmati waktu dengan aktivitas pribadi."
+            }
+          ],
+          "description": "Memperbanyak ibadah di Masjidil Haram atau aktivitas pribadi di sekitar Makkah."
+        },
+        {
+          "id": "4",
+          "nth": 8,
+          "title": "Makkah - Jeddah",
+          "widgets": [
+            {
+              "id": "1",
+              "type": "Transport",
+              "transportWith": "Bus",
+              "from": "Hotel Hotel Maysan Al Maqam",
+              "to": "Bandara King Abdul Aziz Jeddah"
+            }
+          ],
+          "description": "Setelah Sholat Subuh dan Thawaf Wada’ persiapan untuk check out hotel. Jamaah bertolak menuju Jeddah dan City Tour, Mengunjungi Corniche, Masjid Qishash dan Makam Siti Hawa. Setelah itu, 4 jam sebelum take off jamaah menuju airport Jeddah untuk keberangkatan ke Jakarta. (Makan Pagi, Makan Siang & Makan Malam)"
+        },
+        {
+          "id": "5",
+          "nth": 9,
+          "title": "Jakarta",
+          "widgets": [],
+          "description": "Jamaah tiba di Bandara Soekarno-Hatta Jakarta. #BikinTenang"
+        }
+      ],
+      "images": [
+        {
+          "id": "1",
+          "src": "/assets/image/itinerary/makkah/itinerary-cover-makkah-2.jpg",
+          "category": null
+        },
+        {
+          "id": "2",
+          "src": "/assets/image/itinerary/makkah/itinerary-cover-makkah-3.jpg",
+          "category": null
+        },
+        {
+          "id": "3",
+          "src": "/assets/image/itinerary/makkah/itinerary-cover-makkah-4.jpg",
+          "category": null
+        },
+        {
+          "id": "4",
+          "src": "/assets/image/itinerary/makkah/itinerary-cover-makkah-1.jpg",
+          "category": null
+        }
+      ]
+    }
+  ],
+  "importantNotes": []
+}

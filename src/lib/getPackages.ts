@@ -1,125 +1,61 @@
-// // --- API GET: Section Packages
-// export async function getSectionPackages({
-//   embarkation,
-//   departureDate,
-//   categories,
-//   promoSlug,
-//   type,
-//   sortBy,
-//   sortByPrice,
-//   sortByDeparture,
-//   sortByUsedQuota,
-//   name,
-//   cityTours,
-//   hotelRatings,
-//   durations,
-//   months,
-//   isRecommended,
-//   page,
-//   perPage,
-// }: {
-//   name?: string;
-//   months?: string;
-//   embarkation?: string;
-//   departureDate?: string;
-//   categories?: PackageCategory;
-//   promoSlug?: string;
-//   type?: string;
-//   sortBy?: string;
-//   sortByPrice?: string;
-//   sortByDeparture?: string;
-//   sortByUsedQuota?: string;
-//   sortByQuota?: string;
-//   durations?: string;
-//   hotelRatings?: string;
-//   cityTours?: string;
-//   isRecommended?: string;
-//   page?: string;
-//   perPage?: string;
-// }) {
-//   try {
-//     const queries = {
-//       page,
-//       perPage,
-//       promoSlug,
-//       type,
-//       categories,
-//       embarkation,
-//       sortBy,
-//       departureDate,
-//       sortByPrice,
-//       sortByDeparture,
-//       sortByUsedQuota,
-//       name,
-//       cityTours,
-//       hotelRatings,
-//       durations,
-//       months,
-//       isRecommended,
-//     };
+import { resJson, resJsonDetail } from "@/types/fetch";
+import { UmrahPackage } from "@/types/package-details";
+import { Packages } from "@/types/packages";
 
-//     const params = new URLSearchParams();
+// --- API GET: Section Packages
+export async function getAllPackages() {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/collections/${process.env.NEXT_PUBLIC_COLLECTION_ID_URL}/records`,
+      {
+        method: "GET",
+        cache: "no-store",
+        headers: {
+          "Content-Type": "application/json",
+          "x-collection-access-token": `${process.env.NEXT_PUBLIC_API_TOKEN}`,
+        },
+      },
+    );
 
-//     Object.entries(queries).forEach(([key, value]) => {
-//       if (value) {
-//         params.append(key, value);
-//       }
-//     });
+    if (!res.ok) {
+      console.error("Failed to fetch data:", res.statusText);
+      return { success: false, data: [] };
+    }
 
-//     const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/packages?${params.toString()}`;
+    const resJson: resJson<Packages[]> = await res.json();
 
-//     const res = await fetch(apiUrl, { cache: "no-store" });
+    if (!resJson || !resJson.records || resJson.records.length === 0) {
+      return { success: false, records: [] };
+    }
 
-//     if (!res.ok) {
-//       console.error("Failed to fetch data:", res.statusText);
-//       return { success: false, data: [] };
-//     }
+    return resJson;
+  } catch (error) {
+    console.error("Error fetching packages:", error);
+    return { success: false, records: [] };
+  }
+}
 
-//     const resJson: resJson<Packages[]> = await res.json();
+// --- API GET: Single Packages
+export async function getDetailPackage({ idPackage }: { idPackage: string }) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/records/${idPackage}`,
+    );
 
-//     if (!resJson || !resJson.data || resJson.data.length === 0) {
-//       return { success: false, data: [] };
-//     }
+    if (!res.ok) {
+      console.error("Failed to fetch data:", res.statusText);
+      return { success: false, data: null };
+    }
 
-//     return resJson;
+    const resJson: resJsonDetail<UmrahPackage> = await res.json();
 
-//   } catch (error) {
-//     console.error("Error fetching packages:", error);
-//     return { success: false, data: [] };
-//   }
-// }
+    if (!resJson || !resJson.data) {
+      return { success: false, data: null };
+    }
 
-// // --- API GET: Single Packages
-
-// export async function getDetailPackage({
-//   departureDate,
-//   idPackage,
-//   embarkation,
-// }: {
-//   idPackage: string;
-//   departureDate?: string;
-//   embarkation: string;
-// }) {
-//   try {
-//     const res = await fetch(
-//       `${process.env.NEXT_PUBLIC_API_URL}/packages/${idPackage}?departureDate=${departureDate}&embarkation=${embarkation?.toLowerCase()}`
-//     );
-
-//     if (!res.ok) {
-//       console.error("Failed to fetch data:", res.statusText);
-//       return { success: false, data: null };
-//     }
-
-//     const resJson: resJsonDetail<PackageDetails> = await res.json();
-
-//     if (!resJson || !resJson.data) {
-//       return { success: false, data: null };
-//     }
-
-//     return resJson;
-
-//   } catch (error) {
-//     console.error("Error while fetching data: ", error);
-//     throw error;
-//   }
-// }
+    return resJson;
+  } catch (error) {
+    console.error("Error while fetching data: ", error);
+    throw error;
+  }
+}

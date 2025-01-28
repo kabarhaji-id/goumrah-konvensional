@@ -2,31 +2,12 @@
 
 import "swiper/css";
 
-import { PackageCard } from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
+import { PackageCard } from "@/components/ui/package-card";
 
-// const getRandomIndexByDate = (length: number) => {
-//   const today = new Date();
-//   const seed = today.getDate() + today.getMonth() + today.getFullYear();
-//   return seed % length;
-// };
-
-// const getRandomPackageByCategory = (data: UmrahPackage[], category: string) => {
-//   const filtered = data.filter((pkg) => pkg.category === category);
-//   const randomIndex = getRandomIndexByDate(filtered.length);
-//   return filtered[randomIndex];
-// };
-
+// const IdealPackagesSection = ({ packages }: { packages: Packages[] }) => {
 const IdealPackagesSection = () => {
-  // const randomPackages = useMemo(() => {
-  //   return {
-  //     silver: getRandomPackageByCategory(packageDetailData, "Silver"),
-  //     gold: getRandomPackageByCategory(packageDetailData, "Gold"),
-  //     platinum: getRandomPackageByCategory(packageDetailData, "Platinum"),
-  //   };
-  // }, []);
-
   const packageSilver = useMemo(() => {
     return packageDetailData.filter((pkg) => pkg.category === "Silver");
   }, []);
@@ -38,6 +19,19 @@ const IdealPackagesSection = () => {
   const packagePlatinum = useMemo(() => {
     return packageDetailData.filter((pkg) => pkg.category === "Platinum");
   }, []);
+
+  /* --- Method: Hit API --- */
+  // const packageSilver = useMemo(() => {
+  //   return packages.filter((pkg) => pkg.data.category === "Silver");
+  // }, []);
+
+  // const packageGold = useMemo(() => {
+  //   return packages.filter((pkg) => pkg.data.category === "Gold");
+  // }, []);
+
+  // const packagePlatinum = useMemo(() => {
+  //   return packages.filter((pkg) => pkg.data.category === "Platinum");
+  // }, []);
 
   return (
     <section className="relative flex flex-col items-center justify-center gap-6 px-6 pb-10">
@@ -62,16 +56,17 @@ const IdealPackagesSection = () => {
         <PackageCard data={packagePlatinum[0]} />
       </div>
 
+      {/* --- Method: Hit API --- */}
       {/* <div className="w-full">
-        <PackageCard data={randomPackages.silver} />
+        <PackageCard data={packageSilver[0].data} />
       </div>
 
       <div className="w-full">
-        <PackageCard data={randomPackages.gold} />
+        <PackageCard data={packageGold[0].data} />
       </div>
 
       <div className="w-full">
-        <PackageCard data={randomPackages.platinum} />
+        <PackageCard data={packagePlatinum[0].data} />
       </div> */}
 
       {/* <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>

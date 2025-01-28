@@ -27,10 +27,14 @@ export const generateMetadata = async (): Promise<Metadata> => {
   };
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  // const packages = await getAllPackages();
+
+  // if (packages.records) {
   return (
-    <>
+    <main>
       <HeroSection />
+      {/* <IdealPackagesSection packages={packages.records} /> */}
       <IdealPackagesSection />
       <RecommendedPackagesSection />
       <WhyChooseUsSection />
@@ -40,6 +44,7 @@ export default function HomePage() {
       <AboutUsSection />
       <Footer withCSbanner />
       <BottomNavigation />
-    </>
+    </main>
   );
+  // }
 }

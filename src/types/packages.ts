@@ -1,195 +1,201 @@
-export type PackageCategory = "Silver" | "Gold" | "Platinum" | "Luxury";
-export type PackageType = "Plus" | "Reguler";
+// export type PackageCategory = "Silver" | "Gold" | "Platinum" | "Luxury";
+// export type PackageType = "Plus" | "Reguler";
 
-export interface Flight {
-  id: string;
-  departure: string;
-  wisata_flight: FlightDetail[];
-  departure_flight: FlightDetail;
-  return_flight: FlightDetail;
-}
+import { UmrahPackage } from "./package-details";
 
-export interface FlightDetail {
-  flight_number: string;
-  duration: number;
-  airport_name_departure: string;
-  airport_terminal_departure: string;
-  airport_code_departure: string;
-  airport_city_departure: string;
-  airport_name_arrival: string;
-  airport_terminal_arrival: string;
-  airport_code_arrival: string;
-  airport_city_arrival: string;
-  departure_datetime: string;
-  terminal: string;
-  class: string;
-  flight_type: "Direct" | "Transit";
-  airline: string;
-  aircraft_type: string;
-  seat_layout: string;
-  baggage_allowance: number;
-  cabin_baggage: number;
-  airline_logo: string;
-  skytrax: "Low Cost" | "Full Service";
-  rating: string;
-  transit?: FlightDetail;
-  transit_datetime?: string;
-}
+// export interface Flight {
+//   id: string;
+//   departure: string;
+//   wisata_flight: FlightDetail[];
+//   departure_flight: FlightDetail;
+//   return_flight: FlightDetail;
+// }
 
-export interface Hotel {
-  wisata: HotelDetail[];
-  makkah: HotelDetail;
-  madinah: HotelDetail;
-}
+// export interface FlightDetail {
+//   flight_number: string;
+//   duration: number;
+//   airport_name_departure: string;
+//   airport_terminal_departure: string;
+//   airport_code_departure: string;
+//   airport_city_departure: string;
+//   airport_name_arrival: string;
+//   airport_terminal_arrival: string;
+//   airport_code_arrival: string;
+//   airport_city_arrival: string;
+//   departure_datetime: string;
+//   terminal: string;
+//   class: string;
+//   flight_type: "Direct" | "Transit";
+//   airline: string;
+//   aircraft_type: string;
+//   seat_layout: string;
+//   baggage_allowance: number;
+//   cabin_baggage: number;
+//   airline_logo: string;
+//   skytrax: "Low Cost" | "Full Service";
+//   rating: string;
+//   transit?: FlightDetail;
+//   transit_datetime?: string;
+// }
 
-export interface HotelDetail {
-  id: string;
-  city: string;
-  hotel_name: string;
-  star_rating: number;
-  images: Images[];
-  google_maps_link_noembed: string;
-  google_maps_link: string;
-  google_review_link: string;
-  description: string;
-  facilities: string[];
-  check_in_time: string;
-  check_out_time: string;
-  address: string;
-  distance_to_landmark: number;
-  food_type: string;
-  food_amount: number;
-  food_menu: string;
-}
+// export interface Hotel {
+//   wisata: HotelDetail[];
+//   makkah: HotelDetail;
+//   madinah: HotelDetail;
+// }
 
-export interface Images {
-  id: string;
-  src: string;
-  category?: string;
-}
+// export interface HotelDetail {
+//   id: string;
+//   city: string;
+//   hotel_name: string;
+//   star_rating: number;
+//   images: Images[];
+//   google_maps_link_noembed: string;
+//   google_maps_link: string;
+//   google_review_link: string;
+//   description: string;
+//   facilities: string[];
+//   check_in_time: string;
+//   check_out_time: string;
+//   address: string;
+//   distance_to_landmark: number;
+//   food_type: string;
+//   food_amount: number;
+//   food_menu: string;
+// }
 
-export interface BusDetail {
-  id: string;
-  provider: string;
-  bus_type: string;
-  seat_amount: number;
-  images: Images[];
-}
+// export interface Images {
+//   id: string;
+//   src: string;
+//   category?: string;
+// }
 
-export interface DepartureDateDetail {
-  date: string;
-  status: "active" | "coming-soon";
-}
+// export interface BusDetail {
+//   id: string;
+//   provider: string;
+//   bus_type: string;
+//   seat_amount: number;
+//   images: Images[];
+// }
 
-export interface DepartureCityDetail {
-  city: string;
-  route: string;
-}
+// export interface DepartureDateDetail {
+//   date: string;
+//   status: "active" | "coming-soon";
+// }
 
-export interface PromoDetail {
-  imageUrl: string;
-  link: string;
-}
+// export interface DepartureCityDetail {
+//   city: string;
+//   route: string;
+// }
 
-export interface Itinerary {
-  id: string;
-  nth: number;
-  city: string;
-  days: ItineraryDays[];
-  images: Images[];
-}
+// export interface PromoDetail {
+//   imageUrl: string;
+//   link: string;
+// }
 
-export interface ItineraryDays {
-  id: string;
-  nth: number;
-  title: string;
-  widgets: (
-    | ItineraryActivityWidgets
-    | ItineraryHotelWidgets
-    | ItineraryInformationWidgets
-    | ItineraryTransportWidgets
-    | ItineraryRecommendedWidgets
-  )[];
-  description: string;
-}
+// export interface Itinerary {
+//   id: string;
+//   nth: number;
+//   city: string;
+//   days: ItineraryDays[];
+//   images: Images[];
+// }
 
-interface ItineraryActivityWidgets {
-  id: string;
-  type: "Activity";
-  title: string;
-  description: string;
-  images: string[];
-}
+// export interface ItineraryDays {
+//   id: string;
+//   nth: number;
+//   title: string;
+//   widgets: (
+//     | ItineraryActivityWidgets
+//     | ItineraryHotelWidgets
+//     | ItineraryInformationWidgets
+//     | ItineraryTransportWidgets
+//     | ItineraryRecommendedWidgets
+//   )[];
+//   description: string;
+// }
 
-interface ItineraryHotelWidgets {
-  id: string;
-  type: "Hotel";
-  hotel: HotelDetail;
-}
+// interface ItineraryActivityWidgets {
+//   id: string;
+//   type: "Activity";
+//   title: string;
+//   description: string;
+//   images: string[];
+// }
 
-interface ItineraryInformationWidgets {
-  id: string;
-  type: "Information";
-  description: string;
-}
+// interface ItineraryHotelWidgets {
+//   id: string;
+//   type: "Hotel";
+//   hotel: HotelDetail;
+// }
 
-interface ItineraryTransportWidgets {
-  id: string;
-  type: "Transport";
-  transportWith: string;
-  from: string;
-  to: string;
-}
+// interface ItineraryInformationWidgets {
+//   id: string;
+//   type: "Information";
+//   description: string;
+// }
 
-interface ItineraryRecommendedWidgets {
-  id: string;
-  type: "Recommended";
-  description: string;
-  images: string[];
-}
+// interface ItineraryTransportWidgets {
+//   id: string;
+//   type: "Transport";
+//   transportWith: string;
+//   from: string;
+//   to: string;
+// }
 
-export interface UmrahPackage {
-  id: string;
-  thumbnail: string;
-  type: PackageType;
-  category: PackageCategory;
-  tagline: string;
-  season: string;
-  isFastTrain: boolean;
-  city_departure: DepartureCityDetail[];
-  duration: string;
-  package: string;
-  down_payment: number;
-  order_url: string;
-  flight_details: Flight;
-  hotel_details: Hotel;
-  bus_details: BusDetail;
-  departure_date: DepartureDateDetail[];
-  doublePrice: number;
-  triplePrice: number;
-  quadPrice: number;
-  infantPrice?: number;
-  doubleFinalPrice?: number;
-  tripleFinalPrice?: number;
-  quadFinalPrice?: number;
-  infantFinalPrice?: number;
-  promos: PromoDetail[];
-  addons: Images[];
-  itineraries: Itinerary[];
-}
+// interface ItineraryRecommendedWidgets {
+//   id: string;
+//   type: "Recommended";
+//   description: string;
+//   images: string[];
+// }
 
-export interface SimplePackage {
-  id: string;
-  slug: string;
-  thumbnail: string;
-  category: PackageCategory;
-  type: PackageType;
-  duration: string;
-  name: string;
-  departureDates: string;
-  airlineName: string;
-  hotelRating: string;
-  price: number;
-  finalPrice: number;
-  otherDepartureCount: number;
+// export interface UmrahPackage {
+//   id: string;
+//   thumbnail: string;
+//   type: PackageType;
+//   category: PackageCategory;
+//   tagline: string;
+//   season: string;
+//   isFastTrain: boolean;
+//   city_departure: DepartureCityDetail[];
+//   duration: string;
+//   package: string;
+//   down_payment: number;
+//   order_url: string;
+//   flight_details: Flight;
+//   hotel_details: Hotel;
+//   bus_details: BusDetail;
+//   departure_date: DepartureDateDetail[];
+//   doublePrice: number;
+//   triplePrice: number;
+//   quadPrice: number;
+//   infantPrice?: number;
+//   doubleFinalPrice?: number;
+//   tripleFinalPrice?: number;
+//   quadFinalPrice?: number;
+//   infantFinalPrice?: number;
+//   promos: PromoDetail[];
+//   addons: Images[];
+//   itineraries: Itinerary[];
+// }
+
+// export interface SimplePackage {
+//   id: string;
+//   slug: string;
+//   thumbnail: string;
+//   category: PackageCategory;
+//   type: PackageType;
+//   duration: string;
+//   name: string;
+//   departureDates: string;
+//   airlineName: string;
+//   hotelRating: string;
+//   price: number;
+//   finalPrice: number;
+//   otherDepartureCount: number;
+// }
+
+export interface Packages {
+  data: UmrahPackage;
 }

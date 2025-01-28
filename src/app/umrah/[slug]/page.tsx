@@ -101,3 +101,70 @@ export default async function DetailPage({
 
   return <NotFound />;
 }
+
+// --- Method: Hit API
+// export default async function DetailPage({
+//   params,
+// }: {
+//   params: Promise<{ slug: string }>;
+// }) {
+//   const packages = await getAllPackages();
+//   const resolvedParams = await params;
+
+//   if (packages.records) {
+//     const detail = packages.records.find(
+//       (det: Packages) => det.data.id === resolvedParams.slug,
+//     );
+
+//     if (detail) {
+//       return (
+//         <>
+//           <DetailNavbar dataPackage={detail.data} />
+
+//           <main>
+//             <ImagePoster
+//               packageImage={detail.data.thumbnail}
+//               packageCategory={detail.data.category}
+//             />
+
+//             <HeaderSection
+//               packageData={detail.data}
+//               durationDays={detail.data.duration}
+//             />
+
+//             <PricingSection packageData={detail.data} />
+
+//             <FlightSection dataFlight={detail.data.flight_details} />
+
+//             <HotelSection dataHotel={detail.data.hotel_details} />
+
+//             <TransportationSection
+//               dataTransportation={detail.data.bus_details}
+//               category={detail.data.category}
+//             />
+
+//             <ItinerarySection dataItineraries={detail.data.itineraries} />
+
+//             <TourVoucherSection dataAddOns={detail.data.addons} />
+
+//             <ProductCoverageSection
+//               dataImportantNotes={detail.data.importantNotes}
+//             />
+
+//             <AdditionalServices />
+
+//             <PromoSection dataPromos={detail.data.promos} />
+
+//             <OtherPackagesSection packageId={detail.data.id} />
+
+//             <Footer />
+
+//             <BottomNavigationDetail orderUrl={detail.data.order_url} />
+//           </main>
+//         </>
+//       );
+//     }
+//   }
+
+//   return <NotFound />;
+// }

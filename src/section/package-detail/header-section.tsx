@@ -9,7 +9,7 @@ const HeaderSection = ({
   durationDays,
 }: {
   packageData: UmrahPackage;
-  durationDays: string;
+  durationDays: number;
 }) => {
   return (
     <Section className="py-0">
@@ -21,7 +21,7 @@ const HeaderSection = ({
 
         {/* --- Button: Order This Package  */}
         <div className="px-4">
-          <ButtonWhatsApp orderUrl={packageData.order_url} />
+          <ButtonWhatsApp orderUrl={packageData.orderUrl} />
         </div>
       </SectionContent>
     </Section>

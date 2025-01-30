@@ -1,4 +1,4 @@
-import { PackageCard } from "@/components/ui/package-card";
+import { PackageCard } from "@/components/ui/card/package-card";
 import { UmrahPackage } from "@/types/package-details";
 
 const CardsSection = ({ packages }: { packages: UmrahPackage[] }) => {

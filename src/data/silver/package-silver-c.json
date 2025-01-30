@@ -6,7 +6,7 @@
   "category": "Silver",
   "season": "NON RAMADHAN",
   "isFastTrain": false,
-  "city_departure": [
+  "cityDeparture": [
     {
       "city": "Jakarta",
       "route": "CGK-JED"
@@ -14,9 +14,9 @@
   ],
   "duration": "12 Hari",
   "package": "Silver",
-  "down_payment": 7,
-  "order_url": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
-  "departure_date": [
+  "downPayment": 7,
+  "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+  "departureDate": [
     {
       "date": "2025-02-12T10:00:00+07:00",
       "status": "expired"
@@ -70,68 +70,68 @@
   "tripleFinalPrice": 27900000,
   "doubleFinalPrice": 29900000,
   "infantFinalPrice": null,
-  "flight_details": {
-    "wisata_flight": [],
-    "departure_flight": {
-      "flight_number": null,
+  "flightDetails": {
+    "wisataFlights": [],
+    "departureFlights": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "Soekarno-Hatta International Airport",
-      "airport_terminal_departure": "Terminal 3 Internasional",
-      "airport_code_departure": "CGK",
-      "airport_city_departure": "Jakarta",
-      "airport_name_arrival": "King Abdulaziz International Airport",
-      "airport_terminal_arrival": null,
-      "airport_code_arrival": "JED",
-      "airport_city_arrival": "Jeddah",
-      "departure_datetime": "2025-07-09T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "Soekarno-Hatta International Airport",
+      "airportTerminalDeparture": "Terminal 3 Internasional",
+      "airportCodeDeparture": "CGK",
+      "airportCityDeparture": "Jakarta",
+      "airportNameArrival": "King Abdulaziz International Airport",
+      "airportTerminalArrival": null,
+      "airportCodeArrival": "JED",
+      "airportCityArrival": "Jeddah",
+      "departureDatetime": "2025-07-09T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Direct",
+      "flightType": "Direct",
       "airline": "Lion Air",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 20,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/lion-air.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 20,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/lion-air.webp",
       "skytrax": "Low Cost",
       "rating": "3",
       "transit": null,
-      "transit_datetime": null
+      "transitDatetime": null
     },
-    "return_flight": {
-      "flight_number": null,
+    "returnFlight": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "King Abdulaziz International Airport",
-      "airport_terminal_departure": null,
-      "airport_code_departure": "JED",
-      "airport_city_departure": "Jeddah",
-      "airport_name_arrival": "Soekarno-Hatta International Airport",
-      "airport_terminal_arrival": "Terminal 3 Internasional",
-      "airport_code_arrival": "CGK",
-      "airport_city_arrival": "Jakarta",
-      "departure_datetime": "2025-07-19T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "King Abdulaziz International Airport",
+      "airportTerminalDeparture": null,
+      "airportCodeDeparture": "JED",
+      "airportCityDeparture": "Jeddah",
+      "airportNameArrival": "Soekarno-Hatta International Airport",
+      "airportTerminalArrival": "Terminal 3 Internasional",
+      "airportCodeArrival": "CGK",
+      "airportCityArrival": "Jakarta",
+      "departureDatetime": "2025-07-19T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Direct",
+      "flightType": "Direct",
       "airline": "Lion Air",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 20,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/lion-air.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 20,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/lion-air.webp",
       "skytrax": "Low Cost",
       "rating": "3",
       "transit": null,
-      "transit_datetime": null
+      "transitDatetime": null
     }
   },
-  "hotel_details": {
+  "hotelDetails": {
     "wisata": [],
     "makkah": {
       "id": "le-meridien-tower-makkah",
       "city": "Makkah",
-      "hotel_name": "Le Meridien Tower",
-      "star_rating": 5,
+      "hotelName": "Le Meridien Tower",
+      "starRating": 5,
       "duration": 6,
       "images": [
         {
@@ -155,9 +155,9 @@
           "category": "Lobby"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/qZY9Dp2uZMRRrFLg9",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.6725209251936!2d39.82396827526694!3d21.402795380341743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc3bae24752d%3A0xca38e13e3889c0e7!2sLe%20M%C3%A9ridien%20Towers%20Makkah!5e0!3m2!1sid!2sid!4v1736987502086!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/travel/search?q=le%20meridien%20tower%20makkah&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyFENnc0k1NEdueE9PbnVKektBUkFCOAJCCQnnwIk4PuE4ykIJCefAiTg-4TjK&ap=KigKEgmh9DwiN2Y1QBHQoVawlOlDQBISCVDhtJ0GaDVAEdChVhQD6kNAugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiw9eeM6e-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzNjYzNiYWUyNDc1MmQ6MHhjYTM4ZTEzZTM4ODljMGU3EhoSFAoHCOgPEAwYBxIHCOgPEAwYCBgBMgIQAA%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/qZY9Dp2uZMRRrFLg9",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.6725209251936!2d39.82396827526694!3d21.402795380341743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3cc3bae24752d%3A0xca38e13e3889c0e7!2sLe%20M%C3%A9ridien%20Towers%20Makkah!5e0!3m2!1sid!2sid!4v1736987502086!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/travel/search?q=le%20meridien%20tower%20makkah&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyFENnc0k1NEdueE9PbnVKektBUkFCOAJCCQnnwIk4PuE4ykIJCefAiTg-4TjK&ap=KigKEgmh9DwiN2Y1QBHQoVawlOlDQBISCVDhtJ0GaDVAEdChVhQD6kNAugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiw9eeM6e-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzNjYzNiYWUyNDc1MmQ6MHhjYTM4ZTEzZTM4ODljMGU3EhoSFAoHCOgPEAwYBxIHCOgPEAwYCBgBMgIQAA%3D%3D",
       "description": "Le Méridien Towers Makkah adalah hotel bintang 5 yang terletak strategis di Makkah, Arab Saudi, hanya 3 menit dari Masjidil Haram dengan layanan antar-jemput gratis 24 jam. Hotel ini menawarkan 647 kamar yang luas dan elegan, termasuk suite diplomatik, suite kerajaan, dan suite kerajaan, yang dilengkapi dengan dapur kecil, TV layar datar, minibar, dan akses Wi-Fi gratis. Tamu dapat menikmati berbagai fasilitas, termasuk tiga restoran yang menyajikan masakan internasional, layanan kamar 24 jam, layanan kebersihan harian, dan layanan concierge. Terletak di area Kudai, hotel ini memudahkan akses ke Masjidil Haram dan tempat-tempat suci lainnya di Makkah, menjadikannya pilihan ideal untuk para tamu yang menginginkan kenyamanan dan kemudahan selama kunjungan mereka.",
       "facilities": [
         "AC",
@@ -166,21 +166,21 @@
         "Layanan Kamar",
         "Kamar Mandi Dalam"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "Jl. Kudai, Misfalah, Makkah 21955, Arab Saudi",
-      "distance_to_landmark": 4000,
+      "distanceToLandmark": 4000,
       "landmark": "Masjidil Haram",
       "isShuttleBus": true,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     },
     "madinah": {
       "id": "hayah-golden-madinah",
       "city": "Madinah",
-      "hotel_name": "Hayah Golden",
-      "star_rating": 4,
+      "hotelName": "Hayah Golden",
+      "starRating": 4,
       "duration": 4,
       "images": [
         {
@@ -214,9 +214,9 @@
           "category": "Kamar"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/TzTKZr3YgSpK3J2t5",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.466232858313!2d39.60216347521062!3d24.4692975781867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf046d507ae3%3A0x327fc68978ea7c68!2sHAYAH%20GOLDEN!5e0!3m2!1sid!2sid!4v1736987628731!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/travel/search?q=hayah%20golden&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&ts=CAEaRwopEicyJTB4MTViZGJmMDQ2ZDUwN2FlMzoweDMyN2ZjNjg5NzhlYTdjNjgSGhIUCgcI6A8QCxgeEgcI6A8QDBgBGAEyAhAA&qs=CAEyE0Nnb0k2UGlweDVmUjhiOHlFQUU4AkIJCWh86niJxn8yQgkJaHzqeInGfzI&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiAkfu35u-JAxUAAAAAHQAAAAAQFA",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/TzTKZr3YgSpK3J2t5",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.466232858313!2d39.60216347521062!3d24.4692975781867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf046d507ae3%3A0x327fc68978ea7c68!2sHAYAH%20GOLDEN!5e0!3m2!1sid!2sid!4v1736987628731!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/travel/search?q=hayah%20golden&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&ts=CAEaRwopEicyJTB4MTViZGJmMDQ2ZDUwN2FlMzoweDMyN2ZjNjg5NzhlYTdjNjgSGhIUCgcI6A8QCxgeEgcI6A8QDBgBGAEyAhAA&qs=CAEyE0Nnb0k2UGlweDVmUjhiOHlFQUU4AkIJCWh86niJxn8yQgkJaHzqeInGfzI&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwiAkfu35u-JAxUAAAAAHQAAAAAQFA",
       "description": "Hotel Hayah Golden adalah hotel bintang 4 yang terletak di Madinah, Arab Saudi, hanya sekitar 5 menit berjalan kaki dari Masjid Nabawi. Hotel ini menawarkan 222 kamar modern yang dilengkapi dengan fasilitas seperti TV layar datar, saluran satelit, minibar, dan Wi-Fi gratis di area umum. Tersedia layanan resepsionis 24 jam dan layanan kamar, serta fasilitas parkir gratis yang bergantung pada ketersediaan. Hotel ini berjarak sekitar 800 meter dari Al-Baqi' dan hanya 10 menit berjalan kaki dari Masjid Nabawi. Dengan berbagai pilihan kamar mulai dari double, triple, hingga quadruple, hotel ini cocok untuk berbagai kebutuhan akomodasi, baik untuk perjalanan ibadah maupun keluarga. Hotel Hayah Golden dapat dicapai dalam waktu sekitar 20 menit berkendara dari Bandara Internasional Prince Mohammad Bin Abdulaziz.",
       "facilities": [
         "AC",
@@ -227,18 +227,18 @@
         "Layanan Kamar",
         "Kamar Mandi Dalam"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "FJ93+PV9, Al Manakhah, Madinah 42311, Arab Saudi",
-      "distance_to_landmark": 220,
+      "distanceToLandmark": 220,
       "landmark": "Masjid Nabawi",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     }
   },
-  "bus_details": {
+  "busDetails": {
     "images": [
       {
         "id": "1",
@@ -258,8 +258,8 @@
     ],
     "id": "saptco-reguler",
     "provider": "Saptco",
-    "bus_type": "Economy-Class",
-    "seat_amount": 45
+    "busType": "Economy-Class",
+    "seatAmount": 45
   },
   "promos": [
     {
@@ -319,7 +319,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Hayah Golden Madinah"
+              "hotelName": "Hayah Golden Madinah"
             },
             {
               "id": "3",
@@ -371,7 +371,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Le Meridien Tower Makkah"
+              "hotelName": "Le Meridien Tower Makkah"
             },
             {
               "id": "3",

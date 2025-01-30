@@ -123,7 +123,7 @@ const TransportationCard = ({
             <div className="flex items-center gap-2">
               <CustomSeatReclineIcon />
               <span className="text-xs leading-[18px] opacity-60">
-                {data.seat_amount} Kursi
+                {data.seatAmount} Kursi
               </span>
             </div>
           )}

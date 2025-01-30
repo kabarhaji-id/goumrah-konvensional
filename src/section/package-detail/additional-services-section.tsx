@@ -12,6 +12,22 @@ import {
 import { useEffect, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";
+import { priceToLocale } from "@/lib/utils";
+
+const additionalServicesList = [
+  {
+    category: "Layanan Pembuatan/Perpanjang",
+    title: "Paspor",
+    price: 850000,
+    imageUrl: "/assets/image/additional-services/passport.png",
+  },
+  {
+    category: "Layanan Bantuan",
+    title: "Vaksinasi Meningitis",
+    price: 400000,
+    imageUrl: "/assets/image/additional-services/vaccine.png",
+  },
+];
 
 const AdditionalServices = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,81 +71,51 @@ const AdditionalServices = () => {
 
       <SectionContent>
         <CustomSwiper maxWidth={314} slidesClass="pb-3">
-          <div className="flex overflow-hidden rounded-[14px] shadow-custom-md">
-            <div className="relative w-[215px] overflow-hidden bg-primary px-4 py-4">
-              <div className="z-10 flex flex-col gap-4 tracking-wide text-white">
-                <div>
-                  <span className="w-full text-[11px]">
-                    Layanan Pembuatan/Perpanjang
-                  </span>
-                  <h6 className="font-bold leading-[22px]">Paspor</h6>
+          {additionalServicesList.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex overflow-hidden rounded-[14px] shadow-custom-md"
+              >
+                <div className="relative w-[215px] overflow-hidden bg-primary px-4 py-4">
+                  <div className="z-10 flex flex-col gap-4 tracking-wide text-white">
+                    <div>
+                      <span className="w-full text-[11px]">
+                        {item.category}
+                      </span>
+                      <h6 className="font-bold leading-[22px]">{item.title}</h6>
+                    </div>
+
+                    <span className="text-xs leading-4">
+                      + {priceToLocale(item.price)}
+                    </span>
+                  </div>
+
+                  <Image
+                    width={79}
+                    height={42}
+                    src="/assets/patterns/goumrah-bottom-right.svg"
+                    alt="pattern-b"
+                    className="absolute bottom-0 right-0"
+                  />
                 </div>
 
-                <span className="text-xs leading-4">+ Rp 850.000</span>
+                {isLoading ? (
+                  <Skeleton className="h-[110px] w-[99px]" />
+                ) : (
+                  <div className="w-[99px] flex-shrink-0 overflow-hidden">
+                    <Image
+                      width={99}
+                      height={110}
+                      src={item.imageUrl}
+                      alt={item.title.toLowerCase()}
+                      className="h-full w-[99px]"
+                    />
+                  </div>
+                )}
               </div>
-
-              <Image
-                width={79}
-                height={42}
-                src="/assets/patterns/goumrah-bottom-right.svg"
-                alt="pattern-b"
-                className="absolute bottom-0 right-0"
-              />
-            </div>
-
-            {isLoading ? (
-              <Skeleton className="h-[110px] w-[99px]" />
-            ) : (
-              <div className="w-[99px] flex-shrink-0 overflow-hidden">
-                <Image
-                  width={99}
-                  height={110}
-                  src="/assets/image/additional-services/passport.png"
-                  alt="passport"
-                  className="h-full w-[99px]"
-                />
-              </div>
-            )}
-          </div>
-
-          <div className="flex w-[314px] overflow-hidden rounded-[14px] shadow-custom-md">
-            <div className="relative w-[314px] overflow-hidden bg-primary px-4 py-4">
-              <div className="z-10 flex flex-col gap-4 tracking-wide text-white">
-                <div className="w-full">
-                  <span className="w-full flex-shrink-0 text-[11px] leading-4">
-                    Layanan Bantuan{" "}
-                  </span>
-                  <h6 className="font-bold leading-[22px]">
-                    Vaksinasi Meningitis
-                  </h6>
-                </div>
-
-                <span className="text-xs leading-4">+ Rp 400.000</span>
-              </div>
-
-              <Image
-                width={79}
-                height={42}
-                src="/assets/patterns/goumrah-bottom-right.svg"
-                alt="pattern-b"
-                className="absolute bottom-0 right-0"
-              />
-            </div>
-
-            {isLoading ? (
-              <Skeleton className="h-[110px] w-[99px]" />
-            ) : (
-              <div className="w-[99px] flex-shrink-0 overflow-hidden">
-                <Image
-                  width={99}
-                  height={110}
-                  src="/assets/image/additional-services/vaccine.png"
-                  alt="vaccine"
-                  className="h-full w-[99px]"
-                />
-              </div>
-            )}
-          </div>
+            );
+          })}
         </CustomSwiper>
       </SectionContent>
     </Section>

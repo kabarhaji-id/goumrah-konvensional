@@ -42,15 +42,15 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
         {/* --- Filter for Departure Date */}
         <FilterSection
           variant="departureDate"
-          departureDates={packageData.departure_date}
-          embarkation={packageData.city_departure}
+          departureDates={packageData.departureDate}
+          embarkation={packageData.cityDeparture}
         />
 
         {/* --- Filter for Embarkation */}
         <FilterSection
           variant="departureCity"
-          embarkation={packageData.city_departure}
-          departureDates={packageData.departure_date}
+          embarkation={packageData.cityDeparture}
+          departureDates={packageData.departureDate}
         />
 
         {/* --- Pricing Section */}

@@ -8,9 +8,9 @@ import CustomArrowIcon from "@/public/icons/mingcute_down-fill.svg";
 
 import { Button } from "@/components/ui/button";
 import { useMemo } from "react";
-import { PackageCard } from "@/components/ui/package-card";
-import { packageDetailData } from "@/data/package-details";
+import { packageDetailData } from "@/data/packages";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { PackageCard } from "@/components/ui/card/package-card";
 
 const RecommendedPackagesSection = () => {
   const packageDataByType = useMemo(() => {

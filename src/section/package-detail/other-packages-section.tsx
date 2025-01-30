@@ -6,7 +6,7 @@ import {
 } from "@/components/layout/section";
 import { CustomSwiper } from "@/components/layout/swiper";
 import { PackageCardCompact } from "@/components/ui/card/package-card-compact";
-import { packageDetailData } from "@/data/package-details";
+import { packageDetailData } from "@/data/packages";
 
 const OtherPackagesSection = async ({ packageId }: { packageId: string }) => {
   const filteredPackages = packageDetailData.filter((p) => p.id !== packageId);

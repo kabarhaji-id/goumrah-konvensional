@@ -44,17 +44,17 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
       <AccordionItem value={id}>
         <AccordionContent className="space-y-4">
           {/* --- Check-in and Check-out --- */}
-          {dataHotel.check_in_time && dataHotel.check_out_time && (
+          {dataHotel.checkIn && dataHotel.checkOut && (
             <div className="flex gap-4 bg-primary-background px-4 pt-2">
               <div className="flex flex-shrink-0 flex-col gap-1 text-neutral-foreground">
                 <span className="text-xs font-medium leading-4 text-primary">
                   Check-in
                 </span>
                 <span className="text-sm font-bold leading-5">
-                  {moment(dataHotel.check_in_time).format("DD MMM YYYY")}
+                  {moment(dataHotel.checkIn).format("DD MMM YYYY")}
                 </span>
                 <span className="text-xs leading-4">
-                  {moment(dataHotel.check_in_time).format("HH:mm")}
+                  {moment(dataHotel.checkIn).format("HH:mm")}
                 </span>
               </div>
 
@@ -69,10 +69,10 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
                   Check-out
                 </span>
                 <span className="text-sm font-bold leading-5">
-                  {moment(dataHotel.check_out_time).format("DD MMM YYYY")}
+                  {moment(dataHotel.checkOut).format("DD MMM YYYY")}
                 </span>
                 <span className="text-xs leading-4">
-                  {moment(dataHotel.check_out_time).format("HH:mm")}
+                  {moment(dataHotel.checkOut).format("HH:mm")}
                 </span>
               </div>
             </div>
@@ -110,33 +110,33 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
             </h4>
 
             <div
-              className={`flex ${dataHotel.food_menu && !dataHotel.food_amount ? "gap-12" : "justify-between"}`}
+              className={`flex ${dataHotel.foodMenu && !dataHotel.foodAmount ? "gap-12" : "justify-between"}`}
             >
               <div
-                className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+                className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.foodMenu && "w-full"}`}
               >
                 <span className="text-xs leading-4 opacity-60">Jenis</span>
                 <span className="text-xs font-semibold leading-4">
-                  {dataHotel.food_type}
+                  {dataHotel.foodType}
                 </span>
               </div>
 
-              {dataHotel.food_amount && (
+              {dataHotel.foodAmount && (
                 <div
-                  className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
+                  className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.foodMenu && "w-full"}`}
                 >
                   <span className="text-xs leading-4 opacity-60">Banyak</span>
                   <span className="text-xs font-semibold leading-4">
-                    {dataHotel.food_amount}x /hari
+                    {dataHotel.foodAmount}x /hari
                   </span>
                 </div>
               )}
 
-              {dataHotel.food_menu && (
+              {dataHotel.foodMenu && (
                 <div className="flex flex-col gap-1 text-neutral-foreground">
                   <span className="text-xs leading-4 opacity-60">Menu</span>
                   <span className="text-xs font-semibold leading-4">
-                    {dataHotel.food_menu}
+                    {dataHotel.foodMenu}
                   </span>
                 </div>
               )}
@@ -152,8 +152,8 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
             <div className="flex flex-col gap-2">
               <div className="h-[100px] w-full overflow-hidden rounded-md">
                 <GoogleMapsEmbed
-                  mapUrl={dataHotel.google_maps_link}
-                  mapUrlMobile={dataHotel.google_maps_link_noembed}
+                  mapUrl={dataHotel.gmapUrl}
+                  mapUrlMobile={dataHotel.gmapUrlNoembed}
                 />
               </div>
               <p className="text-xs text-neutral-foreground opacity-75">
@@ -169,7 +169,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
             </h4>
 
             <Link
-              href={`${dataHotel.google_review_link || "#"}`}
+              href={`${dataHotel.googleReviewUrl || "#"}`}
               target="_blank"
               className="flex items-center gap-1.5"
             >

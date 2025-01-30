@@ -19,7 +19,7 @@ const HeaderComponent = ({
   durationDays,
 }: {
   packageData: UmrahPackage;
-  durationDays: string;
+  durationDays: number;
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
@@ -59,7 +59,7 @@ const HeaderComponent = ({
               <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
             </div>
             <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {durationDays}
+              {durationDays} Hari
             </span>
           </Chip>
         )}
@@ -88,7 +88,7 @@ const HeaderComponent = ({
         ) : (
           <Chip variant="default" className="overflow-hidden">
             <div className="bg-primary-accent py-1 pl-1 pr-0.5">
-              {packageData.flight_details.departure_flight.transit ? (
+              {packageData.flightDetails.departureFlight.transit ? (
                 <CustomAirplaneIcon
                   className="h-4 w-4 rotate-90"
                   fill="#1B8386"
@@ -98,7 +98,7 @@ const HeaderComponent = ({
               )}
             </div>
             <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {packageData.flight_details.departure_flight.transit
+              {packageData.flightDetails.departureFlight.transit
                 ? "Transit"
                 : "Langsung"}
             </span>
@@ -191,7 +191,7 @@ const HeaderComponent = ({
             <p className="text-xs leading-4 text-destructive">
               Pembayaran Awal (DP) :
               <span className="pl-0.5 font-extrabold">
-                Rp {packageData.down_payment} Juta
+                Rp {packageData.downPayment} Juta
               </span>
             </p>
           </div>

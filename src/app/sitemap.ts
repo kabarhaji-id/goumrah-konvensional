@@ -1,4 +1,4 @@
-import { packageDetailData } from "@/data/package-details";
+import { packageDetailData } from "@/data/packages";
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

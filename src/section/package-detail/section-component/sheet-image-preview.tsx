@@ -92,7 +92,7 @@ export const SheetImagePreview = ({
                 : variant === "Madinah"
                   ? "Hotel Madinah"
                   : "Hotel Wisata"}{" "}
-              - {dataHotel.hotel_name}
+              - {dataHotel.hotelName}
             </span>
           </div>
         </div>
@@ -130,7 +130,7 @@ export const SheetImagePreview = ({
                     width={640}
                     height={360}
                     src={image.src}
-                    alt={`image-${dataHotel.hotel_name}-${index}`}
+                    alt={`image-${dataHotel.hotelName}-${index}`}
                     className="aspect-video w-full object-cover"
                   />
                 </SwiperSlide>
@@ -184,7 +184,7 @@ export const SheetImagePreview = ({
                       width={96}
                       height={96}
                       src={image.src}
-                      alt={`image-${dataHotel.hotel_name}-${index}`}
+                      alt={`image-${dataHotel.hotelName}-${index}`}
                       className={`aspect-square h-full max-h-24 w-full max-w-24 cursor-pointer rounded-sm object-cover ${
                         activeImageIndex === index
                           ? "border-2 border-primary"

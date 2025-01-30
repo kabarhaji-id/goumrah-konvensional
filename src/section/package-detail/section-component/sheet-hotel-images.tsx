@@ -94,7 +94,7 @@ export const SheetHotelImages = ({
               {`Hotel ${variant !== "Makkah" && variant !== "Madinah" ? "Wisata" : capitalize(variant)}`}
             </span>
             <span className="text-sm font-medium text-neutral-foreground/80">
-              {dataHotel && dataHotel.hotel_name}
+              {dataHotel && dataHotel.hotelName}
             </span>
           </div>
         </div>
@@ -113,11 +113,11 @@ export const SheetHotelImages = ({
                   <div className="grid grid-cols-2 gap-3">
                     {group.images.map((image, index) => (
                       <Image
-                        key={`${image.category}-${dataHotel.hotel_name}-${index}`}
+                        key={`${image.category}-${dataHotel.hotelName}-${index}`}
                         width={607}
                         height={350}
                         src={image.src}
-                        alt={`image-${dataHotel.hotel_name}-${index}`}
+                        alt={`image-${dataHotel.hotelName}-${index}`}
                         className={`rounded-md object-cover ${
                           group.images.length % 2 === 0
                             ? index === 0 || index === group.images.length - 1

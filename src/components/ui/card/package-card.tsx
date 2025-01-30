@@ -17,16 +17,16 @@ import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
 import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.svg";
 import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
-import { Chip } from "./chip";
-import { Button } from "./button";
 import { CalendarDaysIcon } from "lucide-react";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useMemo, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
-import { Skeleton } from "./skeleton-loader";
-import { Rating2 } from "./helper/getRating";
-import { CustomSwiper } from "../layout/swiper";
+import { Skeleton } from "../skeleton-loader";
+import { CustomSwiper } from "@/components/layout/swiper";
+import { Chip } from "../chip";
+import { Rating2 } from "../helper/getRating";
+import { Button } from "../button";
 
 interface PackageCardProps {
   data: UmrahPackage;
@@ -47,11 +47,11 @@ const PackageCard = ({
 
   const departureDate = useMemo(() => {
     return (
-      data.departure_date.find(
+      data.departureDate.find(
         (departureDate) => departureDate.status === "active",
-      ) ?? data.departure_date[0]
+      ) ?? data.departureDate[0]
     );
-  }, [data.departure_date]);
+  }, [data.departureDate]);
 
   useEffect(() => {
     if ("connection" in navigator) {
@@ -120,7 +120,7 @@ const PackageCard = ({
                       <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
-                      {data.duration}
+                      {data.duration} Hari
                     </span>
                   </Chip>
                 )}
@@ -150,7 +150,7 @@ const PackageCard = ({
                 ) : (
                   <Chip variant="default" className="overflow-hidden">
                     <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
-                      {data.flight_details.departure_flight.transit ? (
+                      {data.flightDetails.departureFlight.transit ? (
                         <CustomAirplaneIcon
                           className="h-4 w-4 rotate-90"
                           fill="#1B8386"
@@ -163,7 +163,7 @@ const PackageCard = ({
                       )}
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
-                      {data.flight_details.departure_flight.transit
+                      {data.flightDetails.departureFlight.transit
                         ? "Transit"
                         : "Langsung"}
                     </span>
@@ -208,9 +208,9 @@ const PackageCard = ({
                       <span className="font-medium tracking-wide">
                         {moment(departureDate.date).format("DD MMMM YYYY")}
                       </span>
-                      {data.departure_date.length > 1 ? (
+                      {data.departureDate.length > 1 ? (
                         <span className="text-xs leading-[18px] tracking-wide opacity-60">
-                          +{data.departure_date.length - 6} tanggal lainnya
+                          +{data.departureDate.length - 6} tanggal lainnya
                         </span>
                       ) : (
                         <></>
@@ -231,7 +231,7 @@ const PackageCard = ({
                         </div>
                       </div>
                       <span className="font-bold leading-[18px] tracking-wide">
-                        {data.flight_details.departure_flight.airline}
+                        {data.flightDetails.departureFlight.airline}
                       </span>
                     </div>
                   )}
@@ -243,7 +243,7 @@ const PackageCard = ({
                     <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex flex-shrink-0 items-center gap-2 font-medium">
                         <Rating2
-                          starsRating={data.hotel_details.madinah.star_rating}
+                          starsRating={data.hotelDetails.madinah.starRating}
                         />
                         <div className="flex w-[68px] justify-between">
                           <p>Madinah</p>
@@ -251,7 +251,7 @@ const PackageCard = ({
                         </div>
                       </div>
                       <span className="mt-1 font-bold leading-[18px] tracking-wide">
-                        {data.hotel_details.madinah.hotel_name}
+                        {data.hotelDetails.madinah.hotelName}
                       </span>
                     </div>
                   )}
@@ -263,7 +263,7 @@ const PackageCard = ({
                     <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex flex-shrink-0 items-center gap-2 font-medium">
                         <Rating2
-                          starsRating={data.hotel_details.makkah.star_rating}
+                          starsRating={data.hotelDetails.makkah.starRating}
                         />
                         <div className="flex w-[68px] justify-between">
                           <p className="w-[60px]">Makkah</p>
@@ -271,7 +271,7 @@ const PackageCard = ({
                         </div>
                       </div>
                       <span className="mt-1 font-bold leading-[18px] tracking-wide">
-                        {data.hotel_details.makkah.hotel_name}
+                        {data.hotelDetails.makkah.hotelName}
                       </span>
                     </div>
                   )}

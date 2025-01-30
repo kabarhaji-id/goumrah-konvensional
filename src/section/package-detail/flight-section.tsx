@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import moment from "moment";
 import "moment/locale/id";
@@ -24,7 +25,6 @@ import {
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
 import { getSkytrax } from "@/components/ui/helper/getSkytrax";
-import Image from "next/image";
 import { useAccordionFlightStore } from "@/store/useInterfaceStore";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";
@@ -35,7 +35,7 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
   const arrTabLists: string[] = [];
 
   const arrDataFlight = [
-    ...dataFlight.wisata_flight.map((wisataItem, index) => {
+    ...dataFlight.wisataFlight.map((wisataItem, index) => {
       const type = `Wisata-${index + 1}`;
       if (!arrTabLists.includes(type)) {
         arrTabLists.push(type);
@@ -44,28 +44,28 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
         type,
         data: {
           directFlight: wisataItem,
-          directFlightDate: wisataItem.departure_datetime,
+          directFlightDate: wisataItem.departureDatetime,
           transitFlight: wisataItem.transit,
-          transitFlightDate: wisataItem.transit_datetime,
+          transitFlightDate: wisataItem.transitDatetime,
         },
       };
     }),
     {
       type: "Keberangkatan",
       data: {
-        directFlight: dataFlight.departure_flight,
-        directFlightDate: dataFlight.departure_flight.departure_datetime,
-        transitFlight: dataFlight.departure_flight.transit,
-        transitFlightDate: dataFlight.departure_flight.transit_datetime,
+        directFlight: dataFlight.departureFlight,
+        directFlightDate: dataFlight.departureFlight.departureDatetime,
+        transitFlight: dataFlight.departureFlight.transit,
+        transitFlightDate: dataFlight.departureFlight.transitDatetime,
       },
     },
     {
       type: "Kepulangan",
       data: {
-        directFlight: dataFlight.return_flight,
-        directFlightDate: dataFlight.return_flight.departure_datetime,
-        transitFlight: dataFlight.return_flight.transit,
-        transitFlightDate: dataFlight.return_flight.transit_datetime,
+        directFlight: dataFlight.returnFlight,
+        directFlightDate: dataFlight.returnFlight.departureDatetime,
+        transitFlight: dataFlight.returnFlight.transit,
+        transitFlightDate: dataFlight.returnFlight.transitDatetime,
       },
     },
   ];
@@ -189,7 +189,7 @@ const FlightCard = ({
                   <Image
                     width={70}
                     height={60}
-                    src={dataFlight.data.directFlight.airline_logo}
+                    src={dataFlight.data.directFlight.airlineLogo}
                     alt={`logo-${dataFlight.data.directFlight.airline}`}
                     className="h-[52px] w-auto"
                   />
@@ -212,9 +212,7 @@ const FlightCard = ({
 
             <div className="space-y-1">
               <div className="relative flex items-center gap-1 text-sm font-bold text-primary-foreground">
-                <span>
-                  {dataFlight.data.directFlight.airport_code_departure}
-                </span>
+                <span>{dataFlight.data.directFlight.airportCodeDeparture}</span>
 
                 <div className="relative flex w-full items-center">
                   <CircleIcon className="h-2 w-2 flex-shrink-0 opacity-60" />
@@ -235,15 +233,15 @@ const FlightCard = ({
 
                 <span>
                   {dataFlight.data.transitFlight
-                    ? dataFlight.data.transitFlight.airport_code_arrival
-                    : dataFlight.data.directFlight.airport_code_arrival}
+                    ? dataFlight.data.transitFlight.airportCodeArrival
+                    : dataFlight.data.directFlight.airportCodeArrival}
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <div className="space-y-0.5 text-xs leading-[18px] text-primary-foreground">
                   <span>
-                    {dataFlight.data.directFlight.airport_city_departure}
+                    {dataFlight.data.directFlight.airportCityDeparture}
                   </span>
                   {dataFlight.data.directFlightDate && (
                     <div className="flex gap-1 opacity-40">
@@ -263,18 +261,18 @@ const FlightCard = ({
                 <div className="flex flex-col items-end space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
                   <span>
                     {dataFlight.data.transitFlight
-                      ? dataFlight.data.transitFlight.airport_city_arrival
-                      : dataFlight.data.directFlight.airport_city_arrival}
+                      ? dataFlight.data.transitFlight.airportCityArrival
+                      : dataFlight.data.directFlight.airportCityArrival}
                   </span>
                   <div className="flex w-fit gap-1 opacity-40">
                     {dataFlight.data.transitFlight &&
                     dataFlight.data.transitFlightDate ? (
                       <>
-                        {dataFlight.data.transitFlight.departure_arrivaltime ? (
+                        {dataFlight.data.transitFlight.departureArrivalTime ? (
                           <span>
                             {moment(
                               dataFlight.data.transitFlight
-                                .departure_arrivaltime,
+                                .departureArrivalTime,
                             ).format("DD MMM")}
                           </span>
                         ) : (

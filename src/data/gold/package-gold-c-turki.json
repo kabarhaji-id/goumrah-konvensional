@@ -6,7 +6,7 @@
   "category": "Gold",
   "season": "NON RAMADHAN",
   "isFastTrain": false,
-  "city_departure": [
+  "cityDeparture": [
     {
       "city": "Jakarta",
       "route": "CGK-JED"
@@ -14,9 +14,9 @@
   ],
   "duration": "16 Hari",
   "package": "Gold",
-  "down_payment": 7,
-  "order_url": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Plus Wisata Turkey. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
-  "departure_date": [
+  "downPayment": 7,
+  "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Plus Wisata Turkey. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+  "departureDate": [
     {
       "date": "2025-03-08T10:00:00+07:00",
       "status": "expired"
@@ -70,201 +70,399 @@
   "tripleFinalPrice": 37900000,
   "doubleFinalPrice": 40500000,
   "infantFinalPrice": null,
-  "flight_details": {
-    "wisata_flight": [
+  "flightDetails": {
+    "wisataFlights": [
       {
-        "flight_number": null,
+        "flightNumber": null,
         "duration": null,
-        "airport_name_departure": "Soekarno-Hatta International Airport",
-        "airport_terminal_departure": "Terminal 3 Internasional",
-        "airport_code_departure": "CGK",
-        "airport_city_departure": "Jakarta",
-        "airport_name_arrival": "Dubai Airport",
-        "airport_terminal_arrival": "Terminal 3",
-        "airport_code_arrival": "DXB",
-        "airport_city_arrival": "Dubai",
-        "departure_datetime": "2025-07-19T10:00:00+07:00",
-        "departure_arrivaltime": null,
+        "airportNameDeparture": "Soekarno-Hatta International Airport",
+        "airportTerminalDeparture": "Terminal 3 Internasional",
+        "airportCodeDeparture": "CGK",
+        "airportCityDeparture": "Jakarta",
+        "airportNameArrival": "Dubai Airport",
+        "airportTerminalArrival": "Terminal 3",
+        "airportCodeArrival": "DXB",
+        "airportCityArrival": "Dubai",
+        "departureDatetime": "2025-07-19T10:00:00+07:00",
+        "departureArrivalTime": null,
         "class": "Ekonomi",
-        "flight_type": "Transit",
+        "flightType": "Transit",
         "airline": "Emirates",
-        "aircraft_type": "Airbus",
-        "seat_layout": "3-3-3",
-        "baggage_allowance": 20,
-        "cabin_baggage": 7,
-        "airline_logo": "/assets/airlines/emirates.webp",
+        "aircraftType": "Airbus",
+        "seatLayout": "3-3-3",
+        "baggageAllowance": 20,
+        "cabinBaggage": 7,
+        "airlineLogo": "/assets/airlines/emirates.webp",
         "skytrax": "Full Service",
         "rating": "4",
         "transit": {
-          "flight_number": null,
+          "flightNumber": null,
           "duration": null,
-          "airport_name_departure": "Dubai Airport",
-          "airport_terminal_departure": "Terminal 3",
-          "airport_code_departure": "DXB",
-          "airport_city_departure": "Dubai",
-          "airport_name_arrival": "Istanbul Airport",
-          "airport_terminal_arrival": null,
-          "airport_code_arrival": "IST",
-          "airport_city_arrival": "Istanbul",
-          "departure_datetime": "2025-07-19T10:00:00+07:00",
-          "departure_arrivaltime": null,
+          "airportNameDeparture": "Dubai Airport",
+          "airportTerminalDeparture": "Terminal 3",
+          "airportCodeDeparture": "DXB",
+          "airportCityDeparture": "Dubai",
+          "airportNameArrival": "Istanbul Airport",
+          "airportTerminalArrival": null,
+          "airportCodeArrival": "IST",
+          "airportCityArrival": "Istanbul",
+          "departureDatetime": "2025-07-19T10:00:00+07:00",
+          "departureArrivalTime": null,
           "class": "Ekonomi",
-          "flight_type": "Transit",
+          "flightType": "Transit",
           "airline": "Emirates",
-          "aircraft_type": "Airbus",
-          "seat_layout": "3-3-3",
-          "baggage_allowance": 20,
-          "cabin_baggage": 7,
-          "airline_logo": "/assets/airlines/emirates.webp",
+          "aircraftType": "Airbus",
+          "seatLayout": "3-3-3",
+          "baggageAllowance": 20,
+          "cabinBaggage": 7,
+          "airlineLogo": "/assets/airlines/emirates.webp",
           "skytrax": "Full Service",
           "rating": "4",
           "transit": null,
-          "transit_datetime": null
+          "transitDatetime": null
         },
-        "transit_datetime": "2025-07-19T10:00:00+07:00"
+        "transitDatetime": "2025-07-19T10:00:00+07:00"
       }
     ],
-    "departure_flight": {
-      "flight_number": null,
+    "departureFlights": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "Istanbul Airport",
-      "airport_terminal_departure": null,
-      "airport_code_departure": "IST",
-      "airport_city_departure": "Istanbul",
-      "airport_name_arrival": "Dubai Airport",
-      "airport_terminal_arrival": null,
-      "airport_code_arrival": "DXB",
-      "airport_city_arrival": "Dubai",
-      "departure_datetime": "2025-07-27T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "Istanbul Airport",
+      "airportTerminalDeparture": null,
+      "airportCodeDeparture": "IST",
+      "airportCityDeparture": "Istanbul",
+      "airportNameArrival": "Dubai Airport",
+      "airportTerminalArrival": null,
+      "airportCodeArrival": "DXB",
+      "airportCityArrival": "Dubai",
+      "departureDatetime": "2025-07-27T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Transit",
+      "flightType": "Transit",
       "airline": "Emirates",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 20,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/emirates.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 20,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/emirates.webp",
       "skytrax": "Full Service",
       "rating": "4",
       "transit": {
-        "flight_number": null,
+        "flightNumber": null,
         "duration": null,
-        "airport_name_departure": "Dubai Airport",
-        "airport_terminal_departure": "Terminal 3",
-        "airport_code_departure": "DXB",
-        "airport_city_departure": "Dubai",
-        "airport_name_arrival": "King Abdulaziz International Airport",
-        "airport_terminal_arrival": null,
-        "airport_code_arrival": "JED",
-        "airport_city_arrival": "Jeddah",
-        "departure_datetime": "2025-07-27T10:00:00+07:00",
-        "departure_arrivaltime": null,
+        "airportNameDeparture": "Dubai Airport",
+        "airportTerminalDeparture": "Terminal 3",
+        "airportCodeDeparture": "DXB",
+        "airportCityDeparture": "Dubai",
+        "airportNameArrival": "King Abdulaziz International Airport",
+        "airportTerminalArrival": null,
+        "airportCodeArrival": "JED",
+        "airportCityArrival": "Jeddah",
+        "departureDatetime": "2025-07-27T10:00:00+07:00",
+        "departureArrivalTime": null,
         "class": "Ekonomi",
-        "flight_type": "Transit",
+        "flightType": "Transit",
         "airline": "Emirates",
-        "aircraft_type": "Airbus",
-        "seat_layout": "3-3-3",
-        "baggage_allowance": 20,
-        "cabin_baggage": 7,
-        "airline_logo": "/assets/airlines/emirates.webp",
+        "aircraftType": "Airbus",
+        "seatLayout": "3-3-3",
+        "baggageAllowance": 20,
+        "cabinBaggage": 7,
+        "airlineLogo": "/assets/airlines/emirates.webp",
         "skytrax": "Full Service",
         "rating": "4",
         "transit": null,
-        "transit_datetime": null
+        "transitDatetime": null
       },
-      "transit_datetime": "2025-07-27T10:00:00+07:00"
+      "transitDatetime": "2025-07-27T10:00:00+07:00"
     },
-    "return_flight": {
-      "flight_number": null,
+    "returnFlight": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "King Abdulaziz International Airport",
-      "airport_terminal_departure": null,
-      "airport_code_departure": "JED",
-      "airport_city_departure": "Jeddah",
-      "airport_name_arrival": "Dubai Airport",
-      "airport_terminal_arrival": "Terminal 3",
-      "airport_code_arrival": "DXB",
-      "airport_city_arrival": "Dubai",
-      "departure_datetime": "2025-08-03T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "King Abdulaziz International Airport",
+      "airportTerminalDeparture": null,
+      "airportCodeDeparture": "JED",
+      "airportCityDeparture": "Jeddah",
+      "airportNameArrival": "Dubai Airport",
+      "airportTerminalArrival": "Terminal 3",
+      "airportCodeArrival": "DXB",
+      "airportCityArrival": "Dubai",
+      "departureDatetime": "2025-08-03T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Direct",
+      "flightType": "Direct",
       "airline": "Emirates",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 20,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/emirates.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 20,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/emirates.webp",
       "skytrax": "Full Service",
       "rating": "4",
       "transit": {
-        "flight_number": null,
+        "flightNumber": null,
         "duration": null,
-        "airport_name_departure": "Dubai Airport",
-        "airport_terminal_departure": "Terminal 3",
-        "airport_code_departure": "DXB",
-        "airport_city_departure": "Dubai",
-        "airport_name_arrival": "Soekarno-Hatta International Airport",
-        "airport_terminal_arrival": null,
-        "airport_code_arrival": "CGK",
-        "airport_city_arrival": "Jakarta",
-        "departure_datetime": "2025-08-03T10:00:00+07:00",
-        "departure_arrivaltime": null,
+        "airportNameDeparture": "Dubai Airport",
+        "airportTerminalDeparture": "Terminal 3",
+        "airportCodeDeparture": "DXB",
+        "airportCityDeparture": "Dubai",
+        "airportNameArrival": "Soekarno-Hatta International Airport",
+        "airportTerminalArrival": null,
+        "airportCodeArrival": "CGK",
+        "airportCityArrival": "Jakarta",
+        "departureDatetime": "2025-08-03T10:00:00+07:00",
+        "departureArrivalTime": null,
         "class": "Ekonomi",
-        "flight_type": "Transit",
+        "flightType": "Transit",
         "airline": "Emirates",
-        "aircraft_type": "Airbus",
-        "seat_layout": "3-3-3",
-        "baggage_allowance": 20,
-        "cabin_baggage": 7,
-        "airline_logo": "/assets/airlines/emirates.webp",
+        "aircraftType": "Airbus",
+        "seatLayout": "3-3-3",
+        "baggageAllowance": 20,
+        "cabinBaggage": 7,
+        "airlineLogo": "/assets/airlines/emirates.webp",
         "skytrax": "Full Service",
         "rating": "4",
         "transit": null,
-        "transit_datetime": null
+        "transitDatetime": null
       },
-      "transit_datetime": "2025-08-03T10:00:00+07:00"
+      "transitDatetime": "2025-08-03T10:00:00+07:00"
     }
   },
-  "hotel_details": {
+  "hotelDetails": {
     "wisata": [
       {
-        "id": "centro-residences-by-rotana",
-        "city": "Istanbul",
-        "hotel_name": "Centro Residences by Rotana / 4*",
-        "star_rating": 4,
+        "id": "anemon",
+        "city": "Bursa",
+        "hotelName": "Anemon Hotel",
+        "starRating": 4,
         "duration": null,
         "images": [
           {
             "id": "1",
-            "src": "/assets/image/hotel/wisata/centro-residence/exterior-centro-residence-1.jpg",
+            "src": "/assets/image/hotel/wisata/turkey/anemon-turkey/exterior-anemon-1.jpg",
             "category": "Eksterior"
           },
           {
             "id": "2",
-            "src": "/assets/image/hotel/wisata/centro-residence/bedroom-centro-residence-1.jpg",
-            "category": "Kamar"
+            "src": "/assets/image/hotel/wisata/turkey/anemon-turkey/lobby-anemon-1.jpg",
+            "category": "Lobby"
           },
           {
             "id": "3",
-            "src": "/assets/image/hotel/wisata/centro-residence/bedroom-centro-residence-2.jpg",
+            "src": "/assets/image/hotel/wisata/turkey/anemon-turkey/bedroom-anemon-1.jpg",
             "category": "Kamar"
           },
           {
             "id": "4",
-            "src": "/assets/image/hotel/wisata/centro-residence/bedroom-centro-residence-3.jpg",
+            "src": "/assets/image/hotel/wisata/turkey/anemon-turkey/bedroom-anemon-2.jpg",
+            "category": "Kamar"
+          }
+        ],
+        "gmapUrlNoembed": "https://maps.app.goo.gl/VPwkAMwACq4P24W7A",
+        "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.3380125347885!2d29.01488386094569!3d40.20154348013802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca1571c6b073e5%3A0xa5206c90f769e5f9!2sAnemon%20Bursa%20Otel!5e0!3m2!1sid!2sid!4v1738215377923!5m2!1sid!2sid",
+        "googleReviewUrl": "https://www.google.com/maps/place/Anemon+Bursa+Otel/@40.2015435,29.0148839,17z/data=!4m16!1m2!2m1!1sanemon+hotel+bursa!3m12!1s0x14ca1571c6b073e5:0xa5206c90f769e5f9!5m3!1s2025-04-19!4m1!1i2!8m2!3d40.2015436!4d29.0193902!9m1!1b1!15sChJhbmVtb24gaG90ZWwgYnVyc2EiA4gBAZIBBWhvdGVs4AEA!16s%2Fg%2F11vrkk3r68?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+        "description": "Anemon Bursa Hotel adalah akomodasi elegan yang terletak di kota Bursa, Turki, menawarkan kenyamanan dan kemewahan bagi para tamu yang mencari pengalaman menginap istimewa. Hotel ini memiliki desain modern dengan sentuhan klasik, menciptakan suasana yang hangat dan nyaman. Fasilitas yang tersedia mencakup kamar yang luas dengan dekorasi elegan, restoran yang menyajikan hidangan khas Turki dan internasional, serta pusat kebugaran dan spa untuk relaksasi. Berlokasi strategis, Anemon Bursa Hotel memberikan akses mudah ke berbagai destinasi wisata populer di Bursa, termasuk situs bersejarah dan pusat perbelanjaan, menjadikannya pilihan ideal bagi wisatawan bisnis maupun liburan.",
+        "facilities": [
+          "AC",
+          "WiFi",
+          "TV",
+          "Restoran",
+          "Layanan Kamar",
+          "Kamar Mandi Dalam"
+        ],
+        "checkIn": null,
+        "checkOut": null,
+        "address": "1. Murat Cad. No.20, Bursa 16090 Turki",
+        "distanceToLandmark": null,
+        "landmark": null,
+        "isShuttleBus": false,
+        "foodType": "Prasmanan",
+        "foodAmount": null,
+        "foodMenu": null
+      },
+      {
+        "id": "le-bleu",
+        "city": "Kusadasi",
+        "hotelName": "Le Bleu Hotel",
+        "starRating": 5,
+        "duration": null,
+        "images": [
+          {
+            "id": "1",
+            "src": "/assets/image/hotel/wisata/turkey/le-bleu/exterior-le-bleu-1.jpg",
+            "category": "Eksterior"
+          },
+          {
+            "id": "2",
+            "src": "/assets/image/hotel/wisata/turkey/le-bleu/exterior-le-bleu-2.jpg",
+            "category": "Eksterior"
+          },
+          {
+            "id": "3",
+            "src": "/assets/image/hotel/wisata/turkey/le-bleu/exterior-le-bleu-3.webp",
+            "category": "Eksterior"
+          },
+          {
+            "id": "4",
+            "src": "/assets/image/hotel/wisata/turkey/le-bleu/bedroom-le-bleu-1.jpg",
             "category": "Kamar"
           },
           {
             "id": "5",
-            "src": "/assets/image/hotel/wisata/centro-residence/lobby-centro-residence-1.jpg",
+            "src": "/assets/image/hotel/wisata/turkey/le-bleu/bedroom-le-bleu-2.jpg",
+            "category": "Kamar"
+          }
+        ],
+        "gmapUrlNoembed": "https://maps.app.goo.gl/megJPjpY8cLuBtZq7",
+        "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.8654538441915!2d27.234704776871954!3d37.84003557196912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bea8ec6867ded7%3A0xcdb84092b6a2d65e!2sLe%20Bleu%20Hotel%20%26%20Resort!5e0!3m2!1sid!2sid!4v1738217236157!5m2!1sid!2sid",
+        "googleReviewUrl": "https://www.google.com/maps/place/Le+Bleu+Hotel+%26+Resort/@37.8400356,27.2347048,17z/data=!4m12!3m11!1s0x14bea8ec6867ded7:0xcdb84092b6a2d65e!5m3!1s2025-04-19!4m1!1i2!8m2!3d37.8400356!4d27.2372797!9m1!1b1!16s%2Fg%2F1q6b1qz95?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+        "description": "Le Bleu Hotel & Resort Kusadasi adalah hotel bintang lima yang menawarkan pengalaman menginap mewah di tepi Laut Aegea. Terletak di kawasan pesisir yang eksklusif, hotel ini memiliki akses langsung ke pantai pribadi dengan pemandangan laut yang menakjubkan. Didesain dengan gaya modern dan elegan, Le Bleu menyediakan berbagai fasilitas premium, termasuk kolam renang infinity, spa, pusat kebugaran, serta berbagai pilihan restoran yang menyajikan hidangan khas Turki dan internasional. Setiap kamar didesain dengan kenyamanan maksimal, dilengkapi dengan balkon pribadi yang menghadap ke laut atau taman tropis. Hotel ini juga menawarkan berbagai aktivitas rekreasi, seperti olahraga air, klub anak-anak, dan hiburan malam. Dengan lokasinya yang strategis dekat dengan pusat kota Kusadasi dan situs bersejarah seperti Ephesus, Le Bleu Hotel & Resort menjadi pilihan ideal bagi wisatawan yang mencari kombinasi antara kemewahan, relaksasi, dan eksplorasi budaya di Turki.",
+        "facilities": [
+          "AC",
+          "WiFi",
+          "TV",
+          "Restoran",
+          "Layanan Kamar",
+          "Kolam Renang",
+          "Kamar Mandi Dalam"
+        ],
+        "checkIn": null,
+        "checkOut": null,
+        "address": "Kadinlar Denizi Mevkii Haci Feyzullah Mah 17 Sok No 4 Kusadasi Aydin, 09400 Kusadasi, Turkey",
+        "distanceToLandmark": null,
+        "landmark": null,
+        "isShuttleBus": false,
+        "foodType": "Prasmanan",
+        "foodAmount": null,
+        "foodMenu": null
+      },
+      {
+        "id": "pam-thermal",
+        "city": "Pamukkale",
+        "hotelName": "Pam Thermal",
+        "starRating": 5,
+        "duration": null,
+        "images": [
+          {
+            "id": "1",
+            "src": "/assets/image/hotel/wisata/turkey/pam-thermal/exterior-pam-thermal-1.jpg",
+            "category": "Eksterior"
+          },
+          {
+            "id": "2",
+            "src": "/assets/image/hotel/wisata/turkey/pam-thermal/exterior-pam-thermal-2.jpg",
+            "category": "Eksterior"
+          },
+          {
+            "id": "3",
+            "src": "/assets/image/hotel/wisata/turkey/pam-thermal/exterior-pam-thermal-1.jpg",
+            "category": "Kamar"
+          }
+        ],
+        "gmapUrlNoembed": "https://maps.app.goo.gl/snFu83uusiXyX7SFA",
+        "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.6201706602346!2d29.10737690000001!3d37.9626539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c73f0ae50d2199%3A0x1dbe50080af2f1b0!2sPam%20Thermal%20Hotel!5e0!3m2!1sid!2sid!4v1738216831639!5m2!1sid!2sid",
+        "googleReviewUrl": "https://www.google.com/maps/place/Pam+Thermal+Hotel/@37.9626539,29.1073769,17z/data=!4m12!3m11!1s0x14c73f0ae50d2199:0x1dbe50080af2f1b0!5m3!1s2025-04-19!4m1!1i2!8m2!3d37.9626539!4d29.1073769!9m1!1b1!16s%2Fg%2F1tfn5vst?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+        "description": "Pam Thermal Hotel Pamukkale adalah hotel bintang lima yang menawarkan pengalaman menginap mewah dengan manfaat air panas alami khas Pamukkale. Terletak di kawasan Karahayit, hotel ini dikenal dengan kolam air panasnya yang kaya akan mineral, yang dipercaya memiliki khasiat penyembuhan bagi tubuh. Dikelilingi oleh pemandangan pegunungan dan alam hijau, hotel ini menyediakan fasilitas lengkap seperti spa, pusat kesehatan, sauna, serta kolam renang indoor dan outdoor. Setiap kamar dirancang dengan kenyamanan modern, dilengkapi dengan bathtub air panas alami, balkon pribadi, dan pemandangan indah sekitar. Restoran hotel menyajikan hidangan khas Turki dan internasional, menjadikan pengalaman menginap semakin berkesan. Dengan lokasinya yang dekat dengan situs bersejarah Hierapolis dan Travertine Pamukkale, Pam Thermal Hotel adalah pilihan ideal bagi wisatawan yang mencari ketenangan, relaksasi, dan eksplorasi budaya di Turki.",
+        "facilities": [
+          "AC",
+          "WiFi",
+          "TV",
+          "Restoran",
+          "Layanan Kamar",
+          "Kolam Renang",
+          "Kamar Mandi Dalam"
+        ],
+        "checkIn": null,
+        "checkOut": null,
+        "address": "Karahayit, 120. Sağlik Sk No:5/1, 20190 Pamukkale/Denizli, Turki",
+        "distanceToLandmark": null,
+        "landmark": null,
+        "isShuttleBus": false,
+        "foodType": "Prasmanan",
+        "foodAmount": null,
+        "foodMenu": null
+      },
+      {
+        "id": "double-tree-by-hilton",
+        "city": "Cappadocia",
+        "hotelName": "DoubleTree by Hilton / 5*",
+        "starRating": 5,
+        "duration": null,
+        "images": [
+          {
+            "id": "1",
+            "src": "/assets/image/hotel/wisata/turkey/doubletree-by-hilton/exterior-doubletree-1.jpg",
+            "category": "Eksterior"
+          },
+          {
+            "id": "2",
+            "src": "/assets/image/hotel/wisata/turkey/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+            "category": "Kamar"
+          },
+          {
+            "id": "3",
+            "src": "/assets/image/hotel/wisata/turkey/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+            "category": "Kamar"
+          }
+        ],
+        "gmapUrlNoembed": "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+        "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+        "googleReviewUrl": "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        "description": "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+        "facilities": [
+          "AC",
+          "WiFi",
+          "Kolam Renang",
+          "TV",
+          "Restoran",
+          "Layanan Kamar",
+          "Kamar Mandi Dalam"
+        ],
+        "checkIn": null,
+        "checkOut": null,
+        "address": "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+        "distanceToLandmark": null,
+        "landmark": null,
+        "isShuttleBus": false,
+        "foodType": "Prasmanan",
+        "foodAmount": null,
+        "foodMenu": null
+      },
+      {
+        "id": "centro-residences-by-rotana",
+        "city": "Istanbul",
+        "hotelName": "Centro Residences by Rotana / 4*",
+        "starRating": 4,
+        "duration": null,
+        "images": [
+          {
+            "id": "1",
+            "src": "/assets/image/hotel/wisata/turkey/centro-residence/exterior-centro-residence-1.jpg",
+            "category": "Eksterior"
+          },
+          {
+            "id": "2",
+            "src": "/assets/image/hotel/wisata/turkey/centro-residence/bedroom-centro-residence-1.jpg",
+            "category": "Kamar"
+          },
+          {
+            "id": "3",
+            "src": "/assets/image/hotel/wisata/turkey/centro-residence/bedroom-centro-residence-2.jpg",
+            "category": "Kamar"
+          },
+          {
+            "id": "4",
+            "src": "/assets/image/hotel/wisata/turkey/centro-residence/bedroom-centro-residence-3.jpg",
+            "category": "Kamar"
+          },
+          {
+            "id": "5",
+            "src": "/assets/image/hotel/wisata/turkey/centro-residence/lobby-centro-residence-1.jpg",
             "category": "Lobby"
           }
         ],
-        "google_maps_link_noembed": "https://maps.app.goo.gl/HiHQ7UR8fTKuoDNJ8",
-        "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.05226877731616!2d28.81305305679178!3d41.059851559896416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa50aa5f6449f%3A0xa63febb2d296afa3!2sCentro%20WestSide%20by%20Rotana%20Hotel!5e0!3m2!1sid!2sid!4v1737189295380!5m2!1sid!2sid",
-        "google_review_link": "https://www.google.com/maps/place/Centro+WestSide+by+Rotana+Hotel/@41.0598516,28.8130531,20z/data=!4m15!1m2!2m1!1scentro+residences+by+rotana+istanbul+turki!3m11!1s0x14caa50aa5f6449f:0xa63febb2d296afa3!5m2!4m1!1i2!8m2!3d41.0598516!4d28.813474!9m1!1b1!15sCipjZW50cm8gcmVzaWRlbmNlcyBieSByb3RhbmEgaXN0YW5idWwgdHVya2kiA4gBAZIBBWhvdGVs4AEA!16s%2Fg%2F11g6qq1f4d?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+        "gmapUrlNoembed": "https://maps.app.goo.gl/HiHQ7UR8fTKuoDNJ8",
+        "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.05226877731616!2d28.81305305679178!3d41.059851559896416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa50aa5f6449f%3A0xa63febb2d296afa3!2sCentro%20WestSide%20by%20Rotana%20Hotel!5e0!3m2!1sid!2sid!4v1737189295380!5m2!1sid!2sid",
+        "googleReviewUrl": "https://www.google.com/maps/place/Centro+WestSide+by+Rotana+Hotel/@41.0598516,28.8130531,20z/data=!4m15!1m2!2m1!1scentro+residences+by+rotana+istanbul+turki!3m11!1s0x14caa50aa5f6449f:0xa63febb2d296afa3!5m2!4m1!1i2!8m2!3d41.0598516!4d28.813474!9m1!1b1!15sCipjZW50cm8gcmVzaWRlbmNlcyBieSByb3RhbmEgaXN0YW5idWwgdHVya2kiA4gBAZIBBWhvdGVs4AEA!16s%2Fg%2F11g6qq1f4d?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
         "description": "Centro Westside by Rotana adalah hotel bintang 4 yang terletak di Istanbul, Turki, menawarkan 152 kamar dan suite bergaya modern dengan berbagai kategori yang fleksibel. Setiap kamar dilengkapi dengan fasilitas seperti dapur kecil, TV layar datar, minibar, dan akses Wi-Fi gratis. Hotel ini menyediakan berbagai fasilitas, termasuk tiga pilihan tempat makan dengan area duduk di luar ruangan, lima ruang pertemuan berteknologi tinggi, pusat kebugaran lengkap, tiga ruang perawatan spa, dan kolam renang indoor yang besar. Terletak di distrik Bağcılar, hotel ini berdekatan dengan Mall of Istanbul dan memiliki akses mudah ke jalan raya menuju Uni Eropa dan bandara baru, menjadikannya pilihan ideal bagi wisatawan bisnis maupun rekreasi yang mencari kenyamanan dan aksesibilitas selama kunjungan mereka ke Istanbul.",
         "facilities": [
           "AC",
@@ -276,68 +474,22 @@
           "Layanan Kamar",
           "Kamar Mandi Dalam"
         ],
-        "check_in_time": null,
-        "check_out_time": null,
+        "checkIn": null,
+        "checkOut": null,
         "address": "Tasocagi Yolu Caddesi No. 39/A Mahmutbey Mah., Istanbul 34218 Turki",
-        "distance_to_landmark": 34600,
-        "landmark": "Bandara Internasional Istanbul",
+        "distanceToLandmark": null,
+        "landmark": null,
         "isShuttleBus": false,
-        "food_type": "Prasmanan",
-        "food_amount": null,
-        "food_menu": null
-      },
-      {
-        "id": "double-tree-by-hilton",
-        "city": "Cappadocia",
-        "hotel_name": "DoubleTree by Hilton / 5*",
-        "star_rating": 5,
-        "duration": null,
-        "images": [
-          {
-            "id": "1",
-            "src": "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
-            "category": "Eksterior"
-          },
-          {
-            "id": "2",
-            "src": "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
-            "category": "Kamar"
-          },
-          {
-            "id": "3",
-            "src": "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
-            "category": "Kamar"
-          }
-        ],
-        "google_maps_link_noembed": "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
-        "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
-        "google_review_link": "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
-        "description": "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
-        "facilities": [
-          "AC",
-          "WiFi",
-          "Kolam Renang",
-          "TV",
-          "Restoran",
-          "Layanan Kamar",
-          "Kamar Mandi Dalam"
-        ],
-        "check_in_time": null,
-        "check_out_time": null,
-        "address": "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
-        "distance_to_landmark": 39300,
-        "landmark": "Bandara Internasional Istanbul",
-        "isShuttleBus": false,
-        "food_type": "Prasmanan",
-        "food_amount": null,
-        "food_menu": null
+        "foodType": "Prasmanan",
+        "foodAmount": null,
+        "foodMenu": null
       }
     ],
     "makkah": {
       "id": "anjum-makkah",
       "city": "Makkah",
-      "hotel_name": "Anjum",
-      "star_rating": 5,
+      "hotelName": "Anjum",
+      "starRating": 5,
       "duration": 4,
       "images": [
         {
@@ -361,9 +513,9 @@
           "category": "Kamar Mandi"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/sGKqAQvur7mLvbXb9",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3714.112915726407!2d39.8171793!3d21.4248063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b47a578a4b%3A0x70a3d202df30a258!2sHotel%20Anjum!5e0!3m2!1sid!2sid!4v1737177264346!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/travel/search?q=anjum%20makkah%20hotel&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyE0Nnb0kyTVRDLWEzQTlORndFQUU4AkIJCViiMN8C0qNwQgkJWKIw3wLSo3A&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjg0ceO6O-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzIwNGI0N2E1NzhhNGI6MHg3MGEzZDIwMmRmMzBhMjU4EhoSFAoHCOgPEAwYDhIHCOgPEAwYDxgBMgIQAA%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/sGKqAQvur7mLvbXb9",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3714.112915726407!2d39.8171793!3d21.4248063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b47a578a4b%3A0x70a3d202df30a258!2sHotel%20Anjum!5e0!3m2!1sid!2sid!4v1737177264346!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/travel/search?q=anjum%20makkah%20hotel&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyE0Nnb0kyTVRDLWEzQTlORndFQUU4AkIJCViiMN8C0qNwQgkJWKIw3wLSo3A&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjg0ceO6O-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzIwNGI0N2E1NzhhNGI6MHg3MGEzZDIwMmRmMzBhMjU4EhoSFAoHCOgPEAwYDhIHCOgPEAwYDxgBMgIQAA%3D%3D",
       "description": "Anjum Hotel Makkah adalah hotel mewah bintang 5 yang menawarkan kenyamanan luar biasa bagi para tamu yang berkunjung ke Makkah. Terletak strategis di kawasan Jabal Al Kaaba, hotel ini hanya berjarak beberapa menit dari Masjidil Haram, sehingga memudahkan tamu untuk melaksanakan ibadah. Dengan lebih dari 1.700 kamar dan suite yang dirancang dengan elegan, Anjum Hotel menyediakan fasilitas modern yang meliputi restoran berstandar internasional, area lounge yang luas, dan layanan concierge 24 jam. Setiap kamar dilengkapi dengan pemandangan yang menakjubkan ke arah kota Makkah atau Masjidil Haram, menciptakan suasana yang damai dan spiritual. Hotel ini juga menawarkan berbagai pilihan kuliner dengan menu lokal dan internasional, serta layanan kelas dunia yang ramah untuk memastikan pengalaman menginap yang nyaman dan tak terlupakan.",
       "facilities": [
         "AC",
@@ -374,21 +526,21 @@
         "Kamar Mandi Dalam",
         "Ramah Disabilitas"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "Jl. Umm Al Qura Jabal Al Kaaba, Makkah 21955 Arab Saudi",
-      "distance_to_landmark": 500,
+      "distanceToLandmark": 500,
       "landmark": "Masjidil Haram",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     },
     "madinah": {
       "id": "al-ritz-madinah",
       "city": "Madinah",
-      "hotel_name": "Al Ritz Madinah",
-      "star_rating": 4,
+      "hotelName": "Al Ritz Madinah",
+      "starRating": 4,
       "duration": 3,
       "images": [
         {
@@ -417,9 +569,9 @@
           "category": "Kamar"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/Dwr3cfz57H3BUhXh8",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.351283133305!2d39.607872775358544!3d24.473282578184076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf6b2de7b6f1%3A0x5b920ed28f900004!2sAl%20Ritz%20Al%20Madina%20Hotel!5e0!3m2!1sid!2sid!4v1737477210269!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/maps/place/Al+Ritz+Al+Madina+Hotel/@24.4732826,39.6078728,17z/data=!4m11!3m10!1s0x15bdbf6b2de7b6f1:0x5b920ed28f900004!5m2!4m1!1i2!8m2!3d24.4732826!4d39.6104477!9m1!1b1!16s%2Fg%2F11t6xp7y30?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/Dwr3cfz57H3BUhXh8",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.351283133305!2d39.607872775358544!3d24.473282578184076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf6b2de7b6f1%3A0x5b920ed28f900004!2sAl%20Ritz%20Al%20Madina%20Hotel!5e0!3m2!1sid!2sid!4v1737477210269!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/maps/place/Al+Ritz+Al+Madina+Hotel/@24.4732826,39.6078728,17z/data=!4m11!3m10!1s0x15bdbf6b2de7b6f1:0x5b920ed28f900004!5m2!4m1!1i2!8m2!3d24.4732826!4d39.6104477!9m1!1b1!16s%2Fg%2F11t6xp7y30?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
       "description": "Al Ritz Al Madinah adalah hotel bintang 4 yang berlokasi kurang dari 150 meter dari Masjid Nabawi, menawarkan akses mudah bagi para tamu yang ingin beribadah. Hotel ini menyediakan kamar dan suite ber-AC yang dilengkapi dengan sofa, TV satelit, minibar, brankas, serta fasilitas membuat teh dan kopi. Kamar mandi pribadinya dilengkapi dengan shower dan pengering rambut. Fasilitas hotel mencakup resepsionis 24 jam yang menawarkan layanan binatu dan menyetrika, serta akses Wi-Fi di seluruh area akomodasi. Terdapat dua restoran di tempat, yaitu Al Sukariya dan Al Andalusia, yang menyajikan masakan internasional dan oriental. Dengan lokasinya yang strategis dan fasilitas lengkap, Al Ritz Al Madinah menjadi pilihan ideal bagi para peziarah yang mengunjungi kota suci Madinah.",
       "facilities": [
         "AC",
@@ -430,18 +582,18 @@
         "Kamar Mandi Dalam",
         "Ramah Disabilitas"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "PO Box 4517, Central area , Babul Majeed , 20012 Madinah, Arab Saudi",
-      "distance_to_landmark": 150,
+      "distanceToLandmark": 150,
       "landmark": "Masjid Nabawi",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     }
   },
-  "bus_details": {
+  "busDetails": {
     "images": [
       {
         "id": "1",
@@ -461,8 +613,8 @@
     ],
     "id": "saptco-reguler",
     "provider": "Saptco",
-    "bus_type": "Economy-Class",
-    "seat_amount": 45
+    "busType": "Economy-Class",
+    "seatAmount": 45
   },
   "promos": [
     {
@@ -635,7 +787,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Anjum Makkah"
+              "hotelName": "Anjum Makkah"
             },
             {
               "id": "3",

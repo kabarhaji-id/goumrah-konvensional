@@ -2,9 +2,9 @@
 
 import "swiper/css";
 
-import { packageDetailData } from "@/data/package-details";
+import { packageDetailData } from "@/data/packages";
 import { useMemo } from "react";
-import { PackageCard } from "@/components/ui/package-card";
+import { PackageCard } from "@/components/ui/card/package-card";
 
 // const IdealPackagesSection = ({ packages }: { packages: Packages[] }) => {
 const IdealPackagesSection = () => {
@@ -68,14 +68,6 @@ const IdealPackagesSection = () => {
       <div className="w-full">
         <PackageCard data={packagePlatinum[0].data} />
       </div> */}
-
-      {/* <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
-        <Link href="/umrah/ideal">
-          <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
-            Lihat Semua Paket
-          </p>
-        </Link>
-      </Button> */}
     </section>
   );
 };

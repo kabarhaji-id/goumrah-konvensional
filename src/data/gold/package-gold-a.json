@@ -6,7 +6,7 @@
   "category": "Gold",
   "season": "NON RAMADHAN",
   "isFastTrain": false,
-  "city_departure": [
+  "cityDeparture": [
     {
       "city": "Jakarta",
       "route": "CGK-JED"
@@ -14,9 +14,9 @@
   ],
   "duration": "9 Hari",
   "package": "Gold",
-  "down_payment": 7,
-  "order_url": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
-  "departure_date": [
+  "downPayment": 7,
+  "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+  "departureDate": [
     {
       "date": "2025-02-23T10:00:00+07:00",
       "status": "expired"
@@ -70,118 +70,118 @@
   "tripleFinalPrice": 30900000,
   "doubleFinalPrice": 34500000,
   "infantFinalPrice": null,
-  "flight_details": {
-    "wisata_flight": [],
-    "departure_flight": {
-      "flight_number": null,
+  "flightDetails": {
+    "wisataFlights": [],
+    "departureFlights": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "Soekarno-Hatta International Airport",
-      "airport_terminal_departure": "Terminal 3 Internasional",
-      "airport_code_departure": "CGK",
-      "airport_city_departure": "Jakarta",
-      "airport_name_arrival": "Hamad International Airport",
-      "airport_terminal_arrival": null,
-      "airport_code_arrival": "DOH",
-      "airport_city_arrival": "Doha",
-      "departure_datetime": "2025-07-27T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "Soekarno-Hatta International Airport",
+      "airportTerminalDeparture": "Terminal 3 Internasional",
+      "airportCodeDeparture": "CGK",
+      "airportCityDeparture": "Jakarta",
+      "airportNameArrival": "Hamad International Airport",
+      "airportTerminalArrival": null,
+      "airportCodeArrival": "DOH",
+      "airportCityArrival": "Doha",
+      "departureDatetime": "2025-07-27T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Transit",
+      "flightType": "Transit",
       "airline": "Qatar Airways",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 20,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/qatar-airways.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 20,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/qatar-airways.webp",
       "skytrax": "Full Service",
       "rating": "5",
       "transit": {
-        "flight_number": null,
+        "flightNumber": null,
         "duration": null,
-        "airport_name_departure": "Hamad International Airport",
-        "airport_terminal_departure": null,
-        "airport_code_departure": "DOH",
-        "airport_city_departure": "Doha",
-        "airport_name_arrival": "King Abdulaziz International Airport",
-        "airport_terminal_arrival": null,
-        "airport_code_arrival": "JED",
-        "airport_city_arrival": "Jeddah",
-        "departure_datetime": "2025-07-27T10:00:00+07:00",
-        "departure_arrivaltime": null,
+        "airportNameDeparture": "Hamad International Airport",
+        "airportTerminalDeparture": null,
+        "airportCodeDeparture": "DOH",
+        "airportCityDeparture": "Doha",
+        "airportNameArrival": "King Abdulaziz International Airport",
+        "airportTerminalArrival": null,
+        "airportCodeArrival": "JED",
+        "airportCityArrival": "Jeddah",
+        "departureDatetime": "2025-07-27T10:00:00+07:00",
+        "departureArrivalTime": null,
         "class": "Ekonomi",
-        "flight_type": "Direct",
+        "flightType": "Direct",
         "airline": "Qatar Airways",
-        "aircraft_type": "Airbus",
-        "seat_layout": "3-3-3",
-        "baggage_allowance": 20,
-        "cabin_baggage": 7,
-        "airline_logo": "/assets/airlines/qatar-airways.webp",
+        "aircraftType": "Airbus",
+        "seatLayout": "3-3-3",
+        "baggageAllowance": 20,
+        "cabinBaggage": 7,
+        "airlineLogo": "/assets/airlines/qatar-airways.webp",
         "skytrax": "Full Service",
         "rating": "5",
         "transit": null,
-        "transit_datetime": null
+        "transitDatetime": null
       },
-      "transit_datetime": "2025-07-27T10:00:00+07:00"
+      "transitDatetime": "2025-07-27T10:00:00+07:00"
     },
-    "return_flight": {
-      "flight_number": null,
+    "returnFlight": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "King Abdulaziz International Airport",
-      "airport_terminal_departure": null,
-      "airport_code_departure": "JED",
-      "airport_city_departure": "Jeddah",
-      "airport_name_arrival": "Hamad International Airport",
-      "airport_terminal_arrival": null,
-      "airport_code_arrival": "DOH",
-      "airport_city_arrival": "Doha",
-      "departure_datetime": "2025-08-03T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "King Abdulaziz International Airport",
+      "airportTerminalDeparture": null,
+      "airportCodeDeparture": "JED",
+      "airportCityDeparture": "Jeddah",
+      "airportNameArrival": "Hamad International Airport",
+      "airportTerminalArrival": null,
+      "airportCodeArrival": "DOH",
+      "airportCityArrival": "Doha",
+      "departureDatetime": "2025-08-03T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Transit",
+      "flightType": "Transit",
       "airline": "Qatar Airways",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 20,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/qatar-airways.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 20,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/qatar-airways.webp",
       "skytrax": "Full Service",
       "rating": "5",
       "transit": {
-        "flight_number": null,
+        "flightNumber": null,
         "duration": null,
-        "airport_name_departure": "Hamad International Airport",
-        "airport_terminal_departure": null,
-        "airport_code_departure": "DOH",
-        "airport_city_departure": "Doha",
-        "airport_name_arrival": "Soekarno-Hatta International Airport",
-        "airport_terminal_arrival": "Terminal 3 Internasional",
-        "airport_code_arrival": "CGK",
-        "airport_city_arrival": "Jakarta",
-        "departure_datetime": "2025-08-03T10:00:00+07:00",
-        "departure_arrivaltime": null,
+        "airportNameDeparture": "Hamad International Airport",
+        "airportTerminalDeparture": null,
+        "airportCodeDeparture": "DOH",
+        "airportCityDeparture": "Doha",
+        "airportNameArrival": "Soekarno-Hatta International Airport",
+        "airportTerminalArrival": "Terminal 3 Internasional",
+        "airportCodeArrival": "CGK",
+        "airportCityArrival": "Jakarta",
+        "departureDatetime": "2025-08-03T10:00:00+07:00",
+        "departureArrivalTime": null,
         "class": "Ekonomi",
-        "flight_type": "Direct",
+        "flightType": "Direct",
         "airline": "Qatar Airways",
-        "aircraft_type": "Airbus",
-        "seat_layout": "3-3-3",
-        "baggage_allowance": 20,
-        "cabin_baggage": 7,
-        "airline_logo": "/assets/airlines/qatar-airways.webp",
+        "aircraftType": "Airbus",
+        "seatLayout": "3-3-3",
+        "baggageAllowance": 20,
+        "cabinBaggage": 7,
+        "airlineLogo": "/assets/airlines/qatar-airways.webp",
         "skytrax": "Full Service",
         "rating": "5",
         "transit": null,
-        "transit_datetime": null
+        "transitDatetime": null
       },
-      "transit_datetime": "2025-08-03T10:00:00+07:00"
+      "transitDatetime": "2025-08-03T10:00:00+07:00"
     }
   },
-  "hotel_details": {
+  "hotelDetails": {
     "wisata": [],
     "makkah": {
       "id": "anjum-makkah",
       "city": "Makkah",
-      "hotel_name": "Anjum",
-      "star_rating": 5,
+      "hotelName": "Anjum",
+      "starRating": 5,
       "duration": 4,
       "images": [
         {
@@ -205,9 +205,9 @@
           "category": "Kamar Mandi"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/sGKqAQvur7mLvbXb9",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3714.112915726407!2d39.8171793!3d21.4248063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b47a578a4b%3A0x70a3d202df30a258!2sHotel%20Anjum!5e0!3m2!1sid!2sid!4v1737177264346!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/travel/search?q=anjum%20makkah%20hotel&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyE0Nnb0kyTVRDLWEzQTlORndFQUU4AkIJCViiMN8C0qNwQgkJWKIw3wLSo3A&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjg0ceO6O-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzIwNGI0N2E1NzhhNGI6MHg3MGEzZDIwMmRmMzBhMjU4EhoSFAoHCOgPEAwYDhIHCOgPEAwYDxgBMgIQAA%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/sGKqAQvur7mLvbXb9",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3714.112915726407!2d39.8171793!3d21.4248063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b47a578a4b%3A0x70a3d202df30a258!2sHotel%20Anjum!5e0!3m2!1sid!2sid!4v1737177264346!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/travel/search?q=anjum%20makkah%20hotel&g2lb=4814050%2C4893075%2C4965990%2C4969803%2C72277293%2C72302247%2C72317059%2C72406588%2C72414906%2C72421566%2C72471280%2C72472051%2C72481459%2C72485658%2C72499704%2C72614662%2C72616120%2C72619927%2C72647020%2C72648289%2C72658035%2C72686036%2C72749231%2C72760080%2C72808078&hl=id-ID&gl=id&cs=1&ssta=1&qs=CAEyE0Nnb0kyTVRDLWEzQTlORndFQUU4AkIJCViiMN8C0qNwQgkJWKIw3wLSo3A&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwjg0ceO6O-JAxUAAAAAHQAAAAAQBQ&ts=CAESCAoCCAMKAggDGkcKKRInMiUweDE1YzIwNGI0N2E1NzhhNGI6MHg3MGEzZDIwMmRmMzBhMjU4EhoSFAoHCOgPEAwYDhIHCOgPEAwYDxgBMgIQAA%3D%3D",
       "description": "Anjum Hotel Makkah adalah hotel mewah bintang 5 yang menawarkan kenyamanan luar biasa bagi para tamu yang berkunjung ke Makkah. Terletak strategis di kawasan Jabal Al Kaaba, hotel ini hanya berjarak beberapa menit dari Masjidil Haram, sehingga memudahkan tamu untuk melaksanakan ibadah. Dengan lebih dari 1.700 kamar dan suite yang dirancang dengan elegan, Anjum Hotel menyediakan fasilitas modern yang meliputi restoran berstandar internasional, area lounge yang luas, dan layanan concierge 24 jam. Setiap kamar dilengkapi dengan pemandangan yang menakjubkan ke arah kota Makkah atau Masjidil Haram, menciptakan suasana yang damai dan spiritual. Hotel ini juga menawarkan berbagai pilihan kuliner dengan menu lokal dan internasional, serta layanan kelas dunia yang ramah untuk memastikan pengalaman menginap yang nyaman dan tak terlupakan.",
       "facilities": [
         "AC",
@@ -218,21 +218,21 @@
         "Kamar Mandi Dalam",
         "Ramah Disabilitas"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "Jl. Umm Al Qura Jabal Al Kaaba, Makkah 21955 Arab Saudi",
-      "distance_to_landmark": 500,
+      "distanceToLandmark": 500,
       "landmark": "Masjidil Haram",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     },
     "madinah": {
       "id": "al-ritz-madinah",
       "city": "Madinah",
-      "hotel_name": "Al Ritz Madinah",
-      "star_rating": 4,
+      "hotelName": "Al Ritz Madinah",
+      "starRating": 4,
       "duration": 3,
       "images": [
         {
@@ -261,9 +261,9 @@
           "category": "Kamar"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/Dwr3cfz57H3BUhXh8",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.351283133305!2d39.607872775358544!3d24.473282578184076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf6b2de7b6f1%3A0x5b920ed28f900004!2sAl%20Ritz%20Al%20Madina%20Hotel!5e0!3m2!1sid!2sid!4v1737477210269!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/maps/place/Al+Ritz+Al+Madina+Hotel/@24.4732826,39.6078728,17z/data=!4m11!3m10!1s0x15bdbf6b2de7b6f1:0x5b920ed28f900004!5m2!4m1!1i2!8m2!3d24.4732826!4d39.6104477!9m1!1b1!16s%2Fg%2F11t6xp7y30?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/Dwr3cfz57H3BUhXh8",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.351283133305!2d39.607872775358544!3d24.473282578184076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf6b2de7b6f1%3A0x5b920ed28f900004!2sAl%20Ritz%20Al%20Madina%20Hotel!5e0!3m2!1sid!2sid!4v1737477210269!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/maps/place/Al+Ritz+Al+Madina+Hotel/@24.4732826,39.6078728,17z/data=!4m11!3m10!1s0x15bdbf6b2de7b6f1:0x5b920ed28f900004!5m2!4m1!1i2!8m2!3d24.4732826!4d39.6104477!9m1!1b1!16s%2Fg%2F11t6xp7y30?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
       "description": "Al Ritz Al Madinah adalah hotel bintang 4 yang berlokasi kurang dari 150 meter dari Masjid Nabawi, menawarkan akses mudah bagi para tamu yang ingin beribadah. Hotel ini menyediakan kamar dan suite ber-AC yang dilengkapi dengan sofa, TV satelit, minibar, brankas, serta fasilitas membuat teh dan kopi. Kamar mandi pribadinya dilengkapi dengan shower dan pengering rambut. Fasilitas hotel mencakup resepsionis 24 jam yang menawarkan layanan binatu dan menyetrika, serta akses Wi-Fi di seluruh area akomodasi. Terdapat dua restoran di tempat, yaitu Al Sukariya dan Al Andalusia, yang menyajikan masakan internasional dan oriental. Dengan lokasinya yang strategis dan fasilitas lengkap, Al Ritz Al Madinah menjadi pilihan ideal bagi para peziarah yang mengunjungi kota suci Madinah.",
       "facilities": [
         "AC",
@@ -274,18 +274,18 @@
         "Kamar Mandi Dalam",
         "Ramah Disabilitas"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "PO Box 4517, Central area , Babul Majeed , 20012 Madinah, Arab Saudi",
-      "distance_to_landmark": 150,
+      "distanceToLandmark": 150,
       "landmark": "Masjid Nabawi",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     }
   },
-  "bus_details": {
+  "busDetails": {
     "images": [
       {
         "id": "1",
@@ -305,8 +305,8 @@
     ],
     "id": "saptco-reguler",
     "provider": "Saptco",
-    "bus_type": "Economy-Class",
-    "seat_amount": 45
+    "busType": "Economy-Class",
+    "seatAmount": 45
   },
   "promos": [
     {
@@ -366,7 +366,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Al Ritz Madinah"
+              "hotelName": "Al Ritz Madinah"
             },
             {
               "id": "3",
@@ -405,7 +405,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Anjum"
+              "hotelName": "Anjum"
             },
             {
               "id": "3",

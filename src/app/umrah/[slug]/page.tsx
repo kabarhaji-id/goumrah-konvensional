@@ -17,7 +17,7 @@ import OtherPackagesSection from "@/section/package-detail/other-packages-sectio
 
 import { Metadata } from "next";
 import { UmrahPackage } from "@/types/package-details";
-import { packageDetailData } from "@/data/package-details";
+import { packageDetailData } from "@/data/packages";
 
 // --- Metadata for SEO Optimization
 export const generateMetadata = async ({
@@ -49,7 +49,6 @@ export default async function DetailPage({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  // const selectedPackage = packageDetailData.find((pkg) => pkgslug === Number(id));
   const resolvedParams = await params;
   const detail = packageDetailData.find(
     (det: UmrahPackage) => det.id === resolvedParams.slug,
@@ -70,12 +69,12 @@ export default async function DetailPage({
 
           <PricingSection packageData={detail} />
 
-          <FlightSection dataFlight={detail.flight_details} />
+          <FlightSection dataFlight={detail.flightDetails} />
 
-          <HotelSection dataHotel={detail.hotel_details} />
+          <HotelSection dataHotel={detail.hotelDetails} />
 
           <TransportationSection
-            dataTransportation={detail.bus_details}
+            dataTransportation={detail.busDetails}
             category={detail.category}
           />
 
@@ -93,7 +92,7 @@ export default async function DetailPage({
 
           <Footer />
 
-          <BottomNavigationDetail orderUrl={detail.order_url} />
+          <BottomNavigationDetail orderUrl={detail.orderUrl} />
         </main>
       </>
     );
@@ -102,6 +101,7 @@ export default async function DetailPage({
   return <NotFound />;
 }
 
+// NOTE: Activate this when the API is ready and remove the code above
 // --- Method: Hit API
 // export default async function DetailPage({
 //   params,
@@ -134,12 +134,12 @@ export default async function DetailPage({
 
 //             <PricingSection packageData={detail.data} />
 
-//             <FlightSection dataFlight={detail.data.flight_details} />
+//             <FlightSection dataFlight={detail.data.flightDetails} />
 
-//             <HotelSection dataHotel={detail.data.hotel_details} />
+//             <HotelSection dataHotel={detail.data.hotelDetails} />
 
 //             <TransportationSection
-//               dataTransportation={detail.data.bus_details}
+//               dataTransportation={detail.data.busDetails}
 //               category={detail.data.category}
 //             />
 
@@ -159,7 +159,7 @@ export default async function DetailPage({
 
 //             <Footer />
 
-//             <BottomNavigationDetail orderUrl={detail.data.order_url} />
+//             <BottomNavigationDetail orderUrl={detail.data.orderUrl} />
 //           </main>
 //         </>
 //       );

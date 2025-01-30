@@ -2,36 +2,36 @@ export type PackageCategory = "Silver" | "Gold" | "Platinum" | "Luxury";
 export type PackageType = "Plus" | "Reguler";
 
 export interface Flight {
-  wisata_flight: FlightDetail[];
-  departure_flight: FlightDetail;
-  return_flight: FlightDetail;
+  wisataFlight: FlightDetail[];
+  departureFlight: FlightDetail;
+  returnFlight: FlightDetail;
 }
 
 export interface FlightDetail {
-  flight_number?: string;
+  flightNumber?: string;
   duration?: number;
-  airport_name_departure: string;
-  airport_terminal_departure?: string;
-  airport_code_departure: string;
-  airport_city_departure: string;
-  airport_name_arrival: string;
-  airport_terminal_arrival?: string;
-  airport_code_arrival: string;
-  airport_city_arrival: string;
-  departure_datetime?: string;
-  departure_arrivaltime?: string;
+  airportNameDeparture: string;
+  airportTerminalDeparture?: string;
+  airportCodeDeparture: string;
+  airportCityDeparture: string;
+  airportNameArrival: string;
+  airportTerminalArrival?: string;
+  airportCodeArrival: string;
+  airportCityArrival: string;
+  departureDatetime?: string;
+  departureArrivalTime?: string;
   class: string;
-  flight_type: "Direct" | "Transit";
+  flightType: "Direct" | "Transit";
   airline: string;
-  aircraft_type?: string;
-  seat_layout?: string;
-  baggage_allowance: number;
-  cabin_baggage: number;
-  airline_logo: string;
+  aircraftType?: string;
+  seatLayout?: string;
+  baggageAllowance: number;
+  cabinBaggage: number;
+  airlineLogo: string;
   skytrax?: "Low Cost" | "Full Service";
   rating?: string;
   transit?: FlightDetail;
-  transit_datetime?: string;
+  transitDatetime?: string;
 }
 
 export interface Hotel {
@@ -43,24 +43,24 @@ export interface Hotel {
 export interface HotelDetail {
   id: string;
   city: string;
-  hotel_name: string;
-  star_rating: number;
+  hotelName: string;
+  starRating: number;
   duration?: number;
   images: Images[];
-  google_maps_link_noembed: string;
-  google_maps_link: string;
-  google_review_link: string;
+  gmapUrlNoembed: string;
+  gmapUrl: string;
+  googleReviewUrl: string;
   description: string;
   facilities: string[];
-  check_in_time?: string;
-  check_out_time?: string;
+  checkIn?: string;
+  checkOut?: string;
   address: string;
-  distance_to_landmark: number;
-  landmark: string;
+  distanceToLandmark?: number;
+  landmark?: string;
   isShuttleBus?: boolean;
-  food_type: string;
-  food_amount?: number;
-  food_menu?: string;
+  foodType: string;
+  foodAmount?: number;
+  foodMenu?: string;
 }
 
 export interface Images {
@@ -72,8 +72,8 @@ export interface Images {
 export interface BusDetail {
   id: string;
   provider: string;
-  bus_type: string;
-  seat_amount: number;
+  busType: string;
+  seatAmount: number;
   images: Images[];
 }
 
@@ -123,7 +123,7 @@ export interface ItineraryDays {
   description: string;
 }
 
-interface ItineraryActivityWidgets {
+export interface ItineraryActivityWidgets {
   id: string;
   type: "Activity";
   title: string;
@@ -131,19 +131,19 @@ interface ItineraryActivityWidgets {
   images: string[];
 }
 
-interface ItineraryHotelWidgets {
+export interface ItineraryHotelWidgets {
   id: string;
   type: "Hotel";
-  hotel_name: string;
+  hotelName: string;
 }
 
-interface ItineraryInformationWidgets {
+export interface ItineraryInformationWidgets {
   id: string;
   type: "Information";
   description: string;
 }
 
-interface ItineraryTransportWidgets {
+export interface ItineraryTransportWidgets {
   id: string;
   type: "Transport";
   transportWith: string;
@@ -151,7 +151,7 @@ interface ItineraryTransportWidgets {
   to: string;
 }
 
-interface ItineraryRecommendedWidgets {
+export interface ItineraryRecommendedWidgets {
   id: string;
   type: "Recommended";
   description: string;
@@ -166,15 +166,14 @@ export interface UmrahPackage {
   thumbnail: string;
   season: string;
   isFastTrain: boolean;
-  city_departure: DepartureCityDetail[];
-  duration: string;
-  package: string;
-  down_payment: number;
-  order_url: string;
-  flight_details: Flight;
-  hotel_details: Hotel;
-  bus_details: BusDetail;
-  departure_date: DepartureDateDetail[];
+  cityDeparture: DepartureCityDetail[];
+  duration: number;
+  downPayment: number;
+  orderUrl: string;
+  flightDetails: Flight;
+  hotelDetails: Hotel;
+  busDetails: BusDetail;
+  departureDate: DepartureDateDetail[];
   doublePrice: number;
   triplePrice: number;
   quadPrice: number;

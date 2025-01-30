@@ -96,7 +96,7 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
                 <div className="flex items-center gap-1">
                   <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                   <span className="text-xs font-semibold leading-[18px] text-primary">
-                    {dataPackage.duration}
+                    {dataPackage.duration} Hari
                   </span>
                 </div>
 
@@ -132,8 +132,7 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             ) : (
               <span className="text-xs font-medium opacity-80">
                 {moment(
-                  dataPackage.flight_details.departure_flight
-                    .departure_datetime,
+                  dataPackage.flightDetails.departureFlight.departureDatetime,
                 ).format("DD MMMM YYYY")}
               </span>
             )}

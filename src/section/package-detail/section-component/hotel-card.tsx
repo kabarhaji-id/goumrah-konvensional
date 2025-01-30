@@ -97,7 +97,7 @@ const HotelCard = ({
                         width={314}
                         height={236}
                         src={imageHotel.src}
-                        alt={`image-${dataHotel.hotel_name}-${index}`}
+                        alt={`image-${dataHotel.hotelName}-${index}`}
                         className="h-[236px] object-cover"
                       />
 
@@ -120,24 +120,24 @@ const HotelCard = ({
         ) : (
           <div className="!mt-0 flex flex-col gap-3 px-4 py-2 text-primary-foreground">
             <div className="flex flex-col gap-1.5">
-              <Rating totalStars={dataHotel.star_rating} />
+              <Rating totalStars={dataHotel.starRating} />
               <div className="flex flex-col gap-1">
                 <span className="text-base font-semibold">
-                  {dataHotel.hotel_name}
+                  {dataHotel.hotelName}
                 </span>
                 <div className="flex gap-0.5">
-                  {dataHotel.check_in_time && dataHotel.check_out_time && (
+                  {dataHotel.checkIn && dataHotel.checkOut && (
                     <span className="text-xs">
-                      {moment(dataHotel.check_in_time).format("DD MMMM YYYY")} ∙
+                      {moment(dataHotel.checkIn).format("DD MMMM YYYY")} ∙
                     </span>
                   )}
                   {dataHotel.duration && (
                     <span className="text-xs">
                       {" "}
-                      {dataHotel.check_in_time && dataHotel.check_out_time
+                      {dataHotel.checkIn && dataHotel.checkOut
                         ? calculateDaysAndNights(
-                            dataHotel.check_in_time,
-                            dataHotel.check_out_time,
+                            dataHotel.checkIn,
+                            dataHotel.checkOut,
                           )
                         : `${dataHotel.duration} hari ${dataHotel.duration} malam`}
                     </span>
@@ -149,17 +149,21 @@ const HotelCard = ({
               <CustomMapPinnedIcon className="h-4 w-4 flex-shrink-0" />
               {dataHotel.city === "Makkah" && (
                 <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
-                  {dataHotel.distance_to_landmark > 1000
-                    ? "Shuttle Bus 24jam ke Masjidil Haram"
-                    : `${convertDistance(dataHotel.distance_to_landmark)} ke ${dataHotel.landmark}`}
+                  {dataHotel.distanceToLandmark
+                    ? dataHotel.distanceToLandmark > 1000
+                      ? "Shuttle Bus 24jam ke Masjidil Haram"
+                      : `${convertDistance(dataHotel.distanceToLandmark)} ke ${dataHotel.landmark}`
+                    : ""}
                 </span>
               )}
 
               {dataHotel.city === "Madinah" && (
                 <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
-                  {dataHotel.distance_to_landmark > 1000
-                    ? "Shuttle Bus 24jam ke Masjidil Haram"
-                    : `${convertDistance(dataHotel.distance_to_landmark)} ke ${dataHotel.landmark}`}
+                  {dataHotel.distanceToLandmark
+                    ? dataHotel.distanceToLandmark > 1000
+                      ? "Shuttle Bus 24jam ke Masjidil Haram"
+                      : `${convertDistance(dataHotel.distanceToLandmark)} ke ${dataHotel.landmark}`
+                    : ""}
                 </span>
               )}
 

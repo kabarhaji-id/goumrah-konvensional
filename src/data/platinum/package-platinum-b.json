@@ -6,7 +6,7 @@
   "category": "Platinum",
   "season": "NON RAMADHAN",
   "isFastTrain": true,
-  "city_departure": [
+  "cityDeparture": [
     {
       "city": "Jakarta",
       "route": "CGK-JED"
@@ -14,9 +14,9 @@
   ],
   "duration": "9 Hari",
   "package": "Platinum",
-  "down_payment": 10,
-  "order_url": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Ternyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
-  "departure_date": [
+  "downPayment": 10,
+  "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Ternyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
+  "departureDate": [
     {
       "date": "2025-02-01T10:00:00+07:00",
       "status": "expired"
@@ -70,68 +70,68 @@
   "tripleFinalPrice": 41900000,
   "doubleFinalPrice": 45900000,
   "infantFinalPrice": null,
-  "flight_details": {
-    "wisata_flight": [],
-    "departure_flight": {
-      "flight_number": null,
+  "flightDetails": {
+    "wisataFlights": [],
+    "departureFlights": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "Soekarno-Hatta International Airport",
-      "airport_terminal_departure": "Terminal 3 Internasional",
-      "airport_code_departure": "CGK",
-      "airport_city_departure": "Jakarta",
-      "airport_name_arrival": "King Abdulaziz International Airport",
-      "airport_terminal_arrival": null,
-      "airport_code_arrival": "JED",
-      "airport_city_arrival": "Jeddah",
-      "departure_datetime": "2025-07-05T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "Soekarno-Hatta International Airport",
+      "airportTerminalDeparture": "Terminal 3 Internasional",
+      "airportCodeDeparture": "CGK",
+      "airportCityDeparture": "Jakarta",
+      "airportNameArrival": "King Abdulaziz International Airport",
+      "airportTerminalArrival": null,
+      "airportCodeArrival": "JED",
+      "airportCityArrival": "Jeddah",
+      "departureDatetime": "2025-07-05T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Direct",
+      "flightType": "Direct",
       "airline": "Garuda Indonesia",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 30,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/garuda-indonesia.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 30,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/garuda-indonesia.webp",
       "skytrax": "Full Service",
       "rating": "5",
       "transit": null,
-      "transit_datetime": null
+      "transitDatetime": null
     },
-    "return_flight": {
-      "flight_number": null,
+    "returnFlight": {
+      "flightNumber": null,
       "duration": null,
-      "airport_name_departure": "King Abdulaziz International Airport",
-      "airport_terminal_departure": null,
-      "airport_code_departure": "JED",
-      "airport_city_departure": "Jeddah",
-      "airport_name_arrival": "Soekarno-Hatta International Airport",
-      "airport_terminal_arrival": "Terminal 3 Internasional",
-      "airport_code_arrival": "CGK",
-      "airport_city_arrival": "Jakarta",
-      "departure_datetime": "2025-07-12T10:00:00+07:00",
-      "departure_arrivaltime": null,
+      "airportNameDeparture": "King Abdulaziz International Airport",
+      "airportTerminalDeparture": null,
+      "airportCodeDeparture": "JED",
+      "airportCityDeparture": "Jeddah",
+      "airportNameArrival": "Soekarno-Hatta International Airport",
+      "airportTerminalArrival": "Terminal 3 Internasional",
+      "airportCodeArrival": "CGK",
+      "airportCityArrival": "Jakarta",
+      "departureDatetime": "2025-07-12T10:00:00+07:00",
+      "departureArrivalTime": null,
       "class": "Ekonomi",
-      "flight_type": "Direct",
+      "flightType": "Direct",
       "airline": "Garuda Indonesia",
-      "aircraft_type": "Airbus",
-      "seat_layout": "3-3-3",
-      "baggage_allowance": 30,
-      "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/garuda-indonesia.webp",
+      "aircraftType": "Airbus",
+      "seatLayout": "3-3-3",
+      "baggageAllowance": 30,
+      "cabinBaggage": 7,
+      "airlineLogo": "/assets/airlines/garuda-indonesia.webp",
       "skytrax": "Full Service",
       "rating": "5",
       "transit": null,
-      "transit_datetime": null
+      "transitDatetime": null
     }
   },
-  "hotel_details": {
+  "hotelDetails": {
     "wisata": [],
     "makkah": {
       "id": "al-marwa-rayhan-by-rotana",
       "city": "Makkah",
-      "hotel_name": "Marwa Rayhan by Rotana",
-      "star_rating": 5,
+      "hotelName": "Marwa Rayhan by Rotana",
+      "starRating": 5,
       "duration": 4,
       "images": [
         {
@@ -160,9 +160,9 @@
           "category": "Kamar"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/K7Ahz2GY36DDfsVj7",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3714.2550470206857!2d39.8234328!3d21.4192179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b7bc383e25%3A0x92948cad595dae21!2sAl%20Marwa%20Rayhaan%20by%20Rotana!5e0!3m2!1sid!2sid!4v1737598569111!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/maps/place/Al+Marwa+Rayhaan+by+Rotana/@21.4192179,39.8234328,17z/data=!4m11!3m10!1s0x15c204b7bc383e25:0x92948cad595dae21!5m2!4m1!1i2!8m2!3d21.4192179!4d39.8260077!9m1!1b1!16s%2Fg%2F1tg584_j?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/K7Ahz2GY36DDfsVj7",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3714.2550470206857!2d39.8234328!3d21.4192179!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c204b7bc383e25%3A0x92948cad595dae21!2sAl%20Marwa%20Rayhaan%20by%20Rotana!5e0!3m2!1sid!2sid!4v1737598569111!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/maps/place/Al+Marwa+Rayhaan+by+Rotana/@21.4192179,39.8234328,17z/data=!4m11!3m10!1s0x15c204b7bc383e25:0x92948cad595dae21!5m2!4m1!1i2!8m2!3d21.4192179!4d39.8260077!9m1!1b1!16s%2Fg%2F1tg584_j?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
       "description": "Al Marwa Rayhaan by Rotana adalah hotel bintang 5 yang mewah dan elegan yang terletak di dalam kompleks Abraj Al Bait di Mekah, Arab Saudi. Hotel ini menawarkan lokasi strategis hanya beberapa langkah dari Masjidil Haram, memberikan kemudahan luar biasa bagi para tamu yang ingin melaksanakan ibadah. Kamar dan suite hotel ini dirancang dengan gaya modern yang dilengkapi dengan fasilitas premium seperti TV layar datar, Wi-Fi, dan pemandangan spektakuler Ka'bah atau kota Mekah. Al Marwa Rayhaan juga menyediakan berbagai pilihan kuliner internasional dan lokal di restoran hotel yang mewah. Dengan fasilitas lengkap, pelayanan kelas dunia, dan suasana nyaman, hotel ini adalah pilihan sempurna bagi para peziarah yang mencari pengalaman menginap yang tak terlupakan di Mekah.",
       "facilities": [
         "AC",
@@ -174,21 +174,21 @@
         "Kamar Mandi Dalam",
         "Resepsionis 24/7"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "Jl. Ajyad Abraj Al Bait, Makkah 24231, Arab Saudi",
-      "distance_to_landmark": 320,
+      "distanceToLandmark": 320,
       "landmark": "Masjidil Haram",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     },
     "madinah": {
       "id": "maden",
       "city": "Madinah",
-      "hotel_name": "Maden Taibah",
-      "star_rating": 5,
+      "hotelName": "Maden Taibah",
+      "starRating": 5,
       "duration": 3,
       "images": [
         {
@@ -242,9 +242,9 @@
           "category": "Kamar"
         }
       ],
-      "google_maps_link_noembed": "https://maps.app.goo.gl/VJhjM5HF3g5NgCSm7",
-      "google_maps_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3631.3646129571857!2d39.6081403!3d24.4728205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf874ef6eb77%3A0x2c2a36aa9d3e1e4a!2sMaden%20Hotel!5e0!3m2!1sid!2sid!4v1737597539585!5m2!1sid!2sid",
-      "google_review_link": "https://www.google.com/maps/place/Maden+Hotel/@24.4728205,39.6081403,17z/data=!4m11!3m10!1s0x15bdbf874ef6eb77:0x2c2a36aa9d3e1e4a!5m2!4m1!1i2!8m2!3d24.4728205!4d39.6107152!9m1!1b1!16s%2Fg%2F11ptw1cznv?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
+      "gmapUrlNoembed": "https://maps.app.goo.gl/VJhjM5HF3g5NgCSm7",
+      "gmapUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3631.3646129571857!2d39.6081403!3d24.4728205!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf874ef6eb77%3A0x2c2a36aa9d3e1e4a!2sMaden%20Hotel!5e0!3m2!1sid!2sid!4v1737597539585!5m2!1sid!2sid",
+      "googleReviewUrl": "https://www.google.com/maps/place/Maden+Hotel/@24.4728205,39.6081403,17z/data=!4m11!3m10!1s0x15bdbf874ef6eb77:0x2c2a36aa9d3e1e4a!5m2!4m1!1i2!8m2!3d24.4728205!4d39.6107152!9m1!1b1!16s%2Fg%2F11ptw1cznv?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D",
       "description": "MADEN Hotel adalah hotel bintang 5 yang terletak di Madinah, Arab Saudi, hanya 100 meter dari Al Haram, menjadikannya pilihan ideal bagi para tamu yang ingin mengunjungi Masjid Nabawi. Hotel ini menawarkan kamar-kamar klasik dengan lantai berkarpet mewah, dilengkapi dengan AC, TV layar datar, minibar, dan akses Wi-Fi gratis. Beberapa kamar bahkan menawarkan pemandangan Al Masjed Al Nabawi. Para tamu dapat menikmati hidangan di dua restoran hotel yang menyajikan berbagai pilihan kuliner. Dengan lokasinya yang strategis dan fasilitas yang lengkap, MADEN Hotel memastikan pengalaman menginap yang nyaman dan menyenangkan bagi para tamu.",
       "facilities": [
         "AC",
@@ -256,18 +256,18 @@
         "Resepsionis 24/7",
         "Gym"
       ],
-      "check_in_time": null,
-      "check_out_time": null,
+      "checkIn": null,
+      "checkOut": null,
       "address": "Jl. King Fahd, Bada'ah, Madinah 41441, Arab Saudi",
-      "distance_to_landmark": 100,
+      "distanceToLandmark": 100,
       "landmark": "Masjid Nabawi",
       "isShuttleBus": false,
-      "food_type": "Prasmanan",
-      "food_amount": 3,
-      "food_menu": "Far East"
+      "foodType": "Prasmanan",
+      "foodAmount": 3,
+      "foodMenu": "Far East"
     }
   },
-  "bus_details": {
+  "busDetails": {
     "images": [
       {
         "id": "1",
@@ -287,8 +287,8 @@
     ],
     "id": "saptco-reguler",
     "provider": "Saptco",
-    "bus_type": "VVIP-Class",
-    "seat_amount": 20
+    "busType": "VVIP-Class",
+    "seatAmount": 20
   },
   "promos": [
     {
@@ -341,7 +341,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Maden Taibah"
+              "hotelName": "Maden Taibah"
             },
             {
               "id": "3",
@@ -380,7 +380,7 @@
             {
               "id": "2",
               "type": "Hotel",
-              "hotel_name": "Al-Marwa Rayhan by Rotana"
+              "hotelName": "Al-Marwa Rayhan by Rotana"
             },
             {
               "id": "3",

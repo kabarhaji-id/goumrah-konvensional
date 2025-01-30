@@ -1,4 +1,5 @@
 import React from "react";
+import HotelCard from "./section-component/hotel-card";
 import moment from "moment";
 import "moment/locale/id";
 
@@ -11,7 +12,6 @@ import {
   SectionTitle,
 } from "@/components/layout/section";
 import { Hotel } from "@/types/package-details";
-import HotelCard from "./section-component/hotel-card";
 
 const HotelSection = ({ dataHotel }: { dataHotel: Hotel }) => {
   moment.locale("id");

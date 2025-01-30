@@ -39,7 +39,7 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
             <Button size="lg" className="z-50 w-full px-6" asChild>
               <Link
                 href={`${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}${encodeURIComponent(
-                  "Assalamu'alaikum Warahmatullahi Wabarakatuh. Saya tertarik dengan paket *Umrah Plus Thaif* yang saya lihat di website Anda. Boleh saya tahu lebih lanjut tentang jadwal, fasilitas, dan biayanya? Terima kasih!",
+                  "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
                 )}`}
                 target="_blank"
               >

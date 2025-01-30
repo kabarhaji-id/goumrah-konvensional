@@ -2910,6 +2910,219 @@ export const packageDetailData: UmrahPackage[] = [
     hotel_details: {
       wisata: [
         {
+          id: "anemon",
+          city: "Bursa",
+          hotel_name: "Anemon Hotel",
+          star_rating: 4,
+          duration: undefined,
+          images: [
+            {
+              id: "1",
+              src: "/assets/image/hotel/wisata/anemon-turkey/exterior-anemon-1.jpg",
+              category: "Eksterior",
+            },
+            {
+              id: "2",
+              src: "/assets/image/hotel/wisata/anemon-turkey/lobby-anemon-1.jpg",
+              category: "Lobby",
+            },
+            {
+              id: "3",
+              src: "/assets/image/hotel/wisata/anemon-turkey/bedroom-anemon-1.jpg",
+              category: "Kamar",
+            },
+            {
+              id: "4",
+              src: "/assets/image/hotel/wisata/anemon-turkey/bedroom-anemon-2.jpg",
+              category: "Kamar",
+            },
+          ],
+          google_maps_link_noembed: "https://maps.app.goo.gl/VPwkAMwACq4P24W7A",
+          google_maps_link:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.3380125347885!2d29.01488386094569!3d40.20154348013802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca1571c6b073e5%3A0xa5206c90f769e5f9!2sAnemon%20Bursa%20Otel!5e0!3m2!1sid!2sid!4v1738215377923!5m2!1sid!2sid",
+          google_review_link:
+            "https://www.google.com/maps/place/Anemon+Bursa+Otel/@40.2015435,29.0148839,17z/data=!4m16!1m2!2m1!1sanemon+hotel+bursa!3m12!1s0x14ca1571c6b073e5:0xa5206c90f769e5f9!5m3!1s2025-04-19!4m1!1i2!8m2!3d40.2015436!4d29.0193902!9m1!1b1!15sChJhbmVtb24gaG90ZWwgYnVyc2EiA4gBAZIBBWhvdGVs4AEA!16s%2Fg%2F11vrkk3r68?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+          description:
+            "Anemon Bursa Hotel adalah akomodasi elegan yang terletak di kota Bursa, Turki, menawarkan kenyamanan dan kemewahan bagi para tamu yang mencari pengalaman menginap istimewa. Hotel ini memiliki desain modern dengan sentuhan klasik, menciptakan suasana yang hangat dan nyaman. Fasilitas yang tersedia mencakup kamar yang luas dengan dekorasi elegan, restoran yang menyajikan hidangan khas Turki dan internasional, serta pusat kebugaran dan spa untuk relaksasi. Berlokasi strategis, Anemon Bursa Hotel memberikan akses mudah ke berbagai destinasi wisata populer di Bursa, termasuk situs bersejarah dan pusat perbelanjaan, menjadikannya pilihan ideal bagi wisatawan bisnis maupun liburan.",
+          facilities: [
+            "AC",
+            "WiFi",
+            "TV",
+            "Restoran",
+            "Layanan Kamar",
+            "Kamar Mandi Dalam",
+          ],
+          check_in_time: undefined,
+          check_out_time: undefined,
+          address: "1. Murat Cad. No.20, Bursa 16090 Turki",
+          distance_to_landmark: 39300,
+          landmark: "Bandara Internasional Istanbul",
+          isShuttleBus: false,
+          food_type: "Prasmanan",
+          food_amount: undefined,
+          food_menu: undefined,
+        },
+        {
+          id: "le-bleu",
+          city: "Kusadasi",
+          hotel_name: "Le Bleu Hotel",
+          star_rating: 5,
+          duration: undefined,
+          images: [
+            {
+              id: "1",
+              src: "/assets/image/hotel/wisata/turkey/le-bleu/exterior-le-bleu-1.jpg",
+              category: "Eksterior",
+            },
+            {
+              id: "2",
+              src: "/assets/image/hotel/wisata/turkey/le-bleu/exterior-le-bleu-2.jpg",
+              category: "Eksterior",
+            },
+            {
+              id: "3",
+              src: "/assets/image/hotel/wisata/turkey/le-bleu/exterior-le-bleu-3.webp",
+              category: "Eksterior",
+            },
+            {
+              id: "4",
+              src: "/assets/image/hotel/wisata/turkey/le-bleu/bedroom-le-bleu-1.jpg",
+              category: "Kamar",
+            },
+            {
+              id: "5",
+              src: "/assets/image/hotel/wisata/turkey/le-bleu/bedroom-le-bleu-2.jpg",
+              category: "Kamar",
+            },
+          ],
+          google_maps_link_noembed: "https://maps.app.goo.gl/megJPjpY8cLuBtZq7",
+          google_maps_link:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.8654538441915!2d27.234704776871954!3d37.84003557196912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bea8ec6867ded7%3A0xcdb84092b6a2d65e!2sLe%20Bleu%20Hotel%20%26%20Resort!5e0!3m2!1sid!2sid!4v1738217236157!5m2!1sid!2sid",
+          google_review_link:
+            "https://www.google.com/maps/place/Le+Bleu+Hotel+%26+Resort/@37.8400356,27.2347048,17z/data=!4m12!3m11!1s0x14bea8ec6867ded7:0xcdb84092b6a2d65e!5m3!1s2025-04-19!4m1!1i2!8m2!3d37.8400356!4d27.2372797!9m1!1b1!16s%2Fg%2F1q6b1qz95?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+          description:
+            "Le Bleu Hotel & Resort Kusadasi adalah hotel bintang lima yang menawarkan pengalaman menginap mewah di tepi Laut Aegea. Terletak di kawasan pesisir yang eksklusif, hotel ini memiliki akses langsung ke pantai pribadi dengan pemandangan laut yang menakjubkan. Didesain dengan gaya modern dan elegan, Le Bleu menyediakan berbagai fasilitas premium, termasuk kolam renang infinity, spa, pusat kebugaran, serta berbagai pilihan restoran yang menyajikan hidangan khas Turki dan internasional. Setiap kamar didesain dengan kenyamanan maksimal, dilengkapi dengan balkon pribadi yang menghadap ke laut atau taman tropis. Hotel ini juga menawarkan berbagai aktivitas rekreasi, seperti olahraga air, klub anak-anak, dan hiburan malam. Dengan lokasinya yang strategis dekat dengan pusat kota Kusadasi dan situs bersejarah seperti Ephesus, Le Bleu Hotel & Resort menjadi pilihan ideal bagi wisatawan yang mencari kombinasi antara kemewahan, relaksasi, dan eksplorasi budaya di Turki.",
+          facilities: [
+            "AC",
+            "WiFi",
+            "TV",
+            "Restoran",
+            "Layanan Kamar",
+            "Kolam Renang",
+            "Kamar Mandi Dalam",
+          ],
+          check_in_time: undefined,
+          check_out_time: undefined,
+          address:
+            "Kadinlar Denizi Mevkii Haci Feyzullah Mah 17 Sok No 4 Kusadasi Aydin, 09400 Kusadasi, Turkey",
+          distance_to_landmark: 39300,
+          landmark: "Bandara Internasional Istanbul",
+          isShuttleBus: false,
+          food_type: "Prasmanan",
+          food_amount: undefined,
+          food_menu: undefined,
+        },
+        {
+          id: "pam-thermal",
+          city: "Pamukkale",
+          hotel_name: "Pam Thermal",
+          star_rating: 5,
+          duration: undefined,
+          images: [
+            {
+              id: "1",
+              src: "/assets/image/hotel/wisata/turkey/pam-thermal/exterior-pam-thermal-1.jpg",
+              category: "Eksterior",
+            },
+            {
+              id: "2",
+              src: "/assets/image/hotel/wisata/turkey/pam-thermal/exterior-pam-thermal-2.jpg",
+              category: "Eksterior",
+            },
+            {
+              id: "3",
+              src: "/assets/image/hotel/wisata/turkey/pam-thermal/exterior-pam-thermal-1.jpg",
+              category: "Kamar",
+            },
+          ],
+          google_maps_link_noembed: "https://maps.app.goo.gl/snFu83uusiXyX7SFA",
+          google_maps_link:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.6201706602346!2d29.10737690000001!3d37.9626539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c73f0ae50d2199%3A0x1dbe50080af2f1b0!2sPam%20Thermal%20Hotel!5e0!3m2!1sid!2sid!4v1738216831639!5m2!1sid!2sid",
+          google_review_link:
+            "https://www.google.com/maps/place/Pam+Thermal+Hotel/@37.9626539,29.1073769,17z/data=!4m12!3m11!1s0x14c73f0ae50d2199:0x1dbe50080af2f1b0!5m3!1s2025-04-19!4m1!1i2!8m2!3d37.9626539!4d29.1073769!9m1!1b1!16s%2Fg%2F1tfn5vst?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+          description:
+            "Pam Thermal Hotel Pamukkale adalah hotel bintang lima yang menawarkan pengalaman menginap mewah dengan manfaat air panas alami khas Pamukkale. Terletak di kawasan Karahayit, hotel ini dikenal dengan kolam air panasnya yang kaya akan mineral, yang dipercaya memiliki khasiat penyembuhan bagi tubuh. Dikelilingi oleh pemandangan pegunungan dan alam hijau, hotel ini menyediakan fasilitas lengkap seperti spa, pusat kesehatan, sauna, serta kolam renang indoor dan outdoor. Setiap kamar dirancang dengan kenyamanan modern, dilengkapi dengan bathtub air panas alami, balkon pribadi, dan pemandangan indah sekitar. Restoran hotel menyajikan hidangan khas Turki dan internasional, menjadikan pengalaman menginap semakin berkesan. Dengan lokasinya yang dekat dengan situs bersejarah Hierapolis dan Travertine Pamukkale, Pam Thermal Hotel adalah pilihan ideal bagi wisatawan yang mencari ketenangan, relaksasi, dan eksplorasi budaya di Turki.",
+          facilities: [
+            "AC",
+            "WiFi",
+            "TV",
+            "Restoran",
+            "Layanan Kamar",
+            "Kolam Renang",
+            "Kamar Mandi Dalam",
+          ],
+          check_in_time: undefined,
+          check_out_time: undefined,
+          address:
+            "Karahayit, 120. Sağlik Sk No:5/1, 20190 Pamukkale/Denizli, Turki",
+          distance_to_landmark: 39300,
+          landmark: "Bandara Internasional Istanbul",
+          isShuttleBus: false,
+          food_type: "Prasmanan",
+          food_amount: undefined,
+          food_menu: undefined,
+        },
+        {
+          id: "double-tree-by-hilton",
+          city: "Cappadocia",
+          hotel_name: "DoubleTree by Hilton / 5*",
+          star_rating: 5,
+          duration: undefined,
+          images: [
+            {
+              id: "1",
+              src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
+              category: "Eksterior",
+            },
+            {
+              id: "2",
+              src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
+              category: "Kamar",
+            },
+            {
+              id: "3",
+              src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
+              category: "Kamar",
+            },
+          ],
+          google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
+          google_maps_link:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
+          google_review_link:
+            "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
+          description:
+            "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
+          facilities: [
+            "AC",
+            "WiFi",
+            "Kolam Renang",
+            "TV",
+            "Restoran",
+            "Layanan Kamar",
+            "Kamar Mandi Dalam",
+          ],
+          check_in_time: undefined,
+          check_out_time: undefined,
+          address:
+            "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
+          distance_to_landmark: 39300,
+          landmark: "Bandara Internasional Istanbul",
+          isShuttleBus: false,
+          food_type: "Prasmanan",
+          food_amount: undefined,
+          food_menu: undefined,
+        },
+        {
           id: "centro-residences-by-rotana",
           city: "Istanbul",
           hotel_name: "Centro Residences by Rotana / 4*",
@@ -2970,206 +3183,6 @@ export const packageDetailData: UmrahPackage[] = [
           food_amount: undefined,
           food_menu: undefined,
         },
-        {
-          id: "double-tree-by-hilton",
-          city: "Cappadocia",
-          hotel_name: "DoubleTree by Hilton / 5*",
-          star_rating: 5,
-          duration: undefined,
-          images: [
-            {
-              id: "1",
-              src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
-              category: "Eksterior",
-            },
-            {
-              id: "2",
-              src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
-              category: "Kamar",
-            },
-            {
-              id: "3",
-              src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
-              category: "Kamar",
-            },
-          ],
-          google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
-          google_maps_link:
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
-          google_review_link:
-            "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
-          description:
-            "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
-          facilities: [
-            "AC",
-            "WiFi",
-            "Kolam Renang",
-            "TV",
-            "Restoran",
-            "Layanan Kamar",
-            "Kamar Mandi Dalam",
-          ],
-          check_in_time: undefined,
-          check_out_time: undefined,
-          address:
-            "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
-          distance_to_landmark: 39300,
-          landmark: "Bandara Internasional Istanbul",
-          isShuttleBus: false,
-          food_type: "Prasmanan",
-          food_amount: undefined,
-          food_menu: undefined,
-        },
-        // {
-        //   id: "double-tree-by-hilton",
-        //   city: "Cappadocia",
-        //   hotel_name: "DoubleTree by Hilton / 5*",
-        //   star_rating: 5,
-        //   duration: undefined,
-        //   images: [
-        //     {
-        //       id: "1",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
-        //       category: "Eksterior",
-        //     },
-        //     {
-        //       id: "2",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
-        //       category: "Kamar",
-        //     },
-        //     {
-        //       id: "3",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
-        //       category: "Kamar",
-        //     },
-        //   ],
-        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
-        //   google_maps_link:
-        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
-        //   google_review_link:
-        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
-        //   description:
-        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
-        //   facilities: [
-        //     "AC",
-        //     "WiFi",
-        //     "Kolam Renang",
-        //     "TV",
-        //     "Restoran",
-        //     "Layanan Kamar",
-        //     "Kamar Mandi Dalam",
-        //   ],
-        //   check_in_time: undefined,
-        //   check_out_time: undefined,
-        //   address:
-        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
-        //   distance_to_landmark: 39300,
-        //   landmark: "Bandara Internasional Istanbul",
-        //   isShuttleBus: false,
-        //   food_type: "Prasmanan",
-        //   food_amount: undefined,
-        //   food_menu: undefined,
-        // },
-        // {
-        //   id: "double-tree-by-hilton",
-        //   city: "Cappadocia",
-        //   hotel_name: "DoubleTree by Hilton / 5*",
-        //   star_rating: 5,
-        //   duration: undefined,
-        //   images: [
-        //     {
-        //       id: "1",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
-        //       category: "Eksterior",
-        //     },
-        //     {
-        //       id: "2",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
-        //       category: "Kamar",
-        //     },
-        //     {
-        //       id: "3",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
-        //       category: "Kamar",
-        //     },
-        //   ],
-        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
-        //   google_maps_link:
-        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
-        //   google_review_link:
-        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
-        //   description:
-        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
-        //   facilities: [
-        //     "AC",
-        //     "WiFi",
-        //     "Kolam Renang",
-        //     "TV",
-        //     "Restoran",
-        //     "Layanan Kamar",
-        //     "Kamar Mandi Dalam",
-        //   ],
-        //   check_in_time: undefined,
-        //   check_out_time: undefined,
-        //   address:
-        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
-        //   distance_to_landmark: 39300,
-        //   landmark: "Bandara Internasional Istanbul",
-        //   isShuttleBus: false,
-        //   food_type: "Prasmanan",
-        //   food_amount: undefined,
-        //   food_menu: undefined,
-        // },
-        // {
-        //   id: "double-tree-by-hilton",
-        //   city: "Cappadocia",
-        //   hotel_name: "DoubleTree by Hilton / 5*",
-        //   star_rating: 5,
-        //   duration: undefined,
-        //   images: [
-        //     {
-        //       id: "1",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/exterior-doubletree-1.jpg",
-        //       category: "Eksterior",
-        //     },
-        //     {
-        //       id: "2",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-1.jpg",
-        //       category: "Kamar",
-        //     },
-        //     {
-        //       id: "3",
-        //       src: "/assets/image/hotel/wisata/doubletree-by-hilton/bedroom-doubletree-2.jpg",
-        //       category: "Kamar",
-        //     },
-        //   ],
-        //   google_maps_link_noembed: "https://maps.app.goo.gl/5gJChztf5kY7Mdc49",
-        //   google_maps_link:
-        //     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.1279209645477!2d34.82762701144287!3d38.7148719573357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152a67321f06cbc1%3A0xda73f7fff29123b6!2sDoubleTree%20by%20Hilton%20Hotel%20Avanos%20-%20Cappadocia!5e0!3m2!1sid!2sid!4v1737189678019!5m2!1sid!2sid",
-        //   google_review_link:
-        //     "https://www.google.com/maps/place/DoubleTree+by+Hilton+Hotel+Avanos+-+Cappadocia/@38.714872,34.827627,17z/data=!4m11!3m10!1s0x152a67321f06cbc1:0xda73f7fff29123b6!5m2!4m1!1i2!8m2!3d38.7148678!4d34.8302073!9m1!1b1!16s%2Fg%2F11b6j0h4zd?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D",
-        //   description:
-        //     "DoubleTree by Hilton Cappadocia adalah hotel mewah yang memadukan kenyamanan modern dengan keindahan khas kawasan Cappadocia. Terletak strategis di pusat wilayah yang terkenal dengan lanskap unik dan balon udaranya, hotel ini menawarkan pengalaman menginap yang luar biasa untuk liburan atau perjalanan bisnis. Dengan kamar-kamar yang luas dan elegan, tamu akan dimanjakan dengan fasilitas modern seperti Wi-Fi gratis, televisi layar datar, dan tempat tidur yang nyaman khas DoubleTree. Hotel ini juga dilengkapi dengan berbagai fasilitas premium, termasuk spa, pusat kebugaran, dan kolam renang dalam ruangan untuk relaksasi. Pilihan kuliner hotel mencakup restoran yang menyajikan hidangan lokal Turki dan internasional dengan cita rasa autentik. Pelayanan ramah dan perhatian pada detail menjadikan DoubleTree by Hilton Cappadocia pilihan sempurna untuk menikmati pesona Cappadocia dengan gaya dan kenyamanan.",
-        //   facilities: [
-        //     "AC",
-        //     "WiFi",
-        //     "Kolam Renang",
-        //     "TV",
-        //     "Restoran",
-        //     "Layanan Kamar",
-        //     "Kamar Mandi Dalam",
-        //   ],
-        //   check_in_time: undefined,
-        //   check_out_time: undefined,
-        //   address:
-        //     "Yeni Mah. Kizilirmak Cad. No 1, Avanos - Nevsehir, 50500, Türkiye",
-        //   distance_to_landmark: 39300,
-        //   landmark: "Bandara Internasional Istanbul",
-        //   isShuttleBus: false,
-        //   food_type: "Prasmanan",
-        //   food_amount: undefined,
-        //   food_menu: undefined,
-        // },
       ],
       makkah: {
         id: "anjum-makkah",

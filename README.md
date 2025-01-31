@@ -1,5 +1,3 @@
-# WEBSITE KONVENSIONAL ( goumrah.id )
-
 ## Introduction
 
 This project is a Next.js-based web application developed for users to order umrah packages by visiting our website and order it via WhatsApp
@@ -40,6 +38,8 @@ pnpm install
 Create an .env file in the root directory and configure the required environment variables:
 
 ```sh
+APP_QONTAK_ID=
+APP_QONTAK_CODE=
 NEXT_PUBLIC_API_URL=
 NEXT_PUBLIC_COLLECTION_ID_URL=
 NEXT_PUBLIC_API_TOKEN=

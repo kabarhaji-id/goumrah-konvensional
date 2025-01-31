@@ -87,13 +87,6 @@ const AffiliatesSection = () => {
           />
         ))}
       </Marquee>
-      {/* <Image
-        src="/assets/image/affiliate-bg.png"
-        alt="Affiliate's Background"
-        width={412}
-        height={192}
-        className="absolute -bottom-10 z-0 w-full max-w-screen-sm opacity-10"
-      /> */}
     </section>
   );
 };

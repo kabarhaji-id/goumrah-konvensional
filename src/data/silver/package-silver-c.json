@@ -12,8 +12,7 @@
       "route": "CGK-JED"
     }
   ],
-  "duration": "12 Hari",
-  "package": "Silver",
+  "duration": 12,
   "downPayment": 7,
   "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
   "departureDate": [
@@ -71,8 +70,8 @@
   "doubleFinalPrice": 29900000,
   "infantFinalPrice": null,
   "flightDetails": {
-    "wisataFlights": [],
-    "departureFlights": {
+    "wisataFlight": [],
+    "departureFlight": {
       "flightNumber": null,
       "duration": null,
       "airportNameDeparture": "Soekarno-Hatta International Airport",

@@ -11,6 +11,7 @@ import TestimonySection from "@/section/home/testimony";
 import AffiliatesSection from "@/section/home/affiliate";
 
 import { Metadata } from "next";
+import { getAllPackages } from "@/lib/fetcher/getPackages";
 
 // --- Metadata for SEO Optimization
 export const generateMetadata = async (): Promise<Metadata> => {
@@ -28,23 +29,22 @@ export const generateMetadata = async (): Promise<Metadata> => {
 };
 
 export default async function HomePage() {
-  // const packages = await getAllPackages();
+  const packages = await getAllPackages();
 
-  // if (packages.records) {
-  return (
-    <main>
-      <HeroSection />
-      {/* <IdealPackagesSection packages={packages.records} /> */}
-      <IdealPackagesSection />
-      <RecommendedPackagesSection />
-      <WhyChooseUsSection />
-      <GallerySection />
-      <AffiliatesSection />
-      <TestimonySection />
-      <AboutUsSection />
-      <Footer withCSbanner />
-      <BottomNavigation />
-    </main>
-  );
-  // }
+  if (packages.records) {
+    return (
+      <main>
+        <HeroSection />
+        <IdealPackagesSection packages={packages.records} />
+        <RecommendedPackagesSection packages={packages.records} />
+        <WhyChooseUsSection />
+        <GallerySection />
+        <AffiliatesSection />
+        <TestimonySection />
+        <AboutUsSection />
+        <Footer withCSbanner />
+        <BottomNavigation />
+      </main>
+    );
+  }
 }

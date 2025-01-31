@@ -18,6 +18,8 @@ import OtherPackagesSection from "@/section/package-detail/other-packages-sectio
 import { Metadata } from "next";
 import { UmrahPackage } from "@/types/package-details";
 import { packageDetailData } from "@/data/packages";
+import { getAllPackages } from "@/lib/fetcher/getPackages";
+import { Packages } from "@/types/packages";
 
 // --- Metadata for SEO Optimization
 export const generateMetadata = async ({
@@ -44,127 +46,127 @@ export const generateMetadata = async ({
   };
 };
 
-export default async function DetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const resolvedParams = await params;
-  const detail = packageDetailData.find(
-    (det: UmrahPackage) => det.id === resolvedParams.slug,
-  );
-
-  if (detail) {
-    return (
-      <>
-        <DetailNavbar dataPackage={detail} />
-
-        <main>
-          <ImagePoster
-            packageImage={detail.thumbnail}
-            packageCategory={detail.category}
-          />
-
-          <HeaderSection packageData={detail} durationDays={detail.duration} />
-
-          <PricingSection packageData={detail} />
-
-          <FlightSection dataFlight={detail.flightDetails} />
-
-          <HotelSection dataHotel={detail.hotelDetails} />
-
-          <TransportationSection
-            dataTransportation={detail.busDetails}
-            category={detail.category}
-          />
-
-          <ItinerarySection dataItineraries={detail.itineraries} />
-
-          <TourVoucherSection dataAddOns={detail.addons} />
-
-          <ProductCoverageSection dataImportantNotes={detail.importantNotes} />
-
-          <AdditionalServices />
-
-          <PromoSection dataPromos={detail.promos} />
-
-          <OtherPackagesSection packageId={detail.id} />
-
-          <Footer />
-
-          <BottomNavigationDetail orderUrl={detail.orderUrl} />
-        </main>
-      </>
-    );
-  }
-
-  return <NotFound />;
-}
-
-// NOTE: Activate this when the API is ready and remove the code above
-// --- Method: Hit API
 // export default async function DetailPage({
 //   params,
 // }: {
 //   params: Promise<{ slug: string }>;
 // }) {
-//   const packages = await getAllPackages();
 //   const resolvedParams = await params;
+//   const detail = packageDetailData.find(
+//     (det: UmrahPackage) => det.id === resolvedParams.slug,
+//   );
 
-//   if (packages.records) {
-//     const detail = packages.records.find(
-//       (det: Packages) => det.data.id === resolvedParams.slug,
+//   if (detail) {
+//     return (
+//       <>
+//         <DetailNavbar dataPackage={detail} />
+
+//         <main>
+//           <ImagePoster
+//             packageImage={detail.thumbnail}
+//             packageCategory={detail.category}
+//           />
+
+//           <HeaderSection packageData={detail} durationDays={detail.duration} />
+
+//           <PricingSection packageData={detail} />
+
+//           <FlightSection dataFlight={detail.flightDetails} />
+
+//           <HotelSection dataHotel={detail.hotelDetails} />
+
+//           <TransportationSection
+//             dataTransportation={detail.busDetails}
+//             category={detail.category}
+//           />
+
+//           <ItinerarySection dataItineraries={detail.itineraries} />
+
+//           <TourVoucherSection dataAddOns={detail.addons} />
+
+//           <ProductCoverageSection dataImportantNotes={detail.importantNotes} />
+
+//           <AdditionalServices />
+
+//           <PromoSection dataPromos={detail.promos} />
+
+//           <OtherPackagesSection packageId={detail.id} />
+
+//           <Footer />
+
+//           <BottomNavigationDetail orderUrl={detail.orderUrl} />
+//         </main>
+//       </>
 //     );
-
-//     if (detail) {
-//       return (
-//         <>
-//           <DetailNavbar dataPackage={detail.data} />
-
-//           <main>
-//             <ImagePoster
-//               packageImage={detail.data.thumbnail}
-//               packageCategory={detail.data.category}
-//             />
-
-//             <HeaderSection
-//               packageData={detail.data}
-//               durationDays={detail.data.duration}
-//             />
-
-//             <PricingSection packageData={detail.data} />
-
-//             <FlightSection dataFlight={detail.data.flightDetails} />
-
-//             <HotelSection dataHotel={detail.data.hotelDetails} />
-
-//             <TransportationSection
-//               dataTransportation={detail.data.busDetails}
-//               category={detail.data.category}
-//             />
-
-//             <ItinerarySection dataItineraries={detail.data.itineraries} />
-
-//             <TourVoucherSection dataAddOns={detail.data.addons} />
-
-//             <ProductCoverageSection
-//               dataImportantNotes={detail.data.importantNotes}
-//             />
-
-//             <AdditionalServices />
-
-//             <PromoSection dataPromos={detail.data.promos} />
-
-//             <OtherPackagesSection packageId={detail.data.id} />
-
-//             <Footer />
-
-//             <BottomNavigationDetail orderUrl={detail.data.orderUrl} />
-//           </main>
-//         </>
-//       );
-//     }
 //   }
 
 //   return <NotFound />;
 // }
+
+// NOTE: Activate this when the API is ready and remove the code above
+// --- Method: Hit API
+export default async function DetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const packages = await getAllPackages();
+  const resolvedParams = await params;
+
+  if (packages.records) {
+    const detail = packages.records.find(
+      (det: Packages) => det.data.id === resolvedParams.slug,
+    );
+
+    if (detail) {
+      return (
+        <>
+          <DetailNavbar dataPackage={detail.data} />
+
+          <main>
+            <ImagePoster
+              packageImage={detail.data.thumbnail}
+              packageCategory={detail.data.category}
+            />
+
+            <HeaderSection
+              packageData={detail.data}
+              durationDays={detail.data.duration}
+            />
+
+            <PricingSection packageData={detail.data} />
+
+            <FlightSection dataFlight={detail.data.flightDetails} />
+
+            <HotelSection dataHotel={detail.data.hotelDetails} />
+
+            <TransportationSection
+              dataTransportation={detail.data.busDetails}
+              category={detail.data.category}
+            />
+
+            <ItinerarySection dataItineraries={detail.data.itineraries} />
+
+            <TourVoucherSection dataAddOns={detail.data.addons} />
+
+            <ProductCoverageSection
+              dataImportantNotes={detail.data.importantNotes}
+            />
+
+            <AdditionalServices />
+
+            <PromoSection dataPromos={detail.data.promos} />
+
+            <OtherPackagesSection packageId={detail.data.id} />
+
+            <Footer />
+
+            <BottomNavigationDetail orderUrl={detail.data.orderUrl} />
+          </main>
+        </>
+      );
+    }
+  }
+
+  return <NotFound />;
+}

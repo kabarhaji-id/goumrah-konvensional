@@ -8,11 +8,11 @@ import CustomArrowIcon from "@/public/icons/mingcute_down-fill.svg";
 
 import { Button } from "@/components/ui/button";
 import { useMemo } from "react";
-import { packageDetailData } from "@/data/packages";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { PackageCard } from "@/components/ui/card/package-card";
+import { Packages } from "@/types/packages";
 
-const RecommendedPackagesSection = () => {
+const RecommendedPackagesSection = ({ packages }: { packages: Packages[] }) => {
   const packageDataByType = useMemo(() => {
     const recommendationSection = [
       {
@@ -34,9 +34,11 @@ const RecommendedPackagesSection = () => {
 
     return recommendationSection.map((item) => ({
       ...item,
-      packages: packageDetailData.filter((pkg) => pkg.category === item.type),
+      packages: packages
+        .filter((pkg) => pkg.data.category === item.type)
+        .sort((a, b) => a.data.quadPrice - b.data.quadPrice),
     }));
-  }, []);
+  }, [packages]);
 
   return (
     <div className="relative flex h-fit flex-col gap-4 pb-6">
@@ -66,17 +68,17 @@ const RecommendedPackagesSection = () => {
                 >
                   {item.packages.map((pkg) => (
                     <SwiperSlide
-                      key={pkg.id}
+                      key={pkg.data.id}
                       className={`md:max-w-[80%] h-fit w-full max-w-[95%] pb-2`}
                       style={{ marginRight: "16px" }}
                     >
-                      <PackageCard data={pkg} />
+                      <PackageCard data={pkg.data} />
                     </SwiperSlide>
                   ))}
                 </Swiper>
               ) : (
                 <div className="z-50 px-6">
-                  <PackageCard data={item.packages[0]} />
+                  <PackageCard data={item.packages[0].data} />
                 </div>
               )}
             </section>

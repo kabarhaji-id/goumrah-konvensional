@@ -4,7 +4,6 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section className="flex h-fit w-full flex-col gap-4 pb-3">
-      {/* <section className="flex h-fit w-full max-w-screen-sm flex-col bg-hero bg-cover bg-bottom"> */}
       <div className="relative">
         <Image
           alt="goumrah.id logo"
@@ -42,28 +41,6 @@ const HeroSection = () => {
           #bikin<b>tenang</b>
         </p>
       </div>
-
-      {/* <Button
-        className="absolute bottom-40 left-1/2 z-10 h-11 w-[351px] -translate-x-1/2 px-5 py-1"
-        asChild
-      >
-        <Link href="#recommendedPackages">
-          <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
-            Jelajahi Berbagai Paket Umrah Kami
-          </p>
-          <ChevronDown className="!size-5 animate-bounce duration-1000" />
-        </Link>
-      </Button> */}
-
-      {/* <Image
-        src="/assets/image/hero-img.png"
-        alt="Hero's Image"
-        className="absolute bottom-10 z-30 w-full"
-        width={412}
-        height={732}
-      /> */}
-
-      {/* <span className="absolute bottom-10 z-40 h-60 w-full bg-gradient-to-t from-white to-white/0" /> */}
     </section>
   );
 };

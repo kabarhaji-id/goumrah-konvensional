@@ -12,8 +12,7 @@
       "route": "CGK-JED"
     }
   ],
-  "duration": "16 Hari",
-  "package": "Gold",
+  "duration": 16,
   "downPayment": 7,
   "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Plus Wisata Turkey. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
   "departureDate": [
@@ -71,7 +70,7 @@
   "doubleFinalPrice": 40500000,
   "infantFinalPrice": null,
   "flightDetails": {
-    "wisataFlights": [
+    "wisataFlight": [
       {
         "flightNumber": null,
         "duration": null,
@@ -124,7 +123,7 @@
         "transitDatetime": "2025-07-19T10:00:00+07:00"
       }
     ],
-    "departureFlights": {
+    "departureFlight": {
       "flightNumber": null,
       "duration": null,
       "airportNameDeparture": "Istanbul Airport",

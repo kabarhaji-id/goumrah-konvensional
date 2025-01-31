@@ -12,8 +12,7 @@
       "route": "CGK-JED"
     }
   ],
-  "duration": "11 Hari",
-  "package": "Gold",
+  "duration": 11,
   "downPayment": 7,
   "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Plus Wisata Dubai. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
   "departureDate": [
@@ -71,7 +70,7 @@
   "doubleFinalPrice": 34500000,
   "infantFinalPrice": null,
   "flightDetails": {
-    "wisataFlights": [
+    "wisataFlight": [
       {
         "flightNumber": null,
         "duration": null,
@@ -99,7 +98,7 @@
         "transitDatetime": null
       }
     ],
-    "departureFlights": {
+    "departureFlight": {
       "flightNumber": null,
       "duration": null,
       "airportNameDeparture": "Dubai Airport",

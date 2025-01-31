@@ -12,8 +12,7 @@
       "route": "CGK-JED"
     }
   ],
-  "duration": "9 Hari",
-  "package": "Gold",
+  "duration": 9,
   "downPayment": 7,
   "orderUrl": "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.",
   "departureDate": [
@@ -71,8 +70,8 @@
   "doubleFinalPrice": 34500000,
   "infantFinalPrice": null,
   "flightDetails": {
-    "wisataFlights": [],
-    "departureFlights": {
+    "wisataFlight": [],
+    "departureFlight": {
       "flightNumber": null,
       "duration": null,
       "airportNameDeparture": "Soekarno-Hatta International Airport",

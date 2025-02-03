@@ -1,0 +1,68 @@
+name: CI/CD for Next.js with VPS
+
+on:
+  push:
+    branches:
+      - main  # Run deployment on pushes to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js v22.x
+      - name: Setup Node.js (v22.x)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'  # Using v22 to match the version on your VPS
+
+      # Step 3: Install pnpm globally for the GitHub Actions runner
+      - name: Install pnpm globally
+        run: npm install -g pnpm
+
+      # Step 4: Install dependencies for the Next.js app
+      - name: Install dependencies
+        run: pnpm install
+
+      # Step 5: Check if .next folder exists and build the Next.js app
+      - name: Build GoUmrah app
+        run: sudo -u www-data pnpm run build --verbose  # Run with verbose to get detailed logs
+
+      # Step 6: Verify .next directory exists
+      - name: Verify .next directory
+        run: |
+          if [ ! -d ".next" ]; then
+            echo ".next directory does not exist. Build might have failed."
+            exit 1
+          fi
+          echo ".next directory exists."
+
+      # Step 7: Deploy files and PM2 config to the VPS
+      - name: Deploy to VPS
+        uses: appleboy/scp-action@v0.1.6
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          source: |
+            .next/**  # Path to build output
+            ecosystem.config.js  # PM2 config
+          target: "/home/www/goumrah-konvensional"
+
+      # Step 8: Restart application using PM2
+      - name: Restart application with PM2
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            cd /home/www/goumrah-konvensional
+            sudo -u www-data pnpm install --prod
+            sudo -u www-data pm2 startOrRestart ecosystem.config.js

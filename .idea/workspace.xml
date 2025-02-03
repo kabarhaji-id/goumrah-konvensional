@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead.">
-      <change afterPath="$PROJECT_DIR$/global.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/AnalyticsTracker.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/gtag.ts" afterDir="false" />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +145,7 @@
       <workItem from="1737296777060" duration="2799000" />
       <workItem from="1737345963926" duration="4738000" />
       <workItem from="1738251400475" duration="4591000" />
-      <workItem from="1738557451079" duration="1464000" />
+      <workItem from="1738557451079" duration="2075000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -215,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738254398829</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality.">
+      <option name="closed" value="true" />
+      <created>1738559050327</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738559050327</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +250,7 @@
     <MESSAGE value="Merge pull request #57 from kabarhaji-id/feat/data-optimization&#10;&#10;fix: cta customer service button and add turkey hotel data" />
     <MESSAGE value="Add dynamic file serving API route to public folder&#10;&#10;This new API route handles GET requests for files in the public directory dynamically based on the slug in the URL. It returns the file content with appropriate headers or a 404 error if the file is not found." />
     <MESSAGE value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
+    <MESSAGE value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
   </component>
 </project>

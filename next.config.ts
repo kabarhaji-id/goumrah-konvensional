@@ -11,26 +11,13 @@ const nextConfig: NextConfig = {
         protocol: "https", // Protocol (http or https)
         hostname: "goumrah.id", // Your image domain
         pathname: "/assets/image/**", // Optional path to restrict image source
-      },
+      }
     ],
     formats: ["image/avif", "image/webp"], // Enable modern image formats for better performance
     deviceSizes: [320, 420, 768, 1024, 1200], // Define breakpoints for responsive images
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384], // Define sizes for static images
   },
   assetPrefix: "/", // Ensure static assets are served correctly from the root path
-  async headers() {
-    return [
-      {
-        source: "/:path*",
-        headers: [
-          {
-            key: "Content-Security-Policy",
-            value: "default-src 'self'; img-src 'self' https://www.facebook.com data:;",
-          },
-        ],
-      },
-    ];
-  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(

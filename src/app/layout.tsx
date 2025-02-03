@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import AnalyticsTracker from "@/components/layout/AnalyticsTracker";
 
 import "./globals.css";
 
@@ -20,11 +21,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth bg-gray-50">
-      <head>
-        {/* Meta Pixel Code */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `!function(f,b,e,v,n,t,s)
+    <head>
+      {/* Google tag Code */}
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+        }}
+      />
+      {/* Meta Pixel Code */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `!function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
             n.callMethod.apply(n,arguments):n.queue.push(arguments)};
             if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -34,20 +52,22 @@ export default function RootLayout({
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '${process.env.NEXT_PUBLIC_PIXEL_ID}');
             fbq('track', 'PageView');`,
-          }}
-        />
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_PIXEL_ID}&ev=PageView&noscript=1" />`,
-          }}
-        />
-      </head>
+        }}
+      />
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_PIXEL_ID}&ev=PageView&noscript=1" />`,
+        }}
+      />
+    </head>
 
-      <body className={`${plusJakartaSans.className} antialiased`}>
-        <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
-          <main>{children}</main>
-        </div>
-      </body>
+    <body className={`${plusJakartaSans.className} antialiased`}>
+    {/* Include Analytics Tracking as a Client Component */}
+    <AnalyticsTracker />
+    <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
+      <main>{children}</main>
+    </div>
+    </body>
     </html>
   );
 }

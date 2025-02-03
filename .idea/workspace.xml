@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`.">
+      <change afterPath="$PROJECT_DIR$/src/components/layout/FacebookPixel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "development",
+    "git-widget-placeholder": "feat/google-tag-mnager",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/lib",
     "node.js.detected.package.eslint": "true",
@@ -220,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738559050327</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`.">
+      <option name="closed" value="true" />
+      <created>1738563793406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738563793406</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +263,8 @@
     <MESSAGE value="Add dynamic file serving API route to public folder&#10;&#10;This new API route handles GET requests for files in the public directory dynamically based on the slug in the URL. It returns the file content with appropriate headers or a 404 error if the file is not found." />
     <MESSAGE value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
     <MESSAGE value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
+    <MESSAGE value="Add Content Security Policy and Google Analytics setup&#10;&#10;Implemented a CSP header in `next.config.ts` to enhance security by restricting resource loading. Additionally, finalized Google Analytics integration for tracking pageviews and route changes, improving application monitoring and analytics capabilities." />
+    <MESSAGE value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
   </component>
 </project>

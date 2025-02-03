@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add dynamic file serving API route to public folder&#10;&#10;This new API route handles GET requests for files in the public directory dynamically based on the slug in the URL. It returns the file content with appropriate headers or a 404 error if the file is not found.">
-      <change afterPath="$PROJECT_DIR$/src/app/api/assets/route.ts" afterDir="false" />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead.">
+      <change afterPath="$PROJECT_DIR$/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout/AnalyticsTracker.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/gtag.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/public/[[...slug]]/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -73,9 +75,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feat/serve-static",
+    "git-widget-placeholder": "feat/google-tag-mnager",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app/api/public",
+    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +92,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Website\goumrah-konvensional\src\lib" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\app\api\public" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\app" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\components" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\assets\icons" />
-      <recent name="D:\Project\Website\goumrah-konvensional\public\assets\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\Website\goumrah-konvensional\src\components\chat" />
@@ -146,7 +148,8 @@
       <workItem from="1737216342062" duration="896000" />
       <workItem from="1737296777060" duration="2799000" />
       <workItem from="1737345963926" duration="4738000" />
-      <workItem from="1738251400475" duration="2576000" />
+      <workItem from="1738251400475" duration="4591000" />
+      <workItem from="1738557451079" duration="1464000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -204,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738252331863</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead.">
+      <option name="closed" value="true" />
+      <created>1738254398829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738254398829</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +245,7 @@
     <MESSAGE value="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes." />
     <MESSAGE value="Merge pull request #57 from kabarhaji-id/feat/data-optimization&#10;&#10;fix: cta customer service button and add turkey hotel data" />
     <MESSAGE value="Add dynamic file serving API route to public folder&#10;&#10;This new API route handles GET requests for files in the public directory dynamically based on the slug in the URL. It returns the file content with appropriate headers or a 404 error if the file is not found." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add dynamic file serving API route to public folder&#10;&#10;This new API route handles GET requests for files in the public directory dynamically based on the slug in the URL. It returns the file content with appropriate headers or a 404 error if the file is not found." />
+    <MESSAGE value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
   </component>
 </project>

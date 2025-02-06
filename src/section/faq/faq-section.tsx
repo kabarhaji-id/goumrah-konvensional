@@ -6,8 +6,8 @@ import ChevronUp from "@/public/icons/chevron_up.svg";
 import { FAQItem, MainChild, SubMainChild } from "./faq-item";
 import ReactMarkdown from "react-markdown";
 import { Skeleton } from "@/components/ui/skeleton-loader";
-import FAQDatas from "@/data/faq/faqs.json"; // Ensure this path is correct
-import { useFAQSearch } from "@/context/search-context"; // Import context for shared search
+import FAQDatas from "@/data/faq/faqs.json";
+import { useFAQSearch } from "@/context/search-context";
 
 const FAQSection: React.FC = () => {
   const [expandedFAQs, setExpandedFAQs] = useState<Record<number, boolean>>({});
@@ -51,10 +51,9 @@ const FAQSection: React.FC = () => {
       );
       setFaqs(transformedData);
     } else {
-      console.error("FAQDatas is not a valid array:", FAQDatas);
       setFaqs(null);
     }
-  }, []); // Ensure it runs only once
+  }, []);
 
   const toggleFAQ = (id: number) => {
     setExpandedFAQs((prev) => ({
@@ -63,10 +62,8 @@ const FAQSection: React.FC = () => {
     }));
   };
 
-  // Filter FAQs based on searchQuery
   const filteredFAQs = faqs?.filter(faq => {
     const searchLower = searchQuery.toLowerCase();
-    // Check if the search query matches any part of the FAQ question or answer
     return (
       faq.mainQuestion.toLowerCase().includes(searchLower) ||
       faq.mainAnswer.toLowerCase().includes(searchLower) ||

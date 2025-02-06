@@ -1,7 +1,6 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { MdOutlineHMobiledata } from "react-icons/md";
 
 interface FAQSearchContextType {
   searchQuery: string;

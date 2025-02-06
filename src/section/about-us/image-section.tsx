@@ -23,17 +23,17 @@ const GalleryImage: React.FC<ImageProps> = ({
 
 const galleryImages: ImageProps[] = [
   {
-    src: "/assets/images/kabaah.png",
+    src: "/assets/image/kabaah.png",
     alt: "Gallery image 1",
     className: "object-contain shrink-0 self-stretch my-auto rounded-xl aspect-[0.68] w-[177px]"
   },
   {
-    src: "/assets/images/tour-group.png",
+    src: "/assets/image/tour-group.png",
     alt: "Gallery image 2",
     className: "object-contain rounded-xl aspect-[1.35] w-[205px]"
   },
   {
-    src: "/assets/images/madinah-umbrella.png",
+    src: "/assets/image/madinah-umbrella.png",
     alt: "Gallery image 3",
     className: "object-contain mt-4 rounded-xl aspect-[2.16] w-[205px]"
   }

@@ -1,0 +1,38 @@
+{
+  "services": [
+    {
+      "icon": "/assets/icons/kabaa-filled.svg",
+      "title": "**Umroh**",
+      "subtitle": "Setiap jama'ah punya kebutuhan berbeda, dan kami siap memenuhi semuanya",
+      "items": [
+        { "label": "**Umrah Hemat**", "iconSrc": "/assets/icons/chevron_down.svg" },
+        { "label": "**Umrah Cerdas**", "iconSrc": "/assets/icons/chevron_down.svg" },
+        { "label": "**Umrah Eksklusif**", "iconSrc": "/assets/icons/chevron_down.svg" }
+      ]
+    },
+    {
+      "icon": "/assets/icons/kabaa-airplanes-filled.svg",
+      "title": "**Umroh Plus Wisata**",
+      "subtitle": "**Ibadah penuh berkah**, pengalaman wisata tak terlupakan",
+      "description": "Umroh Plus Wisata hadir untuk memenuhi kebutuhan jama'ah sebelum melakukan rangkaian ibadah umroh. Jama'ah bisa menikmati perjalanan ke destinasi pilihan, seperti **Turkey**, **Dubai**, dsb.\n\nMenggabungkan umroh dengan wisata religi atau sejarah, perjalanan ini dirancang untuk menjadi sebuah pengalaman yang lebih lengkap dan berkesan."
+    },
+    {
+      "icon": "",
+      "title": "**Wisata Kota**",
+      "subtitle": "**Jelajahi tempat baru**, temukan pengalaman baru",
+      "description": "Selain perjalanan ibadah umroh, kami juga menyediakan paket wisata tambahan ke berbagai destinasi favorit di beberapa kota di **Arab Saudi**. Dari wisata sejarah, kuliner, hingga liburan keluarga.\n\nSetiap perjalanan dirancang untuk memberikan pengalaman terbaik dengan layanan yang terpercaya dan nyaman."
+    },
+    {
+      "icon": "/assets/icons/pasport.svg",
+      "title": "**Layanan Paspor**",
+      "subtitle": "**Paspor Aman**, Perjalanan Tenang",
+      "description": "**Goumrah.id** membantu proses pembuatan dan perpanjangan paspor dengan mudah dan cepat. Layanan ini memastikan jama'ah tidak perlu repot mengurus dokumen ibadah umroh sendiri, sehingga bisa lebih fokus pada persiapan ibadah dan perjalanan mereka."
+    },
+    {
+      "icon": "/assets/icons/vaccine.svg",
+      "title": "**Layanan Vaksin Meningitis**",
+      "subtitle": "**Sehat sebelum berangkat**, Ibadah pun lebih nyaman",
+      "description": "Vaksin meningitis adalah **syarat wajib** bagi jama'ah yang ingin berangkat ke Tanah Suci. Kami menyediakan layanan vaksinasi yang praktis dan terpercaya, membantu jama'ah memenuhi persyaratan kesehatan tanpa harus repot mencari layanan sendiri."
+    }
+  ]
+}

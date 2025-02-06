@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, plusJakartaSans, sans-serif;
+
 }
 
 @layer base {
@@ -177,4 +179,49 @@ body {
 
 .swiper-zoom-container img:active {
   cursor: zoom-out;
+}
+/* Remove the default marker (bullet or numbers) from ul and ol */
+ul::marker,
+ol::marker {
+  display: none;  /* Hide the marker */
+}
+
+/* Alternatively, you can use list-style to completely remove bullets/numbering */
+ul,
+ol {
+  list-style: none;  /* This removes the marker (bullet or numbers) */
+  padding-left: 0;  /* Remove any default padding */
+}
+
+.markdown-list ul, .markdown-list ol {
+  list-style-type: disc;
+  padding-left: 0px;
+}
+
+.markdown-list li {
+  margin-bottom: 5px;
+}
+
+
+.prose ul, .prose ol {
+  list-style-type: disc;
+  padding-left: 0px;
+}
+
+.prose li {
+  margin-bottom: 5px;
+}
+
+.markdown-list > * {
+  margin-bottom: 10px;
+}
+
+
+.markdown-list > ul, .markdown-list > ol {
+  list-style-type: disc;
+  padding-left: 0px;
+}
+
+.markdown-list > ul > li, .markdown-list > ol > li {
+  margin-bottom: 5px;
 }

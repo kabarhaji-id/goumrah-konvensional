@@ -23,6 +23,7 @@ const TanyaIsma = () => {
           key="button"
           layoutId={`tanya-isma-${id}-trigger`}
           className="absolute bottom-1.5 size-[110px] origin-top-left"
+          style={{ marginLeft: '-2em', marginBottom: '1em' }}
           onClick={() => setIsOpen((prev) => !prev)}
           whileHover={{
             scale: 1.1,

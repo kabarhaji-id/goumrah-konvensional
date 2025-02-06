@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`.">
-      <change afterPath="$PROJECT_DIR$/src/components/layout/FacebookPixel.tsx" afterDir="false" />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="**Add FAQ section and new icons assets**&#10;&#10;Included a new FAQ section component with nested expandable items using ReactMarkdown for better rendering. Added new icons and updated the package.json to include required dependencies (`react-markdown` and `rehype-raw`).">
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/exclamation-rounded.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/image/faq-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/search-context.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/section/faq/faq-banner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/section/faq/search-context.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/faq/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/faq/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/packages-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/packages-navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/faq/faq-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/faq/faq-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/faq/top-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/faq/top-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +37,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/google-tag-mnager" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,6 +64,9 @@
     &quot;repository&quot;: &quot;goumrah-konvensional&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -67,37 +75,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feat/google-tag-mnager",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/lib",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/faq&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/Website/goumrah-konvensional/src/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Website\goumrah-konvensional\src\data" />
+      <recent name="D:\Project\Website\goumrah-konvensional\public\assets\icons" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\lib" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\app\api\public" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\app" />
-      <recent name="D:\Project\Website\goumrah-konvensional\src\components" />
-      <recent name="D:\Project\Website\goumrah-konvensional\src\assets\icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\Website\goumrah-konvensional\src\data" />
+      <recent name="D:\Project\Website\goumrah-konvensional\src\data\faq" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\components\chat" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\assets\icons" />
     </key>
@@ -115,6 +125,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
@@ -150,6 +161,11 @@
       <workItem from="1737345963926" duration="4738000" />
       <workItem from="1738251400475" duration="4591000" />
       <workItem from="1738557451079" duration="2075000" />
+      <workItem from="1738669403888" duration="15188000" />
+      <workItem from="1738743795266" duration="6266000" />
+      <workItem from="1738750897239" duration="17231000" />
+      <workItem from="1738781026921" duration="6681000" />
+      <workItem from="1738812121738" duration="4223000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -231,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738563793406</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="**Add FAQ section and new icons assets**&#10;&#10;Included a new FAQ section component with nested expandable items using ReactMarkdown for better rendering. Added new icons and updated the package.json to include required dependencies (`react-markdown` and `rehype-raw`).">
+      <option name="closed" value="true" />
+      <created>1738781126517</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738781126517</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +289,8 @@
     <MESSAGE value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
     <MESSAGE value="Add Content Security Policy and Google Analytics setup&#10;&#10;Implemented a CSP header in `next.config.ts` to enhance security by restricting resource loading. Additionally, finalized Google Analytics integration for tracking pageviews and route changes, improving application monitoring and analytics capabilities." />
     <MESSAGE value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
+    <MESSAGE value="**Add FAQ section and new icons assets**&#10;&#10;Included a new FAQ section component with nested expandable items using ReactMarkdown for better rendering. Added new icons and updated the package.json to include required dependencies (`react-markdown` and `rehype-raw`)." />
+    <MESSAGE value="Add FAQ banner and loading skeletons&#10;&#10;Introduced a new FAQ banner with an informative message and added loading skeleton placeholders in the FAQ section for better user experience. Updated related components, styles, and assets to enhance the FAQ page presentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add FAQ banner and loading skeletons&#10;&#10;Introduced a new FAQ banner with an informative message and added loading skeleton placeholders in the FAQ section for better user experience. Updated related components, styles, and assets to enhance the FAQ page presentation." />
   </component>
 </project>

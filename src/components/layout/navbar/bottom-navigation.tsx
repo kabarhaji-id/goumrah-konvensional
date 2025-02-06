@@ -15,7 +15,7 @@ interface BottomNavigationProps {  // Define the props interface
   className?: string; // className is optional, can be undefined
 }
 
-const BottomNavigation: React.FC<BottomNavigationProps> = ({ className }) => {
+const BottomNavigation: React.FC<BottomNavigationProps> = () => {
     const pathname = usePathname();
     const router = useRouter();
 
@@ -29,7 +29,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ className }) => {
         >
           <HomeIcon className="size-7" />
           <p className={`whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold
-        ${pathname === "/" ? "" : "invisible"}`}> {/* Conditional invisible class */}
+        ${pathname === "/" ? "" : "invisible"}`}>
             Beranda
           </p>
         </button>
@@ -47,7 +47,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ className }) => {
         </button>
 
         <button
-          data-active={false} // You should make this dynamic if you want to use it
+          data-active={false}
           className="group flex flex-col items-center gap-1 text-primary/50 data-[active=true]:text-primary"
         >
           <CustomerServiceIcon className="size-7" />

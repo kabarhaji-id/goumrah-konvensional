@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience.">
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/kabaa-airplanes-filled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/kabaa-filled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/pasport.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/icons/vaccine.svg" afterDir="false" />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about-us/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/search-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/search-context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/bussiness-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/bussiness-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/faq/faq-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/faq/faq-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +35,19 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/faq" />
+        <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;cybertank378&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "assignee": "cybertank378"
+    }
+  ],
+  "lastFilter": {}
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kabarhaji-id/goumrah-konvensional.git&quot;,
@@ -75,29 +75,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "feat/about-us",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/public/assets/image",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.build.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feat/about-us&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project/Website/goumrah-konvensional/public/assets/image&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\Website\goumrah-konvensional\public\assets\image" />
@@ -125,6 +125,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.build" />
@@ -251,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738846521949</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section.">
+      <option name="closed" value="true" />
+      <created>1738847624613</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738847624613</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +274,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feat/about-us" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -287,7 +308,8 @@
     <MESSAGE value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
     <MESSAGE value="Add dynamic FAQ section with search and banner&#10;&#10;Implemented a dynamic FAQ section, including search functionality with context, a new FAQ banner, and loading skeletons for improved UX. Updated related components, styles, and assets, while introducing reusable context for handling FAQ search queries." />
     <MESSAGE value="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience." />
+    <MESSAGE value="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

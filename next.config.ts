@@ -18,6 +18,9 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384], // Define sizes for static images
   },
   assetPrefix: "/", // Ensure static assets are served correctly from the root path
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(

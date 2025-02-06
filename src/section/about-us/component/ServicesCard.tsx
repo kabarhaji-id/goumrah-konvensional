@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { ServiceCardProps } from '@/data/about/services';
+import Image from 'next/image';
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
                                                           icon,
@@ -30,10 +31,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       <div
         className="justify-center items-center border border-solid border-slate-200 rounded-[50px] shadow-[0px_2px_2px_-1px_rgba(0,0,0,0.1)] bg-[#F1FAFA] self-center flex w-[51px] p-[10px] flex-col overflow-hidden h-[51px]">
         {icon && (
-          <img
+          <Image
             loading="lazy"
             src={icon}
             alt=""
+            width={50}
+            height={50}
             className="object-contain w-[31px] aspect-[0.97]"
           />
         )}
@@ -41,7 +44,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
       <div className="mt-4 text-base tracking-wide text-center text-emerald-950">
         <ReactMarkdown components={{
-          strong: ({node, ...props}) => (
+          strong: ({...props}) => (
             <span className="font-bold" {...props}/>
           )
         }}>
@@ -51,7 +54,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
       <div className="mt-4 text-xs leading-6 text-center text-emerald-950">
         <ReactMarkdown components={{
-          strong: ({node, ...props}) => (
+          strong: ({...props}) => (
             <span className="font-bold" {...props}/>
           )
         }}>
@@ -62,10 +65,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       {description && (
         <div className="mt-4 text-xs leading-6 text-justify text-emerald-950">
           <ReactMarkdown components={{
-            strong: ({node, ...props}) => (
+            strong: ({...props}) => (
               <span className="font-bold" {...props}/>
             ),
-            p: ({node, ...props}) => (
+            p: ({...props}) => (
               <p className="mb-4 last:mb-0" {...props}/>
             )
           }}>
@@ -83,16 +86,18 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
             >
               <div className="self-stretch my-auto">
                 <ReactMarkdown components={{
-                  strong: ({node, ...props}) => (
+                  strong: ({...props}) => (
                     <span className="font-bold" {...props}/>
                   )
                 }}>
                   {item.label}
                 </ReactMarkdown>
               </div>
-              <img
+              <Image
                 loading="lazy"
                 src={item.iconSrc}
+                width={50}
+                height={50}
                 alt=""
                 className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
               />

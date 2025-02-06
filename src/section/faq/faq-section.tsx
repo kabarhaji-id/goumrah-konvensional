@@ -5,12 +5,14 @@ import ChevronDown from "@/public/icons/chevron_down.svg";
 import ChevronUp from "@/public/icons/chevron_up.svg";
 import { FAQItem, MainChild, SubMainChild } from "./faq-item";
 import ReactMarkdown from "react-markdown";
-
+import { Skeleton } from "@/components/ui/skeleton-loader";
 import FAQDatas from "@/data/faq/faqs.json"; // Ensure this path is correct
+import { useFAQSearch } from "@/context/search-context"; // Import context for shared search
 
 const FAQSection: React.FC = () => {
   const [expandedFAQs, setExpandedFAQs] = useState<Record<number, boolean>>({});
   const [faqs, setFaqs] = useState<FAQItem[] | null>(null);
+  const { searchQuery } = useFAQSearch(); // Get search query from context
 
   const transformFAQItem = (item: any): FAQItem => {
     const transformedItem: FAQItem = {
@@ -61,9 +63,27 @@ const FAQSection: React.FC = () => {
     }));
   };
 
+  // Filter FAQs based on searchQuery
+  const filteredFAQs = faqs?.filter(faq => {
+    const searchLower = searchQuery.toLowerCase();
+    // Check if the search query matches any part of the FAQ question or answer
+    return (
+      faq.mainQuestion.toLowerCase().includes(searchLower) ||
+      faq.mainAnswer.toLowerCase().includes(searchLower) ||
+      faq.mainChildren?.some((child) =>
+        child.subMainQuestion.toLowerCase().includes(searchLower) ||
+        child.subMainAnswer.toLowerCase().includes(searchLower) ||
+        child.subMainChildren?.some(subChild =>
+          subChild.childQuestion.toLowerCase().includes(searchLower) ||
+          subChild.childAnswer.toLowerCase().includes(searchLower)
+        )
+      )
+    );
+  });
+
   const renderFAQs = (faqs: FAQItem[] | MainChild[] | SubMainChild[] | undefined) => {
     if (!faqs || faqs.length === 0) {
-      return <p>No FAQs available.</p>;
+      return <p className="text-gray-500 text-center">No FAQs found.</p>;
     }
 
     return faqs.map((faq, index) => {
@@ -218,11 +238,17 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section
-      id="faqs-section"
-      className="font-[sans-serif] max-w-4xl mx-auto px-6 pb-6"
-    >
-      {faqs === null ? <p>Loading FAQs...</p> : renderFAQs(faqs)}
+    <section id="faqs-section" className="font-[sans-serif] max-w-4xl mx-auto px-6 pb-6">
+      {faqs === null ? (
+        <div className="space-y-4">
+          <Skeleton className="h-6 w-3/4" />
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-5/6" />
+          <Skeleton className="h-4 w-2/3" />
+        </div>
+      ) : (
+        renderFAQs(filteredFAQs || [])
+      )}
     </section>
   );
 };

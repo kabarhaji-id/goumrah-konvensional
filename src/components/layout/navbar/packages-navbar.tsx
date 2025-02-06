@@ -1,6 +1,3 @@
-import { ChevronLeft } from "lucide-react";
-import Link from "next/link";
-
 const PackagesNavbar = ({ title }: { title: string }) => {
   return (
     <nav

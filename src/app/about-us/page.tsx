@@ -1,13 +1,12 @@
-
 import { ChallengeSection } from "@/section/about-us/challenge-section";
 import { MissionSection } from "@/section/about-us/mission-section";
-import  { SpacerSection } from "@/section/about-us/spacer-image"
-import  { BussinesSection } from "@/section/about-us/bussiness-section"
-import  { MapSection } from "@/section/about-us/map-section"
+import { SpacerSection } from "@/section/about-us/spacer-image";
+import { BussinesSection } from "@/section/about-us/bussiness-section";
+import { MapSection } from "@/section/about-us/map-section";
 import ImageGalery from "@/section/about-us/image-section";
 import Logo from "@/public/image/logo-white.svg";
-import AffiliatesSection from "@/section/about-us/affiliate-section";
-import Footer from "@/section/about-us/footer-section";
+import AffiliatesAboutSection from "@/section/about-us/affiliate-section";
+import FooterSections from "@/section/about-us/footer-section";
 import BottomNavigation from "@/components/layout/navbar/bottom-navigation";
 
 const AboutPage = () => {
@@ -33,11 +32,11 @@ const AboutPage = () => {
       <MissionSection />
       <SpacerSection />
       <BussinesSection />
-      <AffiliatesSection />
+      <AffiliatesAboutSection />
       <MapSection />
-      <Footer withCSbanner />
+      <FooterSections withCSbanner />
       <BottomNavigation />
     </>
   );
-}
+};
 export default AboutPage;

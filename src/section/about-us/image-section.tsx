@@ -33,7 +33,7 @@ const galleryImages: ImageProps[] = [
     className: "object-contain rounded-xl aspect-[1.35] w-[205px]"
   },
   {
-    src: "/assets/images/madinah-umbrellamadinah-umbrella.png",
+    src: "/assets/images/madinah-umbrella.png",
     alt: "Gallery image 3",
     className: "object-contain mt-4 rounded-xl aspect-[2.16] w-[205px]"
   }

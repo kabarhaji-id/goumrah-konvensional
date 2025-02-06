@@ -15,7 +15,7 @@ interface FooterProps {
   withCSbanner?: boolean;
 }
 
-const Footer = ({ withCSbanner = false }: FooterProps) => {
+const FooterSections = ({ withCSbanner = false }: FooterProps) => {
   return (
     <>
       {withCSbanner && (
@@ -87,4 +87,4 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
   );
 };
 
-export default Footer;
+export default FooterSections;

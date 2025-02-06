@@ -69,7 +69,7 @@ const affiliates: Affiliate[] = [
   },
 ];
 
-const AffiliatesSection = () => {
+const AffiliatesAboutSection = () => {
   return (
     <section className="relative flex flex-col gap-8 overflow-hidden bg-opacity-30 pb-6 pt-1">
       <h2 className="w-full px-6 text-center text-base font-bold leading-[140%] tracking-wider text-emerald-950">
@@ -91,4 +91,4 @@ const AffiliatesSection = () => {
   );
 };
 
-export default AffiliatesSection;
+export default AffiliatesAboutSection;

@@ -4,33 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add dynamic FAQ section with search and banner&#10;&#10;Implemented a dynamic FAQ section, including search functionality with context, a new FAQ banner, and loading skeletons for improved UX. Updated related components, styles, and assets, while introducing reusable context for handling FAQ search queries.">
-      <change afterPath="$PROJECT_DIR$/public/assets/image/isma-subcribes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/about-us/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/about/about-types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/about/content.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/about/map-services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/about/mission-poin.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/about/services.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/about/services.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/scroll-observer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/bussiness-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/challenge-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/component/TextBlock.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/component/error-display.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/component/map-embedded.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/component/subcription-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/mission-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/services-section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" afterDir="false" />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience.">
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/kabaa-airplanes-filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/kabaa-filled.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/pasport.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/icons/vaccine.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/home/affiliate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/home/affiliate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +64,9 @@
     &quot;repository&quot;: &quot;goumrah-konvensional&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -174,7 +161,7 @@
       <workItem from="1738251400475" duration="4591000" />
       <workItem from="1738557451079" duration="2075000" />
       <workItem from="1738820070094" duration="10960000" />
-      <workItem from="1738832461963" duration="13315000" />
+      <workItem from="1738832461963" duration="14323000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -256,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738563793406</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience.">
+      <option name="closed" value="true" />
+      <created>1738846521947</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738846521949</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +285,9 @@
     <MESSAGE value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
     <MESSAGE value="Add Content Security Policy and Google Analytics setup&#10;&#10;Implemented a CSP header in `next.config.ts` to enhance security by restricting resource loading. Additionally, finalized Google Analytics integration for tracking pageviews and route changes, improving application monitoring and analytics capabilities." />
     <MESSAGE value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
+    <MESSAGE value="Add dynamic FAQ section with search and banner&#10;&#10;Implemented a dynamic FAQ section, including search functionality with context, a new FAQ banner, and loading skeletons for improved UX. Updated related components, styles, and assets, while introducing reusable context for handling FAQ search queries." />
+    <MESSAGE value="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

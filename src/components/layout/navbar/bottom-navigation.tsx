@@ -19,7 +19,6 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ className }) => {
     const pathname = usePathname();
     const router = useRouter();
 
-
     return (
       <nav
         className="sticky bottom-0 z-50 bg-white flex items-center justify-center gap-2 rounded-t-2xl py-4 border-t border-gray-200">
@@ -29,7 +28,7 @@ const BottomNavigation: React.FC<BottomNavigationProps> = ({ className }) => {
           className="group flex flex-col items-center gap-1 text-primary/50 data-[active=true]:text-primary"
         >
           <HomeIcon className="size-7" />
-          <p className={`whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold 
+          <p className={`whitespace-nowrap text-xs font-light tracking-normal group-data-[active=true]:font-bold
         ${pathname === "/" ? "" : "invisible"}`}> {/* Conditional invisible class */}
             Beranda
           </p>

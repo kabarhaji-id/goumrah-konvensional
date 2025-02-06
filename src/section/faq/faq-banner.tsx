@@ -34,7 +34,7 @@ const FAQBanner = () => {
 
           <div
             className="absolute top-0 left-0 flex items-center justify-center flex-col mt-5"> {/* Text container */}
-            <p className="text-2xl font-bold flex items-center text-xs text-[#1B8386] py-1"> {/* Add flex and items-center */}
+            <p className="font-bold flex items-center text-xs text-[#1B8386] py-1"> {/* Add flex and items-center */}
               <span className="mr-2"><Exclamation size={24} /></span>
               Informasi Penting
             </p>

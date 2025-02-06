@@ -12,7 +12,7 @@ export default async function IdealPage() {
       <TaglineSection />
       <CardsSection packages={packageDetailData} />
       <Footer />
-      <BottomNavigation />
+      <BottomNavigation className="sticky bottom-0 w-full"  />
     </>
   );
 }

@@ -65,13 +65,19 @@ const InteractiveMap: React.FC = () => {
     });
   }, [placeDetails, mapLoaded]);
 
+  const placeName = placeDetails?.name || "";
+  const [firstPart, ...rest] = placeName.split(" "); // Splitting by space
+  const remainingText = rest.join(" "); // Joining the rest back
+
   return (
     <div className="relative w-full h-[500px]">
       <div id="map" className="w-full h-full"></div>
       {placeDetails && (
-        <div className="absolute bottom-4 left-4 bg-white p-4 shadow-md rounded-lg">
-          <h2 className="text-lg font-bold">{placeDetails.name}</h2>
-          <p>{placeDetails.formatted_address}</p>
+        <div className="absolute bottom-4 bg-white p-4 shadow-md rounded-lg p-3 m-5">
+          <h2 className="text-lg font-bold">
+            {firstPart} <br /> {remainingText}
+          </h2>
+          <p className="pt-15 mt-5">{placeDetails.formatted_address}</p>
         </div>
       )}
     </div>

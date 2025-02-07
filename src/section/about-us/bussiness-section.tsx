@@ -5,7 +5,7 @@ import { ServicesSection } from "./services-section";
 const BussinesSection = () => {
   return (
     <section
-      className="flex flex-col mx-auto w-full max-w-[480px] text-emerald-950 bg-white shadow-lg p-8 py-4"
+      className="flex flex-col mx-auto w-full max-w-screen text-emerald-950 bg-white p-8 py-4"
       aria-labelledby="business-title"
     >
       <h2

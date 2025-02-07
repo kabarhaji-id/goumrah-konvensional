@@ -71,8 +71,8 @@ const affiliates: Affiliate[] = [
 
 const AffiliatesAboutSection = () => {
   return (
-    <section className="relative flex flex-col gap-8 overflow-hidden bg-opacity-30 pb-6 pt-1">
-      <h2 className="w-full px-6 text-center text-base font-bold leading-[140%] tracking-wider text-emerald-950">
+    <section className="relative w-full flex flex-col gap-8 overflow-hidden bg-opacity-30 pb-6 pt-1">
+      <h2 className="w-full px-6 text-center text-base font-bold leading-[140%] tracking-wider text-teal-600">
         Afiliasi goumrah.id
       </h2>
       <Marquee autoFill>

@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section.">
+      <change afterPath="$PROJECT_DIR$/src/app/api/getPlaceDetails/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/section/about-us/component/interactive-map.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/search-context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/search-context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/scroll-observer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/about-us/bussiness-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/bussiness-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/challenge-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/challenge-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/map-embedded.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/faq/faq-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/faq/faq-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/mission-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/mission-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/services-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/services-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -40,14 +49,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "assignee": "cybertank378"
+      &quot;assignee&quot;: &quot;cybertank378&quot;
     }
   ],
-  "lastFilter": {}
-}]]></component>
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kabarhaji-id/goumrah-konvensional.git&quot;,
@@ -75,36 +84,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feat/about-us&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/Website/goumrah-konvensional/public/assets/image&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app/api/getPlaceDetails",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Website\goumrah-konvensional\src\app\api\getPlaceDetails" />
       <recent name="D:\Project\Website\goumrah-konvensional\public\assets\image" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\lib" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\app\api\public" />
       <recent name="D:\Project\Website\goumrah-konvensional\src\app" />
-      <recent name="D:\Project\Website\goumrah-konvensional\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Project\Website\goumrah-konvensional\src\section\about-us" />
@@ -309,7 +318,8 @@
     <MESSAGE value="Add dynamic FAQ section with search and banner&#10;&#10;Implemented a dynamic FAQ section, including search functionality with context, a new FAQ banner, and loading skeletons for improved UX. Updated related components, styles, and assets, while introducing reusable context for handling FAQ search queries." />
     <MESSAGE value="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience." />
     <MESSAGE value="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section." />
+    <MESSAGE value="Refactor components and enhance image handling.&#10;&#10;Replaced `img` with `next/image` for improved performance and added width/height attributes. Removed unnecessary code and streamlined interfaces across multiple components. Enabled eslint to be ignored during builds in the Next.js config." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor components and enhance image handling.&#10;&#10;Replaced `img` with `next/image` for improved performance and added width/height attributes. Removed unnecessary code and streamlined interfaces across multiple components. Enabled eslint to be ignored during builds in the Next.js config." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

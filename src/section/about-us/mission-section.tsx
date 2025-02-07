@@ -26,7 +26,7 @@ const missionPoints = [
 
 export const MissionSection: React.FC = () => {
   return (
-    <section aria-labelledby="mission-heading" className="flex flex-col mx-auto w-full max-w-[480px] text-emerald-950 bg-white shadow-lg p-8 py-4">
+    <section aria-labelledby="mission-heading" className="flex flex-col mx-auto w-full max-w-screen text-emerald-950 bg-white p-8 py-4">
       <h2 id="mission-heading" className="text-xs font-light tracking-wide capitalize">
         Misi Kami
       </h2>

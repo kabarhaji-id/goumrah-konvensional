@@ -16,6 +16,7 @@ const ServicesSection: React.FC = () => {
       services: servicesData.services,
       error: null,
       isLoading: false
+
     });
   }, []);
 
@@ -28,31 +29,25 @@ const ServicesSection: React.FC = () => {
   }
 
   return (
-    <section
-      className="flex overflow-x-auto space-x-6 bg-white shadow-lg"
-      role="region"
-      aria-label="Services"
-    >
-      {state.isLoading ? (
-        Array.from({ length: 5 }).map((_, index) => (
-          <ServiceCard
-            key={`skeleton-${index}`}
-            icon=""
-            title=""
-            subtitle=""
-            isLoading={true}
-          />
-        ))
-      ) : (
-        state.services.map((service: ServiceData, index: number) => (
-          <ServiceCard
-            key={`service-${index}`}
-            {...service}
-            isLoading={false}
-          />
-        ))
-      )}
-    </section>
+    <div className="relative">
+      <div
+        className="flex overflow-x-auto space-x-6 bg-white scroll-smooth snap-x snap-mandatory scrollbar-hide"
+        role="region"
+        aria-label="Services"
+      >
+        {state.isLoading
+          ? Array.from({ length: 5 }).map((_, index) => (
+            <ServiceCard key={`skeleton-${index}`} icon="" title="" subtitle="" isLoading />
+          ))
+          : state.services.map((service: ServiceData, index: number) => (
+            <ServiceCard
+              key={`service-${index}`}
+              {...service}
+              isLoading={false}
+            />
+          ))}
+      </div>
+    </div>
 
   );
 };

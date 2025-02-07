@@ -21,7 +21,12 @@ const BottomNavigation = () => {
       <div className="grid h-full max-w-lg grid-cols-5 pt-5 mx-auto font-medium">
         <NavButton href="/" icon={<HomeIcon className="size-7" />} active={pathname === "/"} label="Beranda" />
         <NavButton href="/umrah" icon={<KaabaIcon className="size-7" />} active={pathname === "/umrah"} label="Paket Umrah" />
-        <NavButton href="/tanya-isma" icon={<CustomerServiceIcon className="size-7 invisible" />} active={pathname === "/tanya-isma"} label="Tanya Isma" />
+        <div className={`invisible group inline-flex px-5 flex flex-col items-center gap-1 text-primary/50`}>
+          <CustomerServiceIcon className="size-7" />
+          <p className={`whitespace-nowrap text-xs font-light tracking-normal invisible`}>
+            Tanya Isma
+          </p>
+        </div>
         <NavButton href="/faq" icon={<FaqIcon className="size-7" />} active={pathname === "/faq"} label="Goumrah Care" />
         <NavButton href="/about-us" icon={<AboutIcon className="size-7" />} active={pathname === "/about-us"} label="Tentang Kami" />
 

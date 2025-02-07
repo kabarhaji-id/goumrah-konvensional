@@ -121,17 +121,9 @@ const ChatBox = ({
   };
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      layoutId={`tanya-isma-${id}`}
-      className="fixed bottom-24 z-50 flex min-h-[520px] w-[375px] origin-bottom touch-auto flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
-      variants={{
-        hidden: { opacity: 0, scale: 0, y: 50 },
-        visible: { opacity: 1, scale: 1, y: 0 },
-      }}
-      initial="hidden"
-      animate={isOpen ? "visible" : "hidden"}
-      exit="hidden"
+      className="fixed bottom-32 z-50 flex min-h-[520px] max-w-screen mx-4 origin-bottom touch-auto flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
       role="dialog"
       aria-modal="true"
     >
@@ -162,8 +154,7 @@ const ChatBox = ({
             </div>
             <div className="rounded-lg bg-teal-100 p-3">
               <p className="text-gray-700">
-                Halo, Perkenalkan namaku Isma dari goumrah.id. Ada yang bisa
-                Isma bantu?
+                Mau konsultasi umroh bersama keluarga? yuk tanya Isma sekarag?
               </p>
               <span className="text-sm text-gray-500">{timeNow}</span>
             </div>
@@ -334,7 +325,7 @@ const ChatBox = ({
           background-size: 50px 50px;
         }
       `}</style>
-    </motion.div>
+    </div>
   );
 };
 

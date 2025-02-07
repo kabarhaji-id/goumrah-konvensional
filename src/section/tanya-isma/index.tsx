@@ -12,25 +12,11 @@ const TanyaIsma = () => {
 
   return (
     <>
-      <MotionConfig
-        transition={{
-          type: "spring",
-          bounce: 0.5,
-          duration: 0.5
-        }}
-      >
-        <div className="fixed inset-x-0 bottom-4 flex justify-center">
-          <motion.button
+        <div className="fixed inset-x-0 bottom-4 flex">
+          <button
             key="button"
-            layoutId={`tanya-isma-${id}-trigger`}
             className="fixed left-1/2 bottom-4 -translate-x-1/2 size-[110px] origin-top-center"
             onClick={() => setIsOpen((prev) => !prev)}
-            whileHover={{
-              scale: 1.1
-            }}
-            whileTap={{
-              scale: 0.95
-            }}
             aria-haspopup="dialog"
             aria-expanded={false}
           >
@@ -40,17 +26,14 @@ const TanyaIsma = () => {
               width={110}
               height={110}
             />
-          </motion.button>
+          </button>
 
         </div>
 
-
-        <AnimatePresence>
           {isOpen && (
+            console.log("open"+ isOpen),
             <ChatBox id={id} onClose={() => setIsOpen(false)} isOpen={isOpen} />
           )}
-        </AnimatePresence>
-      </MotionConfig>
     </>
   );
 };

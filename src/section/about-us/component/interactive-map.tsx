@@ -15,7 +15,9 @@ const InteractiveMap: React.FC = () => {
   useEffect(() => {
     async function fetchPlaceDetails() {
       try {
-        const response = await fetch(`/api/getPlaceDetails?placeId=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLACE_ID}`);
+        const response = await fetch(
+          `/api/getPlaceDetails?placeId=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLACE_ID}`
+        );
         const data = await response.json();
         setPlaceDetails(data);
       } catch (error) {
@@ -29,7 +31,7 @@ const InteractiveMap: React.FC = () => {
         return;
       }
 
-      // Define initMap function in the global scope
+      // Define initMap function globally
       window.initMap = () => setMapLoaded(true);
 
       const script = document.createElement("script");
@@ -53,6 +55,7 @@ const InteractiveMap: React.FC = () => {
     const map = new window.google.maps.Map(mapElement, {
       center: { lat, lng },
       zoom: 18,
+      mapId: process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID, // Set the Map ID
     });
 
     new window.google.maps.marker.AdvancedMarkerElement({
@@ -62,19 +65,12 @@ const InteractiveMap: React.FC = () => {
     });
   }, [placeDetails, mapLoaded]);
 
-  // Split placeDetails.name into two parts
-  const placeName = placeDetails?.name || "";
-  const [firstPart, ...rest] = placeName.split(" ");
-  const remainingText = rest.join(" ");
-
   return (
     <div className="relative w-full h-[500px]">
       <div id="map" className="w-full h-full"></div>
       {placeDetails && (
         <div className="absolute bottom-4 left-4 bg-white p-4 shadow-md rounded-lg">
-          <h2 className="text-lg font-bold">
-            {firstPart} <br /> {remainingText}
-          </h2>
+          <h2 className="text-lg font-bold">{placeDetails.name}</h2>
           <p>{placeDetails.formatted_address}</p>
         </div>
       )}

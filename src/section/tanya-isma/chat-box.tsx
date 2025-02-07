@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { MessageSquare, Send, X } from "lucide-react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -154,7 +153,7 @@ const ChatBox = ({
             </div>
             <div className="rounded-lg bg-teal-100 p-3">
               <p className="text-gray-700">
-                Mau konsultasi umroh bersama keluarga? yuk tanya Isma sekarag?
+                Mau konsultasi umroh bersama keluarga?<br/>Yuk tanya Isma sekarang.
               </p>
               <span className="text-sm text-gray-500">{timeNow}</span>
             </div>
@@ -178,7 +177,7 @@ const ChatBox = ({
                     type="text"
                     name="fullName"
                     id="fullName"
-                    placeholder="Name"
+                    placeholder="Nama Lengkap"
                     value={formData.fullName}
                     onChange={(e) =>
                       setFormData({ ...formData, fullName: e.target.value })
@@ -194,7 +193,7 @@ const ChatBox = ({
                     type="tel"
                     name="phoneNumber"
                     id="phoneNumber"
-                    placeholder="Phone Number" // Ubah placeholder
+                    placeholder="Nomor Telp" // Ubah placeholder
                     value={formData.phoneNumber}
                     onChange={(e) =>
                       setFormData({ ...formData, phoneNumber: e.target.value })
@@ -211,7 +210,7 @@ const ChatBox = ({
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Email"
+                    placeholder="Alamat Email"
                     value={formData.email}
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
@@ -224,7 +223,7 @@ const ChatBox = ({
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.currentTarget.value)}
-                    placeholder="Type a message here..."
+                    placeholder="Ketik pesanmu disini..."
                     className="mr-2 w-full rounded-lg border border-gray-300 px-4 py-2"
                   />
                   <button

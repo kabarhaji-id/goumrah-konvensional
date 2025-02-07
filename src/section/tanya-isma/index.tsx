@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import Image from "next/image";
 import { useId, useState } from "react";
 
@@ -31,7 +30,6 @@ const TanyaIsma = () => {
         </div>
 
           {isOpen && (
-            console.log("open"+ isOpen),
             <ChatBox id={id} onClose={() => setIsOpen(false)} isOpen={isOpen} />
           )}
     </>

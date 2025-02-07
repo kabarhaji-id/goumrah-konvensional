@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Remove unused components and enhance interactive map  &#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to streamline the codebase. Refactored the interactive map to include a global `initMap` function and updated the Google Maps API script for callback handling. Replaced map marker implementation with `AdvancedMarkerElement` for improved functionality and refined UI styling for better consistency.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/interactive-map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/interactive-map.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" afterDir="false" />
     </list>
@@ -273,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738935919991</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase.">
+      <option name="closed" value="true" />
+      <created>1738938073797</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738938073797</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +332,8 @@
     <MESSAGE value="Replace embedded maps with Leaflet integration and cleanup.&#10;&#10;Removed Google Maps iframe-based implementation and replaced it with more interactive Leaflet integration. Introduced a new API route for handling place details via Google Maps API. Updated UI components for better flexibility and cleaned up redundant code and assets." />
     <MESSAGE value="Remove unused components and refactor UI elements&#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to simplify the codebase. Refactored sections for improved layout, accessibility, and responsiveness. Introduced a new API route (`getPlaceDetails`) for fetching Google Maps place details and updated dependencies to support the changes." />
     <MESSAGE value="Remove unused components and enhance interactive map  &#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to streamline the codebase. Refactored the interactive map to include a global `initMap` function and updated the Google Maps API script for callback handling. Replaced map marker implementation with `AdvancedMarkerElement` for improved functionality and refined UI styling for better consistency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused components and enhance interactive map  &#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to streamline the codebase. Refactored the interactive map to include a global `initMap` function and updated the Google Maps API script for callback handling. Replaced map marker implementation with `AdvancedMarkerElement` for improved functionality and refined UI styling for better consistency." />
+    <MESSAGE value="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

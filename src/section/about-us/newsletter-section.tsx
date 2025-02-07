@@ -6,7 +6,7 @@ import GoumrahLogo from "@/public/image/logo-main.svg"
 
 const NewsletterSubscription: React.FC = () => {
   return (
-    <div className="flex relative flex-col items-center px-4 pt-4 pb-80 max-w-[430px]">
+    <div className="flex relative flex-col items-center px-4 pt-4 pb-80 mx-auto w-full">
       <Image
         loading="lazy"
         src="/assets/image/isma-subcribes.png"

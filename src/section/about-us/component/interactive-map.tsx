@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 declare global {
   interface Window {
     google: any;
+    initMap: () => void;
   }
 }
 
@@ -28,11 +29,13 @@ const InteractiveMap: React.FC = () => {
         return;
       }
 
+      // Define initMap function in the global scope
+      window.initMap = () => setMapLoaded(true);
+
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`;
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=marker&loading=async&callback=initMap`;
       script.async = true;
       script.defer = true;
-      script.onload = () => setMapLoaded(true);
       document.head.appendChild(script);
     }
 
@@ -52,7 +55,7 @@ const InteractiveMap: React.FC = () => {
       zoom: 18,
     });
 
-    new window.google.maps.Marker({
+    new window.google.maps.marker.AdvancedMarkerElement({
       position: { lat, lng },
       map,
       title: placeDetails.name,
@@ -61,18 +64,18 @@ const InteractiveMap: React.FC = () => {
 
   // Split placeDetails.name into two parts
   const placeName = placeDetails?.name || "";
-  const [firstPart, ...rest] = placeName.split(" "); // Splitting by space
-  const remainingText = rest.join(" "); // Joining the rest back
+  const [firstPart, ...rest] = placeName.split(" ");
+  const remainingText = rest.join(" ");
 
   return (
     <div className="relative w-full h-[500px]">
       <div id="map" className="w-full h-full"></div>
       {placeDetails && (
-        <div className="absolute bottom-4 bg-white p-4 shadow-md rounded-lg p-3 m-5">
+        <div className="absolute bottom-4 left-4 bg-white p-4 shadow-md rounded-lg">
           <h2 className="text-lg font-bold">
             {firstPart} <br /> {remainingText}
           </h2>
-          <p className="pt-15 mt-5">{placeDetails.formatted_address}</p>
+          <p>{placeDetails.formatted_address}</p>
         </div>
       )}
     </div>

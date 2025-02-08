@@ -5,12 +5,19 @@ const nextConfig: NextConfig = {
   basePath: "",
   reactStrictMode: true, // Enforce React best practices
   images: {
-    // Use remotePatterns for image domains
+    loader : "default",
+    minimumCacheTTL: 60,
+    localPatterns: [
+      {
+        pathname: '/assets/**',
+        search: '',
+      },
+    ],
     remotePatterns: [
       {
         protocol: "https", // Protocol (http or https)
         hostname: "goumrah.id", // Your image domain
-        pathname: "/assets/image/**", // Optional path to restrict image source
+        pathname: "/assets/**", // Optional path to restrict image source
       }
     ],
     formats: ["image/avif", "image/webp"], // Enable modern image formats for better performance

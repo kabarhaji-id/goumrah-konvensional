@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@googlemaps/google-maps-services-js':
-        specifier: ^3.4.0
-        version: 3.4.0
       '@radix-ui/react-accordion':
         specifier: ^1.2.2
         version: 1.2.2(@types/react-dom@18.3.5(@types/react@18.3.18))(@types/react@18.3.18)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -26,9 +23,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.1
         version: 1.1.1(@types/react@18.3.18)(react@18.2.0)
-      '@types/googlemaps':
-        specifier: ^3.43.3
-        version: 3.43.3
+      '@react-google-maps/api':
+        specifier: ^2.20.5
+        version: 2.20.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       axios:
         specifier: ^1.7.9
         version: 1.7.9
@@ -38,9 +35,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      leaflet:
-        specifier: ^1.9.4
-        version: 1.9.4
       lucide-react:
         specifier: ^0.460.0
         version: 0.460.0(react@18.2.0)
@@ -117,6 +111,9 @@ importers:
       '@types/crypto-js':
         specifier: ^4.2.2
         version: 4.2.2
+      '@types/google.maps':
+        specifier: ^3.58.1
+        version: 3.58.1
       '@types/node':
         specifier: ^20.17.12
         version: 20.17.12
@@ -898,11 +895,11 @@ packages:
     resolution: {integrity: sha512-lB05FkqEdUg2AA0xEbUz0SnkXT1LcCTa438W4IWTUh4hdOnVbQyOJ81OrDXsJk/LSiJHubgGEFoR5EHq1NsH1A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@googlemaps/google-maps-services-js@3.4.0':
-    resolution: {integrity: sha512-M1G+Jl4ri9YIODxC+RwvW4UkonTQ+ZFE5gjdIrKP/4/vYG2q2dDN1IgTp03I2MI0eGQs2FmQlxGJ0lBaZ5Ysyw==}
+  '@googlemaps/js-api-loader@1.16.8':
+    resolution: {integrity: sha512-CROqqwfKotdO6EBjZO/gQGVTbeDps5V7Mt9+8+5Q+jTg5CRMi3Ii/L9PmV3USROrt2uWxtGzJHORmByxyo9pSQ==}
 
-  '@googlemaps/url-signature@1.0.40':
-    resolution: {integrity: sha512-Gme3JxGZWQ4NVpATajSpS2/inQzhUxRvr/FK6IFpcC7AHOAmx8blI0y1/Qi2jqil+WoQ3TkEqq/MaKVtuV68RQ==}
+  '@googlemaps/markerclusterer@2.5.3':
+    resolution: {integrity: sha512-x7lX0R5yYOoiNectr10wLgCBasNcXFHiADIBdmn7jQllF2B5ENQw5XtZK+hIw4xnV0Df0xhN4LN98XqA5jaiOw==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1406,6 +1403,18 @@ packages:
       '@types/react':
         optional: true
 
+  '@react-google-maps/api@2.20.5':
+    resolution: {integrity: sha512-Dx3faV4d7JXFSD7SB8ePIt5LOB72mNGHKFp/hIQVaPEsLJlEi4ID+XL6HM3Xw10AzGbr4KS/eQSi3OAaN7YttQ==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19
+      react-dom: ^16.8 || ^17 || ^18 || ^19
+
+  '@react-google-maps/infobox@2.20.0':
+    resolution: {integrity: sha512-03PJHjohhaVLkX6+NHhlr8CIlvUxWaXhryqDjyaZ8iIqqix/nV8GFdz9O3m5OsjtxtNho09F/15j14yV0nuyLQ==}
+
+  '@react-google-maps/marker-clusterer@2.20.0':
+    resolution: {integrity: sha512-tieX9Va5w1yP88vMgfH1pHTacDQ9TgDTjox3tLlisKDXRQWdjw+QeVVghhf5XqqIxXHgPdcGwBvKY6UP+SIvLw==}
+
   '@react-native/assets-registry@0.76.6':
     resolution: {integrity: sha512-YI8HoReYiIwdFQs+k9Q9qpFTnsyYikZxgs/UVtVbhKixXDQF6F9LLvj2naOx4cfV+RGybNKxwmDl1vUok/dRFQ==}
     engines: {node: '>=18'}
@@ -1610,9 +1619,8 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
-  '@types/googlemaps@3.43.3':
-    resolution: {integrity: sha512-ZWNoz/O8MPEpiajvj7QiqCY8tTLFNqNZ/a+s+zTV58wFVNAvvqV4bdGfnsjTb5Cs4V6wEsLrX8XRhmnyYJ2Tdg==}
-    deprecated: 'Types for the Google Maps browser API have moved to @types/google.maps. Note: these types are not for the googlemaps npm package, which is a Node API.'
+  '@types/google.maps@3.58.1':
+    resolution: {integrity: sha512-X9QTSvGJ0nCfMzYOnaVs/k6/4L+7F5uCS+4iUmkLEls6J9S/Phv+m/i3mDeyc49ZBgwab3EFO1HEoBY7k98EGQ==}
 
   '@types/graceful-fs@4.1.9':
     resolution: {integrity: sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==}
@@ -1744,10 +1752,6 @@ packages:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  agentkeepalive@4.6.0:
-    resolution: {integrity: sha512-kja8j7PjmncONqaTsB8fQ+wE2mSU2DJ9D4XKoJ5PFWIdRMa6SLSN1ff4mOr4jCbfRSsxR4keIiySJU0N9T5hIQ==}
-    engines: {node: '>= 8.0.0'}
 
   ajv@6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -2137,9 +2141,6 @@ packages:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  crypto-js@4.2.0:
-    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
-
   css-select@5.1.0:
     resolution: {integrity: sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==}
 
@@ -2218,10 +2219,6 @@ packages:
 
   decode-named-character-reference@1.0.2:
     resolution: {integrity: sha512-O8x12RzrUF8xyVcY0KJowWsmaJxQbmy0/EtnNtHRpsOcT7dFk5W598coHqBVpmWo1oQQfsCqfCmkZN5DJrZVdg==}
-
-  decode-uri-component@0.2.2:
-    resolution: {integrity: sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==}
-    engines: {node: '>=0.10'}
 
   deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -2561,10 +2558,6 @@ packages:
     resolution: {integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==}
     engines: {node: '>=8'}
 
-  filter-obj@1.1.0:
-    resolution: {integrity: sha512-8rXg1ZnX7xzy2NGDVkBVaAy+lSlPNwad13BtgSlLuxfIslyt5Vg64U7tFcCt4WS1R0hvtnQybT/IyCkGZ3DpXQ==}
-    engines: {node: '>=0.10.0'}
-
   finalhandler@1.1.2:
     resolution: {integrity: sha512-aAWcW57uxVNrQZqFXjITpW3sIUQmHGG3qSb9mUah9MgMC4NeWhNOlNjXEYq3HjRAvL6arUviZGGJsBg6z0zsWA==}
     engines: {node: '>= 0.8'}
@@ -2807,9 +2800,6 @@ packages:
   human-signals@2.1.0:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
-
-  humanize-ms@1.2.1:
-    resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -3131,6 +3121,9 @@ packages:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
 
+  kdbush@4.0.2:
+    resolution: {integrity: sha512-WbCVYJ27Sz8zi9Q7Q0xHC+05iwkm3Znipc2XTlrnJbsHMYktW4hPhXUE8Ys1engBrvffoSCqbil1JQAa7clRpA==}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -3144,9 +3137,6 @@ packages:
   language-tags@1.0.9:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
-
-  leaflet@1.9.4:
-    resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
 
   leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
@@ -3846,10 +3836,6 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  query-string@7.1.3:
-    resolution: {integrity: sha512-hh2WYhq4fi8+b+/2Kg9CEge4fDPvHS534aOOvOZeQ3+Vf2mCFsaFBYj0i+iXcAq6I9Vzp5fjMFBlONvayDC1qg==}
-    engines: {node: '>=6'}
-
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -4042,12 +4028,6 @@ packages:
     resolution: {integrity: sha512-U7WjGVG9sH8tvjW5SmGbQuui75FiyjAX72HX15DwBBwF9dNiQZRQAg9nnPhYy+TUnE0+VcrttuvNI8oSxZcocA==}
     hasBin: true
 
-  retry-axios@2.6.0:
-    resolution: {integrity: sha512-pOLi+Gdll3JekwuFjXO3fTq+L9lzMQGcSq7M5gIjExcl3Gu1hd4XXuf5o3+LuSBsaULQH7DiNbsqPd1chVpQGQ==}
-    engines: {node: '>=10.7.0'}
-    peerDependencies:
-      axios: '*'
-
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
@@ -4201,10 +4181,6 @@ packages:
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
 
-  split-on-first@1.1.0:
-    resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
-    engines: {node: '>=6'}
-
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
@@ -4233,10 +4209,6 @@ packages:
   streamsearch@1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
     engines: {node: '>=10.0.0'}
-
-  strict-uri-encode@2.0.0:
-    resolution: {integrity: sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==}
-    engines: {node: '>=4'}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -4315,6 +4287,9 @@ packages:
     resolution: {integrity: sha512-8EbVDiu9iN/nESwxeSxDKe0dunta1GOlHufmSSXxMD2z2/tMZpDMpvXQGsc+ajGo8y2uYUmixaSRUc/QPoQ0GA==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
+
+  supercluster@8.0.1:
+    resolution: {integrity: sha512-IiOea5kJ9iqzD2t7QJq/cREyLHTtSmUT6gQsweojg9WH2sYJqZK9SswTu6jrscO6D1G5v5vYZ9ru/eq85lXeZQ==}
 
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
@@ -5635,19 +5610,12 @@ snapshots:
       '@eslint/core': 0.10.0
       levn: 0.4.1
 
-  '@googlemaps/google-maps-services-js@3.4.0':
-    dependencies:
-      '@googlemaps/url-signature': 1.0.40
-      agentkeepalive: 4.6.0
-      axios: 1.7.9
-      query-string: 7.1.3
-      retry-axios: 2.6.0(axios@1.7.9)
-    transitivePeerDependencies:
-      - debug
+  '@googlemaps/js-api-loader@1.16.8': {}
 
-  '@googlemaps/url-signature@1.0.40':
+  '@googlemaps/markerclusterer@2.5.3':
     dependencies:
-      crypto-js: 4.2.0
+      fast-deep-equal: 3.1.3
+      supercluster: 8.0.1
 
   '@humanfs/core@0.19.1': {}
 
@@ -6099,6 +6067,21 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.18
 
+  '@react-google-maps/api@2.20.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@googlemaps/js-api-loader': 1.16.8
+      '@googlemaps/markerclusterer': 2.5.3
+      '@react-google-maps/infobox': 2.20.0
+      '@react-google-maps/marker-clusterer': 2.20.0
+      '@types/google.maps': 3.58.1
+      invariant: 2.2.4
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
+  '@react-google-maps/infobox@2.20.0': {}
+
+  '@react-google-maps/marker-clusterer@2.20.0': {}
+
   '@react-native/assets-registry@0.76.6': {}
 
   '@react-native/babel-plugin-codegen@0.76.6(@babel/preset-env@7.26.0(@babel/core@7.26.0))':
@@ -6395,7 +6378,7 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
-  '@types/googlemaps@3.43.3': {}
+  '@types/google.maps@3.58.1': {}
 
   '@types/graceful-fs@4.1.9':
     dependencies:
@@ -6553,10 +6536,6 @@ snapshots:
       acorn: 8.14.0
 
   acorn@8.14.0: {}
-
-  agentkeepalive@4.6.0:
-    dependencies:
-      humanize-ms: 1.2.1
 
   ajv@6.12.6:
     dependencies:
@@ -7018,8 +6997,6 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  crypto-js@4.2.0: {}
-
   css-select@5.1.0:
     dependencies:
       boolbase: 1.0.0
@@ -7087,8 +7064,6 @@ snapshots:
   decode-named-character-reference@1.0.2:
     dependencies:
       character-entities: 2.0.2
-
-  decode-uri-component@0.2.2: {}
 
   deep-is@0.1.4: {}
 
@@ -7560,8 +7535,6 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  filter-obj@1.1.0: {}
-
   finalhandler@1.1.2:
     dependencies:
       debug: 2.6.9
@@ -7856,10 +7829,6 @@ snapshots:
       toidentifier: 1.0.1
 
   human-signals@2.1.0: {}
-
-  humanize-ms@1.2.1:
-    dependencies:
-      ms: 2.1.3
 
   ignore@5.3.2: {}
 
@@ -8222,6 +8191,8 @@ snapshots:
       object.assign: 4.1.7
       object.values: 1.2.1
 
+  kdbush@4.0.2: {}
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -8233,8 +8204,6 @@ snapshots:
   language-tags@1.0.9:
     dependencies:
       language-subtag-registry: 0.3.23
-
-  leaflet@1.9.4: {}
 
   leven@3.1.0: {}
 
@@ -9094,13 +9063,6 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  query-string@7.1.3:
-    dependencies:
-      decode-uri-component: 0.2.2
-      filter-obj: 1.1.0
-      split-on-first: 1.1.0
-      strict-uri-encode: 2.0.0
-
   queue-microtask@1.2.3: {}
 
   queue@6.0.2:
@@ -9377,10 +9339,6 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  retry-axios@2.6.0(axios@1.7.9):
-    dependencies:
-      axios: 1.7.9
-
   reusify@1.0.4: {}
 
   rimraf@2.6.3:
@@ -9584,8 +9542,6 @@ snapshots:
 
   space-separated-tokens@2.0.2: {}
 
-  split-on-first@1.1.0: {}
-
   sprintf-js@1.0.3: {}
 
   stable-hash@0.0.4: {}
@@ -9605,8 +9561,6 @@ snapshots:
   statuses@2.0.1: {}
 
   streamsearch@1.1.0: {}
-
-  strict-uri-encode@2.0.0: {}
 
   string-width@4.2.3:
     dependencies:
@@ -9713,6 +9667,10 @@ snapshots:
       mz: 2.7.0
       pirates: 4.0.6
       ts-interface-checker: 0.1.13
+
+  supercluster@8.0.1:
+    dependencies:
+      kdbush: 4.0.2
 
   supports-color@7.2.0:
     dependencies:

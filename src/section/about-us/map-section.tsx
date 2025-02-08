@@ -1,10 +1,10 @@
 import * as React from "react";
-import InteractiveMap from "./component/interactive-map";
+import GoogleMap from "@/components/analytic/google-map";
 
 export const MapSection: React.FC = () => {
   return (
     <section className="h-[500] bg-gray-50">
-        <InteractiveMap />
+        <GoogleMap />
     </section>
   );
 };

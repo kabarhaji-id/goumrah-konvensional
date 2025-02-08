@@ -1,5 +1,5 @@
 import * as React from "react";
-import Image from 'next/image'
+import PriorityImage from  "@/components/ui/priority-image"
 
 interface ImageProps {
   src: string;
@@ -7,11 +7,12 @@ interface ImageProps {
   loading?: "lazy" | "eager";
 }
 
-const GalleryImage: React.FC<ImageProps> = ({src, alt, loading = "lazy"}) => (
-  <img
+const GalleryImage: React.FC<ImageProps> = ({src, alt}) => (
+  <PriorityImage
     src={src}
     alt={alt}
-    loading={loading}
+    width={100}
+    height={100}
     className="block h-full w-full rounded-lg object-cover object-center"
   />
 );

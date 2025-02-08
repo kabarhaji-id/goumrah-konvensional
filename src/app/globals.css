@@ -225,3 +225,10 @@ ol {
 .markdown-list > ul > li, .markdown-list > ol > li {
   margin-bottom: 5px;
 }
+
+#map {
+  width: 100%;
+  height: 500px;
+  min-height: 400px;
+  background-color: lightgray;
+}

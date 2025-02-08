@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from  "next/image"
 import Link from "next/link";
 
 import {
@@ -34,6 +34,7 @@ const FooterSections = ({ withCSbanner = false }: FooterProps) => {
           width={150}
           height={32}
           className="h-[32px] w-[150px]"
+          priority
         />
 
         <div className="flex flex-col gap-5 py-[26px] font-light text-white">

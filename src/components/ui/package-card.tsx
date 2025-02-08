@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import moment from "moment";
 import "moment/locale/id";
+
+import PriorityImage from  "@/components/ui/priority-image"
 
 import GoldAccent from "@/public/patterns/gold-accent.svg";
 import SilverAccent from "@/public/patterns/silver-accent.svg";
@@ -89,7 +90,7 @@ const PackageCard = ({
             {isLoading ? (
               <Skeleton className="aspect-[4/3] h-full rounded-[14px]" />
             ) : (
-              <Image
+              <PriorityImage
                 src={data.thumbnail}
                 alt="package-cover"
                 width={942}

@@ -1,19 +1,19 @@
 "use client"
 import React from 'react';
 import SubscriptionForm from './component/subcription-form';
-import Image from 'next/image';
+import Image from  "next/image";
 import GoumrahLogo from "@/public/image/logo-main.svg"
 
 const NewsletterSubscription: React.FC = () => {
   return (
     <div className="flex relative flex-col items-center px-4 pt-4 pb-80 mx-auto w-full">
       <Image
-        loading="lazy"
         src="/assets/image/isma-subcribes.png"
         alt="Newsletter subscription illustration"
         width={179}
         height={213}
         className="object-contain z-0 self-center max-w-full aspect- w-[179px]"
+        priority
       />
       <div className="flex absolute left-2/4 z-0 flex-col items-center p-4 max-w-full bg-white rounded-2xl shadow-sm -translate-x-2/4 bottom-[49px] translate-y-[0%] w-[300px]">
         <div className="flex self-center py-2 min-h-[39px]" />

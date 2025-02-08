@@ -4,9 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor analytics, maps, and global types handling.&#10;&#10;Reorganized and optimized analytics components (GA, GTM, FB Pixel). Replaced interactive map with Google Maps integration alongside dynamic place details fetching. Structured and improved global type declarations and middleware for nonce-based CSP.">
+      <change afterPath="$PROJECT_DIR$/src/app/api/nonce/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/midlleware.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/analytic/google-analytics.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/analytic/meta-pixel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/analytic/tag-manager.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/priority-image.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/chat-box.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/getPlaceDetails/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/getPlaceDetails/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/AnalyticsTracker.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/package-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/package-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/gtag.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/package-detail/image-poster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/image-poster.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +44,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -279,7 +306,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738938073797</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Refactor &quot;Tanya Isma&quot; and enhance interactive map&#10;&#10;Simplified &quot;Tanya Isma&quot; by removing animations and updating chat prompts for better engagement. Improved the interactive map by adding a global `initMap`, introducing map ID configuration, and refining marker implementation with `AdvancedMarkerElement`. Updated UI placeholders for consistency and streamlined the codebase by removing unused components.">
+      <option name="closed" value="true" />
+      <created>1738938370136</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738938370136</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Refactor interactive map to improve place name display.&#10;&#10;Split place names into first part and remaining text for better formatting. Adjusted layout styles for padding and margins to enhance visual structure.">
+      <option name="closed" value="true" />
+      <created>1738938527071</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738938527071</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +376,10 @@
     <MESSAGE value="Remove unused components and refactor UI elements&#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to simplify the codebase. Refactored sections for improved layout, accessibility, and responsiveness. Introduced a new API route (`getPlaceDetails`) for fetching Google Maps place details and updated dependencies to support the changes." />
     <MESSAGE value="Remove unused components and enhance interactive map  &#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to streamline the codebase. Refactored the interactive map to include a global `initMap` function and updated the Google Maps API script for callback handling. Replaced map marker implementation with `AdvancedMarkerElement` for improved functionality and refined UI styling for better consistency." />
     <MESSAGE value="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor &quot;Tanya Isma&quot; and interactive map functionality&#10;&#10;Replaced animations in &quot;Tanya Isma&quot; for simplicity and updated the chat prompt text to improve user engagement. Enhanced interactive map with global `initMap`, added map ID configuration, and replaced marker with `AdvancedMarkerElement`. Minor UI adjustments and removal of unused components to streamline the codebase." />
+    <MESSAGE value="Refactor &quot;Tanya Isma&quot; and enhance interactive map&#10;&#10;Simplified &quot;Tanya Isma&quot; by removing animations and updating chat prompts for better engagement. Improved the interactive map by adding a global `initMap`, introducing map ID configuration, and refining marker implementation with `AdvancedMarkerElement`. Updated UI placeholders for consistency and streamlined the codebase by removing unused components." />
+    <MESSAGE value="Refactor interactive map to improve place name display.&#10;&#10;Split place names into first part and remaining text for better formatting. Adjusted layout styles for padding and margins to enhance visual structure." />
+    <MESSAGE value="Refactor analytics, maps, and global types handling.&#10;&#10;Reorganized and optimized analytics components (GA, GTM, FB Pixel). Replaced interactive map with Google Maps integration alongside dynamic place details fetching. Structured and improved global type declarations and middleware for nonce-based CSP." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor analytics, maps, and global types handling.&#10;&#10;Reorganized and optimized analytics components (GA, GTM, FB Pixel). Replaced interactive map with Google Maps integration alongside dynamic place details fetching. Structured and improved global type declarations and middleware for nonce-based CSP." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

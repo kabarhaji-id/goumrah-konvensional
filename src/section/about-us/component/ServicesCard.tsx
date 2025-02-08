@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { ServiceCardProps } from '@/data/about/services';
-import Image from 'next/image';
+import Image from "next/image";
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
                                                           icon,
@@ -32,7 +32,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         className="justify-center items-center border border-solid border-slate-200 rounded-[50px] shadow-[0px_2px_2px_-1px_rgba(0,0,0,0.1)] bg-[#F1FAFA] self-center flex w-[51px] p-[10px] flex-col overflow-hidden h-[51px]">
         {icon && (
           <Image
-            loading="lazy"
             src={icon}
             alt=""
             width={50}
@@ -94,7 +93,6 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
                 </ReactMarkdown>
               </div>
               <Image
-                loading="lazy"
                 src={item.iconSrc}
                 width={50}
                 height={50}

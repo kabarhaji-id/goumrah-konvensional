@@ -12,7 +12,6 @@ export default function GoogleAnalytics({ nonce }: { nonce: string }) {
 
     function gtag(event: string, ...args: unknown[]) {
       if (!event) {
-        console.error("gtag error: event name is missing");
         return;
       }
       window.dataLayer.push({ event, args });
@@ -20,8 +19,6 @@ export default function GoogleAnalytics({ nonce }: { nonce: string }) {
 
     gtag("js", new Date());
     gtag("config", GA_TRACKING_ID, { send_page_view: false });
-
-    console.log("✅ Google Analytics Initialized");
   }, []);
 
   return (

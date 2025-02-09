@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor Google Maps integration and improve email subscription.&#10;&#10;Replaced custom Google Maps script loading with `@googlemaps/js-api-loader` for better error handling and API integration. Added Mailchimp-based newsletter subscription API with email validation and improved submission feedback. Updated UI components to use `next/image` for optimized image handling.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Enhance `GalleryImage` component with dynamic dimensions.&#10;&#10;Added optional `width` and `height` props to the `GalleryImage` component for greater flexibility. Updated the gallery images to use these new properties for improved rendering customization.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739106345364</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Enhance `GalleryImage` component with dynamic dimensions.&#10;&#10;Added optional `width` and `height` props to the `GalleryImage` component for greater flexibility. Updated the gallery images to use these new properties for improved rendering customization.">
+      <option name="closed" value="true" />
+      <created>1739107302480</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1739107302480</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,8 +409,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
-    <MESSAGE value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
     <MESSAGE value="Add Content Security Policy and Google Analytics setup&#10;&#10;Implemented a CSP header in `next.config.ts` to enhance security by restricting resource loading. Additionally, finalized Google Analytics integration for tracking pageviews and route changes, improving application monitoring and analytics capabilities." />
     <MESSAGE value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
     <MESSAGE value="Add dynamic FAQ section with search and banner&#10;&#10;Implemented a dynamic FAQ section, including search functionality with context, a new FAQ banner, and loading skeletons for improved UX. Updated related components, styles, and assets, while introducing reusable context for handling FAQ search queries." />
@@ -423,6 +432,8 @@
     <MESSAGE value="Add null check to prevent potential crashes&#10;&#10;Ensure that the code gracefully handles null input values to avoid runtime errors. This change improves stability and prevents unexpected application behavior." />
     <MESSAGE value="Fix issues in ChatBox component rendering and improve imports&#10;&#10;Replaced `next/legacy/image` with `next/image` for better performance and future compatibility. Removed unnecessary parentheses in JSX, improving code readability and structure. Added spacing adjustments for more consistent formatting and cleaner layout." />
     <MESSAGE value="Refactor Google Maps integration and improve email subscription.&#10;&#10;Replaced custom Google Maps script loading with `@googlemaps/js-api-loader` for better error handling and API integration. Added Mailchimp-based newsletter subscription API with email validation and improved submission feedback. Updated UI components to use `next/image` for optimized image handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor Google Maps integration and improve email subscription.&#10;&#10;Replaced custom Google Maps script loading with `@googlemaps/js-api-loader` for better error handling and API integration. Added Mailchimp-based newsletter subscription API with email validation and improved submission feedback. Updated UI components to use `next/image` for optimized image handling." />
+    <MESSAGE value="Add subscription state management to newsletter section&#10;&#10;Introduced state management to track subscription status in the newsletter section. Enhanced the `SubscriptionForm` to trigger a success callback upon successful subscription, updating the parent component's UI dynamically. These changes improve user feedback and provide a smoother subscription experience." />
+    <MESSAGE value="Enhance `GalleryImage` component with dynamic dimensions.&#10;&#10;Added optional `width` and `height` props to the `GalleryImage` component for greater flexibility. Updated the gallery images to use these new properties for improved rendering customization." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance `GalleryImage` component with dynamic dimensions.&#10;&#10;Added optional `width` and `height` props to the `GalleryImage` component for greater flexibility. Updated the gallery images to use these new properties for improved rendering customization." />
   </component>
 </project>

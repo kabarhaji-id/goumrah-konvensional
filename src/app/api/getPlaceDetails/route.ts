@@ -20,13 +20,11 @@ export async function GET(req: NextRequest) {
 
     // ✅ Tambahkan validasi jika response tidak memiliki 'result'
     if (!data.result) {
-      console.error("Google API response error:", data);
       return NextResponse.json({ error: "Invalid placeId or API Key issues" }, { status: 400 });
     }
 
     return NextResponse.json(data);
   } catch (error) {
-    console.error("Internal server error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

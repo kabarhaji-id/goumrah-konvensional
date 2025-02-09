@@ -53,7 +53,6 @@ export function ShareDialog({
         setIsCopied(false);
       }, 2000);
     } catch (error) {
-      console.error("Gagal menyalin text", error);
     }
   };
 

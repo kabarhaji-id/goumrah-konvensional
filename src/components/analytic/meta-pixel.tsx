@@ -21,8 +21,7 @@ export default function FacebookPixel({ nonce }: { nonce: string }) {
       if (!window.fbq.initialized) {
         window.fbq("init", FB_PIXEL_ID);
         window.fbq("track", "PageView");
-        window.fbq.initialized = true; // ✅ Tambahkan flag agar tidak duplikat
-        console.log("✅ Facebook Pixel Initialized");
+        window.fbq.initialized = true; //
       }
     }
   }, []);
@@ -46,7 +45,6 @@ export default function FacebookPixel({ nonce }: { nonce: string }) {
             fbq('init', '${FB_PIXEL_ID}');
             fbq('track', 'PageView');
             fbq.initialized = true;
-            console.log("✅ Facebook Pixel Loaded");
           }
         `,
       }}

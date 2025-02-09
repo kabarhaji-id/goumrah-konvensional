@@ -21,7 +21,6 @@ const InteractiveMap: React.FC = () => {
         const data = await response.json();
         setPlaceDetails(data);
       } catch (error) {
-        console.error("Error fetching place details:", error);
       }
     }
 

@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
 
 export function middleware(req: NextRequest) {
-  const nonce = crypto.randomBytes(16).toString("base64"); // Secure nonce
- console.log("🔐 Middleware Nonce:", nonce);
+  const nonce = crypto.randomBytes(16).toString("base64");
   const cspHeader = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' https://*.googletagmanager.com https://*.google-analytics.com https://connect.facebook.net https://*.googleapis.com https://cdnjs.cloudflare.com https://*.googletagservices.com https://adservice.google.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com;

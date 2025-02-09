@@ -18,7 +18,6 @@ export async function getAllPackages() {
     );
 
     if (!res.ok) {
-      console.error("Failed to fetch data:", res.statusText);
       return { success: false, data: [] };
     }
 
@@ -30,7 +29,6 @@ export async function getAllPackages() {
 
     return resJson;
   } catch (error) {
-    console.error("Error fetching packages:", error);
     return { success: false, records: [] };
   }
 }
@@ -43,7 +41,6 @@ export async function getDetailPackage({ idPackage }: { idPackage: string }) {
     );
 
     if (!res.ok) {
-      console.error("Failed to fetch data:", res.statusText);
       return { success: false, data: null };
     }
 
@@ -55,7 +52,6 @@ export async function getDetailPackage({ idPackage }: { idPackage: string }) {
 
     return resJson;
   } catch (error) {
-    console.error("Error while fetching data: ", error);
     throw error;
   }
 }

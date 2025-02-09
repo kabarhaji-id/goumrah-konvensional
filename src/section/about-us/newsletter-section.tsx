@@ -19,6 +19,8 @@ const NewsletterSubscription: React.FC = () => {
         alt="Newsletter subscription illustration"
         width={179}
         height={213}
+        style={{ width: 179, height: 213 }}
+        quality="100"
         className="object-contain z-0 self-center"
         priority={true}
       />

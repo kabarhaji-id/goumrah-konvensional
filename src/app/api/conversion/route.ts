@@ -39,7 +39,6 @@ export async function POST(req: NextRequest) {
     const result = await response.json();
     return NextResponse.json(result, { status: response.ok ? 200 : 400 });
   } catch (error) {
-    console.error("Facebook API Error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }

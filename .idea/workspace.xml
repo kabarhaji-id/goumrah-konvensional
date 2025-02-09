@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Update marker icon in assets  &#10;&#10;Replaced the existing marker icon in the assets folder with a new version. This change ensures an updated visual representation for the marker icon in the application.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor conversion API to use NextResponse and NextRequest&#10;&#10;Updated the conversion API route to utilize Next.js' NextResponse and NextRequest for improved handling of responses and request headers. Replaced direct header access with `headers.get` and streamlined client IP extraction. These changes enhance code clarity and compatibility with Next.js app directory conventions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/conversion/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/conversion/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about-us/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about-us/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/navbar/bottom-navigation.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739074619056</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactor conversion API to use NextResponse and NextRequest&#10;&#10;Updated the conversion API route to utilize Next.js' NextResponse and NextRequest for improved handling of responses and request headers. Replaced direct header access with `headers.get` and streamlined client IP extraction. These changes enhance code clarity and compatibility with Next.js app directory conventions.">
+      <option name="closed" value="true" />
+      <created>1739074844743</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1739074844743</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +368,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup." />
     <MESSAGE value="Update WhatsApp link handling to use public env variable&#10;&#10;Replaced hard-coded WhatsApp number references with the `NEXT_PUBLIC_WHATSAPP_NUMBER` environment variable for better configurability. Updated links in `package-details.ts`, `chat-box.tsx`, and `footer.tsx` to align with this change. This enhances maintainability and simplifies future updates to the WhatsApp contact number." />
     <MESSAGE value="Remove unused code and update data references&#10;&#10;Removed the notification feature and redundant states from `TanyaIsma`. Replaced `dummyData` with `packageDetailData` for consistency in data usage on the Umrah Ideal Page. Cleaned up unused imports and polished IDE configuration for improved clarity and maintainability." />
     <MESSAGE value="Reduce button size and image dimensions in Tanya Isma section&#10;&#10;Updated button size and image dimensions to improve visual alignment and responsiveness. This ensures a more consistent UI across different screen sizes." />
@@ -385,7 +392,8 @@
     <MESSAGE value="Add marker icon to public assets&#10;&#10;This commit introduces a new marker.png icon to the public assets folder. It will be used to visually represent locations or points of interest in the application." />
     <MESSAGE value="Replace PriorityImage with Next.js Image and add priorities.&#10;&#10;Updated all instances of PriorityImage to use Next.js' Image component for consistency and better performance. Added &quot;priority&quot; or &quot;loading&quot; attributes where necessary to optimize image loading. Introduced a new API route for Facebook conversion tracking and refined middleware and CSP handling to enhance security." />
     <MESSAGE value="Update marker icon in assets  &#10;&#10;Replaced the existing marker icon in the assets folder with a new version. This change ensures an updated visual representation for the marker icon in the application." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update marker icon in assets  &#10;&#10;Replaced the existing marker icon in the assets folder with a new version. This change ensures an updated visual representation for the marker icon in the application." />
+    <MESSAGE value="Refactor conversion API to use NextResponse and NextRequest&#10;&#10;Updated the conversion API route to utilize Next.js' NextResponse and NextRequest for improved handling of responses and request headers. Replaced direct header access with `headers.get` and streamlined client IP extraction. These changes enhance code clarity and compatibility with Next.js app directory conventions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor conversion API to use NextResponse and NextRequest&#10;&#10;Updated the conversion API route to utilize Next.js' NextResponse and NextRequest for improved handling of responses and request headers. Replaced direct header access with `headers.get` and streamlined client IP extraction. These changes enhance code clarity and compatibility with Next.js app directory conventions." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -9,7 +9,7 @@ export const challengeContent: ChallengeContentProps = {
     "Tantangan ini tidak mudah, tapi kami percaya bahwa setiap jama'ah berhak mendapatkan perjalanan yang aman dan penuh makna. Inilah alasan kami ada, dan inilah yang terus kami perjuangkan."
   ],
   highlights: [
-    { text: "Kami di Goumroh.id melihat ini sebagai tanggung jawab.", isBold: true },
+    { text: "Kami di Goumrah.id melihat ini sebagai tanggung jawab.", isBold: true },
     { text: " Bukan hanya sekadar menghubungkan jama'ah dengan layanan umroh, tapi ", isItalic: true },
     { text: "tenang", isBold: true, isItalic: true },
     { text: ", beribadah dengan ", isItalic: true },
@@ -19,4 +19,3 @@ export const challengeContent: ChallengeContentProps = {
     { text: ".", isItalic: true }
   ]
 };
-

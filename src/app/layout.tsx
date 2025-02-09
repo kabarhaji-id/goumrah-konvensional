@@ -21,8 +21,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ? document.querySelector('meta[name="X-Nonce"]')?.getAttribute('content') || ''
     : '';
 
-  console.log("🔐 Client-side Nonce:", nonce); // Log the nonce on the client side
-
   return (
     <html lang="id">
     <head>

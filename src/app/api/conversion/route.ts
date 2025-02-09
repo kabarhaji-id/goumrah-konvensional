@@ -1,16 +1,15 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method Not Allowed" }); // ✅ Pastikan hanya menerima POST
-  }
-
+export async function POST(req: NextRequest) {
   const pixelId = process.env.NEXT_PUBLIC_PIXEL_ID;
   const accessToken = process.env.NEXT_PUBLIC_FB_ACCESS_TOKEN;
 
   if (!pixelId || !accessToken) {
-    return res.status(500).json({ error: "Missing Facebook Pixel ID or Access Token" });
+    return NextResponse.json({ error: "Missing Facebook Pixel ID or Access Token" }, { status: 500 });
   }
+
+  // Attempt to get client IP address from headers (e.g., x-forwarded-for)
+  const clientIp = (req.headers.get("x-forwarded-for") || "").split(",")[0] || "Unknown IP";
 
   const eventData = {
     data: [
@@ -18,10 +17,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         event_name: "PageView",
         event_time: Math.floor(Date.now() / 1000),
         action_source: "website",
-        event_source_url: req.headers.referer || "https://goumrah.id",
+        event_source_url: req.headers.get("referer") || "https://goumrah.id",
         user_data: {
-          client_ip_address: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
-          client_user_agent: req.headers["user-agent"],
+          client_ip_address: clientIp,
+          client_user_agent: req.headers.get("user-agent"),
         },
       },
     ],
@@ -38,9 +37,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
 
     const result = await response.json();
-    return res.status(response.ok ? 200 : 400).json(result);
+    return NextResponse.json(result, { status: response.ok ? 200 : 400 });
   } catch (error) {
     console.error("Facebook API Error:", error);
-    return res.status(500).json({ error: "Internal Server Error" });
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }

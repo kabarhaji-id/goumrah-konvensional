@@ -1,17 +1,17 @@
 [
   {
     "mainID": 1,
-    "mainQuestion": "Apa itu goumroh.id?",
-    "mainAnswer": "Goumroh.id adalah biro perjalanan umroh yang **berizin resmi dari Kementerian Agama RI**. Kami menyediakan berbagai pilihan paket umroh, mulai dari yang hemat hingga eksklusif, untuk memenuhi kebutuhan perjalanan ibadah kamu."
+    "mainQuestion": "Apa itu goumrah.id?",
+    "mainAnswer": "Goumrah.id adalah biro perjalanan umroh yang **berizin resmi dari Kementerian Agama RI**. Kami menyediakan berbagai pilihan paket umroh, mulai dari yang hemat hingga eksklusif, untuk memenuhi kebutuhan perjalanan ibadah kamu."
   },
   {
     "mainID": 2,
-    "mainQuestion": "Apakah goumroh memiliki izin resmi dari Kementerian Agama?",
-    "mainAnswer": "**Ya, goumroh.id memiliki izin resmi** sebagai **Penyelenggara Perjalanan Ibadah Umroh (PPIU)** dari Kementerian Agama RI. Nomor izin kami adalah **No.27052200387740007.**"
+    "mainQuestion": "Apakah goumrah.id memiliki izin resmi dari Kementerian Agama?",
+    "mainAnswer": "**Ya, goumrah.id memiliki izin resmi** sebagai **Penyelenggara Perjalanan Ibadah Umroh (PPIU)** dari Kementerian Agama RI. Nomor izin kami adalah **No.27052200387740007.**"
   },
   {
     "mainID": 3,
-    "mainQuestion": "Dimana lokasi kantor pusat goumroh.id?",
+    "mainQuestion": "Dimana lokasi kantor pusat goumrah.id?",
     "mainAnswer": "Kantor pusat kami berlokasi di **JL. GM Ainul Yakin Blk. A-B No.35, Kalibata, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12740**, atau bisa [lihat disini.](https://maps.app.goo.gl/fMW2ZttUt9wJcCSz6)"
   },
   {
@@ -21,11 +21,9 @@
     "mainChildren": [
       {
         "subMainId": 41,
-        "subMainQuestion": "Paket umroh apa saja yang ditawarkan oleh goumroh.id?",
-        "subMainAnswer":  "Kami menawarkan **beragam paket umroh,** antara lain:\n\n* **Paket Umroh Hemat**\n    - Umroh Paling Hemat - Ibadah Lebih Fokus\n    - Umroh Hemat - Ibadah Lebih Tenang\n    - Umroh Hemat - Ibadah Lebih Dekat\n\n* Paket Umroh Cerdas\n    * Umroh Cerdas - Ibadah Lebih Fokus\n    * Umroh Cerdas - Ibadah Lebih Tenang\n\n* Paket Umroh Cerdas Plus Wisata\n    * Umroh Cerdas - Plus Wisata Turkey\n    * Umroh Cerdas - Plus Wisata Dubai\n\n* Paket Umroh Eksklusif\n    * Umroh Eksklusif - Nikmati Pengalaman Ibadah Terbaik\n    * Umroh Eksklusif - Nikmati Pengalaman Ibadah Ternyaman",
-
-
-        "subMainChildren":""
+        "subMainQuestion": "Paket umroh apa saja yang ditawarkan oleh goumrah.id?",
+        "subMainAnswer": "Kami menawarkan **beragam paket umroh,** antara lain:\n\n* **Paket Umroh Hemat**\n    - Umroh Paling Hemat - Ibadah Lebih Fokus\n    - Umroh Hemat - Ibadah Lebih Tenang\n    - Umroh Hemat - Ibadah Lebih Dekat\n\n* Paket Umroh Cerdas\n    * Umroh Cerdas - Ibadah Lebih Fokus\n    * Umroh Cerdas - Ibadah Lebih Tenang\n\n* Paket Umroh Cerdas Plus Wisata\n    * Umroh Cerdas - Plus Wisata Turkey\n    * Umroh Cerdas - Plus Wisata Dubai\n\n* Paket Umroh Eksklusif\n    * Umroh Eksklusif - Nikmati Pengalaman Ibadah Terbaik\n    * Umroh Eksklusif - Nikmati Pengalaman Ibadah Ternyaman",
+        "subMainChildren": ""
       },
       {
         "subMainId": 42,
@@ -39,7 +37,7 @@
       },
       {
         "subMainId": 44,
-        "subMainQuestion": "Berapa lama durasi perjalanan umroh dengan goumroh.id?",
+        "subMainQuestion": "Berapa lama durasi perjalanan umroh dengan goumrah.id?",
         "subMainAnswer": "Durasi perjalanan umroh dapat bervariasi, tergantung pada paket yang kamu pilih. Biasanya, durasi perjalanan umroh adalah **9-16 hari.**"
       }
     ]
@@ -51,18 +49,18 @@
     "mainChildren": [
       {
         "subMainId": 51,
-        "subMainQuestion": "Berapa biaya umroh di goumroh.id?",
+        "subMainQuestion": "Berapa biaya umroh di goumrah.id?",
         "subMainAnswer": "Biaya umroh bervariasi, **tergantung pada paket yang kamu pilih, durasi perjalanan, dan fasilitas yang didapatkan.** Kamu dapat melihat detail harga setiap paket di website kami atau menghubungi tim kami untuk informasi lebih lanjut."
       },
       {
         "subMainId": 52,
-        "subMainQuestion": "Bagaimana cara pembayaran umroh di goumroh.id?",
+        "subMainQuestion": "Bagaimana cara pembayaran umroh di goumrah.id?",
         "subMainAnswer": "Kami menyediakan **berbagai metode pembayaran** yang **mudah, aman, dan transparan,** antara lain:\n\n* **Transfer Bank**\n* **Kartu kredit**\n* **Pembayaran melalui e-wallet**\n\nKami bekerjasama dengan Sistem Pembayaran Digital yang 100% terpercaya di seluruh Indonesia."
       },
       {
         "subMainId": 53,
-        "subMainQuestion": "Apakah ada promo atau diskon untuk umroh di goumroh.id?",
-        "subMainAnswer": "Kami **menawarkan promo atau diskon menarik** untuk paket umroh tertentu. Kamu dapat mengikuti akun media sosial kami di:\n\n* Instagram : @goumroh.id\n* TikTok\t\t: @goumroh.id\n* Facebook : [goumrah.official](https://www.facebook.com/goumrah.official)\n* LinkedIn : [pt-kabar-haji-indonesia](https://www.linkedin.com/company/pt-kabar-haji-indonesia/)\n* YouTube :\n\natau sering mengunjungi website kami untuk mendapatkan informasi terbaru mengenai promo kami."
+        "subMainQuestion": "Apakah ada promo atau diskon untuk umroh di goumrah.id?",
+        "subMainAnswer": "Kami **menawarkan promo atau diskon menarik** untuk paket umroh tertentu. Kamu dapat mengikuti akun media sosial kami di:\n\n* Instagram : @goumrah.id\n* TikTok\t\t: @goumrah.id\n* Facebook : [goumrah.official](https://www.facebook.com/goumrah.official)\n* LinkedIn : [pt-kabar-haji-indonesia](https://www.linkedin.com/company/pt-kabar-haji-indonesia/)\n* YouTube :\n\natau sering mengunjungi website kami untuk mendapatkan informasi terbaru mengenai promo kami."
       }
     ]
   },
@@ -73,13 +71,13 @@
     "mainChildren": [
       {
         "subMainId": 61,
-        "subMainQuestion": "Apa saja persyaratan untuk mendaftar umroh di goumroh.id?",
+        "subMainQuestion": "Apa saja persyaratan untuk mendaftar umroh di goumrah.id?",
         "subMainAnswer": "Persyaratan umum untuk mendaftar umroh antara lain:\nPaspor yang masih berlaku minimal 6 bulan\nFoto copy KTP\nFoto copy Kartu Keluarga\nPas foto ukuran 4x6 (latar belakang putih)\nSurat keterangan sehat"
       },
       {
         "subMainId": 62,
-        "subMainQuestion": "Bagaimana cara saya menghubungi goumroh.id?",
-        "subMainAnswer": "Kamu dapat menghubungi kami melalui:\n* Telepon: +6281234567890\n* Email: info@goumroh.id\n* Website: [goumroh.id](https://goumrah.id)"
+        "subMainQuestion": "Bagaimana cara saya menghubungi goumrah.id?",
+        "subMainAnswer": "Kamu dapat menghubungi kami melalui:\n* Telepon: +6281234567890\n* Email: info@goumrah.id\n* Website: [goumrah.id](https://goumrah.id)"
       }
     ]
   }

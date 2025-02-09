@@ -39,9 +39,9 @@ const FAQBanner = () => {
               Informasi Penting
             </p>
             <p className="text-black text-xs text-justify px-[25px] pb-[25px]">
-              Website resmi dari Goumroh adalah www.goumroh.id, jika ada agent atau personal yang meminta pembayaran
-              selain melalui Pembayaran Resmi dari goumroh.id, kamu dapat menghubungi
-              email <strong>admin@goumroh.id</strong> atau telepon customer service di <strong>0811 157 188</strong>
+              Website resmi dari Goumrah adalah www.goumrah.id, jika ada agent atau personal yang meminta pembayaran
+              selain melalui Pembayaran Resmi dari goumrah.id, kamu dapat menghubungi
+              email <strong>admin@goumrah.id</strong> atau telepon customer service di <strong>0811 157 188</strong>
             </p>
           </div>
         </div>

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import axios from "axios";
 
-const SubscriptionForm: React.FC = () => {
+const SubscriptionForm: React.FC<{ onSuccess: () => void }> = ({ onSuccess }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -14,6 +14,7 @@ const SubscriptionForm: React.FC = () => {
 
       if (response.status === 201) {
         setMessage(response.data.message);
+        onSuccess(); // Call the onSuccess function passed from the parent component
       }
     } catch (error: any) {
       setMessage(error.response?.data.error || "Terjadi kesalahan, coba lagi.");
@@ -23,7 +24,8 @@ const SubscriptionForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col mt-5 w-full text-sm tracking-wide">
       <div
-        className="flex overflow-hidden justify-between items-center px-3 py-2.5 w-full leading-none bg-white rounded-xl border border-solid border-zinc-300 min-h-[40px] text-neutral-800">
+        className="flex overflow-hidden justify-between items-center px-3 py-2.5 w-full leading-none bg-white rounded-xl border border-solid border-zinc-300 min-h-[40px] text-neutral-800"
+      >
         <label htmlFor="email" className="sr-only">Masukkan alamat email kamu</label>
         <input
           type="email"

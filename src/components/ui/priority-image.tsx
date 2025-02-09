@@ -1,5 +1,5 @@
 "use client";
-import Image, { ImageProps } from "next/legacy/image";
+import Image, { ImageProps } from "next/image";
 import { useState } from "react";
 
 const PriorityImage = ({ src, priority, ...props }: ImageProps) => {

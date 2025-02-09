@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import moment from "moment";
 import "moment/locale/id";
 

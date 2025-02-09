@@ -7,7 +7,7 @@ import {
   SectionTitle,
 } from "@/components/ui/section";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 
 const galleryData: CardProps[] = [

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const getSkytrax = (type: string, rating: string) => {
   if (type === "Full Service" && rating === "5") {

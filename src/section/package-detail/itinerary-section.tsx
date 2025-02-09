@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import CustomNIghtStaysIcon from "@/public/icons/material-symbols_nights-stay-outline-rounded.svg";
 

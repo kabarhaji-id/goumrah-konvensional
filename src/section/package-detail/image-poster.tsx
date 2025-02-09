@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 import GoldAccent from "/public/assets/patterns/gold-accent.svg";
 import SilverAccent from "/public/assets/patterns/silver-accent.svg";

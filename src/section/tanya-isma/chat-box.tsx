@@ -1,7 +1,7 @@
 "use client";
 
 import { MessageSquare, Send, X } from "lucide-react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const ChatBox = ({
@@ -120,7 +120,7 @@ const ChatBox = ({
   };
 
   return (
-    (<div
+    <div
       ref={ref}
       className="fixed bottom-32 z-50 flex min-h-[520px] max-w-screen mx-4 origin-bottom touch-auto flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
       role="dialog"
@@ -144,6 +144,7 @@ const ChatBox = ({
           <X className="size-5 text-white" />
         </button>
       </header>
+
       <main className="content-area flex flex-1 flex-col justify-end overflow-y-auto px-4 py-6">
         {showInitialMessage && (
           <div className="mb-4 flex items-start">
@@ -241,7 +242,7 @@ const ChatBox = ({
         {!showOptions && !showForm && (
           <div>
             {userMessage && ( // Tampilkan userMessage di sini
-              (<>
+              <>
                 <div className="mb-4 flex items-end">
                   <div className="rounded-lg bg-blue-100 p-3">
                     <p className="text-gray-700">{userMessage.message}</p>
@@ -251,6 +252,7 @@ const ChatBox = ({
                     <MessageSquare className="h-5 w-5 text-gray-600" />
                   </div>
                 </div>
+
                 <div className="mb-4 flex items-start">
                   {" "}
                   {/* Pesan bot baru */}
@@ -285,7 +287,7 @@ const ChatBox = ({
                     )}
                   </div>
                 </div>
-              </>)
+              </>
             )}
 
             <div className="flex items-center">
@@ -309,6 +311,7 @@ const ChatBox = ({
           </div>
         )}
       </main>
+
       <style jsx>{`
         .content-area {
           flex-grow: 1;
@@ -321,7 +324,7 @@ const ChatBox = ({
           background-size: 50px 50px;
         }
       `}</style>
-    </div>)
+    </div>
   );
 };
 

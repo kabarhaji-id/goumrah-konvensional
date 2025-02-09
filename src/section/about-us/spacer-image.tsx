@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 export const SpacerSection: React.FC = () => {
   return (
     <section className="flex justify-center items-center mx-auto w-full max-w-screen bg-white">

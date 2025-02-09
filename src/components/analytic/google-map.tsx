@@ -26,13 +26,11 @@ export default function GoogleMap() {
 
       if (data.error) {
         setError(data.error);
-        console.error("API Error:", data.error);
         return;
       }
 
       setPlaceDetails(data.result);
     } catch (error) {
-      console.error("Error fetching place details:", error);
       setError("Failed to fetch place details");
     } finally {
       setIsLoading(false);
@@ -44,7 +42,6 @@ export default function GoogleMap() {
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""; // Default to empty string if undefined
 
     if (!apiKey) {
-      console.error("Google Maps API key is missing");
       setError("Google Maps API key is missing");
       return;
     }
@@ -59,7 +56,6 @@ export default function GoogleMap() {
     loader.load().then(() => {
       setMapLoaded(true);
     }).catch((err) => {
-      console.error("Error loading Google Maps API:", err);
       setError("Failed to load Google Maps");
     });
   }, []);
@@ -74,13 +70,11 @@ export default function GoogleMap() {
 
     const mapElement = document.getElementById("map") as HTMLElement;
     if (!mapElement) {
-      console.error("Map element is missing.");
       return;
     }
 
     const { geometry } = placeDetails;
     if (!geometry || !geometry.location) {
-      console.error("Invalid location data from API.");
       return;
     }
 
@@ -100,8 +94,6 @@ export default function GoogleMap() {
       map,
       content: markerIcon,
     });
-
-    console.log("Marker created:", marker);
   }, [placeDetails, mapLoaded]);
 
   // **Split Place Name**

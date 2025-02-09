@@ -7,8 +7,8 @@ export const SpacerSection: React.FC = () => {
         alt="Responsive Image"
         width={430}
         height={90}
-        className="object-contain w-full"
-        priority
+        className="w-full"
+        priority={true}
       />
     </section>
   );

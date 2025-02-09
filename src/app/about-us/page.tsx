@@ -13,8 +13,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <div className="w-full relative bg-cover bg-center bg-no-repeat max-w-screen h-[586px] z-0 overflow-hidden"
-           style={{ backgroundImage: `url('/assets/image/about-hero.png')` }}>
+      <div className="w-full max-w-screen relative bg-cover bg-center bg-[url(/assets/image/about-hero.png)] bg-no-repeat  h-[586px] z-0 overflow-hidden">
 
         <div className="top-0 z-50 flex h-12 items-center justify-center pt-4 px-4">
           <Logo />

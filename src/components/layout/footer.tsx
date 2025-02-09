@@ -1,4 +1,4 @@
-import PriorityImage from  "@/components/ui/priority-image"
+import Image from  "next/image"
 import Link from "next/link";
 
 import { Button } from "../ui/button";
@@ -53,12 +53,13 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
       <footer
         className={`relative rounded-t-[22px] bg-primary px-6 py-[30px] ${withCSbanner && "-mt-4"}`}
       >
-        <PriorityImage
+        <Image
           alt="goumrah.id logo"
           src="/assets/image/logo-white.svg"
           width={150}
           height={32}
           className="h-[32px] w-[150px]"
+          priority
         />
 
         <div className="flex flex-col gap-5 py-[26px] font-light text-white">

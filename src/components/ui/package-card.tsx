@@ -4,7 +4,7 @@ import Link from "next/link";
 import moment from "moment";
 import "moment/locale/id";
 
-import PriorityImage from  "@/components/ui/priority-image"
+import Image from  "next/image"
 
 import GoldAccent from "@/public/patterns/gold-accent.svg";
 import SilverAccent from "@/public/patterns/silver-accent.svg";
@@ -90,15 +90,16 @@ const PackageCard = ({
             {isLoading ? (
               <Skeleton className="aspect-[4/3] h-full rounded-[14px]" />
             ) : (
-              <PriorityImage
+
+              <Image
                 src={data.thumbnail}
                 alt="package-cover"
                 width={942}
                 height={708}
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"
+                priority
               />
             )}
-
             <div className="absolute -bottom-px h-fit">
               {data.category === "Silver" && (
                 <SilverAccent className="w-[100%]" />

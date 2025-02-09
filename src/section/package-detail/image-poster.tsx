@@ -1,6 +1,6 @@
 "use client";
 
-import PriorityImage from "@/components/ui/priority-image";
+import Image from "next/image";
 
 import GoldAccent from "/public/assets/patterns/gold-accent.svg";
 import SilverAccent from "/public/assets/patterns/silver-accent.svg";
@@ -50,7 +50,8 @@ const ImagePoster = ({
           <Skeleton className="aspect-[4/3] max-h-[380px] w-full rounded-none" />
         )}
 
-        <PriorityImage
+        <Image
+          priority
           src={packageImage}
           alt={`image-${packageImage}`}
           width={640}

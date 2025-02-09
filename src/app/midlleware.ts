@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 export function middleware(req: NextRequest) {
   const nonce = crypto.randomBytes(16).toString("base64"); // Secure nonce
-
+ console.log("🔐 Middleware Nonce:", nonce);
   const cspHeader = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' https://*.googletagmanager.com https://*.google-analytics.com https://connect.facebook.net https://*.googleapis.com https://cdnjs.cloudflare.com https://*.googletagservices.com https://adservice.google.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com;
@@ -32,5 +32,30 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: "/:path*",
+ matcher: [
+  {
+   source:
+     '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+   missing: [
+    { type: 'header', key: 'next-router-prefetch' },
+    { type: 'header', key: 'purpose', value: 'prefetch' },
+   ],
+  },
+
+  {
+   source:
+     '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+   has: [
+    { type: 'header', key: 'next-router-prefetch' },
+    { type: 'header', key: 'purpose', value: 'prefetch' },
+   ],
+  },
+
+  {
+   source:
+     '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+   has: [{ type: 'header', key: 'x-present' }],
+   missing: [{ type: 'header', key: 'x-missing', value: 'prefetch' }],
+  },
+ ],
 };

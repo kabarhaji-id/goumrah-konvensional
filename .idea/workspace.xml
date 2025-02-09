@@ -4,37 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor analytics, maps, and global types handling.&#10;&#10;Reorganized and optimized analytics components (GA, GTM, FB Pixel). Replaced interactive map with Google Maps integration alongside dynamic place details fetching. Structured and improved global type declarations and middleware for nonce-based CSP.">
-      <change afterPath="$PROJECT_DIR$/src/app/api/nonce/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/midlleware.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/analytic/google-analytics.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/analytic/meta-pixel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/analytic/tag-manager.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/priority-image.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/global.d.ts" afterDir="false" />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add marker icon to public assets&#10;&#10;This commit introduces a new marker.png icon to the public assets folder. It will be used to visually represent locations or points of interest in the application.">
+      <change afterPath="$PROJECT_DIR$/src/app/api/conversion/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/getPlaceDetails/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/getPlaceDetails/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/AnalyticsTracker.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/midlleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/midlleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/analytic/meta-pixel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytic/meta-pixel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ui/package-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/package-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/gtag.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/footer-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/map-section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/spacer-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/home/affiliate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/home/affiliate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/home/gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/home/gallery.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/section/package-detail/image-poster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/package-detail/image-poster.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/tanya-isma/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -322,7 +303,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738938527071</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Refactor analytics, maps, and global type handling.&#10;&#10;Replaced legacy analytics setup with modularized GA, GTM, and FB Pixel components. Switched from an interactive map to Google Maps integration with API-driven dynamic place details. Introduced nonce-based CSP via middleware and improved global type declarations for enhanced security and structure.">
+      <option name="closed" value="true" />
+      <created>1739040571774</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1739040571774</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add marker icon to public assets&#10;&#10;This commit introduces a new marker.png icon to the public assets folder. It will be used to visually represent locations or points of interest in the application.">
+      <option name="closed" value="true" />
+      <created>1739040607737</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1739040607737</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +352,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup." />
     <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced multi-command dev script with a single Next.js dev command for easier maintenance. Updated .gitignore to exclude SSL-related files, zip archives, and IDE configurations." />
     <MESSAGE value="Simplify dev script and update .gitignore entries.&#10;&#10;Replaced the multi-command dev script with a single Next.js dev command to improve maintainability. Adjusted .gitignore to exclude SSL-related files, zip archives, and IDE-specific configurations for cleaner version control." />
     <MESSAGE value="Update chat widget props and remove unused dependencies&#10;&#10;Updated the `accountName` prop in `ChatWidgets` and fixed an import format in `page.tsx`. Additionally, purged obsolete dependencies from `package.json` and cleaned up the `pnpm-lock.yaml` file to align with these changes, ensuring a leaner build setup." />
@@ -379,7 +375,9 @@
     <MESSAGE value="Refactor &quot;Tanya Isma&quot; and enhance interactive map&#10;&#10;Simplified &quot;Tanya Isma&quot; by removing animations and updating chat prompts for better engagement. Improved the interactive map by adding a global `initMap`, introducing map ID configuration, and refining marker implementation with `AdvancedMarkerElement`. Updated UI placeholders for consistency and streamlined the codebase by removing unused components." />
     <MESSAGE value="Refactor interactive map to improve place name display.&#10;&#10;Split place names into first part and remaining text for better formatting. Adjusted layout styles for padding and margins to enhance visual structure." />
     <MESSAGE value="Refactor analytics, maps, and global types handling.&#10;&#10;Reorganized and optimized analytics components (GA, GTM, FB Pixel). Replaced interactive map with Google Maps integration alongside dynamic place details fetching. Structured and improved global type declarations and middleware for nonce-based CSP." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor analytics, maps, and global types handling.&#10;&#10;Reorganized and optimized analytics components (GA, GTM, FB Pixel). Replaced interactive map with Google Maps integration alongside dynamic place details fetching. Structured and improved global type declarations and middleware for nonce-based CSP." />
+    <MESSAGE value="Refactor analytics, maps, and global type handling.&#10;&#10;Replaced legacy analytics setup with modularized GA, GTM, and FB Pixel components. Switched from an interactive map to Google Maps integration with API-driven dynamic place details. Introduced nonce-based CSP via middleware and improved global type declarations for enhanced security and structure." />
+    <MESSAGE value="Add marker icon to public assets&#10;&#10;This commit introduces a new marker.png icon to the public assets folder. It will be used to visually represent locations or points of interest in the application." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add marker icon to public assets&#10;&#10;This commit introduces a new marker.png icon to the public assets folder. It will be used to visually represent locations or points of interest in the application." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

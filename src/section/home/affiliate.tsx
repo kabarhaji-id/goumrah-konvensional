@@ -84,6 +84,7 @@ const AffiliatesSection = () => {
             width={affiliate.width}
             height={affiliate.height}
             className="mr-16"
+            priority
           />
         ))}
       </Marquee>

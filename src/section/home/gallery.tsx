@@ -75,8 +75,9 @@ const Card = ({ imageUrl, alt }: CardProps) => {
       <Image
         src={imageUrl}
         alt={alt}
-        fill
+        loading="lazy"
         sizes="44vw"
+        layout="fill"
         quality={100}
         className="object-cover"
       />

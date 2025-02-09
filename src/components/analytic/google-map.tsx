@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useCallback } from "react";
+import { Loader } from "@googlemaps/js-api-loader";
 
 declare global {
   interface Window {
@@ -12,9 +13,9 @@ export default function GoogleMap() {
   const [placeDetails, setPlaceDetails] = useState<any>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true); // Untuk Skeleton Loader
+  const [isLoading, setIsLoading] = useState(true);
 
-  // **Memuat Detail Tempat**
+  // **Load Place Details**
   const fetchPlaceDetails = useCallback(async () => {
     try {
       setIsLoading(true);
@@ -38,25 +39,29 @@ export default function GoogleMap() {
     }
   }, []);
 
-  // **Memuat Google Maps API**
+  // **Load Google Maps using js-api-loader**
   const loadGoogleMaps = useCallback(() => {
-    if (window.google && window.google.maps) {
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""; // Default to empty string if undefined
+
+    if (!apiKey) {
+      console.error("Google Maps API key is missing");
+      setError("Google Maps API key is missing");
+      return;
+    }
+
+    const loader = new Loader({
+      apiKey, // Now guaranteed to be a string
+      version: "weekly",
+      libraries: ["marker", "places"],
+    });
+
+    // Loader.load() now returns a Promise<void>
+    loader.load().then(() => {
       setMapLoaded(true);
-      return;
-    }
-
-    const existingScript = document.querySelector("script[src*='maps.googleapis']");
-    if (existingScript) {
-      existingScript.addEventListener("load", () => setMapLoaded(true));
-      return;
-    }
-
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=marker,places&v=beta`;
-    script.async = true;
-    script.defer = true;
-    script.onload = () => setMapLoaded(true);
-    document.head.appendChild(script);
+    }).catch((err) => {
+      console.error("Error loading Google Maps API:", err);
+      setError("Failed to load Google Maps");
+    });
   }, []);
 
   useEffect(() => {
@@ -68,11 +73,14 @@ export default function GoogleMap() {
     if (!placeDetails || !mapLoaded || !window.google) return;
 
     const mapElement = document.getElementById("map") as HTMLElement;
-    if (!mapElement) return;
+    if (!mapElement) {
+      console.error("Map element is missing.");
+      return;
+    }
 
     const { geometry } = placeDetails;
     if (!geometry || !geometry.location) {
-      setError("Invalid location data from API");
+      console.error("Invalid location data from API.");
       return;
     }
 
@@ -84,41 +92,39 @@ export default function GoogleMap() {
       mapId: process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID,
     });
 
-    // **Gunakan Path Publik untuk Marker**
     const markerIcon = document.createElement('img');
-    markerIcon.src =  "/assets/icons/marker.png";
+    markerIcon.src = "/assets/icons/marker.png";
 
     const marker = new window.google.maps.marker.AdvancedMarkerElement({
       position: { lat, lng },
       map,
       content: markerIcon,
-
     });
 
     console.log("Marker created:", marker);
   }, [placeDetails, mapLoaded]);
 
-  // **Pisahkan Nama Lokasi**
+  // **Split Place Name**
   const placeName = placeDetails?.name || "";
   const [firstPart, ...rest] = placeName.split(" ");
   const remainingText = rest.join(" ");
 
   return (
     <div className="relative w-full h-[500px]">
-      {/* Skeleton Loader untuk Peta */}
+      {/* Skeleton Loader for Map */}
       {isLoading && <SkeletonLoader className="absolute inset-0 w-full h-full" />}
 
-      {/* Peta */}
+      {/* Map */}
       <div id="map" className={`w-full h-full ${isLoading ? "hidden" : ""}`}></div>
 
-      {/* Pesan Error */}
+      {/* Error Message */}
       {error && (
         <div className="absolute top-4 left-4 bg-red-500 text-white p-3 rounded-lg">
           {error}
         </div>
       )}
 
-      {/* Skeleton Loader untuk Detail Lokasi */}
+      {/* Skeleton Loader for Place Details */}
       {isLoading ? (
         <SkeletonLoader className="absolute bottom-4 bg-gray-200 p-4 shadow-md rounded-lg m-5 w-[300px] h-[80px]" />
       ) : (
@@ -135,7 +141,7 @@ export default function GoogleMap() {
   );
 }
 
-// **Komponen Skeleton Loader**
+// **Skeleton Loader Component**
 function SkeletonLoader({ className }: { className?: string }) {
   return <div className={`${className} animate-pulse bg-gray-300 rounded-lg`}></div>;
 }

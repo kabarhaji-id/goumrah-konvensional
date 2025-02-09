@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Add null check to prevent potential crashes&#10;&#10;Ensure that the code gracefully handles null input values to avoid runtime errors. This change improves stability and prevents unexpected application behavior.">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Fix issues in ChatBox component rendering and improve imports&#10;&#10;Replaced `next/legacy/image` with `next/image` for better performance and future compatibility. Removed unnecessary parentheses in JSX, improving code readability and structure. Added spacing adjustments for more consistent formatting and cleaner layout.">
+      <change afterPath="$PROJECT_DIR$/src/app/api/subscribe/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/subcription-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/subcription-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +166,7 @@
       <workItem from="1738820070094" duration="10960000" />
       <workItem from="1738832461963" duration="14323000" />
       <workItem from="1739089306755" duration="232000" />
+      <workItem from="1739096866498" duration="4055000" />
     </task>
     <task id="LOCAL-00001" summary="Add chat widget feature and related UI components&#10;&#10;Integrates a new chat widget feature for user interaction, with toggle and message functionality. Includes styling updates, utility changes, and new assets like the chat icon SVG. Updates .gitignore and adds configuration files for project setup.">
       <option name="closed" value="true" />
@@ -359,7 +368,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739088873732</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fix issues in ChatBox component rendering and improve imports&#10;&#10;Replaced `next/legacy/image` with `next/image` for better performance and future compatibility. Removed unnecessary parentheses in JSX, improving code readability and structure. Added spacing adjustments for more consistent formatting and cleaner layout.">
+      <option name="closed" value="true" />
+      <created>1739096990520</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1739096990520</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge pull request #57 from kabarhaji-id/feat/data-optimization&#10;&#10;fix: cta customer service button and add turkey hotel data" />
     <MESSAGE value="Add dynamic file serving API route to public folder&#10;&#10;This new API route handles GET requests for files in the public directory dynamically based on the slug in the URL. It returns the file content with appropriate headers or a 404 error if the file is not found." />
     <MESSAGE value="Remove unused file and update dependency configurations&#10;&#10;Deleted `route.ts` due to redundancy and cleaned up unnecessary dependencies in the lockfile. This streamlines the codebase, eliminates outdated packages, and reduces potential maintenance overhead." />
     <MESSAGE value="Add Google Analytics integration with route tracking&#10;&#10;Introduced Google Analytics to track pageviews via `gtag.js`. Added a `AnalyticsTracker` component to log route changes using Next.js `usePathname`. Updated global types and layout setup to ensure seamless analytics functionality." />
@@ -405,7 +421,8 @@
     <MESSAGE value="Refactor navbar icon styles and improve code clarity&#10;&#10;Updated navbar icons to dynamically change styles based on route activation for better UI feedback. Simplified and standardized class naming conventions across components for improved readability and maintainability. Adjusted the about-us page background styles for enhanced visual alignment." />
     <MESSAGE value="Refactor Google Maps setup and improve middleware CSP  &#10;&#10;Replaced manual script loading with `@googlemaps/js-api-loader` for improved API handling and error management in Google Maps integration. Enhanced middleware Content Security Policy (CSP) by including additional Google APIs and refined matcher configuration. These changes improve overall clarity, maintainability, and reliability of map rendering and security policies." />
     <MESSAGE value="Add null check to prevent potential crashes&#10;&#10;Ensure that the code gracefully handles null input values to avoid runtime errors. This change improves stability and prevents unexpected application behavior." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add null check to prevent potential crashes&#10;&#10;Ensure that the code gracefully handles null input values to avoid runtime errors. This change improves stability and prevents unexpected application behavior." />
+    <MESSAGE value="Fix issues in ChatBox component rendering and improve imports&#10;&#10;Replaced `next/legacy/image` with `next/image` for better performance and future compatibility. Removed unnecessary parentheses in JSX, improving code readability and structure. Added spacing adjustments for more consistent formatting and cleaner layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix issues in ChatBox component rendering and improve imports&#10;&#10;Replaced `next/legacy/image` with `next/image` for better performance and future compatibility. Removed unnecessary parentheses in JSX, improving code readability and structure. Added spacing adjustments for more consistent formatting and cleaner layout." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

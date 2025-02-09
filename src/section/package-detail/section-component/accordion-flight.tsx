@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion/accordion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useAccordionFlightStore } from "@/store/useInterfaceStore";
 
 interface DataFlightProps {

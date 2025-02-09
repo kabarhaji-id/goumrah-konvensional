@@ -3,7 +3,7 @@
 import { testimonies } from "@/data/testimonies";
 import { type Testimony } from "@/types/testimonies";
 import { StarIcon } from "lucide-react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";

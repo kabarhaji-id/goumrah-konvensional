@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 import WhatsAppIcon from "@/public/icons/ic_baseline-whatsapp.svg";
 import FacebookLogo from "@/public/icons/facebook-logo.svg";

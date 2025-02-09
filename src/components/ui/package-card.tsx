@@ -4,7 +4,7 @@ import Link from "next/link";
 import moment from "moment";
 import "moment/locale/id";
 
-import Image from  "next/image"
+import Image from  "next/legacy/image"
 
 import GoldAccent from "@/public/patterns/gold-accent.svg";
 import SilverAccent from "@/public/patterns/silver-accent.svg";

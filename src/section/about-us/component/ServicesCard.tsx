@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { ServiceCardProps } from '@/data/about/services';
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({
                                                           icon,

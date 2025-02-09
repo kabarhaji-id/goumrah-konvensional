@@ -24,7 +24,7 @@ import {
   CardDetailHeader,
 } from "@/components/ui/card/package-detail-card";
 import { getSkytrax } from "@/components/ui/helper/getSkytrax";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useAccordionFlightStore } from "@/store/useInterfaceStore";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";

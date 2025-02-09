@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Skeleton } from "@/components/ui/skeleton-loader"; // If you're using this, make sure it's correctly imported
 import { useState } from "react"; // No need for useEffect if just tracking load/error
 import Exclamation from "@/public/icons/exclamation-rounded.svg";

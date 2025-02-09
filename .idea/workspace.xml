@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Refactor Google Maps integration and improve email subscription.&#10;&#10;Replaced custom Google Maps script loading with `@googlemaps/js-api-loader` for better error handling and API integration. Added Mailchimp-based newsletter subscription API with email validation and improved submission feedback. Updated UI components to use `next/image` for optimized image handling.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/subcription-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/subcription-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/image-section.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,29 +70,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Project/Website/goumrah-konvensional/src/app/api/getPlaceDetails&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "development",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app/api/getPlaceDetails",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\Website\goumrah-konvensional\src\app\api\getPlaceDetails" />
@@ -425,15 +424,5 @@
     <MESSAGE value="Fix issues in ChatBox component rendering and improve imports&#10;&#10;Replaced `next/legacy/image` with `next/image` for better performance and future compatibility. Removed unnecessary parentheses in JSX, improving code readability and structure. Added spacing adjustments for more consistent formatting and cleaner layout." />
     <MESSAGE value="Refactor Google Maps integration and improve email subscription.&#10;&#10;Replaced custom Google Maps script loading with `@googlemaps/js-api-loader` for better error handling and API integration. Added Mailchimp-based newsletter subscription API with email validation and improved submission feedback. Updated UI components to use `next/image` for optimized image handling." />
     <option name="LAST_COMMIT_MESSAGE" value="Refactor Google Maps integration and improve email subscription.&#10;&#10;Replaced custom Google Maps script loading with `@googlemaps/js-api-loader` for better error handling and API integration. Added Mailchimp-based newsletter subscription API with email validation and improved submission feedback. Updated UI components to use `next/image` for optimized image handling." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data/about/mission-poin.tsx</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

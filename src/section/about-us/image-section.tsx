@@ -4,16 +4,19 @@ import Image from  "next/image"
 interface ImageProps {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
   loading?: "lazy";
+
 }
 
-const GalleryImage: React.FC<ImageProps> = ({src, alt}) => (
+const GalleryImage: React.FC<ImageProps> = ({src, alt, width, height}) => (
   <Image
     src={src}
     alt={alt}
-    width={100}
-    height={100}
-    style={{ width: 36, height: 36 }}
+    width={width}
+    height={height}
+    style={{ width:`${width}`, height: `${height}` }}
     loading="lazy"
     className="block h-full w-full rounded-lg object-cover object-center"
   />
@@ -22,15 +25,21 @@ const GalleryImage: React.FC<ImageProps> = ({src, alt}) => (
 const galleryImages: ImageProps[] = [
   {
     src: "/assets/image/kabaah.png",
-    alt: "Gallery image 1"
+    alt: "Gallery image 1",
+    width: 360,
+    height: 270,
   },
   {
     src: "/assets/image/tour-group.png",
-    alt: "Gallery image 2"
+    alt: "Gallery image 2",
+    width: 360,
+    height: 270,
   },
   {
     src: "/assets/image/madinah-umbrella.png",
-    alt: "Gallery image 3"
+    alt: "Gallery image 3",
+    width: 360,
+    height: 270,
   }
 ];
 

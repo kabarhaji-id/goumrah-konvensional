@@ -14,7 +14,7 @@ const TopSection = () => {
 
       <div className="w-full h-full">
         <div className="max-w-md mx-auto pt-10 pb-5">
-          <p className="text-3sm font-normal text-white text-center">Selamat Datang di goumroh
+          <p className="text-3sm font-normal text-white text-center">Selamat Datang di goumrah.id
             Care,</p>
           <h2 className="text-3sm font-bold text-white text-center">Ada yang bisa kami bantu?</h2>
         </div>

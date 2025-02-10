@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from 'react';
-import SubscriptionForm from './component/subcription-form';
+import React, { useState } from "react";
+import SubscriptionForm from "./component/subcription-form";
 import Image from "next/image";
 import GoumrahLogo from "@/public/image/logo-main.svg";
 
@@ -13,7 +13,7 @@ const NewsletterSubscription: React.FC = () => {
   };
 
   return (
-    <section className="flex relative flex-col items-center px-4 pt-4 pb-80 mx-auto w-full">
+    <section className="flex relative flex-col items-center px-4 pt-4 pb-72 mx-auto w-full">
       <Image
         src="/assets/image/isma-subcribes.png"
         alt="Newsletter subscription illustration"
@@ -25,9 +25,10 @@ const NewsletterSubscription: React.FC = () => {
         priority={true}
       />
       <div
-        className={`flex absolute left-2/4 z-0 flex-col items-center p-4 max-w-full bg-white rounded-2xl shadow-sm -translate-x-2/4 ${
+        className={`flex absolute left-2/4 z-0 flex-col items-center p-4 max-w-full bg-white rounded-2xl shadow-sm -translate-x-2/4 
+  transition-all duration-500 ease-in-out ${
           isSubscribed ? "bottom-0" : "bottom-[49px]"
-        } translate-y-[0%] w-[300px]`}
+        } w-[300px]`}
       >
         <div className="flex self-center py-2 min-h-[39px]" />
         <GoumrahLogo />

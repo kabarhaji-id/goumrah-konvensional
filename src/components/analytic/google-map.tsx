@@ -79,6 +79,10 @@ export default function GoogleMap() {
     const map = new window.google.maps.Map(mapElement, {
       center: { lat, lng },
       zoom: 18,
+      mapTypeControl: false,
+      fullscreenControl: true,
+      streetViewControl: false,
+      zoomControl: false,
       mapId: process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID,
     });
 

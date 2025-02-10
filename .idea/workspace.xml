@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="feat: ajdust animation map marker">
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="feat: fix map styling, fix position of subscribes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/affiliate-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/newsletter-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/about/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/about/services.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,7 +425,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739165139042</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="feat: fix map styling, fix position of subscribes">
+      <option name="closed" value="true" />
+      <created>1739166172965</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1739166172965</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: fix map styling, fix position of subscribes">
+      <option name="closed" value="true" />
+      <created>1739166201890</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1739166201890</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor components and enhance image handling.&#10;&#10;Replaced `img` with `next/image` for improved performance and added width/height attributes. Removed unnecessary code and streamlined interfaces across multiple components. Enabled eslint to be ignored during builds in the Next.js config." />
     <MESSAGE value="Replace embedded maps with Leaflet integration and cleanup.&#10;&#10;Removed Google Maps iframe-based implementation and replaced it with more interactive Leaflet integration. Introduced a new API route for handling place details via Google Maps API. Updated UI components for better flexibility and cleaned up redundant code and assets." />
     <MESSAGE value="Remove unused components and refactor UI elements&#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to simplify the codebase. Refactored sections for improved layout, accessibility, and responsiveness. Introduced a new API route (`getPlaceDetails`) for fetching Google Maps place details and updated dependencies to support the changes." />
     <MESSAGE value="Remove unused components and enhance interactive map  &#10;&#10;Deleted obsolete components (`map-embedded` and `scroll-observer`) to streamline the codebase. Refactored the interactive map to include a global `initMap` function and updated the Google Maps API script for callback handling. Replaced map marker implementation with `AdvancedMarkerElement` for improved functionality and refined UI styling for better consistency." />
@@ -473,6 +486,7 @@
     <MESSAGE value="feat: Adjust Item Inside Card Expanding" />
     <MESSAGE value="feat: Adjust Json services.json" />
     <MESSAGE value="feat: ajdust animation map marker" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: ajdust animation map marker" />
+    <MESSAGE value="feat: fix map styling, fix position of subscribes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix map styling, fix position of subscribes" />
   </component>
 </project>

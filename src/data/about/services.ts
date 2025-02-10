@@ -17,12 +17,12 @@ export type ServicesItem = {
 }
 
 
-export interface ServiceCardProps extends ServiceData {
+export interface ServiceCardProps extends Service {
   isLoading?: boolean;
 }
 
 export interface UmrahServicesState {
-  services: ServiceData[];
+  services: Service[];
   error: string | null;
   isLoading: boolean;
 }

@@ -47,30 +47,23 @@ jobs:
           VPS_PORT: ${{ secrets.VPS_PORT }}
           PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
         run: |
-          # Ensure required secrets are set
-          if [ -z "$SSH_PRIVATE_KEY" ] || [ -z "$VPS_USER" ] || [ -z "$VPS_HOST" ] || [ -z "$VPS_PORT" ] || [ -z "$PROJECT_DIR" ]; then
-            echo "❌ ERROR: Missing required secrets. Please configure them in GitHub Secrets."
-            exit 1
-          fi
-
-          echo "🚀 Connecting to VPS on port $VPS_PORT..."
-          echo "📂 Project Directory: $PROJECT_DIR"
-
           # Setup SSH Key
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
 
           # Connect to VPS and deploy
-          ssh -p $VPS_PORT -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_HOST << 'EOF'
+          ssh -o StrictHostKeyChecking=no -p $VPS_PORT -i private_key $VPS_USER@$VPS_HOST << 'EOF'
             set -e
-          
-            echo "🚀 Connected to VPS. Deploying Next.js app..."
 
-            # Ensure the project directory exists
+            echo "🚀 Connecting to VPS on port $VPS_PORT..."
+            echo "📂 Project Directory: $PROJECT_DIR"
+
+            # Check if the project directory exists
             if [ ! -d "$PROJECT_DIR" ]; then
               echo "❌ ERROR: Project directory $PROJECT_DIR does not exist!"
               exit 1
             fi
 
+            # Navigate to the project directory
             cd "$PROJECT_DIR"
 
             # Pull latest changes from GitHub

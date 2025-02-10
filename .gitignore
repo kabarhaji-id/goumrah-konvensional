@@ -10,6 +10,7 @@
 !.yarn/releases
 !.yarn/versions
 .pnpm-lock.yml
+.idea/workspace.xml
 /ssl/
 /ssl.zip
 # testing

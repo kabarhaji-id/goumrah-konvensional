@@ -13,7 +13,7 @@ const NewsletterSubscription: React.FC = () => {
   };
 
   return (
-    <section className="flex relative flex-col items-center px-4 pt-4 pb-80 mx-auto w-full">
+    <section className="flex relative flex-col items-center px-4 pt-4 pb-72 mx-auto w-full">
       <Image
         src="/assets/image/isma-subcribes.png"
         alt="Newsletter subscription illustration"

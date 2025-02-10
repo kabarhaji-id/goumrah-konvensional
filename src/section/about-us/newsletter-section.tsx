@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import SubscriptionForm from "./component/subcription-form";
+import React, { useState } from 'react';
+import SubscriptionForm from './component/subcription-form';
 import Image from "next/image";
 import GoumrahLogo from "@/public/image/logo-main.svg";
 
@@ -25,10 +25,9 @@ const NewsletterSubscription: React.FC = () => {
         priority={true}
       />
       <div
-        className={`flex absolute left-2/4 z-0 flex-col items-center p-4 max-w-full bg-white rounded-2xl shadow-sm -translate-x-2/4 
-  transition-all duration-500 ease-in-out ${
+        className={`flex absolute left-2/4 z-0 flex-col items-center p-4 max-w-full bg-white rounded-2xl shadow-sm -translate-x-2/4 ${
           isSubscribed ? "bottom-0" : "bottom-[49px]"
-        } w-[300px]`}
+        } translate-y-[0%] w-[300px]`}
       >
         <div className="flex self-center py-2 min-h-[39px]" />
         <GoumrahLogo />

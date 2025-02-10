@@ -83,7 +83,6 @@ const AffiliatesAboutSection = () => {
             alt={`Logo ${affiliate.name}`}
             width={affiliate.width}
             height={affiliate.height}
-            style={{ width: affiliate.width, height: affiliate.height }}
             className="mr-16 bg-blend-luminosity grayscale"
             priority={true}
           />

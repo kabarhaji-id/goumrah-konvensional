@@ -69,30 +69,37 @@ export default function GoogleMap() {
     if (!placeDetails || !mapLoaded || !window.google) return;
 
     const mapElement = document.getElementById("map") as HTMLElement;
-    if (!mapElement) {
-      return;
-    }
+    if (!mapElement) return;
 
     const { geometry } = placeDetails;
-    if (!geometry || !geometry.location) {
-      return;
-    }
+    if (!geometry || !geometry.location) return;
 
     const { lat, lng } = geometry.location;
 
     const map = new window.google.maps.Map(mapElement, {
       center: { lat, lng },
       zoom: 18,
+      mapTypeControl: false,
+      fullscreenControl: true,
+      streetViewControl: false,
+      zoomControl: false,
       mapId: process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID,
     });
 
-    const markerIcon = document.createElement('img');
+    // Create a div for the marker
+    const markerContainer = document.createElement("div");
+    markerContainer.classList.add("custom-marker");
+
+    const markerIcon = document.createElement("img");
     markerIcon.src = "/assets/icons/marker.png";
+    markerIcon.classList.add("marker-icon");
+
+    markerContainer.appendChild(markerIcon);
 
     const marker = new window.google.maps.marker.AdvancedMarkerElement({
       position: { lat, lng },
       map,
-      content: markerIcon,
+      content: markerContainer,
     });
   }, [placeDetails, mapLoaded]);
 

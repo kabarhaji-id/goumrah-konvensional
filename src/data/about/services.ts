@@ -1,15 +1,21 @@
-export interface ServiceItem {
-  label: string;
-  iconSrc: string;
+export type Services = {
+  services: Service[];
 }
 
-export interface ServiceData {
-  icon: string;
-  title: string;
-  subtitle: string;
-  description?: string;
-  items?: ServiceItem[];
+export type Service = {
+  icon:           string;
+  title:          string;
+  subtitle:       string;
+  servicesItems?: ServicesItem[];
+  description?:   string;
 }
+
+export type ServicesItem = {
+  label:   string;
+  iconSrc: string;
+  items:   string[];
+}
+
 
 export interface ServiceCardProps extends ServiceData {
   isLoading?: boolean;

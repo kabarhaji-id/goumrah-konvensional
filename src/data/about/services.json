@@ -4,10 +4,33 @@
       "icon": "/assets/icons/kabaa-filled.svg",
       "title": "**Umroh**",
       "subtitle": "Setiap jama'ah punya kebutuhan berbeda, dan kami siap memenuhi semuanya",
-      "items": [
-        { "label": "**Umrah Hemat**", "iconSrc": "/assets/icons/chevron_down.svg" },
-        { "label": "**Umrah Cerdas**", "iconSrc": "/assets/icons/chevron_down.svg" },
-        { "label": "**Umrah Eksklusif**", "iconSrc": "/assets/icons/chevron_down.svg" }
+      "servicesItems": [
+        {
+          "label": "**Umrah Hemat**",
+          "iconSrc": "/assets/icons/chevron_down.svg",
+          "items": [
+            "Umroh Paling Hemat - Ibadah Lebih Fokus",
+            "Umroh Hemat - Ibadah Lebih Tenang",
+            "Umroh Hemat - Ibadah Lebih Dekat"
+          ]
+        },
+        {
+          "label": "**Umrah Cerdas**",
+          "iconSrc": "/assets/icons/chevron_down.svg",
+          "items": [
+            "Umroh Cerdas - Ibadah Lebih Fokus",
+            "Umroh Cerdas - Ibadah Lebih Tenang"
+          ]
+        },
+        {
+          "label": "**Umrah Eksklusif**",
+          "iconSrc": "/assets/icons/chevron_down.svg",
+          "items": [
+            "Umroh Eksklusif - Nikmati Pengalaman Ibadah Terbaik",
+            "Umroh Eksklusif - Nikmati Pengalaman Ibadah Ternyaman"
+
+          ]
+        }
       ]
     },
     {

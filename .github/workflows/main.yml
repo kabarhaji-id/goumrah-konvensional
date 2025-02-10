@@ -16,6 +16,9 @@ jobs:
   # --- Build ---------------
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: /home/www/goumrah-konvensional  # ✅ All commands will run inside the  /home/www/goumrah-konvensional directory
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -45,7 +48,7 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_PORT: ${{ secrets.VPS_PORT }}
-          PROJECT_DIR: "/home/www/goumrah-konvensional"
+          PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
         run: |
           # Setup SSH Key
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
@@ -57,13 +60,13 @@ jobs:
             echo "🚀 Connecting to VPS on port $VPS_PORT..."
             echo "📂 Project Directory: $PROJECT_DIR"
 
-            # Check if the project directory exists
+            # Ensure the project directory exists
             if [ ! -d "$PROJECT_DIR" ]; then
               echo "❌ ERROR: Project directory $PROJECT_DIR does not exist!"
               exit 1
             fi
 
-            # Navigate to the project directory
+            # Set the working directory
             cd "$PROJECT_DIR"
 
             # Pull latest changes from GitHub
@@ -81,7 +84,7 @@ jobs:
             echo "📦 Installing dependencies..."
             sudo -u www-data pnpm install --frozen-lockfile || { echo "❌ Dependency installation failed"; exit 1; }
 
-            # Build the project using Node.js 22
+            # Build the project
             echo "🔨 Building the project..."
             sudo -u www-data pnpm run build || { echo "❌ Build failed"; exit 1; }
 

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { ServiceCard } from "./component/ServicesCard";
 import servicesData from "@/data/about/services.json";
-import { ServiceData, UmrahServicesState } from "@/data/about/services";
+import { Service, UmrahServicesState } from "@/data/about/services";
 
 const ServicesSection: React.FC = () => {
   const [state, setState] = useState<UmrahServicesState>({
@@ -16,7 +16,6 @@ const ServicesSection: React.FC = () => {
       services: servicesData.services,
       error: null,
       isLoading: false
-
     });
   }, []);
 
@@ -39,16 +38,11 @@ const ServicesSection: React.FC = () => {
           ? Array.from({ length: 5 }).map((_, index) => (
             <ServiceCard key={`skeleton-${index}`} icon="" title="" subtitle="" isLoading />
           ))
-          : state.services.map((service: ServiceData, index: number) => (
-            <ServiceCard
-              key={`service-${index}`}
-              {...service}
-              isLoading={false}
-            />
+          : state.services.map((service: Service, index: number) => ( // ✅ Change ServiceData to Service
+            <ServiceCard key={`service-${index}`} {...service} isLoading={false} />
           ))}
       </div>
     </div>
-
   );
 };
 

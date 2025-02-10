@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 22  # ✅ Use Node.js 22
+          node-version: 22   # ✅ Use Node.js 22
       - name: Install pnpm
         run: npm install -g pnpm
       - name: Installing dependencies
@@ -47,25 +47,35 @@ jobs:
           VPS_PORT: ${{ secrets.VPS_PORT }}
           PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
         run: |
+          # Ensure required secrets are set
+          if [ -z "$SSH_PRIVATE_KEY" ] || [ -z "$VPS_USER" ] || [ -z "$VPS_HOST" ] || [ -z "$VPS_PORT" ] || [ -z "$PROJECT_DIR" ]; then
+            echo "❌ ERROR: Missing required secrets. Please configure them in GitHub Secrets."
+            exit 1
+          fi
+
+          echo "🚀 Connecting to VPS on port $VPS_PORT..."
+          echo "📂 Project Directory: $PROJECT_DIR"
+
           # Setup SSH Key
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
 
           # Connect to VPS and deploy
-          ssh -o StrictHostKeyChecking=no -i private_key -p $VPS_PORT $VPS_USER@$VPS_HOST << 'EOF'
+          ssh -p $VPS_PORT -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_HOST << 'EOF'
             set -e
-
-            echo "🚀 Connecting to VPS on port $VPS_PORT..."
           
-            echo "📂 Project Directory: $PROJECT_DIR"
+            echo "🚀 Connected to VPS. Deploying Next.js app..."
 
-            # Ensure project directory exists
+            # Ensure the project directory exists
             if [ ! -d "$PROJECT_DIR" ]; then
-              echo "⚠️ Project directory not found. Creating it..."
-              sudo mkdir -p $PROJECT_DIR
-              sudo chown -R www-data:www-data $PROJECT_DIR
+              echo "❌ ERROR: Project directory $PROJECT_DIR does not exist!"
+              exit 1
             fi
 
-            cd $PROJECT_DIR
+            cd "$PROJECT_DIR"
+
+            # Pull latest changes from GitHub
+            echo "📥 Pulling latest code from GitHub..."
+            sudo -u www-data git pull origin main || { echo "❌ Git pull failed"; exit 1; }
 
             # Ensure pnpm is installed
             echo "🔄 Ensuring pnpm is installed..."
@@ -74,15 +84,11 @@ jobs:
               sudo -u www-data npm install -g pnpm
             fi
 
-            # Pull latest changes from GitHub
-            echo "📥 Pulling latest code from GitHub..."
-            sudo -u www-data git pull origin main || { echo "❌ Git pull failed"; exit 1; }
-
             # Install dependencies
             echo "📦 Installing dependencies..."
             sudo -u www-data pnpm install --frozen-lockfile || { echo "❌ Dependency installation failed"; exit 1; }
 
-            # Build the project
+            # Build the project using Node.js 22
             echo "🔨 Building the project..."
             sudo -u www-data pnpm run build || { echo "❌ Build failed"; exit 1; }
 

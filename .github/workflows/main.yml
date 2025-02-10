@@ -44,16 +44,17 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           VPS_USER: ${{ secrets.VPS_USER }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_PORT: ${{ secrets.VPS_PORT }}   # ✅ Added custom SSH port
           PROJECT_DIR: "/home/www/goumrah-konvensional"
         run: |
           # Setup SSH Key
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
 
           # Connect to VPS and deploy
-          ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_HOST << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i private_key -p $VPS_PORT $VPS_USER@$VPS_HOST << 'EOF'
             set -e
           
-            echo "🚀 Connecting to VPS and deploying Next.js app..."
+            echo "🚀 Connecting to VPS on port $VPS_PORT and deploying Next.js app..."
 
             # Ensure project directory exists
             if [ ! -d "$PROJECT_DIR" ]; then

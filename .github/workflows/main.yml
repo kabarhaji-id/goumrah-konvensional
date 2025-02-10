@@ -10,7 +10,6 @@ on:
   push:
     branches:
       - main
-    tags:
   pull_request:
 
 jobs:
@@ -22,6 +21,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 22   # ✅ Use Node.js 22
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Installing dependencies
         run: pnpm install
       - name: Running Lint Check
@@ -36,6 +37,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 22   # ✅ Use Node.js 22
+      - name: Install pnpm
+        run: npm install -g pnpm
       - name: Installing dependencies
         run: pnpm install
       - name: Building Project
@@ -68,12 +71,24 @@ jobs:
           
             echo "🚀 Connecting to VPS and deploying Next.js app..."
 
-            # Navigate to the project directory
-            cd $PROJECT_DIR || { echo "❌ Project directory not found"; exit 1; }
+            # Ensure project directory exists
+            if [ ! -d "$PROJECT_DIR" ]; then
+              echo "❌ Project directory not found: $PROJECT_DIR"
+              exit 1
+            fi
+
+            cd $PROJECT_DIR
 
             # Pull latest changes from GitHub
             echo "📥 Pulling latest code from GitHub..."
             sudo -u www-data git pull origin main || { echo "❌ Git pull failed"; exit 1; }
+
+            # Ensure pnpm is installed
+            echo "🔄 Ensuring pnpm is installed..."
+            if ! command -v pnpm &> /dev/null; then
+              echo "⚠️ pnpm not found, installing..."
+              sudo -u www-data npm install -g pnpm
+            fi
 
             # Install dependencies
             echo "📦 Installing dependencies..."

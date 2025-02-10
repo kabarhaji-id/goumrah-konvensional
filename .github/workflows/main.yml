@@ -45,7 +45,7 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_PORT: ${{ secrets.VPS_PORT }}
-          PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
+          PROJECT_DIR: "/home/www/goumrah-konvensional"
         run: |
           # Setup SSH Key
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key

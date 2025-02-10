@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: /home/www/goumrah-konvensional  # ✅ All commands will run inside the  /home/www/goumrah-konvensional directory
+        working-directory: ./app  # ✅ Set correct working directory for GitHub Actions
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -48,13 +48,13 @@ jobs:
           VPS_USER: ${{ secrets.VPS_USER }}
           VPS_HOST: ${{ secrets.VPS_HOST }}
           VPS_PORT: ${{ secrets.VPS_PORT }}
-          PROJECT_DIR: ${{ secrets.PROJECT_DIR }}
+          PROJECT_DIR: ${{ secrets.PROJECT_DIR }}  # ✅ This is for the VPS, not GitHub Actions
         run: |
           # Setup SSH Key
           echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
 
           # Connect to VPS and deploy
-          ssh -o StrictHostKeyChecking=no -p $VPS_PORT -i private_key $VPS_USER@$VPS_HOST << 'EOF'
+          ssh -o StrictHostKeyChecking=no -p $VPS_PORT -i private_key $VPS_USER@$VPS_HOST << EOF
             set -e
 
             echo "🚀 Connecting to VPS on port $VPS_PORT..."
@@ -66,7 +66,7 @@ jobs:
               exit 1
             fi
 
-            # Set the working directory
+            # Navigate to project directory
             cd "$PROJECT_DIR"
 
             # Pull latest changes from GitHub

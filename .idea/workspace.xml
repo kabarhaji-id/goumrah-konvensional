@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="Remove debug logs and minor refactors in multiple files&#10;&#10;Eliminated unnecessary `console.error` and `console.log` statements across several components to clean up the codebase. Included minor style updates and refactors for improved readability and performance. These changes enhance maintainability and reduce noise in the application." />
+    <list default="true" id="b100f27a-80f6-4721-be03-011967a866fc" name="Changes" comment="adding ignore .idea/workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/analytic/google-map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/about/services.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/about/services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/about/services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/about/services.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/section/about-us/component/ServicesCard.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +81,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "development",
+    "git-widget-placeholder": "feat/about-us",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Project/Website/goumrah-konvensional/src/app/api/getPlaceDetails",
@@ -390,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739115377325</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="adding ignore .idea/workspace.xml">
+      <option name="closed" value="true" />
+      <created>1739161065666</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1739161065666</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +426,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update Google Analytics config and workspace settings&#10;&#10;Removed redundant `page_path` parameter in GA config for streamlined tracking logic. Adjusted IDE workspace settings to switch recent branch from `development` to `feat/google-tag-mnager`." />
     <MESSAGE value="Add dynamic FAQ section with search and banner&#10;&#10;Implemented a dynamic FAQ section, including search functionality with context, a new FAQ banner, and loading skeletons for improved UX. Updated related components, styles, and assets, while introducing reusable context for handling FAQ search queries." />
     <MESSAGE value="Add about us page with mission, gallery, and services&#10;&#10;Implemented dynamic &quot;About Us&quot; page sections, including mission points, service cards, an image gallery, and a newsletter subscription. Added reusable components, data types, and assets to enhance maintainability and user experience." />
     <MESSAGE value="Update gallery image paths in about-us section&#10;&#10;Revised the file paths for gallery images to align with the updated directory structure. This ensures consistency and correct image rendering in the about-us section." />
@@ -436,6 +450,7 @@
     <MESSAGE value="Add subscription state management to newsletter section&#10;&#10;Introduced state management to track subscription status in the newsletter section. Enhanced the `SubscriptionForm` to trigger a success callback upon successful subscription, updating the parent component's UI dynamically. These changes improve user feedback and provide a smoother subscription experience." />
     <MESSAGE value="Enhance `GalleryImage` component with dynamic dimensions.&#10;&#10;Added optional `width` and `height` props to the `GalleryImage` component for greater flexibility. Updated the gallery images to use these new properties for improved rendering customization." />
     <MESSAGE value="Remove debug logs and minor refactors in multiple files&#10;&#10;Eliminated unnecessary `console.error` and `console.log` statements across several components to clean up the codebase. Included minor style updates and refactors for improved readability and performance. These changes enhance maintainability and reduce noise in the application." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove debug logs and minor refactors in multiple files&#10;&#10;Eliminated unnecessary `console.error` and `console.log` statements across several components to clean up the codebase. Included minor style updates and refactors for improved readability and performance. These changes enhance maintainability and reduce noise in the application." />
+    <MESSAGE value="adding ignore .idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding ignore .idea/workspace.xml" />
   </component>
 </project>

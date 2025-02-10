@@ -1,68 +1,97 @@
-name: CI/CD for Next.js with VPS
+name: CI/CD for Next.js with DigitalOcean VPS
 
 on:
+  workflow_dispatch:
+    inputs:
+      deploy_production:
+        description: 'Deploy Production'
+        required: true
+        type: boolean
   push:
     branches:
-      - main  # Run deployment on pushes to the 'main' branch
+      - main
+    tags:
+  pull_request:
 
 jobs:
-  deploy:
+  # --- Lint Check ---------------
+  lint:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Check out the repository
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # Step 2: Set up Node.js v22.x
-      - name: Setup Node.js (v22.x)
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: '22'  # Using v22 to match the version on your VPS
-
-      # Step 3: Install pnpm globally for the GitHub Actions runner
-      - name: Install pnpm globally
-        run: npm install -g pnpm
-
-      # Step 4: Install dependencies for the Next.js app
-      - name: Install dependencies
+          node-version: 22   # ✅ Use Node.js 22
+      - name: Installing dependencies
         run: pnpm install
+      - name: Running Lint Check
+        run: pnpm lint
 
-      # Step 5: Check if .next folder exists and build the Next.js app
-      - name: Build GoUmrah app
-        run: sudo -u www-data pnpm run build --verbose  # Run with verbose to get detailed logs
+  # --- Build ---------------
+  build:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22   # ✅ Use Node.js 22
+      - name: Installing dependencies
+        run: pnpm install
+      - name: Building Project
+        run: pnpm build
 
-      # Step 6: Verify .next directory exists
-      - name: Verify .next directory
+  # --- Deploy to DigitalOcean VPS ---------------
+  deploy:
+    if: |
+      github.event_name != 'pull_request' &&
+      (
+        github.ref_name == 'main' ||
+        startsWith(github.ref, 'refs/tags/')
+      )
+    runs-on: ubuntu-latest
+    needs: [lint, build]
+    steps:
+      - name: Deploy to DigitalOcean VPS
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          PROJECT_DIR: "/home/www/goumrah-konvensional"
         run: |
-          if [ ! -d ".next" ]; then
-            echo ".next directory does not exist. Build might have failed."
-            exit 1
-          fi
-          echo ".next directory exists."
+          # Setup SSH Key
+          echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
 
-      # Step 7: Deploy files and PM2 config to the VPS
-      - name: Deploy to VPS
-        uses: appleboy/scp-action@v0.1.6
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.VPS_PORT }}
-          source: |
-            .next/**  # Path to build output
-            ecosystem.config.js  # PM2 config
-          target: "/home/www/goumrah-konvensional"
+          # Connect to VPS and deploy
+          ssh -o StrictHostKeyChecking=no -i private_key $VPS_USER@$VPS_HOST << 'EOF'
+            set -e
+          
+            echo "🚀 Connecting to VPS and deploying Next.js app..."
 
-      # Step 8: Restart application using PM2
-      - name: Restart application with PM2
-        uses: appleboy/ssh-action@v0.1.7
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.VPS_PORT }}
-          script: |
-            cd /home/www/goumrah-konvensional
-            sudo -u www-data pnpm install --prod
-            sudo -u www-data pm2 startOrRestart ecosystem.config.js
+            # Navigate to the project directory
+            cd $PROJECT_DIR || { echo "❌ Project directory not found"; exit 1; }
+
+            # Pull latest changes from GitHub
+            echo "📥 Pulling latest code from GitHub..."
+            sudo -u www-data git pull origin main || { echo "❌ Git pull failed"; exit 1; }
+
+            # Install dependencies
+            echo "📦 Installing dependencies..."
+            sudo -u www-data pnpm install --frozen-lockfile || { echo "❌ Dependency installation failed"; exit 1; }
+
+            # Build the project using Node.js 22
+            echo "🔨 Building the project..."
+            sudo -u www-data pnpm run build || { echo "❌ Build failed"; exit 1; }
+
+            # Restart the application using PM2
+            echo "🔄 Restarting application with PM2..."
+            sudo -u www-data pm2 startOrRestart ecosystem.config.js || { echo "❌ PM2 restart failed"; exit 1; }
+
+            # Save PM2 process
+            sudo -u www-data pm2 save || { echo "❌ PM2 save failed"; exit 1; }
+
+            echo "✅ Deployment completed successfully!"
+          EOF
+
+          # Cleanup private key
+          rm -f private_key

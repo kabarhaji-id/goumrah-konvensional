@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
-import seoData from "@/data/seo/seo-data.json"; // Import data SEO
+import seoData from "@/data/seo/seo-data.json"; // Pastikan file ini ada
 
 export async function GET() {
     try {
-        // Ambil semua slug dari object seoData
+
+        if (!seoData || typeof seoData !== "object") {
+            return NextResponse.json({ error: "Invalid SEO data" }, { status: 500 });
+        }
+
+        // Ambil semua slug dari JSON
         const slugs = Object.keys(seoData);
 
         return NextResponse.json(slugs, { status: 200 });

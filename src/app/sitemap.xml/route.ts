@@ -1,58 +1,76 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
+    const baseUrl =
+        process.env.NEXT_PUBLIC_BASE_URL ||
+        (process.env.NODE_ENV === "production"
+            ? "https://goumrah.id"
+            : "http://localhost:3002");
 
     try {
-        // Fetch dynamic slugs for /umrah/[slug]
-        const packageSlugs = await fetch(`${baseUrl}/api/seo`)
-            .then((res) => res.json())
-            .then((data) => (Array.isArray(data) ? data : []))
-            .catch(() => []);
+        // Fetch daftar slug dari Static API /api/seo
+        const response = await fetch(`${baseUrl}/api/seo`);
+        console.log("Fetch status:", response.status);
 
+        const packageSlugs = await response.json();
+        console.log("Fetched slugs (raw response):", packageSlugs);
 
-        // Define static routes
+        // ✅ Pastikan packageSlugs adalah array sebelum diproses
+        if (!Array.isArray(packageSlugs)) {
+            console.error("Error: API response is not an array", packageSlugs);
+            return new NextResponse("Internal Server Error", { status: 500 });
+        }
+
+        // Static pages (halaman yang tidak memiliki dynamic slug)
         const staticPages = [
-            `/`,
-            `/syarat-ketentuan`,
-            `/faq`,
-            `/about-us`,
-            `/umrah`,
-            `/umrah/ideal`,
-            `/umrah/rekomendasi`
+            "/",
+            "/syarat-ketentuan",
+            "/faq",
+            "/about-us",
+            "/umrah",
+            "/umroh",
+            "/umrah/ideal",
+            "/umrah/rekomendasi"
         ];
 
-        const dynamicPages = packageSlugs.map((slug) => `/umrah/${slug}`);
+        // ✅ Filter slug agar tidak ada duplikasi dan tidak masuk ke halaman statis
+        const dynamicPages = packageSlugs
+            .filter((slug) => typeof slug === "string" && slug.trim() !== "") // Pastikan slug valid
+            .filter((slug) => !staticPages.includes(`/${slug}`)) // Hindari duplicate dengan static pages
+            .map((slug) => `/umrah/${slug}`);
+
+        console.log("Dynamic Pages after filtering:", dynamicPages); // ✅ Cek apakah 9 item ada
 
         // Gabungkan semua URL dan hapus duplikat dengan Set()
-        const allPages = Array.from(
-            new Set([
-                ...staticPages.map((slug) => `${baseUrl}${slug}`),
-                ...dynamicPages.map((slug) => `${baseUrl}${slug}`)
-            ])
-        );
+        const allPages = Array.from(new Set([
+            ...staticPages.map((slug) => `${baseUrl}${slug}`),
+            ...dynamicPages.map((slug) => `${baseUrl}${slug}`)
+        ]));
+
+        console.log("Final Sitemap URLs:", allPages); // ✅ Pastikan semua path benar
 
         // Generate XML sitemap
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${allPages
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          ${allPages
             .map(
                 (url) => `
-        <url>
-          <loc>${url}</loc>
-          <lastmod>${new Date().toISOString()}</lastmod>
-          <changefreq>weekly</changefreq>
-          <priority>${url === baseUrl ? 1.0 : 0.8}</priority>
-        </url>
-      `
+            <url>
+              <loc>${url}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>weekly</changefreq>
+              <priority>${url === baseUrl ? 1.0 : 0.8}</priority>
+            </url>
+          `
             )
             .join("")}
-    </urlset>`;
+        </urlset>`;
 
         return new NextResponse(sitemap, {
             headers: { "Content-Type": "application/xml" },
         });
     } catch (error) {
+        console.error("Error generating sitemap:", error);
         return new NextResponse("Internal Server Error", { status: 500 });
     }
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PriorityImage from "@/components/ui/priority-image";
+import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
@@ -23,24 +23,26 @@ export default async function NotFound() {
   return (
     <main className="h-[100vh] justify-center">
       <div className="flex w-full max-w-screen-sm justify-center py-3">
-        <PriorityImage
+        <Image
           alt="goumrah.id logo"
           src="/assets/image/logo-main.svg"
           width={150}
           height={32}
           placeholder="blur"
           blurDataURL="/assets/image/logo-main.svg"
+          priority
         />
       </div>
 
       <div className="flex flex-col items-center gap-4 pt-[15%]">
-        <PriorityImage
+        <Image
           alt="goumrah.id logo"
           src="/assets/isma/isma-not-found.png"
           width={320}
           height={320}
           placeholder="blur"
           blurDataURL="/assets/isma/isma-not-found.png"
+          priority
         />
 
         <div className="flex w-full max-w-[351px] flex-col items-center gap-2">

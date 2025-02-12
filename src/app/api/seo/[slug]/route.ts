@@ -1,31 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
-import seoDataJson from "@/data/seo/seo-data.json"; // Import JSON langsung
+import { fetchSEOData } from "@/lib/seo";
 
-// Definisikan tipe data untuk SEO
-type SeoData = {
-  title: string;
-  description: string;
-  keywords: string;
-  image: string;
-};
+export async function GET(req: NextRequest, { params }: { params: { slug: string } }) {
+  try {
+    const { slug } = params;
 
-// Pastikan TypeScript mengenali bahwa ini adalah objek dengan index signature
-const seoData: Record<string, SeoData> = seoDataJson;
+    if (!slug) {
+      return NextResponse.json({ error: "Slug is required" }, { status: 400 });
+    }
 
-export async function GET(req: Request, context: { params?: { slug?: string } }) {
-  const { params } = context;
-  const slug = params?.slug;
+    const seoData = await fetchSEOData(slug);
 
-  if (!slug) {
-    // Jika slug tidak diberikan, kembalikan daftar semua slug
-    const slugs = Object.keys(seoData);
-    return NextResponse.json(slugs, { status: 200 });
+    if (!seoData) {
+      return NextResponse.json({ error: "SEO data not found" }, { status: 404 });
+    }
+
+    return NextResponse.json(seoData);
+  } catch (error) {
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
-
-  // Jika slug ada, cari data SEO-nya
-  if (!(slug in seoData)) {
-    return new NextResponse(JSON.stringify({ error: "SEO data not found" }), { status: 404 });
-  }
-
-  return NextResponse.json(seoData[slug], { status: 200 });
 }

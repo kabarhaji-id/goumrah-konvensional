@@ -17,7 +17,6 @@ import OtherPackagesSection from "@/section/package-detail/other-packages-sectio
 
 import { UmrahPackage } from "@/types/package-details";
 import { packageDetailData } from "@/data/package-details";
-
 import { Metadata } from "next";
 import { fetchSEOData } from "@/lib/seo";
 
@@ -25,26 +24,29 @@ type Props = {
   params: { slug: string };
 };
 
+// ✅ Ensure params is awaited properly
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
-  const { slug } = params; // Tidak perlu await, langsung gunakan params.slug
+  // ⬇️ Await params correctly in Next.js 15
+  const { slug } = await params;
 
-  console.log("[Metadata] Generating metadata for:", slug);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
 
   try {
-    const pageData = await fetchSEOData(slug); // Ambil data SEO
+    const pageData = await fetchSEOData(slug);
 
     if (!pageData) {
-      console.warn("[Metadata] Using default metadata for:", slug);
+      return {
+        title: "GoUmrah - Paket Umrah Terbaik",
+        description: "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
+        alternates: { canonical: `${baseUrl}/umrah/${slug}` },
+      };
     }
 
     return {
-      title: pageData?.title || "GoUmrah - Paket Umrah Terbaik",
-      description: pageData?.description || "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
-      keywords: pageData?.keywords || "umrah, paket umrah, travel umrah",
-      alternates: {
-        canonical: `${baseUrl}/umrah/${slug}`,
-      },
+      title: pageData.title || "GoUmrah - Paket Umrah Terbaik",
+      description: pageData.description || "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
+      keywords: pageData.keywords || "umrah, paket umrah, travel umrah",
+      alternates: { canonical: `${baseUrl}/umrah/${slug}` },
       openGraph: {
         type: "website",
         locale: "id_ID",
@@ -52,25 +54,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         siteName: "GoUmrah",
         images: [
           {
-            url: pageData?.image || "https://goumrah.id/assets/default.jpg",
+            url: pageData.image || "/assets/image/thumbnail-image.jpg",
             width: 1200,
             height: 630,
-            alt: pageData?.title || "GoUmrah",
+            alt: pageData.title || "GoUmrah",
           },
         ],
       },
     };
   } catch (error) {
-    console.error("[Metadata] Error fetching SEO data:", error);
     return {
       title: "GoUmrah - Paket Umrah Terbaik",
+      description: "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
+      alternates: { canonical: `${baseUrl}/umrah/${slug}` },
     };
   }
 }
 
 
+
 export default async function DetailPage({ params, }: { params: Promise<{ slug: string }>; }) {
-  // const selectedPackage = packageDetailData.find((pkg) => pkgslug === Number(id));
   const resolvedParams = await params;
   const detail = packageDetailData.find(
     (det: UmrahPackage) => det.id === resolvedParams.slug,

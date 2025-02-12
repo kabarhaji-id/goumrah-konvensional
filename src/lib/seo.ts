@@ -1,22 +1,24 @@
-export async function fetchSEOData(slug: string) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const apiUrl = `${baseUrl}/api/seo/${slug}`;
+import seoData from "@/data/seo/seo-data.json";
+interface SEOData {
+  title: string;
+  description: string;
+  keywords: string;
+  image: string;
+}
 
-  console.log("Fetching SEO data from:", apiUrl);
+/**
+ * Fetch SEO data berdasarkan slug yang diberikan
+ * @param slug - Slug untuk mendapatkan SEO data
+ * @returns SEOData atau null jika tidak ditemukan
+ */
+export async function fetchSEOData(slug: string): Promise<SEOData | null> {
 
-  try {
-    const res = await fetch(apiUrl, { cache: "no-store" });
 
-    if (!res.ok) {
-      console.error("SEO API returned error:", res.status, res.statusText);
-      throw new Error("SEO data not found");
-    }
-
-    const data = await res.json();
-    console.log("SEO data fetched:", data);
-    return data;
-  } catch (error) {
-    console.error("Error fetching SEO data:", error);
+  if (!slug) {
     return null;
   }
+
+  const seoDataForSlug = seoData[slug as keyof typeof seoData] || null;
+
+  return seoDataForSlug;
 }

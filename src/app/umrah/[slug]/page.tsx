@@ -20,9 +20,6 @@ import { packageDetailData } from "@/data/package-details";
 import { Metadata } from "next";
 import { fetchSEOData } from "@/lib/seo";
 
-type Props = {
-  params: { slug: string };
-};
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params; // 🔥 Await params sebelum menggunakannya

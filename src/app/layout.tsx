@@ -5,10 +5,27 @@ import TagManager from "@/components/analytic/tag-manager";
 import FacebookPixel from "@/components/analytic/meta-pixel";
 
 import "./globals.css";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL?.trim() || "https://goumrah.id";
 
 export const metadata: Metadata = {
-  title: "goumrah.id",
-  description: "Rumah ke Makkah Hanya Satu Langkah",
+  title: "GoUmrah.id - Rumah ke Makkah Hanya Satu Langkah",
+  description: "Temukan paket umrah terbaik dengan harga terjangkau dan pelayanan terbaik di goumrah.id.",
+  keywords: "paket umrah 2025, biaya umrah 2025, umrah murah, travel umrah terpercaya, promo umrah 2025",
+  metadataBase: baseUrl ? new URL(baseUrl) : undefined, // ✅ Prevents error
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: baseUrl,
+    siteName: "GoUmrah",
+    images: [
+      {
+        url: `${baseUrl}/assets/image/thumbnail-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "GoUmrah - Paket Umrah Terbaik",
+      },
+    ],
+  },
 };
 
 const plusJakartaSans = Plus_Jakarta_Sans({

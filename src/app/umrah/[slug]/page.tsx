@@ -15,41 +15,64 @@ import Footer from "@/components/layout/footer";
 import NotFound from "@/app/not-found";
 import OtherPackagesSection from "@/section/package-detail/other-packages-section";
 
-import { Metadata } from "next";
 import { UmrahPackage } from "@/types/package-details";
 import { packageDetailData } from "@/data/package-details";
+import { Metadata } from "next";
+import { fetchSEOData } from "@/lib/seo";
 
-// --- Metadata for SEO Optimization
-export const generateMetadata = async ({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> => {
-  const resolvedParams = await params;
-  const data = packageDetailData.find(
-    (det: UmrahPackage) => det.id === resolvedParams.slug,
-  );
-
-  return {
-    generator: "goumrah.id",
-    title: `${data?.title ? data.title : "Paket Tidak Ditemukan"}`,
-    keywords: `Umroh 2025, Paket Umroh, Travel Umroh, Biaya Umroh 2025, Umroh murah, Umroh Ramadhan 2025, Travel umroh terpercaya, Tips perjalanan umroh, Umroh mandiri, Paket Umroh VIP`,
-    openGraph: {
-      title: `${data?.title ? data.title : "Paket Tidak Ditemukan"}`,
-      url: `https://goumrah.id/umrah/${(await params).slug}`,
-      siteName: "goumrah.id",
-      locale: "id_ID",
-      type: "website",
-    },
-  };
+type Props = {
+  params: { slug: string };
 };
 
-export default async function DetailPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  // const selectedPackage = packageDetailData.find((pkg) => pkgslug === Number(id));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params; // 🔥 Await params sebelum menggunakannya
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
+
+  try {
+    const pageData = await fetchSEOData(slug);
+
+    if (!pageData) {
+      return {
+        title: "GoUmrah - Paket Umrah Terbaik",
+        description: "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
+        alternates: { canonical: `${baseUrl}/umrah/${slug}` },
+      };
+    }
+
+    return {
+      title: pageData.title || "GoUmrah - Paket Umrah Terbaik",
+      description: pageData.description || "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
+      keywords: pageData.keywords || "umrah, paket umrah, travel umrah",
+      alternates: { canonical: `${baseUrl}/umrah/${slug}` },
+      openGraph: {
+        type: "website",
+        locale: "id_ID",
+        url: `${baseUrl}/umrah/${slug}`,
+        siteName: "GoUmrah",
+        images: [
+          {
+            url: pageData.image || "/assets/image/thumbnail-image.jpg",
+            width: 1200,
+            height: 630,
+            alt: pageData.title || "GoUmrah",
+          },
+        ],
+      },
+    };
+  } catch (error) {
+    return {
+      title: "GoUmrah - Paket Umrah Terbaik",
+      description: "Pilih paket umrah terbaik untuk perjalanan ibadah Anda.",
+      alternates: { canonical: `${baseUrl}/umrah/${slug}` },
+    };
+  }
+}
+
+
+
+
+export default async function DetailPage({ params, }: { params: Promise<{ slug: string }>; }) {
   const resolvedParams = await params;
   const detail = packageDetailData.find(
     (det: UmrahPackage) => det.id === resolvedParams.slug,

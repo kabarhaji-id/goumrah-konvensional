@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "GoUmrah",
       images: [
         {
-          url: pageData?.image,
+          url: pageData?.image || `${baseUrl}/assets/image/thumbnail-image.jpg`,
           width: 1200,
           height: 630,
           alt: pageData?.title || "Tentang GoUmrah - Travel Umrah Terpercaya 2025",

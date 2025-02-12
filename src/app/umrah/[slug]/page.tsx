@@ -24,10 +24,8 @@ type Props = {
   params: { slug: string };
 };
 
-// ✅ Ensure params is awaited properly
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  // ⬇️ Await params correctly in Next.js 15
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params; // 🔥 Await params sebelum menggunakannya
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
 
@@ -70,6 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 }
+
 
 
 

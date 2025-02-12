@@ -1,23 +1,36 @@
-import React from "react";
-
-import { Metadata } from "next";
+import React from "react";;
 import HomePage from "../page";
 
-// --- Metadata for SEO Optimization
-export const generateMetadata = async (): Promise<Metadata> => {
+
+import { Metadata } from "next";
+import { fetchSEOData } from "@/lib/seo";
+
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
+  const pageData = await fetchSEOData("ideal"); // Ambil metadata dari JSON
+
   return {
-    title: `goumrah.id`,
-    keywords: `Umroh 2025, Paket Umroh, Travel Umroh, Biaya Umroh 2025, Umroh murah, Umroh Ramadhan 2025, Travel umroh terpercaya, Tips perjalanan umroh, Umroh mandiri, Paket Umroh VIP`,
+    title: pageData?.title || "Tentang GoUmrah - Travel Umrah Terpercaya 2025",
+    description: pageData?.description || "GoUmrah adalah penyedia perjalanan umrah terpercaya dengan layanan eksklusif, harga terbaik, dan bimbingan ibadah lengkap.",
+    keywords: pageData?.keywords || "tentang goumrah, travel umrah terbaik, jasa umrah terpercaya, umrah 2025",
+    alternates: { canonical: `${baseUrl}/umrah/ideal` },
     openGraph: {
-      title: `goumrah.id`,
-      url: `https://goumrah.id`,
-      siteName: "goumrah.id",
-      locale: "id_ID",
       type: "website",
+      locale: "id_ID",
+      url: `${baseUrl}/umrah/ideal`,
+      siteName: "GoUmrah",
+      images: [
+        {
+          url: pageData?.image || `${baseUrl}/assets/image/thumbnail-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: pageData?.title || "Tentang GoUmrah - Travel Umrah Terpercaya 2025",
+        },
+      ],
     },
   };
-};
-
+}
 export default async function UmrohPage() {
   return <HomePage />;
 }

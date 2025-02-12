@@ -10,14 +10,11 @@ export async function GET() {
     try {
         // Fetch daftar slug dari Static API /api/seo
         const response = await fetch(`${baseUrl}/api/seo`);
-        console.log("Fetch status:", response.status);
 
         const packageSlugs = await response.json();
-        console.log("Fetched slugs (raw response):", packageSlugs);
 
         // ✅ Pastikan packageSlugs adalah array sebelum diproses
         if (!Array.isArray(packageSlugs)) {
-            console.error("Error: API response is not an array", packageSlugs);
             return new NextResponse("Internal Server Error", { status: 500 });
         }
 
@@ -39,15 +36,11 @@ export async function GET() {
             .filter((slug) => !staticPages.includes(`/${slug}`)) // Hindari duplicate dengan static pages
             .map((slug) => `/umrah/${slug}`);
 
-        console.log("Dynamic Pages after filtering:", dynamicPages); // ✅ Cek apakah 9 item ada
-
         // Gabungkan semua URL dan hapus duplikat dengan Set()
         const allPages = Array.from(new Set([
             ...staticPages.map((slug) => `${baseUrl}${slug}`),
             ...dynamicPages.map((slug) => `${baseUrl}${slug}`)
         ]));
-
-        console.log("Final Sitemap URLs:", allPages); // ✅ Pastikan semua path benar
 
         // Generate XML sitemap
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +63,6 @@ export async function GET() {
             headers: { "Content-Type": "application/xml" },
         });
     } catch (error) {
-        console.error("Error generating sitemap:", error);
         return new NextResponse("Internal Server Error", { status: 500 });
     }
 }

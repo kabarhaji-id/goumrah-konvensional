@@ -11,6 +11,11 @@ export async function GET() {
         // Fetch daftar slug dari Static API /api/seo
         const response = await fetch(`${baseUrl}/api/seo`);
 
+        // Pastikan response sukses
+        if (!response.ok) {
+            return new NextResponse("Internal Server Error", { status: 500 });
+        }
+
         const packageSlugs = await response.json();
 
         // ✅ Pastikan packageSlugs adalah array sebelum diproses
@@ -42,7 +47,10 @@ export async function GET() {
             ...dynamicPages.map((slug) => `${baseUrl}${slug}`)
         ]));
 
-        // Generate XML sitemap
+        // Pastikan semua halaman menggunakan tanggal `lastmod` yang sama
+        const lastModifiedDate = new Date().toISOString();
+
+        // ✅ Generate XML sitemap dengan `rel="canonical"`
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           ${allPages
@@ -50,9 +58,10 @@ export async function GET() {
                 (url) => `
             <url>
               <loc>${url}</loc>
-              <lastmod>${new Date().toISOString()}</lastmod>
+              <lastmod>${lastModifiedDate}</lastmod>
               <changefreq>weekly</changefreq>
               <priority>${url === baseUrl ? 1.0 : 0.8}</priority>
+              <link rel="canonical" href="${url}"/>
             </url>
           `
             )

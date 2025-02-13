@@ -12,6 +12,7 @@ const AboutUsSection = () => {
           height={300}
           className="h-[160px] w-[137px]"
           quality={100}
+          priority
         />
         <p className="grow text-lg font-bold leading-[130%] tracking-normal text-primary-foreground">
           Jaminan <span className="text-primary">100% Hotel</span> &{" "}
@@ -32,6 +33,7 @@ const AboutUsSection = () => {
             height={421}
             className="absolute z-10 size-full"
             quality={100}
+            priority
           />
         </div>
         <h2 className="text-center text-2xl font-semibold leading-[130%] tracking-normal text-primary-foreground">

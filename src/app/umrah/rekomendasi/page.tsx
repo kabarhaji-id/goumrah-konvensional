@@ -27,13 +27,16 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "GoUmrah",
       images: [
         {
-          url: pageData?.image || `${baseUrl}/assets/image/thumbnail-image.jpg`,
+          url: pageData?.image || `${baseUrl}/assets/image/gold-package.jpg`,
           width: 1200,
           height: 630,
           alt: pageData?.title || "Tentang GoUmrah - Travel Umrah Terpercaya 2025",
         },
       ],
     },
+    robots: pageData?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", // Default robots meta
+    authors: [{ name: pageData?.authors }, { name: pageData?.authors, }],
+    publisher: pageData?.publisher || "goumrah.id", // Default publisher
   };
 }
 

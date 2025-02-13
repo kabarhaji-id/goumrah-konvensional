@@ -141,12 +141,12 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             {isLoading ? (
               <Skeleton className="h-6 w-full" />
             ) : (
-              <h5 className="font-extrabold">
+              <p className="font-extrabold">
                 {dataPackage.quadFinalPrice &&
                 dataPackage.quadPrice !== dataPackage.quadFinalPrice
                   ? priceToLocale(dataPackage.quadFinalPrice)
                   : priceToLocale(dataPackage.quadPrice)}
-              </h5>
+              </p>
             )}
           </div>
         </div>

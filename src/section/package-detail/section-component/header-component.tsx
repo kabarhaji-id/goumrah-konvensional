@@ -126,9 +126,9 @@ const HeaderComponent = ({
         {isLoading ? (
           <Skeleton className="h-[26px] w-[200px]" />
         ) : (
-          <h3 className="flex text-xl font-semibold leading-[130%] tracking-[0.5px]">
+          <h1 className="flex text-xl font-semibold leading-[130%] tracking-[0.5px]">
             {packageData.title}
-          </h3>
+          </h1>
         )}
 
         {/* --- Fast Train? */}

@@ -49,12 +49,12 @@ const RecommendedPackagesSection = () => {
               className="relative flex flex-col items-center justify-center gap-6 bg-white py-0"
             >
               <div className="z-20 flex flex-col items-center gap-2 text-center">
-                <p className="text-base leading-[140%] tracking-wider text-primary">
+                <h4 className="text-base leading-[140%] tracking-wider text-primary">
                   {item.subTitle}
-                </p>
-                <h2 className="text-2xl font-bold leading-[130%] tracking-normal text-primary">
+                </h4>
+                <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary">
                   {item.title}
-                </h2>
+                </h3>
               </div>
 
               {item.packages.length > 1 ? (

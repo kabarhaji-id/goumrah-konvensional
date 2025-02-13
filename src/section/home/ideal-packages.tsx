@@ -20,18 +20,6 @@ const IdealPackagesSection = () => {
     return packageDetailData.filter((pkg) => pkg.category === "Platinum");
   }, []);
 
-  /* --- Method: Hit API --- */
-  // const packageSilver = useMemo(() => {
-  //   return packages.filter((pkg) => pkg.data.category === "Silver");
-  // }, []);
-
-  // const packageGold = useMemo(() => {
-  //   return packages.filter((pkg) => pkg.data.category === "Gold");
-  // }, []);
-
-  // const packagePlatinum = useMemo(() => {
-  //   return packages.filter((pkg) => pkg.data.category === "Platinum");
-  // }, []);
 
   return (
     <section className="relative flex flex-col items-center justify-center gap-6 px-6 pb-10">
@@ -39,9 +27,9 @@ const IdealPackagesSection = () => {
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
-        <h2 className="text-center text-[21px] font-bold leading-[130%] tracking-normal text-primary">
+        <h4 className="text-center text-[21px] font-bold leading-[130%] tracking-normal text-primary">
           Umrah Ideal dengan Momen Tak Terlupakan mulai dari 22 jt
-        </h2>
+        </h4>
       </div>
 
       <div className="w-full">
@@ -55,27 +43,6 @@ const IdealPackagesSection = () => {
       <div className="w-full">
         <PackageCard data={packagePlatinum[0]} />
       </div>
-
-      {/* --- Method: Hit API --- */}
-      {/* <div className="w-full">
-        <PackageCard data={packageSilver[0].data} />
-      </div>
-
-      <div className="w-full">
-        <PackageCard data={packageGold[0].data} />
-      </div>
-
-      <div className="w-full">
-        <PackageCard data={packagePlatinum[0].data} />
-      </div> */}
-
-      {/* <Button className="z-20 h-11 w-[317px] px-5 py-1" asChild>
-        <Link href="/umrah/ideal">
-          <p className="whitespace-nowrap text-base font-semibold leading-[150%] tracking-wide">
-            Lihat Semua Paket
-          </p>
-        </Link>
-      </Button> */}
     </section>
   );
 };

@@ -1,5 +1,5 @@
 export type PackageCategory = "Silver" | "Gold" | "Platinum" | "Luxury";
-export type PackageType = "Plus" | "Reguler";
+export type PackageType = "Plus" | "Reguler" | "Eksklusif"  ;
 
 export interface Flight {
   wisata_flight: FlightDetail[];

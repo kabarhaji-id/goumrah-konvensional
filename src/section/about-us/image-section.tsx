@@ -25,19 +25,19 @@ const GalleryImage: React.FC<ImageProps> = ({src, alt, width, height}) => (
 const galleryImages: ImageProps[] = [
   {
     src: "/assets/image/kabaah.png",
-    alt: "Gallery image 1",
+    alt: "Close-up Kiswah (Kain Penutup Ka’bah)",
     width: 360,
     height: 270,
   },
   {
     src: "/assets/image/tour-group.png",
-    alt: "Gallery image 2",
+    alt: "Raudhah (Area Mustajab di Masjid Nabawi)",
     width: 360,
     height: 270,
   },
   {
     src: "/assets/image/madinah-umbrella.png",
-    alt: "Gallery image 3",
+    alt: "Ziarah ke Tempat Bersejarah di Madinah",
     width: 360,
     height: 270,
   }

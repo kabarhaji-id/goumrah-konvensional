@@ -42,6 +42,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
             width={50}
             height={50}
             className="object-contain w-[31px] aspect-[0.97]"
+            priority
           />
         }
       </div>
@@ -104,6 +105,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
                   height={20}
                   alt="Toggle Icon"
                   className={`transition-transform duration-200 ${expandedIndex === index ? "rotate-180" : ""}`}
+                  priority
                 />
               </div>
 

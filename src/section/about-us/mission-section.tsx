@@ -27,12 +27,12 @@ const missionPoints = [
 export const MissionSection: React.FC = () => {
   return (
     <section aria-labelledby="mission-heading" className="flex flex-col mx-auto w-full max-w-screen text-emerald-950 bg-white p-8 py-4">
-      <h2 id="mission-heading" className="text-xs font-light tracking-wide capitalize">
+      <h1 id="mission-heading" className="text-md font-light tracking-wide capitalize">
         Misi Kami
-      </h2>
-      <p className="mt-2 text-2xl font-extrabold text-teal-600 capitalize">
+      </h1>
+      <h2 className="mt-2 text-2xl font-extrabold text-teal-600 capitalize">
         Setiap langkah menuju Baitullah harus dimulai dengan ketenangan hati
-      </p>
+      </h2>
       <div className="self-stretch py-4 mt-2 w-full text-sm tracking-wide leading-6 text-justify">
         <p>
           Di Goumrah.id, kami hadir untuk menghadirkan pengalaman umroh yang lebih

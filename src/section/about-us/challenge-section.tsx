@@ -7,18 +7,18 @@ const ChallengeSection =  () => {
       className="flex flex-col mx-auto w-full max-w-screen text-emerald-950 bg-white p-8 py-4"
       aria-labelledby="challenge-title"
     >
-      <h2
+      <h1
         id="challenge-title"
-        className="text-xs font-light tracking-wide capitalize"
+        className="text-md font-light tracking-wide capitalize"
       >
         {challengeContent.title}
-      </h2>
-      <h3
+      </h1>
+      <h2
         className="mt-2 text-2xl font-extrabold text-teal-600 capitalize"
         aria-level={3}
       >
         {challengeContent.subtitle}
-      </h3>
+      </h2>
       <div
         className="self-stretch py-4 mt-2 w-full text-sm italic tracking-wide leading-6 text-justify"
         role="article"

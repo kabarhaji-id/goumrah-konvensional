@@ -36,6 +36,7 @@ const TestimonyCard = ({ testimony }: { testimony: Testimony }) => {
         width={121}
         height={72}
         className="absolute bottom-0 right-0"
+        priority
       />
     </div>
   );

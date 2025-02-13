@@ -8,20 +8,20 @@ const BussinesSection = () => {
       className="flex flex-col mx-auto w-full max-w-screen text-emerald-950 bg-white p-8 py-4"
       aria-labelledby="business-title"
     >
-      <h2
+      <h1
         id="business-title"
-        className="text-xs font-light tracking-wide capitalize"
+        className="text-md font-light tracking-wide capitalize"
       >
         Bisnis Kami
-      </h2>
+      </h1>
 
-      <h3
-        className="mt-2 text-2xl font-bold text-lg text-teal-600 capitalize"
+      <h2
+        className="mt-2 text-2xl font-extrabold text-teal-600 capitalize"
         aria-level={3}
       >
         Setiap perjalanan ibadah kamu memiliki cerita, dan kami ingin memastikan cerita kamu dimulai dengan langkah yang
         tenang, nyaman, dan penuh makna
-      </h3>
+      </h2>
 
       <div className="mx-auto my-4 flex flex-col gap-4 px-6"></div>
 

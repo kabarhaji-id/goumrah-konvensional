@@ -34,6 +34,9 @@ export async function generateMetadata(): Promise<Metadata> {
         },
       ],
     },
+    robots: pageData?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", // Default robots meta
+    authors: [{ name: pageData?.authors }, { name: pageData?.authors, }],
+    publisher: pageData?.publisher || "goumrah.id", // Default publisher
   };
 }
 

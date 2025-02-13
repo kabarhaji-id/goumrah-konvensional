@@ -93,7 +93,7 @@ const PackageCard = ({
 
               <Image
                 src={data.thumbnail}
-                alt="package-cover"
+                alt={`Paket ${data.type} ${data.title} ${data.category}`}
                 width={942}
                 height={708}
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"
@@ -196,7 +196,7 @@ const PackageCard = ({
                   <Skeleton className="h-6 w-64" />
                 ) : (
                   <div className="line-clamp-2 text-sm leading-6 tracking-[-0.30px] text-primary-foreground xs:text-[17px]">
-                    <span className="font-bold">{data.title}</span>
+                    <h2 className="font-bold">{data.title}</h2>
                   </div>
                 )}
 
@@ -288,11 +288,11 @@ const PackageCard = ({
                 <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground">
                   <div className="flex items-center gap-1 xs:gap-2">
                     {/* --- Normal Price */}
-                    <h5 className="flex-shrink-0 text-base font-extrabold xs:text-[17.5px]">
+                    <p className="flex-shrink-0 text-base font-extrabold xs:text-[17.5px]">
                       {data.quadFinalPrice
                         ? priceToLocale(data.quadFinalPrice)
                         : priceToLocale(data.quadPrice)}
-                    </h5>
+                    </p>
 
                     {/* --- Discount Price */}
                     {data.quadFinalPrice &&

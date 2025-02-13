@@ -11,21 +11,41 @@ import TestimonySection from "@/section/home/testimony";
 import AffiliatesSection from "@/section/home/affiliate";
 
 import { Metadata } from "next";
+import { fetchSEOData } from "@/lib/seo"; // Adjust the import path as needed
 
-// --- Metadata for SEO Optimization
+
 export const generateMetadata = async (): Promise<Metadata> => {
-  return {
-    title: `goumrah.id`,
-    keywords: `Umroh 2025, Paket Umroh, Travel Umroh, Biaya Umroh 2025, Umroh murah, Umroh Ramadhan 2025, Travel umroh terpercaya, Tips perjalanan umroh, Umroh mandiri, Paket Umroh VIP`,
-    openGraph: {
-      title: `goumrah.id`,
-      url: `https://goumrah.id`,
-      siteName: "goumrah.id",
-      locale: "id_ID",
-      type: "website",
-    },
-  };
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id"; // Fallback URL
+    const pageData = await fetchSEOData("umrah"); // Fetch SEO data
+
+    // Fallback to default values if pageData is missing properties
+    const seo = {
+        title: pageData?.title || "Paket Umrah 2025 - Pilihan Terbaik untuk Ibadah Nyaman | GoUmrah",
+        description: pageData?.description || "Jelajahi berbagai pilihan paket umrah 2025 terbaik dengan harga terjangkau, hotel dekat Masjidil Haram, dan bimbingan ibadah profesional.",
+        keywords: pageData?.keywords || "paket umroh 2025, biaya umroh 2025, umroh murah terpercaya, umroh murah, umroh plus, umroh eksklusif",
+        alternates: { canonical: `${baseUrl}` },
+        openGraph: {
+            type: "website",
+            locale: "id_ID",
+            url: `${baseUrl}`,
+            siteName: "GoUmrah",
+            images: [
+                {
+                    url: pageData?.image || `${baseUrl}/assets/image/umrah-cover.jpg`,
+                    width: 1200,
+                    height: 630,
+                    alt: pageData?.title || "Paket Umrah 2025 - Pilihan Terbaik untuk Ibadah Nyaman | GoUmrah",
+                },
+            ],
+        },
+        robots: pageData?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", // Default robots meta
+        publisher: pageData?.publisher || "goumrah.id", // Default publisher
+        authors: [{ name: pageData?.authors }, { name: pageData?.authors, url: `${baseUrl}` }],
+    };
+
+    return seo;
 };
+
 
 export default async function HomePage() {
   // const packages = await getAllPackages();

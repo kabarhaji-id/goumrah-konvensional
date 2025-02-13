@@ -56,6 +56,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
           },
         ],
       },
+      robots: pageData?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", // Default robots meta
+      authors: [{ name: pageData?.authors }, { name: pageData?.authors, }],
+      publisher: pageData?.publisher || "goumrah.id", // Default publisher
     };
   } catch (error) {
     return {

@@ -32,7 +32,8 @@ export async function GET() {
             "/umrah",
             "/umroh",
             "/umrah/ideal",
-            "/umrah/rekomendasi"
+            "/umrah/rekomendasi",
+            "/umrah/eksklusif"
         ];
 
         // ✅ Filter slug agar tidak ada duplikasi dan tidak masuk ke halaman statis

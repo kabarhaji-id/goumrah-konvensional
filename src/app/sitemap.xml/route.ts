@@ -18,7 +18,7 @@ export async function GET() {
 
         const packageSlugs = await response.json();
 
-        // ✅ Pastikan packageSlugs adalah array sebelum diproses
+        // Pastikan packageSlugs adalah array sebelum diproses
         if (!Array.isArray(packageSlugs)) {
             return new NextResponse("Internal Server Error", { status: 500 });
         }
@@ -36,9 +36,10 @@ export async function GET() {
             "/umrah/eksklusif"
         ];
 
-        // ✅ Filter slug agar tidak ada duplikasi dan tidak masuk ke halaman statis
+        // Filter slug agar tidak ada duplikasi dan tidak masuk ke halaman statis
         const dynamicPages = packageSlugs
             .filter((slug) => typeof slug === "string" && slug.trim() !== "") // Pastikan slug valid
+            .map((slug) => slug.toLowerCase()) // Normalisasi slug ke huruf kecil (untuk menghindari duplikat case-sensitive)
             .filter((slug) => !staticPages.includes(`/${slug}`)) // Hindari duplicate dengan static pages
             .map((slug) => `/umrah/${slug}`);
 
@@ -51,18 +52,17 @@ export async function GET() {
         // Pastikan semua halaman menggunakan tanggal `lastmod` yang sama
         const lastModifiedDate = new Date().toISOString();
 
-        // ✅ Generate XML sitemap dengan `rel="canonical"`
+        // Generate XML sitemap
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           ${allPages
             .map(
-                (url) => `
+                (url) => ` 
             <url>
               <loc>${url}</loc>
               <lastmod>${lastModifiedDate}</lastmod>
               <changefreq>weekly</changefreq>
               <priority>${url === baseUrl ? 1.0 : 0.8}</priority>
-              <link rel="canonical" href="${url}"/>
             </url>
           `
             )
@@ -70,7 +70,10 @@ export async function GET() {
         </urlset>`;
 
         return new NextResponse(sitemap, {
-            headers: { "Content-Type": "application/xml" },
+            headers: {
+                "Content-Type": "application/xml",
+                "X-Robots-Tag": "index, follow"
+            },
         });
     } catch (error) {
         return new NextResponse("Internal Server Error", { status: 500 });

@@ -94,6 +94,7 @@ const PackageCard = ({
               <Image
                 src={data.thumbnail}
                 alt={`Paket ${data.type} ${data.title} ${data.category}`}
+                title= {`Paket ${data.type} ${data.title} ${data.category}`}
                 width={942}
                 height={708}
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"

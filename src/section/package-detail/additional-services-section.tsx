@@ -62,7 +62,7 @@ const AdditionalServices = () => {
                   <span className="w-full text-[11px]">
                     Layanan Pembuatan/Perpanjang
                   </span>
-                  <h6 className="font-bold leading-[22px]">Paspor</h6>
+                  <p className="font-bold leading-[22px]">Paspor</p>
                 </div>
 
                 <span className="text-xs leading-4">+ Rp 850.000</span>
@@ -99,9 +99,9 @@ const AdditionalServices = () => {
                   <span className="w-full flex-shrink-0 text-[11px] leading-4">
                     Layanan Bantuan{" "}
                   </span>
-                  <h6 className="font-bold leading-[22px]">
+                  <p className="font-bold leading-[22px]">
                     Vaksinasi Meningitis
-                  </h6>
+                  </p>
                 </div>
 
                 <span className="text-xs leading-4">+ Rp 400.000</span>

@@ -60,6 +60,7 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
                       src={item.imageUrl}
                       alt={`image-promo-${index}`}
                       className="h-[132px] w-[314px] rounded-[14px] object-cover"
+                      priority
                     />
                   </Link>
                 ))}
@@ -75,6 +76,7 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
                 src={dataPromos[0].imageUrl}
                 alt="image-promo"
                 className="aspect-[24/9] w-full rounded-[14px] object-cover"
+                priority
               />
             </Link>
           )}

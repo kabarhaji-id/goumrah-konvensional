@@ -61,7 +61,8 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
             ) : (
               <Image
                 src={dataPackage.thumbnail}
-                alt="package-cover"
+                alt={`Paket ${dataPackage.type} ${dataPackage.title} ${dataPackage.category}`}
+                title= {`Paket ${dataPackage.type} ${dataPackage.title} ${dataPackage.category}`}
                 width={942}
                 height={708}
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"

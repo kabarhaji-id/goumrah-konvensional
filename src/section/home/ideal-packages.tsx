@@ -27,9 +27,9 @@ const IdealPackagesSection = () => {
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
-        <h4 className="text-center text-[21px] font-bold leading-[130%] tracking-normal text-primary">
+        <h3 className="text-center text-[21px] font-bold leading-[130%] tracking-normal text-primary">
           Umrah Ideal dengan Momen Tak Terlupakan mulai dari 22 jt
-        </h4>
+        </h3>
       </div>
 
       <div className="w-full">

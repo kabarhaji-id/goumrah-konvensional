@@ -16,7 +16,8 @@ const NewsletterSubscription: React.FC = () => {
     <section className="flex relative flex-col items-center px-4 pt-4 pb-72 mx-auto w-full">
       <Image
         src="/assets/image/isma-subcribes.png"
-        alt="Newsletter subscription illustration"
+        alt="Newsletter subscription "
+        title="Go Umrah Newsletter subscription "
         width={179}
         height={213}
         style={{ width: 179, height: 213 }}

@@ -1,4 +1,3 @@
-import Image from  "next/image"
 import Link from "next/link";
 
 import {
@@ -10,6 +9,7 @@ import LinkedInIcon from "@/public/icons/linkedin.svg";
 import TikTokIcon from "@/public/icons/tiktok.svg";
 import FacebookIcon from "@/public/icons/facebook.svg";
 import NewsletterSubscription from "./newsletter-section";
+import LogoLight from "@/public/image/logo-white.svg"
 
 interface FooterProps {
   withCSbanner?: boolean;
@@ -28,14 +28,7 @@ const FooterSections = ({ withCSbanner = false }: FooterProps) => {
       <footer
         className={`relative rounded-t-[22px] bg-primary px-6 py-[30px] ${withCSbanner && "-mt-4"}`}
       >
-        <Image
-          alt="goumrah.id logo"
-          src="/assets/image/logo-white.svg"
-          width={150}
-          height={32}
-          className="h-[32px] w-[150px]"
-          priority
-        />
+        <LogoLight />
 
         <div className="flex flex-col gap-5 py-[26px] font-light text-white">
           <div className="flex flex-col gap-2.5">
@@ -66,19 +59,19 @@ const FooterSections = ({ withCSbanner = false }: FooterProps) => {
           </span>
 
           <div className="flex gap-4">
-            <Link href="https://www.instagram.com/goumrah.id/">
+            <Link href="https://www.instagram.com/goumrah.id/" title="Instagram">
               <InstagramIcon className="!size-6" />
             </Link>
 
-            <Link href="https://www.facebook.com/share/15cxke61MA/">
+            <Link href="https://www.facebook.com/share/15cxke61MA/" title="Facebook">
               <FacebookIcon className="!size-6" />
             </Link>
 
-            <Link href="https://www.tiktok.com/@goumrah.id">
+            <Link href="https://www.tiktok.com/@goumrah.id" title="Tiktok">
               <TikTokIcon className="!size-6" />
             </Link>
 
-            <Link href="https://www.linkedin.com/company/pt-kabar-haji-indonesia">
+            <Link href="https://www.linkedin.com/company/pt-kabar-haji-indonesia" title="Linkedin">
               <LinkedInIcon className="!size-6" />
             </Link>
           </div>

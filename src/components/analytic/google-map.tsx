@@ -92,6 +92,8 @@ export default function GoogleMap() {
 
     const markerIcon = document.createElement("img");
     markerIcon.src = "/assets/icons/marker.png";
+    markerIcon.alt = "Marker";
+    markerIcon.title = "Goumrah Head Office";
     markerIcon.classList.add("marker-icon");
 
     markerContainer.appendChild(markerIcon);

@@ -31,7 +31,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
             siteName: "GoUmrah",
             images: [
                 {
-                    url: pageData?.image || `${baseUrl}/assets/image/umrah-cover.jpg`,
+                    url: pageData?.image || `${baseUrl}/assets/image/ -cover.jpg`,
                     width: 1200,
                     height: 630,
                     alt: pageData?.title || "Paket Umrah 2025 - Pilihan Terbaik untuk Ibadah Nyaman | GoUmrah",
@@ -41,10 +41,14 @@ export const generateMetadata = async (): Promise<Metadata> => {
         robots: pageData?.robots || "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", // Default robots meta
         publisher: pageData?.publisher || "goumrah.id", // Default publisher
         authors: [{ name: pageData?.authors }, { name: pageData?.authors, url: `${baseUrl}` }],
+
+        // Add rel="image_src" directly to the seo object
+        imageSrcLink: `<link rel="image_src" href="${pageData?.image || `${baseUrl}/assets/image/ -cover.jpg`}" />`,
     };
 
     return seo;
 };
+
 
 
 export default async function HomePage() {

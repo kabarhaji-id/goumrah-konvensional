@@ -1,6 +1,6 @@
 "use client";
 
-import PriorityImage from "@/components/ui/priority-image";
+import Image from "next/image";
 import { useId, useState } from "react";
 
 import ChatBox from "./chat-box";
@@ -19,11 +19,13 @@ const TanyaIsma = () => {
             aria-haspopup="dialog"
             aria-expanded={false}
           >
-            <PriorityImage
+            <Image
               src="/assets/image/tanya-isma/button.png"
               alt="Isma"
+              title="Ask Isma"
               width={110}
               height={110}
+              priority
             />
           </button>
 

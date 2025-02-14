@@ -8,6 +8,7 @@ const AboutUsSection = () => {
         <Image
           src={"/assets/image/guarantee.png"}
           alt="100% Guarantee"
+          title ="100% Guarantee"
           width={360}
           height={300}
           className="h-[160px] w-[137px]"
@@ -29,6 +30,7 @@ const AboutUsSection = () => {
           <Image
             src={"/assets/image/about-img.png"}
             alt="About Us"
+            title ="About Us"
             width={412}
             height={421}
             className="absolute z-10 size-full"
@@ -36,7 +38,7 @@ const AboutUsSection = () => {
             priority
           />
         </div>
-        <h2 className="text-center text-2xl font-semibold leading-[130%] tracking-normal text-primary-foreground">
+        <h2 className="text-center text-md font-semibold leading-[130%] tracking-normal text-primary-foreground">
           Mitra perjalanan Umrah & Haji Terpercaya Selama 18 Tahun
         </h2>
         <p className="text-center text-base leading-[150%] tracking-wide text-primary-foreground/75">

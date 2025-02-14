@@ -38,7 +38,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         {icon &&
           <Image
             src={icon}
-            alt=""
+            alt={subtitle}
+            title ={title}
             width={50}
             height={50}
             className="object-contain w-[31px] aspect-[0.97]"
@@ -101,6 +102,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
                 <Image
                   src={item.iconSrc}
+                  title ={item.label}
                   width={20}
                   height={20}
                   alt="Toggle Icon"

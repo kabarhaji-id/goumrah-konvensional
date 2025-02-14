@@ -33,6 +33,7 @@ const TestimonyCard = ({ testimony }: { testimony: Testimony }) => {
       <Image
         src="/assets/image/testimony-logo.png"
         alt="Testimony Logo"
+        title={testimony.reviewer}
         width={121}
         height={72}
         className="absolute bottom-0 right-0"

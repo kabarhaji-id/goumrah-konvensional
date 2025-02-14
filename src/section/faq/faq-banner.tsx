@@ -21,6 +21,7 @@ const FAQBanner = () => {
               <Image
                   src="/assets/image/faq-bg.png"
                   alt="FAQ Background"
+                  title="FAQ Background"
                   width={640}
                   height={380}
                   className={`object-cover w-full h-full transition-opacity duration-500 absolute inset-0 ${

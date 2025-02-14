@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
+import LogoDark from "@/public/image/logo-main.svg"
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -23,20 +24,13 @@ export default async function NotFound() {
   return (
     <main className="h-[100vh] justify-center">
       <div className="flex w-full max-w-screen-sm justify-center py-3">
-        <Image
-          alt="goumrah.id logo"
-          src="/assets/image/logo-main.svg"
-          width={150}
-          height={32}
-          placeholder="blur"
-          blurDataURL="/assets/image/logo-main.svg"
-          priority
-        />
+        <LogoDark />
       </div>
 
       <div className="flex flex-col items-center gap-4 pt-[15%]">
         <Image
           alt="goumrah.id logo"
+          title="Isma Not Found"
           src="/assets/isma/isma-not-found.png"
           width={320}
           height={320}

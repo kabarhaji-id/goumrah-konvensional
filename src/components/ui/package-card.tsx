@@ -78,7 +78,7 @@ const PackageCard = ({
   }, [networkSpeed]);
 
   return (
-    <Link href={`/umrah/${data.id}`}>
+    <Link href={`/umrah/${data.id}`} title={`Paket ${data.type} ${data.title} ${data.category}`}>
       {size === "default" && (
         <div
           className={cn(
@@ -97,8 +97,8 @@ const PackageCard = ({
                 title= {`Paket ${data.type} ${data.title} ${data.category}`}
                 width={942}
                 height={708}
+                loading="eager"
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"
-                priority
               />
             )}
             <div className="absolute -bottom-px h-fit">

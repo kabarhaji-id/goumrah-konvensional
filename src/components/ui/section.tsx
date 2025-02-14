@@ -33,7 +33,7 @@ const SectionTitle = React.forwardRef<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, ...props }, ref) => {
-  return <h2 className={cn("text-center", className)} ref={ref} {...props} />;
+  return <h3 className={cn("text-center text-2xl", className)} ref={ref} {...props} />;
 });
 SectionTitle.displayName = "SectionTitle";
 

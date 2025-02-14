@@ -26,9 +26,12 @@ export async function GET() {
         
         # Sitemap URL to help search engines index your site properly
         Sitemap: ${baseUrl}/sitemap.xml
-    `;
+    `.trim(); // Menghindari spasi berlebih di awal/akhir string
 
     return new NextResponse(content, {
-        headers: {"Content-Type": "text/plain"}
+        headers: {
+            "Content-Type": "text/plain",
+            "Cache-Control": "public, max-age=86400, immutable" // Cache selama 24 jam
+        }
     });
 }

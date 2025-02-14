@@ -9,18 +9,16 @@ export async function GET() {
 
     try {
         // Fetch daftar slug dari Static API /api/seo
-        const response = await fetch(`${baseUrl}/api/seo`);
+        const response = await fetch(`${baseUrl}/api/seo`, { cache: "no-store" });
 
-        // Pastikan response sukses
         if (!response.ok) {
-            return new NextResponse("Internal Server Error", { status: 500 });
+            throw new Error("Failed to fetch SEO slugs");
         }
 
         const packageSlugs = await response.json();
 
-        // Pastikan packageSlugs adalah array sebelum diproses
         if (!Array.isArray(packageSlugs)) {
-            return new NextResponse("Internal Server Error", { status: 500 });
+            throw new Error("Invalid SEO data format");
         }
 
         // Static pages (halaman yang tidak memiliki dynamic slug)
@@ -36,20 +34,20 @@ export async function GET() {
             "/umrah/eksklusif"
         ];
 
-        // Filter slug agar tidak ada duplikasi dan tidak masuk ke halaman statis
+        // Filter slug agar valid dan tidak ada duplikasi
         const dynamicPages = packageSlugs
             .filter((slug) => typeof slug === "string" && slug.trim() !== "") // Pastikan slug valid
-            .map((slug) => slug.toLowerCase()) // Normalisasi slug ke huruf kecil (untuk menghindari duplikat case-sensitive)
+            .map((slug) => encodeURI(slug.toLowerCase())) // Normalisasi slug + encode untuk keamanan
             .filter((slug) => !staticPages.includes(`/${slug}`)) // Hindari duplicate dengan static pages
             .map((slug) => `/umrah/${slug}`);
 
-        // Gabungkan semua URL dan hapus duplikat dengan Set()
+        // Gabungkan semua URL dan hapus duplikat
         const allPages = Array.from(new Set([
             ...staticPages.map((slug) => `${baseUrl}${slug}`),
             ...dynamicPages.map((slug) => `${baseUrl}${slug}`)
         ]));
 
-        // Pastikan semua halaman menggunakan tanggal `lastmod` yang sama
+        // Pastikan semua halaman memiliki tanggal `lastmod` yang sama
         const lastModifiedDate = new Date().toISOString();
 
         // Generate XML sitemap
@@ -64,15 +62,15 @@ export async function GET() {
               <changefreq>weekly</changefreq>
               <priority>${url === baseUrl ? 1.0 : 0.8}</priority>
             </url>
-          `
-            )
+          `)
             .join("")}
-        </urlset>`;
+        </urlset>`.trim();
 
         return new NextResponse(sitemap, {
             headers: {
                 "Content-Type": "application/xml",
-                "X-Robots-Tag": "index, follow"
+                "X-Robots-Tag": "index, follow",
+                "Cache-Control": "public, max-age=86400, immutable" // Cache selama 24 jam
             },
         });
     } catch (error) {

@@ -99,7 +99,7 @@ const FilterSection = ({
             className={`flex items-center gap-2 overflow-visible rounded-[10px] pb-4 pt-3 ${variant === "departureCity" && "px-2"}`}
           >
             {variant === "departureDate" && departureDates ? (
-              <CustomSwiper gap={8} padding={2} slidesClass="pb-2 w-[110px]">
+              <CustomSwiper gap={8} padding={2} slidesClass="pb-2 w-[110px]" initialSlide={1}>
                 {departureDates.map((date, index) => {
                   return isLoading ? (
                     <Skeleton key={index} className="h-16 w-[110px]" />

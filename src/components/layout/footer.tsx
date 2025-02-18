@@ -80,9 +80,9 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
               title="Nomor Izin PPIU"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-bold text-blue-600 hover:underline"
+              className="text-base font-bold text-white hover:underline"
             >
-              <span className="text-base font-bold">27052 2003 8774 0007</span>
+              <span>27052 2003 8774 0007</span>
             </Link>
 
             <span>Tahun 2024</span>

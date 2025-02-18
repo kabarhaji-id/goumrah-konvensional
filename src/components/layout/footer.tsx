@@ -75,7 +75,16 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
         <div className="flex flex-col gap-5 border-t border-white py-5 font-light text-white">
           <div className="flex flex-col gap-1 text-xs">
             <span>Nomor Izin PPIU</span>
-            <span className="text-base font-bold">27052 2003 8774 0007</span>
+            <Link
+              href="https://simpu.kemenag.go.id/home/detail/3039"
+              title="Nomor Izin PPIU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-bold text-blue-600 hover:underline"
+            >
+              <span className="text-base font-bold">27052 2003 8774 0007</span>
+            </Link>
+
             <span>Tahun 2024</span>
           </div>
 

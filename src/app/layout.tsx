@@ -39,18 +39,10 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export default function RootLayout({children}: { children: React.ReactNode }) {
-    const nonce = typeof window !== "undefined"
-        ? document.querySelector('meta[name="X-Nonce"]')?.getAttribute('content') || ''
-        : '';
+
 
     return (
         <html lang="id">
-        <head>
-            <meta name="X-Nonce" content={nonce}/>
-            <GoogleAnalytics nonce={nonce}/>
-            <TagManager nonce={nonce}/>
-            <FacebookPixel nonce={nonce}/>
-        </head>
         <body className={`${plusJakartaSans.className} antialiased`}>
         <noscript>
             <iframe

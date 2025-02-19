@@ -1,8 +1,8 @@
 import type {Metadata} from "next";
 import {Plus_Jakarta_Sans} from "next/font/google";
-import GoogleAnalytics from "@/components/analytic/google-analytics";
-import TagManager from "@/components/analytic/tag-manager";
-import FacebookPixel from "@/components/analytic/meta-pixel";
+import { FacebookPixelEvents }  from "@/components/analytic/pixel-events";
+import { Suspense } from 'react';
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -43,17 +43,16 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
 
     return (
         <html lang="id">
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         <body className={`${plusJakartaSans.className} antialiased`}>
-        <noscript>
-            <iframe
-                src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
-                height="0"
-                width="0"
-                style={{display: "none", visibility: "hidden"}}
-            ></iframe>
-        </noscript>
         <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
-            <main>{children}</main>
+            <main>
+                {children}
+                <Suspense fallback={null}>
+                    <FacebookPixelEvents />
+                </Suspense>
+            </main>
         </div>
         </body>
         </html>

@@ -5,9 +5,6 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { GoogleAnalytics, event } from 'nextjs-google-analytics';
 import CookieConsent from 'react-cookie-consent';
 
-/**
- * Komponen untuk tracking page view dan custom event ke GTM dengan persetujuan pengguna
- */
 export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -26,7 +23,6 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
   const handleAccept = () => {
     localStorage.setItem('userConsent', 'granted');
     setConsentGiven(true);
-    window.location.reload();
   };
 
   const handleDecline = () => {
@@ -35,7 +31,7 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
   };
 
   useEffect(() => {
-    if (!pathname || !consentGiven) return;
+    if (!pathname || consentGiven === null) return;
 
     const query = searchParams.toString();
     const fullPath = query ? `${pathname}?${query}` : pathname;
@@ -68,7 +64,7 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
   }, [pathname, searchParams, consentGiven]);
 
   useEffect(() => {
-    if (!pathname || currentLocation === null || !consentGiven) return;
+    if (!pathname || currentLocation === null || consentGiven === null) return;
 
     const dynamicEventData = {
       event_name: eventData?.event_name || 'page_view',
@@ -143,18 +139,12 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
           borderRadius: '0.5rem'
         }}
       >
-        <h3 style={{ color: '#333', fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Persetujuan
-          Cookie</h3>
+        <h3 style={{ color: '#333', fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>
+          Persetujuan Cookie
+        </h3>
         <p style={{ color: '#333', marginBottom: '1rem' }}>
           Situs web ini menggunakan cookie untuk memastikan Anda mendapatkan pengalaman terbaik.
         </p>
-        <div>
-          <label style={{color: '#333'}}><input type="checkbox" defaultChecked disabled /> Cookie Esensial</label>
-          <br />
-          <label style={{color: '#333'}}><input type="checkbox" /> Cookie Analitik</label>
-          <br />
-          <label style={{color: '#333'}}><input type="checkbox" /> Cookie Pemasaran</label>
-        </div>
       </CookieConsent>
     </>
   );

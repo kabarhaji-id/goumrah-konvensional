@@ -3,7 +3,8 @@
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import Image from "next/image";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'; // Perbaikan: Ganti dari next/router ke next/navigation
+import dynamic from 'next/dynamic';
 import { StatisticItem } from '@/data/popup/promo-stats';
 import { ActionButton } from '@/data/popup/action-btn';
 
@@ -13,9 +14,9 @@ interface Statistic {
   unit: string;
 }
 
-export function PromoPopup() {
+const PromoPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''; // Pastikan variabel env tersedia
   const router = useRouter();
 
   useEffect(() => {
@@ -45,14 +46,16 @@ export function PromoPopup() {
   };
 
   const handlePackageDetailClick = async () => {
-    await router.push("/umrah/umrah-hemat-ibadah-fokus-silver");
+    if (typeof window !== "undefined") { // Cegah error NextRouter was not mounted
+      router.push("/umrah/umrah-hemat-ibadah-fokus-silver");
+    }
   };
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black-400 bg-opacity-50" role="dialog" aria-modal="true">
-      <div className="flex overflow-hidden absolute flex-col justify-center items-center  text-white bg- shadow-lg aspect-square w-[20%] rounded-[10px]"
+      <div className="flex overflow-hidden absolute flex-col justify-center items-center text-white bg-shadow-lg aspect-square w-[20%] rounded-[10px]"
            role="article"
            onClick={handlePackageDetailClick}
            onKeyDown={(e) => e.key === 'Enter' && handlePackageDetailClick()}
@@ -89,8 +92,7 @@ export function PromoPopup() {
           <p className="mt-5 text-xl font-bold leading-none text-center">
             Keberangkatan Juli 2025
           </p>
-          <div
-            className="flex flex-col gap-2 mt-5 w-full text-sm font-semibold tracking-normal leading-none text-center">
+          <div className="flex flex-col gap-2 mt-5 w-full text-sm font-semibold tracking-normal leading-none text-center">
             <ActionButton
               text="Pesan Paket Umroh ini"
               primary={true}
@@ -112,4 +114,6 @@ export function PromoPopup() {
       </div>
     </div>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(PromoPopup), { ssr: false });

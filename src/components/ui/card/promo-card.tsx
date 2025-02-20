@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import Image from "next/image";
-import { useRouter } from 'next/navigation'; // Perbaikan: Ganti dari next/router ke next/navigation
+import { useRouter } from 'next/navigation'; 
 import dynamic from 'next/dynamic';
 import { StatisticItem } from '@/data/popup/promo-stats';
 import { ActionButton } from '@/data/popup/action-btn';
@@ -16,7 +16,7 @@ interface Statistic {
 
 const PromoPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''; // Pastikan variabel env tersedia
+  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''; 
   const router = useRouter();
 
   useEffect(() => {
@@ -28,6 +28,7 @@ const PromoPopup = () => {
   }, []);
 
   const handleClose = () => {
+    console.log("Popup ditutup"); // Debugging log
     setIsVisible(false);
   };
 
@@ -46,7 +47,7 @@ const PromoPopup = () => {
   };
 
   const handlePackageDetailClick = async () => {
-    if (typeof window !== "undefined") { // Cegah error NextRouter was not mounted
+    if (typeof window !== "undefined") {
       router.push("/umrah/umrah-hemat-ibadah-fokus-silver");
     }
   };
@@ -54,15 +55,18 @@ const PromoPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black-400 bg-opacity-50" role="dialog" aria-modal="true">
-      <div className="flex overflow-hidden absolute flex-col justify-center items-center text-white bg-shadow-lg aspect-square w-[20%] rounded-[10px]"
-           role="article"
-           onClick={handlePackageDetailClick}
-           onKeyDown={(e) => e.key === 'Enter' && handlePackageDetailClick()}
-           tabIndex={0}
+    <div 
+      className="fixed inset-0 z-40 flex items-center justify-center bg-black-400 bg-opacity-50"
+      onClick={handleClose} // Klik di luar popup akan menutupnya
+      role="dialog" 
+      aria-modal="true"
+    >
+      <div 
+        className="relative flex flex-col justify-center items-center text-white bg-shadow-lg aspect-square w-[20%] rounded-[10px]"
+        onClick={(e) => e.stopPropagation()} // Mencegah klik di dalam popup menutupnya
       >
         <button
-          className="absolute top-2 right-2 text-black hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-white"
+          className="absolute top-2 right-2 z-50 text-black hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-white"
           onClick={handleClose}
           aria-label="Close popup"
         >
@@ -75,7 +79,10 @@ const PromoPopup = () => {
           objectFit="cover"
           priority
         />
-        <div className="flex relative flex-col justify-center max-w-full w-[312px] p-4 rounded-lg">
+        <div className="flex relative flex-col justify-center max-w-full w-[312px] p-4 rounded-lg"
+             onClick={handlePackageDetailClick}
+             tabIndex={0}
+        >
           <h3 className="text-3xl font-bold leading-8 text-center">
             Paket Umroh Paling Hemat mulai Rp 22 Jutaan
           </h3>

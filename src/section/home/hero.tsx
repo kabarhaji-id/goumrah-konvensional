@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import LogoDark from "@/public/image/logo-main.svg"
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -38,6 +40,19 @@ const HeroSection = () => {
         <p className="italic">
           #bikin<b>tenang</b>
         </p>
+        <Button
+          variant="primary"
+          size="default"
+          className="flex w-80 items-center justify-center gap-1.5"
+        >
+          <Link href="https://simpu.kemenag.go.id/home/detail/3039" title="Nomor Izin PPIU"
+                target="_blank"
+                rel="noopener noreferrer">
+            <p className="text-base font-semibold leading-[150%]">
+              Cek Izin Umroh kami Disini
+            </p>
+          </Link>
+        </Button>
       </div>
     </section>
   );

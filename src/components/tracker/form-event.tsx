@@ -1,6 +1,6 @@
 'use client';
 
-import { trackEvent } from '@/lib/analytics';
+import { event } from 'nextjs-google-analytics';
 
 interface TrackFormSubmitProps {
   action: string;
@@ -10,17 +10,20 @@ interface TrackFormSubmitProps {
 }
 
 /**
- * Komponen reusable untuk tracking form submission
+ * Komponen reusable untuk tracking form submit
  */
 export default function TrackFormSubmit({
                                           action,
                                           category,
                                           label,
-                                          children,
+                                          children
                                         }: TrackFormSubmitProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    trackEvent({ action, category, label });
+    event(action, {
+      event_category: category,
+      event_label: label,
+    });
     alert('Form submitted!');
   };
 

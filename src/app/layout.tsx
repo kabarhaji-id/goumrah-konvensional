@@ -2,7 +2,7 @@ import type {Metadata} from "next";
 import {Plus_Jakarta_Sans} from "next/font/google";
 import { FacebookPixelEvents }  from "@/components/analytic/pixel-events";
 import { Suspense } from 'react';
-import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@/components/analytic/google-analytic";
 
 import "./globals.css";
 
@@ -43,15 +43,14 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
 
     return (
         <html lang="id">
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         <body className={`${plusJakartaSans.className} antialiased`}>
         <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
             <main>
-                {children}
                 <Suspense fallback={null}>
+                    <Analytics />
                     <FacebookPixelEvents />
                 </Suspense>
+                {children}
             </main>
         </div>
         </body>

@@ -21,9 +21,8 @@ const NewsletterSubscription: React.FC = () => {
         width={179}
         height={213}
         style={{ width: 179, height: 213 }}
-        quality="100"
         className="object-contain z-0 self-center"
-        priority={true}
+        priority quality={50}
       />
       <div
         className={`flex absolute left-2/4 z-0 flex-col items-center p-4 max-w-full bg-white rounded-2xl shadow-sm -translate-x-2/4 ${

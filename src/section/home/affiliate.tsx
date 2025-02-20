@@ -40,6 +40,8 @@ const AffiliatesSection = () => {
                             width={affiliate.width}
                             height={affiliate.height}
                             className="h-auto max-w-xs sm:max-w-sm"
+                            priority
+                            quality={50}
                         />
                     </div>
                 ))}

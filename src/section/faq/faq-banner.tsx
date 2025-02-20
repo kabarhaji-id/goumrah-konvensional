@@ -29,7 +29,7 @@ const FAQBanner = () => {
                   }`}
                   onLoad={() => setImageLoaded(true)}
                   onError={() => setImageError(true)}
-                  priority
+                  priority quality={50}
               />
             </div>
 

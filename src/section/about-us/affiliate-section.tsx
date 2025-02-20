@@ -40,6 +40,7 @@ const AffiliatesAboutSection = () => {
                     width={affiliate.width}
                     height={affiliate.height}
                     className="h-auto max-w-xs sm:max-w-sm bg-blend-luminosity grayscale"
+                    priority quality={50}
                 />
               </div>
           ))}

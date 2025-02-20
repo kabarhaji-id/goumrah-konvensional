@@ -12,7 +12,7 @@ const AboutUsSection = () => {
           width={360}
           height={300}
           className="h-[160px] w-[137px]"
-          quality={100}
+          quality={70}
           priority
         />
         <p className="grow text-lg font-bold leading-[130%] tracking-normal text-primary-foreground">
@@ -34,7 +34,7 @@ const AboutUsSection = () => {
             width={412}
             height={421}
             className="absolute z-10 size-full"
-            quality={100}
+            quality={70}
             priority
           />
         </div>

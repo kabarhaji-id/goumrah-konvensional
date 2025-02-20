@@ -36,7 +36,7 @@ export default async function NotFound() {
           height={320}
           placeholder="blur"
           blurDataURL="/assets/isma/isma-not-found.png"
-          priority
+          priority quality={70}
         />
 
         <div className="flex w-full max-w-[351px] flex-col items-center gap-2">

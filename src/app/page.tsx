@@ -9,6 +9,7 @@ import BottomNavigation from "@/components/layout/navbar/bottom-navigation";
 import IdealPackagesSection from "@/section/home/ideal-packages";
 import TestimonySection from "@/section/home/testimony";
 import AffiliatesSection from "@/section/home/affiliate";
+import { PromoPopup } from "@/components/ui/card/promo-card"
 
 import { Metadata } from "next";
 import { fetchSEOData } from "@/lib/seo"; // Adjust the import path as needed
@@ -57,6 +58,7 @@ export default async function HomePage() {
   // if (packages.records) {
   return (
     <main>
+        <PromoPopup />
       <HeroSection />
       {/* <IdealPackagesSection packages={packages.records} /> */}
       <IdealPackagesSection />

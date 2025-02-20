@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { trackEvent } from '@/lib/analytics';
+import { event } from 'nextjs-google-analytics';
 
 /**
  * Komponen untuk tracking scroll depth (90% scroll)
@@ -14,10 +14,9 @@ export function ScrollTracker() {
       const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
       if (scrollPercentage > 90) {
-        trackEvent({
-          action: 'scroll_90%',
-          category: 'User Engagement',
-          label: 'User scrolled 90% of the page',
+        event('scroll_90%', {
+          event_category: 'User Engagement',
+          event_label: 'User scrolled 90% of the page',
         });
         window.removeEventListener('scroll', handleScroll);
       }

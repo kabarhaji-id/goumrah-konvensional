@@ -3,6 +3,7 @@ import {Plus_Jakarta_Sans} from "next/font/google";
 import { FacebookPixelEvents }  from "@/components/analytic/pixel-events";
 import { Suspense } from 'react';
 import { Analytics } from "@/components/analytic/google-analytic";
+import { ScrollTracker } from '@/components/tracker/scroll-event';
 
 import "./globals.css";
 
@@ -50,6 +51,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
                     <Analytics />
                     <FacebookPixelEvents />
                 </Suspense>
+                <ScrollTracker />
                 {children}
             </main>
         </div>

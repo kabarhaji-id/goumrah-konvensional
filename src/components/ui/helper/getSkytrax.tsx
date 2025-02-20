@@ -9,6 +9,7 @@ const getSkytrax = (type: string, rating: string) => {
         className="absolute right-3 top-3"
         width={52}
         height={52}
+        priority quality={50}
       />
     );
   }
@@ -21,6 +22,7 @@ const getSkytrax = (type: string, rating: string) => {
         className="absolute right-3 top-3"
         width={52}
         height={52}
+        priority quality={50}
       />
     );
   }
@@ -33,6 +35,7 @@ const getSkytrax = (type: string, rating: string) => {
         className="absolute right-3 top-3"
         width={52}
         height={52}
+        priority quality={50}
       />
     );
   }

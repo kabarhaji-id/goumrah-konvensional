@@ -99,6 +99,7 @@ const PackageCard = ({
                 height={708}
                 loading="eager"
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"
+                priority quality={70}
               />
             )}
             <div className="absolute -bottom-px h-fit">

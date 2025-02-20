@@ -67,6 +67,7 @@ const PackageCardCompact = ({ dataPackage }: PackageCardProps) => {
                 height={708}
                 className="aspect-[4/3] h-full rounded-[14px] object-cover"
                 onError={() => setIsImageError(true)}
+                priority quality={70}
               />
             )
           ) : (

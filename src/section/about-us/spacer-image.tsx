@@ -8,7 +8,7 @@ export const SpacerSection: React.FC = () => {
         width={430}
         height={90}
         className="w-full"
-        priority={true}
+        priority quality={70}
       />
     </section>
   );

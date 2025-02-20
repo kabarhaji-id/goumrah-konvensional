@@ -51,7 +51,7 @@ const ImagePoster = ({
         )}
 
         <Image
-          priority
+          priority quality={70}
           src={packageImage}
           alt={`image-${packageImage}`}
           width={640}

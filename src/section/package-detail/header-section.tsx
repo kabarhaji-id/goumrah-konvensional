@@ -11,6 +11,7 @@ const HeaderSection = ({
   packageData: UmrahPackage;
   durationDays: string;
 }) => {
+
   return (
     <Section className="py-0">
       <SectionContent className="space-y-4 py-4 text-primary-foreground">
@@ -21,7 +22,7 @@ const HeaderSection = ({
 
         {/* --- Button: Order This Package  */}
         <div className="px-4">
-          <ButtonWhatsApp orderUrl={packageData.order_url} />
+          <ButtonWhatsApp orderUrl={packageData.order_url} consultUrl={packageData.consult_url} />
         </div>
       </SectionContent>
     </Section>

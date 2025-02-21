@@ -18,7 +18,7 @@ import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.s
 import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
 import { Chip } from "./chip";
-import { Button } from "./buttons/button";
+import { Button } from "@/components/ui/buttons/button";
 import { CalendarDaysIcon } from "lucide-react";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";

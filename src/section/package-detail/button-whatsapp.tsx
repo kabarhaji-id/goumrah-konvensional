@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/buttons/button";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
 
-const ButtonWhatsApp = ({ orderUrl, packageUrl }: { orderUrl: string; packageUrl: string }) => {
+const ButtonWhatsApp = ({ packageUrl, consultUrl }: { packageUrl: string; consultUrl?: string }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleWhatsAppClick = () => {
+    if (!consultUrl) {
+      return;
+    }
     setIsLoading(true);
-    window.location.href = orderUrl;
+    window.location.href = consultUrl;
   };
 
   const handlePackageClick = () => {

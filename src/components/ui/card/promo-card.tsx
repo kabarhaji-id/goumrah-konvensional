@@ -20,11 +20,10 @@ const PromoPopup = () => {
 
   useEffect(() => {
     const hasSeenPopup = localStorage.getItem('hasSeenPopup');
-    setIsVisible(true);
-    /*if (hasSeenPopup) {
+    if (!hasSeenPopup) {
       setIsVisible(true);
       localStorage.setItem('hasSeenPopup', 'true');
-    }*/
+    }
   }, []);
 
   const handleClose = () => {
@@ -82,8 +81,8 @@ const PromoPopup = () => {
 
         {/* Content Overlay */}
         <div className="relative z-10 flex flex-col items-center text-center p-6 rounded-lg w-full"
-             onClick={handlePackageDetailClick}
-             tabIndex={0}>
+          onClick={handlePackageDetailClick}
+          tabIndex={0}>
           <div className="p-6">
             <h3 className="text-2xl font-bold">
               Paket Umroh Paling Hemat <br /> mulai Rp 22 Jutaan

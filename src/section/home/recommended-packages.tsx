@@ -8,7 +8,7 @@ import CustomArrowIcon from "@/public/icons/mingcute_down-fill.svg";
 
 import { Button } from "@/components/ui/button";
 import { useMemo } from "react";
-import { PackageCard } from "@/components/ui/package-card";
+import  PackageCard  from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { Swiper, SwiperSlide } from "swiper/react";
 

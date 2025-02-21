@@ -58,7 +58,7 @@ const ButtonWhatsApp = ({ orderUrl }: { orderUrl: string }) => {
             ) : ( */}
             <div className="flex items-center gap-2">
               <p className="flex-shrink-0 text-sm font-medium leading-[150%] tracking-wide xs:text-base">
-                Pesan Paket Umrah Ini
+                Konsultasi Umroh dengan Kami
               </p>
               <WhatsAppIcon />
             </div>

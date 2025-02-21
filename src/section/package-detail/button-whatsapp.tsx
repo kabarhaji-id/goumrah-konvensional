@@ -23,14 +23,17 @@ const ButtonWhatsApp = ({ orderUrl }: { orderUrl: string }) => {
   }, []);
 
   return (
+
     <Button className="h-11 w-full py-1 shadow-custom-md" onClick={handleClick}>
       <Link href={orderUrl}>
         {isLoading ? (
           <LoadingSpinner />
         ) : (
+
+
           <div className="flex items-center gap-2">
             <p className="text-base font-medium leading-[150%] tracking-wide">
-              Pesan Paket Umrah Ini
+              Konsultasi Umroh dengan Kami
             </p>
             <WhatsAppIcon />
           </div>

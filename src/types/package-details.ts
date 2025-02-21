@@ -171,6 +171,7 @@ export interface UmrahPackage {
   package: string;
   down_payment: number;
   order_url: string;
+  consult_url: string;
   flight_details: Flight;
   hotel_details: Hotel;
   bus_details: BusDetail;

@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import moment from "moment";
 import "moment/locale/id";
-
+import { useRouter } from 'next/navigation';
 import Image from  "next/image"
 
 import GoldAccent from "@/public/patterns/gold-accent.svg";
@@ -19,7 +18,7 @@ import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.s
 import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
 import { Chip } from "./chip";
-import { Button } from "./button";
+import { Button } from "@/components/ui/buttons/button";
 import { CalendarDaysIcon } from "lucide-react";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";
@@ -28,6 +27,9 @@ import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "./skeleton-loader";
 import { Rating2 } from "./helper/getRating";
 import { CustomSwiper } from "../layout/swiper";
+import { FaWhatsapp } from "react-icons/fa";
+import { router } from "next/client";
+import dynamic from "next/dynamic";
 
 interface PackageCardProps {
   data: UmrahPackage;
@@ -42,9 +44,10 @@ const PackageCard = ({
   className,
 }: PackageCardProps) => {
   moment.locale("id");
-
+  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '';
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
+  const router = useRouter();
 
   const departureDate = useMemo(() => {
     return (
@@ -54,17 +57,26 @@ const PackageCard = ({
     );
   }, [data.departure_date]);
 
+  const handleConsult = (packageTitle: string) => {
+    const message = `Assalamualaikum Wr Wb, saya tertarik dengan paket [*${packageTitle}*. Bisa saya dapatkan informasi lebih lanjut?`;
+    const whatsappURL = `${whatsappLink}${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  };
+
+  const handlePackageDetailClick = async () => {
+    if (typeof window !== "undefined") {
+      router.push(`/umrah/${data.id}`);
+    }
+  };
+
   useEffect(() => {
     if ("connection" in navigator) {
       const connection = (navigator as NavigatorConnection).connection;
       if (connection) {
-        const speed = connection.effectiveType;
-        setNetworkSpeed(speed);
+        setNetworkSpeed(connection.effectiveType);
       }
     }
-  }, []);
 
-  useEffect(() => {
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -78,7 +90,8 @@ const PackageCard = ({
   }, [networkSpeed]);
 
   return (
-    <Link href={`/umrah/${data.id}`} title={`Paket ${data.type} ${data.title} ${data.category}`}>
+    <>
+
       {size === "default" && (
         <div
           className={cn(
@@ -316,20 +329,45 @@ const PackageCard = ({
               {isLoading ? (
                 <Skeleton className="h-9 w-full rounded-[14px]" />
               ) : (
-                <Button
-                  variant="primary"
-                  size="default"
-                  className="flex w-full items-center justify-center gap-1.5"
-                >
-                  <span className="font-semibold">Lihat Paket</span>
-                </Button>
+                <div className="flex w-full gap-2">
+                  {/* Lihat Paket Button */}
+                  <Button
+                    variant="primary"
+                    size="default"
+                    className="flex-1"
+                    onClick={handlePackageDetailClick}
+                  >
+                    Lihat Paket
+                  </Button>
+
+
+                  {/* Pesan Sekarang Button with WhatsApp Icon */}
+                  <Button
+                    variant="primary"
+                    size="default"
+                    className="flex-1"
+                    icon={<FaWhatsapp />} // Add WhatsApp icon
+                    onClick={(event) => {
+                      event.stopPropagation(); // Prevents the click from affecting the Link
+                      handleConsult(`Paket ${data.type} ${data.title} ${data.category}`);
+                    }}
+                  >
+                    Konsultasi Paket
+                  </Button>
+                </div>
               )}
             </div>
           </div>
         </div>
       )}
-    </Link>
+
+
+    </>
+
+
+
   );
 };
 
-export { PackageCard };
+
+export default dynamic(() => Promise.resolve(PackageCard), { ssr: false });

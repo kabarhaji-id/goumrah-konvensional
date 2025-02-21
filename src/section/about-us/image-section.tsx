@@ -19,7 +19,7 @@ const GalleryImage: React.FC<ImageProps> = ({src, alt, width, height}) => (
     style={{ width:`${width}`, height: `${height}` }}
     loading="lazy"
     className="block h-full w-full rounded-lg object-cover object-center"
-    priority quality={50}
+    quality={50}
   />
 );
 

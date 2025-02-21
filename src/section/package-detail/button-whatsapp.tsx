@@ -1,42 +1,44 @@
 "use client";
 
-import Link from "next/link";
-
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/buttons/button";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import WhatsAppIcon from "/src/assets/icons/whatsapp.svg";
 
-import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
-import { useEffect, useState } from "react";
-
-const ButtonWhatsApp = ({ orderUrl }: { orderUrl: string }) => {
+const ButtonWhatsApp = ({ orderUrl, packageUrl }: { orderUrl: string; packageUrl: string }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleClick = () => {
+  const handleWhatsAppClick = () => {
     setIsLoading(true);
     window.location.href = orderUrl;
   };
 
+  const handlePackageClick = () => {
+    window.location.href = packageUrl;
+  };
+
   useEffect(() => {
-    return () => {
-      setIsLoading(false);
-    };
+    return () => setIsLoading(false);
   }, []);
 
   return (
-    <Button className="h-11 w-full py-1 shadow-custom-md" onClick={handleClick}>
-      <Link href={orderUrl}>
-        {isLoading ? (
-          <LoadingSpinner />
-        ) : (
-          <div className="flex items-center gap-2">
-            <p className="text-base font-medium leading-[150%] tracking-wide">
-              Pesan Paket Umrah Ini
-            </p>
-            <WhatsAppIcon />
-          </div>
-        )}
-      </Link>
-    </Button>
+    <div className="flex flex-col gap-2 w-full">
+      {/* Tombol Lihat Paket */}
+      <Button variant="primary" size="default" onClick={handlePackageClick}>
+        Lihat Paket
+      </Button>
+
+      {/* Tombol Pesan Sekarang dengan WhatsApp Icon */}
+      <Button
+        variant="primary"
+        size="default"
+        onClick={handleWhatsAppClick}
+        icon={!isLoading ? <WhatsAppIcon /> : <LoadingSpinner />}
+        iconPosition="end"
+      >
+        Konsultasi Paket
+      </Button>
+    </div>
   );
 };
 

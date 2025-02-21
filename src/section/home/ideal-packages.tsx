@@ -4,7 +4,7 @@ import "swiper/css";
 
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
-import { PackageCard } from "@/components/ui/package-card";
+import  PackageCard  from "@/components/ui/package-card";
 
 // const IdealPackagesSection = ({ packages }: { packages: Packages[] }) => {
 const IdealPackagesSection = () => {

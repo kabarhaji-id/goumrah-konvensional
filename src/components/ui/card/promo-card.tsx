@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
-import Image from "next/image";
-import { useRouter } from 'next/navigation'; 
+import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { StatisticItem } from '@/data/popup/promo-stats';
 import { ActionButton } from '@/data/popup/action-btn';
@@ -16,19 +15,19 @@ interface Statistic {
 
 const PromoPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ''; 
+  const whatsappLink = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '';
   const router = useRouter();
 
   useEffect(() => {
     const hasSeenPopup = localStorage.getItem('hasSeenPopup');
-    if (!hasSeenPopup) {
+    setIsVisible(true);
+    /*if (hasSeenPopup) {
       setIsVisible(true);
       localStorage.setItem('hasSeenPopup', 'true');
-    }
+    }*/
   }, []);
 
   const handleClose = () => {
-    console.log("Popup ditutup"); // Debugging log
     setIsVisible(false);
   };
 
@@ -55,68 +54,78 @@ const PromoPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div 
-      className="fixed inset-0 z-40 flex items-center justify-center bg-black-400 bg-opacity-50"
-      onClick={handleClose} // Klik di luar popup akan menutupnya
-      role="dialog" 
+    <div
+      className="fixed inset-0 z-40 flex items-center justify-center bg-opacity-50 p-4"
+      onClick={handleClose}
+      role="dialog"
       aria-modal="true"
     >
-      <div 
-        className="relative flex flex-col justify-center items-center text-white bg-shadow-lg aspect-square w-[20%] rounded-[10px]"
-        onClick={(e) => e.stopPropagation()} // Mencegah klik di dalam popup menutupnya
+      <div
+        className="relative flex flex-col justify-center items-center text-white w-full max-w-[350px] rounded-lg overflow-hidden"
+        style={{
+          backgroundImage: "url('/assets/image/image_popup.png')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+
+        }}
+        onClick={(e) => e.stopPropagation()}
       >
+        {/* Close Button */}
         <button
-          className="absolute top-2 right-2 z-50 text-black hover:text-gray-200 focus:outline-none focus:ring-2 focus:ring-white"
+          className="absolute top-7 right-2 z-50 text-white hover:text-gray-300"
           onClick={handleClose}
           aria-label="Close popup"
         >
           <X className="h-6 w-6" />
         </button>
-        <Image
-          src="/assets/image/image_popup.png"
-          alt="Umroh package promotional image"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="flex relative flex-col justify-center max-w-full w-[312px] p-4 rounded-lg"
+
+        {/* Content Overlay */}
+        <div className="relative z-10 flex flex-col items-center text-center p-6 rounded-lg w-full"
              onClick={handlePackageDetailClick}
-             tabIndex={0}
-        >
-          <h3 className="text-3xl font-bold leading-8 text-center">
-            Paket Umroh Paling Hemat mulai Rp 22 Jutaan
-          </h3>
-          <div className="flex gap-4 justify-center items-center mt-5 w-full tracking-normal">
-            {statistics.map((stat, index) => (
-              <StatisticItem
-                key={index}
-                label={stat.label}
-                value={stat.value}
-                unit={stat.unit}
+             tabIndex={0}>
+          <div className="p-6">
+            <h3 className="text-2xl font-bold">
+              Paket Umroh Paling Hemat <br /> mulai Rp 22 Jutaan
+            </h3>
+
+            {/* Statistics */}
+            <div className="flex gap-4 justify-center items-center mt-4 text-white">
+              {statistics.map((stat, index) => (
+                <StatisticItem
+                  key={index}
+                  label={stat.label}
+                  value={stat.value}
+                  unit={stat.unit}
+                />
+              ))}
+            </div>
+
+            <p className="mt-4 text-lg font-bold text-white">
+              Keberangkatan Juli 2025
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col gap-2 mt-5 w-full">
+              <ActionButton
+                text="Pesan Paket Umroh ini"
+                primary={true}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleOrderClick();
+                }}
               />
-            ))}
+              <ActionButton
+                text="Konsultasi dengan Kami"
+                primary={false}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleConsultClick();
+                }}
+              />
+            </div>
           </div>
-          <p className="mt-5 text-xl font-bold leading-none text-center">
-            Keberangkatan Juli 2025
-          </p>
-          <div className="flex flex-col gap-2 mt-5 w-full text-sm font-semibold tracking-normal leading-none text-center">
-            <ActionButton
-              text="Pesan Paket Umroh ini"
-              primary={true}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleOrderClick();
-              }}
-            />
-            <ActionButton
-              text="Konsultasi dengan Kami"
-              primary={false}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleConsultClick();
-              }}
-            />
-          </div>
+
         </div>
       </div>
     </div>

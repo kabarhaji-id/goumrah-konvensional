@@ -29,6 +29,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Silver",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Silver Umrah Hemat - Ibadah Fokus*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-03T10:00:00+07:00",
@@ -547,6 +548,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Silver",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Dekat. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Silver Umrah Hemat - Ibadah Dekat*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -1092,6 +1094,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Silver",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Silver Umrah Hemat - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Silver Umrah Hemat - Ibadah Tenang*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-12T10:00:00+07:00",
@@ -1625,6 +1628,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Gold",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Fokus. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Gold Umrah Cerdas - Ibadah Fokus*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -2166,6 +2170,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Gold",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Ibadah Tenang. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Gold Umrah Cerdas - Ibadah Tenang*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-12T10:00:00+07:00",
@@ -2696,6 +2701,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Gold",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Plus Wisata Turkey. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Gold Umrah Cerdas - Plus Wisata Turkey*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-08T10:00:00+07:00",
@@ -3650,6 +3656,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Gold",
     down_payment: 7,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Gold Umrah Cerdas - Plus Wisata Dubai. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Gold Umrah Cerdas - Plus Wisata Dubai*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-03-07T10:00:00+07:00",
@@ -4304,6 +4311,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Platinum",
     down_payment: 10,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Terbaik. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Platinum Umrah Eksklusif - Ibadah Terbaik*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-23T10:00:00+07:00",
@@ -4845,6 +4853,7 @@ export const packageDetailData: UmrahPackage[] = [
     package: "Platinum",
     down_payment: 10,
     order_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Platinum Umrah Eksklusif - Ibadah Ternyaman. Saya ingin bertanya lebih lanjut mengenai paket tersebut. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
+    consult_url: `${whatsappLink}${encodeURIComponent("Assalamualaikum Wr Wb, saya tertarik dengan *paket Platinum Umrah Eksklusif - Ibadah Ternyaman*. Bisa saya dapatkan informasi lebih lanjut?. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut.")}`,
     departure_date: [
       {
         date: "2025-02-01T10:00:00+07:00",

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { GoogleAnalytics, event } from 'nextjs-google-analytics';
 import CookieConsent from 'react-cookie-consent';
+import { v4 as uuidv4 } from 'uuid';
 
 export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
   const pathname = usePathname();
@@ -74,12 +75,12 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
       currency: eventData?.currency || 'IDR',
       intf: eventData?.intf || 'mobile',
       currentLocation: currentLocation,
-      pageId: eventData?.pageId || crypto.randomUUID(),
+      pageId: eventData?.pageId || uuidv4(),
       pageName: eventData?.pageName || document.title,
-      storefront: eventData?.storefront || 'insurance',
+      storefront: eventData?.storefront || 'travel',
       funnelSource: eventData?.funnelSource || 'default_source',
       clientTimestamp: Date.now(),
-      requestId: eventData?.requestId || crypto.randomUUID(),
+      requestId: eventData?.requestId || uuidv4(),
       eventAction: eventData?.eventAction || 'END OF FEED',
       deeplinkUrl: eventData?.deeplinkUrl || undefined,
       sections: eventData?.sections || [

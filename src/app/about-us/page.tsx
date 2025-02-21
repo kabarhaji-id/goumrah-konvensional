@@ -13,6 +13,7 @@ import BottomNavigation from "@/components/layout/navbar/bottom-navigation";
 import { Metadata } from "next";
 import { fetchSEOData } from "@/lib/seo";
 import { AboutUsSection } from "@/section/about-us/aboutus-section";
+import { ConsultationSection } from "@/section/about-us/consultation-section";
 
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -66,7 +67,7 @@ const AboutPage = () => {
       </div>
 
       <AboutUsSection />
-
+      <ConsultationSection />
       <ChallengeSection />
       <ImageGalery />
       <MissionSection />

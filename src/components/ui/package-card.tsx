@@ -210,12 +210,14 @@ const PackageCard = ({
                 {isLoading ? (
                   <Skeleton className="h-6 w-64" />
                 ) : (
-                  <div className="line-clamp-2 text-sm leading-6 tracking-[-0.30px] text-primary-foreground xs:text-[17px]">
+                  <div
+                    className="whitespace-nowrap text-sm leading-normal tracking-[-0.30px] text-primary-foreground xs:text-[17px]">
                     <h2 className="font-bold">{data.title}</h2>
                   </div>
                 )}
 
-                <div className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
+                <div
+                  className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
                   {/* --- Departure Date */}
                   {isLoading ? (
                     <Skeleton className="h-[18px] w-56" />
@@ -334,10 +336,10 @@ const PackageCard = ({
                   <Button
                     variant="primary"
                     size="default"
-                    className="flex-1"
+                    className="h-11 w-48 px-4 rounded-xl text-sm font-medium"
                     onClick={handlePackageDetailClick}
                   >
-                    Lihat Paket
+                    Detail
                   </Button>
 
 
@@ -345,7 +347,7 @@ const PackageCard = ({
                   <Button
                     variant="primary"
                     size="default"
-                    className="flex-1"
+                    className="h-11 w-96 px-4 rounded-xl text-sm font-medium flex items-center gap-2"
                     icon={<FaWhatsapp />} // Add WhatsApp icon
                     onClick={(event) => {
                       event.stopPropagation(); // Prevents the click from affecting the Link

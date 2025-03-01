@@ -23,7 +23,7 @@ const CardData: CardProps[] = [
 
 const WhyChooseUsSection = () => {
   return (
-    <Section className="relative bg-gradient-to-b from-foreground to-primary py-0">
+    <section className="relative bg-gradient-to-b from-foreground to-primary py-0">
       <span
         className="absolute -top-[399px] z-0 h-[400px] w-full bg-primary-foreground"
         style={{
@@ -55,7 +55,7 @@ const WhyChooseUsSection = () => {
             "linear-gradient(180deg, rgba(27,131,134,1) 0%, rgba(83,162,164,1) 34%, rgba(139,192,193,1) 59%, rgba(255,255,255,1) 100%)",
         }}
       />
-    </Section>
+    </section>
   );
 };
 

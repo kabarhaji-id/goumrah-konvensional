@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 
-const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl: string; consultUrl: string }) => {
+const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl: string; consultUrl?: string | null }) => {
   const [isPageLoading, setIsPageLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
@@ -38,25 +38,34 @@ const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl: string; consultUrl
       {isPageLoading ? (
         <Skeleton className="h-11 w-full rounded-md" />
       ) : (
-        <div className="flex flex-row gap-2 w-full">
+        <div className={`flex ${consultUrl ? "flex-row gap-2" : "justify-center"} w-full`}>
           {/* View Package Button */}
-          <Button variant="primary" size="default" className="h-11 w-full shadow-custom-md">
+          <Button
+            variant="primary"
+            size="default"
+            className={!consultUrl ? "h-11 px-4 rounded-xl text-sm font-medium flex items-center gap-2 w-full" : "h-11 px-4 rounded-xl text-sm font-medium w-48 flex items-center gap-2"}
+            icon={!consultUrl ? <WhatsAppIcon /> : undefined} // Tampilkan ikon jika consultUrl kosong
+            iconPosition="end"
+          >
             <Link href={orderUrl ?? "#"}>Pesan Paket</Link>
           </Button>
 
-          {/* Order Now (WhatsApp) Button */}
-          <Button
-            variant="primary" size="default" className="h-11 w-full shadow-custom-md"
-            icon={<WhatsAppIcon />}
-            iconPosition="end"
-          >
-            <Link href={consultUrl ?? "#"}>Konsultasi Paket</Link>
-          </Button>
+          {/* Order Now (WhatsApp) Button - Only if consultUrl is available */}
+          {consultUrl && (
+            <Button
+              variant="primary"
+              size="default"
+              className="h-11 px-4 rounded-xl text-sm font-medium flex items-center gap-2 w-96"
+              icon={<WhatsAppIcon />} // Ikon hanya di "Konsultasi Paket" jika consultUrl tersedia
+              iconPosition="end"
+            >
+              <Link href={consultUrl}>Konsultasi Paket</Link>
+            </Button>
+          )}
         </div>
       )}
     </>
   );
 };
-
 
 export default ButtonWhatsApp;

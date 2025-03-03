@@ -23,7 +23,7 @@ const IdealPackagesSection = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-center gap-6 px-6 pb-10">
-      <div className="z-20 mt-6 flex flex-col items-center gap-2">
+      <div className="z-20  mt-7 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>

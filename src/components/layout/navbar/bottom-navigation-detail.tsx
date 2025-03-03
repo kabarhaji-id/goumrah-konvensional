@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 
-const BottomNavigationDetail = ({ orderUrl, consultUrl }: { orderUrl: string; consultUrl: string }) => {
+const BottomNavigationDetail = ({ orderUrl }: { orderUrl: string;}) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -38,7 +38,7 @@ const BottomNavigationDetail = ({ orderUrl, consultUrl }: { orderUrl: string; co
           <CustomChevronUpIcon className="size-6" fill="#FFFFFF" />
         </Button>
       )}
-      <ButtonWhatsApp orderUrl={orderUrl} consultUrl={consultUrl} />
+      <ButtonWhatsApp orderUrl={orderUrl} />
     </nav>
   );
 };

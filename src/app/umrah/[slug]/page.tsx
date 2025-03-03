@@ -116,7 +116,7 @@ export default async function DetailPage({ params, }: { params: Promise<{ slug: 
 
           <Footer />
 
-          <BottomNavigationDetail orderUrl={detail.order_url} consultUrl={detail.consult_url} />
+          <BottomNavigationDetail orderUrl={detail.order_url} />
         </main>
       </>
     );

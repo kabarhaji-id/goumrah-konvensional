@@ -2,8 +2,8 @@
 
 import moment from "moment";
 import "moment/locale/id";
-import { useRouter } from 'next/navigation';
-import Image from  "next/image"
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 import GoldAccent from "@/public/patterns/gold-accent.svg";
 import SilverAccent from "@/public/patterns/silver-accent.svg";
@@ -28,7 +28,6 @@ import { Skeleton } from "./skeleton-loader";
 import { Rating2 } from "./helper/getRating";
 import { CustomSwiper } from "../layout/swiper";
 import { FaWhatsapp } from "react-icons/fa";
-import { router } from "next/client";
 import dynamic from "next/dynamic";
 
 interface PackageCardProps {
@@ -180,9 +179,7 @@ const PackageCard = ({
                       )}
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
-                      {data.flight_details.departure_flight.transit
-                        ? "Transit"
-                        : "Langsung"}
+                      {data.flight_details.departure_flight.transit ? "Transit" : "Langsung"}
                     </span>
                   </Chip>
                 )}

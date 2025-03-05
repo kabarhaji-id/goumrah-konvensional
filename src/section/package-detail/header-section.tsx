@@ -22,7 +22,7 @@ const HeaderSection = ({
 
         {/* --- Button: Order This Package  */}
         <div className="px-4">
-          <ButtonWhatsApp orderUrl={packageData.order_url} consultUrl={packageData.consult_url} />
+          <ButtonWhatsApp consultUrl={packageData.consult_url} />
         </div>
       </SectionContent>
     </Section>

@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 
-const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl: string; consultUrl?: string | null }) => {
+const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl?: string | null; consultUrl?: string | null }) => {
   const [isPageLoading, setIsPageLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 

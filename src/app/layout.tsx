@@ -1,11 +1,12 @@
-import type {Metadata} from "next";
-import {Plus_Jakarta_Sans} from "next/font/google";
-import { FacebookPixelEvents }  from "@/components/analytic/pixel-events";
-import { Suspense } from 'react';
+import type { Metadata } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { FacebookPixelEvents } from "@/components/analytic/pixel-events";
+import { Suspense } from "react";
 import { Analytics } from "@/components/analytic/google-analytic";
-import { ScrollTracker } from '@/components/tracker/scroll-event';
+import { ScrollTracker } from "@/components/tracker/scroll-event";
 
 import "./globals.css";
+import HotjarTracker from "@/components/analytic/hotjar-analytic";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL?.trim() || "https://goumrah.id";
 
@@ -48,6 +49,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
             <main>
                 <Suspense fallback={null}>
+                    <HotjarTracker />
                     <Analytics />
                     <FacebookPixelEvents />
                 </Suspense>

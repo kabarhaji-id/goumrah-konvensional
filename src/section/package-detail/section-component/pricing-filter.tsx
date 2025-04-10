@@ -9,15 +9,8 @@ import CustomAirplaneMarkerIcon from "@/public/icons/mdi_airplane-marker.svg";
 import { useEffect, useState } from "react";
 import { CalendarDaysIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
-import {
-  CardDetail,
-  CardDetailContent,
-  CardDetailHeader,
-} from "@/components/ui/card/package-detail-card";
-import {
-  DepartureCityDetail,
-  DepartureDateDetail,
-} from "@/types/package-details";
+import { CardDetail, CardDetailContent, CardDetailHeader } from "@/components/ui/card/package-detail-card";
+import { DepartureCityDetail, DepartureDateDetail } from "@/types/package-details";
 import { CustomSwiper } from "@/components/layout/swiper";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
@@ -43,6 +36,19 @@ const FilterSection = ({
   const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
+
+  // Fungsi untuk mendapatkan index initial slide
+  const getInitialSlideIndex = () => {
+    const activeIndex = departureDates.findIndex((d) => d.status === "active");
+    if (activeIndex <= 0) return 0;
+
+    const prev = departureDates[activeIndex - 1];
+    if (prev.status === "expired" || prev.status === "musim-haji" || prev.status === "closing-umrah" ) {
+      return activeIndex - 1; // Kembali ke expired sebelumnya
+    }
+
+    return activeIndex;
+  };
 
   // const onFilterChange = (city?: string, date?: string) => {
   const onFilterChange = (city?: string) => {
@@ -99,16 +105,19 @@ const FilterSection = ({
             className={`flex items-center gap-2 overflow-visible rounded-[10px] pb-4 pt-3 ${variant === "departureCity" && "px-2"}`}
           >
             {variant === "departureDate" && departureDates ? (
-              <CustomSwiper gap={8} padding={2} slidesClass="pb-2 w-[110px]" initialSlide={1}>
+              <CustomSwiper
+                gap={8}
+                padding={2}
+                slidesClass="pb-2 w-[110px]"
+                initialSlide={getInitialSlideIndex()} // Menggunakan index yang dihitung
+              >
                 {departureDates.map((date, index) => {
                   return isLoading ? (
                     <Skeleton key={index} className="h-16 w-[110px]" />
                   ) : (
                     <div key={index} className="flex w-[110px] gap-2">
                       <div
-                        // onClick={() => onFilterChange(undefined, date.date)}
                         className={`relative flex h-16 w-full flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
-                          // selectedDate === date.date && date.status === "active"
                           date.status === "active"
                             ? "border border-primary bg-primary-background text-primary"
                             : "bg-gray border text-neutral-foreground"
@@ -155,7 +164,6 @@ const FilterSection = ({
                           </span>
                         )}
 
-                        {/* {selectedDate === date.date && */}
                         {date.status === "active" && (
                           <span
                             className={`absolute -bottom-2 rounded-[4px] bg-primary px-1 text-[10px] font-medium tracking-wide text-white`}

@@ -40,19 +40,19 @@
     },
     {
       "date": "2025-07-07T10:00:00+07:00",
-      "status": "active"
+      "status": "expired"
     },
     {
       "date": "2025-07-21T10:00:00+07:00",
-      "status": "active"
+      "status": "expired"
     },
     {
       "date": "2025-08-04T10:00:00+07:00",
-      "status": "active"
+      "status": "expired"
     },
     {
       "date": "2025-08-18T10:00:00+07:00",
-      "status": "active"
+      "status": "expired"
     },
     {
       "date": "2025-09-01T10:00:00+07:00",
@@ -104,20 +104,20 @@
       "airport_terminal_departure": "Terminal 3 Internasional",
       "airport_code_departure": "CGK",
       "airport_city_departure": "Jakarta",
-      "airport_name_arrival": "King Abdulaziz International Airport",
+      "airport_name_arrival": "Singapore Changi Airport",
       "airport_terminal_arrival": null,
-      "airport_code_arrival": "JED",
-      "airport_city_arrival": "Jeddah",
-      "departure_datetime": "2025-07-07T10:00:00+07:00",
+      "airport_code_arrival": "SIN",
+      "airport_city_arrival": "Changi",
+      "departure_datetime": "2025-09-01T10:00:00+07:00",
       "departure_arrivaltime": null,
       "class": "Ekonomi",
       "flight_type": "Transit",
-      "airline": "Oman Air",
+      "airline": "Scoot Air",
       "aircraft_type": "Airbus",
       "seat_layout": "3-3-3",
       "baggage_allowance": 20,
       "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/lion-air.webp",
+      "airline_logo": "/assets/airlines/scoot.webp",
       "skytrax": "Low Cost",
       "rating": "3",
       "transit": null,
@@ -134,16 +134,16 @@
       "airport_terminal_arrival": "Terminal 3 Internasional",
       "airport_code_arrival": "CGK",
       "airport_city_arrival": "Jakarta",
-      "departure_datetime": "2025-07-14T10:00:00+07:00",
+      "departure_datetime": "2025-09-09T10:00:00+07:00",
       "departure_arrivaltime": null,
       "class": "Ekonomi",
       "flight_type": "Transit",
-      "airline": "Oman Air",
+      "airline": "Scoot Air",
       "aircraft_type": "Airbus",
       "seat_layout": "3-3-3",
       "baggage_allowance": 20,
       "cabin_baggage": 7,
-      "airline_logo": "/assets/airlines/lion-air.webp",
+      "airline_logo": "/assets/airlines/scoot.webp",
       "skytrax": "Low Cost",
       "rating": "3",
       "transit": null,

@@ -77,19 +77,19 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-10-06T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-10-20T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-11-03T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-11-17T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-12-01T10:00:00+07:00",
@@ -622,11 +622,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-07-27T10:00:00+07:00",
-        status: "active",
+        status: "expired",
       },
       {
         date: "2025-08-24T10:00:00+07:00",
-        status: "active",
+        status: "expired",
       },
       {
         date: "2025-09-28T10:00:00+07:00",
@@ -634,24 +634,24 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-10-26T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-11-23T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-12-28T10:00:00+07:00",
         status: "coming-soon",
       },
     ],
-    quadPrice: 28900000,
-    triplePrice: 30900000,
-    doublePrice: 32900000,
+    quadPrice: 30900000,
+    triplePrice: 32900000,
+    doublePrice: 34900000,
     infantPrice: undefined,
-    quadFinalPrice: 25900000,
-    tripleFinalPrice: 27900000,
-    doubleFinalPrice: 29900000,
+    quadFinalPrice: 26900000,
+    tripleFinalPrice: 28900000,
+    doubleFinalPrice: 30900000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],
@@ -1168,11 +1168,11 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-07-09T10:00:00+07:00",
-        status: "active",
+        status: "expired",
       },
       {
         date: "2025-08-13T10:00:00+07:00",
-        status: "active",
+        status: "expired",
       },
       {
         date: "2025-09-10T10:00:00+07:00",
@@ -1180,24 +1180,24 @@ export const packageDetailData: UmrahPackage[] = [
       },
       {
         date: "2025-10-08T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-11-12T10:00:00+07:00",
-        status: "coming-soon",
+        status: "active",
       },
       {
         date: "2025-12-10T10:00:00+07:00",
         status: "coming-soon",
       },
     ],
-    quadPrice: 28900000,
-    triplePrice: 30900000,
-    doublePrice: 32900000,
+    quadPrice: 30900000,
+    triplePrice: 32900000,
+    doublePrice: 34900000,
     infantPrice: undefined,
-    quadFinalPrice: 25900000,
-    tripleFinalPrice: 27900000,
-    doubleFinalPrice: 29900000,
+    quadFinalPrice: 26900000,
+    tripleFinalPrice: 28900000,
+    doubleFinalPrice: 30900000,
     infantFinalPrice: undefined,
     flight_details: {
       wisata_flight: [],

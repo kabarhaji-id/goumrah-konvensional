@@ -2,12 +2,7 @@ import GoUmrahTopAccent from "/public/assets/patterns/goumrah-primary-top-right.
 import GoUmrahBottomAccent from "/public/assets/patterns/goumrah-primary-bottom-left.svg";
 
 import { CircleCheckBigIcon, InfoIcon, XIcon } from "lucide-react";
-import {
-  Section,
-  SectionContent,
-  SectionHeader,
-  SectionTitle,
-} from "@/components/layout/section";
+import { Section, SectionContent, SectionHeader, SectionTitle } from "@/components/layout/section";
 import AccordionTermsCondition from "./section-component/accordion-terms-condition";
 
 const ProductCoverageSection = ({
@@ -72,7 +67,7 @@ const ProductCoverageSection = ({
 
           <p className="flex flex-col text-xs leading-5 tracking-wide text-neutral-foreground xsm:flex-row xsm:gap-1">
             <span>Biaya perlengkapan dan handling airport</span>
-            <span>sebesar Rp 1.500.000 untuk setiap jamaah</span>
+            <span>sebesar +Rp 500.000 untuk setiap jamaah</span>
           </p>
         </div>
 

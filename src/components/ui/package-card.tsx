@@ -19,7 +19,7 @@ import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
 import { Chip } from "./chip";
 import { Button } from "@/components/ui/buttons/button";
-import { CalendarDaysIcon } from "lucide-react";
+import { CalendarDaysIcon, Share2Icon } from "lucide-react";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useMemo, useState } from "react";
@@ -29,6 +29,8 @@ import { Rating2 } from "./helper/getRating";
 import { CustomSwiper } from "../layout/swiper";
 import { FaWhatsapp } from "react-icons/fa";
 import dynamic from "next/dynamic";
+import { ShareDialog } from "@/components/ui/share-dialog";
+import { dataPackages } from "@/data/packages";
 
 interface PackageCardProps {
   data: UmrahPackage;
@@ -102,7 +104,6 @@ const PackageCard = ({
             {isLoading ? (
               <Skeleton className="aspect-[4/3] h-full rounded-[14px]" />
             ) : (
-
               <Image
                 src={data.thumbnail}
                 alt={`Paket ${data.type} ${data.title} ${data.category}`}
@@ -122,6 +123,17 @@ const PackageCard = ({
               {data.category === "Platinum" && (
                 <PlatinumAccent className="w-[100%]" />
               )}
+            </div>
+            <div className="absolute top-0 flex w-full items-end justify-end p-4">
+              <div className="relative z-20 flex gap-5">
+                <ShareDialog dataPackage={
+                  data
+                }>
+                  <div className="cursor-pointer rounded-full bg-white p-2.5 shadow-custom-sm">
+                    <Share2Icon className="h-4 w-4 stroke-neutral-foreground" />
+                  </div>
+                </ShareDialog>
+              </div>
             </div>
           </div>
 

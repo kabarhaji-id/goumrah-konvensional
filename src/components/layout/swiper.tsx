@@ -63,21 +63,21 @@ const CustomSwiper = ({
       pagination={
         pagination
           ? {
-              clickable: true,
-              bulletClass: paginationBulletClass,
-              bulletActiveClass: paginationBulletActiveClass,
-              ...(paginationPosition && {
-                el: `.${paginationPositionClass}`,
-              }),
-            }
+            clickable: true,
+            bulletClass: paginationBulletClass,
+            bulletActiveClass: paginationBulletActiveClass,
+            ...(paginationPosition && {
+              el: `.${paginationPositionClass}`,
+            }),
+          }
           : false
       }
       autoplay={
         autoplay
           ? {
-              delay: 3000,
-              disableOnInteraction: false,
-            }
+            delay: 3000,
+            disableOnInteraction: false,
+          }
           : false
       }
       modules={[Autoplay, Pagination]}

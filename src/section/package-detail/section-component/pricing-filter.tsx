@@ -188,7 +188,7 @@ const FilterSection = ({
                 })}
               </CustomSwiper>
             ) : (
-              <CustomSwiper gap={8} padding={2} slidesClass="min-w-56">
+              <CustomSwiper gap={8} padding={2} slidesClass="grow min-w-56">
                 {embarkation &&
                   embarkation.map((city, index: number) => {
                     return isLoading ? (
@@ -196,7 +196,7 @@ const FilterSection = ({
                     ) : (
                       <div
                         key={index}
-                        className="flex w-full min-w-56 cursor-pointer flex-col gap-1 rounded-[10px] px-3 py-2 text-center border border-primary bg-primary-background text-neutral-foreground"
+                        className="flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 py-2 text-center border border-primary bg-primary-background text-neutral-foreground"
                       >
                         <p className="text-sm font-semibold tracking-tight">
                           {city.city}

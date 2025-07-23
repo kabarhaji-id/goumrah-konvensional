@@ -33,7 +33,7 @@ const IdealPackagesSection = () => {
       </div> */}
 
       <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary text-center">
-        Rekomendasi Pilihan Paket Umrah<br />Silver, Gold, dan Platinum
+        Rekomendasi Pilihan<br />Paket Umrah<br />Silver, Gold, dan Platinum
       </h3>
 
       <div className="w-full">

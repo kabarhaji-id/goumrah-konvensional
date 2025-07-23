@@ -62,7 +62,7 @@ export default async function HomePage() {
     <main>
       <PromoPopup />
       <div
-        className="w-full max-w-screen relative bg-cover bg-center bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-[586px] z-0 overflow-hidden rounded-b-3xl mb-10">
+        className="w-full max-w-screen relative bg-cover bg-center bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-[586px] z-0 overflow-hidden rounded-b-3xl mb-9">
         <div className="top-0 z-50 flex h-12 items-center justify-center pt-4 px-4">
           <Logo />
           {/* <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-white via-white/50 to-transparent backdrop-blur-md"></div> */}

@@ -83,12 +83,9 @@ export interface DepartureDateDetail {
 }
 
 export interface DepartureCityDetail {
-  departureCity: string;
-  departureRoute: string;
-  departureDate: string;
-  returnCity: string;
-  returnRoute: string;
-  returnDate: string;
+  city: string;
+  route: string;
+  date: string;
 }
 
 export interface PromoDetail {

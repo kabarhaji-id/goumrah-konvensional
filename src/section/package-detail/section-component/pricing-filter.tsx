@@ -33,7 +33,7 @@ const FilterSection = ({
   // const resultDates = filteredDates.length > 0 ? filteredDates : departureDates;
 
   // const [selectedDate, setSelectedDate] = useState(resultDates[0].date);
-  const [selectedCity, setSelectedCity] = useState(embarkation[0].departureCity);
+  const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
@@ -188,48 +188,62 @@ const FilterSection = ({
                 })}
               </CustomSwiper>
             ) : (
-              embarkation &&
-              embarkation.map((city, index: number) => {
-                return isLoading ? (
-                  <Skeleton key={index} className="h-[58px] w-full" />
-                ) : (
-                  <Fragment key={index}>
-                    <div
-                      onClick={() => onFilterChange(city.departureCity)}
-                      className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${selectedCity! === city.departureCity
-                        ? "border border-primary bg-primary-background text-neutral-foreground"
-                        : "border border-neutral-200"
-                        }`}
-                    >
-                      <p className="text-sm font-semibold tracking-tight">
-                        {city.departureCity}
-                      </p>
-                      <p className="text-[13px] font-medium tracking-wide">
-                        {city.departureRoute}&nbsp;&nbsp;|&nbsp;&nbsp;{city.departureDate}
-                      </p>
-                    </div>
-                    <div
-                      onClick={() => onFilterChange(city.departureCity)}
-                      className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${selectedCity! === city.departureCity
-                        ? "border border-primary bg-primary-background text-neutral-foreground"
-                        : "border border-neutral-200"
-                        }`}
-                    >
-                      <p className="text-sm font-semibold tracking-tight">
-                        {city.returnCity}
-                      </p>
-                      <p className="text-[13px] font-medium tracking-wide">
-                        {city.returnRoute}&nbsp;&nbsp;|&nbsp;&nbsp;{city.returnDate}
-                      </p>
-                    </div>
-                  </Fragment>
-                );
-              })
+              <CustomSwiper gap={8} padding={2} slidesClass="min-w-56">
+                {embarkation &&
+                  embarkation.map((city, index: number) => {
+                    return isLoading ? (
+                      <Skeleton key={index} className="h-[58px] w-full" />
+                    ) : (
+                      <div
+                        key={index}
+                        className="flex w-full min-w-56 cursor-pointer flex-col gap-1 rounded-[10px] px-3 py-2 text-center border border-primary bg-primary-background text-neutral-foreground"
+                      >
+                        <p className="text-sm font-semibold tracking-tight">
+                          {city.city}
+                        </p>
+                        <p className="text-[13px] font-medium tracking-wide">
+                          {city.route}&nbsp;&nbsp;|&nbsp;&nbsp;{city.date}
+                        </p>
+                      </div>
+                    )
+                  })
+                }
+              </CustomSwiper>
+              // <Fragment key={index}>
+              //   <div
+              //     onClick={() => onFilterChange(city.city)}
+              //     className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${selectedCity! === city.city
+              //       ? "border border-primary bg-primary-background text-neutral-foreground"
+              //       : "border border-neutral-200"
+              //       }`}
+              //   >
+              //     <p className="text-sm font-semibold tracking-tight">
+              //       {city.city}
+              //     </p>
+              //     <p className="text-[13px] font-medium tracking-wide">
+              //       {city.route}&nbsp;&nbsp;|&nbsp;&nbsp;{city.date}
+              //     </p>
+              //   </div>
+              //   <div
+              //     onClick={() => onFilterChange(city.city)}
+              //     className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${selectedCity! === city.city
+              //       ? "border border-primary bg-primary-background text-neutral-foreground"
+              //       : "border border-neutral-200"
+              //       }`}
+              //   >
+              //     <p className="text-sm font-semibold tracking-tight">
+              //       {city.returnCity}
+              //     </p>
+              //     <p className="text-[13px] font-medium tracking-wide">
+              //       {city.returnRoute}&nbsp;&nbsp;|&nbsp;&nbsp;{city.returnDate}
+              //     </p>
+              //   </div>
+              // </Fragment>
             )}
           </CardDetailContent>
-        </CardDetail>
-      </SectionContent>
-    </Section>
+        </CardDetail >
+      </SectionContent >
+    </Section >
   );
 };
 

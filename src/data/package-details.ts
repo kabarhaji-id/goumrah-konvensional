@@ -21,12 +21,14 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "1 Sep",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "9 Sep"
+        city: "Jakarta - Jeddah",
+        route: "CGK-JED",
+        date: "1 Sep",
+      },
+      {
+        city: "Jeddah - Jakarta",
+        route: "JED-CGK",
+        date: "9 Sep",
       },
     ],
     duration: "9 Hari",
@@ -594,12 +596,24 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "28 Sep",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "6 Okt"
+        city: "Jakarta - Doha",
+        route: "CGK-DOH",
+        date: "27 Jul",
+      },
+      {
+        city: "Doha - Jeddah",
+        route: "DOH-JED",
+        date: "27 Jul",
+      },
+      {
+        city: "Jeddah - Doha",
+        route: "JED-DOH",
+        date: "03 Aug",
+      },
+      {
+        city: "Doha - Jakarta",
+        route: "DOH-CGK",
+        date: "03 Aug",
       },
     ],
     duration: "9 Hari",
@@ -1144,12 +1158,24 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "10 Sep",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "22 Sep"
+        city: "Jakarta - Muscat",
+        route: "CGK-MCT",
+        date: "07 Jul",
+      },
+      {
+        city: "Muscat - Jeddah",
+        route: "MCT-JED",
+        date: "07 Jul",
+      },
+      {
+        city: "Jeddah - Muscat",
+        route: "JED-MCT",
+        date: "14 Jul",
+      },
+      {
+        city: "Muscat - Jakarta",
+        route: "MCT-CGK",
+        date: "14 Jul",
       },
     ],
     duration: "12 Hari",
@@ -1732,12 +1758,24 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "27 Jul",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "5 Aug"
+        city: "Jakarta - Doha",
+        route: "CGK-DOH",
+        date: "27 Jul",
+      },
+      {
+        city: "Doha - Jeddah",
+        route: "DOH-JED",
+        date: "27 Jul",
+      },
+      {
+        city: "Jeddah - Doha",
+        route: "JED-DOH",
+        date: "03 Aug",
+      },
+      {
+        city: "Doha - Jakarta",
+        route: "DOH-CGK",
+        date: "03 Aug",
       },
     ],
     duration: "9 Hari",
@@ -2278,12 +2316,24 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "9 Jul",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "21 Jul"
+        city: "Jakarta - Muscat",
+        route: "CGK-MCT",
+        date: "07 Jul",
+      },
+      {
+        city: "Muscat - Jeddah",
+        route: "MCT-JED",
+        date: "07 Jul",
+      },
+      {
+        city: "Jeddah - Muscat",
+        route: "JED-MCT",
+        date: "14 Jul",
+      },
+      {
+        city: "Muscat - Jakarta",
+        route: "MCT-CGK",
+        date: "14 Jul",
       },
     ],
     duration: "12 Hari",
@@ -2863,12 +2913,29 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "19 Jul",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "03 Aug"
+        city: "Jakarta - Dubai",
+        route: "CGK-DXB",
+        date: "19 Jul",
+      },
+      {
+        city: "Dubai - Istanbul",
+        route: "DXB-IST",
+        date: "19 Jul",
+      },
+      {
+        city: "Istanbul - Jeddah",
+        route: "IST-JED",
+        date: "27 Jul",
+      },
+      {
+        city: "Jeddah - Dubai",
+        route: "JED-DXB",
+        date: "03 Aug",
+      },
+      {
+        city: "Dubai - Jakarta",
+        route: "DXB-CGK",
+        date: "03 Aug",
       },
     ],
     duration: "16 Hari",
@@ -3822,12 +3889,24 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK - JED",
-        departureDate: "18 Juli",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED - CGK",
-        returnDate: "27 Juli",
+        city: "Jakarta - Dubai",
+        route: "CGK-DXB",
+        date: "18 Jul"
+      },
+      {
+        city: "Dubai - Jeddah",
+        route: "DXB-JED",
+        date: "20 Jul"
+      },
+      {
+        city: "Jeddah - Dubai",
+        route: "JED-DXB",
+        date: "27 Jul"
+      },
+      {
+        city: "Dubai - Jakarta",
+        route: "DXB-CGK",
+        date: "27 Jul"
       },
     ],
     duration: "11 Hari",
@@ -4481,12 +4560,24 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: true,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK - JED",
-        departureDate: "27 Jul",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED - CGK",
-        returnDate: "03 Agu",
+        city: "Jakarta - Doha",
+        route: "CGK-DOH",
+        date: "27 Jul",
+      },
+      {
+        city: "Doha - Jeddah",
+        route: "DOH-JED",
+        date: "27 Jul",
+      },
+      {
+        city: "Jeddah - Doha",
+        route: "JED-DOH",
+        date: "03 Aug",
+      },
+      {
+        city: "Doha - Jakarta",
+        route: "DOH-CGK",
+        date: "03 Aug",
       },
     ],
     duration: "9 Hari",
@@ -5027,12 +5118,14 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: true,
     city_departure: [
       {
-        departureCity: "Jakarta - Jeddah",
-        departureRoute: "CGK-JED",
-        departureDate: "05 Jul",
-        returnCity: "Jeddah - Jakarta",
-        returnRoute: "JED-CGK",
-        returnDate: "12 Jul",
+        city: "Jakarta - Jeddah",
+        route: "CGK-JED",
+        date: "05 Jul",
+      },
+      {
+        city: "Jeddah - Jakarta",
+        route: "JED-CGK",
+        date: "12 Jul",
       },
     ],
     duration: "9 Hari",

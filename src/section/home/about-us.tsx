@@ -47,7 +47,7 @@ const AboutUsSection = () => {
           priority
         />
         <p className="text-lg font-bold leading-[130%] tracking-normal text-primary-foreground">
-          Jaminan <span className="text-primary">100%<br />Hotel</span> & <span className="text-primary">Maskapai<br /></span>
+          Jaminan <span className="text-primary">100%<br />Hotel & Maskapai<br /></span>
           Sesuai Pesanan
         </p>
       </section>

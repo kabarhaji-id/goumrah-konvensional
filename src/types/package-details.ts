@@ -107,7 +107,7 @@ export interface Itinerary {
   city: string;
   duration: number;
   days: ItineraryDays[];
-  images: Images[];
+  images?: Images[];
 }
 
 export interface ItineraryDays {

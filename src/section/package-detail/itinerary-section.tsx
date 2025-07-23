@@ -86,49 +86,51 @@ const ItinerarySection = ({
         {dataItineraries.map((itinerary, index) => (
           <div key={index} className="flex flex-col gap-2">
             {/* --- Main Image Swiper */}
-            <div className="relative overflow-hidden rounded-[14px]">
-              <CustomSwiper
-                className="w-full !pb-0"
-                maxWidth={416}
-                padding={0}
-                gap={0}
-                bulletVariant="white"
-                paginationPosition="right"
-                pagination
-              >
-                {itinerary.images.map((imageItineraries, index) => {
-                  return isLoading ? (
-                    <Skeleton key={index} className="h-56 w-[608px]" />
-                  ) : (
-                    <div key={index} className="relative h-56">
-                      <Image
-                        width={680}
-                        height={109}
-                        src={imageItineraries.src}
-                        alt={imageItineraries.id}
-                        className="h-full w-[608px] object-cover"
-                      />
-                      <div
-                        className="absolute bottom-0 z-10 h-14 w-full"
-                        style={{
-                          background:
-                            "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-                        }}
-                      />
-                    </div>
-                  );
-                })}
-              </CustomSwiper>
+            {itinerary.images && (
+              <div className="relative overflow-hidden rounded-[14px]">
+                <CustomSwiper
+                  className="w-full !pb-0"
+                  maxWidth={416}
+                  padding={0}
+                  gap={0}
+                  bulletVariant="white"
+                  paginationPosition="right"
+                  pagination
+                >
+                  {itinerary.images.map((imageItineraries, index) => {
+                    return isLoading ? (
+                      <Skeleton key={index} className="h-56 w-[608px]" />
+                    ) : (
+                      <div key={index} className="relative h-56">
+                        <Image
+                          width={680}
+                          height={109}
+                          src={imageItineraries.src}
+                          alt={imageItineraries.id}
+                          className="h-full w-[608px] object-cover"
+                        />
+                        <div
+                          className="absolute bottom-0 z-10 h-14 w-full"
+                          style={{
+                            background:
+                              "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
+                          }}
+                        />
+                      </div>
+                    );
+                  })}
+                </CustomSwiper>
 
-              <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 text-white">
-                <span className="font-extrabold leading-[21px]">
-                  {itinerary.city}
-                </span>
-                <span className="text-xs font-medium leading-4">
-                  ({itinerary.duration} Hari)
-                </span>
+                <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 text-white">
+                  <span className="font-extrabold leading-[21px]">
+                    {itinerary.city}
+                  </span>
+                  <span className="text-xs font-medium leading-4">
+                    ({itinerary.duration} Hari)
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
 
             {itinerary.days.map((item, index) =>
               isLoading ? (

@@ -62,9 +62,12 @@ const HotelCard = ({
 
   return (
     <CardDetail>
-      <CardDetailHeader>
-        <span className="text-sm font-semibold text-neutral-foreground">
-          {dataHotel.city}
+      <CardDetailHeader className="flex items-center gap-2">
+        <span className="text-base font-semibold text-neutral-foreground">
+          {dataHotel.city}:
+        </span>
+        <span className="text-base font-semibold text-neutral-foreground">
+          {dataHotel.hotel_name}
         </span>
       </CardDetailHeader>
 
@@ -122,9 +125,6 @@ const HotelCard = ({
             <div className="flex flex-col gap-1.5">
               <Rating totalStars={dataHotel.star_rating} />
               <div className="flex flex-col gap-1">
-                <span className="text-base font-semibold">
-                  {dataHotel.hotel_name}
-                </span>
                 <div className="flex gap-0.5">
                   {dataHotel.check_in_time && dataHotel.check_out_time && (
                     <span className="text-xs">
@@ -136,9 +136,9 @@ const HotelCard = ({
                       {" "}
                       {dataHotel.check_in_time && dataHotel.check_out_time
                         ? calculateDaysAndNights(
-                            dataHotel.check_in_time,
-                            dataHotel.check_out_time,
-                          )
+                          dataHotel.check_in_time,
+                          dataHotel.check_out_time,
+                        )
                         : `${dataHotel.duration} hari ${dataHotel.duration} malam`}
                     </span>
                   )}

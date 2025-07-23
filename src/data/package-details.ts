@@ -401,8 +401,8 @@ export const packageDetailData: UmrahPackage[] = [
       {
         id: "1",
         nth: 1,
-        duration: 3,
-        city: "Madinah",
+        duration: 1,
+        city: "",
         days: [
           {
             id: "1",
@@ -431,6 +431,14 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
+        ],
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 3,
+        city: "Madinah",
+        days: [
           {
             id: "2",
             nth: 2,
@@ -499,8 +507,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 4,
         city: "Makkah",
         days: [
@@ -963,8 +971,8 @@ export const packageDetailData: UmrahPackage[] = [
       {
         id: "1",
         nth: 1,
-        duration: 3,
-        city: "Madinah",
+        duration: 1,
+        city: "Madinah", 
         days: [
           {
             id: "1",
@@ -993,6 +1001,14 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 3,
+        city: "Madinah",
+        days: [
           {
             id: "2",
             nth: 2,
@@ -1524,7 +1540,7 @@ export const packageDetailData: UmrahPackage[] = [
       {
         id: "1",
         nth: 1,
-        duration: 4,
+        duration: 1,
         city: "Madinah",
         days: [
           {
@@ -1554,6 +1570,14 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 4,
+        city: "Madinah",
+        days: [
           {
             id: "2",
             nth: 2,
@@ -1637,8 +1661,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 6,
         city: "Makkah",
         days: [
@@ -2125,7 +2149,7 @@ export const packageDetailData: UmrahPackage[] = [
         duration: 3,
         city: "Madinah",
         days: [
-          {
+{
             id: "1",
             nth: 1,
             title: "Jakarta - Jeddah - Madinah",
@@ -2152,6 +2176,15 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 3,
+        city: "Madinah",
+        days: [
+          
           {
             id: "2",
             nth: 2,
@@ -2220,8 +2253,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 4,
         city: "Makkah",
         days: [
@@ -2678,7 +2711,7 @@ export const packageDetailData: UmrahPackage[] = [
     ],
     itineraries: [
       {
-        id: "1",
+id: "1",
         nth: 1,
         duration: 4,
         city: "Madinah",
@@ -2710,6 +2743,14 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 4,
+        city: "Madinah",
+        days: [
           {
             id: "2",
             nth: 2,
@@ -2793,8 +2834,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 6,
         city: "Makkah",
         days: [
@@ -3628,6 +3669,14 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Setelah semuanya selesai jamaah akan melakukan penerbangan langsung. Sesampainya di Bandara Internasional Istanbul jamaah melanjutkan perjalanan ke kota Bursa melalui transportasi darat, setibanya di kota Bursa. Jamaah akan melakukan proses check in hotel.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 8,
+        city: "Turkey",
+        days: [
           {
             id: "2",
             nth: 2,
@@ -3714,8 +3763,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 3,
         city: "Madinah",
         days: [
@@ -4323,6 +4372,22 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Setelah semuanya selesai jamaah akan melakukan penerbangan menuju Dubai.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 2,
+        city: "Dubai",
+        days: [
+          {
+            id: "1",
+            nth: 1,
+            title: "Jakarta - Dubai",
+            widgets: [],
+            description:
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Setelah semuanya selesai jamaah akan melakukan penerbangan menuju Dubai.",
+          },
           {
             id: "2",
             nth: 2,
@@ -4383,8 +4448,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 3,
         city: "Madinah",
         days: [
@@ -4923,7 +4988,7 @@ export const packageDetailData: UmrahPackage[] = [
       {
         id: "1",
         nth: 1,
-        duration: 3,
+        duration: 1,
         city: "Madinah",
         days: [
           {
@@ -4953,6 +5018,14 @@ export const packageDetailData: UmrahPackage[] = [
             description:
               "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
           },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
+        duration: 3,
+        city: "Madinah",
+        days: [
           {
             id: "2",
             nth: 2,
@@ -5021,8 +5094,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 4,
         city: "Makkah",
         days: [
@@ -5446,6 +5519,41 @@ export const packageDetailData: UmrahPackage[] = [
       {
         id: "1",
         nth: 1,
+        duration: 1,
+        city: "Madinah",
+        days: [
+          {
+            id: "1",
+            nth: 1,
+            title: "Jakarta - Jeddah - Madinah",
+            widgets: [
+              {
+                id: "1",
+                type: "Transport",
+                transportWith: "Bus",
+                from: "Bandara King Abdul Aziz Jeddah",
+                to: "Hotel Maden",
+              },
+              {
+                id: "2",
+                type: "Hotel",
+                hotel_name: "Maden Taibah",
+              },
+              {
+                id: "3",
+                type: "Information",
+                description:
+                  "Tidak ada aktivitas hari ini. Silakan nikmati waktu dengan beristirahat",
+              },
+            ],
+            description:
+              "Jamaah berkumpul di Bandara Soekarno-Hatta untuk proses check in tiket, imigrasi dan bagasi. Sebelum keberangkatan akan ada briefing dan doa bersama. Sesampainya di Bandara King Abdul Aziz Jeddah, lalu melanjutkan perjalanan dengan transportasi darat menuju hotel Madinah untuk check in.",
+          },
+        ]
+      },
+      {
+        id: "2",
+        nth: 2,
         duration: 3,
         city: "Madinah",
         days: [
@@ -5544,8 +5652,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 4,
         city: "Makkah",
         days: [

@@ -32,9 +32,14 @@ const IdealPackagesSection = () => {
         </h3>
       </div> */}
 
-      <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary text-center">
-        Rekomendasi Pilihan<br />Paket Umrah<br />Silver, Gold, dan Platinum
-      </h3>
+      <div className="z-20 flex flex-col items-center gap-2 text-center">
+        <p className="text-base leading-[140%] tracking-wider text-primary">
+          Rekomendasi Pilihan Paket Umrah
+        </p>
+        <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary">
+          Silver&nbsp;&nbsp;-&nbsp;&nbsp;Gold&nbsp;&nbsp;-&nbsp;&nbsp;Platinum
+        </h3>
+      </div>
 
       <div className="w-full">
         <PackageCard data={packageSilver[0]} />

@@ -29,10 +29,26 @@ const AboutUsSection = () => {
           Mitra perjalanan Umrah & Haji<br />Amanah dan Terpercaya
         </h2>
         <p className="text-center text-base leading-[150%] tracking-wide text-primary-foreground/75">
-          <b className="text-primary">“</b>Dengan pengalaman 18 tahun di bidang
-          Umrah dan Haji, kami berkomitmen untuk menghadirkan pengalaman yang
-          nyaman, aman, dan penuh makna bagi setiap jamaah.
+          <b className="text-primary">“</b>Dengan pengalaman lebih dari 18 tahun di bidang
+          Umrah dan Haji, kami berkomitmen untuk menghadirkan pengalaman
+          tak terlupakan, yang aman, nyaman, dan penuh makna bagi setiap jamaah.
           <b className="text-primary">”</b>
+        </p>
+      </section>
+      <section className="flex justify-center items-center gap-4 px-4 pt-4 mb-12">
+        <Image
+          src={"/assets/image/guarantee.png"}
+          alt="100% Guarantee"
+          title="100% Guarantee"
+          width={360}
+          height={300}
+          className="h-[128px] w-[110px] xsm:h-[144px] xsm:w-[123.3px]"
+          quality={70}
+          priority
+        />
+        <p className="text-lg font-bold leading-[130%] tracking-normal text-primary-foreground">
+          Jaminan <span className="text-primary">100%<br />Hotel</span> & <span className="text-primary">Maskapai<br /></span>
+          Sesuai Pesanan
         </p>
       </section>
     </>

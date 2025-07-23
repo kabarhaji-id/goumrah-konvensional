@@ -4,7 +4,7 @@ import "swiper/css";
 
 import { packageDetailData } from "@/data/package-details";
 import { useMemo } from "react";
-import  PackageCard  from "@/components/ui/package-card";
+import PackageCard from "@/components/ui/package-card";
 
 // const IdealPackagesSection = ({ packages }: { packages: Packages[] }) => {
 const IdealPackagesSection = () => {
@@ -23,14 +23,18 @@ const IdealPackagesSection = () => {
 
   return (
     <section className="relative flex flex-col items-center justify-center gap-6 px-6 pb-10">
-      <div className="z-20  mt-7 flex flex-col items-center gap-2">
+      {/* <div className="z-20  mt-7 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
         </p>
         <h3 className="text-center text-[21px] font-bold leading-[130%] tracking-normal text-primary">
-          Umrah Ideal dengan Momen Tak Terlupakan mulai dari 22 jt
+          Umrah Ideal dengan Momen Tak Terlupakan
         </h3>
-      </div>
+      </div> */}
+
+      <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary text-center">
+        Rekomendasi Pilihan Paket Umrah<br />Silver, Gold, dan Platinum
+      </h3>
 
       <div className="w-full">
         <PackageCard data={packageSilver[0]} />

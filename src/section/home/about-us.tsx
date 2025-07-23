@@ -4,7 +4,7 @@ import React from "react";
 const AboutUsSection = () => {
   return (
     <>
-      <section className="flex items-center gap-4 px-6 pt-4">
+      {/* <section className="flex items-center gap-4 px-6 pt-4">
         <Image
           src={"/assets/image/guarantee.png"}
           alt="100% Guarantee"
@@ -20,26 +20,13 @@ const AboutUsSection = () => {
           <span className="text-primary">Maskapai </span>
           Sesuai Pesanan
         </p>
-      </section>
+      </section> */}
       <section
         id="about-us"
         className="flex flex-col items-center gap-2 px-6 py-4"
       >
-        <div className="relative mx-auto mb-6 aspect-square h-80 w-80">
-          <span className="absolute z-0 size-full rounded-br-[50%] rounded-tl-[50%] bg-primary/40 blur-[50px]" />
-          <Image
-            src={"/assets/image/about-img.png"}
-            alt="About Us"
-            title ="About Us"
-            width={412}
-            height={421}
-            className="absolute z-10 size-full"
-            quality={70}
-            priority
-          />
-        </div>
         <h2 className="text-center text-md font-semibold leading-[130%] tracking-normal text-primary-foreground">
-          Mitra perjalanan Umrah & Haji Terpercaya Selama 18 Tahun
+          Mitra perjalanan Umrah & Haji<br />Amanah dan Terpercaya
         </h2>
         <p className="text-center text-base leading-[150%] tracking-wide text-primary-foreground/75">
           <b className="text-primary">“</b>Dengan pengalaman 18 tahun di bidang

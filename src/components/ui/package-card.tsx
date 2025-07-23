@@ -106,7 +106,7 @@ const PackageCard = ({
               <Image
                 src={data.thumbnail}
                 alt={`Paket ${data.type} ${data.title} ${data.category}`}
-                title= {`Paket ${data.type} ${data.title} ${data.category}`}
+                title={`Paket ${data.type} ${data.title} ${data.category}`}
                 width={942}
                 height={708}
                 loading="eager"
@@ -127,15 +127,15 @@ const PackageCard = ({
 
           <div className="flex !h-full w-full flex-col gap-2 bg-white p-3">
             <div className="space-y-0">
-              <CustomSwiper padding={0} gap={8}>
+              <div className="flex flex-wrap items-center gap-2 mb-2">
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden">
                     <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
-                      <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
+                      <CustomSunMoonIcon className="h-6 w-6 stroke-primary" />
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                       {data.duration}
                     </span>
                   </Chip>
@@ -152,10 +152,10 @@ const PackageCard = ({
                           fill="#1B8386"
                         />
                       ) : (
-                        <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
+                        <CustomKaabaIcon className="h-6 w-6" fill="#1B8386" />
                       )}
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                       {data.type === "Plus" ? "Plus Wisata" : data.type}
                     </span>
                   </Chip>
@@ -168,17 +168,17 @@ const PackageCard = ({
                     <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
                       {data.flight_details.departure_flight.transit ? (
                         <CustomAirplaneIcon
-                          className="h-4 w-4 rotate-90"
+                          className="h-6 w-6 rotate-90"
                           fill="#1B8386"
                         />
                       ) : (
                         <CustomAirplaneIcon
-                          className="h-4 w-4"
+                          className="h-6 w-6"
                           fill="#1B8386"
                         />
                       )}
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                       {data.flight_details.departure_flight.transit ? "Transit" : "Langsung"}
                     </span>
                   </Chip>
@@ -192,16 +192,16 @@ const PackageCard = ({
                     <Chip variant="default" className="overflow-hidden">
                       <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
                         <CustomFastTrainIcon
-                          className="h-4 w-4"
+                          className="h-6 w-6"
                           fill="#1B8386"
                         />
                       </div>
-                      <span className="py-0.5 pl-1 pr-1.5 text-[12.5px] font-semibold leading-[18px] text-neutral-foreground">
+                      <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                         Kereta Cepat
                       </span>
                     </Chip>
                   ))}
-              </CustomSwiper>
+              </div>
 
               <div className="space-y-2">
                 {isLoading ? (
@@ -209,7 +209,7 @@ const PackageCard = ({
                 ) : (
                   <div
                     className="whitespace-nowrap text-sm leading-normal tracking-[-0.30px] text-primary-foreground xs:text-[17px]">
-                    <h2 className="font-bold">{data.title}</h2>
+                    <h2 className="font-bold text-xl">{data.title}</h2>
                   </div>
                 )}
 
@@ -220,12 +220,12 @@ const PackageCard = ({
                     <Skeleton className="h-[18px] w-56" />
                   ) : (
                     <div className="flex items-center gap-2">
-                      <CalendarDaysIcon className="h-4 w-4 stroke-neutral-foreground" />
-                      <span className="font-medium tracking-wide">
+                      <CalendarDaysIcon className="h-5 w-5 stroke-neutral-foreground" />
+                      <span className="text-sm font-medium tracking-wide">
                         {moment(departureDate.date).format("DD MMMM YYYY")}
                       </span>
                       {data.departure_date.length > 1 ? (
-                        <span className="text-xs leading-[18px] tracking-wide opacity-60">
+                        <span className="text-sm leading-[18px] tracking-wide opacity-60">
                           +{data.departure_date.length - 6} tanggal lainnya
                         </span>
                       ) : (
@@ -242,11 +242,11 @@ const PackageCard = ({
                       <div className="flex items-center gap-2 font-medium">
                         <CustomMaskapaiIcon className="flex flex-shrink-0" />
                         <div className="flex w-[70px] justify-between">
-                          <p>Maskapai</p>
-                          <span>:</span>
+                          <p className="text-sm">Maskapai</p>
+                          <span className="text-sm">:</span>
                         </div>
                       </div>
-                      <span className="font-bold leading-[18px] tracking-wide">
+                      <span className="font-bold text-sm leading-[18px] tracking-wide">
                         {data.flight_details.departure_flight.airline}
                       </span>
                     </div>
@@ -262,11 +262,11 @@ const PackageCard = ({
                           starsRating={data.hotel_details.madinah.star_rating}
                         />
                         <div className="flex w-[68px] justify-between">
-                          <p>Madinah</p>
-                          <span>:</span>
+                          <p className="text-sm">Madinah</p>
+                          <span className="text-sm">:</span>
                         </div>
                       </div>
-                      <span className="mt-1 font-bold leading-[18px] tracking-wide">
+                      <span className="text-sm mt-1 font-bold leading-[18px] tracking-wide">
                         {data.hotel_details.madinah.hotel_name}
                       </span>
                     </div>
@@ -282,11 +282,11 @@ const PackageCard = ({
                           starsRating={data.hotel_details.makkah.star_rating}
                         />
                         <div className="flex w-[68px] justify-between">
-                          <p className="w-[60px]">Makkah</p>
-                          <span>:</span>
+                          <p className="w-[60px] text-sm">Makkah</p>
+                          <span className="text-sm">:</span>
                         </div>
                       </div>
-                      <span className="mt-1 font-bold leading-[18px] tracking-wide">
+                      <span className="text-sm mt-1 font-bold leading-[18px] tracking-wide">
                         {data.hotel_details.makkah.hotel_name}
                       </span>
                     </div>
@@ -300,15 +300,15 @@ const PackageCard = ({
                 <Skeleton className="h-6 w-36" />
               ) : (
                 <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground">
-                  <div className="flex items-center gap-1 xs:gap-2">
+                  <div className="flex justify-between items-center gap-1 xs:gap-2">
                     {/* --- Normal Price */}
-                    <p className="flex-shrink-0 text-base font-extrabold xs:text-[17.5px]">
+                    <p className="flex-shrink-0 text-base font-extrabold xs:text-xl">
                       {data.quadFinalPrice
                         ? priceToLocale(data.quadFinalPrice)
                         : priceToLocale(data.quadPrice)}
                     </p>
 
-                    {/* --- Discount Price */}
+                    {/* --- Discount Price
                     {data.quadFinalPrice &&
                       data.quadPrice !== data.quadFinalPrice && (
                         <div className="flex flex-shrink-0 items-center gap-1">
@@ -320,7 +320,7 @@ const PackageCard = ({
                             {priceToLocale(data.quadPrice)}
                           </span>
                         </div>
-                      )}
+                      )} */}
                   </div>
                 </div>
               )}
@@ -328,30 +328,30 @@ const PackageCard = ({
               {isLoading ? (
                 <Skeleton className="h-9 w-full rounded-[14px]" />
               ) : (
-                <div className="flex w-full gap-2">
+                <div className="flex w-full gap-2 items-center justify-center">
                   {/* Lihat Paket Button */}
+
                   <Button
                     variant="primary"
                     size="default"
-                    className="h-11 w-48 px-4 rounded-xl text-sm font-medium"
-                    onClick={handlePackageDetailClick}
-                  >
-                    Detail
-                  </Button>
-
-
-                  {/* Pesan Sekarang Button with WhatsApp Icon */}
-                  <Button
-                    variant="primary"
-                    size="default"
-                    className="h-11 w-96 px-4 rounded-xl text-sm font-medium flex items-center gap-2"
+                    className="h-11 basis-1/2 px-4 rounded-xl text-sm font-medium"
                     icon={<FaWhatsapp />} // Add WhatsApp icon
                     onClick={(event) => {
                       event.stopPropagation(); // Prevents the click from affecting the Link
                       handleConsult(`Paket ${data.type} ${data.title} ${data.category}`);
                     }}
                   >
-                    Konsultasi Paket
+                    Pilih Paket
+                  </Button>
+
+                  {/* Pesan Sekarang Button with WhatsApp Icon */}
+                  <Button
+                    variant="primary"
+                    size="default"
+                    className="h-11 basis-1/2 px-4 rounded-xl text-sm font-medium flex items-center gap-2"
+                    onClick={handlePackageDetailClick}
+                  >
+                    Rinican Fasilitas
                   </Button>
                 </div>
               )}

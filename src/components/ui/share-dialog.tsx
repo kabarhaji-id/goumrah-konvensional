@@ -38,7 +38,7 @@ export function ShareDialog({
   let fullUrl: string = "";
 
   if (typeof window !== "undefined") {
-    fullUrl = `${window.location.origin}${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ""}`;
+    fullUrl = `${window.location.origin}/umrah/${dataPackage?.id}`;
   }
 
   const whatsappLink = `https://wa.me/?text=${encodeURIComponent("Cek paket Umrah ini dari goumrah.id!")}${encodeURIComponent("\n")}${encodeURIComponent(fullUrl)}`;

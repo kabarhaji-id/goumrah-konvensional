@@ -21,9 +21,9 @@ const HeaderSection = ({
         />
 
         {/* --- Button: Order This Package  */}
-        <div className="px-4">
+        {/* <div className="px-4">
           <ButtonWhatsApp consultUrl={packageData.consult_url} />
-        </div>
+        </div> */}
       </SectionContent>
     </Section>
   );

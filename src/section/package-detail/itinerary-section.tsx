@@ -98,9 +98,9 @@ const ItinerarySection = ({
               >
                 {itinerary.images.map((imageItineraries, index) => {
                   return isLoading ? (
-                    <Skeleton key={index} className="h-[109px] w-[608px]" />
+                    <Skeleton key={index} className="h-56 w-[608px]" />
                   ) : (
-                    <div key={index} className="relative h-[109px]">
+                    <div key={index} className="relative h-56">
                       <Image
                         width={680}
                         height={109}

@@ -6,7 +6,7 @@ import "../../../app/globals.css";
 
 import CustomAirplaneMarkerIcon from "@/public/icons/mdi_airplane-marker.svg";
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { CalendarDaysIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
 import { CardDetail, CardDetailContent, CardDetailHeader } from "@/components/ui/card/package-detail-card";
@@ -33,7 +33,7 @@ const FilterSection = ({
   // const resultDates = filteredDates.length > 0 ? filteredDates : departureDates;
 
   // const [selectedDate, setSelectedDate] = useState(resultDates[0].date);
-  const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
+  const [selectedCity, setSelectedCity] = useState(embarkation[0].departureCity);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
@@ -43,7 +43,7 @@ const FilterSection = ({
     if (activeIndex <= 0) return 0;
 
     const prev = departureDates[activeIndex - 1];
-    if (prev.status === "expired" || prev.status === "musim-haji" || prev.status === "closing-umrah" ) {
+    if (prev.status === "expired" || prev.status === "musim-haji" || prev.status === "closing-umrah") {
       return activeIndex - 1; // Kembali ke expired sebelumnya
     }
 
@@ -95,7 +95,7 @@ const FilterSection = ({
               <>
                 <CustomAirplaneMarkerIcon className="h-4 w-4" fill="#1B8386" />
                 <span className="text-sm font-semibold text-primary">
-                  Kota Keberangkatan
+                  Kota Keberangkatan & Kepulangan
                 </span>
               </>
             )}
@@ -117,23 +117,18 @@ const FilterSection = ({
                   ) : (
                     <div key={index} className="flex w-[110px] gap-2">
                       <div
-                        className={`relative flex h-16 w-full flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${
-                          date.status === "active"
-                            ? "border border-primary bg-primary-background text-primary"
-                            : "bg-gray border text-neutral-foreground"
-                        } ${
-                          date.status === "expired" &&
+                        className={`relative flex h-16 w-full flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${date.status === "active"
+                          ? "border border-primary bg-primary-background text-primary"
+                          : "bg-gray border text-neutral-foreground"
+                          } ${date.status === "expired" &&
                           "pointer-events-none bg-subtle-background"
-                        } ${
-                          date.status === "musim-haji" &&
+                          } ${date.status === "musim-haji" &&
                           "gold-border pointer-events-none bg-custom-gold-gradient"
-                        } ${
-                          date.status === "closing-umrah" &&
+                          } ${date.status === "closing-umrah" &&
                           "pointer-events-none bg-[#8E8E93] text-white"
-                        } ${
-                          date.status === "coming-soon" &&
+                          } ${date.status === "coming-soon" &&
                           "pointer-events-none bg-subtle-background"
-                        }`}
+                          }`}
                       >
                         <span className="text-xs tracking-tight">
                           {date.status !== "musim-haji" &&
@@ -198,28 +193,36 @@ const FilterSection = ({
                 return isLoading ? (
                   <Skeleton key={index} className="h-[58px] w-full" />
                 ) : (
-                  <div
-                    key={index}
-                    onClick={() => onFilterChange(city.city)}
-                    className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${
-                      selectedCity! === city.city
+                  <Fragment key={index}>
+                    <div
+                      onClick={() => onFilterChange(city.departureCity)}
+                      className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${selectedCity! === city.departureCity
                         ? "border border-primary bg-primary-background text-neutral-foreground"
                         : "border border-neutral-200"
-                    }`}
-                  >
-                    <p className="text-sm font-semibold tracking-tight">
-                      {city.city}
-                    </p>
-                    <p className="text-[10px] font-medium tracking-wide">
-                      {city.route}
-                    </p>
-
-                    {selectedCity! === city.city && (
-                      <span className="absolute bottom-2.5 self-center rounded-[4px] bg-primary px-1 pb-px text-[10px] font-medium leading-[15px] tracking-wide text-white">
-                        Dipilih
-                      </span>
-                    )}
-                  </div>
+                        }`}
+                    >
+                      <p className="text-sm font-semibold tracking-tight">
+                        {city.departureCity}
+                      </p>
+                      <p className="text-[13px] font-medium tracking-wide">
+                        {city.departureRoute}&nbsp;&nbsp;|&nbsp;&nbsp;{city.departureDate}
+                      </p>
+                    </div>
+                    <div
+                      onClick={() => onFilterChange(city.departureCity)}
+                      className={`flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 pb-3.5 pt-1 text-center ${selectedCity! === city.departureCity
+                        ? "border border-primary bg-primary-background text-neutral-foreground"
+                        : "border border-neutral-200"
+                        }`}
+                    >
+                      <p className="text-sm font-semibold tracking-tight">
+                        {city.returnCity}
+                      </p>
+                      <p className="text-[13px] font-medium tracking-wide">
+                        {city.returnRoute}&nbsp;&nbsp;|&nbsp;&nbsp;{city.returnDate}
+                      </p>
+                    </div>
+                  </Fragment>
                 );
               })
             )}

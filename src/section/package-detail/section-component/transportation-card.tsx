@@ -62,7 +62,7 @@ const TransportationCard = ({
       </CardDetailHeader>
       <div className="px-3">
         {isLoading ? (
-          <Skeleton className="h-[141px] w-full rounded-[14px]" />
+          <Skeleton className="h-64 w-full rounded-[14px]" />
         ) : (
           <CustomSwiper
             className="w-full rounded-[14px] !pb-0"
@@ -74,7 +74,7 @@ const TransportationCard = ({
           >
             {data.images.map((imageTransportation, index) => {
               return (
-                <div key={index} className="relative h-[141px]">
+                <div key={index} className="relative h-64">
                   <Image
                     src={imageTransportation.src}
                     alt={`image-${index}`}

@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import { UmrahPackage } from "@/types/package-details";
 import { Skeleton } from "./skeleton-loader";
 
@@ -44,7 +44,7 @@ export function ShareDialog({
   const whatsappLink = `https://wa.me/?text=${encodeURIComponent("Cek paket Umrah ini dari goumrah.id!")}${encodeURIComponent("\n")}${encodeURIComponent(fullUrl)}`;
   const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`;
 
-  const handleClickShare = async () => {
+  const handleClickShare = async (event: MouseEvent) => {
     try {
       await navigator.clipboard.writeText(fullUrl as string);
       setIsCopied(true);
@@ -62,9 +62,21 @@ export function ShareDialog({
 
   return (
     <Dialog>
-      <DialogTrigger asChild>{children}</DialogTrigger>
+      <DialogTrigger
+        asChild
+        onClick={(event) => {
+          event.stopPropagation();
+        }}
+      >
+        {children}
+      </DialogTrigger>
 
-      <DialogContent className="w-[90%] max-w-[400px] rounded-lg bg-white px-4">
+      <DialogContent
+        className="w-[90%] max-w-[400px] rounded-lg bg-white px-4"
+        onClick={(event) => {
+          event.stopPropagation();
+        }}
+      >
         <DialogHeader className="flex items-start">
           <DialogTitle>Bagikan tautan</DialogTitle>
           <DialogDescription className="text-neutral-foreground">

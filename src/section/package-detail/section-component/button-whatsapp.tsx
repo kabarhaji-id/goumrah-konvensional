@@ -47,7 +47,7 @@ const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl?: string | null; co
             icon={!consultUrl ? <WhatsAppIcon /> : undefined} // Tampilkan ikon jika consultUrl kosong
             iconPosition="end"
           >
-            <Link href={orderUrl ?? "#"}>Pesan Paket</Link>
+            <Link href={orderUrl ?? "#"}>Pilih Paket</Link>
           </Button>
 
           {/* Order Now (WhatsApp) Button - Only if consultUrl is available */}

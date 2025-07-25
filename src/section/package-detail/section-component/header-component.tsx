@@ -9,10 +9,12 @@ import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
 
 import { Chip } from "@/components/ui/chip";
 import { UmrahPackage } from "@/types/package-details";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { CustomSwiper } from "@/components/layout/swiper";
+import { CalendarDaysIcon } from "lucide-react";
+import moment from "moment";
 
 const HeaderComponent = ({
   packageData,
@@ -23,6 +25,14 @@ const HeaderComponent = ({
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
+
+  const departureDate = useMemo(() => {
+    return (
+      packageData.departure_date.find(
+        (departureDate) => departureDate.status === "active",
+      ) ?? packageData.departure_date[0]
+    );
+  }, [packageData.departure_date]);
 
   useEffect(() => {
     if ("connection" in navigator) {
@@ -49,7 +59,20 @@ const HeaderComponent = ({
 
   return (
     <div className="flex flex-col gap-3">
-      <CustomSwiper padding={4} gap={8}>
+      <div className="flex items-center px-4 gap-2 flex-wrap">
+        {isLoading ? (
+          <Skeleton className="h-[25px] w-20 rounded-[8px]" />
+        ) : (
+          <Chip variant="default" className="overflow-hidden border-[3px]">
+            <div className="w-full bg-primary-accent p-1">
+              <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
+            </div>
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+              {moment(departureDate.date).format("DD MMM YYYY")}
+            </span>
+          </Chip>
+        )}
+
         {/* --- Duration Days */}
         {isLoading ? (
           <Skeleton className="h-[25px] w-[70px] rounded-[8px]" />
@@ -87,7 +110,7 @@ const HeaderComponent = ({
           <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
         ) : (
           <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="bg-primary-accent py-1 pl-1 pr-0.5">
+            <div className="w-full bg-primary-accent p-1">
               {packageData.flight_details.departure_flight.transit ? (
                 <CustomAirplaneIcon
                   className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
@@ -119,7 +142,7 @@ const HeaderComponent = ({
               </span>
             </Chip>
           ))}
-      </CustomSwiper>
+      </div>
 
       <div className="flex flex-col gap-2 px-4">
         {/* --- Title */}

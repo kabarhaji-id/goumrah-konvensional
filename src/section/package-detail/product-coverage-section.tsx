@@ -24,11 +24,11 @@ const ProductCoverageSection = ({
         <div className="flex flex-col gap-2 px-4 pb-3 pt-4">
           <div className="flex gap-2 pl-1">
             <CircleCheckBigIcon className="h-5 w-5 stroke-primary" />
-            <span className="text-sm font-semibold text-primary">
+            <span className="text-[15px] font-semibold text-primary">
               Yang termasuk dalam paket kamu
             </span>
           </div>
-          <ul className="ml-6 flex list-disc flex-col gap-1 text-xs leading-[18px] tracking-wide text-primary-foreground">
+          <ul className="ml-6 flex list-disc flex-col gap-1 text-sm leading-[18px] tracking-wide text-primary-foreground">
             <li>Tiket pulang-pergi</li>
             <li>Pengurusan visa umrah</li>
             <li>Makan 3x sehari</li>
@@ -47,7 +47,7 @@ const ProductCoverageSection = ({
               Yang belum termasuk dalam paket kamu
             </span>
           </div>
-          <ul className="ml-6 flex list-disc flex-col gap-1 text-xs leading-[18px] tracking-wide text-primary-foreground">
+          <ul className="ml-6 flex list-disc flex-col gap-1 text-sm leading-[18px] tracking-wide text-primary-foreground">
             <li>Biaya pembuatan atau perpanjangan paspor</li>
             <li>Vaksin meningitis</li>
             <li>Belanja oleh-oleh, suvenir, atau kebutuhan pribadi lainnya</li>
@@ -65,7 +65,7 @@ const ProductCoverageSection = ({
             </span>
           </div>
 
-          <p className="flex flex-col text-xs leading-5 tracking-wide text-neutral-foreground xsm:flex-row xsm:gap-1">
+          <p className="flex flex-col text-sm leading-5 tracking-wide text-neutral-foreground xsm:flex-row xsm:gap-1">
             <span>Biaya perlengkapan dan handling airport</span>
             <span>sebesar +Rp 500.000 untuk setiap jamaah</span>
           </p>
@@ -90,10 +90,10 @@ const ImportantNotes = ({
 }) => {
   return (
     <div className="mt-2 rounded-[14px] border border-primary p-4">
-      <h5 className="text-sm font-semibold">Hal yang perlu kamu ketahui</h5>
+      <h5 className="text-[15px] font-semibold">Hal yang perlu kamu ketahui</h5>
 
       <div className="ml-4 mt-2">
-        <ul className="flex list-decimal flex-col gap-1 text-xs leading-[18px] tracking-wide text-primary-foreground">
+        <ul className="flex list-decimal flex-col gap-1 text-sm leading-[18px] tracking-wide text-primary-foreground">
           {dataImportantNotes.map((data, index) => {
             return <li key={index}>{data}</li>;
           })}

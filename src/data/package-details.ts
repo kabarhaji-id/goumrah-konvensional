@@ -604,23 +604,13 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        city: "Jakarta - Doha",
-        route: "CGK-DOH",
+        city: "Jakarta - Doha - Jeddah",
+        route: "CGK-DOH-JED",
         date: "27 Jul",
       },
       {
-        city: "Doha - Jeddah",
-        route: "DOH-JED",
-        date: "27 Jul",
-      },
-      {
-        city: "Jeddah - Doha",
-        route: "JED-DOH",
-        date: "03 Aug",
-      },
-      {
-        city: "Doha - Jakarta",
-        route: "DOH-CGK",
+        city: "Jeddah - Doha - Jakarta",
+        route: "JED-DOH-CGK",
         date: "03 Aug",
       },
     ],
@@ -1174,23 +1164,13 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        city: "Jakarta - Muscat",
+        city: "Jakarta - Muscat - Jeddah",
         route: "CGK-MCT",
         date: "07 Jul",
       },
       {
-        city: "Muscat - Jeddah",
-        route: "MCT-JED",
-        date: "07 Jul",
-      },
-      {
-        city: "Jeddah - Muscat",
-        route: "JED-MCT",
-        date: "14 Jul",
-      },
-      {
-        city: "Muscat - Jakarta",
-        route: "MCT-CGK",
+        city: "Jeddah - Muscat - Jakarta",
+        route: "JED-MCT-CGK",
         date: "14 Jul",
       },
     ],
@@ -1782,23 +1762,13 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        city: "Jakarta - Doha",
-        route: "CGK-DOH",
+        city: "Jakarta - Doha - Jeddah",
+        route: "CGK-DOH-JED",
         date: "27 Jul",
       },
       {
-        city: "Doha - Jeddah",
-        route: "DOH-JED",
-        date: "27 Jul",
-      },
-      {
-        city: "Jeddah - Doha",
-        route: "JED-DOH",
-        date: "03 Aug",
-      },
-      {
-        city: "Doha - Jakarta",
-        route: "DOH-CGK",
+        city: "Jeddah - Doha - Jakarta",
+        route: "JED-DOH-CGK",
         date: "03 Aug",
       },
     ],
@@ -2349,23 +2319,13 @@ export const packageDetailData: UmrahPackage[] = [
     isFastTrain: false,
     city_departure: [
       {
-        city: "Jakarta - Muscat",
-        route: "CGK-MCT",
+        city: "Jakarta - Muscat - Jeddah",
+        route: "CGK-MCT-JED",
         date: "07 Jul",
       },
       {
-        city: "Muscat - Jeddah",
-        route: "MCT-JED",
-        date: "07 Jul",
-      },
-      {
-        city: "Jeddah - Muscat",
-        route: "JED-MCT",
-        date: "14 Jul",
-      },
-      {
-        city: "Muscat - Jakarta",
-        route: "MCT-CGK",
+        city: "Jeddah - Muscat - Jakarta",
+        route: "JED-MCT-CGK",
         date: "14 Jul",
       },
     ],
@@ -2954,13 +2914,8 @@ id: "1",
     isFastTrain: false,
     city_departure: [
       {
-        city: "Jakarta - Dubai",
-        route: "CGK-DXB",
-        date: "19 Jul",
-      },
-      {
-        city: "Dubai - Istanbul",
-        route: "DXB-IST",
+        city: "Jakarta - Dubai - Istanbul",
+        route: "CGK-DXB-IST",
         date: "19 Jul",
       },
       {
@@ -2969,13 +2924,8 @@ id: "1",
         date: "27 Jul",
       },
       {
-        city: "Jeddah - Dubai",
-        route: "JED-DXB",
-        date: "03 Aug",
-      },
-      {
-        city: "Dubai - Jakarta",
-        route: "DXB-CGK",
+        city: "Jeddah - Dubai - Jakarta",
+        route: "JED-DXB-CGK",
         date: "03 Aug",
       },
     ],
@@ -3948,13 +3898,8 @@ id: "1",
         date: "20 Jul"
       },
       {
-        city: "Jeddah - Dubai",
-        route: "JED-DXB",
-        date: "27 Jul"
-      },
-      {
-        city: "Dubai - Jakarta",
-        route: "DXB-CGK",
+        city: "Jeddah - Dubai - Jakarta",
+        route: "JED-DXB-CGK",
         date: "27 Jul"
       },
     ],
@@ -4625,23 +4570,13 @@ id: "1",
     isFastTrain: true,
     city_departure: [
       {
-        city: "Jakarta - Doha",
-        route: "CGK-DOH",
+        city: "Jakarta - Doha - Jeddah",
+        route: "CGK-DOH-JED",
         date: "27 Jul",
       },
       {
-        city: "Doha - Jeddah",
-        route: "DOH-JED",
-        date: "27 Jul",
-      },
-      {
-        city: "Jeddah - Doha",
-        route: "JED-DOH",
-        date: "03 Aug",
-      },
-      {
-        city: "Doha - Jakarta",
-        route: "DOH-CGK",
+        city: "Jeddah - Doha - Jakarta",
+        route: "JED-DOH-CGK",
         date: "03 Aug",
       },
     ],

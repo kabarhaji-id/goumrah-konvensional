@@ -8,7 +8,7 @@ import CustomArrowIcon from "@/public/icons/mingcute_down-fill.svg";
 
 import { Button } from "@/components/ui/button";
 import { useMemo } from "react";
-import  PackageCard  from "@/components/ui/package-card";
+import PackageCard from "@/components/ui/package-card";
 import { packageDetailData } from "@/data/package-details";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,17 +18,17 @@ const RecommendedPackagesSection = () => {
       {
         type: "Silver",
         subTitle: "Paket Hemat, Ibadah Khidmat",
-        title: "Paket Rekomendasi Silver",
+        title: "Rekomendasi Paket Silver",
       },
       {
         type: "Gold",
         subTitle: "Pilihan Bijak Untuk Perjalanan Penuh Makna",
-        title: "Paket Rekomendasi Gold",
+        title: "Rekomendasi Paket Gold",
       },
       {
         type: "Platinum",
         subTitle: "Ibadah Tenang, Nyaman Maksimal",
-        title: "Paket Rekomendasi Platinum",
+        title: "Rekomendasi Paket Platinum",
       },
     ];
 

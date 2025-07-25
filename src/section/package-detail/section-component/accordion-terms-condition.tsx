@@ -56,13 +56,13 @@ const AccordionTermsCondition = () => {
               className="flex justify-between px-4 py-3 text-sm font-medium leading-[21px] text-primary-foreground"
               variant="primary"
             >
-              <span className="text-sm font-semibold leading-5">
+              <span className="text-[15px] font-semibold leading-5">
                 Pahami sebelum kamu berangkat
               </span>
             </AccordionTrigger>
 
             <AccordionContent className="px-4">
-              <div className="mt-2 flex flex-col gap-4">
+              <div className="mt-2 flex flex-col gap-3.5">
                 {TermsConditionList.map((item, index) => {
                   return (
                     <Link
@@ -71,7 +71,7 @@ const AccordionTermsCondition = () => {
                       target="_blank"
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-xs leading-4 tracking-wide">
+                        <span className="text-sm leading-4 tracking-wide">
                           {item.title}
                         </span>
                         <ChevronRightIcon className="h-4 w-4 stroke-primary" />

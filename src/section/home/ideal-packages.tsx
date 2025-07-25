@@ -37,7 +37,17 @@ const IdealPackagesSection = () => {
           Rekomendasi Paket Umrah Pilihan
         </p>
         <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary">
-          Silver&nbsp;&nbsp;-&nbsp;&nbsp;Gold&nbsp;&nbsp;-&nbsp;&nbsp;Platinum
+          <span>
+            Silver
+          </span>
+          &nbsp;&nbsp;&nbsp;
+          <span className="text-[#CA9822]">
+            Gold
+          </span>
+          &nbsp;&nbsp;&nbsp;
+          <span className="text-[#242424]">
+            Platinum
+          </span>
         </h3>
       </div>
 

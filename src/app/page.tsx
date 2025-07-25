@@ -63,7 +63,7 @@ export default async function HomePage() {
       <PromoPopup />
       <div className="w-full max-w-screen relative bg-cover bg-bottom bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-svh z-0 overflow-hidden mb-8">
         {/* Konten hero existing */}
-        <div className="top-0 z-50 flex h-12 items-center justify-center pt-4 px-4">
+        <div className="top-0 z-50 flex h-12 items-center justify-center pt-[8svh] px-4">
           <Logo />
         </div>
         <div className="absolute inset-0 flex flex-col items-center text-center text-white pt-28">

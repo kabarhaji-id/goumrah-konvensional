@@ -196,10 +196,10 @@ const FilterSection = ({
                     ) : (
                       <div key={index} className="flex w-full cursor-pointer divide-x divide-primary border border-primary rounded-[10px] bg-primary-background">
                         <div className="flex grow flex-col gap-1 px-3 py-2 text-center">
-                          <p className="text-sm font-semibold tracking-tight">
+                          <p className="text-sm font-semibold tracking-tight whitespace-nowrap">
                             {city.city}
                           </p>
-                          <p className="text-[13px] font-medium tracking-wide">
+                          <p className="text-[13px] font-medium tracking-wide whitespace-nowrap">
                             {city.route}
                           </p>
                         </div>

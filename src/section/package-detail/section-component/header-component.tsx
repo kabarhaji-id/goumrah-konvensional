@@ -13,7 +13,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { CustomSwiper } from "@/components/layout/swiper";
-import { CalendarDaysIcon } from "lucide-react";
+import { CalendarDaysIcon, MountainIcon } from "lucide-react";
 import moment from "moment";
 
 const HeaderComponent = ({
@@ -60,6 +60,7 @@ const HeaderComponent = ({
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center px-4 gap-2 flex-wrap">
+        {/* Tanggal Keberangkatan */}
         {isLoading ? (
           <Skeleton className="h-[25px] w-20 rounded-[8px]" />
         ) : (
@@ -106,24 +107,37 @@ const HeaderComponent = ({
         )}
 
         {/* --- Flight Type */}
-        {isLoading ? (
+        {/* {isLoading ? (
           <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
         ) : (
           <Chip variant="default" className="overflow-hidden border-[3px]">
             <div className="w-full bg-primary-accent p-1">
-              {packageData.flight_details.departure_flight.transit ? (
-                <CustomAirplaneIcon
-                  className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
-                  fill="#1B8386"
-                />
-              ) : (
-                <CustomAirplaneIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
-              )}
+              <CustomAirplaneIcon
+                className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
+                fill="#1B8386"
+              />
             </div>
             <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {packageData.flight_details.departure_flight.transit
                 ? "Transit"
                 : "Langsung"}
+            </span>
+          </Chip>
+        )} */}
+
+        {/* --- Thaif */}
+        {isLoading ? (
+          <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+        ) : (
+          <Chip variant="default" className="overflow-hidden border-[3px]">
+            <div className="w-full bg-primary-accent p-1">
+              <CustomAirplaneIcon
+                className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
+                fill="#1B8386"
+              />
+            </div>
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+              {packageData.flight_details.departure_flight.airline}
             </span>
           </Chip>
         )}
@@ -142,6 +156,22 @@ const HeaderComponent = ({
               </span>
             </Chip>
           ))}
+
+        {/* --- Thaif */}
+        {isLoading ? (
+          <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+        ) : (
+          <Chip variant="default" className="overflow-hidden border-[3px]">
+            <div className="w-full bg-primary-accent p-1">
+              <MountainIcon
+                className="h-4 w-4 xxs:h-5 xxs:w-5 stroke-[#1B8386]"
+              />
+            </div>
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+              Thaif
+            </span>
+          </Chip>
+        )}
       </div>
 
       <div className="flex flex-col gap-2 px-4">
@@ -155,14 +185,14 @@ const HeaderComponent = ({
         )}
 
         {/* --- Fast Train? */}
-        {packageData.isFastTrain &&
+        {/* {packageData.isFastTrain &&
           (isLoading ? (
             <Skeleton className="h-[21px] w-[300px]" />
           ) : (
             <p className="text-sm font-medium leading-[150%] tracking-wide text-primary">
               Lebih Nyaman dengan Kereta Cepat
             </p>
-          ))}
+          ))} */}
 
         {/* --- Days */}
         {/* {isLoading ? (

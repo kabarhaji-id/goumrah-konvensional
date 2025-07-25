@@ -140,15 +140,15 @@ const PackageCard = ({
 
           <div className="flex !h-full w-full flex-col gap-2 bg-white p-3">
             <div className="space-y-0">
-              <div className="flex flex-wrap items-center gap-2 mb-2">
+              <CustomSwiper padding={0} gap={8}>
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
-                  <Chip variant="default" className="overflow-hidden">
+                  <Chip variant="default" className="overflow-hidden border-[3px]">
                     <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
-                      <CalendarDaysIcon className="h-6 w-6 stroke-primary" />
+                      <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
                       {moment(departureDate.date).format("DD MMM YYYY")}
                     </span>
                   </Chip>
@@ -157,11 +157,11 @@ const PackageCard = ({
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
-                  <Chip variant="default" className="overflow-hidden">
+                  <Chip variant="default" className="overflow-hidden border-[3px]">
                     <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
-                      <CustomSunMoonIcon className="h-6 w-6 stroke-primary" />
+                      <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
                       {data.duration}
                     </span>
                   </Chip>
@@ -170,7 +170,7 @@ const PackageCard = ({
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
-                  <Chip variant="default" className="overflow-hidden">
+                  <Chip variant="default" className="overflow-hidden border-[3px]">
                     <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
                       {data.type === "Plus" ? (
                         <CustomVacationIcon
@@ -178,10 +178,10 @@ const PackageCard = ({
                           fill="#1B8386"
                         />
                       ) : (
-                        <CustomKaabaIcon className="h-6 w-6" fill="#1B8386" />
+                        <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
                       )}
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
                       {data.type === "Plus" ? "Plus Wisata" : data.type}
                     </span>
                   </Chip>
@@ -190,21 +190,21 @@ const PackageCard = ({
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
-                  <Chip variant="default" className="overflow-hidden">
+                  <Chip variant="default" className="overflow-hidden border-[3px]">
                     <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
                       {data.flight_details.departure_flight.transit ? (
                         <CustomAirplaneIcon
-                          className="h-6 w-6 rotate-90"
+                          className="h-4 w-4 rotate-90"
                           fill="#1B8386"
                         />
                       ) : (
                         <CustomAirplaneIcon
-                          className="h-6 w-6"
+                          className="h-4 w-4"
                           fill="#1B8386"
                         />
                       )}
                     </div>
-                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
                       {data.flight_details.departure_flight.transit ? "Transit" : "Langsung"}
                     </span>
                   </Chip>
@@ -218,16 +218,16 @@ const PackageCard = ({
                     <Chip variant="default" className="overflow-hidden">
                       <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
                         <CustomFastTrainIcon
-                          className="h-6 w-6"
+                          className="h-4 w-4"
                           fill="#1B8386"
                         />
                       </div>
-                      <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+                      <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
                         Kereta Cepat
                       </span>
                     </Chip>
                   ))}
-              </div>
+              </CustomSwiper>
 
               <div className="space-y-2">
                 {isLoading ? (
@@ -246,7 +246,7 @@ const PackageCard = ({
                     <Skeleton className="h-[18px] w-56" />
                   ) : (
                     <div className="flex items-center gap-2">
-                      <CalendarDaysIcon className="h-5 w-5 stroke-neutral-foreground" />
+                      <CalendarDaysIcon className="h-4 w-4 stroke-neutral-foreground" />
                       <span className="text-neutral-foreground text-sm font-bold tracking-wide">
                         {moment(departureDate.date).format("DD MMMM YYYY")}
                       </span>
@@ -362,7 +362,16 @@ const PackageCard = ({
               ) : (
                 <div className="flex w-full gap-2 items-center justify-center">
                   {/* Lihat Paket Button */}
+                  <Button
+                    variant="primary"
+                    size="default"
+                    className="h-11 basis-1/2 px-4 rounded-xl text-sm font-medium flex items-center gap-2"
+                    onClick={handlePackageDetailClick}
+                  >
+                    Rinican Fasilitas
+                  </Button>
 
+                  {/* Pesan Sekarang Button with WhatsApp Icon */}
                   <Button
                     variant="primary"
                     size="default"
@@ -374,16 +383,6 @@ const PackageCard = ({
                     }}
                   >
                     Pilih Paket
-                  </Button>
-
-                  {/* Pesan Sekarang Button with WhatsApp Icon */}
-                  <Button
-                    variant="primary"
-                    size="default"
-                    className="h-11 basis-1/2 px-4 rounded-xl text-sm font-medium flex items-center gap-2"
-                    onClick={handlePackageDetailClick}
-                  >
-                    Rinican Fasilitas
                   </Button>
                 </div>
               )}

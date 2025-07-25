@@ -48,7 +48,7 @@ const HeaderComponent = ({
   }, [networkSpeed]);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       <CustomSwiper padding={4} gap={8}>
         {/* --- Duration Days */}
         {isLoading ? (
@@ -142,7 +142,7 @@ const HeaderComponent = ({
           ))}
 
         {/* --- Days */}
-        {isLoading ? (
+        {/* {isLoading ? (
           <Skeleton className="h-4 w-[160px]" />
         ) : (
           <p className="flex gap-1 text-xs text-neutral-foreground">
@@ -180,10 +180,10 @@ const HeaderComponent = ({
               hari Makkah
             </span>
           </p>
-        )}
+        )} */}
 
         {/* --- Early Payment (DP) */}
-        {isLoading ? (
+        {/* {isLoading ? (
           <Skeleton className="h-4 w-[180px]" />
         ) : (
           <div className="flex items-center gap-1">
@@ -195,7 +195,7 @@ const HeaderComponent = ({
               </span>
             </p>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

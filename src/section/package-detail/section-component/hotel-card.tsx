@@ -20,6 +20,7 @@ import { calculateDaysAndNights, convertDistance } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "@/components/ui/skeleton-loader";
+import { Badge } from "@/components/ui/badge";
 
 const HotelCard = ({
   id,
@@ -62,20 +63,24 @@ const HotelCard = ({
 
   return (
     <CardDetail>
-      <CardDetailHeader className="flex items-center gap-1">
+      <CardDetailHeader className="flex items-center gap-1 justify-between">
         <span className="text-sm font-semibold text-neutral-foreground">
           {dataHotel.city}
         </span>
-        <span className="text-sm font-semibold text-neutral-foreground">
+        <Rating totalStars={dataHotel.star_rating} />
+        {/* <span className="text-sm font-semibold text-neutral-foreground">
           :
         </span>
         <span className="text-sm font-semibold text-neutral-foreground">
           {dataHotel.hotel_name}
-        </span>
+        </span> */}
+        {/* <span className="font-bold text-sm text-primary leading-[18px] tracking-wide">
+          {dataHotel.hotel_name} Hotel
+        </span> */}
       </CardDetailHeader>
 
       <CardDetailContent className="max-w-[314px] overflow-hidden rounded-[14px]">
-        <div className="overflow-hidden">
+        <div className="relative overflow-hidden">
           <CustomSwiper
             className="h-[236px] w-full rounded-[14px]"
             slidesClass="h-full"
@@ -119,6 +124,11 @@ const HotelCard = ({
                 );
               })}
           </CustomSwiper>
+          <div className="absolute top-2 left-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-1 z-10">
+            <span className="text-[13px] font-semibold text-primary leading-none">
+              {dataHotel.hotel_name} Hotel
+            </span>
+          </div>
         </div>
 
         {isLoading ? (
@@ -126,8 +136,11 @@ const HotelCard = ({
         ) : (
           <div className="!mt-0 flex flex-col gap-3 px-4 py-2 text-primary-foreground">
             <div className="flex flex-col gap-1.5">
-              <Rating totalStars={dataHotel.star_rating} />
-              <div className="flex flex-col gap-1">
+              {/* <span className="text-base font-semibold text-primary">
+                {dataHotel.hotel_name} Hotel
+              </span> */}
+              {/* <Rating totalStars={dataHotel.star_rating} /> */}
+              {/* <div className="flex flex-col gap-1">
                 <div className="flex gap-0.5">
                   {dataHotel.check_in_time && dataHotel.check_out_time && (
                     <span className="text-xs">
@@ -146,7 +159,7 @@ const HotelCard = ({
                     </span>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="flex items-center gap-2">
               <CustomMapPinnedIcon className="h-4 w-4 flex-shrink-0" />

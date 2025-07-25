@@ -60,51 +60,58 @@ const TransportationCard = ({
           Bus
         </span>
       </CardDetailHeader>
-      <div className="px-3">
+      <div className="px-3 overflow-hidden relative">
         {isLoading ? (
           <Skeleton className="h-64 w-full rounded-[14px]" />
         ) : (
-          <CustomSwiper
-            className="w-full rounded-[14px] !pb-0"
-            maxWidth={608}
-            padding={0}
-            gap={0}
-            bulletVariant="white-dot"
-            pagination
-          >
-            {data.images.map((imageTransportation, index) => {
-              return (
-                <div key={index} className="relative h-64">
-                  <Image
-                    src={imageTransportation.src}
-                    alt={`image-${index}`}
-                    width={942}
-                    height={708}
-                    className="w-[608px] bg-white object-cover"
-                  />
+          <>
+            <CustomSwiper
+              className="w-full rounded-[14px] !pb-0"
+              maxWidth={608}
+              padding={0}
+              gap={0}
+              bulletVariant="white-dot"
+              pagination
+            >
+              {data.images.map((imageTransportation, index) => {
+                return (
+                  <div key={index} className="relative h-64">
+                    <Image
+                      src={imageTransportation.src}
+                      alt={`image-${index}`}
+                      width={942}
+                      height={708}
+                      className="w-[608px] bg-white object-cover"
+                    />
 
-                  <div
-                    className="absolute bottom-0 h-14 w-full"
-                    style={{
-                      background:
-                        "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
-                    }}
-                  />
-                </div>
-              );
-            })}
-          </CustomSwiper>
+                    <div
+                      className="absolute bottom-0 h-14 w-full"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%)",
+                      }}
+                    />
+                  </div>
+                );
+              })}
+            </CustomSwiper>
+            <div className="absolute top-2 left-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-1 z-10">
+              <span className="text-[13px] font-semibold text-primary leading-none">
+                {data.provider}
+              </span>
+            </div>
+          </>
         )}
       </div>
 
       <CardDetailContent className="overflow-hidden rounded-[14px] px-4 py-2">
         <div className="!mt-0 flex flex-col gap-2 text-primary-foreground">
           <div className="flex items-center justify-between">
-            {isLoading ? (
+            {/* {isLoading ? (
               <Skeleton className="h-5 w-[50px]" />
             ) : (
               <span className="text-sm font-semibold">{data.provider}</span>
-            )}
+            )} */}
 
             {isLoading ? (
               <Skeleton className="h-4 w-24" />

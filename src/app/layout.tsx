@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", // Default robots meta
     publisher: "goumrah.id", // Default publisher
-    authors: [{name: `GoUmrah Teams`}, {name: `GoUmrah Teams`, url: `${baseUrl}`}],
+    authors: [{ name: `GoUmrah Teams` }, { name: `GoUmrah Teams`, url: `${baseUrl}` }],
 
 };
 
@@ -40,24 +40,24 @@ const plusJakartaSans = Plus_Jakarta_Sans({
     display: "swap",
 });
 
-export default function RootLayout({children}: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
 
 
     return (
         <html lang="id">
-        <body className={`${plusJakartaSans.className} antialiased`}>
-        <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm">
-            <main>
-                <Suspense fallback={null}>
-                    <HotjarTracker />
-                    <Analytics />
-                    <FacebookPixelEvents />
-                </Suspense>
-                <ScrollTracker />
-                {children}
-            </main>
-        </div>
-        </body>
+            <body className={`${plusJakartaSans.className} antialiased`}>
+                <div className="mx-auto max-w-screen-sm bg-white shadow-custom-sm scrollbar-hide">
+                    <main>
+                        <Suspense fallback={null}>
+                            <HotjarTracker />
+                            <Analytics />
+                            <FacebookPixelEvents />
+                        </Suspense>
+                        <ScrollTracker />
+                        {children}
+                    </main>
+                </div>
+            </body>
         </html>
     );
 }

@@ -22,7 +22,7 @@ const IdealPackagesSection = () => {
 
 
   return (
-    <section className="relative flex flex-col items-center justify-center gap-6 px-6 pb-10">
+    <section className="relative flex flex-col items-center justify-center gap-5 px-6 pb-10">
       {/* <div className="z-20  mt-7 flex flex-col items-center gap-2">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Sambut Panggilan-Nya
@@ -34,7 +34,7 @@ const IdealPackagesSection = () => {
 
       <div className="z-20 flex flex-col items-center gap-2 text-center">
         <p className="text-base leading-[140%] tracking-wider text-primary">
-          Rekomendasi Pilihan Paket Umrah
+          Rekomendasi Paket Umrah Pilihan
         </p>
         <h3 className="text-2xl font-bold leading-[130%] tracking-normal text-primary">
           Silver&nbsp;&nbsp;-&nbsp;&nbsp;Gold&nbsp;&nbsp;-&nbsp;&nbsp;Platinum

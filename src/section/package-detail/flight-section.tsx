@@ -158,14 +158,25 @@ const FlightCard = ({
   if (dataFlight) {
     return (
       <CardDetail>
-        <CardDetailHeader>
+        <CardDetailHeader className="justify-between">
           <span className="text-sm font-semibold text-neutral-foreground">
             {type === "Keberangkatan"
-              ? "Keberangkatan Ibadah"
+              ? "Keberangkatan"
               : type === "Kepulangan"
                 ? "Kepulangan"
                 : "Keberangkatan Wisata"}
           </span>
+
+          <Badge
+            className="w-fit rounded px-2 py-0.5"
+            variant="primaryDarker"
+          >
+            <span className="font-normal leading-[18px] tracking-wide">
+              {dataFlight.data.transitFlight
+                ? "Penerbangan transit"
+                : "Penerbangan langsung"}
+            </span>
+          </Badge>
         </CardDetailHeader>
 
         {isLoading ? (
@@ -173,17 +184,6 @@ const FlightCard = ({
         ) : (
           <CardDetailContent className="w-full space-y-4 rounded-[10px] px-4 pb-2 pt-4">
             <div className="space-y-3">
-              <Badge
-                className="mr-auto w-fit rounded px-2 py-0.5"
-                variant="primaryDarker"
-              >
-                <span className="font-normal leading-[18px] tracking-wide">
-                  {dataFlight.data.transitFlight
-                    ? "Penerbangan transit"
-                    : "Penerbangan langsung"}
-                </span>
-              </Badge>
-
               <div className="flex items-center gap-2">
                 {!open && (
                   <Image
@@ -191,7 +191,7 @@ const FlightCard = ({
                     height={60}
                     src={dataFlight.data.directFlight.airline_logo}
                     alt={`logo-${dataFlight.data.directFlight.airline}`}
-                    className="h-[52px] w-auto"
+                    className="h-[56px] w-auto"
                   />
                 )}
                 <span className="text-lg font-semibold leading-5">
@@ -268,7 +268,7 @@ const FlightCard = ({
                   </span>
                   <div className="flex w-fit gap-1 opacity-40">
                     {dataFlight.data.transitFlight &&
-                    dataFlight.data.transitFlightDate ? (
+                      dataFlight.data.transitFlightDate ? (
                       <>
                         {dataFlight.data.transitFlight.departure_arrivaltime ? (
                           <span>

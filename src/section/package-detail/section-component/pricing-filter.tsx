@@ -88,14 +88,14 @@ const FilterSection = ({
               <>
                 <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
                 <span className="text-sm font-semibold text-primary">
-                  Tanggal Keberangkatan
+                  Pilihan Tanggal Keberangkatan
                 </span>
               </>
             ) : (
               <>
                 <CustomAirplaneMarkerIcon className="h-4 w-4" fill="#1B8386" />
                 <span className="text-sm font-semibold text-primary">
-                  Kota Keberangkatan & Kepulangan
+                  Keberangkatan & Kepulangan
                 </span>
               </>
             )}
@@ -188,22 +188,27 @@ const FilterSection = ({
                 })}
               </CustomSwiper>
             ) : (
-              <CustomSwiper gap={8} padding={2} slidesClass="grow min-w-56">
+              <CustomSwiper gap={8} padding={2} slidesClass="grow min-w-48 xxs:min-w-56">
                 {embarkation &&
                   embarkation.map((city, index: number) => {
                     return isLoading ? (
                       <Skeleton key={index} className="h-[58px] w-full" />
                     ) : (
-                      <div
-                        key={index}
-                        className="flex w-full cursor-pointer flex-col gap-1 rounded-[10px] px-3 py-2 text-center border border-primary bg-primary-background text-neutral-foreground"
-                      >
-                        <p className="text-sm font-semibold tracking-tight">
-                          {city.city}
-                        </p>
-                        <p className="text-[13px] font-medium tracking-wide">
-                          {city.route}&nbsp;&nbsp;|&nbsp;&nbsp;{city.date}
-                        </p>
+                      <div key={index} className="flex w-full cursor-pointer divide-x divide-primary border border-primary rounded-[10px] bg-primary-background">
+                        <div className="flex grow flex-col gap-1 px-3 py-2 text-center">
+                          <p className="text-sm font-semibold tracking-tight">
+                            {city.city}
+                          </p>
+                          <p className="text-[13px] font-medium tracking-wide">
+                            {city.route}
+                          </p>
+                        </div>
+                        <div className="flex flex-col gap-0 items-center justify-center text-center basis-1/4">
+                          <p className="text-base font-semibold leading-tight">
+                            {city.date.split(" ")[0]}
+                          </p>
+                          <p className="text-sm font-medium leading-snug">{city.date.split(" ")[1]}</p>
+                        </div>
                       </div>
                     )
                   })

@@ -164,6 +164,6 @@ export const convertDistance = (meters: number): string => {
     // return `${kilometers.toFixed()}km`;
     return `Shuttle Bus 24jam ke Masjidil Haram`;
   } else {
-    return `${meters}m`;
+    return `${meters} meter`;
   }
 };

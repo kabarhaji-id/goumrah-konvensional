@@ -95,9 +95,20 @@ const TransportationCard = ({
                 );
               })}
             </CustomSwiper>
-            <div className="absolute top-2 left-2 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-1 z-10">
+            <div className="absolute top-2 left-5 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-1 z-10">
               <span className="text-[13px] font-semibold text-primary leading-none">
                 {data.provider}
+              </span>
+            </div>
+            <div className="flex items-center justify-center gap-1 absolute top-2 right-5 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-2 z-10">
+              <span className="text-xs font-medium leading-none mr-0.5">
+                {category === "Silver" || category === "Gold"
+                  ? "Economy"
+                  : "VIP"}
+              </span>
+              <CustomSeatReclineIcon />
+              <span className="text-xs font-medium leading-none">
+                {data.seat_amount} Kursi
               </span>
             </div>
           </>
@@ -113,18 +124,18 @@ const TransportationCard = ({
               <span className="text-sm font-semibold">{data.provider}</span>
             )} */}
 
-            {isLoading ? (
+            {/* {isLoading ? (
               <Skeleton className="h-4 w-24" />
             ) : (
-              <span className="text-xs">
+              <span className="text-xs font-semibold leading-4 tracking-wide opacity-60">
                 {category === "Silver" || category === "Gold"
                   ? "Economy-Class"
                   : "VIP-Class"}
               </span>
-            )}
+            )} */}
           </div>
 
-          {isLoading ? (
+          {/* {isLoading ? (
             <Skeleton className="h-[18px] w-20" />
           ) : (
             <div className="flex items-center gap-2">
@@ -133,7 +144,7 @@ const TransportationCard = ({
                 {data.seat_amount} Kursi
               </span>
             </div>
-          )}
+          )} */}
         </div>
       </CardDetailContent>
     </CardDetail>

@@ -58,7 +58,7 @@ const HeaderComponent = ({
             <div className="w-full bg-primary-accent p-1">
               <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-bold leading-4 tracking-wide text-neutral-foreground">
               {durationDays}
             </span>
           </Chip>
@@ -76,7 +76,7 @@ const HeaderComponent = ({
                 <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
               )}
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-bold leading-4 tracking-wide text-neutral-foreground">
               {packageData.type === "Plus" ? "Plus Wisata" : "Reguler"}
             </span>
           </Chip>
@@ -97,7 +97,7 @@ const HeaderComponent = ({
                 <CustomAirplaneIcon className="h-4 w-4" fill="#1B8386" />
               )}
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-bold leading-4 tracking-wide text-neutral-foreground">
               {packageData.flight_details.departure_flight.transit
                 ? "Transit"
                 : "Langsung"}
@@ -114,7 +114,7 @@ const HeaderComponent = ({
               <div className="bg-primary-accent pb-[3px] pl-1 pr-0.5 pt-1">
                 <CustomFastTrainIcon className="h-4 w-4" fill="#1B8386" />
               </div>
-              <span className="py-[3px] pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+              <span className="py-[3px] pl-1 pr-1.5 text-sm font-bold leading-[18px] text-neutral-foreground">
                 Kereta Cepat
               </span>
             </Chip>

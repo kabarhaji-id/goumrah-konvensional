@@ -164,23 +164,23 @@ const HotelCard = ({
             <div className="flex items-center gap-2">
               <CustomMapPinnedIcon className="h-4 w-4 flex-shrink-0" />
               {dataHotel.city === "Makkah" && (
-                <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
+                <span className="line-clamp-1 text-xs font-semibold leading-4 tracking-wide opacity-60">
                   {dataHotel.distance_to_landmark > 1000
-                    ? "Shuttle Bus 24jam ke Masjidil Haram"
+                    ? "Shuttle Bus 24 jam ke Masjidil Haram"
                     : `${convertDistance(dataHotel.distance_to_landmark)} ke ${dataHotel.landmark}`}
                 </span>
               )}
 
               {dataHotel.city === "Madinah" && (
-                <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
+                <span className="line-clamp-1 text-xs font-semibold leading-4 tracking-wide opacity-60">
                   {dataHotel.distance_to_landmark > 1000
-                    ? "Shuttle Bus 24jam ke Masjidil Haram"
+                    ? "Shuttle Bus 24 jam ke Masjidil Haram"
                     : `${convertDistance(dataHotel.distance_to_landmark)} ke ${dataHotel.landmark}`}
                 </span>
               )}
 
               {dataHotel.city !== "Madinah" && dataHotel.city !== "Makkah" && (
-                <span className="line-clamp-1 text-xs leading-[18px] opacity-60">
+                <span className="line-clamp-1 text-xs font-semibold leading-4 tracking-wide opacity-60">
                   {dataHotel.address}
                 </span>
               )}

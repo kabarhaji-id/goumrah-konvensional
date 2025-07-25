@@ -8,7 +8,7 @@ const chipVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-white border border-primary-accent rounded-[8px] text-primary-foreground/75 hover:bg-subtle/75",
+          "bg-white border-[3px] border-primary-accent rounded-[8px] text-primary-foreground/75 hover:bg-subtle/75",
         primary: "bg-primary text-white font-normal",
         "class-platinum":
           "bg-gradient-to-br from-zinc-950 to-zinc-500 text-white",
@@ -33,7 +33,7 @@ const chipVariants = cva(
 
 interface ChipProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof chipVariants> {}
+  VariantProps<typeof chipVariants> { }
 
 const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(
   ({ className, variant, size, ...props }, ref) => {

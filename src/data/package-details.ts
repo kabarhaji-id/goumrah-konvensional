@@ -1077,8 +1077,8 @@ export const packageDetailData: UmrahPackage[] = [
         ],
       },
       {
-        id: "2",
-        nth: 2,
+        id: "3",
+        nth: 3,
         duration: 4,
         city: "Makkah",
         days: [

@@ -4,6 +4,7 @@ import { StarIcon } from "lucide-react";
 import CustomHotelStars3 from "@/public/icons/custom-icon/icon-hotel-stars-3.svg";
 import CustomHotelStars4 from "@/public/icons/custom-icon/icon-hotel-stars-4.svg";
 import CustomHotelStars5 from "@/public/icons/custom-icon/icon-hotel-stars-5.svg";
+import Image from "next/image";
 
 export const Rating = ({
   totalStars,
@@ -32,11 +33,35 @@ export const Rating = ({
 export const Rating2 = ({ starsRating }: { starsRating: number }) => {
   switch (starsRating) {
     case 3:
-      return <CustomHotelStars3 />;
+      return (
+        <Image
+          src="/assets/icons/custom-icon/icon-hotel-stars-3.svg"
+          alt="Hotel Stars 3"
+          width={40}
+          height={24}
+          className="w-[47px] h-[28px]"
+        />
+      )
     case 4:
-      return <CustomHotelStars4 />;
+      return (
+        <Image
+          src="/assets/icons/custom-icon/icon-hotel-stars-3.svg"
+          alt="Hotel Stars 3"
+          width={40}
+          height={24}
+          className="w-[47px] h-[28px]"
+        />
+      );
     case 5:
-      return <CustomHotelStars5 />;
+      return (
+        <Image
+          src="/assets/icons/custom-icon/icon-hotel-stars-3.svg"
+          alt="Hotel Stars 3"
+          width={40}
+          height={24}
+          className="w-[47px] h-[28px]"
+        />
+      );
     default:
       return null;
   }

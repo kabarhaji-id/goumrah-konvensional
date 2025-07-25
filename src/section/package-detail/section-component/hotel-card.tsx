@@ -62,11 +62,14 @@ const HotelCard = ({
 
   return (
     <CardDetail>
-      <CardDetailHeader className="flex items-center gap-2">
-        <span className="text-base font-semibold text-neutral-foreground">
-          {dataHotel.city}:
+      <CardDetailHeader className="flex items-center gap-1">
+        <span className="text-sm font-semibold text-neutral-foreground">
+          {dataHotel.city}
         </span>
-        <span className="text-base font-semibold text-neutral-foreground">
+        <span className="text-sm font-semibold text-neutral-foreground">
+          :
+        </span>
+        <span className="text-sm font-semibold text-neutral-foreground">
           {dataHotel.hotel_name}
         </span>
       </CardDetailHeader>

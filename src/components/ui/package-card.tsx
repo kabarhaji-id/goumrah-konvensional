@@ -146,6 +146,19 @@ const PackageCard = ({
                 ) : (
                   <Chip variant="default" className="overflow-hidden">
                     <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
+                      <CalendarDaysIcon className="h-6 w-6 stroke-primary" />
+                    </div>
+                    <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
+                      {moment(departureDate.date).format("DD MMM YYYY")}
+                    </span>
+                  </Chip>
+                )}
+
+                {isLoading ? (
+                  <Skeleton className="mb-2 h-[22px] w-16" />
+                ) : (
+                  <Chip variant="default" className="overflow-hidden">
+                    <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
                       <CustomSunMoonIcon className="h-6 w-6 stroke-primary" />
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
@@ -228,24 +241,24 @@ const PackageCard = ({
 
                 <div
                   className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
-                  {/* --- Departure Date */}
+                  {/* --- Departure Date
                   {isLoading ? (
                     <Skeleton className="h-[18px] w-56" />
                   ) : (
                     <div className="flex items-center gap-2">
                       <CalendarDaysIcon className="h-5 w-5 stroke-neutral-foreground" />
-                      <span className="text-sm font-medium tracking-wide">
+                      <span className="text-neutral-foreground text-sm font-bold tracking-wide">
                         {moment(departureDate.date).format("DD MMMM YYYY")}
                       </span>
                       {data.departure_date.length > 1 ? (
-                        <span className="text-sm leading-[18px] tracking-wide opacity-60">
+                        <span className="text-neutral-foreground font-semibold text-sm leading-[18px] tracking-wide opacity-60">
                           +{data.departure_date.length - 6} tanggal lainnya
                         </span>
                       ) : (
                         <></>
                       )}
                     </div>
-                  )}
+                  )} */}
 
                   {/* --- Flight */}
                   {isLoading ? (
@@ -253,7 +266,13 @@ const PackageCard = ({
                   ) : (
                     <div className="flex items-center gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex items-center gap-2 font-medium">
-                        <CustomMaskapaiIcon className="flex flex-shrink-0" />
+                        <Image
+                          src="/assets/icons/custom-icon/icon-maskapai.svg"
+                          alt="Maskapai"
+                          width={38}
+                          height={24}
+                          className="w-[45px] h-[28px] flex flex-shrink-0"
+                        />
                         <div className="flex w-[70px] justify-between">
                           <p className="text-sm">Maskapai</p>
                           <span className="text-sm">:</span>

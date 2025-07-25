@@ -54,11 +54,11 @@ const HeaderComponent = ({
         {isLoading ? (
           <Skeleton className="h-[25px] w-[70px] rounded-[8px]" />
         ) : (
-          <Chip variant="default" className="overflow-hidden">
+          <Chip variant="default" className="overflow-hidden border-[3px]">
             <div className="w-full bg-primary-accent p-1">
-              <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
+              <CustomSunMoonIcon className="h-4 w-4 xxs:h-5 xxs:w-5 stroke-primary" />
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-bold leading-4 tracking-wide text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {durationDays}
             </span>
           </Chip>
@@ -68,15 +68,15 @@ const HeaderComponent = ({
         {isLoading ? (
           <Skeleton className="h-[25px] w-[81px] rounded-[8px]" />
         ) : (
-          <Chip variant="default" className="overflow-hidden">
+          <Chip variant="default" className="overflow-hidden border-[3px]">
             <div className="w-full bg-primary-accent p-1">
               {packageData.type === "Plus" ? (
-                <CustomVacationIcon className="h-4 w-4" fill="#1B8386" />
+                <CustomVacationIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
               ) : (
-                <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
+                <CustomKaabaIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
               )}
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-bold leading-4 tracking-wide text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {packageData.type === "Plus" ? "Plus Wisata" : "Reguler"}
             </span>
           </Chip>
@@ -86,18 +86,18 @@ const HeaderComponent = ({
         {isLoading ? (
           <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
         ) : (
-          <Chip variant="default" className="overflow-hidden">
+          <Chip variant="default" className="overflow-hidden border-[3px]">
             <div className="bg-primary-accent py-1 pl-1 pr-0.5">
               {packageData.flight_details.departure_flight.transit ? (
                 <CustomAirplaneIcon
-                  className="h-4 w-4 rotate-90"
+                  className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
                   fill="#1B8386"
                 />
               ) : (
-                <CustomAirplaneIcon className="h-4 w-4" fill="#1B8386" />
+                <CustomAirplaneIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
               )}
             </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-bold leading-4 tracking-wide text-neutral-foreground">
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {packageData.flight_details.departure_flight.transit
                 ? "Transit"
                 : "Langsung"}
@@ -110,11 +110,11 @@ const HeaderComponent = ({
           (isLoading ? (
             <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
           ) : (
-            <Chip variant="default" className="overflow-hidden">
+            <Chip variant="default" className="overflow-hidden border-[3px]">
               <div className="bg-primary-accent pb-[3px] pl-1 pr-0.5 pt-1">
-                <CustomFastTrainIcon className="h-4 w-4" fill="#1B8386" />
+                <CustomFastTrainIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
               </div>
-              <span className="py-[3px] pl-1 pr-1.5 text-sm font-bold leading-[18px] text-neutral-foreground">
+              <span className="py-[3px] pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
                 Kereta Cepat
               </span>
             </Chip>

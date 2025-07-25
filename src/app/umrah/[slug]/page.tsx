@@ -104,9 +104,9 @@ export default async function DetailPage({ params, }: { params: Promise<{ slug: 
 
           <ItinerarySection dataItineraries={detail.itineraries} />
 
-          <TourVoucherSection dataAddOns={detail.addons} />
-
           <ProductCoverageSection dataImportantNotes={detail.importantNotes} />
+
+          <TourVoucherSection dataAddOns={detail.addons} />
 
           <AdditionalServices />
 

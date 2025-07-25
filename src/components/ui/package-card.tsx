@@ -19,13 +19,13 @@ import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
 import { Chip } from "./chip";
 import { Button } from "@/components/ui/buttons/button";
-import { CalendarDaysIcon, Share2Icon } from "lucide-react";
+import { CalendarDaysIcon, HotelIcon, PlaneIcon, Share2Icon, StarIcon } from "lucide-react";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useMemo, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "./skeleton-loader";
-import { Rating2 } from "./helper/getRating";
+import { Rating, Rating2 } from "./helper/getRating";
 import { CustomSwiper } from "../layout/swiper";
 import { FaWhatsapp } from "react-icons/fa";
 import dynamic from "next/dynamic";
@@ -97,7 +97,7 @@ const PackageCard = ({
         <div
           onClick={handlePackageDetailClick}
           className={cn(
-            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-custom-sm",
+            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-xl shadow-primary",
             className,
           )}
         >
@@ -138,9 +138,9 @@ const PackageCard = ({
             </div>
           </div>
 
-          <div className="flex !h-full w-full flex-col gap-2 bg-white p-3">
-            <div className="space-y-0">
-              <CustomSwiper padding={0} gap={8}>
+          <div className="flex !h-full w-full flex-col gap-3 bg-white p-3">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 flex-wrap">
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
@@ -227,7 +227,7 @@ const PackageCard = ({
                       </span>
                     </Chip>
                   ))}
-              </CustomSwiper>
+              </div>
 
               <div className="space-y-2">
                 {isLoading ? (
@@ -265,18 +265,23 @@ const PackageCard = ({
                     <Skeleton className="h-6 w-52" />
                   ) : (
                     <div className="flex items-center gap-1 text-[13px] leading-[18px] tracking-wide">
-                      <div className="flex items-center gap-2 font-medium">
-                        <Image
+                      <div className="flex items-center gap-1 font-medium">
+                        <div className="w-[54px] flex items-center justify-center">
+                          <PlaneIcon
+                            className="h-6 w-6 stroke-[#1B8386] rotate-45"
+                          />
+                        </div>
+                        {/* <Image
                           src="/assets/icons/custom-icon/icon-maskapai.svg"
                           alt="Maskapai"
                           width={38}
                           height={24}
                           className="w-[45px] h-[28px] flex flex-shrink-0"
-                        />
-                        <div className="flex w-[70px] justify-between">
+                        /> */}
+                        <div className="ml-0.5 flex w-[70px] justify-between">
                           <p className="text-sm">Maskapai</p>
-                          <span className="text-sm">:</span>
                         </div>
+                        <span className="text-sm">:</span>
                       </div>
                       <span className="font-bold text-sm leading-[18px] tracking-wide">
                         {data.flight_details.departure_flight.airline}
@@ -289,14 +294,22 @@ const PackageCard = ({
                     <Skeleton className="h-6 w-56" />
                   ) : (
                     <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
-                      <div className="flex flex-shrink-0 items-center gap-2 font-medium">
-                        <Rating2
-                          starsRating={data.hotel_details.madinah.star_rating}
-                        />
-                        <div className="flex w-[68px] justify-between">
-                          <p className="text-sm">Madinah</p>
-                          <span className="text-sm">:</span>
+                      <div className="flex flex-shrink-0 items-center gap-1 font-medium">
+                        <div className="w-[54px] flex items-center gap-0">
+                          <HotelIcon className="w-5 h-5 stroke-[#1B8386]" />
+                          <StarIcon
+                            className="w-5 h-5 fill-[#F2AC30]"
+                            stroke="none"
+                          />
+                          <span className="ml-0.5 text-base font-black text-[#1B8386]">{data.hotel_details.madinah.star_rating}</span>
                         </div>
+                        {/* <Rating2
+                          starsRating={data.hotel_details.madinah.star_rating}
+                        /> */}
+                        <div className="ml-0.5 flex w-[68px] justify-between">
+                          <p className="text-sm">Madinah</p>
+                        </div>
+                        <span className="text-sm">:</span>
                       </div>
                       <span className="text-sm mt-1 font-bold leading-[18px] tracking-wide">
                         {data.hotel_details.madinah.hotel_name}
@@ -309,14 +322,22 @@ const PackageCard = ({
                     <Skeleton className="h-6 w-60" />
                   ) : (
                     <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
-                      <div className="flex flex-shrink-0 items-center gap-2 font-medium">
-                        <Rating2
-                          starsRating={data.hotel_details.makkah.star_rating}
-                        />
-                        <div className="flex w-[68px] justify-between">
-                          <p className="w-[60px] text-sm">Makkah</p>
-                          <span className="text-sm">:</span>
+                      <div className="flex flex-shrink-0 items-center gap-1 font-medium">
+                        <div className="w-[54px] flex items-center gap-0">
+                          <HotelIcon className="w-5 h-5 stroke-[#1B8386]" />
+                          <StarIcon
+                            className="w-5 h-5 fill-[#F2AC30]"
+                            stroke="none"
+                          />
+                          <span className="ml-0.5 text-base font-black text-[#1B8386]">{data.hotel_details.madinah.star_rating}</span>
                         </div>
+                        {/* <Rating2
+                          starsRating={data.hotel_details.makkah.star_rating}
+                        /> */}
+                        <div className="ml-0.5 flex w-[68px] justify-between">
+                          <p className="w-[60px] text-sm">Makkah</p>
+                        </div>
+                        <span className="text-sm">:</span>
                       </div>
                       <span className="text-sm mt-1 font-bold leading-[18px] tracking-wide">
                         {data.hotel_details.makkah.hotel_name}
@@ -327,7 +348,7 @@ const PackageCard = ({
               </div>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               {isLoading ? (
                 <Skeleton className="h-6 w-36" />
               ) : (

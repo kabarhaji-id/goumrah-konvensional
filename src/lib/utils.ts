@@ -9,7 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function priceToLocale(price: number) {
-  return `Rp ${price.toLocaleString("id-ID")}`;
+  return `Rp ${Intl.NumberFormat("id-ID").format(price)}`;
 }
 
 export function discountPercentPrice(

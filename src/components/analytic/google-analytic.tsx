@@ -10,29 +10,9 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [currentLocation, setCurrentLocation] = useState<string | null>(null);
-  const [consentGiven, setConsentGiven] = useState<boolean | null>(null);
 
   useEffect(() => {
-    const userConsent = localStorage.getItem('userConsent');
-    if (userConsent === 'granted') {
-      setConsentGiven(true);
-    } else if (userConsent === 'denied') {
-      setConsentGiven(false);
-    }
-  }, []);
-
-  const handleAccept = () => {
-    localStorage.setItem('userConsent', 'granted');
-    setConsentGiven(true);
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem('userConsent', 'denied');
-    setConsentGiven(false);
-  };
-
-  useEffect(() => {
-    if (!pathname || consentGiven === null) return;
+    if (!pathname) return;
 
     const query = searchParams.toString();
     const fullPath = query ? `${pathname}?${query}` : pathname;
@@ -62,10 +42,10 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
     } else {
       setCurrentLocation('Geolocation not supported');
     }
-  }, [pathname, searchParams, consentGiven]);
+  }, [pathname, searchParams]);
 
   useEffect(() => {
-    if (!pathname || currentLocation === null || consentGiven === null) return;
+    if (!pathname || currentLocation === null) return;
 
     const dynamicEventData = {
       event_name: eventData?.event_name || 'page_view',
@@ -100,12 +80,12 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(dynamicEventData);
-  }, [pathname, searchParams, currentLocation, eventData, consentGiven]);
+  }, [pathname, searchParams, currentLocation, eventData]);
 
   return (
     <>
       <GoogleAnalytics trackPageViews />
-      <CookieConsent
+      {/* <CookieConsent
         location="bottom"
         buttonText="Terima"
         declineButtonText="Tolak"
@@ -146,7 +126,7 @@ export function Analytics({ eventData }: { eventData?: Record<string, any> }) {
         <p style={{ color: '#333', marginBottom: '1rem' }}>
           Situs web ini menggunakan cookie untuk memastikan Anda mendapatkan pengalaman terbaik.
         </p>
-      </CookieConsent>
+      </CookieConsent> */}
     </>
   );
 }

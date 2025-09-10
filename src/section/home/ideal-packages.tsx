@@ -32,7 +32,7 @@ const IdealPackagesSection = () => {
         </h3>
       </div> */}
 
-      <div className="z-20 flex flex-col items-center gap-2 text-center">
+      <div className="z-20 flex flex-col items-center gap-0 sm:gap-1 text-center">
         <p className="text-base leading-[140%] tracking-wider text-primary">
           Rekomendasi Paket Umrah Pilihan
         </p>

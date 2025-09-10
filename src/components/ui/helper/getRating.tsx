@@ -9,9 +9,13 @@ import Image from "next/image";
 export const Rating = ({
   totalStars,
   className,
+  starFill = "#F2AC30",
+  starStroke = "none",
 }: {
   totalStars: number;
   className?: string;
+  starFill?: string;
+  starStroke?: string;
 }) => {
   const overallStars = 5;
   const stars = Array.from({ length: overallStars }, (_, index) => {
@@ -19,8 +23,8 @@ export const Rating = ({
       <StarIcon
         key={index}
         className="h-[14px] w-[14px]"
-        fill="#F2AC30"
-        stroke="none"
+        fill={starFill}
+        stroke={starStroke}
       />
     ) : (
       ""

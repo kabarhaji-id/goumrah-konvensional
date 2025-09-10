@@ -35,7 +35,7 @@ const AboutUsSection = () => {
           <b className="text-primary">”</b>
         </p>
       </section>
-      <section className="flex justify-center items-center gap-4 px-4 pt-4 mb-6">
+      <section className="flex justify-center items-center gap-4 p-4 mb-6 mx-6 border-[1.5px] border-primary-foreground/30 rounded-[10px] shadow-custom-sm shadow-[#BD8202]">
         <Image
           src={"/assets/image/guarantee.png"}
           alt="100% Guarantee"

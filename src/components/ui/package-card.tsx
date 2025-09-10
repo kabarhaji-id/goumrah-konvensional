@@ -97,7 +97,7 @@ const PackageCard = ({
         <div
           onClick={handlePackageDetailClick}
           className={cn(
-            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-xl shadow-primary",
+            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-lg shadow-primary",
             className,
           )}
         >
@@ -210,6 +210,21 @@ const PackageCard = ({
                   </Chip>
                 )}
 
+                {isLoading ? (
+                  <Skeleton className="mb-2 h-[22px] w-20" />
+                ) : (
+                  <Chip variant="default" className="overflow-hidden border-[3px]">
+                    <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
+                      <HotelIcon
+                        className="h-4 w-4 stroke-[#1B8386]"
+                      />
+                    </div>
+                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
+                      <Rating className="gap-0" totalStars={data.hotel_details.makkah.star_rating} />
+                    </span>
+                  </Chip>
+                )}
+
                 {/* --- Fast Train? */}
                 {data.isFastTrain &&
                   (isLoading ? (
@@ -264,12 +279,19 @@ const PackageCard = ({
                   {isLoading ? (
                     <Skeleton className="h-6 w-52" />
                   ) : (
-                    <div className="flex items-center gap-1 text-[13px] leading-[18px] tracking-wide">
+                    <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex items-center gap-1 font-medium">
-                        <div className="w-[54px] flex items-center justify-center">
+                        <div className="w-6 flex items-center gap-1">
                           <PlaneIcon
-                            className="h-6 w-6 stroke-[#1B8386] rotate-45"
+                            className="h-5 w-5 stroke-[#1B8386] rotate-45 mr-1"
                           />
+                          {/* <Image
+                            width={70}
+                            height={60}
+                            src={data.flight_details.departure_flight.airline_logo}
+                            alt={`logo-${data.flight_details.departure_flight.airline}`}
+                            className="h-6 w-auto"
+                          /> */}
                         </div>
                         {/* <Image
                           src="/assets/icons/custom-icon/icon-maskapai.svg"
@@ -283,7 +305,7 @@ const PackageCard = ({
                         </div>
                         <span className="text-sm">:</span>
                       </div>
-                      <span className="font-bold text-sm leading-[18px] tracking-wide">
+                      <span className="text-sm font-bold leading-[18px] tracking-wide whitespace-nowrap mt-0.5">
                         {data.flight_details.departure_flight.airline}
                       </span>
                     </div>
@@ -294,14 +316,9 @@ const PackageCard = ({
                     <Skeleton className="h-6 w-56" />
                   ) : (
                     <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
-                      <div className="flex flex-shrink-0 items-center gap-1 font-medium">
-                        <div className="w-[54px] flex items-center gap-0">
-                          <HotelIcon className="w-5 h-5 stroke-[#1B8386]" />
-                          <StarIcon
-                            className="w-5 h-5 fill-[#F2AC30]"
-                            stroke="none"
-                          />
-                          <span className="ml-0.5 text-base font-black text-[#1B8386]">{data.hotel_details.madinah.star_rating}</span>
+                      <div className="flex items-center gap-1 font-medium">
+                        <div className="w-6 flex items-center gap-1">
+                          <HotelIcon className="w-5 h-5 stroke-[#1B8386] mr-1" />
                         </div>
                         {/* <Rating2
                           starsRating={data.hotel_details.madinah.star_rating}
@@ -311,7 +328,7 @@ const PackageCard = ({
                         </div>
                         <span className="text-sm">:</span>
                       </div>
-                      <span className="text-sm mt-1 font-bold leading-[18px] tracking-wide">
+                      <span className="text-sm font-bold leading-[18px] tracking-wide whitespace-nowrap mt-0.5">
                         {data.hotel_details.madinah.hotel_name}
                       </span>
                     </div>
@@ -323,13 +340,8 @@ const PackageCard = ({
                   ) : (
                     <div className="flex items-start gap-1 text-[13px] leading-[18px] tracking-wide">
                       <div className="flex flex-shrink-0 items-center gap-1 font-medium">
-                        <div className="w-[54px] flex items-center gap-0">
-                          <HotelIcon className="w-5 h-5 stroke-[#1B8386]" />
-                          <StarIcon
-                            className="w-5 h-5 fill-[#F2AC30]"
-                            stroke="none"
-                          />
-                          <span className="ml-0.5 text-base font-black text-[#1B8386]">{data.hotel_details.madinah.star_rating}</span>
+                        <div className="w-6 flex items-center gap-1">
+                          <HotelIcon className="w-5 h-5 stroke-[#1B8386] mr-1" />
                         </div>
                         {/* <Rating2
                           starsRating={data.hotel_details.makkah.star_rating}
@@ -339,7 +351,7 @@ const PackageCard = ({
                         </div>
                         <span className="text-sm">:</span>
                       </div>
-                      <span className="text-sm mt-1 font-bold leading-[18px] tracking-wide">
+                      <span className="text-sm font-bold leading-[18px] tracking-wide whitespace-nowrap mt-0.5">
                         {data.hotel_details.makkah.hotel_name}
                       </span>
                     </div>

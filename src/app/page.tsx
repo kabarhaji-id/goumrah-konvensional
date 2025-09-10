@@ -61,7 +61,7 @@ export default async function HomePage() {
   return (
     <main>
       <PromoPopup />
-      <div className="w-full max-w-screen relative bg-cover bg-bottom bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-svh z-0 overflow-hidden mb-8">
+      <div className="w-full max-w-screen relative bg-cover bg-bottom bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-svh z-0 overflow-hidden mb-2">
         {/* Konten hero existing */}
         <div className="top-0 z-50 flex h-12 items-center justify-center pt-[8svh] px-4">
           <Logo />
@@ -75,7 +75,7 @@ export default async function HomePage() {
           </h3>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div> */}
       </div>
       <AboutUsSection />
       {/* <HeroSection /> */}

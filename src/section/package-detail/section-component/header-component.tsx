@@ -13,8 +13,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { CustomSwiper } from "@/components/layout/swiper";
-import { CalendarDaysIcon, MountainIcon } from "lucide-react";
+import { CalendarDaysIcon, HotelIcon, MountainIcon } from "lucide-react";
 import moment from "moment";
+import { Rating } from "@/components/ui/helper/getRating";
 
 const HeaderComponent = ({
   packageData,
@@ -138,6 +139,21 @@ const HeaderComponent = ({
             </div>
             <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
               {packageData.flight_details.departure_flight.airline}
+            </span>
+          </Chip>
+        )}
+
+        {isLoading ? (
+          <Skeleton className="h-[25px] w-[81px] rounded-[8px]" />
+        ) : (
+          <Chip variant="default" className="overflow-hidden border-[3px]">
+            <div className="w-full bg-primary-accent p-1">
+              <HotelIcon
+                className="h-4 w-4 xxs:h-5 xxs:w-5 stroke-[#1B8386]"
+              />
+            </div>
+            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
+              <Rating className="gap-0" totalStars={packageData.hotel_details.makkah.star_rating} />
             </span>
           </Chip>
         )}

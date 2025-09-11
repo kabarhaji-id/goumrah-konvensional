@@ -11,29 +11,29 @@ const TanyaIsma = () => {
 
   return (
     <>
-        <div className="fixed inset-x-0 bottom-4 flex">
-          <button
-            key="button"
-            className="fixed left-1/2 bottom-4 -translate-x-1/2 size-[110px] origin-top-center"
-            onClick={() => setIsOpen((prev) => !prev)}
-            aria-haspopup="dialog"
-            aria-expanded={false}
-          >
-            <Image
-              src="/assets/image/tanya-isma/button.png"
-              alt="Isma"
-              title="Ask Isma"
-              width={110}
-              height={110}
-              priority
-            />
-          </button>
+      <div className="fixed inset-x-0 bottom-4 flex">
+        <button
+          key="button"
+          className="fixed left-1/2 bottom-4 -translate-x-1/2 size-[140px] origin-top-center"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-haspopup="dialog"
+          aria-expanded={false}
+        >
+          <Image
+            src="/assets/image/tanya-isma/button.png"
+            alt="Isma"
+            title="Ask Isma"
+            width={140}
+            height={140}
+            priority
+          />
+        </button>
 
-        </div>
+      </div>
 
-          {isOpen && (
-            <ChatBox id={id} onClose={() => setIsOpen(false)} isOpen={isOpen} />
-          )}
+      {isOpen && (
+        <ChatBox id={id} onClose={() => setIsOpen(false)} isOpen={isOpen} />
+      )}
     </>
   );
 };

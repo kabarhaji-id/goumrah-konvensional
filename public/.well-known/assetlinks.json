@@ -1,0 +1,23 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.kabarhaji.goumrah",
+            "sha256_cert_fingerprints": [
+                "71:0E:9B:2B:17:6E:74:75:DD:27:87:F8:66:6B:CF:16:5F:1E:1B:27:39:D7:71:35:C3:01:54:61:41:20:D0:23"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "check_validation"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.kabarhaji.goumrah"
+        }
+    }
+]

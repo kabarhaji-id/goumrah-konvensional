@@ -5,10 +5,8 @@ import { packageDetailData } from "@/data/package-details";
 import CardsSection from "@/section/packages/cards";
 import TaglineSection from "@/section/packages/tagline";
 
-
 import { Metadata } from "next";
 import { fetchSEOData } from "@/lib/seo";
-
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://goumrah.id";
@@ -46,7 +44,7 @@ export default async function IdealPage() {
       <TaglineSection />
       <CardsSection packages={packageDetailData} />
       <Footer />
-      <BottomNavigation  />
+      <BottomNavigation />
     </>
   );
 }

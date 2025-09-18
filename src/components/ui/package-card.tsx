@@ -19,15 +19,16 @@ import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
 import { Chip } from "./chip";
 import { Button } from "@/components/ui/buttons/button";
-import { CalendarDaysIcon, HotelIcon, PlaneIcon, Share2Icon, StarIcon } from "lucide-react";
+import { CalendarDaysIcon, HotelIcon, PlaneIcon, RepeatIcon, Share2Icon } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineMosque } from "react-icons/md";
 import { cn, priceToLocale } from "@/lib/utils";
 import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useMemo, useState } from "react";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { Skeleton } from "./skeleton-loader";
-import { Rating, Rating2 } from "./helper/getRating";
-import { CustomSwiper } from "../layout/swiper";
-import { FaWhatsapp } from "react-icons/fa";
+import { Rating } from "./helper/getRating";
+
 import dynamic from "next/dynamic";
 import { ShareDialog } from "@/components/ui/share-dialog";
 import { dataPackages } from "@/data/packages";
@@ -59,7 +60,8 @@ const PackageCard = ({
   }, [data.departure_date]);
 
   const handleConsult = (packageTitle: string) => {
-    const message = `Assalamualaikum Wr Wb, saya tertarik dengan paket [*${packageTitle}*. Bisa saya dapatkan informasi lebih lanjut?`;
+    const fullUrl = `${window.location.origin}/umrah/${data.id}`;
+    const message = `${fullUrl}\n\nAssalamualaikum Wr Wb, saya tertarik dengan paket [*${packageTitle}*. Bisa saya dapatkan informasi lebih lanjut?`;
     const whatsappURL = `${whatsappLink}${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
   };
@@ -141,11 +143,12 @@ const PackageCard = ({
           <div className="flex !h-full w-full flex-col gap-3 bg-white p-3">
             <div className="space-y-1">
               <div className="flex items-center gap-2 flex-wrap">
+                {/* Start of features */}
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden border-[3px]">
-                    <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
+                    <div className="w-full bg-primary-accent p-1">
                       <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
@@ -158,7 +161,7 @@ const PackageCard = ({
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden border-[3px]">
-                    <div className="w-full bg-primary-accent pb-1 pl-1 pr-0.5 pt-0.5">
+                    <div className="w-full bg-primary-accent p-1">
                       <CustomSunMoonIcon className="h-4 w-4 stroke-primary" />
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
@@ -171,14 +174,17 @@ const PackageCard = ({
                   <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden border-[3px]">
-                    <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
+                    <div className="w-full bg-primary-accent p-1">
                       {data.type === "Plus" ? (
                         <CustomVacationIcon
                           className="h-4 w-4"
                           fill="#1B8386"
                         />
                       ) : (
-                        <CustomKaabaIcon className="h-4 w-4" fill="#1B8386" />
+                        <RepeatIcon
+                          className="h-4 w-4"
+                          stroke="#1B8386"
+                        />
                       )}
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
@@ -191,7 +197,7 @@ const PackageCard = ({
                   <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden border-[3px]">
-                    <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
+                    <div className="w-full bg-primary-accent p-1">
                       {data.flight_details.departure_flight.transit ? (
                         <CustomAirplaneIcon
                           className="h-4 w-4 rotate-90"
@@ -205,7 +211,7 @@ const PackageCard = ({
                       )}
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
-                      {data.flight_details.departure_flight.transit ? "Transit" : "Langsung"}
+                      {data.flight_details.departure_flight.transit ? `Transit ${data.flight_details.departure_flight.transit.airport_city_departure}` : "Langsung"}
                     </span>
                   </Chip>
                 )}
@@ -214,10 +220,23 @@ const PackageCard = ({
                   <Skeleton className="mb-2 h-[22px] w-20" />
                 ) : (
                   <Chip variant="default" className="overflow-hidden border-[3px]">
-                    <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
-                      <HotelIcon
-                        className="h-4 w-4 stroke-[#1B8386]"
+                    <div className="w-full bg-primary-accent p-1">
+                      <MdOutlineMosque
+                        className="h-4 w-4 fill-[#1B8386]"
                       />
+                    </div>
+                    <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
+                      <Rating className="gap-0" totalStars={data.hotel_details.madinah.star_rating} />
+                    </span>
+                  </Chip>
+                )}
+
+                {isLoading ? (
+                  <Skeleton className="mb-2 h-[22px] w-20" />
+                ) : (
+                  <Chip variant="default" className="overflow-hidden border-[3px]">
+                    <div className="w-full bg-primary-accent px-1 py-0.5">
+                      <CustomKaabaIcon className="h-5 w-5" fill="#1B8386" />
                     </div>
                     <span className="py-0.5 pl-1 pr-1.5 text-xs font-semibold leading-[18px] text-neutral-foreground">
                       <Rating className="gap-0" totalStars={data.hotel_details.makkah.star_rating} />
@@ -230,8 +249,8 @@ const PackageCard = ({
                   (isLoading ? (
                     <Skeleton className="mb-2 h-[22px] w-[110px] rounded-[8px]" />
                   ) : (
-                    <Chip variant="default" className="overflow-hidden">
-                      <div className="bg-primary-accent py-[3px] pl-1 pr-0.5">
+                    <Chip variant="default" className="overflow-hidden border-[3px]">
+                      <div className="w-full bg-primary-accent p-1">
                         <CustomFastTrainIcon
                           className="h-4 w-4"
                           fill="#1B8386"

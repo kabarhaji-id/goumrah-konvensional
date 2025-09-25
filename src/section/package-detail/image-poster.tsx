@@ -56,9 +56,8 @@ const ImagePoster = ({
           alt={`image-${packageImage}`}
           width={640}
           height={380}
-          className={`w-full object-cover transition-opacity duration-500 ${
-            !isImageLoaded ? "h-0" : "h-full max-h-[380px]"
-          }`}
+          className={`w-full object-cover transition-opacity duration-500 ${!isImageLoaded ? "h-0" : "h-full max-h-[380px]"
+            }`}
           onLoad={() => {
             setIsImageLoaded(true);
           }}
@@ -66,15 +65,6 @@ const ImagePoster = ({
             setIsImageError(true);
           }}
         />
-
-        <div className="absolute -bottom-px z-20 h-fit">
-          {packageCategory === "Silver" && <SilverAccent className="w-full" />}
-          {packageCategory === "Gold" && <GoldAccent className="w-full" />}
-          {packageCategory === "Platinum" && (
-            <PlatinumAccent className="w-full" />
-          )}
-          {packageCategory === "Luxury" && <LuxuryAccent className="w-full" />}
-        </div>
       </div>
     </>
   );

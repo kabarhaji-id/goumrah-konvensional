@@ -6,6 +6,7 @@ import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.s
 import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
 import ReceiptIcon from "@/public/icons/fluent_receipt-money-16-regular.svg";
 import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
+import IconWhite from "@/public/image/icon-white.svg";
 
 import { Chip } from "@/components/ui/chip";
 import { UmrahPackage } from "@/types/package-details";
@@ -61,6 +62,44 @@ const HeaderComponent = ({
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center px-4 gap-2 flex-wrap">
+        {/* Start of features */}
+        {isLoading ? (
+          <Skeleton className="mb-2 h-[22px] w-16" />
+        ) : (
+          <>
+            {packageData.category === "Silver" && (
+              <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#1B8386] to-[#61B3B6] p-1">
+                <div className="p-1">
+                  <IconWhite className="h-4 w-4 stroke-white" />
+                </div>
+                <span className="h-6 py-0.5 pl-0.5 pr-1.5 text-xs font-bold leading-[18px] tracking-wider">
+                  Paket Silver
+                </span>
+              </div>
+            )}
+            {packageData.category === "Gold" && (
+              <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#CA9822] to-[#E6CA69] p-1">
+                <div className="p-1">
+                  <IconWhite className="h-4 w-4 stroke-white" />
+                </div>
+                <span className="h-6 py-0.5 pl-0.5 pr-1.5 text-xs font-bold leading-[18px] tracking-wider">
+                  Paket Gold
+                </span>
+              </div>
+            )}
+            {packageData.category === "Platinum" && (
+              <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#242424] to-[#686868] p-1">
+                <div className="p-1">
+                  <IconWhite className="h-4 w-4 stroke-white" />
+                </div>
+                <span className="h-6 py-0.5 pl-0.5 pr-1.5 text-xs font-bold leading-[18px] tracking-wider">
+                  Paket Platinum
+                </span>
+              </div>
+            )}
+          </>
+        )}
+
         {/* Tanggal Keberangkatan */}
         {isLoading ? (
           <Skeleton className="h-[25px] w-20 rounded-[8px]" />

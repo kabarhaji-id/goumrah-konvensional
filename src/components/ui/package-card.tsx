@@ -14,6 +14,7 @@ import CustomVacationIcon from "@/public/icons/custom-vacation.svg";
 import CustomPercentWavyIcon from "@/public/icons/percent-wavy.svg";
 import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
 import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
+import IconWhite from "@/public/image/icon-white.svg";
 import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.svg";
 import CustomMaskapaiIcon from "@/public/icons/custom-icon/icon-maskapai.svg";
 
@@ -99,7 +100,7 @@ const PackageCard = ({
         <div
           onClick={handlePackageDetailClick}
           className={cn(
-            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-lg shadow-primary",
+            "flex h-full w-full flex-col overflow-hidden rounded-[14px] !bg-white tracking-wide shadow-lg border",
             className,
           )}
         >
@@ -118,7 +119,16 @@ const PackageCard = ({
                 priority quality={70}
               />
             )}
-            <div className="absolute -bottom-px h-fit">
+            {/* <div className="absolute top-0 flex w-full p-4">
+              {data.category === "Silver" && (
+                <div className="bg-primary px-2.5 py-1.5 text-white font-semibold rounded-lg shadow tracking-wider">Silver</div>
+              )}
+              {data.category === "Gold" && (
+                <div className="bg-gradient-to-tr from-[#CA9822] to-[#E6CA69] px-2.5 py-1.5 text-white font-semibold rounded-lg shadow tracking-wider">Gold</div>
+              )}
+              {data.category === "Platinum" && (
+                <div className="bg-[#242424] px-2.5 py-1.5 text-white font-semibold rounded-lg shadow tracking-wider">Platinum</div>
+              )}
               {data.category === "Silver" && (
                 <SilverAccent className="w-[100%]" />
               )}
@@ -126,7 +136,7 @@ const PackageCard = ({
               {data.category === "Platinum" && (
                 <PlatinumAccent className="w-[100%]" />
               )}
-            </div>
+            </div> */}
             <div className="absolute top-0 flex w-full items-end justify-end p-4">
               <div className="relative z-20 flex gap-5">
                 <ShareDialog dataPackage={
@@ -144,6 +154,43 @@ const PackageCard = ({
             <div className="space-y-1">
               <div className="flex items-center gap-2 flex-wrap">
                 {/* Start of features */}
+                {isLoading ? (
+                  <Skeleton className="mb-2 h-[22px] w-16" />
+                ) : (
+                  <>
+                    {data.category === "Silver" && (
+                      <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#1B8386] to-[#61B3B6] p-1">
+                        <div className="p-1">
+                          <IconWhite className="h-4 w-4 stroke-white" />
+                        </div>
+                        <span className="h-6 py-0.5 pl-0.5 pr-1.5 text-xs font-bold leading-[18px] tracking-wider">
+                          Paket Silver
+                        </span>
+                      </div>
+                    )}
+                    {data.category === "Gold" && (
+                      <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#CA9822] to-[#E6CA69] p-1">
+                        <div className="p-1">
+                          <IconWhite className="h-4 w-4 stroke-white" />
+                        </div>
+                        <span className="h-6 py-0.5 pl-0.5 pr-1.5 text-xs font-bold leading-[18px] tracking-wider">
+                          Paket Gold
+                        </span>
+                      </div>
+                    )}
+                    {data.category === "Platinum" && (
+                      <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#242424] to-[#686868] p-1">
+                        <div className="p-1">
+                          <IconWhite className="h-4 w-4 stroke-white" />
+                        </div>
+                        <span className="h-6 py-0.5 pl-0.5 pr-1.5 text-xs font-bold leading-[18px] tracking-wider">
+                          Paket Platinum
+                        </span>
+                      </div>
+                    )}
+                  </>
+                )}
+
                 {isLoading ? (
                   <Skeleton className="mb-2 h-[22px] w-16" />
                 ) : (
@@ -320,7 +367,7 @@ const PackageCard = ({
                           className="w-[45px] h-[28px] flex flex-shrink-0"
                         /> */}
                         <div className="ml-0.5 flex w-[70px] justify-between">
-                          <p className="text-sm">Maskapai</p>
+                          <p className="text-sm font-medium">Maskapai</p>
                         </div>
                         <span className="text-sm">:</span>
                       </div>
@@ -343,7 +390,7 @@ const PackageCard = ({
                           starsRating={data.hotel_details.madinah.star_rating}
                         /> */}
                         <div className="ml-0.5 flex w-[68px] justify-between">
-                          <p className="text-sm">Madinah</p>
+                          <p className="text-sm font-medium">Madinah</p>
                         </div>
                         <span className="text-sm">:</span>
                       </div>
@@ -366,7 +413,7 @@ const PackageCard = ({
                           starsRating={data.hotel_details.makkah.star_rating}
                         /> */}
                         <div className="ml-0.5 flex w-[68px] justify-between">
-                          <p className="w-[60px] text-sm">Makkah</p>
+                          <p className="w-[60px] text-sm font-medium">Makkah</p>
                         </div>
                         <span className="text-sm">:</span>
                       </div>
@@ -440,7 +487,7 @@ const PackageCard = ({
               )}
             </div>
           </div>
-        </div>
+        </div >
       )}
 
 

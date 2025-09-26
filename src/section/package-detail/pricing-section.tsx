@@ -39,6 +39,9 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
   return (
     <Section className="py-0">
       <SectionContent className="space-y-3 pb-2">
+        {/* --- Pricing Section */}
+        <PricingCard pricingList={pricingList} />
+
         {/* --- Filter for Departure Date */}
         <FilterSection
           variant="departureDate"
@@ -52,9 +55,6 @@ const PricingSection = ({ packageData }: { packageData: UmrahPackage }) => {
           embarkation={packageData.city_departure}
           departureDates={packageData.departure_date}
         />
-
-        {/* --- Pricing Section */}
-        <PricingCard pricingList={pricingList} />
       </SectionContent>
     </Section>
   );

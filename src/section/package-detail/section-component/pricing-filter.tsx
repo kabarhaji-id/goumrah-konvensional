@@ -188,7 +188,7 @@ const FilterSection = ({
                 })}
               </CustomSwiper>
             ) : (
-              <CustomSwiper gap={8} padding={2} slidesClass="grow min-w-48 xxs:min-w-56">
+              <CustomSwiper gap={8} padding={2} slidesClass="min-w-48 xxs:min-w-56">
                 {embarkation &&
                   embarkation.map((city, index: number) => {
                     return isLoading ? (
@@ -203,11 +203,11 @@ const FilterSection = ({
                             {city.route}
                           </p>
                         </div>
-                        <div className="flex flex-col gap-0 items-center justify-center text-center basis-1/4">
-                          <p className="text-base font-semibold leading-tight">
-                            {city.date.split(" ")[0]}
+                        <div className="flex flex-col gap-0 items-center justify-center text-center basis-1/4 px-3.5">
+                          <p className="text-base font-semibold leading-tight whitespace-nowrap">
+                            {city.date}
                           </p>
-                          <p className="text-sm font-medium leading-snug">{city.date.split(" ")[1]}</p>
+                          {/* <p className="text-sm font-medium leading-snug">{city.date.split(" ")[1]}</p> */}
                         </div>
                       </div>
                     )

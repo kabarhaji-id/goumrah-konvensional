@@ -150,8 +150,17 @@ const PackageCard = ({
             </div>
           </div>
 
-          <div className="flex !h-full w-full flex-col gap-3 bg-white p-3">
+          <div className="flex !h-full w-full flex-col gap-3 bg-white p-3 pt-1.5">
             <div className="space-y-1">
+              {isLoading ? (
+                <Skeleton className="h-6 w-64 mb-2" />
+              ) : (
+                <div
+                  className="whitespace-nowrap text-sm leading-normal tracking-[-0.30px] text-primary-foreground xs:text-[17px] mb-2">
+                  <h2 className="font-bold text-xl">{data.title}</h2>
+                </div>
+              )}
+
               <div className="flex items-center gap-2 flex-wrap">
                 {/* Start of features */}
                 {isLoading ? (
@@ -311,15 +320,6 @@ const PackageCard = ({
               </div>
 
               <div className="space-y-2">
-                {isLoading ? (
-                  <Skeleton className="h-6 w-64" />
-                ) : (
-                  <div
-                    className="whitespace-nowrap text-sm leading-normal tracking-[-0.30px] text-primary-foreground xs:text-[17px]">
-                    <h2 className="font-bold text-xl">{data.title}</h2>
-                  </div>
-                )}
-
                 <div
                   className="relative space-y-2 text-[13px] leading-[18px] tracking-tight text-neutral-foreground opacity-80">
                   {/* --- Departure Date
@@ -426,18 +426,28 @@ const PackageCard = ({
               </div>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {isLoading ? (
                 <Skeleton className="h-6 w-36" />
               ) : (
-                <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground">
-                  <div className="flex justify-between items-center gap-1 xs:gap-2">
+                <div className="flex flex-1 flex-col gap-1.5 text-primary-foreground px-1">
+                  <span className="block text-xs text-neutral-600 font-medium">Mulai dari:</span>
+                  <div className="flex justify items-center gap-1 xs:gap-2 justify-between">
                     {/* --- Normal Price */}
-                    <p className="flex-shrink-0 text-base font-extrabold xs:text-xl">
+                    <p className="flex-shrink-0 text-sm font-extrabold xs:text-lg">
                       {data.quadFinalPrice
                         ? priceToLocale(data.quadFinalPrice)
                         : priceToLocale(data.quadPrice)}
                     </p>
+
+                    <Button
+                      variant="primary"
+                      size="default"
+                      className="h-11 w-fit px-5 rounded-xl text-sm font-medium flex items-center gap-2"
+                      onClick={handlePackageDetailClick}
+                    >
+                      Lihat Paket
+                    </Button>
 
                     {/* --- Discount Price
                     {data.quadFinalPrice &&
@@ -456,21 +466,19 @@ const PackageCard = ({
                 </div>
               )}
 
-              {isLoading ? (
+              {/* {isLoading ? (
                 <Skeleton className="h-9 w-full rounded-[14px]" />
               ) : (
-                <div className="flex w-full gap-2 items-center justify-center">
-                  {/* Lihat Paket Button */}
+                <div className="flex w-full gap-2 items-center justify-start">
                   <Button
                     variant="primary"
                     size="default"
                     className="h-11 basis-1/2 px-4 rounded-xl text-sm font-medium flex items-center gap-2"
                     onClick={handlePackageDetailClick}
                   >
-                    Rinican Fasilitas
+                    Lihat Rincian Paket
                   </Button>
 
-                  {/* Pesan Sekarang Button with WhatsApp Icon */}
                   <Button
                     variant="primary"
                     size="default"
@@ -482,9 +490,9 @@ const PackageCard = ({
                     }}
                   >
                     Pilih Paket
-                  </Button>
                 </div>
-              )}
+                  </Button>
+                  */}
             </div>
           </div>
         </div >

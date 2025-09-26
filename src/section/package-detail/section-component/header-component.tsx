@@ -61,6 +61,15 @@ const HeaderComponent = ({
 
   return (
     <div className="flex flex-col gap-3">
+      {/* --- Title */}
+      {isLoading ? (
+        <Skeleton className="h-[26px] w-[200px]" />
+      ) : (
+        <h1 className="mx-4 flex text-xl font-semibold leading-[130%] tracking-[0.5px] mb-1">
+          {packageData.title}
+        </h1>
+      )}
+
       <div className="flex items-center px-4 gap-2 flex-wrap">
         {/* Start of features */}
         {isLoading ? (
@@ -230,15 +239,6 @@ const HeaderComponent = ({
       </div>
 
       <div className="flex flex-col gap-2 px-4">
-        {/* --- Title */}
-        {isLoading ? (
-          <Skeleton className="h-[26px] w-[200px]" />
-        ) : (
-          <h1 className="flex text-xl font-semibold leading-[130%] tracking-[0.5px]">
-            {packageData.title}
-          </h1>
-        )}
-
         {/* --- Fast Train? */}
         {/* {packageData.isFastTrain &&
           (isLoading ? (

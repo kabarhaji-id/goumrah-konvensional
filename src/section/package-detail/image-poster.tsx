@@ -45,8 +45,7 @@ const ImagePoster = ({
 
         <Image
           priority quality={70}
-          // src={packageImage}
-          src={"https://asset.kompas.com/crops/XpkOufD7z8JTS1kocIw7K4DPHWo=/483x0:3180x1798/750x500/data/photo/2021/10/07/615eb54383bcb.jpg"}
+          src={packageImage}
           alt={`image-${packageImage}`}
           width={640}
           height={380}

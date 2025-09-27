@@ -7,7 +7,13 @@ import { useEffect, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 
-const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl?: string | null; consultUrl?: string | null }) => {
+interface ButtonWhatsAppProps {
+  orderUrl?: string | null;
+  consultUrl?: string | null;
+  showWhatsApp?: boolean;
+}
+
+const ButtonWhatsApp = ({ orderUrl, consultUrl, showWhatsApp = true }: ButtonWhatsAppProps) => {
   const [isPageLoading, setIsPageLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
@@ -44,7 +50,7 @@ const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl?: string | null; co
             variant="primary"
             size="default"
             className={!consultUrl ? "h-11 px-4 rounded-xl text-sm font-medium flex items-center gap-2 w-full" : "h-11 px-4 rounded-xl text-sm font-medium w-48 flex items-center gap-2"}
-            icon={!consultUrl ? <WhatsAppIcon /> : undefined} // Tampilkan ikon jika consultUrl kosong
+            icon={!consultUrl && showWhatsApp ? <WhatsAppIcon /> : undefined} // Tampilkan ikon jika consultUrl kosong
             iconPosition="end"
           >
             <Link href={orderUrl ?? "#"}>Pilih Paket</Link>
@@ -56,7 +62,7 @@ const ButtonWhatsApp = ({ orderUrl, consultUrl }: { orderUrl?: string | null; co
               variant="primary"
               size="default"
               className="h-11 px-4 rounded-xl text-sm font-medium flex items-center gap-2 w-96"
-              icon={<WhatsAppIcon />} // Ikon hanya di "Konsultasi Paket" jika consultUrl tersedia
+              icon={showWhatsApp ? <WhatsAppIcon /> : undefined} // Ikon hanya di "Konsultasi Paket" jika consultUrl tersedia
               iconPosition="end"
             >
               <Link href={consultUrl}>Konsultasi Paket</Link>

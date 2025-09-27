@@ -42,7 +42,7 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
                   "Assalamualaikum, Saya tertarik untuk melakukan pemesanan paket Umrah melalui Goumrah.id. Saya ingin bertanya lebih lanjut mengenai paket Umrah yang tersedia. Terima kasih atas bantuannya. Saya tunggu informasi lebih lanjut."
                 )}`}
                 target="_blank"
-                title = "Order"
+                title="Order"
               >
                 Hubungi Kami <WhatsAppCIcon className="!size-6" />
               </Link>
@@ -59,36 +59,36 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
         <div className="flex flex-col gap-5 py-[26px] font-light text-white">
           <div className="flex flex-col gap-2.5">
             <p className="text-xl font-medium leading-6">Head Office</p>
-            <span className="w-full max-w-[269px] text-sm">
-              JL. GM Ainul Yakin ADAH 35A Kalibata Kec. Pancoran, Kota Jakarta
-              Selatan, Daerah Khusus Ibukota Jakarta 12740
+            <span className="w-full max-w-[269px] text-[15px]">
+              Ruko Pasar Segar Cinere (Pintu Barat)
+              Blok RB - 008
             </span>
           </div>
 
           <div className="flex flex-col gap-2.5">
             <p className="text-xl font-medium leading-6">Customer Service</p>
-            <span className="text-sm">+62 811 1571 88</span>
-            <span className="text-sm">admin@goumrah.id</span>
+            <span className="text-[15px]">+62 811 1571 88</span>
+            <span className="text-[15px]">admin@goumrah.id</span>
           </div>
         </div>
 
         <div className="flex flex-col gap-5 border-t border-white py-5 font-light text-white">
-          <div className="flex flex-col gap-1 text-xs">
+          <div className="flex flex-col gap-1 text-sm">
             <span>Nomor Izin PPIU</span>
             <Link
               href="https://simpu.kemenag.go.id/home/detail/3039"
               title="Nomor Izin PPIU"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base font-bold text-white hover:underline"
+              className="text-[17px] font-bold text-white hover:underline"
             >
               <span>27052 2003 8774 0007</span>
             </Link>
 
-            <span>Tahun 2024</span>
+            <span className="text-[15px]">Tahun 2024</span>
           </div>
 
-          <span className="text-sm">
+          <span className="text-[15px]">
             &copy; 2024 goumrah.id - PT Kabar Haji Indonesia. All Rights
             Reserved
           </span>

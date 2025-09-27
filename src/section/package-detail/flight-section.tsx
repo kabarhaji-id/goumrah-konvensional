@@ -159,7 +159,7 @@ const FlightCard = ({
     return (
       <CardDetail>
         <CardDetailHeader className="justify-between">
-          <span className="text-sm font-semibold text-neutral-foreground">
+          <span className="text-[15px] font-semibold text-neutral-foreground">
             {type === "Keberangkatan"
               ? "Keberangkatan"
               : type === "Kepulangan"
@@ -171,7 +171,7 @@ const FlightCard = ({
             className="w-fit rounded px-2 py-0.5"
             variant="primaryDarker"
           >
-            <span className="font-normal leading-[18px] tracking-wide">
+            <span className="text-[13px] font-normal leading-[18px] tracking-wide">
               {dataFlight.data.transitFlight
                 ? "Penerbangan transit"
                 : "Penerbangan langsung"}
@@ -206,12 +206,13 @@ const FlightCard = ({
                   {getSkytrax(
                     dataFlight.data.directFlight.skytrax,
                     dataFlight.data.directFlight.rating,
+                    open,
                   )}
                 </div>
               )}
 
             <div className="space-y-1">
-              <div className="relative flex items-center gap-1 text-sm font-bold text-primary-foreground">
+              <div className="relative flex items-center gap-1 text-[15px] font-bold text-primary-foreground">
                 <span>
                   {dataFlight.data.directFlight.airport_code_departure}
                 </span>
@@ -220,11 +221,11 @@ const FlightCard = ({
                   <CircleIcon className="h-2 w-2 flex-shrink-0 opacity-60" />
                   <Separator variant="dashed" className="w-full bg-white" />
 
-                  <div className="absolute left-1/2 flex flex-shrink-0 -translate-x-1/2 flex-col items-center bg-white">
+                  <div className="absolute left-1/2 flex gap-1.5 flex-shrink-0 -translate-x-1/2 flex-col items-center bg-white">
                     <CustomAirplaneIcon className="h-4 w-4 flex-shrink-0" />
                     {dataFlight.data.transitFlight && (
-                      <span className="flex w-full flex-shrink-0 px-1 text-[10px] font-normal leading-[14px]">
-                        1 Transit
+                      <span className="flex w-full flex-shrink-0 px-1 text-xs font-normal leading-[14px]">
+                        1<span className="font-medium ml-0.5 mr-1">x</span> Transit
                       </span>
                     )}
                   </div>
@@ -241,7 +242,7 @@ const FlightCard = ({
               </div>
 
               <div className="flex justify-between">
-                <div className="space-y-0.5 text-xs leading-[18px] text-primary-foreground">
+                <div className="space-y-0.5 text-sm leading-[18px] text-primary-foreground">
                   <span>
                     {dataFlight.data.directFlight.airport_city_departure}
                   </span>
@@ -260,7 +261,7 @@ const FlightCard = ({
                     </div>
                   )}
                 </div>
-                <div className="flex flex-col items-end space-y-0.5 text-end text-xs leading-[18px] text-primary-foreground">
+                <div className="flex flex-col items-end space-y-0.5 text-end text-sm leading-[18px] text-primary-foreground">
                   <span>
                     {dataFlight.data.transitFlight
                       ? dataFlight.data.transitFlight.airport_city_arrival

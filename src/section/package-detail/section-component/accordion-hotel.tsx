@@ -80,7 +80,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
 
           {/* --- Hotel Facilities --- */}
           <div className="flex flex-col gap-2 px-4 pt-2">
-            <h4 className="text-sm font-bold text-primary-foreground">
+            <h4 className="text-[15px] font-bold text-primary-foreground">
               Fasilitas Hotel
             </h4>
             <div className="flex justify-between">
@@ -91,7 +91,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
                     className="flex w-1/4 flex-col items-center gap-2"
                   >
                     {getIconFacility(facility)}
-                    <span className="text-center text-[11px] leading-[14px] text-primary-foreground opacity-75">
+                    <span className="text-center text-xs leading-[14px] text-primary-foreground opacity-75">
                       {facility}
                     </span>
                   </div>
@@ -105,7 +105,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
 
           {/* --- Meals --- */}
           <div className="flex flex-col gap-2 px-4">
-            <h4 className="text-sm font-bold text-primary-foreground">
+            <h4 className="text-[15px] font-bold text-primary-foreground">
               Makanan yang disediakan
             </h4>
 
@@ -115,8 +115,8 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
               <div
                 className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
               >
-                <span className="text-xs leading-4 opacity-60">Jenis</span>
-                <span className="text-xs font-semibold leading-4">
+                <span className="text-[13px] leading-4 opacity-60">Jenis</span>
+                <span className="text-[13px] font-semibold leading-4">
                   {dataHotel.food_type}
                 </span>
               </div>
@@ -125,8 +125,8 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
                 <div
                   className={`flex flex-col gap-1 text-neutral-foreground ${!dataHotel.food_menu && "w-full"}`}
                 >
-                  <span className="text-xs leading-4 opacity-60">Banyak</span>
-                  <span className="text-xs font-semibold leading-4">
+                  <span className="text-[13px] leading-4 opacity-60">Banyak</span>
+                  <span className="text-[13px] font-semibold leading-4">
                     {dataHotel.food_amount}x /hari
                   </span>
                 </div>
@@ -134,8 +134,8 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
 
               {dataHotel.food_menu && (
                 <div className="flex flex-col gap-1 text-neutral-foreground">
-                  <span className="text-xs leading-4 opacity-60">Menu</span>
-                  <span className="text-xs font-semibold leading-4">
+                  <span className="text-[13px] leading-4 opacity-60">Menu</span>
+                  <span className="text-[13px] font-semibold leading-4">
                     {dataHotel.food_menu}
                   </span>
                 </div>
@@ -145,7 +145,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
 
           {/* --- Location --- */}
           <div className="flex flex-col gap-2 px-4">
-            <h4 className="text-sm font-bold text-primary-foreground">
+            <h4 className="text-[15px] font-bold text-primary-foreground">
               Lokasi Hotel
             </h4>
 
@@ -164,7 +164,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
 
           {/* --- Google Review --- */}
           <div className="flex flex-col gap-1.5 px-4">
-            <h4 className="text-sm font-bold text-primary-foreground">
+            <h4 className="text-[15px] font-bold text-primary-foreground">
               Review Google
             </h4>
 
@@ -173,7 +173,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
               target="_blank"
               className="flex items-center gap-1.5"
             >
-              <span className="text-xs font-semibold text-primary">
+              <span className="text-[13px] font-semibold text-primary">
                 Klik untuk lihat review di Google
               </span>
               <ExternalLinkIcon
@@ -185,7 +185,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
 
           {/* --- Description --- */}
           <div className="flex flex-col gap-1.5 px-4">
-            <h4 className="text-sm font-bold text-primary-foreground">
+            <h4 className="text-[15px] font-bold text-primary-foreground">
               Deskripsi Hotel
             </h4>
 
@@ -210,7 +210,7 @@ const AccordionHotel = ({ dataHotel, id }: AccordionHotelProps) => {
             </div>
           ) : (
             <div className="flex cursor-pointer gap-1">
-              <span className="text-xs font-semibold leading-4 tracking-wide text-primary">
+              <span className="text-[13px] font-semibold leading-4 tracking-wide text-primary">
                 Lihat detail
               </span>
               <ChevronDownIcon
@@ -253,7 +253,7 @@ const AccordionFacilities = ({ facilities }: { facilities: string[] }) => {
         </AccordionContent>
         <AccordionTrigger
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center gap-2 py-1.5 text-xs font-medium text-primary"
+          className="flex items-center justify-center gap-2 py-1.5 text-[13px] font-medium text-primary"
           variant="primary"
         >
           {isOpen ? "Lihat lebih sedikit" : "Lihat lebih banyak"}

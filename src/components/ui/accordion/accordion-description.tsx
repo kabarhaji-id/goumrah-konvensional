@@ -42,16 +42,15 @@ const DescriptionCollapsible = ({
         {/* Tampilkan teks dengan line-clamp ketika belum dibuka */}
         <p
           ref={ref}
-          className={`text-xs leading-5 text-neutral-foreground opacity-80 ${
-            !isOpen && "line-clamp-3"
-          }`}
+          className={`text-[13px] leading-5 text-neutral-foreground opacity-80 ${!isOpen && "line-clamp-3"
+            }`}
         >
           {!isOpen && dataDescription}
         </p>
 
         {isOpen && (
           <AccordionContent className="pb-1">
-            <p className="text-xs leading-5 text-neutral-foreground opacity-80">
+            <p className="text-[13px] leading-5 text-neutral-foreground opacity-80">
               {dataDescription}
             </p>
           </AccordionContent>

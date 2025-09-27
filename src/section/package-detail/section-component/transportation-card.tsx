@@ -56,7 +56,7 @@ const TransportationCard = ({
       }}
     >
       <CardDetailHeader>
-        <span className="text-xs font-semibold text-neutral-foreground">
+        <span className="text-[15px] font-semibold text-neutral-foreground">
           Bus
         </span>
       </CardDetailHeader>
@@ -96,18 +96,18 @@ const TransportationCard = ({
               })}
             </CustomSwiper>
             <div className="absolute top-2 left-5 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-1 z-10">
-              <span className="text-[13px] font-semibold text-primary leading-none">
+              <span className="text-[15px] font-semibold text-primary leading-none">
                 {data.provider}
               </span>
             </div>
             <div className="flex items-center justify-center gap-1 absolute top-2 right-5 bg-white/80 backdrop-blur-sm shadow-sm rounded-sm px-3 py-2 z-10">
-              <span className="text-xs font-medium leading-none mr-0.5">
+              <span className="text-sm font-medium leading-none mr-0.5">
                 {category === "Silver" || category === "Gold"
                   ? "Economy"
                   : "VIP"}
               </span>
               <CustomSeatReclineIcon />
-              <span className="text-xs font-medium leading-none">
+              <span className="text-sm font-medium leading-none">
                 {data.seat_amount} Kursi
               </span>
             </div>

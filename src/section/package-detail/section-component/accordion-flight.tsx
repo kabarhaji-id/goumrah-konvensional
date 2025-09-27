@@ -48,10 +48,10 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
               />
 
               <div className="w-full">
-                <h6 className="font-bold leading-6 tracking-wide">
+                <h6 className="font-bold leading-6 tracking-wide text-[15px]">
                   {dataFlight.directFlight.airline}
                 </h6>
-                <div className="flex items-center gap-1 text-xs font-medium text-neutral-foreground opacity-80">
+                <div className="flex items-center gap-1 text-sm font-medium text-neutral-foreground opacity-80">
                   {dataFlight.directFlight.flight_number && (
                     <>
                       <span>{dataFlight.directFlight.flight_number}</span>
@@ -73,13 +73,13 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                       {/* <span className="font-bold leading-5 tracking-wide">
                         {moment(dataFlight.directFlightDate).format("HH:mm")}
                       </span> */}
-                      <span className="text-[11px] opacity-80">
+                      <span className="text-xs opacity-80 whitespace-nowrap">
                         {moment(dataFlight.directFlightDate).format("DD MMM")}
                       </span>
                     </div>
                     <div>
-                      <span className="text-[11px] opacity-80">
-                        <span className="text-[11px] opacity-80">
+                      <span className="text-xs opacity-80 whitespace-nowrap">
+                        <span className="text-xs opacity-80 whitespace-nowrap">
                           {formatDuration(dataFlight.directFlight.duration)}
                         </span>
                       </span>
@@ -94,7 +94,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                           ),
                         ).format("HH:mm")}
                       </span> */}
-                      <span className="text-[11px] opacity-80">
+                      <span className="text-xs opacity-80 whitespace-nowrap">
                         {moment(
                           getArrivalDate(
                             dataFlight.directFlightDate,
@@ -122,7 +122,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                     <h6 className="text-sm font-bold">
                       {`${dataFlight.directFlight.airport_city_departure} (${dataFlight.directFlight.airport_code_departure})`}
                     </h6>
-                    <div className="flex flex-col gap-0.5 text-[11px] font-medium leading-4 opacity-60">
+                    <div className="flex flex-col gap-0.5 text-xs font-medium leading-4 opacity-60">
                       <span>
                         {dataFlight.directFlight.airport_name_departure}
                       </span>
@@ -169,7 +169,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                     <h6 className="text-sm font-bold">
                       {`${dataFlight.directFlight.airport_city_arrival} (${dataFlight.directFlight.airport_code_arrival})`}
                     </h6>
-                    <div className="flex flex-col gap-0.5 text-[11px] font-medium leading-4 opacity-60">
+                    <div className="flex flex-col gap-0.5 text-xs font-medium leading-4 opacity-60">
                       <span>
                         {dataFlight.directFlight.airport_name_arrival}
                       </span>
@@ -219,10 +219,10 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                   />
 
                   <div className="w-full">
-                    <h6 className="font-bold leading-6 tracking-wide">
+                    <h6 className="font-bold leading-6 tracking-wide text-[15px]">
                       {dataFlight.transitFlight.airline}
                     </h6>
-                    <div className="flex items-center gap-1 text-xs font-medium text-neutral-foreground opacity-80">
+                    <div className="flex items-center gap-1 text-sm font-medium text-neutral-foreground opacity-80">
                       {dataFlight.transitFlight.flight_number && (
                         <>
                           <span>{dataFlight.transitFlight.flight_number}</span>
@@ -246,14 +246,14 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                               "HH:mm",
                             )}
                           </span> */}
-                          <span className="text-[11px] opacity-80">
+                          <span className="text-xs opacity-80 whitespace-nowrap">
                             {moment(dataFlight.transitFlightDate).format(
                               "DD MMM",
                             )}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[11px] opacity-80">
+                          <span className="text-xs opacity-80 whitespace-nowrap">
                             {formatDuration(dataFlight.transitFlight.duration)}
                           </span>
                         </div>
@@ -268,13 +268,13 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                             ).format("HH:mm")}
                           </span> */}
                           {dataFlight.transitFlight.departure_arrivaltime ? (
-                            <span className="text-[11px] opacity-80">
+                            <span className="text-xs opacity-80 whitespace-nowrap">
                               {moment(
                                 dataFlight.transitFlight.departure_arrivaltime,
                               ).format("DD MMM")}
                             </span>
                           ) : (
-                            <span className="text-[11px] opacity-80">
+                            <span className="text-xs opacity-80 whitespace-nowrap">
                               {moment(
                                 getArrivalDate(
                                   dataFlight.transitFlightDate,
@@ -303,7 +303,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                         <h6 className="text-sm font-bold">
                           {`${dataFlight.transitFlight.airport_city_departure} (${dataFlight.transitFlight.airport_code_departure})`}
                         </h6>
-                        <div className="flex flex-col gap-0.5 text-[11px] font-medium leading-4 opacity-60">
+                        <div className="flex flex-col gap-0.5 text-xs font-medium leading-4 opacity-60">
                           <span>
                             {dataFlight.transitFlight.airport_name_departure}
                           </span>
@@ -353,7 +353,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
                         <h6 className="text-sm font-bold">
                           {`${dataFlight.transitFlight.airport_city_arrival} (${dataFlight.transitFlight.airport_code_arrival})`}
                         </h6>
-                        <div className="flex flex-col gap-0.5 text-[11px] font-medium leading-4 opacity-60">
+                        <div className="flex flex-col gap-0.5 text-xs font-medium leading-4 opacity-60">
                           <span>
                             {dataFlight.transitFlight.airport_name_arrival}
                           </span>
@@ -375,7 +375,7 @@ const AccordionFlight = ({ dataFlight, id }: AccordionFlightProps) => {
           onClick={() => toggleAccordion(id)}
         >
           <div className="flex cursor-pointer gap-1">
-            <span className="text-xs font-semibold leading-4 tracking-wide text-primary">
+            <span className="text-[13px] font-semibold leading-4 tracking-wide text-primary">
               {isOpen[id] ? "Lihat lebih sedikit" : "Lihat Detail"}
             </span>
           </div>

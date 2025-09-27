@@ -24,11 +24,11 @@ const ProductCoverageSection = ({
         <div className="flex flex-col gap-2 px-4 pb-3 pt-4">
           <div className="flex gap-2 pl-1">
             <CircleCheckBigIcon className="h-5 w-5 stroke-primary" />
-            <span className="text-[15px] font-semibold text-primary">
-              Yang termasuk dalam paket kamu
+            <span className="text-base font-semibold text-primary">
+              Yang termasuk dalam paket
             </span>
           </div>
-          <ul className="ml-6 flex list-disc flex-col gap-1 text-sm leading-[18px] tracking-wide text-primary-foreground">
+          <ul className="ml-6 flex list-disc flex-col gap-1 text-[15px] leading-[18px] tracking-wide text-primary-foreground">
             <li>Tiket pulang-pergi</li>
             <li>Pengurusan visa umrah</li>
             <li>Makan 3x sehari</li>
@@ -43,11 +43,11 @@ const ProductCoverageSection = ({
         <div className="flex flex-col gap-2 px-4 pb-4 pt-3">
           <div className="flex gap-2 pl-1">
             <XIcon className="h-5 w-5 stroke-primary" />
-            <span className="text-sm font-semibold text-primary">
-              Yang belum termasuk dalam paket kamu
+            <span className="text-base font-semibold text-primary">
+              Yang belum termasuk dalam paket
             </span>
           </div>
-          <ul className="ml-6 flex list-disc flex-col gap-1 text-sm leading-[18px] tracking-wide text-primary-foreground">
+          <ul className="ml-6 flex list-disc flex-col gap-1 text-[15px] leading-[18px] tracking-wide text-primary-foreground">
             <li>Biaya pembuatan atau perpanjangan paspor</li>
             <li>Vaksin meningitis</li>
             <li>Belanja oleh-oleh, suvenir, atau kebutuhan pribadi lainnya</li>
@@ -60,14 +60,14 @@ const ProductCoverageSection = ({
         <div className="mx-4 space-y-1 rounded-[10px] border border-primary px-4 py-2">
           <div className="flex gap-1">
             <InfoIcon className="h-5 w-5 stroke-primary" />
-            <span className="text-sm font-semibold leading-5 text-primary">
+            <span className="text-[15px] font-semibold leading-5 text-primary">
               Biaya Lainnya
             </span>
           </div>
 
-          <p className="flex flex-col text-sm leading-5 tracking-wide text-neutral-foreground xsm:flex-row xsm:gap-1">
+          <p className="flex flex-col text-[15px] leading-5 tracking-wide text-neutral-foreground xsm:flex-row xsm:gap-1">
             <span>Biaya perlengkapan dan handling airport</span>
-            <span>sebesar +Rp 500.000 untuk setiap jamaah</span>
+            <span>sebesar +Rp 1.000.000 untuk setiap jamaah (tidak wajib)</span>
           </p>
         </div>
 

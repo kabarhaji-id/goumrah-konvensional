@@ -3,10 +3,10 @@
 import CustomSunMoonIcon from "@/public/icons/tabler_sun-moon.svg";
 import CustomVacationIcon from "@/public/icons/custom-vacation.svg";
 import CustomFastTrainIcon from "@/public/icons/material-symbols_train-rounded.svg";
-import CustomKaabaIcon from "@/public/icons/la_kaaba.svg";
-import ReceiptIcon from "@/public/icons/fluent_receipt-money-16-regular.svg";
 import CustomAirplaneIcon from "@/public/icons/bi_airplane.svg";
 import IconWhite from "@/public/image/icon-white.svg";
+import IconNabawi from "@/public/icons/nabawi.svg";
+import IconKabaa from "@/public/icons/kabaa.svg";
 
 import { Chip } from "@/components/ui/chip";
 import { UmrahPackage } from "@/types/package-details";
@@ -14,9 +14,10 @@ import { useEffect, useMemo, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
 import { CustomSwiper } from "@/components/layout/swiper";
-import { CalendarDaysIcon, HotelIcon, MountainIcon } from "lucide-react";
+import { CalendarDaysIcon, HotelIcon, MountainIcon, RepeatIcon } from "lucide-react";
 import moment from "moment";
 import { Rating } from "@/components/ui/helper/getRating";
+import { Tooltip } from "react-tooltip";
 
 const HeaderComponent = ({
   packageData,
@@ -61,23 +62,22 @@ const HeaderComponent = ({
 
   return (
     <div className="flex flex-col gap-3">
-      {/* --- Title */}
       {isLoading ? (
         <Skeleton className="h-[26px] w-[200px]" />
       ) : (
-        <h1 className="mx-4 flex text-xl font-semibold leading-[130%] tracking-[0.5px] mb-1">
+        <h1 className="mx-4 flex text-[21px] font-semibold leading-none tracking-[0.5px] mb-1">
           {packageData.title}
         </h1>
       )}
 
-      <div className="flex items-center px-4 gap-2 flex-wrap">
+      <div className="flex items-center gap-2 flex-wrap px-4">
         {/* Start of features */}
         {isLoading ? (
           <Skeleton className="mb-2 h-[22px] w-16" />
         ) : (
           <>
             {packageData.category === "Silver" && (
-              <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#1B8386] to-[#61B3B6] p-1">
+              <div id="feature-class" className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#1B8386] to-[#61B3B6] p-1">
                 <div className="p-1">
                   <IconWhite className="h-4 w-4 stroke-white" />
                 </div>
@@ -87,7 +87,7 @@ const HeaderComponent = ({
               </div>
             )}
             {packageData.category === "Gold" && (
-              <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#CA9822] to-[#E6CA69] p-1">
+              <div id="feature-class" className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#CA9822] to-[#E6CA69] p-1">
                 <div className="p-1">
                   <IconWhite className="h-4 w-4 stroke-white" />
                 </div>
@@ -97,7 +97,7 @@ const HeaderComponent = ({
               </div>
             )}
             {packageData.category === "Platinum" && (
-              <div className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#242424] to-[#686868] p-1">
+              <div id="feature-class" className="flex items-center justify-center whitespace-nowrap text-xs font-display font-semibold rounded-[8px] text-white h-fit bg-gradient-to-tr from-[#242424] to-[#686868] p-1">
                 <div className="p-1">
                   <IconWhite className="h-4 w-4 stroke-white" />
                 </div>
@@ -106,204 +106,166 @@ const HeaderComponent = ({
                 </span>
               </div>
             )}
+            <Tooltip anchorSelect="#feature-class">Kelas Paket</Tooltip>
           </>
         )}
 
-        {/* Tanggal Keberangkatan */}
         {isLoading ? (
-          <Skeleton className="h-[25px] w-20 rounded-[8px]" />
+          <Skeleton className="mb-2 h-[22px] w-16" />
         ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {moment(departureDate.date).format("DD MMM YYYY")}
-            </span>
-          </Chip>
-        )}
-
-        {/* --- Duration Days */}
-        {isLoading ? (
-          <Skeleton className="h-[25px] w-[70px] rounded-[8px]" />
-        ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              <CustomSunMoonIcon className="h-4 w-4 xxs:h-5 xxs:w-5 stroke-primary" />
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {durationDays}
-            </span>
-          </Chip>
-        )}
-
-        {/* --- Package Type */}
-        {isLoading ? (
-          <Skeleton className="h-[25px] w-[81px] rounded-[8px]" />
-        ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              {packageData.type === "Plus" ? (
-                <CustomVacationIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
-              ) : (
-                <CustomKaabaIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
-              )}
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {packageData.type === "Plus" ? "Plus Wisata" : "Reguler"}
-            </span>
-          </Chip>
-        )}
-
-        {/* --- Flight Type */}
-        {/* {isLoading ? (
-          <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
-        ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              <CustomAirplaneIcon
-                className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
-                fill="#1B8386"
-              />
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {packageData.flight_details.departure_flight.transit
-                ? "Transit"
-                : "Langsung"}
-            </span>
-          </Chip>
-        )} */}
-
-        {/* --- Thaif */}
-        {isLoading ? (
-          <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
-        ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              <CustomAirplaneIcon
-                className="h-4 w-4 xxs:h-5 xxs:w-5 rotate-90"
-                fill="#1B8386"
-              />
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              {packageData.flight_details.departure_flight.airline}
-            </span>
-          </Chip>
+          <>
+            <Chip id="feature-departure-date" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                <CalendarDaysIcon className="h-[18px] w-[18px] stroke-primary" />
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                {moment(departureDate.date).format("DD MMM YYYY")}
+              </span>
+            </Chip>
+            <Tooltip anchorSelect="#feature-departure-date">Tanggal Keberangkatan</Tooltip>
+          </>
         )}
 
         {isLoading ? (
-          <Skeleton className="h-[25px] w-[81px] rounded-[8px]" />
+          <Skeleton className="mb-2 h-[22px] w-16" />
         ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              <HotelIcon
-                className="h-4 w-4 xxs:h-5 xxs:w-5 stroke-[#1B8386]"
-              />
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              <Rating className="gap-0" totalStars={packageData.hotel_details.makkah.star_rating} />
-            </span>
-          </Chip>
+          <>
+            <Chip id="feature-duration" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                <CustomSunMoonIcon className="h-[18px] w-[18px] stroke-primary" />
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                {packageData.duration}
+              </span>
+            </Chip>
+            <Tooltip anchorSelect="#feature-duration">Durasi</Tooltip>
+          </>
+        )}
+
+        {isLoading ? (
+          <Skeleton className="mb-2 h-[22px] w-20" />
+        ) : (
+          <>
+            <Chip id="feature-type" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                {packageData.type === "Plus" ? (
+                  <CustomVacationIcon
+                    className="h-[18px] w-[18px]"
+                    fill="#1B8386"
+                  />
+                ) : (
+                  <RepeatIcon
+                    className="h-[18px] w-[18px]"
+                    stroke="#1B8386"
+                  />
+                )}
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                {packageData.type === "Plus" ? "Plus Wisata" : packageData.type}
+              </span>
+            </Chip>
+            <Tooltip anchorSelect="#feature-type">Tipe Paket</Tooltip>
+          </>
+        )}
+
+        {isLoading ? (
+          <Skeleton className="mb-2 h-[22px] w-20" />
+        ) : (
+          <>
+            <Chip id="feature-flight-type" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                {packageData.flight_details.departure_flight.transit ? (
+                  <CustomAirplaneIcon
+                    className="h-[18px] w-[18px] rotate-90"
+                    fill="#1B8386"
+                  />
+                ) : (
+                  <CustomAirplaneIcon
+                    className="h-[18px] w-[18px]"
+                    fill="#1B8386"
+                  />
+                )}
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                {packageData.flight_details.departure_flight.transit ? `Transit ${packageData.flight_details.departure_flight.transit.airport_city_departure}` : "Langsung"}
+              </span>
+            </Chip>
+            <Tooltip anchorSelect="#feature-flight-type">Jenis Penerbangan</Tooltip>
+          </>
+        )}
+
+        {isLoading ? (
+          <Skeleton className="mb-2 h-[22px] w-20" />
+        ) : (
+          <>
+            <Chip id="feature-madinah-hotel" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                <IconNabawi className="h-[18px] w-[18px] fill-[#1B8386]" />
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                <Rating className="gap-0" totalStars={packageData.hotel_details.madinah.star_rating} starClassName="size-4" />
+              </span>
+            </Chip>
+            <Tooltip anchorSelect="#feature-madinah-hotel">Hotel Madinah</Tooltip>
+          </>
+        )}
+
+        {isLoading ? (
+          <Skeleton className="mb-2 h-[22px] w-20" />
+        ) : (
+          <>
+            <Chip id="feature-makkah-hotel" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                <IconKabaa className="h-[18px] w-[18px] fill-[#1B8386]" />
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                <Rating className="gap-0" totalStars={packageData.hotel_details.makkah.star_rating} starClassName="size-4" />
+              </span>
+            </Chip>
+            <Tooltip anchorSelect="#feature-makkah-hotel">Hotel Makkah</Tooltip>
+          </>
         )}
 
         {/* --- Fast Train? */}
         {packageData.isFastTrain &&
           (isLoading ? (
-            <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+            <Skeleton className="mb-2 h-[22px] w-[110px] rounded-[8px]" />
           ) : (
-            <Chip variant="default" className="overflow-hidden border-[3px]">
-              <div className="bg-primary-accent pb-[3px] pl-1 pr-0.5 pt-1">
-                <CustomFastTrainIcon className="h-4 w-4 xxs:h-5 xxs:w-5" fill="#1B8386" />
-              </div>
-              <span className="py-[3px] pl-1 pr-1.5 text-sm font-semibold leading-[18px] text-neutral-foreground">
-                Kereta Cepat
-              </span>
-            </Chip>
+            <>
+              <Chip id="feature-fast-train" variant="default" className="overflow-hidden border-[3px]">
+                <div className="w-full bg-primary-accent p-1.5">
+                  <CustomFastTrainIcon
+                    className="h-[18px] w-[18px]"
+                    fill="#1B8386"
+                  />
+                </div>
+                <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                  Kereta Cepat
+                </span>
+              </Chip>
+              <Tooltip anchorSelect="#feature-fast-train">Menggunakan Kereta Cepat</Tooltip>
+            </>
           ))}
 
         {/* --- Thaif */}
         {isLoading ? (
-          <Skeleton className="h-[25px] w-[110px] rounded-[8px]" />
+          <Skeleton className="mb-2 h-[22px] w-[110px] rounded-[8px]" />
         ) : (
-          <Chip variant="default" className="overflow-hidden border-[3px]">
-            <div className="w-full bg-primary-accent p-1">
-              <MountainIcon
-                className="h-4 w-4 xxs:h-5 xxs:w-5 stroke-[#1B8386]"
-              />
-            </div>
-            <span className="py-1 pl-1 pr-1.5 text-sm font-semibold leading-4 tracking-wide text-neutral-foreground">
-              Thaif
-            </span>
-          </Chip>
-        )}
-      </div>
-
-      <div className="flex flex-col gap-2 px-4">
-        {/* --- Fast Train? */}
-        {/* {packageData.isFastTrain &&
-          (isLoading ? (
-            <Skeleton className="h-[21px] w-[300px]" />
-          ) : (
-            <p className="text-sm font-medium leading-[150%] tracking-wide text-primary">
-              Lebih Nyaman dengan Kereta Cepat
-            </p>
-          ))} */}
-
-        {/* --- Days */}
-        {/* {isLoading ? (
-          <Skeleton className="h-4 w-[160px]" />
-        ) : (
-          <p className="flex gap-1 text-xs text-neutral-foreground">
-            {packageData.itineraries.length > 2 && (
-              <>
-                <span>
-                  {
-                    packageData.itineraries.find(
-                      (i) => i.city !== "Madinah" && i.city !== "Madinah",
-                    )?.duration
-                  }{" "}
-                  hari{" "}
-                  {
-                    packageData.itineraries.find(
-                      (i) => i.city !== "Madinah" && i.city !== "Madinah",
-                    )?.city
-                  }
-                </span>
-                ·
-              </>
-            )}
-            <span>
-              {
-                packageData.itineraries.find((i) => i.city === "Madinah")
-                  ?.duration
-              }{" "}
-              hari Madinah
-            </span>
-            ·
-            <span>
-              {
-                packageData.itineraries.find((i) => i.city === "Makkah")
-                  ?.duration
-              }{" "}
-              hari Makkah
-            </span>
-          </p>
-        )} */}
-
-        {/* --- Early Payment (DP) */}
-        {/* {isLoading ? (
-          <Skeleton className="h-4 w-[180px]" />
-        ) : (
-          <div className="flex items-center gap-1">
-            <ReceiptIcon className="h-4 w-4" fill="#EF4444" />
-            <p className="text-xs leading-4 text-destructive">
-              Pembayaran Awal (DP) :
-              <span className="pl-0.5 font-extrabold">
-                Rp {packageData.down_payment} Juta
+          <>
+            <Chip id="feature-thaif" variant="default" className="overflow-hidden border-[3px]">
+              <div className="w-full bg-primary-accent p-1.5">
+                <MountainIcon
+                  className="h-[18px] w-[18px]"
+                  stroke="#1B8386"
+                />
+              </div>
+              <span className="py-1 pl-1 pr-1.5 text-[13px] font-semibold leading-[18px] text-neutral-foreground">
+                Thaif
               </span>
-            </p>
-          </div>
-        )} */}
+            </Chip>
+            <Tooltip anchorSelect="#feature-thaif">Thaif</Tooltip>
+          </>
+        )}
       </div>
     </div>
   );

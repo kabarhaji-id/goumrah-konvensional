@@ -67,18 +67,20 @@ const PromoSection = ({ dataPromos }: { dataPromos: PromoDetail[] }) => {
               </CustomSwiper>
             )
           ) : isLoading ? (
-            <Skeleton className="aspect-[24/9] w-full rounded-[14px]" />
+            <></>
+            // <Skeleton className="aspect-[24/9] w-full rounded-[14px]" />
           ) : (
-            <Link href={dataPromos[0].link}>
-              <Image
-                width={608}
-                height={228}
-                src={dataPromos[0].imageUrl}
-                alt="image-promo"
-                className="aspect-[24/9] w-full rounded-[14px] object-cover"
-                priority
-              />
-            </Link>
+            <></>
+            // <Link href={dataPromos[0].link}>
+            //   <Image
+            //     width={608}
+            //     height={228}
+            //     src={dataPromos[0].imageUrl}
+            //     alt="image-promo"
+            //     className="aspect-[24/9] w-full rounded-[14px] object-cover"
+            //     priority
+            //   />
+            // </Link>
           )}
         </SectionContent>
       </Section>

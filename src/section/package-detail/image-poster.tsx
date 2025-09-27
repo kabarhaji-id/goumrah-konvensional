@@ -12,9 +12,11 @@ import { Skeleton } from "@/components/ui/skeleton-loader";
 const ImagePoster = ({
   packageImage,
   packageCategory,
+  packageTitle,
 }: {
   packageImage: string;
   packageCategory: string;
+  packageTitle: string;
 }) => {
   const [isImageError, setIsImageError] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -30,15 +32,6 @@ const ImagePoster = ({
         <div className="flex aspect-[4/3] max-h-[380px] w-full items-center justify-center bg-gray-100">
           <span className="text-sm text-gray-500">Foto tidak tersedia</span>
         </div>
-
-        <div className="absolute -bottom-px z-20 h-fit">
-          {packageCategory === "Silver" && <SilverAccent className="w-full" />}
-          {packageCategory === "Gold" && <GoldAccent className="w-full" />}
-          {packageCategory === "Platinum" && (
-            <PlatinumAccent className="w-full" />
-          )}
-          {packageCategory === "Luxury" && <LuxuryAccent className="w-full" />}
-        </div>
       </div>
     );
   }
@@ -52,7 +45,8 @@ const ImagePoster = ({
 
         <Image
           priority quality={70}
-          src={packageImage}
+          // src={packageImage}
+          src={"https://asset.kompas.com/crops/XpkOufD7z8JTS1kocIw7K4DPHWo=/483x0:3180x1798/750x500/data/photo/2021/10/07/615eb54383bcb.jpg"}
           alt={`image-${packageImage}`}
           width={640}
           height={380}

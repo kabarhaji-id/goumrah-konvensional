@@ -6,7 +6,7 @@ import "../../../app/globals.css";
 
 import CustomAirplaneMarkerIcon from "@/public/icons/mdi_airplane-marker.svg";
 
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CalendarDaysIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
 import { CardDetail, CardDetailContent, CardDetailHeader } from "@/components/ui/card/package-detail-card";
@@ -137,7 +137,7 @@ const FilterSection = ({
                           {date.status === "musim-haji" && "Musim Haji 2025"}
                           {date.status === "closing-umrah" && "Penutupan Musim"}
                         </span>
-                        <span className="text-sm font-semibold tracking-wide">
+                        <span className="text-base font-semibold tracking-wide">
                           {date.status !== "musim-haji"
                             ? moment(date.date).format("DD MMM")
                             : moment(date.date).format("MMMM")}
@@ -196,7 +196,7 @@ const FilterSection = ({
                     ) : (
                       <div key={index} className="flex w-full cursor-pointer divide-x divide-primary border border-primary rounded-[10px] bg-primary-background">
                         <div className="flex grow flex-col gap-1 px-3 py-2 text-center">
-                          <p className="text-sm font-semibold tracking-tight whitespace-nowrap">
+                          <p className="text-sm font-normal tracking-tight whitespace-nowrap">
                             {city.city}
                           </p>
                           <p className="text-[13px] font-medium tracking-wide whitespace-nowrap">

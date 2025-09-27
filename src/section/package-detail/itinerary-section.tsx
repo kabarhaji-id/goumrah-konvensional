@@ -149,12 +149,14 @@ const ItinerarySection = ({
                     >
                       <div className="flex items-center gap-3 text-start">
                         <Badge
-                          className="h-fit flex-shrink-0 rounded-[10px] border-none px-2 py-[3px] text-xs leading-[18px] tracking-wide"
+                          className="h-fit flex-shrink-0 rounded-[10px] border-none px-2 py-[3px] text-sm leading-[18px] tracking-wide"
                           variant="secondary"
                         >
                           Hari {item.nth}
                         </Badge>
-                        {item.title}
+                        <span className="text-[15px]">
+                          {item.title}
+                        </span>
                       </div>
                     </AccordionTrigger>
 
@@ -162,7 +164,7 @@ const ItinerarySection = ({
                       {/* --- Section: Description */}
                       <div className="space-y-2">
                         <Separator />
-                        <p className="text-xs leading-5 tracking-wide text-neutral-foreground opacity-80">
+                        <p className="text-[13px] leading-5 tracking-wide text-neutral-foreground opacity-80">
                           {item.description}
                         </p>
                       </div>
@@ -179,12 +181,12 @@ const ItinerarySection = ({
                                   <div className="flex flex-col gap-1.5">
                                     <div className="flex gap-1 opacity-80">
                                       <RouteIcon className="h-4 w-4 stroke-neutral-foreground" />
-                                      <span className="text-[11px] leading-4 tracking-wide">
+                                      <span className="text-xs leading-4 tracking-wide">
                                         Transportasi
                                       </span>
                                     </div>
 
-                                    <span className="text-sm font-semibold text-neutral-foreground">
+                                    <span className="text-[15px] font-semibold text-neutral-foreground">
                                       Menggunakan {widget.transportWith}
                                     </span>
                                   </div>

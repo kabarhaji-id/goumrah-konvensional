@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
         protocol: "https", // Protocol (http or https)
         hostname: "goumrah.id", // Your image domain
         pathname: "/assets/**", // Optional path to restrict image source
+      },
+      {
+        protocol: "https", // Protocol (http or https)
+        hostname: "placehold.co", // Your image domain
+        pathname: "/**", // Optional path to restrict image source
+      },
+      {
+        protocol: "https", // Protocol (http or https)
+        hostname: "asset.kompas.com", // Your image domain
+        pathname: "/**", // Optional path to restrict image source
       }
     ],
     formats: ["image/avif", "image/webp"], // Enable modern image formats for better performance

@@ -47,20 +47,20 @@ const AdditionalServices = () => {
           Layanan Tambahan
         </SectionTitle>
 
-        <SectionDescription className="text-sm font-normal leading-5 tracking-wide">
+        <SectionDescription className="text-[15px] font-normal leading-5 tracking-wide">
           Goumrah sediakan layanan administrasi untuk mempermudah proses ibadah
           kamu. Kamu bisa tambahkan layanan ini saat pemesanan nanti.
         </SectionDescription>
       </SectionHeader>
 
       <SectionContent>
-        <CustomSwiper maxWidth={314} slidesClass="pb-3">
+        <CustomSwiper maxWidth={314} slidesClass="pb-3 items-stretch">
           <div className="flex overflow-hidden rounded-[14px] shadow-custom-md">
             <div className="relative w-[215px] overflow-hidden bg-primary px-4 py-4">
               <div className="z-10 flex flex-col gap-4 tracking-wide text-white">
                 <div>
-                  <span className="w-full text-[11px]">
-                    Layanan Pembuatan/Perpanjang
+                  <span className="w-full text-xs">
+                    Layanan<br />Pembuatan / Perpanjang
                   </span>
                   <p className="font-bold leading-[22px]">Paspor</p>
                 </div>
@@ -96,11 +96,11 @@ const AdditionalServices = () => {
             <div className="relative w-[314px] overflow-hidden bg-primary px-4 py-4">
               <div className="z-10 flex flex-col gap-4 tracking-wide text-white">
                 <div className="w-full">
-                  <span className="w-full flex-shrink-0 text-[11px] leading-4">
-                    Layanan Bantuan{" "}
+                  <span className="w-full flex-shrink-0 text-xs leading-4">
+                    Layanan<br />Bantuan Fasilitas Suntik
                   </span>
                   <p className="font-bold leading-[22px]">
-                    Vaksinasi Meningitis
+                    Vaksin Meningitis
                   </p>
                 </div>
 

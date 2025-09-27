@@ -78,7 +78,7 @@ const PricingCard = ({ pricingList }: { pricingList: PricingList[] }) => {
                 {isLoading ? (
                   <Skeleton className="h-8 w-32" />
                 ) : (
-                  <div className="xxs:flex-shrink-0 flex flex-col">
+                  <div className="xxs:flex-shrink-0 flex items-center gap-1">
                     {data.priceFinal &&
                       data.price !== Number(data.priceFinal) ? (
                       <>
@@ -91,6 +91,9 @@ const PricingCard = ({ pricingList }: { pricingList: PricingList[] }) => {
                         {priceToLocale(data.price!)}
                       </span>
                     )}
+                    <p className="text-xs font-semibold leading-4 tracking-wide opacity-60">
+                      /Org
+                    </p>
                   </div>
                 )}
               </div>

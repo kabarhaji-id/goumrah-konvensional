@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utils";
 import { StarIcon } from "lucide-react";
 
-import CustomHotelStars3 from "@/public/icons/custom-icon/icon-hotel-stars-3.svg";
-import CustomHotelStars4 from "@/public/icons/custom-icon/icon-hotel-stars-4.svg";
-import CustomHotelStars5 from "@/public/icons/custom-icon/icon-hotel-stars-5.svg";
 import Image from "next/image";
 
 export const Rating = ({
@@ -11,18 +8,20 @@ export const Rating = ({
   className,
   starFill = "#F2AC30",
   starStroke = "none",
+  starClassName,
 }: {
   totalStars: number;
   className?: string;
   starFill?: string;
   starStroke?: string;
+  starClassName?: string;
 }) => {
   const overallStars = 5;
   const stars = Array.from({ length: overallStars }, (_, index) => {
     return index < Math.floor(totalStars) ? (
       <StarIcon
         key={index}
-        className="h-[14px] w-[14px]"
+        className={cn("h-[14px] w-[14px]", starClassName)}
         fill={starFill}
         stroke={starStroke}
       />

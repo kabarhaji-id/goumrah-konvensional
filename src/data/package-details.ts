@@ -23,12 +23,12 @@ export const packageDetailData: UmrahPackage[] = [
       {
         city: "Jakarta - Jeddah",
         route: "CGK-JED",
-        date: "1 Sep",
+        date: "01 Sep",
       },
       {
         city: "Jeddah - Jakarta",
         route: "JED-CGK",
-        date: "9 Sep",
+        date: "09 Sep",
       },
     ],
     duration: "9 Hari",

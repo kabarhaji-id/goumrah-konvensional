@@ -1,3 +1,5 @@
+import "react-tooltip/dist/react-tooltip.css";
+
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { FacebookPixelEvents } from "@/components/analytic/pixel-events";
@@ -41,8 +43,6 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-
     return (
         <html lang="id">
             <body className={`${plusJakartaSans.className} antialiased`}>

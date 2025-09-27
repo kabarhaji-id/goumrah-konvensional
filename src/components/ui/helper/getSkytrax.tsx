@@ -1,12 +1,13 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const getSkytrax = (type: string, rating: string) => {
+const getSkytrax = (type: string, rating: string, open: boolean) => {
   if (type === "Full Service" && rating === "5") {
     return (
       <Image
         src="/assets/skytrax/skytrax-full_service-5.png"
         alt="skytrax-5"
-        className="absolute right-3 top-3"
+        className={cn("absolute right-3", open ? "top-[136px]" : "top-3")}
         width={52}
         height={52}
         priority quality={50}
@@ -19,7 +20,7 @@ const getSkytrax = (type: string, rating: string) => {
       <Image
         src="/assets/skytrax/skytrax-full_service-4.png"
         alt="skytrax-4"
-        className="absolute right-3 top-3"
+        className={cn("absolute right-3", open ? "top-[136px]" : "top-3")}
         width={52}
         height={52}
         priority quality={50}
@@ -32,7 +33,7 @@ const getSkytrax = (type: string, rating: string) => {
       <Image
         src="/assets/skytrax/skytrax-full_service-3.png"
         alt="skytrax-3"
-        className="absolute right-3 top-3"
+        className={cn("absolute right-3", open ? "top-[136px]" : "top-3")}
         width={52}
         height={52}
         priority quality={50}
@@ -45,7 +46,7 @@ const getSkytrax = (type: string, rating: string) => {
       <Image
         src="/assets/skytrax/skytrax-low_cost-4.png"
         alt="skytrax-4"
-        className="absolute right-3 top-3"
+        className={cn("absolute right-3", open ? "top-[136px]" : "top-3")}
         width={52}
         height={52}
       />
@@ -57,7 +58,7 @@ const getSkytrax = (type: string, rating: string) => {
       <Image
         src="/assets/skytrax/skytrax-low_cost-3.png"
         alt="skytrax-3"
-        className="absolute right-3 top-3"
+        className={cn("absolute right-3", open ? "top-[136px]" : "top-3")}
         width={52}
         height={52}
       />

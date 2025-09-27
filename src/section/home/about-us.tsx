@@ -35,18 +35,18 @@ const AboutUsSection = () => {
           <b className="text-primary">”</b>
         </p>
       </section>
-      <section className="flex justify-center items-center gap-4 p-4 mb-6 mx-6 border-[1.5px] border-primary-foreground/30 rounded-[10px] shadow-custom-sm shadow-[#BD8202]">
+      <section className="flex justify-center items-center gap-6 p-4 mb-6 mx-6 rounded-[10px]">
         <Image
           src={"/assets/image/guarantee.png"}
           alt="100% Guarantee"
           title="100% Guarantee"
-          width={360}
-          height={300}
-          className="h-[128px] w-[110px] xsm:h-[144px] xsm:w-[123.3px]"
-          quality={70}
+          width={411}
+          height={481}
+          className="h-[144px] w-auto xsm:h-[160px]"
+          quality={100}
           priority
         />
-        <p className="text-lg font-bold leading-[130%] tracking-normal text-primary-foreground">
+        <p className="text-xl xsm:text-2xl font-bold leading-[130%] tracking-normal text-primary-foreground">
           Jaminan <span className="text-primary">100%<br />Hotel & Maskapai<br /></span>
           Sesuai Pesanan
         </p>

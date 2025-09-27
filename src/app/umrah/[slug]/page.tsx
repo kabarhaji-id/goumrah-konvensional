@@ -87,6 +87,7 @@ export default async function DetailPage({ params, }: { params: Promise<{ slug: 
           <ImagePoster
             packageImage={detail.thumbnail}
             packageCategory={detail.category}
+            packageTitle={detail.title}
           />
 
           <HeaderSection packageData={detail} durationDays={detail.duration} />
@@ -112,7 +113,7 @@ export default async function DetailPage({ params, }: { params: Promise<{ slug: 
 
           <PromoSection dataPromos={detail.promos} />
 
-          <OtherPackagesSection packageId={detail.id} />
+          {/* <OtherPackagesSection packageId={detail.id} /> */}
 
           <Footer />
 

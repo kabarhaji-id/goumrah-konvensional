@@ -6,25 +6,28 @@ import "../../../app/globals.css";
 
 import CustomAirplaneMarkerIcon from "@/public/icons/mdi_airplane-marker.svg";
 
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { CalendarDaysIcon } from "lucide-react";
 import { Section, SectionContent } from "@/components/layout/section";
 import { CardDetail, CardDetailContent, CardDetailHeader } from "@/components/ui/card/package-detail-card";
-import { DepartureCityDetail, DepartureDateDetail } from "@/types/package-details";
+import { DepartureCityDetail, DepartureDateDetail, Flight } from "@/types/package-details";
 import { CustomSwiper } from "@/components/layout/swiper";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
+import { Tooltip } from "react-tooltip";
 
 interface FilterProps {
+  flight: Flight;
   departureDates: DepartureDateDetail[];
   embarkation: DepartureCityDetail[];
   variant: "departureDate" | "departureCity";
 }
 
 const FilterSection = ({
-  variant,
+  flight,
   departureDates,
   embarkation,
+  variant,
 }: FilterProps) => {
   moment.locale("id");
 
@@ -33,7 +36,6 @@ const FilterSection = ({
   // const resultDates = filteredDates.length > 0 ? filteredDates : departureDates;
 
   // const [selectedDate, setSelectedDate] = useState(resultDates[0].date);
-  const [selectedCity, setSelectedCity] = useState(embarkation[0].city);
   const [isLoading, setIsLoading] = useState(true);
   const [networkSpeed, setNetworkSpeed] = useState("good");
 
@@ -48,12 +50,6 @@ const FilterSection = ({
     }
 
     return activeIndex;
-  };
-
-  // const onFilterChange = (city?: string, date?: string) => {
-  const onFilterChange = (city?: string) => {
-    if (city) setSelectedCity(city);
-    // if (date) setSelectedDate(date);
   };
 
   useEffect(() => {
@@ -88,7 +84,7 @@ const FilterSection = ({
               <>
                 <CalendarDaysIcon className="h-4 w-4 stroke-primary" />
                 <span className="text-sm font-semibold text-primary">
-                  Pilihan Tanggal Keberangkatan
+                  Pilih Tanggal Keberangkatan
                 </span>
               </>
             ) : (
@@ -115,7 +111,7 @@ const FilterSection = ({
                   return isLoading ? (
                     <Skeleton key={index} className="h-16 w-[110px]" />
                   ) : (
-                    <div key={index} className="flex w-[110px] gap-2">
+                    <div key={index} id="departure-date" className="flex w-[110px] gap-2">
                       <div
                         className={`relative flex h-16 w-full flex-col items-center justify-center rounded-[10px] px-1 pb-3.5 pt-2 ${date.status === "active"
                           ? "border border-primary bg-primary-background text-primary"
@@ -248,6 +244,13 @@ const FilterSection = ({
           </CardDetailContent>
         </CardDetail >
       </SectionContent >
+      <Tooltip anchorSelect="#departure-date" positionStrategy="fixed" className="text-center" place="top">
+        <p>Keberangkatan : {moment(flight.departure_flight.departure_datetime).format("DD MMM")} ( {flight.departure_flight.airport_code_departure} - {flight.departure_flight.transit ? flight.departure_flight.transit.airport_code_arrival : flight.departure_flight.airport_code_arrival} )</p>
+        {flight.wisata_flight.map((wisataFlight, index) => (
+          <p key={index}>Plus Wisata : {moment(wisataFlight.departure_datetime).format("DD MMM")} ( {wisataFlight.airport_city_arrival} )</p>
+        ))}
+        <p>Kepulangan : {moment(flight.return_flight.departure_datetime).format("DD MMM")} ( {flight.return_flight.airport_code_departure} - {flight.return_flight.transit ? flight.return_flight.transit.airport_code_arrival : flight.return_flight.airport_code_arrival} )</p>
+      </Tooltip>
     </Section >
   );
 };

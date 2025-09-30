@@ -82,7 +82,7 @@ const FlightSection = ({ dataFlight }: { dataFlight: Flight }) => {
         <div className="flex items-center gap-2">
           <PlaneIcon className="h-5 w-5 stroke-primary" />
           <SectionTitle className="text-sm font-semibold leading-6 tracking-wide text-primary">
-            Penerbangan
+            Jadwal Penerbangan
           </SectionTitle>
         </div>
       </SectionHeader>

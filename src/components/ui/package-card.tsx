@@ -183,7 +183,7 @@ const PackageCard = ({
     <div
       onClick={handlePackageDetailClick}
       className={cn(
-        "flex h-full w-full flex-col overflow-hidden rounded-2xl !bg-white tracking-wide shadow-lg border-4",
+        "flex h-full w-full flex-col overflow-hidden rounded-2xl !bg-white tracking-wide shadow-lg",
         className,
       )}
     >

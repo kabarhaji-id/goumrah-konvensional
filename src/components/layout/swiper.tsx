@@ -10,6 +10,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface CustomSwiperProps {
+  id?: string;
   maxWidth?: number;
   gap?: number;
   padding?: number;
@@ -24,6 +25,7 @@ interface CustomSwiperProps {
 }
 
 const CustomSwiper = ({
+  id,
   children,
   gap,
   padding,
@@ -57,6 +59,7 @@ const CustomSwiper = ({
 
   return (
     <Swiper
+      id={id}
       slidesPerView={"auto"}
       spaceBetween={gap || gap === 0 ? gap : 16}
       initialSlide={initialSlide}

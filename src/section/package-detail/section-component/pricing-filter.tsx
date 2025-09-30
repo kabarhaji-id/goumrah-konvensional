@@ -247,7 +247,7 @@ const FilterSection = ({
       <Tooltip anchorSelect="#departure-date" positionStrategy="fixed" className="text-center" place="top">
         <p>Keberangkatan : {moment(flight.departure_flight.departure_datetime).format("DD MMM")} ( {flight.departure_flight.airport_code_departure} - {flight.departure_flight.transit ? flight.departure_flight.transit.airport_code_arrival : flight.departure_flight.airport_code_arrival} )</p>
         {flight.wisata_flight.map((wisataFlight, index) => (
-          <p key={index}>Plus Wisata : {moment(wisataFlight.departure_datetime).format("DD MMM")} ( {wisataFlight.airport_city_arrival} )</p>
+          <p key={index}>Plus Wisata : {moment(wisataFlight.departure_datetime).format("DD MMM")} ( {wisataFlight.transit ? wisataFlight.transit.airport_city_arrival : wisataFlight.airport_city_arrival} )</p>
         ))}
         <p>Kepulangan : {moment(flight.return_flight.departure_datetime).format("DD MMM")} ( {flight.return_flight.airport_code_departure} - {flight.return_flight.transit ? flight.return_flight.transit.airport_code_arrival : flight.return_flight.airport_code_arrival} )</p>
       </Tooltip>

@@ -13,15 +13,14 @@ import { UmrahPackage } from "@/types/package-details";
 import { useEffect, useMemo, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
 import { NavigatorConnection } from "@/types/navigator-connection";
-import { CustomSwiper } from "@/components/layout/swiper";
-import { CalendarDaysIcon, HotelIcon, MountainIcon, RepeatIcon } from "lucide-react";
+import LogoWhite from "@/public/image/logo-white.svg";
+import { CalendarDaysIcon, MountainIcon, RepeatIcon } from "lucide-react";
 import moment from "moment";
 import { Rating } from "@/components/ui/helper/getRating";
 import { Tooltip } from "react-tooltip";
 
 const HeaderComponent = ({
   packageData,
-  durationDays,
 }: {
   packageData: UmrahPackage;
   durationDays: string;

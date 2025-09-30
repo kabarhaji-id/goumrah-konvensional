@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import LogoWhite from "@/public/image/logo-white.svg";
 import { ShareDialog } from "@/components/ui/share-dialog";
 import { useEffect, useState } from "react";
 import { ChevronLeftIcon, Share2Icon } from "lucide-react";
@@ -63,11 +64,10 @@ const DetailNavbar = ({ withTitle = true, dataPackage }: DetailNavbarProps) => {
   return (
     <>
       <nav
-        className={`fixed z-50 flex h-14 w-full max-w-screen-sm items-center justify-between gap-4 overflow-clip bg-white py-3 ${
-          scrolled
-            ? "top-0 shadow-custom-sm transition-all"
-            : "-top-14 transition-all"
-        } `}
+        className={`fixed z-50 flex h-14 w-full max-w-screen-sm items-center justify-between gap-4 overflow-clip bg-white py-3 ${scrolled
+          ? "top-0 shadow-custom-sm transition-all"
+          : "-top-14 transition-all"
+          } `}
       >
         <div className="flex items-center gap-2">
           <Link href="/" className="z-20 pl-4">
@@ -99,6 +99,8 @@ const DetailNavbar = ({ withTitle = true, dataPackage }: DetailNavbarProps) => {
               </div>
             </Link>
           )}
+
+          <LogoWhite className="h-auto rounded-full" />
 
           {isLoading ? (
             <Skeleton className="!mr-4 h-9 w-9 rounded-full" />

@@ -14,6 +14,7 @@ import LinkedInIcon from "@/public/icons/linkedin.svg";
 import TikTokIcon from "@/public/icons/tiktok.svg";
 import FacebookIcon from "@/public/icons/facebook.svg";
 import LogoLight from "@/public/image/logo-white.svg"
+import { FaWhatsapp } from "react-icons/fa";
 
 interface FooterProps {
   withCSbanner?: boolean;
@@ -60,14 +61,20 @@ const Footer = ({ withCSbanner = false }: FooterProps) => {
           <div className="flex flex-col gap-2.5">
             <p className="text-xl font-medium leading-6">Head Office</p>
             <span className="w-full max-w-[269px] text-[15px]">
-              Ruko Pasar Segar Cinere (Pintu Barat)
-              Blok RB - 008
+              Ruko Pasar Segar Cinere
+              <br />
+              Blok RB - 008 ( Samping Pintu Barat )
+              <br />
+              Cinere, Depok, Jawa Barat
             </span>
           </div>
 
           <div className="flex flex-col gap-2.5">
             <p className="text-xl font-medium leading-6">Customer Service</p>
-            <span className="text-[15px]">+62 811 1571 88</span>
+            <div className="flex items-center gap-2.5">
+              <span className="text-[15px]">+62 811 1571 88</span>
+              <FaWhatsapp className="size-4 stroke-white" />
+            </div>
             <span className="text-[15px]">admin@goumrah.id</span>
           </div>
         </div>

@@ -13,7 +13,6 @@ import TourVoucherSection from "@/section/package-detail/tour-voucher-section";
 import ItinerarySection from "@/section/package-detail/itinerary-section";
 import Footer from "@/components/layout/footer";
 import NotFound from "@/app/not-found";
-import OtherPackagesSection from "@/section/package-detail/other-packages-section";
 
 import { UmrahPackage } from "@/types/package-details";
 import { packageDetailData } from "@/data/package-details";
@@ -86,8 +85,6 @@ export default async function DetailPage({ params, }: { params: Promise<{ slug: 
         <main>
           <ImagePoster
             packageImage={detail.thumbnail}
-            packageCategory={detail.category}
-            packageTitle={detail.title}
           />
 
           <HeaderSection packageData={detail} durationDays={detail.duration} />

@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "GoUmrah",
       images: [
         {
-          url: pageData?.image || `${baseUrl}//assets/image/about-hero.png`,
+          url: pageData?.image || `${baseUrl}//assets/image/about-hero.jpeg`,
           width: 1200,
           height: 630,
           alt: pageData?.title || "Tentang GoUmrah - Travel Umrah Terpercaya 2025",
@@ -53,7 +53,7 @@ const AboutPage = () => {
     <>
 
       <div
-        className="w-full max-w-screen relative bg-cover bg-center bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-[586px] z-0 overflow-hidden">
+        className="w-full max-w-screen relative bg-cover bg-center bg-[url(/assets/image/about-hero.jpeg)] bg-no-repeat h-[586px] z-0 overflow-hidden">
 
         <div className="top-0 z-50 flex h-12 items-center justify-center pt-4 px-4">
           <Logo />

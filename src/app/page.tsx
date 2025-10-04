@@ -61,7 +61,7 @@ export default async function HomePage() {
   return (
     <main>
       <PromoPopup />
-      <div className="w-full max-w-screen relative bg-cover bg-bottom bg-[url(/assets/image/about-hero.png)] bg-no-repeat h-svh z-0 overflow-hidden mb-2">
+      <div className="w-full max-w-screen relative bg-cover bg-bottom bg-[url(/assets/image/about-hero.jpeg)] bg-no-repeat h-svh z-0 overflow-hidden mb-2">
         {/* Konten hero existing */}
         <div className="top-0 z-50 flex h-12 items-center justify-center pt-[8svh] px-4">
           <Logo />
@@ -74,6 +74,9 @@ export default async function HomePage() {
             Umrah Ideal dengan Momen Tak Terlupakan
           </h3>
         </div>
+        <span
+          className="absolute top-0 left-0 size-full shadow-[0_0_400px_rgba(0,0,0,1)_inset]"
+        />
 
         {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div> */}
       </div>

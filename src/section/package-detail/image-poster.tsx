@@ -2,14 +2,21 @@
 
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Skeleton } from "@/components/ui/skeleton-loader";
+import { PackageCategory } from "@/types/package-details";
 import { XIcon } from "lucide-react";
 
 const ImagePoster = ({
   packageImage,
+  packageCategory,
+  isTurki,
+  isDubai,
 }: {
   packageImage: string;
+  packageCategory: PackageCategory;
+  isTurki?: boolean;
+  isDubai?: boolean;
 }) => {
   const [isImageError, setIsImageError] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
@@ -29,6 +36,42 @@ const ImagePoster = ({
       </div>
     );
   }
+
+  const popupImage = useMemo(() => {
+    let src: string;
+    let width: number;
+    let height: number;
+
+    if (isTurki) {
+      src = "/assets/image/popup/turkey.png";
+      width = 2502;
+      height = 2475;
+    } else if (isDubai) {
+      src = "/assets/image/popup/dubai.png";
+      width = 2637;
+      height = 2422;
+    } else switch (packageCategory) {
+      case "Silver":
+        src = "/assets/image/popup/silver.png";
+        width = 2637;
+        height = 2422;
+        break;
+      case "Gold":
+        src = "/assets/image/popup/gold.png";
+        width = 2637;
+        height = 2502;
+        break;
+      case "Platinum":
+        src = "/assets/image/popup/platinum.png";
+        width = 2502;
+        height = 2460;
+        break;
+      default:
+        throw new Error("Invalid package category");
+    }
+
+    return { src, width, height };
+  }, [packageCategory]);
 
   return (
     <>
@@ -55,24 +98,18 @@ const ImagePoster = ({
       </div>
 
       {isPopupShowed && (
-        <div className="fixed left-1/2 -translate-x-1/2 top-12 z-[99999999999999]">
-          <div className="flex flex-col items-center relative border border-opacity-70 rounded-full aspect-square bg-white/10">
+        <div className="flex items-center justify-center fixed left-1/2 -translate-x-1/2 top-12 z-[999]">
+          <div className="relative size-72">
             <Image
-              src="/assets/image/isma-pointing.png"
-              alt="Isma Pointing"
-              width={300}
-              height={300}
+              src={popupImage.src}
+              alt="Popup Image"
+              fill
               priority
-              className="w-auto h-40"
+              className="object-contain"
             />
-            <button className="absolute right-2 top-4" onClick={() => setIsPopupShowed(false)}>
-              <XIcon className="size-7" />
+            <button className="absolute top-2 right-2 cursor-pointer z-[1000]" onClick={() => setIsPopupShowed(false)}>
+              <XIcon />
             </button>
-            {/* <p className="-mt-12 text-xl font-bold text-white">Halo</p> */}
-            <div className="flex justify-center items-center bg-white/70 rounded-full px-3 pt-1 pb-2 w-64 flex-col border-2 shadow">
-              <p className="text-center font-medium tracking-normal text-sm">Ini paket Umrah terbaik kita loh!
-                jangan lupa di checkout yaaaa.</p>
-            </div>
           </div>
         </div>
       )}

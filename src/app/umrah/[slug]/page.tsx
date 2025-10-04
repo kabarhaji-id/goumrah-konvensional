@@ -85,6 +85,9 @@ export default async function DetailPage({ params, }: { params: Promise<{ slug: 
         <main>
           <ImagePoster
             packageImage={detail.thumbnail}
+            packageCategory={detail.category}
+            isTurki={detail.id === "umrah-cerdas-plus-wisata-turkey-gold"}
+            isDubai={detail.id === "umrah-cerdas-plus-wisata-dubai-gold"}
           />
 
           <HeaderSection packageData={detail} durationDays={detail.duration} />

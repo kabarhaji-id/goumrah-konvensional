@@ -45,16 +45,16 @@ const ImagePoster = ({
     if (isTurki) {
       src = "/assets/image/popup/turkey.png";
       width = 2502;
-      height = 2475;
+      height = 2527;
     } else if (isDubai) {
       src = "/assets/image/popup/dubai.png";
       width = 2637;
-      height = 2422;
+      height = 2455;
     } else switch (packageCategory) {
       case "Silver":
         src = "/assets/image/popup/silver.png";
         width = 2637;
-        height = 2422;
+        height = 2433;
         break;
       case "Gold":
         src = "/assets/image/popup/gold.png";
@@ -64,7 +64,7 @@ const ImagePoster = ({
       case "Platinum":
         src = "/assets/image/popup/platinum.png";
         width = 2502;
-        height = 2460;
+        height = 2497;
         break;
       default:
         throw new Error("Invalid package category");
